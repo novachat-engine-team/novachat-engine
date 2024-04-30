@@ -1,0 +1,70 @@
+
+log:
+  logpath : ./log/session.log
+  loglevel : debug
+  rotatemaxsize : 100
+  rotatemaxage : 6
+  rotatemaxbackups : 100
+
+pprof:
+  port : 6031
+  isopen : true
+
+server:
+  ver : "0.0.1"
+  serverid : 1
+
+rpcserver:
+  addr : 127.0.0.1:10041
+
+rpcdiscovery:
+  schema : novachat-engine
+  servername : session
+  etcdaddr : etcd-hosts:2379
+  ttl	: 10
+
+gaterpcclient:
+  schema : novachat-engine
+  servername : gate
+  etcdaddr : etcd-hosts:2379
+  balancer : ketama
+
+bizrpc:
+  enablemq: false
+  bizrpcclient:
+    schema : novachat-engine
+    servername : biz
+    etcdaddr : etcd-hosts:2379
+    balancer : ketama
+  bizmqlist:
+    - name: default
+      kafkaproducer:
+        topic: novachat_engine-biz-default-topic
+        brokers:
+          - kafka-hosts:9092
+    - name: help
+      kafkaproducer:
+        topic: novachat_engine-biz-help-topic
+        brokers:
+          - kafka-hosts:9092
+    - name: messages
+      kafkaproducer:
+        topic: novachat_engine-biz-messages-topic
+        brokers:
+          - kafka-hosts:9092
+
+authrpcclient:
+  schema : novachat-engine
+  servername : auth
+  etcdaddr : etcd-hosts:2379
+  balancer : ketama
+
+redis:
+  addrs:
+    - redis-hosts:6379
+  mode : alone
+  test : 	true
+  idle :	10
+  active : 5
+  passwd :
+  dbnum : 0

@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package rpc_client;
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+import "relay.proto";
+import "google/protobuf/any.proto";
+
+option go_package = "rpc_client";
+
+option (gogoproto.marshaler_all) = true;
+option (gogoproto.sizer_all) = true;
+option (gogoproto.unmarshaler_all) = true;
+option (gogoproto.gostring_all) = true;
+
+service RelayService {
+  rpc ReqCreatePhoneCall(CreatePhoneCall) returns (CallConnections) {}
+  rpc ReqDiscardPhoneCall(DiscardPhoneCall) returns (google.protobuf.Any) {}
+}

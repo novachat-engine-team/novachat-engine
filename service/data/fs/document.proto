@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package data_fs;
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+option go_package = "data_fs";
+
+import "photo.proto";
+import "video.proto";
+import "attributes.proto";
+
+option (gogoproto.marshaler_all) = true;
+option (gogoproto.sizer_all) = true;
+option (gogoproto.unmarshaler_all) = true;
+option (gogoproto.gostring_all) = true;
+
+message Document {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int64               volume_id           = 1 [(gogoproto.moretags) = "bson:\"_id\""];
+  int32               local_id            = 2 [(gogoproto.moretags) = "bson:\"local_id\""];
+  string              mime_type           = 3 [(gogoproto.moretags) = "bson:\"mime_type\""];
+  int32               size                = 4 [(gogoproto.moretags) = "bson:\"size\""];
+  repeated Photo      thumbs              = 5 [(gogoproto.moretags) = "bson:\"thumbs\""];
+  repeated Attributes attributes          = 7 [(gogoproto.moretags) = "bson:\"attributes\""];
+  int32               date                = 8 [(gogoproto.moretags) = "bson:\"date\""];
+  int32               file_type           = 9 [(gogoproto.moretags) = "bson:\"file_type\""];
+  string              file_path           = 10[(gogoproto.moretags) = "bson:\"file_path\""];
+  int64               access_hash         = 11[(gogoproto.moretags) = "bson:\"access_hash\""];
+  bytes               file_reference      = 12[(gogoproto.moretags) = "bson:\"file_reference\""];
+  int32               version             = 13[(gogoproto.moretags) = "bson:\"version\""];
+  double              video_start_ts      = 14[(gogoproto.moretags) = "bson:\"video_start_ts\""];
+}

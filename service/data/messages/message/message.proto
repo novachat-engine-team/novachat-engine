@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+package data_message;
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+option go_package = "data_message";
+
+import "media.proto";
+import "fwd.proto";
+import "action.proto";
+import "entity.proto";
+
+option (gogoproto.marshaler_all) = true;
+option (gogoproto.sizer_all) = true;
+option (gogoproto.unmarshaler_all) = true;
+option (gogoproto.gostring_all) = true;
+
+message Message  {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int64           did         = 1 [(gogoproto.moretags) = "bson:\"_id\""];
+  int64           user_id     = 2 [(gogoproto.moretags) = "bson:\"user_id\""];
+  int64           peer_id     = 3 [(gogoproto.moretags) = "bson:\"peer_id\""];
+  bool            is_channel  = 4 [(gogoproto.moretags) = "bson:\"is_channel\""];
+  int32           id          = 5 [(gogoproto.moretags) = "bson:\"id\""];
+  bool            out         = 6 [(gogoproto.moretags) = "bson:\"out\""];
+  int64           group_id    = 7 [(gogoproto.moretags) = "bson:\"group_id\""];
+  bool            pinned      = 8 [(gogoproto.moretags) = "bson:\"pinned\""];
+  Media           media       = 9 [(gogoproto.moretags) = "bson:\"media\""];
+  Action          action      = 10[(gogoproto.moretags) = "bson:\"action\""];
+  Fwd             fwd         = 11[(gogoproto.moretags) = "bson:\"fwd\""];
+  repeated Entity entities    = 12[(gogoproto.moretags) = "bson:\"entities\""];
+  string          message     = 13[(gogoproto.moretags) = "bson:\"message\""];
+  bool            deleted     = 14[(gogoproto.moretags) = "bson:\"deleted\""];
+  int32           reply_to    = 15[(gogoproto.moretags) = "bson:\"reply_to\""];
+  int32           type        = 16[(gogoproto.moretags) = "bson:\"type\""];
+  int32           date        = 17[(gogoproto.moretags) = "bson:\"date\""];
+  int32           edit_date   = 18[(gogoproto.moretags) = "bson:\"edit_date\""];
+  string          post_author = 19[(gogoproto.moretags) = "bson:\"post_author\""];
+  int64           global_message_id = 20[(gogoproto.moretags) = "bson:\"global_message_id\""];
+  repeated int64  ignore_user_id=21[(gogoproto.moretags) = "bson:\"ignore_user_id\""];
+  int64           from_user_id = 22[(gogoproto.moretags) = "bson:\"from_user_id\""];
+}

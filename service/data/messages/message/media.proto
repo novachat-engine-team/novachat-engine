@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package data_message;
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+option go_package = "data_message";
+
+import "document.proto";
+import "photo.proto";
+import "geopoint.proto";
+
+option (gogoproto.marshaler_all) = true;
+option (gogoproto.sizer_all) = true;
+option (gogoproto.unmarshaler_all) = true;
+option (gogoproto.gostring_all) = true;
+
+message Media  {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int32           type          = 1 [(gogoproto.moretags) = "bson:\"type\""];
+  string          phone_number  = 2 [(gogoproto.moretags) = "bson:\"phone_number\""];
+  string          first_name    = 3 [(gogoproto.moretags) = "bson:\"first_name\""];
+  string          last_name     = 4 [(gogoproto.moretags) = "bson:\"last_name\""];
+  int64           user_id       = 5 [(gogoproto.moretags) = "bson:\"user_id\""];
+  string          vcard         = 6 [(gogoproto.moretags) = "bson:\"vcard\""];
+  data_fs.Document document     = 7 [(gogoproto.moretags) = "bson:\"document\""];
+  string          caption       = 8 [(gogoproto.moretags) = "bson:\"caption\""];
+  int32           ttl_seconds   = 9 [(gogoproto.moretags) = "bson:\"ttl_seconds\""];
+  data_fs.Photo   photo         = 10[(gogoproto.moretags) = "bson:\"photo\""];
+  data_fs.GeoPoint geo_point    = 11[(gogoproto.moretags) = "bson:\"geo_point\""];
+  int32 period                  = 12[(gogoproto.moretags) = "bson:\"period\""];
+  int32 heading                 = 13[(gogoproto.moretags) = "bson:\"heading\""];
+  int32 notification_radius     = 14[(gogoproto.moretags) = "bson:\"notification_radius\""];
+}

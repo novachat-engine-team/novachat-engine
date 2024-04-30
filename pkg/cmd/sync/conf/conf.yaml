@@ -1,0 +1,100 @@
+
+
+log:
+  logpath : ./log/sync.log
+  loglevel : warn
+  rotatemaxsize : 100
+  rotatemaxage : 6
+  rotatemaxbackups : 100
+
+pprof:
+  port : 6034
+  isopen : true
+
+server:
+  ver : "0.0.1"
+  serverid : 1
+
+rpcserver:
+  addr : 127.0.0.1:10044
+
+rpcdiscovery:
+  schema : novachat-engine
+  servername : sync
+  etcdaddr : etcd-hosts:2379
+  ttl	: 10
+
+producer:
+  - name: users
+    kafkaproducer:
+      topic: novachat_engine-sync-users-topic
+      brokers:
+        - kafka-hosts:9092
+  - name: chats
+    kafkaproducer:
+      topic: novachat_engine-sync-chats-topic
+      brokers:
+        - kafka-hosts:9092
+  - name: channels
+    kafkaproducer:
+      topic: novachat_engine-sync-channels-topic
+      brokers:
+        - kafka-hosts:9092
+
+consumer:
+  - name: users
+    messageconsumer:
+      topic:
+        - novachat_engine-sync-users-topic
+      group: novachat_engine-sync-users-topic-group
+      brokers:
+        - kafka-hosts:9092
+  - name: chats
+    messageconsumer:
+      topic:
+        - novachat_engine-sync-chats-topic
+      group: novachat_engine-sync-chats-topic-group
+      brokers:
+        - kafka-hosts:9092
+  - name: channels
+    messageconsumer:
+      topic:
+        - novachat_engine-sync-channels-topic
+      group: novachat_engine-sync-channels-topic-group
+      brokers:
+        - kafka-hosts:9092
+
+npnsproducer:
+  topic: novachat_engine-npns-topic
+  brokers:
+    - kafka-hosts:9092
+
+npnsconsumer:
+  topic:
+    - novachat_engine-npns-topic
+  group: novachat_engine-npns-topic-group
+  brokers:
+    - kafka-hosts:9092
+
+authrpcclient:
+  schema : novachat-engine
+  servername : auth
+  etcdaddr : etcd-hosts:2379
+  balancer : ketama
+
+sessionrpcclient:
+  schema : novachat-engine
+  servername : session
+  etcdaddr : etcd-hosts:2379
+  balancer : ketama
+
+mongodb:
+  direct: true
+  addr:
+    - mongodb-hosts:27017
+  replicaset: rs0
+  database: ""
+  username: ""
+  password: ""
+  maxpoolsize: 128
+  minpoolsize: 16

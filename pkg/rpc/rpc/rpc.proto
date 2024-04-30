@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+package rpc;
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+import "google/protobuf/any.proto";
+import "pkg/rpc/metadata/meta_data.proto";
+
+option go_package = "rpc";
+
+option (gogoproto.marshaler_all) = true;
+option (gogoproto.sizer_all) = true;
+option (gogoproto.unmarshaler_all) = true;
+option (gogoproto.gostring_all) = true;
+
+message RpcData {
+    option (gogoproto.goproto_sizecache) = false;
+    option (gogoproto.goproto_unkeyed) = false;
+    option (gogoproto.goproto_unrecognized) = false;
+
+    google.protobuf.Any data = 1;
+}
+
+service RpcService {
+    rpc ReceiveData(RpcData) returns(google.protobuf.Any) {}
+}
+
+message RpcStreamData {
+    option (gogoproto.goproto_sizecache) = false;
+    option (gogoproto.goproto_unkeyed) = false;
+    option (gogoproto.goproto_unrecognized) = false;
+
+    google.protobuf.Any data = 1;
+    metadata.rpc_meta_data md = 2;
+}
+
+service RpcStreamService {
+    rpc ReceiveData(stream RpcStreamData) returns(stream RpcStreamData) {}
+}

@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+package rpc_client;
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+import "schema.tl.sync.proto";
+//import "schema.tl.sync.tl.proto";
+
+option go_package = "rpc_client";
+
+option (gogoproto.marshaler_all) = true;
+option (gogoproto.sizer_all) = true;
+option (gogoproto.unmarshaler_all) = true;
+option (gogoproto.gostring_all) = true;
+
+/////  Sync
+message SyncUpdate {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int64 user_id = 1;
+  int64 auth_key_id = 2;
+  int64 ignore_auth_key_id = 3;
+  mtproto.Updates updates = 4;
+  bool  push = 5;
+  int32 peer_type = 6;
+}
+
+message UpdateData {
+  int64 user_id = 1;
+  int64 auth_key_id = 2;
+  int64 ignore_auth_key_id = 3;
+  mtproto.Updates updates = 4;
+}
+
+message SyncUpdates {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  repeated UpdateData update_data_list = 1;
+  bool  push = 2;
+  int32 peer_type = 3;
+}

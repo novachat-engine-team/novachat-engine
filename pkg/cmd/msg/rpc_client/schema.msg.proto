@@ -1,0 +1,95 @@
+syntax = "proto3";
+
+package rpc_client;
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+import "schema.tl.sync.proto";
+//import "schema.tl.sync.tl.proto";
+
+option go_package = "rpc_client";
+
+option (gogoproto.marshaler_all) = true;
+option (gogoproto.sizer_all) = true;
+option (gogoproto.unmarshaler_all) = true;
+option (gogoproto.gostring_all) = true;
+
+/////  Msg
+message SendMessageData {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int64 random_id = 1;
+  mtproto.Message message = 2;
+  int32 reply_to_message_id = 3;
+}
+
+message SendMessages {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int64                     auth_key_id       = 1;
+  int64                     from_user_id      = 2;
+  int64                     peer_id           = 3;
+  int32                     peer_type         = 4;
+  repeated SendMessageData  data_list         = 5;
+  bool                      clear_draft       = 6;
+  repeated int64            global_message_id_list = 7;
+}
+
+message EditMessage {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int64                     auth_key_id       = 1;
+  int64                     from_user_id      = 2;
+  int64                     peer_id           = 3;
+  int32                     peer_type         = 4;
+  int32                     message_id        = 5;
+  string                    message           = 6;
+  mtproto.MessageMedia      media             = 7;
+  repeated mtproto.MessageEntity entities     = 8;
+  mtproto.ReplyMarkup       reply_markup      = 9;
+  int32                     schedule_data     = 10;
+}
+
+message RevokeMessages {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int64                   user_id                 = 1;
+  int64                   peer_id                 = 2;
+  int32                   peer_type               = 3;
+  repeated int64          global_message_id_list  = 4;
+  bool                    range                   = 5;
+  int32                   channel_pts             = 6;
+}
+
+message ReadHistory {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int64                   user_id                 = 1;
+  int64                   peer_id                 = 2;
+  int32                   peer_type               = 3;
+  int64                   global_message_id       = 4;
+}
+
+message PinnedMessage {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int64                   user_id                 = 1;
+  int64                   peer_id                 = 2;
+  int32                   peer_type               = 3;
+  int32                   message_id              = 4;
+  bool                    unpin                   = 5;
+  bool                    one_side                = 6;
+  int64                   auth_key_id             = 7;
+  int64                   global_message_id       = 8;
+}

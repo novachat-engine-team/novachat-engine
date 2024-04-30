@@ -1,0 +1,42 @@
+
+log:
+  logpath : ./log/relay.log
+  loglevel : warn
+  rotatemaxsize : 100
+  rotatemaxage : 6
+  rotatemaxbackups : 100
+
+pprof:
+  port : 6041
+  isopen : true
+
+rpcserver:
+  addr : 127.0.0.1:10092
+
+rpcdiscovery:
+  schema : novachat-engine
+  servername : msg
+  etcdaddr : etcd-hosts:2379
+  ttl	: 10
+
+udprelayonly:
+  endpoint: 127.0.0.1
+  port: 50002
+
+rtc:
+  relayconn:
+    endpoint: 127.0.0.1
+    rangeport:
+      minport: 20000
+      maxport: 30000
+
+  turnport: 12306
+  stunport: 3478
+  realm:
+    -
+      - username
+      - password
+    -
+      - username1
+      - password1
+  realmtag: novachat-engine

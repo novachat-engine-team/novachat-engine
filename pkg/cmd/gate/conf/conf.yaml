@@ -1,0 +1,43 @@
+
+log:
+  logpath: ./log/gate.log
+  loglevel: debug
+  rotatemaxsize: 100
+  rotatemaxage: 6
+  rotatemaxbackups: 100
+
+pprof:
+  port: 6001
+  isopen: false
+
+key:
+  keyfile: id_rsa.key
+  keyfingerprint: 10919150075863652644
+
+server:
+  ver: 0.0.1
+  serverid: 1
+  protoname: mtproto
+  addr: 0.0.0.0:12347
+  # 443
+
+rpcserver:
+  addr: 127.0.0.1:10031
+
+rpcdiscovery:
+  schema: novachat-engine
+  servername: gate
+  etcdaddr: etcd-hosts:2379
+  ttl: 10
+
+sessionrpcclient:
+  schema: novachat-engine
+  servername: session
+  etcdaddr: etcd-hosts:2379
+  balancer: ketama
+
+authrpcclient:
+  schema: novachat-engine
+  servername: auth
+  etcdaddr: etcd-hosts:2379
+  balancer: ketama

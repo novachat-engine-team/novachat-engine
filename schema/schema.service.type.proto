@@ -1,0 +1,91 @@
+/*
+ * Copyright (c) 2021-present,  NovaChat-Engine.
+ *  All rights reserved.
+ * 
+ *  
+ * @Author: Coder (coderxw@gmail.com)
+ * @Time : 2023/02/09 16:57
+ * @File : schema.service.type.proto
+ * @Desc : 
+ *
+ */
+
+syntax = "proto3";
+
+package mtproto;
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+
+option go_package = "mtproto";
+
+option (gogoproto.marshaler_all) = true;
+option (gogoproto.sizer_all) = true;
+option (gogoproto.unmarshaler_all) = true;
+option (gogoproto.gostring_all) = true;
+
+import "schema.tl.core_types.proto";
+import "schema.tl.sync.proto";
+import "schema.tl.sync_service.proto";
+
+// account.getWallPapers
+message Response_AccountGetWallPapers {
+    uint32 cmd = 1;
+    Vector_WallPaper AccountGetWallPapersc04Cfac2 = 2;
+    account_WallPapers AccountGetWallPapersaabb1763 = 3;
+}
+
+// contacts.deleteContacts
+message Response_ContactsDeleteContacts {
+    uint32 cmd = 1;
+    Bool ContactsDeleteContacts59Ab389E = 2;
+    Updates ContactsDeleteContacts96A0E00 = 3;
+}
+
+// help.getAppChangelog
+message Response_HelpGetAppChangelog {
+    uint32 cmd = 1;
+    Updates HelpGetAppChangelog9010Ef6F = 2;
+    help_AppChangelog HelpGetAppChangelog5Bab7Fb2 = 3;
+}
+
+// messages.getMessagesViews
+message Response_MessagesGetMessagesViews {
+    uint32 cmd = 1;
+    Vector_int MessagesGetMessagesViewsc4C8A55D = 2;
+    messages_MessageViews MessagesGetMessagesViews5784D3E1 = 3;
+}
+
+// messages.installStickerSet
+message Response_MessagesInstallStickerSet {
+    uint32 cmd = 1;
+    messages_StickerSetInstallResult MessagesInstallStickerSetc78Fe460 = 2;
+    Bool MessagesInstallStickerSet7B30C3A6 = 3;
+}
+
+// messages.readHistory
+message Response_MessagesReadHistory {
+    uint32 cmd = 1;
+    messages_AffectedMessages MessagesReadHistorye306D3A = 2;
+    messages_AffectedHistory MessagesReadHistoryb04F2510 = 3;
+}
+
+// photos.updateProfilePhoto
+message Response_PhotosUpdateProfilePhoto {
+    uint32 cmd = 1;
+    UserProfilePhoto PhotosUpdateProfilePhotof0Bb5152 = 2;
+    photos_Photo PhotosUpdateProfilePhoto72D4742C = 3;
+}
+
+// upload.getCdnFileHashes
+message Response_UploadGetCdnFileHashes {
+    uint32 cmd = 1;
+    Vector_CdnFileHash UploadGetCdnFileHashesf715C87B = 2;
+    Vector_FileHash UploadGetCdnFileHashes4Da54231 = 3;
+}
+
+// upload.reuploadCdnFile
+message Response_UploadReuploadCdnFile {
+    uint32 cmd = 1;
+    Vector_CdnFileHash UploadReuploadCdnFile1Af91C09 = 2;
+    Vector_FileHash UploadReuploadCdnFile9B2754A8 = 3;
+}

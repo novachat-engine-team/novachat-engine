@@ -1,0 +1,10718 @@
+{
+	"lang_code": "classic-zh-cn",
+	"version": 486990,
+	"strings": [
+		{
+			"key": "ALongTimeAgo",
+			"value": "很久没上线"
+		},
+		{
+			"key": "AbortEmail",
+			"value": "终止恢复邮箱设置"
+		},
+		{
+			"key": "AbortPassword",
+			"value": "关闭两步验证"
+		},
+		{
+			"key": "AccActionCancelDownload",
+			"value": "取消下载"
+		},
+		{
+			"key": "AccActionDownload",
+			"value": "下载"
+		},
+		{
+			"key": "AccActionEnterSelectionMode",
+			"value": "进入选择模式"
+		},
+		{
+			"key": "AccActionMessageOptions",
+			"value": "消息选项"
+		},
+		{
+			"key": "AccActionOpenFile",
+			"value": "打开文件"
+		},
+		{
+			"key": "AccActionPause",
+			"value": "暂停"
+		},
+		{
+			"key": "AccActionPlay",
+			"value": "播放"
+		},
+		{
+			"key": "AccActionRecordVideo",
+			"value": "录制视频"
+		},
+		{
+			"key": "AccActionTakePicture",
+			"value": "照相"
+		},
+		{
+			"key": "AccDescrAspectRatio",
+			"value": "长宽比"
+		},
+		{
+			"key": "AccDescrAttachButton",
+			"value": "添加媒体文件"
+		},
+		{
+			"key": "AccDescrBackspace",
+			"value": "退格键"
+		},
+		{
+			"key": "AccDescrBotCommands",
+			"value": "机器人命令"
+		},
+		{
+			"key": "AccDescrBotKeyboard",
+			"value": "机器人键盘"
+		},
+		{
+			"key": "AccDescrCameraFlashAuto",
+			"value": "闪光灯，自动"
+		},
+		{
+			"key": "AccDescrCameraFlashOff",
+			"value": "闪光灯，关闭"
+		},
+		{
+			"key": "AccDescrCameraFlashOn",
+			"value": "闪光灯，开启"
+		},
+		{
+			"key": "AccDescrCancelEdit",
+			"value": "取消编辑"
+		},
+		{
+			"key": "AccDescrCancelForward",
+			"value": "取消转发"
+		},
+		{
+			"key": "AccDescrCancelReply",
+			"value": "取消回复"
+		},
+		{
+			"key": "AccDescrChanSilentOff",
+			"value": "启用通知"
+		},
+		{
+			"key": "AccDescrChanSilentOn",
+			"value": "静默发送"
+		},
+		{
+			"key": "AccDescrChangeProfilePicture",
+			"value": "更改头像"
+		},
+		{
+			"key": "AccDescrChannel",
+			"value": "频道"
+		},
+		{
+			"key": "AccDescrClosePlayer",
+			"value": "关闭音频播放器"
+		},
+		{
+			"key": "AccDescrCollapsePanel",
+			"value": "收起面板"
+		},
+		{
+			"key": "AccDescrContactSorting",
+			"value": "更改排序方式"
+		},
+		{
+			"key": "AccDescrEditing",
+			"value": "正在编辑"
+		},
+		{
+			"key": "AccDescrEmojiButton",
+			"value": "表情符号、贴纸与动态图"
+		},
+		{
+			"key": "AccDescrExpandPanel",
+			"value": "展开面板"
+		},
+		{
+			"key": "AccDescrForwarding",
+			"value": "转发自"
+		},
+		{
+			"key": "AccDescrGIFs",
+			"value": "动态图"
+		},
+		{
+			"key": "AccDescrGoBack",
+			"value": "返回"
+		},
+		{
+			"key": "AccDescrGoToMessage",
+			"value": "转到消息"
+		},
+		{
+			"key": "AccDescrGroup",
+			"value": "群组"
+		},
+		{
+			"key": "AccDescrHideAccounts",
+			"value": "隐藏帐户列表"
+		},
+		{
+			"key": "AccDescrIVHeading",
+			"value": "标题"
+		},
+		{
+			"key": "AccDescrIVTitle",
+			"value": "标题"
+		},
+		{
+			"key": "AccDescrInstantCamera",
+			"value": "即时相机"
+		},
+		{
+			"key": "AccDescrMentionDown",
+			"value": "转到下一个提及的位置"
+		},
+		{
+			"key": "AccDescrMoreOptions",
+			"value": "更多选项"
+		},
+		{
+			"key": "AccDescrMsgNotPlayed",
+			"value": "未播放"
+		},
+		{
+			"key": "AccDescrMsgRead",
+			"value": "已查看"
+		},
+		{
+			"key": "AccDescrMsgUnread",
+			"value": "未查看"
+		},
+		{
+			"key": "AccDescrMusicInfo",
+			"value": "由 %1$s 创作的 %2$s"
+		},
+		{
+			"key": "AccDescrMuteMic",
+			"value": "关闭麦克风"
+		},
+		{
+			"key": "AccDescrMyLocation",
+			"value": "我的位置"
+		},
+		{
+			"key": "AccDescrOpenChat",
+			"value": "打开对话"
+		},
+		{
+			"key": "AccDescrOpenMenu",
+			"value": "打开导航菜单"
+		},
+		{
+			"key": "AccDescrPageDown",
+			"value": "转到底部"
+		},
+		{
+			"key": "AccDescrPasscodeLock",
+			"value": "锁定应用"
+		},
+		{
+			"key": "AccDescrPasscodeUnlock",
+			"value": "解锁应用"
+		},
+		{
+			"key": "AccDescrPhotoAdjust",
+			"value": "调整"
+		},
+		{
+			"key": "AccDescrPhotoEditor",
+			"value": "图片编辑器"
+		},
+		{
+			"key": "AccDescrPhotoViewer",
+			"value": "图片查看器"
+		},
+		{
+			"key": "AccDescrPlayerSpeed",
+			"value": "二倍速回放"
+		},
+		{
+			"key": "AccDescrPrevious",
+			"value": "上一个"
+		},
+		{
+			"key": "AccDescrProfilePicture",
+			"value": "头像"
+		},
+		{
+			"key": "AccDescrReceivedDate",
+			"value": "于 %s 收到"
+		},
+		{
+			"key": "AccDescrRepeatList",
+			"value": "重复，播放列表"
+		},
+		{
+			"key": "AccDescrRepeatOff",
+			"value": "重复，关"
+		},
+		{
+			"key": "AccDescrRepeatOne",
+			"value": "重复，一倍速"
+		},
+		{
+			"key": "AccDescrReplying",
+			"value": "正在回复"
+		},
+		{
+			"key": "AccDescrRotate",
+			"value": "旋转"
+		},
+		{
+			"key": "AccDescrSearchByUser",
+			"value": "按用户排序"
+		},
+		{
+			"key": "AccDescrSearchNext",
+			"value": "下一个搜索结果"
+		},
+		{
+			"key": "AccDescrSearchPrev",
+			"value": "历史搜索结果"
+		},
+		{
+			"key": "AccDescrSecretChat",
+			"value": "加密对话"
+		},
+		{
+			"key": "AccDescrSentDate",
+			"value": "于 %s 发送"
+		},
+		{
+			"key": "AccDescrShowAccounts",
+			"value": "显示帐户列表"
+		},
+		{
+			"key": "AccDescrShowKeyboard",
+			"value": "显示键盘"
+		},
+		{
+			"key": "AccDescrShutter",
+			"value": "快门"
+		},
+		{
+			"key": "AccDescrStickerSet",
+			"value": "贴纸包"
+		},
+		{
+			"key": "AccDescrStickers",
+			"value": "贴纸"
+		},
+		{
+			"key": "AccDescrStopLiveLocation",
+			"value": "停止共享实时位置信息"
+		},
+		{
+			"key": "AccDescrSwitchCamera",
+			"value": "切换摄像头"
+		},
+		{
+			"key": "AccDescrTakeMorePics",
+			"value": "再拍摄一张照片"
+		},
+		{
+			"key": "AccDescrUserOptions",
+			"value": "用户选项"
+		},
+		{
+			"key": "AccDescrVideoMessage",
+			"value": "录制视频留言"
+		},
+		{
+			"key": "AccDescrVideoQuality",
+			"value": "视频质量"
+		},
+		{
+			"key": "AccDescrVoiceMessage",
+			"value": "录制语音留言"
+		},
+		{
+			"key": "Accept",
+			"value": "接受"
+		},
+		{
+			"key": "AccessError",
+			"value": "访问出错"
+		},
+		{
+			"key": "Account",
+			"value": "帐号"
+		},
+		{
+			"key": "AccountAlreadyLoggedIn",
+			"value": "该帐户已在此应用中登录。"
+		},
+		{
+			"key": "AccountSettings",
+			"value": "帐户设置"
+		},
+		{
+			"key": "AccountSwitch",
+			"value": "切换"
+		},
+		{
+			"key": "AccurateTo",
+			"value": "精确到 %1$s"
+		},
+		{
+			"key": "ActionAddUser",
+			"value": "un1 添加了 un2"
+		},
+		{
+			"key": "ActionAddUserSelf",
+			"value": "un1 返回了此群组"
+		},
+		{
+			"key": "ActionAddUserSelfMega",
+			"value": "un1 加入了这个群组"
+		},
+		{
+			"key": "ActionAddUserSelfYou",
+			"value": "您返回了此群组"
+		},
+		{
+			"key": "ActionAddUserYou",
+			"value": "un1 添加了您"
+		},
+		{
+			"key": "ActionBotAllowed",
+			"value": "您允许了此机器人在您登录 %1$s 时向您发送消息。"
+		},
+		{
+			"key": "ActionBotDocumentAddress",
+			"value": "地址"
+		},
+		{
+			"key": "ActionBotDocumentBankStatement",
+			"value": "银行对账单"
+		},
+		{
+			"key": "ActionBotDocumentDriverLicence",
+			"value": "驾驶证"
+		},
+		{
+			"key": "ActionBotDocumentEmail",
+			"value": "邮箱地址"
+		},
+		{
+			"key": "ActionBotDocumentIdentity",
+			"value": "个人信息"
+		},
+		{
+			"key": "ActionBotDocumentIdentityCard",
+			"value": "身份证"
+		},
+		{
+			"key": "ActionBotDocumentInternalPassport",
+			"value": "户口本"
+		},
+		{
+			"key": "ActionBotDocumentPassport",
+			"value": "护照"
+		},
+		{
+			"key": "ActionBotDocumentPassportRegistration",
+			"value": "护照注册信息"
+		},
+		{
+			"key": "ActionBotDocumentPhone",
+			"value": "手机号码"
+		},
+		{
+			"key": "ActionBotDocumentRentalAgreement",
+			"value": "租赁合同"
+		},
+		{
+			"key": "ActionBotDocumentTemporaryRegistration",
+			"value": "临时居住证明"
+		},
+		{
+			"key": "ActionBotDocumentUtilityBill",
+			"value": "水电费账单"
+		},
+		{
+			"key": "ActionBotDocuments",
+			"value": "%1$s 已收到以下档案: %2$s"
+		},
+		{
+			"key": "ActionChangedPhoto",
+			"value": "un1 更换了群组头像"
+		},
+		{
+			"key": "ActionChangedTitle",
+			"value": "un1 将群组名称更改为 un2"
+		},
+		{
+			"key": "ActionChannelChangedPhoto",
+			"value": "频道头像已更换"
+		},
+		{
+			"key": "ActionChannelChangedTitle",
+			"value": "频道名称已修改为 un2"
+		},
+		{
+			"key": "ActionChannelRemovedPhoto",
+			"value": "频道头像已删除"
+		},
+		{
+			"key": "ActionCreateChannel",
+			"value": "频道已创建"
+		},
+		{
+			"key": "ActionCreateGroup",
+			"value": "un1 创建了此群组"
+		},
+		{
+			"key": "ActionCreateMega",
+			"value": "群组已创建"
+		},
+		{
+			"key": "ActionInviteUser",
+			"value": "un1 通过邀请链接加入了此群组"
+		},
+		{
+			"key": "ActionInviteYou",
+			"value": "您通过邀请链接加入了此群组"
+		},
+		{
+			"key": "ActionKickUser",
+			"value": "un1 移除了 un2"
+		},
+		{
+			"key": "ActionKickUserYou",
+			"value": "un1 已将您移除"
+		},
+		{
+			"key": "ActionLeftUser",
+			"value": "un1 退出了群组"
+		},
+		{
+			"key": "ActionMigrateFromGroup",
+			"value": "此群组已升级为超级群组"
+		},
+		{
+			"key": "ActionMigrateFromGroupNotify",
+			"value": "%1$s 已升级为超级群组"
+		},
+		{
+			"key": "ActionPinnedContact",
+			"value": "un1 置顶了一条联系人信息"
+		},
+		{
+			"key": "ActionPinnedFile",
+			"value": "un1 置顶了一个文件"
+		},
+		{
+			"key": "ActionPinnedGame",
+			"value": "un1 置顶了 %1$s"
+		},
+		{
+			"key": "ActionPinnedGeo",
+			"value": "un1 置顶了一个位置"
+		},
+		{
+			"key": "ActionPinnedGeoLive",
+			"value": "un1 置顶了一个实时位置"
+		},
+		{
+			"key": "ActionPinnedGif",
+			"value": "un1 置顶了一个 GIF"
+		},
+		{
+			"key": "ActionPinnedMusic",
+			"value": "un1 置顶了一首音乐"
+		},
+		{
+			"key": "ActionPinnedNoText",
+			"value": "un1 置顶了一条消息"
+		},
+		{
+			"key": "ActionPinnedPhoto",
+			"value": "un1 置顶了一张图片"
+		},
+		{
+			"key": "ActionPinnedPoll",
+			"value": "un1 置顶了一项投票"
+		},
+		{
+			"key": "ActionPinnedRound",
+			"value": "un1 置顶了一条视频留言"
+		},
+		{
+			"key": "ActionPinnedSticker",
+			"value": "un1 置顶了一张贴纸"
+		},
+		{
+			"key": "ActionPinnedText",
+			"value": "un1 置顶了 \"%1$s\""
+		},
+		{
+			"key": "ActionPinnedVideo",
+			"value": "un1 置顶了一段视频"
+		},
+		{
+			"key": "ActionPinnedVoice",
+			"value": "un1 置顶了一条语音留言"
+		},
+		{
+			"key": "ActionRemovedPhoto",
+			"value": "un1 删除了群组标识"
+		},
+		{
+			"key": "ActionTakeScreenshoot",
+			"value": "un1 截了一张图！"
+		},
+		{
+			"key": "ActionTakeScreenshootYou",
+			"value": "您截了一张图！"
+		},
+		{
+			"key": "ActionUserScored",
+			"value": "un1 获得了 %1$s 分"
+		},
+		{
+			"key": "ActionUserScoredInGame",
+			"value": "un1 在 un2 中获得 %1$s 分"
+		},
+		{
+			"key": "ActionYouAddUser",
+			"value": "您添加了 un2"
+		},
+		{
+			"key": "ActionYouChangedPhoto",
+			"value": "您更换了群组头像"
+		},
+		{
+			"key": "ActionYouChangedTitle",
+			"value": "您将群组名称更改为 un2"
+		},
+		{
+			"key": "ActionYouCreateGroup",
+			"value": "您创建了此群组"
+		},
+		{
+			"key": "ActionYouKickUser",
+			"value": "您已将 un2 移除"
+		},
+		{
+			"key": "ActionYouLeftUser",
+			"value": "您退出了此群组"
+		},
+		{
+			"key": "ActionYouRemovedPhoto",
+			"value": "您删除了群组头像"
+		},
+		{
+			"key": "ActionYouScored",
+			"value": "您获得了 %1$s 分"
+		},
+		{
+			"key": "ActionYouScoredInGame",
+			"value": "你在 un2 中获得 %1$s 分"
+		},
+		{
+			"key": "Add",
+			"value": "添加"
+		},
+		{
+			"key": "AddAccount",
+			"value": "添加帐户"
+		},
+		{
+			"key": "AddAdminErrorBlacklisted",
+			"value": "抱歉，您无法将此用户设为管理员。因为此用户在黑名单中，并且您无权解除其封禁。"
+		},
+		{
+			"key": "AddAdminErrorNotAMember",
+			"value": "抱歉，您无法将此用户设为管理员。因为此用户不是群组成员，且您也无权添加此用户。"
+		},
+		{
+			"key": "AddAnOption",
+			"value": "添加一个选项..."
+		},
+		{
+			"key": "AddAnOptionInfo",
+			"value": "您还可以再添加 %1$s。"
+		},
+		{
+			"key": "AddAnOptionInfoMax",
+			"value": "您添加的选项已达最大数量。"
+		},
+		{
+			"key": "AddAnotherAccount",
+			"value": "添加另一个帐户"
+		},
+		{
+			"key": "AddAnotherAccountInfo",
+			"value": "登录其他 Telegram 帐户并在它们之间轻松切换。"
+		},
+		{
+			"key": "AddBannedErrorAdmin",
+			"value": "抱歉，您无法封禁此用户。因为此用户是群组管理员，并且您也无权撤销其管理员权限。"
+		},
+		{
+			"key": "AddBotAsAdmin",
+			"value": "机器人只能被添加为管理员。"
+		},
+		{
+			"key": "AddCaption",
+			"value": "添加说明..."
+		},
+		{
+			"key": "AddContact",
+			"value": "添加联系人"
+		},
+		{
+			"key": "AddContactByPhone",
+			"value": "添加 %1$s"
+		},
+		{
+			"key": "AddContactChat",
+			"value": "添加联系人"
+		},
+		{
+			"key": "AddContactFullChat",
+			"value": "添加 %1$s 到联系人"
+		},
+		{
+			"key": "AddContactTitle",
+			"value": "添加联系人"
+		},
+		{
+			"key": "AddExceptions",
+			"value": "添加例外"
+		},
+		{
+			"key": "AddMasks",
+			"value": "添加装饰"
+		},
+		{
+			"key": "AddMasksInstalled",
+			"value": "新的装饰已添加"
+		},
+		{
+			"key": "AddMember",
+			"value": "邀请新成员"
+		},
+		{
+			"key": "AddMembersAlertCountText",
+			"value": "您确定要添加 %1$s 到 **%2$s** 吗？"
+		},
+		{
+			"key": "AddMembersAlertNamesText",
+			"value": "您确定要添加 %1$s 到 **%2$s** 吗？"
+		},
+		{
+			"key": "AddMembersAlertTitle",
+			"value": "添加 %1$s"
+		},
+		{
+			"key": "AddMembersForwardMessages",
+			"value": "向新成员显示最后100条消息"
+		},
+		{
+			"key": "AddMutual",
+			"value": "添加联系人到您的频道"
+		},
+		{
+			"key": "AddOneMemberAlertTitle",
+			"value": "添加成员"
+		},
+		{
+			"key": "AddOneMemberForwardMessages",
+			"value": "向 **%1$s** 显示最后100条消息"
+		},
+		{
+			"key": "AddPeopleNearby",
+			"value": "添加附近的人"
+		},
+		{
+			"key": "AddProxy",
+			"value": "添加代理"
+		},
+		{
+			"key": "AddRecipient",
+			"value": "添加接收者"
+		},
+		{
+			"key": "AddShortcut",
+			"value": "添加到主屏幕"
+		},
+		{
+			"key": "AddStickers",
+			"value": "添加贴纸包"
+		},
+		{
+			"key": "AddStickersCount",
+			"value": "添加 %1$s"
+		},
+		{
+			"key": "AddStickersInstalled",
+			"value": "新的贴纸包已添加"
+		},
+		{
+			"key": "AddStickersNotFound",
+			"value": "未找到该贴纸包"
+		},
+		{
+			"key": "AddSubscriber",
+			"value": "添加订阅者"
+		},
+		{
+			"key": "AddToContacts",
+			"value": "添加到通讯录"
+		},
+		{
+			"key": "AddToExceptions",
+			"value": "添加到例外"
+		},
+		{
+			"key": "AddToExistingContact",
+			"value": "添加到现有联系人"
+		},
+		{
+			"key": "AddToFavorites",
+			"value": "添加到收藏"
+		},
+		{
+			"key": "AddToMasks",
+			"value": "添加到装饰库"
+		},
+		{
+			"key": "AddToStickers",
+			"value": "添加到贴纸库"
+		},
+		{
+			"key": "AddToTheGroup",
+			"value": "添加 %1$s 到此群组？"
+		},
+		{
+			"key": "AddToTheGroupForwardCount",
+			"value": "要转发的最近消息数："
+		},
+		{
+			"key": "AddToTheGroupTitle",
+			"value": "添加 %1$s 到群组 %2$s？"
+		},
+		{
+			"key": "AddedToFavorites",
+			"value": "此贴纸已添加到收藏"
+		},
+		{
+			"key": "AdminWillBeRemoved",
+			"value": "如果您对 %1$s 作出限制，他将被撤销管理员权限。"
+		},
+		{
+			"key": "Agree",
+			"value": "同意"
+		},
+		{
+			"key": "Alert",
+			"value": "显示通知"
+		},
+		{
+			"key": "AllAccounts",
+			"value": "为所有帐户显示"
+		},
+		{
+			"key": "AllMedia",
+			"value": "所有媒体"
+		},
+		{
+			"key": "AllPhotos",
+			"value": "所有图片"
+		},
+		{
+			"key": "AllVideos",
+			"value": "全部视频"
+		},
+		{
+			"key": "AllowCustomQuickReply",
+			"value": "允许自定义"
+		},
+		{
+			"key": "AllowFillNumber",
+			"value": "请允许 Telegram 接收来电，以便自动验证您的手机号码。"
+		},
+		{
+			"key": "AllowReadCall",
+			"value": "请授予 Telegram 电话权限以便我们自动读取验证码。"
+		},
+		{
+			"key": "AllowReadCallAndLog",
+			"value": "请允许 Telegram 接听电话与读取通话记录，以便我们自动为您输入验证码。"
+		},
+		{
+			"key": "AllowReadCallAndSms",
+			"value": "请允许 Telegram 接收来电，以便自动验证您的手机号码。"
+		},
+		{
+			"key": "AllowReadCallLog",
+			"value": "请允许 Telegram 读取通话记录，以便为您自动填写验证码。"
+		},
+		{
+			"key": "AllowReadSms",
+			"value": "请授予 Telegram 短信权限以便我们自动读取验证码。"
+		},
+		{
+			"key": "AlternativeOptions",
+			"value": "其它选项"
+		},
+		{
+			"key": "AlwaysAllow",
+			"value": "总是允许"
+		},
+		{
+			"key": "AlwaysAllowPlaceholder",
+			"value": "总是允许..."
+		},
+		{
+			"key": "AlwaysShareWith",
+			"value": "总是共享给"
+		},
+		{
+			"key": "AlwaysShareWithPlaceholder",
+			"value": "总是公开给..."
+		},
+		{
+			"key": "AlwaysShareWithTitle",
+			"value": "总是共享"
+		},
+		{
+			"key": "AlwaysShowPopup",
+			"value": "总是弹出对话框"
+		},
+		{
+			"key": "AndMoreTyping",
+			"other_value": "和其他 %1$d 人正在输入"
+		},
+		{
+			"key": "AndMoreTypingGroup",
+			"other_value": "%1$s 和其他 %2$d 人正在输入"
+		},
+		{
+			"key": "AndOther",
+			"other_value": "和其他 %1$d 人"
+		},
+		{
+			"key": "AnonymousPoll",
+			"value": "匿名投票"
+		},
+		{
+			"key": "ApkRestricted",
+			"value": "此应用已被限制安装 APK，你可以在系统设置中启用它。"
+		},
+		{
+			"key": "AppName",
+			"value": "Telegram"
+		},
+		{
+			"key": "AppNameBeta",
+			"value": "Telegram"
+		},
+		{
+			"key": "Appearance",
+			"value": "外观"
+		},
+		{
+			"key": "ApplyLocalizationFile",
+			"value": "安装语言包"
+		},
+		{
+			"key": "ApplyTheme",
+			"value": "应用"
+		},
+		{
+			"key": "ApplyThemeFile",
+			"value": "应用主题文件"
+		},
+		{
+			"key": "April",
+			"value": "4月"
+		},
+		{
+			"key": "Archive",
+			"value": "归档"
+		},
+		{
+			"key": "ArchiveHidden",
+			"value": "归档已隐藏。"
+		},
+		{
+			"key": "ArchiveHiddenInfo",
+			"value": "下滑以查看归档。"
+		},
+		{
+			"key": "ArchiveHintHeader1",
+			"value": "这里是您的归档"
+		},
+		{
+			"key": "ArchiveHintHeader2",
+			"value": "已静音的对话"
+		},
+		{
+			"key": "ArchiveHintHeader3",
+			"value": "置顶的对话"
+		},
+		{
+			"key": "ArchiveHintText1",
+			"value": "已启用通知的对话将在接收到新消息时被取消归档。"
+		},
+		{
+			"key": "ArchiveHintText2",
+			"value": "已禁用通知的对话将在接收到新消息时保持归档。"
+		},
+		{
+			"key": "ArchiveHintText3",
+			"value": "您可以任意置顶已归档的对话。"
+		},
+		{
+			"key": "ArchivePinned",
+			"value": "归档已置顶。"
+		},
+		{
+			"key": "ArchivePinnedInfo",
+			"value": "向左滑动以隐藏归档。"
+		},
+		{
+			"key": "ArchivedChats",
+			"value": "已归档对话"
+		},
+		{
+			"key": "ArchivedMasks",
+			"value": "已归档装饰"
+		},
+		{
+			"key": "ArchivedMasksAlertInfo",
+			"value": "您的一些旧图贴包已经被归档。你可以在设置里重新激活它们。"
+		},
+		{
+			"key": "ArchivedMasksAlertTitle",
+			"value": "已归档装饰"
+		},
+		{
+			"key": "ArchivedMasksEmpty",
+			"value": "暂无已归档装饰"
+		},
+		{
+			"key": "ArchivedMasksInfo",
+			"value": "你可以拥有最多 200 套装饰。\n未使用的装饰将在你添加更多的装饰时被归档。"
+		},
+		{
+			"key": "ArchivedStickers",
+			"value": "已归档贴纸"
+		},
+		{
+			"key": "ArchivedStickersAlertInfo",
+			"value": "你的一些旧贴纸包已经被归档。你可以在设置里重新激活它们。"
+		},
+		{
+			"key": "ArchivedStickersAlertTitle",
+			"value": "已归档贴纸"
+		},
+		{
+			"key": "ArchivedStickersEmpty",
+			"value": "没有已归档的贴纸"
+		},
+		{
+			"key": "ArchivedStickersInfo",
+			"value": "你可以拥有最多 200 个贴纸包。\n未使用的贴纸将在你添加更多的贴纸时被归档。"
+		},
+		{
+			"key": "AreTyping",
+			"value": "都在输入..."
+		},
+		{
+			"key": "AreTypingGroup",
+			"value": "%1$s 正在输入..."
+		},
+		{
+			"key": "AreYouSure",
+			"value": "您确定吗？"
+		},
+		{
+			"key": "AreYouSureBlockContact",
+			"value": "您确定要屏蔽此联系人吗？"
+		},
+		{
+			"key": "AreYouSureBlockContact2",
+			"value": "您确定要屏蔽 **%1$s** 吗？"
+		},
+		{
+			"key": "AreYouSureClearDrafts",
+			"value": "您确定要删除所有草稿吗？"
+		},
+		{
+			"key": "AreYouSureClearHistory",
+			"value": "您确定要删除此对话中的所有消息吗？"
+		},
+		{
+			"key": "AreYouSureClearHistoryCacheFewChats",
+			"value": "删除所选对话中所有缓存的文本和媒体？"
+		},
+		{
+			"key": "AreYouSureClearHistoryChannel",
+			"value": "确定删除此频道中所有缓存的消息和媒体文件？"
+		},
+		{
+			"key": "AreYouSureClearHistoryFewChats",
+			"value": "您确定要清空所选对话的历史记录？"
+		},
+		{
+			"key": "AreYouSureClearHistoryGroup",
+			"value": "您确定要删除此群组中所有缓存的消息记录和媒体文件吗？"
+		},
+		{
+			"key": "AreYouSureClearHistorySavedMessages",
+			"value": "您确定要清空收藏夹内的消息吗？"
+		},
+		{
+			"key": "AreYouSureClearHistoryWithChat",
+			"value": "您确定要清空 **%1$s** 的消息记录吗？"
+		},
+		{
+			"key": "AreYouSureClearHistoryWithSecretUser",
+			"value": "您确定要清空与 **%1$s** 的加密对话消息记录吗？"
+		},
+		{
+			"key": "AreYouSureClearHistoryWithUser",
+			"value": "您确定要清空与 **%1$s** 的消息记录吗？"
+		},
+		{
+			"key": "AreYouSureDeleteAndExit",
+			"value": "您确定要删除并退出此群组吗？"
+		},
+		{
+			"key": "AreYouSureDeleteAndExitName",
+			"value": "您确定要删除并退出 **%1$s** 吗？"
+		},
+		{
+			"key": "AreYouSureDeleteContact",
+			"value": "您确定要删除此联系人吗？"
+		},
+		{
+			"key": "AreYouSureDeleteFewChats",
+			"value": "您确定要删除所选对话吗？"
+		},
+		{
+			"key": "AreYouSureDeleteFewMessages",
+			"value": "您确定要删除这些消息吗？"
+		},
+		{
+			"key": "AreYouSureDeleteFewMessagesMega",
+			"value": "您确定要为所有人删除这些消息吗？"
+		},
+		{
+			"key": "AreYouSureDeleteGIF",
+			"value": "您确定要删除此 GIF 吗？"
+		},
+		{
+			"key": "AreYouSureDeleteMessages",
+			"value": "您确定要删除 %1$s吗？"
+		},
+		{
+			"key": "AreYouSureDeletePhoto",
+			"value": "确定删除此图片？"
+		},
+		{
+			"key": "AreYouSureDeleteSingleMessage",
+			"value": "您确定要删除这条消息吗？"
+		},
+		{
+			"key": "AreYouSureDeleteSingleMessageMega",
+			"value": "您确定要为所有人删除此消息吗？"
+		},
+		{
+			"key": "AreYouSureDeleteThisChat",
+			"value": "您确定要删除此对话吗？"
+		},
+		{
+			"key": "AreYouSureDeleteThisChatSavedMessages",
+			"value": "您确定要删除收藏夹吗？"
+		},
+		{
+			"key": "AreYouSureDeleteThisChatWithGroup",
+			"value": "您确定要删除 %1$s 吗？"
+		},
+		{
+			"key": "AreYouSureDeleteThisChatWithSecretUser",
+			"value": "您确定要删除与 **%1$s** 的加密对话吗？"
+		},
+		{
+			"key": "AreYouSureDeleteThisChatWithUser",
+			"value": "您确定要删除与 **%1$s** 的对话吗？"
+		},
+		{
+			"key": "AreYouSureDeleteVideo",
+			"value": "确定删除此视频？"
+		},
+		{
+			"key": "AreYouSureLogout",
+			"value": "您确定要注销吗？\n\n请注意，您可以同时在所有设备上无缝地使用 Telegram。\n\n请记住，注销将会清除所有的加密聊天记录。"
+		},
+		{
+			"key": "AreYouSureRegistration",
+			"value": "您确定要取消注册吗？"
+		},
+		{
+			"key": "AreYouSureSecretChat",
+			"value": "您确定要开始加密对话吗？"
+		},
+		{
+			"key": "AreYouSureSecretChatTitle",
+			"value": "加密对话"
+		},
+		{
+			"key": "AreYouSureSessions",
+			"value": "您确定要注销其他所有的会话吗？"
+		},
+		{
+			"key": "AreYouSureShareMyContactInfo",
+			"value": "您确定要分享您的手机号码？"
+		},
+		{
+			"key": "AreYouSureShareMyContactInfoBot",
+			"value": "机器人将会获取您的手机号码。这可能对与其他服务的集成有用。"
+		},
+		{
+			"key": "AreYouSureShareMyContactInfoUser",
+			"value": "您确定要将您的手机号码 %1$s 分享给 **%2$s** 吗？"
+		},
+		{
+			"key": "AreYouSureUnblockContact",
+			"value": "您确定要取消屏蔽此联系人吗？"
+		},
+		{
+			"key": "AreYouSureWebSessions",
+			"value": "是否取消与所有使用 Telegram 登录的网站的关联？"
+		},
+		{
+			"key": "ArticleByAuthor",
+			"value": "%1$s"
+		},
+		{
+			"key": "ArticleDateByAuthor",
+			"value": "%2$s 于 %1$s"
+		},
+		{
+			"key": "AskAQuestion",
+			"value": "向我们提问"
+		},
+		{
+			"key": "AskAQuestionInfo",
+			"value": "请注意，Telegram 的支持服务由全球志愿者提供，反馈时请使用英文。我们会尽快回复，但仍然需要一点时间。\n\n请前往 \u003c![CDATA[\u003ca href=\"https://telegram.org/faq#general-questions\"\u003eTelegram 常见问题\u003c/a\u003e]]\u003e 看看：那里有绝大多数问题的答案和重要的\u003c![CDATA[\u003ca href=\"https://telegram.org/faq#troubleshooting\"\u003e故障排除\u003c/a\u003e]]\u003e提示。"
+		},
+		{
+			"key": "AskButton",
+			"value": "向志愿者提问"
+		},
+		{
+			"key": "AttachAudio",
+			"value": "语音留言"
+		},
+		{
+			"key": "AttachBotsHelp",
+			"value": "上划查看机器人"
+		},
+		{
+			"key": "AttachContact",
+			"value": "联系人"
+		},
+		{
+			"key": "AttachDestructingPhoto",
+			"value": "自毁图片"
+		},
+		{
+			"key": "AttachDestructingVideo",
+			"value": "自毁视频"
+		},
+		{
+			"key": "AttachDocument",
+			"value": "文件"
+		},
+		{
+			"key": "AttachGame",
+			"value": "游戏"
+		},
+		{
+			"key": "AttachGif",
+			"value": "GIF"
+		},
+		{
+			"key": "AttachGifRestricted",
+			"value": "群组管理员已禁止您发送 GIF 至 %1$s"
+		},
+		{
+			"key": "AttachGifRestrictedForever",
+			"value": "群组管理员已禁止您发送 GIF。"
+		},
+		{
+			"key": "AttachInlineRestricted",
+			"value": "群组管理员已禁止您发送机器人内容至 %1$s"
+		},
+		{
+			"key": "AttachInlineRestrictedForever",
+			"value": "群组管理员已禁止您发送机器人内容。"
+		},
+		{
+			"key": "AttachLiveLocation",
+			"value": "实时位置"
+		},
+		{
+			"key": "AttachLiveLocationIsSharing",
+			"value": "%1$s 正在与 %2$s 共享"
+		},
+		{
+			"key": "AttachLocation",
+			"value": "位置"
+		},
+		{
+			"key": "AttachMediaRestricted",
+			"value": "此群组的管理员限制了您在此发送媒体文件的权限直到 %1$s"
+		},
+		{
+			"key": "AttachMediaRestrictedForever",
+			"value": "群组管理员已禁止您发送媒体文件。"
+		},
+		{
+			"key": "AttachMusic",
+			"value": "音乐"
+		},
+		{
+			"key": "AttachPhoto",
+			"value": "图片"
+		},
+		{
+			"key": "AttachPhotoExpired",
+			"value": "图片已自毁"
+		},
+		{
+			"key": "AttachRound",
+			"value": "视频留言"
+		},
+		{
+			"key": "AttachSticker",
+			"value": "[贴纸]"
+		},
+		{
+			"key": "AttachStickersRestricted",
+			"value": "群组管理员已禁止您发送贴纸至 %1$s"
+		},
+		{
+			"key": "AttachStickersRestrictedForever",
+			"value": "群组管理员已禁止您发送贴纸。"
+		},
+		{
+			"key": "AttachVideo",
+			"value": "视频"
+		},
+		{
+			"key": "AttachVideoExpired",
+			"value": "视频已自毁"
+		},
+		{
+			"key": "AudioAutodownload",
+			"value": "语音留言"
+		},
+		{
+			"key": "AudioTitle",
+			"value": "分享的音乐"
+		},
+		{
+			"key": "AudioUnknownArtist",
+			"value": "未知艺术家"
+		},
+		{
+			"key": "AudioUnknownTitle",
+			"value": "未知标题"
+		},
+		{
+			"key": "August",
+			"value": "8月"
+		},
+		{
+			"key": "AutoDownloadAudioInfo",
+			"value": "由于语音留言体积很小，它们将始终自动下载。"
+		},
+		{
+			"key": "AutoDownloadChannels",
+			"value": "频道"
+		},
+		{
+			"key": "AutoDownloadContacts",
+			"value": "联系人"
+		},
+		{
+			"key": "AutoDownloadCustom",
+			"value": "自定义"
+		},
+		{
+			"key": "AutoDownloadDataUsage",
+			"value": "移动数据使用计划"
+		},
+		{
+			"key": "AutoDownloadFiles",
+			"value": "文件"
+		},
+		{
+			"key": "AutoDownloadFilesOn",
+			"value": "文件"
+		},
+		{
+			"key": "AutoDownloadFilesTitle",
+			"value": "自动下载文件和音乐"
+		},
+		{
+			"key": "AutoDownloadGroups",
+			"value": "群组"
+		},
+		{
+			"key": "AutoDownloadHigh",
+			"value": "高"
+		},
+		{
+			"key": "AutoDownloadLow",
+			"value": "低"
+		},
+		{
+			"key": "AutoDownloadMaxFileSize",
+			"value": "文件大小限制"
+		},
+		{
+			"key": "AutoDownloadMaxVideoSize",
+			"value": "视频大小限制"
+		},
+		{
+			"key": "AutoDownloadMedia",
+			"value": "自动下载媒体文件"
+		},
+		{
+			"key": "AutoDownloadMedium",
+			"value": "中"
+		},
+		{
+			"key": "AutoDownloadOff",
+			"value": "关闭"
+		},
+		{
+			"key": "AutoDownloadOnAllChats",
+			"value": "对所有对话启用"
+		},
+		{
+			"key": "AutoDownloadOnFor",
+			"value": "对 %1$s 启用"
+		},
+		{
+			"key": "AutoDownloadOnMobileData",
+			"value": "使用移动数据时"
+		},
+		{
+			"key": "AutoDownloadOnMobileDataInfo",
+			"value": "如欲在使用移动数据时自动下载媒体文件，请打开此开关。"
+		},
+		{
+			"key": "AutoDownloadOnRoamingData",
+			"value": "漫游时"
+		},
+		{
+			"key": "AutoDownloadOnRoamingDataInfo",
+			"value": "如欲在漫游时自动下载媒体文件，请打开此开关。"
+		},
+		{
+			"key": "AutoDownloadOnUpToFor",
+			"value": "对 %2$s 不超过 %1$s"
+		},
+		{
+			"key": "AutoDownloadOnWiFiData",
+			"value": "使用 Wi-Fi 时"
+		},
+		{
+			"key": "AutoDownloadOnWiFiDataInfo",
+			"value": "如欲在使用 Wi-Fi 时自动下载媒体文件，请打开此开关。"
+		},
+		{
+			"key": "AutoDownloadPhotos",
+			"value": "图片"
+		},
+		{
+			"key": "AutoDownloadPhotosOn",
+			"value": "图片"
+		},
+		{
+			"key": "AutoDownloadPhotosTitle",
+			"value": "自动下载图片"
+		},
+		{
+			"key": "AutoDownloadPm",
+			"value": "私聊"
+		},
+		{
+			"key": "AutoDownloadPreloadMusic",
+			"value": "预加载下一曲"
+		},
+		{
+			"key": "AutoDownloadPreloadMusicInfo",
+			"value": "当您在听音乐时预加载下一曲。"
+		},
+		{
+			"key": "AutoDownloadPreloadVideo",
+			"value": "预加载更大的视频"
+		},
+		{
+			"key": "AutoDownloadPreloadVideoInfo",
+			"value": "预加载大于 %1$s 视频的前几秒钟以便快速回放。"
+		},
+		{
+			"key": "AutoDownloadTypes",
+			"value": "媒体类型"
+		},
+		{
+			"key": "AutoDownloadUpToOnAllChats",
+			"value": "对所有对话不超过 %1$s"
+		},
+		{
+			"key": "AutoDownloadVideos",
+			"value": "视频"
+		},
+		{
+			"key": "AutoDownloadVideosOn",
+			"value": "视频"
+		},
+		{
+			"key": "AutoDownloadVideosTitle",
+			"value": "自动下载视频和 GIF"
+		},
+		{
+			"key": "AutoLock",
+			"value": "自动锁定"
+		},
+		{
+			"key": "AutoLockDisabled",
+			"value": "从不"
+		},
+		{
+			"key": "AutoLockInTime",
+			"value": "%1$s后"
+		},
+		{
+			"key": "AutoLockInfo",
+			"value": "在离开一段时间后，您将需要重新输入锁定码。"
+		},
+		{
+			"key": "AutoNightAdaptive",
+			"value": "自适应"
+		},
+		{
+			"key": "AutoNightAutomatic",
+			"value": "自动"
+		},
+		{
+			"key": "AutoNightBrightness",
+			"value": "亮度阈值"
+		},
+		{
+			"key": "AutoNightBrightnessInfo",
+			"value": "当环境亮度低于 %1$d%% 时，切换为夜间主题。"
+		},
+		{
+			"key": "AutoNightDisabled",
+			"value": "关闭"
+		},
+		{
+			"key": "AutoNightFrom",
+			"value": "从"
+		},
+		{
+			"key": "AutoNightLocation",
+			"value": "使用当地日落/日出时间"
+		},
+		{
+			"key": "AutoNightPreferred",
+			"value": "首选夜间主题"
+		},
+		{
+			"key": "AutoNightSchedule",
+			"value": "时间段"
+		},
+		{
+			"key": "AutoNightScheduled",
+			"value": "计划时段"
+		},
+		{
+			"key": "AutoNightTheme",
+			"value": "自动启用夜间模式"
+		},
+		{
+			"key": "AutoNightThemeOff",
+			"value": "未启用"
+		},
+		{
+			"key": "AutoNightTo",
+			"value": "至"
+		},
+		{
+			"key": "AutoNightUpdateLocation",
+			"value": "更新位置"
+		},
+		{
+			"key": "AutoNightUpdateLocationInfo",
+			"value": "计算日落 \u0026 日出时间需要检测一次您的粗略位置。请注意，此位置仅会本地存储在您的设备上。\n\n日落：%1$s\n日出：%2$s"
+		},
+		{
+			"key": "AutodownloadChannels",
+			"value": "频道"
+		},
+		{
+			"key": "AutodownloadContacts",
+			"value": "联系人"
+		},
+		{
+			"key": "AutodownloadGroupChats",
+			"value": "群聊"
+		},
+		{
+			"key": "AutodownloadPrivateChats",
+			"value": "私聊"
+		},
+		{
+			"key": "AutodownloadSizeLimit",
+			"value": "限制文件大小"
+		},
+		{
+			"key": "AutodownloadSizeLimitUpTo",
+			"value": "不超过 %1$s"
+		},
+		{
+			"key": "AutomaticMediaDownload",
+			"value": "自动下载媒体文件"
+		},
+		{
+			"key": "AutoplayGIF",
+			"value": "GIF"
+		},
+		{
+			"key": "AutoplayGifs",
+			"value": "自动播放 GIF"
+		},
+		{
+			"key": "AutoplayMedia",
+			"value": "自动播放"
+		},
+		{
+			"key": "AutoplayVideo",
+			"value": "视频"
+		},
+		{
+			"key": "AutoplayVideoInfo",
+			"value": "按动音量键打开声音"
+		},
+		{
+			"key": "Available",
+			"value": "可用"
+		},
+		{
+			"key": "AwaitingEncryption",
+			"value": "等待%s上线..."
+		},
+		{
+			"key": "AwayTo",
+			"value": "%1$s 远"
+		},
+		{
+			"key": "Back",
+			"value": "返回"
+		},
+		{
+			"key": "BackgroundBlurred",
+			"value": "模糊"
+		},
+		{
+			"key": "BackgroundBrightness",
+			"value": "亮度"
+		},
+		{
+			"key": "BackgroundColor",
+			"value": "颜色"
+		},
+		{
+			"key": "BackgroundColorPreviewLine1",
+			"value": "向两侧滑动可查看更多颜色。"
+		},
+		{
+			"key": "BackgroundColorPreviewLine2",
+			"value": "Salmon 是一种鱼，并不是一种颜色。"
+		},
+		{
+			"key": "BackgroundColorSinglePreviewLine1",
+			"value": "点按 “设置” 即可应用背景图。"
+		},
+		{
+			"key": "BackgroundColorSinglePreviewLine2",
+			"value": "欣赏美景吧！"
+		},
+		{
+			"key": "BackgroundHexColorCode",
+			"value": "十六进制颜色编码"
+		},
+		{
+			"key": "BackgroundIntensity",
+			"value": "深度"
+		},
+		{
+			"key": "BackgroundMotion",
+			"value": "动效"
+		},
+		{
+			"key": "BackgroundPattern",
+			"value": "图案"
+		},
+		{
+			"key": "BackgroundPreview",
+			"value": "背景预览"
+		},
+		{
+			"key": "BackgroundPreviewLine1",
+			"value": "提示：一些背景图使用模糊效果看起来会更好。"
+		},
+		{
+			"key": "BackgroundPreviewLine2",
+			"value": "哇！谢谢"
+		},
+		{
+			"key": "BackgroundRestricted",
+			"value": "后台数据已被限制。"
+		},
+		{
+			"key": "BackgroundSearchColor",
+			"value": "颜色: "
+		},
+		{
+			"key": "BadgeNumber",
+			"value": "未读消息数量提示"
+		},
+		{
+			"key": "BadgeNumberMutedChats",
+			"value": "包含已关闭通知的对话"
+		},
+		{
+			"key": "BadgeNumberShow",
+			"value": "启用"
+		},
+		{
+			"key": "BadgeNumberUnread",
+			"value": "按消息数统计未读"
+		},
+		{
+			"key": "BanFromTheGroup",
+			"value": "封禁此用户"
+		},
+		{
+			"key": "BannedPhoneNumber",
+			"value": "此手机号码已被封禁。"
+		},
+		{
+			"key": "Black",
+			"value": "黑色"
+		},
+		{
+			"key": "BlockContact",
+			"value": "屏蔽用户"
+		},
+		{
+			"key": "BlockUser",
+			"value": "屏蔽用户"
+		},
+		{
+			"key": "BlockUserAlert",
+			"value": "你想屏蔽 %1$s 给您发送消息和打电话吗？"
+		},
+		{
+			"key": "BlockUserChatsTitle",
+			"value": "对话"
+		},
+		{
+			"key": "BlockUserContactsTitle",
+			"value": "联系人"
+		},
+		{
+			"key": "BlockUserMultiTitle",
+			"value": "屏蔽用户"
+		},
+		{
+			"key": "BlockUserTitle",
+			"value": "屏蔽 %1$s"
+		},
+		{
+			"key": "BlockedEmpty",
+			"value": "无"
+		},
+		{
+			"key": "BlockedUsers",
+			"value": "已屏蔽的用户"
+		},
+		{
+			"key": "BlockedUsersCount",
+			"other_value": "%1$d 位已被屏蔽的用户"
+		},
+		{
+			"key": "BlockedUsersInfo",
+			"value": "被屏蔽的用户将无法与您联系，也无法看到您的最后上线时间。"
+		},
+		{
+			"key": "Blue",
+			"value": "蓝色"
+		},
+		{
+			"key": "BlurLinear",
+			"value": "线性"
+		},
+		{
+			"key": "BlurOff",
+			"value": "关闭"
+		},
+		{
+			"key": "BlurRadial",
+			"value": "圆形"
+		},
+		{
+			"key": "Bold",
+			"value": "粗体"
+		},
+		{
+			"key": "Bot",
+			"value": "机器人"
+		},
+		{
+			"key": "BotCantJoinGroups",
+			"value": "此机器人无法加入群组。"
+		},
+		{
+			"key": "BotHelp",
+			"value": "帮助"
+		},
+		{
+			"key": "BotInfoTitle",
+			"value": "它能做什么？"
+		},
+		{
+			"key": "BotInvite",
+			"value": "添加到群组"
+		},
+		{
+			"key": "BotPermissionGameAlert",
+			"value": "是否允许 %1$s 传送你的 Telegram 昵称及 ID (不是你的手机号码) 到通过机器人打开的网页？"
+		},
+		{
+			"key": "BotRestart",
+			"value": "重新启用"
+		},
+		{
+			"key": "BotSettings",
+			"value": "设置"
+		},
+		{
+			"key": "BotShare",
+			"value": "分享"
+		},
+		{
+			"key": "BotStart",
+			"value": "开始"
+		},
+		{
+			"key": "BotStatusCantRead",
+			"value": "不能访问消息"
+		},
+		{
+			"key": "BotStatusRead",
+			"value": "能够访问消息"
+		},
+		{
+			"key": "BotStop",
+			"value": "停止使用"
+		},
+		{
+			"key": "BotUnblock",
+			"value": "重新启用"
+		},
+		{
+			"key": "Brown",
+			"value": "褐色"
+		},
+		{
+			"key": "BuiltInThemes",
+			"value": "内置主题"
+		},
+		{
+			"key": "BytesReceived",
+			"value": "已接收字节"
+		},
+		{
+			"key": "BytesSent",
+			"value": "已发送字节"
+		},
+		{
+			"key": "CacheClear",
+			"value": "清除"
+		},
+		{
+			"key": "CacheEmpty",
+			"value": "已清空"
+		},
+		{
+			"key": "CalculatingSize",
+			"value": "计算中..."
+		},
+		{
+			"key": "Call",
+			"value": "呼叫"
+		},
+		{
+			"key": "CallAgain",
+			"value": "再次呼叫"
+		},
+		{
+			"key": "CallBack",
+			"value": "回拨"
+		},
+		{
+			"key": "CallEmojiKeyTooltip",
+			"value": "如果 %1$s 屏幕上的 emoji 和此处的相同，此通话就是 100%% 安全的。"
+		},
+		{
+			"key": "CallMessageIncoming",
+			"value": "来电"
+		},
+		{
+			"key": "CallMessageIncomingDeclined",
+			"value": "拒接电话"
+		},
+		{
+			"key": "CallMessageIncomingMissed",
+			"value": "未接电话"
+		},
+		{
+			"key": "CallMessageOutgoing",
+			"value": "外拨电话"
+		},
+		{
+			"key": "CallMessageOutgoingMissed",
+			"value": "未接通"
+		},
+		{
+			"key": "CallMessageReportProblem",
+			"value": "评价通话"
+		},
+		{
+			"key": "CallMessageWithDuration",
+			"value": "%1$s (%2$s)"
+		},
+		{
+			"key": "CallNotAvailable",
+			"value": "抱歉，**%1$s** 不同意进行通话。"
+		},
+		{
+			"key": "CallReportHint",
+			"value": "出了什么问题？"
+		},
+		{
+			"key": "CallReportIncludeLogs",
+			"value": "附带技术详情"
+		},
+		{
+			"key": "CallReportLogsExplain",
+			"value": "不会泄露对话的内容并且能帮助我们尽快修复问题。"
+		},
+		{
+			"key": "CallReportSent",
+			"value": "感谢您帮助 Telegram Call 变得更好。"
+		},
+		{
+			"key": "CallText",
+			"value": "Telegram 会在 %1$d:%2$02d 后改用电话语音播报验证码"
+		},
+		{
+			"key": "CallViaTelegram",
+			"value": "Telegram Call"
+		},
+		{
+			"key": "Calling",
+			"value": "正在呼叫您..."
+		},
+		{
+			"key": "Calls",
+			"value": "通话"
+		},
+		{
+			"key": "CallsDataUsage",
+			"value": "通话"
+		},
+		{
+			"key": "CallsTotalTime",
+			"value": "总时间"
+		},
+		{
+			"key": "CameraPermissionText",
+			"value": "点按来允许访问您的相机"
+		},
+		{
+			"key": "Cancel",
+			"value": "取消"
+		},
+		{
+			"key": "CancelAccountReset",
+			"value": "撤销帐号重置请求"
+		},
+		{
+			"key": "CancelAccountResetInfo",
+			"value": "一位有权访问您的电话号码 **%1$s** 的人请求删除您的Telegram 帐户并重置您的两步验证密码。\n\n如果这不是您本人的操作，请输入我们刚刚通过短信发送给您的验证码。"
+		},
+		{
+			"key": "CancelEmailQuestion",
+			"value": "您确定要放弃设置恢复邮箱吗？"
+		},
+		{
+			"key": "CancelLinkExpired",
+			"value": "链接无效或已过期。"
+		},
+		{
+			"key": "CancelLinkSuccess",
+			"value": "已取消您账号的删除请求 %1$s 。您现在可以关闭此窗口。"
+		},
+		{
+			"key": "CancelPasswordQuestion",
+			"value": "您确定要终止两步验证设置？"
+		},
+		{
+			"key": "CancelPollAlertText",
+			"value": "您确定要放弃发起新投票吗？"
+		},
+		{
+			"key": "CancelPollAlertTitle",
+			"value": "放弃发起投票"
+		},
+		{
+			"key": "CancelRegistration",
+			"value": "取消注册"
+		},
+		{
+			"key": "CancelSending",
+			"value": "取消发送"
+		},
+		{
+			"key": "CantAddBotAsAdmin",
+			"value": "抱歉，机器人在频道中只能被添加为管理员。"
+		},
+		{
+			"key": "CantPlayVideo",
+			"value": "无法播放此视频。要尝试使用外部播放器播放吗？"
+		},
+		{
+			"key": "Caption",
+			"value": "说明"
+		},
+		{
+			"key": "Change",
+			"value": "更改"
+		},
+		{
+			"key": "ChangeChatBackground",
+			"value": "更改聊天窗口背景图"
+		},
+		{
+			"key": "ChangeLanguageLater",
+			"value": "您可以稍后在设置中更改您的语言。"
+		},
+		{
+			"key": "ChangePasscode",
+			"value": "修改锁定码"
+		},
+		{
+			"key": "ChangePasscodeInfo",
+			"value": "当您设置好一个锁定码后，聊天列表上方会出现一个锁形图标。点击它来锁定或解锁 Telegram 应用。\n\n注意：如果您忘记了锁定码，您将只能卸载然后重新安装 Telegram。重装之后您将丢失所有的加密对话。"
+		},
+		{
+			"key": "ChangePassword",
+			"value": "更改密码"
+		},
+		{
+			"key": "ChangePermissions",
+			"value": "修改权限"
+		},
+		{
+			"key": "ChangePhoneHelp",
+			"value": "我们将会给您的新手机号码发送一条带有验证码的短信。"
+		},
+		{
+			"key": "ChangePhoneNewNumber",
+			"value": "新手机号码"
+		},
+		{
+			"key": "ChangePhoneNumber",
+			"value": "更改手机号码"
+		},
+		{
+			"key": "ChangePhoneNumberInfo",
+			"value": "将您的帐号、聊天信息和媒体文件转移到新手机号码上。"
+		},
+		{
+			"key": "ChangePhoneNumberOccupied",
+			"value": "手机号码 %1$s 已经和一个 Telegram 帐户绑定。请先删除该帐户再迁移到此新号码。"
+		},
+		{
+			"key": "ChangePublicLimitReached",
+			"value": "抱歉，您已使用太多公共用户名。你可以撤销其中一个群组或频道的链接，或者创建一个私人链接。"
+		},
+		{
+			"key": "ChangeRecoveryEmail",
+			"value": "更改恢复邮箱"
+		},
+		{
+			"key": "ChannelAddAdmin",
+			"value": "添加管理员"
+		},
+		{
+			"key": "ChannelAddException",
+			"value": "添加例外"
+		},
+		{
+			"key": "ChannelAddMembers",
+			"value": "添加订阅者"
+		},
+		{
+			"key": "ChannelAddTo",
+			"value": "将 %1$s 添加到此频道？"
+		},
+		{
+			"key": "ChannelAddToChannel",
+			"value": "邀请加入频道"
+		},
+		{
+			"key": "ChannelAddToGroup",
+			"value": "邀请加入群组"
+		},
+		{
+			"key": "ChannelAddedBy",
+			"value": "un1 将您添加到了此频道"
+		},
+		{
+			"key": "ChannelAddedByNotification",
+			"value": "%1$s 将您添加到了 %2$s 频道"
+		},
+		{
+			"key": "ChannelAdmin",
+			"value": "管理员"
+		},
+		{
+			"key": "ChannelAdministrator",
+			"value": "管理员"
+		},
+		{
+			"key": "ChannelAdministrators",
+			"value": "管理员"
+		},
+		{
+			"key": "ChannelAdminsInfo",
+			"value": "您可以添加管理员帮助您管理频道。长按可删除管理员。"
+		},
+		{
+			"key": "ChannelAlertCreate",
+			"value": "创建新频道"
+		},
+		{
+			"key": "ChannelAlertCreate2",
+			"value": "创建频道"
+		},
+		{
+			"key": "ChannelAlertText",
+			"value": "频道是向大众广播消息的得力工具"
+		},
+		{
+			"key": "ChannelAlertTitle",
+			"value": "什么是频道？"
+		},
+		{
+			"key": "ChannelBlacklist",
+			"value": "被封禁的用户"
+		},
+		{
+			"key": "ChannelBlockUser",
+			"value": "封禁用户"
+		},
+		{
+			"key": "ChannelBlockedUsers",
+			"value": "被封禁的用户"
+		},
+		{
+			"key": "ChannelBots",
+			"value": "机器人"
+		},
+		{
+			"key": "ChannelBroadcast",
+			"value": "广播"
+		},
+		{
+			"key": "ChannelCantOpenBanned",
+			"value": "抱歉，目前您已被禁止在公开群组中发送消息。"
+		},
+		{
+			"key": "ChannelCantOpenNa",
+			"value": "抱歉，该对话已无法访问。"
+		},
+		{
+			"key": "ChannelCantOpenPrivate",
+			"value": "抱歉，此对话已无法访问。"
+		},
+		{
+			"key": "ChannelCantSendMessage",
+			"value": "抱歉，您不能在此频道中发布内容。"
+		},
+		{
+			"key": "ChannelContacts",
+			"value": "此频道中的联系人"
+		},
+		{
+			"key": "ChannelCreator",
+			"value": "所有者"
+		},
+		{
+			"key": "ChannelDelete",
+			"value": "删除频道"
+		},
+		{
+			"key": "ChannelDeleteAlert",
+			"value": "注意！删除此频道将会清除所有关注者并且所有消息将会丢失。确定要删除此频道？"
+		},
+		{
+			"key": "ChannelDeleteFromList",
+			"value": "从列表中删除"
+		},
+		{
+			"key": "ChannelDeleteInfo",
+			"value": "您将会丢失此频道的所有消息。"
+		},
+		{
+			"key": "ChannelDeleteMenu",
+			"value": "删除频道"
+		},
+		{
+			"key": "ChannelDeletedUndo",
+			"value": "频道已删除。"
+		},
+		{
+			"key": "ChannelDiscuss",
+			"value": "讨论"
+		},
+		{
+			"key": "ChannelEdit",
+			"value": "编辑"
+		},
+		{
+			"key": "ChannelEditPermissions",
+			"value": "编辑权限"
+		},
+		{
+			"key": "ChannelInviteLinkTitle",
+			"value": "邀请链接"
+		},
+		{
+			"key": "ChannelInviteViaLink",
+			"value": "使用链接邀请"
+		},
+		{
+			"key": "ChannelJoin",
+			"value": "加入"
+		},
+		{
+			"key": "ChannelJoinTo",
+			"value": "您确定要加入 “%1$s” 频道？"
+		},
+		{
+			"key": "ChannelJoined",
+			"value": "您加入了这个频道"
+		},
+		{
+			"key": "ChannelLeaveAlert",
+			"value": "您确定要退出此频道吗？"
+		},
+		{
+			"key": "ChannelLeaveAlertWithName",
+			"value": "您确定要退出 **%1$s** 吗？"
+		},
+		{
+			"key": "ChannelLinkInfo",
+			"value": "任何 Telegram 用户都能够通过此链接加入您的频道。"
+		},
+		{
+			"key": "ChannelLinkTitle",
+			"value": "永久链接"
+		},
+		{
+			"key": "ChannelMegaJoined",
+			"value": "您加入了这个群组"
+		},
+		{
+			"key": "ChannelMembers",
+			"value": "成员"
+		},
+		{
+			"key": "ChannelMembersInfo",
+			"value": "此列表仅频道管理员可见。"
+		},
+		{
+			"key": "ChannelMessageAlbum",
+			"value": "%1$s 发布了一组图片"
+		},
+		{
+			"key": "ChannelMessageAudio",
+			"value": "%1$s 发布了一条语音留言"
+		},
+		{
+			"key": "ChannelMessageContact",
+			"value": "%1$s 发布了一条联系人信息"
+		},
+		{
+			"key": "ChannelMessageContact2",
+			"value": "%1$s 发布了一条联系人信息 %2$s"
+		},
+		{
+			"key": "ChannelMessageDocument",
+			"value": "%1$s 发布了一个文件"
+		},
+		{
+			"key": "ChannelMessageFew",
+			"value": "%1$s 发布了 %2$s "
+		},
+		{
+			"key": "ChannelMessageGIF",
+			"value": "%1$s 发布了一张 GIF"
+		},
+		{
+			"key": "ChannelMessageLiveLocation",
+			"value": "%1$s 正在共享实时位置"
+		},
+		{
+			"key": "ChannelMessageMap",
+			"value": "%1$s 发布了一个位置"
+		},
+		{
+			"key": "ChannelMessageMusic",
+			"value": "%1$s 发布了一首音乐"
+		},
+		{
+			"key": "ChannelMessageNoText",
+			"value": "%1$s 发布了一条消息"
+		},
+		{
+			"key": "ChannelMessagePhoto",
+			"value": "%1$s 发布了一张图片"
+		},
+		{
+			"key": "ChannelMessagePoll",
+			"value": "%1$s 发布了一项投票"
+		},
+		{
+			"key": "ChannelMessagePoll2",
+			"value": "%1$s 发布了一项投票 %2$s"
+		},
+		{
+			"key": "ChannelMessageRound",
+			"value": "%1$s 发布了一条视频留言"
+		},
+		{
+			"key": "ChannelMessageSticker",
+			"value": "%1$s 发布了一张贴纸"
+		},
+		{
+			"key": "ChannelMessageStickerEmoji",
+			"value": "%1$s 发布了一张 %2$s 贴纸"
+		},
+		{
+			"key": "ChannelMessageVideo",
+			"value": "%1$s 发布了一段视频"
+		},
+		{
+			"key": "ChannelMute",
+			"value": "暂停消息通知"
+		},
+		{
+			"key": "ChannelNotifyMembersInfoOff",
+			"value": "消息发布后订阅者将收到无声通知"
+		},
+		{
+			"key": "ChannelNotifyMembersInfoOn",
+			"value": "消息发布后订阅者将收到推送通知"
+		},
+		{
+			"key": "ChannelOtherMembers",
+			"value": "其他成员"
+		},
+		{
+			"key": "ChannelOtherSubscribers",
+			"value": "其他订阅者"
+		},
+		{
+			"key": "ChannelPermissions",
+			"value": "权限"
+		},
+		{
+			"key": "ChannelPermissionsHeader",
+			"value": "这个群组的成员可以做什么？"
+		},
+		{
+			"key": "ChannelPhotoEditNotification",
+			"value": "%1$s 更新了频道头像"
+		},
+		{
+			"key": "ChannelPrivate",
+			"value": "私人频道"
+		},
+		{
+			"key": "ChannelPrivateInfo",
+			"value": "私人频道只能通过邀请链接加入。"
+		},
+		{
+			"key": "ChannelPrivateLinkHelp",
+			"value": "人们可以通过以上链接加入您的频道。您可以随时撤销此链接。"
+		},
+		{
+			"key": "ChannelPublic",
+			"value": "公开频道"
+		},
+		{
+			"key": "ChannelPublicEmptyUsername",
+			"value": "请为您的公开频道设置一个链接，以便他人能通过搜索找到此频道并分享给他人。\n\n如果您对此不感兴趣，我们建议您创建一个私人频道。"
+		},
+		{
+			"key": "ChannelPublicInfo",
+			"value": "公开频道可以被搜索，任何人都可以加入。"
+		},
+		{
+			"key": "ChannelRemoveUser",
+			"value": "从频道中移除"
+		},
+		{
+			"key": "ChannelRemoveUserAdmin",
+			"value": "撤销管理员"
+		},
+		{
+			"key": "ChannelRestrictedUsers",
+			"value": "受限的用户"
+		},
+		{
+			"key": "ChannelSearchException",
+			"value": "搜索例外"
+		},
+		{
+			"key": "ChannelSettings",
+			"value": "设置"
+		},
+		{
+			"key": "ChannelSettingsChangedAlert",
+			"value": "您更改了频道的一些设置。确定要应用它们吗？"
+		},
+		{
+			"key": "ChannelSettingsTitle",
+			"value": "频道设置"
+		},
+		{
+			"key": "ChannelSignMessages",
+			"value": "消息署名"
+		},
+		{
+			"key": "ChannelSignMessagesInfo",
+			"value": "在管理员发送的消息上附加他们的名字"
+		},
+		{
+			"key": "ChannelSilentBroadcast",
+			"value": "静默广播"
+		},
+		{
+			"key": "ChannelSubscribers",
+			"value": "订阅者"
+		},
+		{
+			"key": "ChannelTooMuch",
+			"value": "抱歉，您加入了太多群组和频道。请在创建新的之前退出一些。"
+		},
+		{
+			"key": "ChannelType",
+			"value": "频道类型"
+		},
+		{
+			"key": "ChannelTypeHeader",
+			"value": "频道类型"
+		},
+		{
+			"key": "ChannelUnmute",
+			"value": "启用消息通知"
+		},
+		{
+			"key": "ChannelUserAddLimit",
+			"value": "抱歉，您只能将至多 200 名用户加入频道。但是通过频道连接加入的用户不限数量。"
+		},
+		{
+			"key": "ChannelUserCantAdd",
+			"value": "抱歉，您不能将此用户加入频道。"
+		},
+		{
+			"key": "ChannelUserCantAdmin",
+			"value": "抱歉，此频道的管理员人数已达上限。"
+		},
+		{
+			"key": "ChannelUserCantBot",
+			"value": "抱歉，此频道的机器人数量已达上限。"
+		},
+		{
+			"key": "ChannelUserLeftError",
+			"value": "抱歉，此用户已决定退出此频道，因此您无法邀请此用户回来。"
+		},
+		{
+			"key": "ChannelUsernameHelp",
+			"value": "如果您设置了永久链接，其他人将能够找到并加入您的群组。\n\n您可以使用 a-z、0-9 和下划线。\n最小长度为5个字符。"
+		},
+		{
+			"key": "ChannelUsernamePlaceholder",
+			"value": "链接"
+		},
+		{
+			"key": "Channels",
+			"other_value": "%1$d 个频道"
+		},
+		{
+			"key": "ChatAdmin",
+			"value": "管理员"
+		},
+		{
+			"key": "ChatArchived",
+			"value": "对话已归档。"
+		},
+		{
+			"key": "ChatArchivedInfo",
+			"value": "向左滑动以隐藏归档。"
+		},
+		{
+			"key": "ChatBackground",
+			"value": "更改聊天窗口背景图"
+		},
+		{
+			"key": "ChatCamera",
+			"value": "相机"
+		},
+		{
+			"key": "ChatDeletedUndo",
+			"value": "对话已删除。"
+		},
+		{
+			"key": "ChatDocument",
+			"value": "文件"
+		},
+		{
+			"key": "ChatGallery",
+			"value": "相册"
+		},
+		{
+			"key": "ChatHints",
+			"value": "用户"
+		},
+		{
+			"key": "ChatHintsDelete",
+			"value": "您确定要从建议列表中删除 %1$s 吗？"
+		},
+		{
+			"key": "ChatHintsDeleteAlert",
+			"value": "您确定要从建议中删除 %1$s 吗？"
+		},
+		{
+			"key": "ChatHintsDeleteAlertTitle",
+			"value": "移除建议"
+		},
+		{
+			"key": "ChatHistory",
+			"value": "新成员历史记录可见性"
+		},
+		{
+			"key": "ChatHistoryHidden",
+			"value": "隐藏"
+		},
+		{
+			"key": "ChatHistoryHiddenInfo",
+			"value": "新成员不能查看他们加入前的消息。"
+		},
+		{
+			"key": "ChatHistoryHiddenInfo2",
+			"value": "新成员只能查看他们加入前的 100 条消息。"
+		},
+		{
+			"key": "ChatHistoryVisible",
+			"value": "可见"
+		},
+		{
+			"key": "ChatHistoryVisibleInfo",
+			"value": "新成员将可以查看所有消息记录。"
+		},
+		{
+			"key": "ChatList",
+			"value": "对话列表视图"
+		},
+		{
+			"key": "ChatListDefault",
+			"value": "双行"
+		},
+		{
+			"key": "ChatListExpanded",
+			"value": "三行"
+		},
+		{
+			"key": "ChatLocation",
+			"value": "位置"
+		},
+		{
+			"key": "ChatSetLocation",
+			"value": "设置地点"
+		},
+		{
+			"key": "ChatSetLocationInfo",
+			"value": "人们可以在“附近的人”中找到您的群组。"
+		},
+		{
+			"key": "ChatSetThisLocation",
+			"value": "设置为此地点"
+		},
+		{
+			"key": "ChatSettings",
+			"value": "聊天设置"
+		},
+		{
+			"key": "ChatVideo",
+			"value": "视频"
+		},
+		{
+			"key": "ChatYourSelf",
+			"value": "转发至此以保存"
+		},
+		{
+			"key": "ChatYourSelfDescription1",
+			"value": "转发消息到这里来保存它们"
+		},
+		{
+			"key": "ChatYourSelfDescription2",
+			"value": "发送媒体和文件来存储它们"
+		},
+		{
+			"key": "ChatYourSelfDescription3",
+			"value": "在任意设备上访问此对话"
+		},
+		{
+			"key": "ChatYourSelfDescription4",
+			"value": "使用搜索来更快地查找信息"
+		},
+		{
+			"key": "ChatYourSelfName",
+			"value": "您"
+		},
+		{
+			"key": "ChatYourSelfTitle",
+			"value": "您的云存储"
+		},
+		{
+			"key": "Chats",
+			"other_value": "%1$d 个对话"
+		},
+		{
+			"key": "ChatsArchived",
+			"value": "对话已归档。"
+		},
+		{
+			"key": "ChatsException",
+			"other_value": "%1$d 个对话"
+		},
+		{
+			"key": "ChatsMute",
+			"value": "关闭通知"
+		},
+		{
+			"key": "ChatsNearbyHeader",
+			"value": "附近的群"
+		},
+		{
+			"key": "ChatsSelected",
+			"other_value": "%1$d 个对话"
+		},
+		{
+			"key": "ChatsSelectedClear",
+			"other_value": "%1$d 个对话"
+		},
+		{
+			"key": "ChatsSelectedClearCache",
+			"other_value": "%1$d 个对话"
+		},
+		{
+			"key": "ChatsUnmute",
+			"value": "开启通知"
+		},
+		{
+			"key": "Checking",
+			"value": "检查中..."
+		},
+		{
+			"key": "ChooseCountry",
+			"value": "选择国家"
+		},
+		{
+			"key": "ChooseFromGallery",
+			"value": "从相册中上传"
+		},
+		{
+			"key": "ChooseFromSearch",
+			"value": "通过网络搜索"
+		},
+		{
+			"key": "ChooseFromYourStickers",
+			"value": "从你添加的贴纸包中选择"
+		},
+		{
+			"key": "ChooseMapPreviewProvider",
+			"value": "选择地图预览提供商"
+		},
+		{
+			"key": "ChoosePhoto",
+			"value": "选择图片"
+		},
+		{
+			"key": "ChooseStickerSet",
+			"value": "选择贴纸包"
+		},
+		{
+			"key": "ChooseStickerSetMy",
+			"value": "您可以通过机器人 @stickers 创建您自己的贴纸包。"
+		},
+		{
+			"key": "ChooseStickerSetNotFound",
+			"value": "贴纸包未找到"
+		},
+		{
+			"key": "ChooseStickerSetNotFoundInfo",
+			"value": "请检查您的输入，或从下面列表中选取一个"
+		},
+		{
+			"key": "ChooseStickerSetPlaceholder",
+			"value": "贴纸包"
+		},
+		{
+			"key": "ChooseTakePhoto",
+			"value": "拍照"
+		},
+		{
+			"key": "ChooseYourLanguage",
+			"value": "选择您的语言"
+		},
+		{
+			"key": "ChooseYourLanguageOther",
+			"value": "其它"
+		},
+		{
+			"key": "ChromeCustomTabs",
+			"value": "应用内浏览器"
+		},
+		{
+			"key": "ChromeCustomTabsInfo",
+			"value": "在应用内打开外部链接"
+		},
+		{
+			"key": "ClearButton",
+			"value": "清空"
+		},
+		{
+			"key": "ClearCache",
+			"value": "清空缓存"
+		},
+		{
+			"key": "ClearCacheFewChatsTitle",
+			"value": "清除 %1$s的缓存"
+		},
+		{
+			"key": "ClearCacheInfo",
+			"value": "释放设备上的空间；您的媒体文件仍会保存在云端。"
+		},
+		{
+			"key": "ClearFewChatsTitle",
+			"value": "清空 %1$s"
+		},
+		{
+			"key": "ClearHistory",
+			"value": "清空历史记录"
+		},
+		{
+			"key": "ClearHistoryCache",
+			"value": "清除消息缓存"
+		},
+		{
+			"key": "ClearHistoryOptionAlso",
+			"value": "同时为 %1$s 清空历史记录"
+		},
+		{
+			"key": "ClearMediaCache",
+			"value": "清除缓存"
+		},
+		{
+			"key": "ClearOtherSessionsHelp",
+			"value": "注销除本设备之外的其他所有设备。"
+		},
+		{
+			"key": "ClearOtherWebSessionsHelp",
+			"value": "您可以在支持的网站上使用 Telegram 登录。"
+		},
+		{
+			"key": "ClearRecentEmoji",
+			"value": "清除最近使用的 emoji 列表？"
+		},
+		{
+			"key": "ClearSearch",
+			"value": "是否清除搜索历史？"
+		},
+		{
+			"key": "ClearSearchAlert",
+			"value": "您确定要清除搜索记录吗？"
+		},
+		{
+			"key": "ClearSearchAlertTitle",
+			"value": "清除搜索记录"
+		},
+		{
+			"key": "Close",
+			"value": "关闭"
+		},
+		{
+			"key": "CloseEditor",
+			"value": "关闭编辑器"
+		},
+		{
+			"key": "Code",
+			"value": "验证码"
+		},
+		{
+			"key": "CodeExpired",
+			"value": "验证码已过期，请重新登录"
+		},
+		{
+			"key": "ColorBlue",
+			"value": "蓝色"
+		},
+		{
+			"key": "ColorCyan",
+			"value": "青色"
+		},
+		{
+			"key": "ColorDark",
+			"value": "暗色"
+		},
+		{
+			"key": "ColorGreen",
+			"value": "绿色"
+		},
+		{
+			"key": "ColorOrange",
+			"value": "橙色"
+		},
+		{
+			"key": "ColorPink",
+			"value": "粉色"
+		},
+		{
+			"key": "ColorRed",
+			"value": "红色"
+		},
+		{
+			"key": "ColorSepia",
+			"value": "褐色"
+		},
+		{
+			"key": "ColorTheme",
+			"value": "色彩主题"
+		},
+		{
+			"key": "ColorThemes",
+			"value": "色彩主题"
+		},
+		{
+			"key": "ColorViolet",
+			"value": "紫色"
+		},
+		{
+			"key": "ColorWhite",
+			"value": "白色"
+		},
+		{
+			"key": "ColorYellow",
+			"value": "黄色"
+		},
+		{
+			"key": "CompatibilityChat",
+			"value": "%1$s 正在使用旧版 Telegram，因此图片会以兼容模式显示。\n\n当 %2$s 更新 Telegram 后，阅后即焚计时器设为1分钟以内时，图片会使用“长按预览”的模式显示；对方截屏时，您也会收到通知。"
+		},
+		{
+			"key": "ConfirmDeleteCallLog",
+			"value": "您确定要删除这条通话记录吗？"
+		},
+		{
+			"key": "Connected",
+			"value": "已连接"
+		},
+		{
+			"key": "Connecting",
+			"value": "连接中..."
+		},
+		{
+			"key": "ConnectingConnectProxy",
+			"value": "连接代理"
+		},
+		{
+			"key": "ConnectingToProxy",
+			"value": "正在连接代理"
+		},
+		{
+			"key": "ConnectingToProxyDisable",
+			"value": "禁用"
+		},
+		{
+			"key": "ConnectingToProxyDisableAlert",
+			"value": "您确定要禁用代理服务器 %1$s 吗？您可以在设置 \u003e 数据和存储 中重新启用它。"
+		},
+		{
+			"key": "ConnectingToProxyEnable",
+			"value": "启用"
+		},
+		{
+			"key": "ConnectingToProxyTapToDisable",
+			"value": "点按此处禁用代理..."
+		},
+		{
+			"key": "ContactBirthday",
+			"value": "出生日期"
+		},
+		{
+			"key": "ContactJob",
+			"value": "工作"
+		},
+		{
+			"key": "ContactJobTitle",
+			"value": "标题"
+		},
+		{
+			"key": "ContactJoined",
+			"value": "联系人加入 Telegram"
+		},
+		{
+			"key": "ContactNotRegistered",
+			"value": "%1$s 尚未使用 Telegram，是否邀请他加入？"
+		},
+		{
+			"key": "ContactShare",
+			"value": "分享联系人"
+		},
+		{
+			"key": "ContactSupport",
+			"value": "联系志愿者客服"
+		},
+		{
+			"key": "ContactSupportInfo",
+			"value": "如果有问题，请告诉我们；注销无助于解决问题。"
+		},
+		{
+			"key": "Contacts",
+			"value": "联系人"
+		},
+		{
+			"key": "ContactsPermissionAlert",
+			"value": "Telegram 需要访问您的通讯录才能使您在任何设备上联系您的朋友。您的联系人将会被即时同步至高度加密的 Telegram 云服务器。"
+		},
+		{
+			"key": "ContactsPermissionAlertContinue",
+			"value": "继续"
+		},
+		{
+			"key": "ContactsPermissionAlertNotNow",
+			"value": "稍后再说"
+		},
+		{
+			"key": "Continue",
+			"value": "继续"
+		},
+		{
+			"key": "ContinueOnThisLanguage",
+			"value": "使用简体中文继续"
+		},
+		{
+			"key": "Contrast",
+			"value": "对比"
+		},
+		{
+			"key": "ConvertGroup",
+			"value": "升级为超级群组"
+		},
+		{
+			"key": "ConvertGroupAlert",
+			"value": "这个操作是不可逆的。一个超级群组无法降级到普通群组。"
+		},
+		{
+			"key": "ConvertGroupAlertWarning",
+			"value": "警告"
+		},
+		{
+			"key": "ConvertGroupInfo",
+			"value": "**成员人数已达到上限。**\n\n升级到超级群组可增加成员上限并获得更多功能：\n\n• 超级群组可以提升至高达 %1$s的成员上限\n• 新成员能看到所有历史聊天记录\n• 管理员能够删除任何人的消息\n• 所有成员将看不到已删除的消息\n• 管理员可以为群组添加一个简介\n• 创建者可以给群组设置一个公开链接"
+		},
+		{
+			"key": "ConvertGroupInfo2",
+			"value": "**在超级群组中**： \n• 新成员可以看到所有聊天记录 \n• 所有成员将看不到已删除的消息 \n• 管理员可以为群组添加一个简介\n• 创建者可以给群组设置一个公开链接"
+		},
+		{
+			"key": "ConvertGroupInfo3",
+			"value": "**注意：**此操作不可撤销。"
+		},
+		{
+			"key": "ConvertGroupMenu",
+			"value": "升级为超级群组"
+		},
+		{
+			"key": "Copy",
+			"value": "复制"
+		},
+		{
+			"key": "CopyLink",
+			"value": "复制链接"
+		},
+		{
+			"key": "CountReceived",
+			"value": "已接收"
+		},
+		{
+			"key": "CountSent",
+			"value": "已发送"
+		},
+		{
+			"key": "CreateEncryptedChatError",
+			"value": "发生错误"
+		},
+		{
+			"key": "CreateGroupError",
+			"value": "抱歉，根据其中一些用户的隐私设置，您不能与这些人建立群组。"
+		},
+		{
+			"key": "CreateLink",
+			"value": "创建链接"
+		},
+		{
+			"key": "CreateNewContact",
+			"value": "新建联系人"
+		},
+		{
+			"key": "CreateNewTheme",
+			"value": "创建新主题"
+		},
+		{
+			"key": "CreateNewThemeAlert",
+			"value": "您可以通过更改应用中的颜色来创建自己的主题。\n\n您可以随时切换回默认的 Telegram 主题。"
+		},
+		{
+			"key": "CreateNewThemeHelp",
+			"value": "点按调色板图标来查看每个屏幕上元素的列表并修改它们。"
+		},
+		{
+			"key": "CreateNewThemeInfo",
+			"value": "您可以在应用内修改其颜色来创建您自己的主题。您可以在任何时候在这里还原为 Telegram 默认的主题。"
+		},
+		{
+			"key": "CreateNewThemeMenu",
+			"value": "创建新主题"
+		},
+		{
+			"key": "CreateTheme",
+			"value": "创建主题"
+		},
+		{
+			"key": "Crop",
+			"value": "裁剪"
+		},
+		{
+			"key": "CropImage",
+			"value": "裁剪图片"
+		},
+		{
+			"key": "CropOriginal",
+			"value": "原始比例"
+		},
+		{
+			"key": "CropReset",
+			"value": "重置"
+		},
+		{
+			"key": "CropSquare",
+			"value": "正方形"
+		},
+		{
+			"key": "CurrentGroupStickers",
+			"value": "群组贴纸包"
+		},
+		{
+			"key": "CurrentSession",
+			"value": "当前会话"
+		},
+		{
+			"key": "CurvesAll",
+			"value": "全部"
+		},
+		{
+			"key": "CurvesBlue",
+			"value": "蓝"
+		},
+		{
+			"key": "CurvesGreen",
+			"value": "绿"
+		},
+		{
+			"key": "CurvesRed",
+			"value": "红"
+		},
+		{
+			"key": "CustomCallInfo",
+			"value": "无论上面如何设置，这些用户都能或者不能呼叫您。"
+		},
+		{
+			"key": "CustomHelp",
+			"value": "您不会看到与您不共享的人的最后上线时间。 取而代之的是大致的上线时间（最近、一周内或一个月内）。"
+		},
+		{
+			"key": "CustomNotifications",
+			"value": "自定义通知"
+		},
+		{
+			"key": "CustomP2PInfo",
+			"value": "无论上面如何设置，通话中的端对端连接都会或者不会对这些用户启用。"
+		},
+		{
+			"key": "CustomShareInfo",
+			"value": "无论上面如何设置，这些用户将能或不能将您添加到群组或频道。"
+		},
+		{
+			"key": "CustomShareSettingsHelp",
+			"value": "您可以将用户或整个群组添加为覆盖上述设置的例外。"
+		},
+		{
+			"key": "CustomThemes",
+			"value": "自定义主题"
+		},
+		{
+			"key": "DataSettings",
+			"value": "数据和存储"
+		},
+		{
+			"key": "DataUsage",
+			"value": "存储和网络用量"
+		},
+		{
+			"key": "Days",
+			"other_value": "%1$d 天"
+		},
+		{
+			"key": "DaysBold",
+			"other_value": "**%1$d** 天"
+		},
+		{
+			"key": "Deactivate",
+			"value": "立即删除"
+		},
+		{
+			"key": "DebugClearLogs",
+			"value": "清空日志"
+		},
+		{
+			"key": "DebugMenu",
+			"value": "调试菜单"
+		},
+		{
+			"key": "DebugMenuCallSettings",
+			"value": "通话设置"
+		},
+		{
+			"key": "DebugMenuClearMediaCache",
+			"value": "清除已发送的媒体缓存"
+		},
+		{
+			"key": "DebugMenuDisableCamera",
+			"value": "禁用应用内相机"
+		},
+		{
+			"key": "DebugMenuDisableLogs",
+			"value": "禁用日志"
+		},
+		{
+			"key": "DebugMenuEnableCamera",
+			"value": "启用应用内相机"
+		},
+		{
+			"key": "DebugMenuEnableLogs",
+			"value": "启用日志"
+		},
+		{
+			"key": "DebugMenuImportContacts",
+			"value": "导入通讯录"
+		},
+		{
+			"key": "DebugMenuReadAllDialogs",
+			"value": "标记所有对话为已读"
+		},
+		{
+			"key": "DebugMenuReloadContacts",
+			"value": "重载通讯录"
+		},
+		{
+			"key": "DebugMenuResetContacts",
+			"value": "重置已导入的通讯录"
+		},
+		{
+			"key": "DebugMenuResetDialogs",
+			"value": "重置所有对话"
+		},
+		{
+			"key": "DebugSendLogs",
+			"value": "发送日志"
+		},
+		{
+			"key": "December",
+			"value": "12月"
+		},
+		{
+			"key": "Decline",
+			"value": "拒绝"
+		},
+		{
+			"key": "DeclineDeactivate",
+			"value": "拒绝并删除"
+		},
+		{
+			"key": "Default",
+			"value": "默认"
+		},
+		{
+			"key": "DefaultRingtone",
+			"value": "默认"
+		},
+		{
+			"key": "Delete",
+			"value": "删除"
+		},
+		{
+			"key": "DeleteAccountHelp",
+			"value": "如果您在此期间内您的帐号未曾上线，您账号的所有资料——包括消息记录、联系人都会被删除。"
+		},
+		{
+			"key": "DeleteAccountIfAwayFor",
+			"value": "离线时间"
+		},
+		{
+			"key": "DeleteAccountIfAwayFor2",
+			"value": "删除我的帐户若离线时间达"
+		},
+		{
+			"key": "DeleteAccountTitle",
+			"value": "自动删除帐号"
+		},
+		{
+			"key": "DeleteAll",
+			"value": "删除全部"
+		},
+		{
+			"key": "DeleteAllFrom",
+			"value": "删除所有 %1$s 发送的消息"
+		},
+		{
+			"key": "DeleteAllMessagesAlert",
+			"value": "警告！ 这将**删除**聊天中**双方**的**所有消息**。"
+		},
+		{
+			"key": "DeleteAndExit",
+			"value": "删除并退出群组"
+		},
+		{
+			"key": "DeleteAndExitButton",
+			"value": "删除并退出群组"
+		},
+		{
+			"key": "DeleteAndStop",
+			"value": "删除并停止"
+		},
+		{
+			"key": "DeleteBanUser",
+			"value": "封禁用户"
+		},
+		{
+			"key": "DeleteChat",
+			"value": "删除并退出群组"
+		},
+		{
+			"key": "DeleteChatBackgroundsAlert",
+			"value": "您确定要删除选定的背景吗？"
+		},
+		{
+			"key": "DeleteChatUser",
+			"value": "删除对话"
+		},
+		{
+			"key": "DeleteContact",
+			"value": "删除联系人"
+		},
+		{
+			"key": "DeleteFewChatsTitle",
+			"value": "删除 %1$s"
+		},
+		{
+			"key": "DeleteForAll",
+			"value": "为所有成员删除"
+		},
+		{
+			"key": "DeleteForUser",
+			"value": "为 %1$s 删除"
+		},
+		{
+			"key": "DeleteFromFavorites",
+			"value": "从收藏中移除"
+		},
+		{
+			"key": "DeleteGif",
+			"value": "删除此 GIF？"
+		},
+		{
+			"key": "DeleteLocalization",
+			"value": "要删除这个语言包吗？"
+		},
+		{
+			"key": "DeleteMega",
+			"value": "删除群组"
+		},
+		{
+			"key": "DeleteMegaMenu",
+			"value": "删除群组"
+		},
+		{
+			"key": "DeleteMessagesOption",
+			"value": "撤回我的消息"
+		},
+		{
+			"key": "DeleteMessagesOptionAlso",
+			"value": "同时为 %1$s 删除"
+		},
+		{
+			"key": "DeleteMessagesText",
+			"value": "您还可以通过选中“撤回我的消息”以从 **%2$s** 的消息记录中删除您发送的 %1$s。"
+		},
+		{
+			"key": "DeleteMessagesTextGroup",
+			"value": "您还可以通过选中“撤回我的消息”以从其他群组成员的消息记录中删除您发送的 %1$s。"
+		},
+		{
+			"key": "DeleteMessagesTextGroupPart",
+			"value": "您还可以通过选中“为所有成员删除”以从其他群组成员的消息记录中删除 %1$s。"
+		},
+		{
+			"key": "DeleteMessagesTitle",
+			"value": "删除 %1$s"
+		},
+		{
+			"key": "DeletePhoto",
+			"value": "移除头像"
+		},
+		{
+			"key": "DeleteProxy",
+			"value": "删除代理？"
+		},
+		{
+			"key": "DeleteReportSpam",
+			"value": "举报垃圾信息"
+		},
+		{
+			"key": "DeleteSingleMessagesTitle",
+			"value": "删除消息"
+		},
+		{
+			"key": "DeleteThemeAlert",
+			"value": "您确定要删除此主题吗？"
+		},
+		{
+			"key": "DeleteThisChat",
+			"value": "删除此对话"
+		},
+		{
+			"key": "DeleteThisGroup",
+			"value": "删除群组记录"
+		},
+		{
+			"key": "DescriptionInfo",
+			"value": "您可以给您的频道添加一段简介。"
+		},
+		{
+			"key": "DescriptionOptionalPlaceholder",
+			"value": "简介 (可选)"
+		},
+		{
+			"key": "DescriptionPlaceholder",
+			"value": "简介"
+		},
+		{
+			"key": "DidNotGetTheCode",
+			"value": "没有收到验证码？"
+		},
+		{
+			"key": "DidNotGetTheCodeSms",
+			"value": "通过短信发送验证码"
+		},
+		{
+			"key": "DirectShare",
+			"value": "直接分享"
+		},
+		{
+			"key": "DirectShareInfo",
+			"value": "在分享菜单中显示最近对话"
+		},
+		{
+			"key": "DisappearingGif",
+			"value": "自毁 GIF"
+		},
+		{
+			"key": "DisappearingPhoto",
+			"value": "自毁图片"
+		},
+		{
+			"key": "DisappearingVideo",
+			"value": "自毁视频"
+		},
+		{
+			"key": "DiscardChanges",
+			"value": "要放弃修改吗？"
+		},
+		{
+			"key": "DiscardVideoMessageDescription",
+			"value": "您确定要停止录制并放弃已录制的视频留言吗？"
+		},
+		{
+			"key": "DiscardVideoMessageTitle",
+			"value": "放弃录制留言"
+		},
+		{
+			"key": "DiscardVoiceMessageAction",
+			"value": "放弃"
+		},
+		{
+			"key": "DiscardVoiceMessageDescription",
+			"value": "您确定要停止录制并放弃已录制的语音留言吗？"
+		},
+		{
+			"key": "DiscardVoiceMessageTitle",
+			"value": "放弃录制语音留言"
+		},
+		{
+			"key": "DiscussChannel",
+			"value": "频道"
+		},
+		{
+			"key": "Discussion",
+			"value": "讨论群"
+		},
+		{
+			"key": "DiscussionChannelGroupSetHelp",
+			"value": "一个指向 **%1$s** 的链接正在底部面板中向所有订阅者显示。"
+		},
+		{
+			"key": "DiscussionChannelHelp",
+			"value": "选择一个将在您的频道中显示的用于讨论的群组。"
+		},
+		{
+			"key": "DiscussionChannelHelp2",
+			"value": "您在频道中发布的所有内容都将被转发到此群组。"
+		},
+		{
+			"key": "DiscussionCreateGroup",
+			"value": "创建一个新群组"
+		},
+		{
+			"key": "DiscussionGroupHelp",
+			"value": "**%1$s** 正在将此群组作为其讨论板。"
+		},
+		{
+			"key": "DiscussionGroupHelp2",
+			"value": "此频道中发布的所有新消息都将转发到该群组。"
+		},
+		{
+			"key": "DiscussionInfo",
+			"value": "添加一个用于评论的群组"
+		},
+		{
+			"key": "DiscussionLinkGroup",
+			"value": "链接群组"
+		},
+		{
+			"key": "DiscussionLinkGroupAlertHistory",
+			"value": "“新成员历史记录可见性”将被切换为可见。"
+		},
+		{
+			"key": "DiscussionLinkGroupPrivateAlert",
+			"value": "您想让 **%1$s** 成为 **%2$s** 的讨论板吗？\n\n该群组的任何成员都可以查看频道中的消息。"
+		},
+		{
+			"key": "DiscussionLinkGroupPublicAlert",
+			"value": "您想让 **%1$s** 成为 **%2$s** 的讨论板吗？"
+		},
+		{
+			"key": "DiscussionLinkGroupPublicPrivateAlert",
+			"value": "您想让 **%1$s** 成为 **%2$s** 的讨论板吗？\n\n该频道的任何成员都可以查看群组中的消息。"
+		},
+		{
+			"key": "DiscussionUnlink",
+			"value": "取消链接"
+		},
+		{
+			"key": "DiscussionUnlinkChannel",
+			"value": "取消链接频道"
+		},
+		{
+			"key": "DiscussionUnlinkChannelAlert",
+			"value": "您确定要将 **%1$s** 从此频道取消链接吗？"
+		},
+		{
+			"key": "DiscussionUnlinkGroup",
+			"value": "取消链接群组"
+		},
+		{
+			"key": "DiscussionUnlinkGroupAlert",
+			"value": "你确定要从此群组取消链接 **%1$s** 吗？"
+		},
+		{
+			"key": "DistanceUnits",
+			"value": "距离单位"
+		},
+		{
+			"key": "DistanceUnitsAutomatic",
+			"value": "自动"
+		},
+		{
+			"key": "DistanceUnitsKilometers",
+			"value": "千米"
+		},
+		{
+			"key": "DistanceUnitsMiles",
+			"value": "英里"
+		},
+		{
+			"key": "DistanceUnitsTitle",
+			"value": "距离单位"
+		},
+		{
+			"key": "DocumentsTitle",
+			"value": "分享的文件"
+		},
+		{
+			"key": "Done",
+			"value": "完成"
+		},
+		{
+			"key": "Draft",
+			"value": "草稿"
+		},
+		{
+			"key": "Edit",
+			"value": "编辑"
+		},
+		{
+			"key": "EditAdmin",
+			"value": "管理员权限"
+		},
+		{
+			"key": "EditAdminAddAdmins",
+			"value": "添加新管理员"
+		},
+		{
+			"key": "EditAdminAddUsers",
+			"value": "添加成员"
+		},
+		{
+			"key": "EditAdminAddUsersViaLink",
+			"value": "生成邀请链接"
+		},
+		{
+			"key": "EditAdminBanUsers",
+			"value": "封禁用户"
+		},
+		{
+			"key": "EditAdminCantEdit",
+			"value": "您无权修改此管理员的权限。"
+		},
+		{
+			"key": "EditAdminChangeChannelInfo",
+			"value": "修改频道信息"
+		},
+		{
+			"key": "EditAdminChangeGroupInfo",
+			"value": "修改群组信息"
+		},
+		{
+			"key": "EditAdminChannelTransfer",
+			"value": "转让频道所有权"
+		},
+		{
+			"key": "EditAdminDeleteMessages",
+			"value": "删除其他用户的消息"
+		},
+		{
+			"key": "EditAdminEditMessages",
+			"value": "编辑其他用户的消息"
+		},
+		{
+			"key": "EditAdminGroupDeleteMessages",
+			"value": "删除消息"
+		},
+		{
+			"key": "EditAdminGroupTransfer",
+			"value": "转让群组所有权"
+		},
+		{
+			"key": "EditAdminPinMessages",
+			"value": "置顶消息"
+		},
+		{
+			"key": "EditAdminPostMessages",
+			"value": "发布消息"
+		},
+		{
+			"key": "EditAdminPromotedBy",
+			"value": "被 %1$s 设为管理员"
+		},
+		{
+			"key": "EditAdminRank",
+			"value": "自定义头衔"
+		},
+		{
+			"key": "EditAdminRankInfo",
+			"value": "一个自定义的头衔将展示给所有成员而不是“%1$s”。"
+		},
+		{
+			"key": "EditAdminRemoveAdmin",
+			"value": "撤销管理员"
+		},
+		{
+			"key": "EditAdminRights",
+			"value": "修改管理权限"
+		},
+		{
+			"key": "EditAdminTransferAlertText",
+			"value": "只有在以下情况下，您才能将此群组转让给 **%1$s**："
+		},
+		{
+			"key": "EditAdminTransferAlertText1",
+			"value": "启用**两步验证**超过**7天**。"
+		},
+		{
+			"key": "EditAdminTransferAlertText2",
+			"value": "在此设备登录超过**24小时**。"
+		},
+		{
+			"key": "EditAdminTransferAlertText3",
+			"value": "请稍后再回来。"
+		},
+		{
+			"key": "EditAdminTransferAlertTitle",
+			"value": "安全检查"
+		},
+		{
+			"key": "EditAdminTransferChangeOwner",
+			"value": "更改所有者"
+		},
+		{
+			"key": "EditAdminTransferChannelToast",
+			"value": "**%1$s** 现在是频道的所有者。"
+		},
+		{
+			"key": "EditAdminTransferGroupToast",
+			"value": "**%1$s** 现在是群组的所有者。"
+		},
+		{
+			"key": "EditAdminTransferReadyAlertText",
+			"value": "这会将 **%1$s** 的**全部所有者**权利转让给 **%2$s**。"
+		},
+		{
+			"key": "EditAdminTransferSetPassword",
+			"value": "设置密码"
+		},
+		{
+			"key": "EditAdminWhatCanDo",
+			"value": "这位管理员可以做什么？"
+		},
+		{
+			"key": "EditCantEditPermissions",
+			"value": "您不能修改此权限。"
+		},
+		{
+			"key": "EditCantEditPermissionsPublic",
+			"value": "此权限不能在公开群组中开放。"
+		},
+		{
+			"key": "EditCaption",
+			"value": "编辑说明"
+		},
+		{
+			"key": "EditChannelAdminTransferAlertText",
+			"value": "只有在以下情况下，您才能将此频道转让给 **%1$s**："
+		},
+		{
+			"key": "EditContact",
+			"value": "编辑联系人"
+		},
+		{
+			"key": "EditMessage",
+			"value": "编辑消息"
+		},
+		{
+			"key": "EditMessageError",
+			"value": "抱歉，您不能编辑这条消息。"
+		},
+		{
+			"key": "EditMessageMedia",
+			"value": "点按编辑媒体文件"
+		},
+		{
+			"key": "EditName",
+			"value": "编辑名称"
+		},
+		{
+			"key": "EditedMessage",
+			"value": "已编辑"
+		},
+		{
+			"key": "EmailCopied",
+			"value": "电子邮箱已复制到剪贴板"
+		},
+		{
+			"key": "EmailPasswordConfirmText",
+			"value": "请根据以下步骤以完成两步验证设置：\n\n1. 查看您的邮箱（不要忘记垃圾邮件文件夹）\n%1$s\n\n2. 点击验证链接。"
+		},
+		{
+			"key": "EmailPasswordConfirmText2",
+			"value": "要完成两步验证设置，请检查您的电子邮箱（不要忘记垃圾邮件文件夹）并输入我们刚刚发送给您的代码。"
+		},
+		{
+			"key": "EmailPasswordConfirmText3",
+			"value": "要完成重新设置的电子邮件设置，请检查 %1$s（不要忘记垃圾邮件文件夹）并输入我们刚发送给您的代码。"
+		},
+		{
+			"key": "Emoji",
+			"value": "Emoji"
+		},
+		{
+			"key": "Emoji1",
+			"value": "笑脸和人"
+		},
+		{
+			"key": "Emoji2",
+			"value": "动物和自然"
+		},
+		{
+			"key": "Emoji3",
+			"value": "饮食"
+		},
+		{
+			"key": "Emoji4",
+			"value": "活动"
+		},
+		{
+			"key": "Emoji5",
+			"value": "出行和地点"
+		},
+		{
+			"key": "Emoji6",
+			"value": "物品"
+		},
+		{
+			"key": "Emoji7",
+			"value": "符号"
+		},
+		{
+			"key": "Emoji8",
+			"value": "旗帜"
+		},
+		{
+			"key": "EmojiBigSize",
+			"value": "显示单个大号 emoji"
+		},
+		{
+			"key": "EmojiSuggestions",
+			"value": "Emoji 推荐"
+		},
+		{
+			"key": "EmojiSuggestionsInfo",
+			"value": "**Telegram** 让你可以通过成千上万的关键字找到 emoji，但总是会缺失一些。如果您想建议新的 emoji 替换，您可以访问："
+		},
+		{
+			"key": "EmojiSuggestionsUrl",
+			"value": "https://translations.telegram.org/%1$s/emoji"
+		},
+		{
+			"key": "EmojiUseDefault",
+			"value": "使用系统默认 emoji"
+		},
+		{
+			"key": "EmpryUsersPlaceholder",
+			"value": "添加用户"
+		},
+		{
+			"key": "EmptyExceptions",
+			"value": "无"
+		},
+		{
+			"key": "EnableAllStreamingInfo",
+			"value": "一些视频不能被在线播放——例如所有从 Telegram 4.7 或更早版本的 Android 客户端发送的视频。\n"
+		},
+		{
+			"key": "EnableAnimations",
+			"value": "动画切换效果"
+		},
+		{
+			"key": "EnableProxyAlert",
+			"value": "您确定要启用此代理吗？"
+		},
+		{
+			"key": "EnableProxyAlert2",
+			"value": "您可以稍后在设置 \u003e 数据和存储 中修改您的代理服务器。"
+		},
+		{
+			"key": "EnableStreaming",
+			"value": "流式播放视频和音乐"
+		},
+		{
+			"key": "EnabledPasswordText",
+			"value": "您已启用两步验证。\n今后您在登录新设备时将需要输入您设置的附加密码才能登录您的Telegram帐号。"
+		},
+		{
+			"key": "EncryptedChatStartedIncoming",
+			"value": "您已加入加密对话。"
+		},
+		{
+			"key": "EncryptedChatStartedOutgoing",
+			"value": "%s 进入了您的加密对话。"
+		},
+		{
+			"key": "EncryptedDescription1",
+			"value": "使用端到端加密"
+		},
+		{
+			"key": "EncryptedDescription2",
+			"value": "不会在我们的服务器上留下任何痕迹"
+		},
+		{
+			"key": "EncryptedDescription3",
+			"value": "支持阅后即焚"
+		},
+		{
+			"key": "EncryptedDescription4",
+			"value": "不允许转发消息"
+		},
+		{
+			"key": "EncryptedDescriptionTitle",
+			"value": "加密对话："
+		},
+		{
+			"key": "EncryptedPlaceholderTitleIncoming",
+			"value": "%s 邀请您进入加密对话。"
+		},
+		{
+			"key": "EncryptedPlaceholderTitleOutgoing",
+			"value": "您已邀请 %s 进入加密对话。"
+		},
+		{
+			"key": "EncryptionKey",
+			"value": "加密密钥"
+		},
+		{
+			"key": "EncryptionKeyDescription",
+			"value": "这是您与 **%1$s** 加密对话加密密钥的可视化图片。\n\n如果这张图片看起来和 **%2$s** 设备上的图片完全一致，端到端加密则是安全的。\n\n更多详情请前往 telegram.org 的 FAQ"
+		},
+		{
+			"key": "EncryptionKeyLink",
+			"value": "https://telegram.org/faq#secret-chats"
+		},
+		{
+			"key": "EncryptionProcessing",
+			"value": "正在交换加密密钥..."
+		},
+		{
+			"key": "EncryptionRejected",
+			"value": "加密对话已被取消"
+		},
+		{
+			"key": "English",
+			"value": "英语"
+		},
+		{
+			"key": "Enhance",
+			"value": "增强"
+		},
+		{
+			"key": "EnterChannelName",
+			"value": "频道名称"
+		},
+		{
+			"key": "EnterCurrentPasscode",
+			"value": "请输入当前锁定码"
+		},
+		{
+			"key": "EnterGroupNamePlaceholder",
+			"value": "输入群组名称"
+		},
+		{
+			"key": "EnterListName",
+			"value": "输入列表名称"
+		},
+		{
+			"key": "EnterNewFirstPasscode",
+			"value": "请输入一个锁定码"
+		},
+		{
+			"key": "EnterNewPasscode",
+			"value": "请输入您要设置的新锁定码"
+		},
+		{
+			"key": "EnterThemeName",
+			"value": "输入主题名称"
+		},
+		{
+			"key": "EnterYourPasscode",
+			"value": "请输入您的锁定码"
+		},
+		{
+			"key": "ErrorOccurred",
+			"value": "发生错误"
+		},
+		{
+			"key": "ErrorSendRestrictedMedia",
+			"value": "抱歉，群组管理员已禁止您发送媒体文件。"
+		},
+		{
+			"key": "ErrorSendRestrictedMediaAll",
+			"value": "抱歉，此群组不允许发送媒体。"
+		},
+		{
+			"key": "ErrorSendRestrictedPolls",
+			"value": "抱歉，群组管理员已禁止您发起投票。"
+		},
+		{
+			"key": "ErrorSendRestrictedPollsAll",
+			"value": "抱歉，此群组不允许发起投票。"
+		},
+		{
+			"key": "ErrorSendRestrictedStickers",
+			"value": "抱歉，群组管理员已禁止您发送贴纸。"
+		},
+		{
+			"key": "ErrorSendRestrictedStickersAll",
+			"value": "抱歉，此群组不允许发送贴纸。"
+		},
+		{
+			"key": "EventLog",
+			"value": "近期操作"
+		},
+		{
+			"key": "EventLogAdded",
+			"value": "un1 添加了 un2"
+		},
+		{
+			"key": "EventLogAllAdmins",
+			"value": "所有管理员"
+		},
+		{
+			"key": "EventLogAllEvents",
+			"value": "所有操作"
+		},
+		{
+			"key": "EventLogChangedChannelLink",
+			"value": "un1 修改了频道链接:"
+		},
+		{
+			"key": "EventLogChangedGroupLink",
+			"value": "un1 修改了群组链接:"
+		},
+		{
+			"key": "EventLogChangedLinkedChannel",
+			"value": "un1 将此群组与 un2 链接"
+		},
+		{
+			"key": "EventLogChangedLinkedGroup",
+			"value": "un1 使 un2 成为此频道的讨论群"
+		},
+		{
+			"key": "EventLogChangedLocation",
+			"value": "un1 将群组地点更改至 “%1$s”"
+		},
+		{
+			"key": "EventLogChangedOwnership",
+			"value": "将所有权转让给 %1$s"
+		},
+		{
+			"key": "EventLogChangedStickersSet",
+			"value": "un1 更换了群组贴纸包"
+		},
+		{
+			"key": "EventLogChannelJoined",
+			"value": "un1 加入了频道"
+		},
+		{
+			"key": "EventLogChannelRestricted",
+			"value": "封禁了 %1$s"
+		},
+		{
+			"key": "EventLogChannelUnrestricted",
+			"value": "解封了 %1$s"
+		},
+		{
+			"key": "EventLogDefaultPermissions",
+			"value": "更改了默认权限"
+		},
+		{
+			"key": "EventLogDeletedMessages",
+			"value": "un1 删除了这条消息:"
+		},
+		{
+			"key": "EventLogEditedCaption",
+			"value": "un1 编辑了说明:"
+		},
+		{
+			"key": "EventLogEditedChannelDescription",
+			"value": "un1 修改了频道简介:"
+		},
+		{
+			"key": "EventLogEditedChannelPhoto",
+			"value": "un1 设置了新的频道标识"
+		},
+		{
+			"key": "EventLogEditedChannelTitle",
+			"value": "un1 将频道名称更改为 \"%1$s\""
+		},
+		{
+			"key": "EventLogEditedGroupDescription",
+			"value": "un1 修改了群组简介:"
+		},
+		{
+			"key": "EventLogEditedGroupPhoto",
+			"value": "un1 设置了新的群组标识"
+		},
+		{
+			"key": "EventLogEditedGroupTitle",
+			"value": "un1 将群组名称更改为 \"%1$s\""
+		},
+		{
+			"key": "EventLogEditedMedia",
+			"value": "un1 编辑了媒体:"
+		},
+		{
+			"key": "EventLogEditedMediaCaption",
+			"value": "un1 编辑了媒体与说明："
+		},
+		{
+			"key": "EventLogEditedMessages",
+			"value": "un1 编辑了这条消息:"
+		},
+		{
+			"key": "EventLogEmpty",
+			"value": "**暂无操作**\n\n在过去的48小时内\n群组成员和管理员\n没有执行任何管理操作。"
+		},
+		{
+			"key": "EventLogEmptyChannel",
+			"value": "**暂无操作**\n\n在过去的48小时内\n频道管理员\n没有执行任何管理操作。"
+		},
+		{
+			"key": "EventLogEmptySearch",
+			"value": "**未找到操作事件**\n\n找不到与您查询的近期操作相符的结果。"
+		},
+		{
+			"key": "EventLogEmptyTextSearch",
+			"value": "找不到包含 ‘**%1$s**’ 的近期操作。"
+		},
+		{
+			"key": "EventLogFilterAll",
+			"value": "所有操作"
+		},
+		{
+			"key": "EventLogFilterChannelInfo",
+			"value": "频道信息变更"
+		},
+		{
+			"key": "EventLogFilterDeletedMessages",
+			"value": "消息删除"
+		},
+		{
+			"key": "EventLogFilterEditedMessages",
+			"value": "消息编辑"
+		},
+		{
+			"key": "EventLogFilterGroupInfo",
+			"value": "群组信息变更"
+		},
+		{
+			"key": "EventLogFilterLeavingMembers",
+			"value": "成员退出"
+		},
+		{
+			"key": "EventLogFilterNewAdmins",
+			"value": "新管理员任命"
+		},
+		{
+			"key": "EventLogFilterNewMembers",
+			"value": "新成员加入"
+		},
+		{
+			"key": "EventLogFilterNewRestrictions",
+			"value": "新例外"
+		},
+		{
+			"key": "EventLogFilterPinnedMessages",
+			"value": "消息置顶"
+		},
+		{
+			"key": "EventLogGroupJoined",
+			"value": "un1 加入了群组"
+		},
+		{
+			"key": "EventLogInfoDetail",
+			"value": "此列表包含了在过去48小时内群组成员和管理员执行的所有服务操作。"
+		},
+		{
+			"key": "EventLogInfoDetailChannel",
+			"value": "此列表包含了在过去48小时内频道管理员执行的所有管理操作。"
+		},
+		{
+			"key": "EventLogInfoTitle",
+			"value": "什么是近期操作？"
+		},
+		{
+			"key": "EventLogLeftChannel",
+			"value": "un1 退出了频道"
+		},
+		{
+			"key": "EventLogLeftGroup",
+			"value": "un1 退出了群组"
+		},
+		{
+			"key": "EventLogOriginalCaption",
+			"value": "原始说明"
+		},
+		{
+			"key": "EventLogOriginalCaptionEmpty",
+			"value": "无"
+		},
+		{
+			"key": "EventLogOriginalMessages",
+			"value": "原始消息"
+		},
+		{
+			"key": "EventLogPinnedMessages",
+			"value": "un1 置顶了这条消息："
+		},
+		{
+			"key": "EventLogPreviousGroupDescription",
+			"value": "之前的简介"
+		},
+		{
+			"key": "EventLogPreviousLink",
+			"value": "之前的链接"
+		},
+		{
+			"key": "EventLogPromoted",
+			"value": "修改了 %1$s 的权限"
+		},
+		{
+			"key": "EventLogPromotedAddAdmins",
+			"value": "添加管理员"
+		},
+		{
+			"key": "EventLogPromotedAddUsers",
+			"value": "添加成员"
+		},
+		{
+			"key": "EventLogPromotedBanUsers",
+			"value": "封禁用户"
+		},
+		{
+			"key": "EventLogPromotedChangeChannelInfo",
+			"value": "修改频道信息"
+		},
+		{
+			"key": "EventLogPromotedChangeGroupInfo",
+			"value": "修改群组信息"
+		},
+		{
+			"key": "EventLogPromotedDeleteMessages",
+			"value": "删除消息"
+		},
+		{
+			"key": "EventLogPromotedEditMessages",
+			"value": "编辑消息"
+		},
+		{
+			"key": "EventLogPromotedPinMessages",
+			"value": "置顶消息"
+		},
+		{
+			"key": "EventLogPromotedPostMessages",
+			"value": "发布消息"
+		},
+		{
+			"key": "EventLogPromotedRemovedTitle",
+			"value": "头衔"
+		},
+		{
+			"key": "EventLogPromotedTitle",
+			"value": "头衔：%1$s"
+		},
+		{
+			"key": "EventLogRemovedChannelLink",
+			"value": "un1 删除了频道链接"
+		},
+		{
+			"key": "EventLogRemovedChannelPhoto",
+			"value": "un1 删除了频道头像"
+		},
+		{
+			"key": "EventLogRemovedGroupLink",
+			"value": "un1 删除了群组链接"
+		},
+		{
+			"key": "EventLogRemovedLinkedChannel",
+			"value": "un1 将此群组与 un2 取消链接"
+		},
+		{
+			"key": "EventLogRemovedLinkedGroup",
+			"value": "un1 移除了讨论群 un2"
+		},
+		{
+			"key": "EventLogRemovedLocation",
+			"value": "un1 移除了群组位置"
+		},
+		{
+			"key": "EventLogRemovedStickersSet",
+			"value": "un1 删除了群组贴纸包"
+		},
+		{
+			"key": "EventLogRemovedWGroupPhoto",
+			"value": "un1 删除了群组头像"
+		},
+		{
+			"key": "EventLogRestrictedChangeInfo",
+			"value": "修改群组信息"
+		},
+		{
+			"key": "EventLogRestrictedInviteUsers",
+			"value": "邀请新成员"
+		},
+		{
+			"key": "EventLogRestrictedPinMessages",
+			"value": "置顶消息"
+		},
+		{
+			"key": "EventLogRestrictedReadMessages",
+			"value": "查看消息"
+		},
+		{
+			"key": "EventLogRestrictedSendEmbed",
+			"value": "显示链接预览"
+		},
+		{
+			"key": "EventLogRestrictedSendMedia",
+			"value": "发送媒体"
+		},
+		{
+			"key": "EventLogRestrictedSendMessages",
+			"value": "发送消息"
+		},
+		{
+			"key": "EventLogRestrictedSendPolls",
+			"value": "发起投票"
+		},
+		{
+			"key": "EventLogRestrictedSendStickers",
+			"value": "发送贴纸和 GIF"
+		},
+		{
+			"key": "EventLogRestrictedUntil",
+			"value": "修改了 %1$s 的权限\n\n时长: %2$s"
+		},
+		{
+			"key": "EventLogSelectedEvents",
+			"value": "选中的操作"
+		},
+		{
+			"key": "EventLogStopPoll",
+			"value": "un1 终止了投票:"
+		},
+		{
+			"key": "EventLogToggledInvitesHistoryOff",
+			"value": "un1 设置消息记录对新成员不可见"
+		},
+		{
+			"key": "EventLogToggledInvitesHistoryOn",
+			"value": "un1 设置消息记录对新成员可见"
+		},
+		{
+			"key": "EventLogToggledInvitesOff",
+			"value": "un1 禁用了群组成员的邀请权限"
+		},
+		{
+			"key": "EventLogToggledInvitesOn",
+			"value": "un1 启用了群组成员的邀请权限"
+		},
+		{
+			"key": "EventLogToggledSignaturesOff",
+			"value": "un1 禁用了消息署名"
+		},
+		{
+			"key": "EventLogToggledSignaturesOn",
+			"value": "un1 启用了消息署名"
+		},
+		{
+			"key": "EventLogToggledSlowmodeOff",
+			"value": "un1 禁用了慢速模式"
+		},
+		{
+			"key": "EventLogToggledSlowmodeOn",
+			"value": "un1 将慢速模式定时器设置为 %1$s"
+		},
+		{
+			"key": "EventLogUnpinnedMessages",
+			"value": "un1 取消置顶了消息"
+		},
+		{
+			"key": "Events",
+			"value": "事件"
+		},
+		{
+			"key": "Exception",
+			"other_value": "%1$d 个例外"
+		},
+		{
+			"key": "Exposure",
+			"value": "曝光"
+		},
+		{
+			"key": "ExternalStorage",
+			"value": "外部存储器"
+		},
+		{
+			"key": "Fade",
+			"value": "褪色"
+		},
+		{
+			"key": "FavoriteStickers",
+			"value": "收藏夹"
+		},
+		{
+			"key": "FeaturedStickers",
+			"value": "热门贴纸"
+		},
+		{
+			"key": "FeaturedStickersInfo",
+			"value": "这些是当前 Telegram 的热门贴纸，您可以通过机器人 @stickers 添加自定义贴纸。"
+		},
+		{
+			"key": "February",
+			"value": "2月"
+		},
+		{
+			"key": "FileUploadLimit",
+			"value": "文件大小不能超过 %1$s"
+		},
+		{
+			"key": "Files",
+			"other_value": "%1$d 个文件"
+		},
+		{
+			"key": "FilesDataUsage",
+			"value": "文件"
+		},
+		{
+			"key": "FinalResults",
+			"value": "最终结果"
+		},
+		{
+			"key": "FingerprintHelp",
+			"value": "请按下手指"
+		},
+		{
+			"key": "FingerprintInfo",
+			"value": "请验证指纹"
+		},
+		{
+			"key": "FingerprintNotRecognized",
+			"value": "指纹未识别，请重试。"
+		},
+		{
+			"key": "FirstName",
+			"value": "名字（必填）"
+		},
+		{
+			"key": "FloodWait",
+			"value": "尝试次数过多，请稍后再试"
+		},
+		{
+			"key": "FloodWaitTime",
+			"value": "尝试次数过多，请在 %1$s 后重试"
+		},
+		{
+			"key": "Folder",
+			"value": "文件夹"
+		},
+		{
+			"key": "FontSize",
+			"value": "字体大小"
+		},
+		{
+			"key": "FontSizePreviewLine1",
+			"value": "你知道现在几点吗？"
+		},
+		{
+			"key": "FontSizePreviewLine2",
+			"value": "东京现在是早晨 😎"
+		},
+		{
+			"key": "FontSizePreviewName",
+			"value": "鮑伯·哈里斯"
+		},
+		{
+			"key": "FontSizePreviewReply",
+			"value": "早上好！👋"
+		},
+		{
+			"key": "FootsAway",
+			"value": "%1$s 英尺远"
+		},
+		{
+			"key": "ForgotPassword",
+			"value": "忘记密码？"
+		},
+		{
+			"key": "Forward",
+			"value": "转发"
+		},
+		{
+			"key": "ForwardTo",
+			"value": "转发到..."
+		},
+		{
+			"key": "ForwardedAudio",
+			"other_value": "%1$d 条转发的语音留言"
+		},
+		{
+			"key": "ForwardedContact",
+			"other_value": "%1$d 位转发的联系人"
+		},
+		{
+			"key": "ForwardedFile",
+			"other_value": "%1$d 个转发的文件"
+		},
+		{
+			"key": "ForwardedLocation",
+			"other_value": "%1$d 个转发的位置"
+		},
+		{
+			"key": "ForwardedMessage",
+			"value": "转发的消息"
+		},
+		{
+			"key": "ForwardedMessageCount",
+			"other_value": "%1$d 条转发的消息"
+		},
+		{
+			"key": "ForwardedMusic",
+			"other_value": "%1$d 首转发的音乐"
+		},
+		{
+			"key": "ForwardedPhoto",
+			"other_value": "%1$d 张转发的图片"
+		},
+		{
+			"key": "ForwardedPoll",
+			"other_value": "%1$d 项转发的投票"
+		},
+		{
+			"key": "ForwardedRound",
+			"other_value": "%1$d 条转发的视频留言"
+		},
+		{
+			"key": "ForwardedSticker",
+			"other_value": "%1$d 张转发的贴纸"
+		},
+		{
+			"key": "ForwardedVideo",
+			"other_value": "%1$d 段转发的视频"
+		},
+		{
+			"key": "FreeOfTotal",
+			"value": "%1$s 可用，共 %2$s"
+		},
+		{
+			"key": "From",
+			"value": "来自"
+		},
+		{
+			"key": "FromCamera",
+			"value": "拍照"
+		},
+		{
+			"key": "FromChats",
+			"other_value": "来自 %1$d 个对话"
+		},
+		{
+			"key": "FromFormatted",
+			"value": "来自 %1$s"
+		},
+		{
+			"key": "FromGalley",
+			"value": "从相册中选择"
+		},
+		{
+			"key": "FromYou",
+			"value": "您"
+		},
+		{
+			"key": "Gallery",
+			"value": "相册"
+		},
+		{
+			"key": "GalleryInfo",
+			"value": "发送原图"
+		},
+		{
+			"key": "GalleryPermissionText",
+			"value": "点按来允许访问您的相册"
+		},
+		{
+			"key": "General",
+			"value": "通用"
+		},
+		{
+			"key": "GettingLinkInfo",
+			"value": "正在获取链接信息..."
+		},
+		{
+			"key": "GifCaption",
+			"value": "GIF 说明"
+		},
+		{
+			"key": "GifsTab",
+			"value": "GIF"
+		},
+		{
+			"key": "GlobalAttachGifRestricted",
+			"value": "此群组不允许发送 GIF。"
+		},
+		{
+			"key": "GlobalAttachInlineRestricted",
+			"value": "此群组不允许 Inline 机器人。"
+		},
+		{
+			"key": "GlobalAttachMediaRestricted",
+			"value": "此群组不允许发送媒体。"
+		},
+		{
+			"key": "GlobalAttachStickersRestricted",
+			"value": "此群组不允许发送贴纸。"
+		},
+		{
+			"key": "GlobalSearch",
+			"value": "全局搜索"
+		},
+		{
+			"key": "GlobalSendMessageRestricted",
+			"value": "全员禁言中"
+		},
+		{
+			"key": "GotAQuestion",
+			"value": "对 Telegram 有疑问？"
+		},
+		{
+			"key": "GpsDisabledAlert",
+			"value": "看起来您禁用了位置服务，若需要使用基于位置的功能，请将其重新开启。"
+		},
+		{
+			"key": "Grain",
+			"value": "噪点"
+		},
+		{
+			"key": "Gray",
+			"value": "灰色"
+		},
+		{
+			"key": "Green",
+			"value": "绿色"
+		},
+		{
+			"key": "GroupAddMembers",
+			"value": "添加成员"
+		},
+		{
+			"key": "GroupContacts",
+			"value": "此群组中的联系人"
+		},
+		{
+			"key": "GroupDeletedUndo",
+			"value": "群组已删除。"
+		},
+		{
+			"key": "GroupDescription1",
+			"value": "最多 200,000 位成员"
+		},
+		{
+			"key": "GroupDescription2",
+			"value": "历史记录永久保留"
+		},
+		{
+			"key": "GroupDescription3",
+			"value": "如 t.me/title 一样的公开链接"
+		},
+		{
+			"key": "GroupDescription4",
+			"value": "设置权限细分的管理员"
+		},
+		{
+			"key": "GroupEmptyTitle1",
+			"value": "您创建了一个**群组**"
+		},
+		{
+			"key": "GroupEmptyTitle2",
+			"value": "群组可以拥有："
+		},
+		{
+			"key": "GroupMembers",
+			"value": "成员"
+		},
+		{
+			"key": "GroupName",
+			"value": "群组名称"
+		},
+		{
+			"key": "GroupNotifications",
+			"value": "群组通知"
+		},
+		{
+			"key": "GroupPhotosHelp",
+			"value": "将媒体聚合至一条消息"
+		},
+		{
+			"key": "GroupSettingsChangedAlert",
+			"value": "您更改了群组的一些设置。确定要应用它们吗？"
+		},
+		{
+			"key": "GroupSettingsTitle",
+			"value": "群组设置"
+		},
+		{
+			"key": "GroupStickers",
+			"value": "群组贴纸包"
+		},
+		{
+			"key": "GroupStickersInfo",
+			"value": "你可以为所有群成员选择一个贴纸包，这样当他们在群里聊天时都可以看到并使用它。"
+		},
+		{
+			"key": "GroupType",
+			"value": "群组类型"
+		},
+		{
+			"key": "GroupTypeHeader",
+			"value": "群组类型"
+		},
+		{
+			"key": "GroupUserAddLimit",
+			"value": "抱歉，此群组已满员。"
+		},
+		{
+			"key": "GroupUserCantAdd",
+			"value": "抱歉，您不能将此用户加入群组。"
+		},
+		{
+			"key": "GroupUserCantAdmin",
+			"value": "抱歉，群组内管理员人数过多。"
+		},
+		{
+			"key": "GroupUserCantBot",
+			"value": "抱歉，此群组的机器人数量已达上限。"
+		},
+		{
+			"key": "GroupUserLeftError",
+			"value": "抱歉，此用户已决定退出此群组，因此您无法邀请此用户回来。"
+		},
+		{
+			"key": "Groups",
+			"other_value": "%1$d 个群组"
+		},
+		{
+			"key": "GroupsAndChannels",
+			"value": "邀请权限控制"
+		},
+		{
+			"key": "GroupsAndChannelsHelp",
+			"value": "控制谁能邀请您进入群组或频道。"
+		},
+		{
+			"key": "GroupsInCommon",
+			"value": "共同加入的群组"
+		},
+		{
+			"key": "GroupsInCommonTitle",
+			"value": "共同加入的群组"
+		},
+		{
+			"key": "Hashtags",
+			"value": "标签"
+		},
+		{
+			"key": "HidAccount",
+			"value": "此用户的隐私设置拒绝您查看转发来源"
+		},
+		{
+			"key": "HiddenName",
+			"value": "已销号"
+		},
+		{
+			"key": "HideOnTop",
+			"value": "隐藏"
+		},
+		{
+			"key": "Highlights",
+			"value": "高光"
+		},
+		{
+			"key": "HistoryCleared",
+			"value": "历史聊天记录已被清除"
+		},
+		{
+			"key": "HistoryClearedUndo",
+			"value": "消息记录已清空。"
+		},
+		{
+			"key": "HoldToAudio",
+			"value": "按住录制语音，点按切换为视频"
+		},
+		{
+			"key": "HoldToVideo",
+			"value": "按住录制视频，点按切换为语音"
+		},
+		{
+			"key": "Hours",
+			"other_value": "%1$d小时"
+		},
+		{
+			"key": "HoursBold",
+			"other_value": "**%1$d**小时"
+		},
+		{
+			"key": "Hybrid",
+			"value": "混合"
+		},
+		{
+			"key": "ImagesTab",
+			"value": "图片"
+		},
+		{
+			"key": "ImportContacts",
+			"value": "导入通讯录"
+		},
+		{
+			"key": "InAppNotifications",
+			"value": "应用内通知"
+		},
+		{
+			"key": "InAppPreview",
+			"value": "应用内消息预览"
+		},
+		{
+			"key": "InAppSounds",
+			"value": "应用内提示音"
+		},
+		{
+			"key": "InAppVibrate",
+			"value": "应用内振动"
+		},
+		{
+			"key": "InChatSound",
+			"value": "发送提示音"
+		},
+		{
+			"key": "IncomingCalls",
+			"value": "来电"
+		},
+		{
+			"key": "IncorrectLocalization",
+			"value": "语言包文件无效或已损坏"
+		},
+		{
+			"key": "IncorrectTheme",
+			"value": "错误的主题文件"
+		},
+		{
+			"key": "Info",
+			"value": "信息"
+		},
+		{
+			"key": "InstallGoogleMaps",
+			"value": "安装 Google 地图？"
+		},
+		{
+			"key": "InstantView",
+			"value": "即时预览"
+		},
+		{
+			"key": "InstantViewNightMode",
+			"value": "暗色主题将会在夜间自动启用"
+		},
+		{
+			"key": "InstantViewReference",
+			"value": "引用"
+		},
+		{
+			"key": "InternalStorage",
+			"value": "内部存储器"
+		},
+		{
+			"key": "InvalidCode",
+			"value": "验证码无效"
+		},
+		{
+			"key": "InvalidFirstName",
+			"value": "您输入的名字不符合要求，请重新输入。"
+		},
+		{
+			"key": "InvalidLastName",
+			"value": "抱歉，这个姓氏不能被使用"
+		},
+		{
+			"key": "InvalidPhoneNumber",
+			"value": "无效的手机号码。 请检查号码，然后重试。"
+		},
+		{
+			"key": "Invisible",
+			"value": "隐身"
+		},
+		{
+			"key": "Invite",
+			"value": "邀请"
+		},
+		{
+			"key": "InviteFriends",
+			"value": "邀请朋友"
+		},
+		{
+			"key": "InviteFriendsHelp",
+			"value": "选择要邀请到 Telegram 的联系人"
+		},
+		{
+			"key": "InviteLink",
+			"value": "邀请链接"
+		},
+		{
+			"key": "InviteText2",
+			"value": "嗨，我在使用 Telegram 聊天。加入我们吧！从这里下载：%1$s"
+		},
+		{
+			"key": "InviteTextNum",
+			"other_value": "嗨，我在和另外 %1$d 个联系人使用 Telegram 聊天。加入我们吧！从这里下载：%2$s"
+		},
+		{
+			"key": "InviteToChannelError",
+			"value": "抱歉，根据此用户的隐私设置，您不能将其添加到频道。"
+		},
+		{
+			"key": "InviteToGroupByLink",
+			"value": "通过链接邀请他人加入群组"
+		},
+		{
+			"key": "InviteToGroupError",
+			"value": "抱歉，根据此用户的隐私设置，您不能将其添加到群组。"
+		},
+		{
+			"key": "InviteToTelegram",
+			"value": "邀请到 TELEGRAM"
+		},
+		{
+			"key": "InviteUser",
+			"value": "此用户还未加入 Telegram ，是否发送邀请？"
+		},
+		{
+			"key": "IsRecordingAudio",
+			"value": "%1$s 正在录制语音留言..."
+		},
+		{
+			"key": "IsRecordingRound",
+			"value": "%1$s 正在录制视频留言..."
+		},
+		{
+			"key": "IsSendingAudio",
+			"value": "%1$s 正在发送音乐..."
+		},
+		{
+			"key": "IsSendingFile",
+			"value": "%1$s 正在发送文件..."
+		},
+		{
+			"key": "IsSendingGame",
+			"value": "%1$s 正在玩游戏..."
+		},
+		{
+			"key": "IsSendingPhoto",
+			"value": "%1$s 正在发送图片..."
+		},
+		{
+			"key": "IsSendingVideo",
+			"value": "%1$s 正在发送视频..."
+		},
+		{
+			"key": "IsTyping",
+			"value": "正在输入..."
+		},
+		{
+			"key": "IsTypingGroup",
+			"value": "%1$s 正在输入..."
+		},
+		{
+			"key": "Italic",
+			"value": "斜体"
+		},
+		{
+			"key": "January",
+			"value": "1月"
+		},
+		{
+			"key": "JoinGroup",
+			"value": "加入群组"
+		},
+		{
+			"key": "JoinToGroupErrorFull",
+			"value": "抱歉，此群组已满员。"
+		},
+		{
+			"key": "JoinToGroupErrorNotExist",
+			"value": "抱歉，该对话似乎不存在。"
+		},
+		{
+			"key": "July",
+			"value": "7月"
+		},
+		{
+			"key": "JumpToDate",
+			"value": "跳转"
+		},
+		{
+			"key": "June",
+			"value": "6月"
+		},
+		{
+			"key": "KMetersAway",
+			"value": "千米以外"
+		},
+		{
+			"key": "KMetersAway2",
+			"value": "%1$s 千米远"
+		},
+		{
+			"key": "KeepMedia",
+			"value": "媒体文件保留时间"
+		},
+		{
+			"key": "KeepMediaForever",
+			"value": "永久保留"
+		},
+		{
+			"key": "KeepMediaInfo",
+			"value": "为节省储存空间，此期限内您没有使用过的缓存文件都会被删除。这包括你消息记录中的图片、视频或其他文件。\n\n但这些文件都会保留在 Telegram 云端，您需要时可再次下载。"
+		},
+		{
+			"key": "KickFromBroadcast",
+			"value": "从群发消息名单中移除"
+		},
+		{
+			"key": "KickFromGroup",
+			"value": "从群组中移除"
+		},
+		{
+			"key": "KickFromSupergroup",
+			"value": "限制用户权限"
+		},
+		{
+			"key": "LanguageCode",
+			"value": "zh_CN"
+		},
+		{
+			"key": "LanguageCustom",
+			"value": "自定义"
+		},
+		{
+			"key": "LanguageName",
+			"value": "简体中文"
+		},
+		{
+			"key": "LanguageNameInEnglish",
+			"value": "Simplified Chinese"
+		},
+		{
+			"key": "LanguageSame",
+			"value": "您已经在使用此语言包了（**%1$s**）。您可以随时在“设置”中更改语言。"
+		},
+		{
+			"key": "LanguageTitle",
+			"value": "更换语言？"
+		},
+		{
+			"key": "LanguageUnknownCustomAlert",
+			"value": "很遗憾，此自定义语言包（**%1$s**）不包含 Telegram Android 版所需的数据。"
+		},
+		{
+			"key": "LanguageUnknownTitle",
+			"value": "数据不足"
+		},
+		{
+			"key": "LanguageUnofficial",
+			"value": "非官方语言"
+		},
+		{
+			"key": "LanguageUnsupportedError",
+			"value": "没有这样的语言。"
+		},
+		{
+			"key": "LargeEmoji",
+			"value": "大号 Emoji"
+		},
+		{
+			"key": "LastName",
+			"value": "姓氏（可选）"
+		},
+		{
+			"key": "LastSeen",
+			"value": "最近上线于"
+		},
+		{
+			"key": "LastSeenContacts",
+			"value": "我的联系人"
+		},
+		{
+			"key": "LastSeenContactsMinus",
+			"value": "我的联系人  (-%1$d)"
+		},
+		{
+			"key": "LastSeenContactsMinusPlus",
+			"value": "我的联系人 (-%1$d, +%2$d)"
+		},
+		{
+			"key": "LastSeenContactsPlus",
+			"value": "我的联系人 (+%1$d)"
+		},
+		{
+			"key": "LastSeenDate",
+			"value": "最近上线于"
+		},
+		{
+			"key": "LastSeenDateFormatted",
+			"value": "最近上线于 %1$s"
+		},
+		{
+			"key": "LastSeenEverybody",
+			"value": "所有人"
+		},
+		{
+			"key": "LastSeenEverybodyMinus",
+			"value": "所有人 (-%1$d)"
+		},
+		{
+			"key": "LastSeenFormatted",
+			"value": "最近上线于 %1$s"
+		},
+		{
+			"key": "LastSeenNobody",
+			"value": "不允许任何人"
+		},
+		{
+			"key": "LastSeenNobodyPlus",
+			"value": "不允许任何人 (+%1$d)"
+		},
+		{
+			"key": "LastSeenTitle",
+			"value": "谁可以看到您最后上线的时间？"
+		},
+		{
+			"key": "Lately",
+			"value": "近期有上线"
+		},
+		{
+			"key": "Later",
+			"value": "稍后重启"
+		},
+		{
+			"key": "LeaveChannel",
+			"value": "退出频道"
+		},
+		{
+			"key": "LeaveChannelMenu",
+			"value": "退出频道"
+		},
+		{
+			"key": "LeaveMegaMenu",
+			"value": "退出群组"
+		},
+		{
+			"key": "LedColor",
+			"value": "LED 颜色"
+		},
+		{
+			"key": "LedDisabled",
+			"value": "禁用"
+		},
+		{
+			"key": "LinkAvailable",
+			"value": "%1$s 可用"
+		},
+		{
+			"key": "LinkChecking",
+			"value": "正在检查名称..."
+		},
+		{
+			"key": "LinkCopied",
+			"value": "链接已复制到剪贴板"
+		},
+		{
+			"key": "LinkCopiedPrivate",
+			"value": "链接已复制到剪贴板。\n此链接仅适用于此对话的成员。"
+		},
+		{
+			"key": "LinkInUse",
+			"value": "抱歉，此链接名已经被使用了。"
+		},
+		{
+			"key": "LinkInfo",
+			"value": "任何已安装 Telegram 的用户都将可以通过此链接加入您的群组。"
+		},
+		{
+			"key": "LinkInvalid",
+			"value": "抱歉，此名称不符合规范。"
+		},
+		{
+			"key": "LinkInvalidLong",
+			"value": "频道名称不能超过32个字符。"
+		},
+		{
+			"key": "LinkInvalidShort",
+			"value": "频道链接名必须包含至少5个字符。"
+		},
+		{
+			"key": "LinkInvalidShortMega",
+			"value": "群组链接名必须至少包含 5 个字符。"
+		},
+		{
+			"key": "LinkInvalidStartNumber",
+			"value": "频道链接名不能以数字开头。"
+		},
+		{
+			"key": "LinkInvalidStartNumberMega",
+			"value": "群组名称不能以数字开头。"
+		},
+		{
+			"key": "LinkNotFound",
+			"value": "很遗憾，你无法访问这条消息。你不是消息来源对话的成员。"
+		},
+		{
+			"key": "LinkPreview",
+			"value": "链接预览"
+		},
+		{
+			"key": "LinkedChannel",
+			"value": "链接的频道"
+		},
+		{
+			"key": "LinksTitle",
+			"value": "分享的链接"
+		},
+		{
+			"key": "LiveLocationAlertGroup",
+			"value": "选择这个群的成员在多长时间内可看到你的精确位置。"
+		},
+		{
+			"key": "LiveLocationAlertPrivate",
+			"value": "选择 %1$s 在多长时间内可看到你的精确位置。"
+		},
+		{
+			"key": "LiveLocations",
+			"value": "实时位置"
+		},
+		{
+			"key": "Loading",
+			"value": "载入中..."
+		},
+		{
+			"key": "LoadingFullImage",
+			"value": "正在加载完整图片..."
+		},
+		{
+			"key": "LocalAudioCache",
+			"value": "语音/视频留言"
+		},
+		{
+			"key": "LocalCache",
+			"value": "其它文件"
+		},
+		{
+			"key": "LocalDatabase",
+			"value": "本地数据库"
+		},
+		{
+			"key": "LocalDatabaseClear",
+			"value": "清除缓存的消息记录？"
+		},
+		{
+			"key": "LocalDatabaseInfo",
+			"value": "清除本地数据库将删除缓存在本地的聊天记录并压缩数据库以节省存储空间。Telegram 需要一些数据来维持正常工作，所以数据库大小不会完全归零。\n\n此操作需要一些时间来完成。"
+		},
+		{
+			"key": "LocalDocumentCache",
+			"value": "文件"
+		},
+		{
+			"key": "LocalGifCache",
+			"value": "GIF"
+		},
+		{
+			"key": "LocalMusicCache",
+			"value": "音乐"
+		},
+		{
+			"key": "LocalPhotoCache",
+			"value": "图片"
+		},
+		{
+			"key": "LocalVideoCache",
+			"value": "视频"
+		},
+		{
+			"key": "LocatedChannelsTooMuch",
+			"value": "抱歉，目标用户已经有太多基于位置的群组了。 请让他们先删除现有的一个。"
+		},
+		{
+			"key": "LocationUpdated",
+			"value": "已更新"
+		},
+		{
+			"key": "LocationUpdatedFormatted",
+			"value": "更新于 %1$s"
+		},
+		{
+			"key": "LocationUpdatedJustNow",
+			"value": "刚刚更新"
+		},
+		{
+			"key": "LogOut",
+			"value": "注销"
+		},
+		{
+			"key": "LogOutInfo",
+			"value": "注销将会销毁所有的加密聊天记录。"
+		},
+		{
+			"key": "LogOutTitle",
+			"value": "注销"
+		},
+		{
+			"key": "LoginAttempts",
+			"value": "未完成的登录尝试"
+		},
+		{
+			"key": "LoginAttemptsInfo",
+			"value": "这些设备无法获取你的消息。他们输入了正确的验证码，但是没有提供正确的两步验证密码。"
+		},
+		{
+			"key": "LoginPassword",
+			"value": "密码"
+		},
+		{
+			"key": "LoginPasswordText",
+			"value": "您已经启用两步认证，这个附加密码将保护您的帐号。"
+		},
+		{
+			"key": "Long",
+			"value": "长"
+		},
+		{
+			"key": "LoopAnimatedStickers",
+			"value": "循环播放动画贴纸"
+		},
+		{
+			"key": "LowDiskSpaceMessage",
+			"value": "您的设备存储空间快满了。您可以将 Telegram 设置为仅缓存近期的媒体文件以释放空间。"
+		},
+		{
+			"key": "LowDiskSpaceNeverRemove",
+			"value": "永不删除"
+		},
+		{
+			"key": "LowDiskSpaceTitle",
+			"value": "注意"
+		},
+		{
+			"key": "LowDiskSpaceTitle2",
+			"value": "删除此时间后的媒体文件"
+		},
+		{
+			"key": "MakeAdmin",
+			"value": "添加为管理员"
+		},
+		{
+			"key": "ManageChannel",
+			"value": "管理频道"
+		},
+		{
+			"key": "ManageChannelMenu",
+			"value": "管理频道"
+		},
+		{
+			"key": "ManageGroup",
+			"value": "管理群组"
+		},
+		{
+			"key": "ManageGroupMenu",
+			"value": "管理群组"
+		},
+		{
+			"key": "Map",
+			"value": "地图"
+		},
+		{
+			"key": "MapPreviewProvider",
+			"value": "地图预览提供商"
+		},
+		{
+			"key": "MapPreviewProviderGoogle",
+			"value": "Google"
+		},
+		{
+			"key": "MapPreviewProviderNobody",
+			"value": "不使用预览"
+		},
+		{
+			"key": "MapPreviewProviderTelegram",
+			"value": "Telegram"
+		},
+		{
+			"key": "MapPreviewProviderYandex",
+			"value": "Yandex"
+		},
+		{
+			"key": "March",
+			"value": "3月"
+		},
+		{
+			"key": "MarkAsRead",
+			"value": "标记为已读"
+		},
+		{
+			"key": "MarkAsUnread",
+			"value": "标记为未读"
+		},
+		{
+			"key": "Masks",
+			"value": "装饰"
+		},
+		{
+			"key": "MasksCount",
+			"other_value": "%1$d 个装饰"
+		},
+		{
+			"key": "MasksInfo",
+			"value": "您可以在你要发送的图片或视频里添加装饰，只需在发送前开启图片编辑器进行编辑即可。"
+		},
+		{
+			"key": "MasksRemoved",
+			"value": "装饰已被移除"
+		},
+		{
+			"key": "May",
+			"value": "5月"
+		},
+		{
+			"key": "Media",
+			"other_value": "%1$d 个媒体"
+		},
+		{
+			"key": "MediaSelected",
+			"other_value": "已选择 %1$d 个媒体"
+		},
+		{
+			"key": "MegaAddedBy",
+			"value": "un1 将您添加到了此群组"
+		},
+		{
+			"key": "MegaAdminsInfo",
+			"value": "您可以添加管理员帮助您管理群组。长按可删除管理员。"
+		},
+		{
+			"key": "MegaDeleteAlert",
+			"value": "注意！删除此群组将会移除所有成员并且会丢失所有消息。确定要删除此群组？"
+		},
+		{
+			"key": "MegaDeleteInfo",
+			"value": "您将会丢失此群组的所有消息。"
+		},
+		{
+			"key": "MegaLeaveAlert",
+			"value": "您确定要退出此群组吗？"
+		},
+		{
+			"key": "MegaLeaveAlertWithName",
+			"value": "您确定要退出 **%1$s** 吗？"
+		},
+		{
+			"key": "MegaLocation",
+			"value": "基于位置的群组"
+		},
+		{
+			"key": "MegaPrivate",
+			"value": "私人群组"
+		},
+		{
+			"key": "MegaPrivateInfo",
+			"value": "私人群组只能通过他人邀请或通过邀请链接加入。"
+		},
+		{
+			"key": "MegaPrivateLinkHelp",
+			"value": "人们可以通过上方链接加入您的群组。您可以随时撤销这个链接。"
+		},
+		{
+			"key": "MegaPublic",
+			"value": "公开群组"
+		},
+		{
+			"key": "MegaPublicInfo",
+			"value": "任何人都可以搜索和加入公开群组，并查看其历史记录。"
+		},
+		{
+			"key": "MegaUsernameHelp",
+			"value": "如果您设置了永久链接，其他人将能够找到并加入您的群组。\n\n您可以使用 a-z、0-9 和下划线。\n最小长度为5个字符。"
+		},
+		{
+			"key": "Members",
+			"other_value": "%1$d 位成员"
+		},
+		{
+			"key": "MembersCount",
+			"value": "已选择 %2$d 位成员中的 %1$d 位"
+		},
+		{
+			"key": "MembersCountZero",
+			"value": "最多 %1$s"
+		},
+		{
+			"key": "Message",
+			"value": "消息"
+		},
+		{
+			"key": "MessageLifetime",
+			"value": "阅后即焚计时器"
+		},
+		{
+			"key": "MessageLifetimeChanged",
+			"value": "%1$s 已将阅后即焚计时器设定为 %2$s"
+		},
+		{
+			"key": "MessageLifetimeChangedOutgoing",
+			"value": "您已将阅后即焚计时器设定为 %1$s"
+		},
+		{
+			"key": "MessageLifetimePhoto",
+			"value": "如果您设定一个定时器，该图片将在阅后一定时间内自毁。"
+		},
+		{
+			"key": "MessageLifetimeRemoved",
+			"value": "%1$s 取消了阅后即焚计时器"
+		},
+		{
+			"key": "MessageLifetimeVideo",
+			"value": "如果您设定一个定时器，该视频将在阅后一定时间内自毁。"
+		},
+		{
+			"key": "MessageLifetimeYouRemoved",
+			"value": "您取消了阅后即焚计时器"
+		},
+		{
+			"key": "MessageNotFound",
+			"value": "消息不存在"
+		},
+		{
+			"key": "MessageNotifications",
+			"value": "消息通知"
+		},
+		{
+			"key": "MessagePreview",
+			"value": "消息预览"
+		},
+		{
+			"key": "MessagesDataUsage",
+			"value": "消息和其它数据"
+		},
+		{
+			"key": "MessagesSettings",
+			"value": "聊天设置"
+		},
+		{
+			"key": "Meters",
+			"other_value": "%1$d 米"
+		},
+		{
+			"key": "MetersAway",
+			"value": "米以外"
+		},
+		{
+			"key": "MetersAway2",
+			"value": "%1$s 米远"
+		},
+		{
+			"key": "MilesAway",
+			"value": "%1$s 英里远"
+		},
+		{
+			"key": "Minutes",
+			"other_value": "%1$d分钟"
+		},
+		{
+			"key": "MinutesBold",
+			"other_value": "**%1$d**分钟"
+		},
+		{
+			"key": "MobileHidden",
+			"value": "手机号已隐藏"
+		},
+		{
+			"key": "MobileHiddenExceptionInfo",
+			"value": "一旦 %1$s 将您添加为联系人，电话号码将对您可见。"
+		},
+		{
+			"key": "MobileUsage",
+			"value": "移动数据使用情况"
+		},
+		{
+			"key": "MobileVisibleInfo",
+			"value": "当您点按**完成**时，您的电话号码将对 %1$s 可见。"
+		},
+		{
+			"key": "Mono",
+			"value": "等宽"
+		},
+		{
+			"key": "Months",
+			"other_value": "%1$d 个月"
+		},
+		{
+			"key": "MoreInfo",
+			"value": "详情"
+		},
+		{
+			"key": "MusicInfo",
+			"value": "发送音乐文件"
+		},
+		{
+			"key": "MuteDisable",
+			"value": "永久静音"
+		},
+		{
+			"key": "MuteFor",
+			"value": "暂停通知 %1$s"
+		},
+		{
+			"key": "MuteNotifications",
+			"value": "暂停消息通知"
+		},
+		{
+			"key": "NearbyCreateGroup",
+			"value": "创建一个本地群组"
+		},
+		{
+			"key": "NearbyCreateGroupInfo",
+			"value": "靠近此位置的任何人（邻居，同事，同学，活动参与者，场地访客）都可以在“附近的人员”中看到您的群组。"
+		},
+		{
+			"key": "NearbyCreateGroupInfo2",
+			"value": "如果您在此位置创建无关群组，你可能会失去创建基于位置的群组的能力。"
+		},
+		{
+			"key": "NearbyPlaces",
+			"value": "或选择一个位置"
+		},
+		{
+			"key": "NearbyStartGroup",
+			"value": "创建群组"
+		},
+		{
+			"key": "NetworkUsage",
+			"value": "移动数据使用情况"
+		},
+		{
+			"key": "NetworkUsageMobile",
+			"value": "移动数据"
+		},
+		{
+			"key": "NetworkUsageRoaming",
+			"value": "漫游"
+		},
+		{
+			"key": "NetworkUsageSince",
+			"value": "自 %1$s 的网络使用情况"
+		},
+		{
+			"key": "NetworkUsageWiFi",
+			"value": "WI-FI"
+		},
+		{
+			"key": "NeverAllow",
+			"value": "从不允许"
+		},
+		{
+			"key": "NeverAllowPlaceholder",
+			"value": "从不允许..."
+		},
+		{
+			"key": "NeverShareWith",
+			"value": "从不共享给"
+		},
+		{
+			"key": "NeverShareWithPlaceholder",
+			"value": "从不共享给..."
+		},
+		{
+			"key": "NeverShareWithTitle",
+			"value": "从不共享"
+		},
+		{
+			"key": "NewBroadcastList",
+			"value": "新建群发列表"
+		},
+		{
+			"key": "NewChannel",
+			"value": "新建频道"
+		},
+		{
+			"key": "NewContact",
+			"value": "新建联系人"
+		},
+		{
+			"key": "NewConversationShortcut",
+			"value": "新建对话"
+		},
+		{
+			"key": "NewGroup",
+			"value": "新建群组"
+		},
+		{
+			"key": "NewMessageTitle",
+			"value": "新建对话"
+		},
+		{
+			"key": "NewMessages",
+			"other_value": "%1$d 条新消息"
+		},
+		{
+			"key": "NewPoll",
+			"value": "发起投票"
+		},
+		{
+			"key": "NewSecretChat",
+			"value": "新建加密对话"
+		},
+		{
+			"key": "NewTheme",
+			"value": "新建颜色主题"
+		},
+		{
+			"key": "Next",
+			"value": "下一步"
+		},
+		{
+			"key": "NoAudio",
+			"value": "请添加音乐到设备上的歌曲库，它们将会在这里显示。"
+		},
+		{
+			"key": "NoBlocked",
+			"value": "当前没有已屏蔽的用户"
+		},
+		{
+			"key": "NoBlockedChannel",
+			"value": "被封禁的用户将会从频道中移除，并且只有被管理员添加才能再次加入。他们将不能使用邀请链接加入。"
+		},
+		{
+			"key": "NoBlockedChannel2",
+			"value": "被管理员删除的成员无法通过邀请链接返回频道。"
+		},
+		{
+			"key": "NoBlockedGroup",
+			"value": "被封禁的用户将会从群组中移除，并且只有被管理员添加才能再次加入。他们将不能使用邀请链接再次加入。"
+		},
+		{
+			"key": "NoBlockedGroup2",
+			"value": "被管理员从群组封禁的用户无法通过邀请链接重新加入。"
+		},
+		{
+			"key": "NoBlockedUsers",
+			"value": "暂无被封禁用户"
+		},
+		{
+			"key": "NoCallLog",
+			"value": "您还没有拨打过任何电话。"
+		},
+		{
+			"key": "NoChats",
+			"value": "欢迎来到 Telegram"
+		},
+		{
+			"key": "NoChatsContactsHelp",
+			"value": "点按右下角的铅笔按钮开始发送消息。"
+		},
+		{
+			"key": "NoChatsHelp",
+			"value": "要开始聊天\n请点按右下角的铅笔按钮"
+		},
+		{
+			"key": "NoContacts",
+			"value": "还没有联系人"
+		},
+		{
+			"key": "NoEmojiFound",
+			"value": "未找到 emoji"
+		},
+		{
+			"key": "NoExceptions",
+			"value": "此区域将列出所有使用自定义通知设置的对话。\n\n您可以通过资料页中 “通知” 设置来自定义通知。"
+		},
+		{
+			"key": "NoGIFsFound",
+			"value": "未找到 GIF"
+		},
+		{
+			"key": "NoGroupsInCommon",
+			"value": "没有共同加入的群组"
+		},
+		{
+			"key": "NoHandleAppInstalled",
+			"value": "您没有安装可执行 %1$s 类型文件的应用，请先安装一个再继续"
+		},
+		{
+			"key": "NoMailInstalled",
+			"value": "请发送邮件到 sms@stel.com 来告诉我们您遇到的问题。"
+		},
+		{
+			"key": "NoMasks",
+			"value": "暂无装饰"
+		},
+		{
+			"key": "NoMedia",
+			"value": "在此对话中分享图片和视频，并在您所有的设备上访问。"
+		},
+		{
+			"key": "NoMediaAutoDownload",
+			"value": "禁用自动下载"
+		},
+		{
+			"key": "NoMediaSecret",
+			"value": "此对话中共享的所有图片和视频都会在这里显示。"
+		},
+		{
+			"key": "NoMessages",
+			"value": "暂无消息..."
+		},
+		{
+			"key": "NoOtherSessions",
+			"value": "没有其它活动会话"
+		},
+		{
+			"key": "NoOtherSessionsInfo",
+			"value": "您可以用同一个手机号码在其它手机、平板和桌面设备上登录 Telegram，所有数据会即时同步。"
+		},
+		{
+			"key": "NoOtherWebSessions",
+			"value": "没有活动的第三方登录"
+		},
+		{
+			"key": "NoOtherWebSessionsInfo",
+			"value": "您可以在在支持的网站上使用 Telegram 登录。"
+		},
+		{
+			"key": "NoPhotos",
+			"value": "暂无图片"
+		},
+		{
+			"key": "NoPlayerInstalled",
+			"value": "没有可用的视频播放器，请先安装一个再播放"
+		},
+		{
+			"key": "NoPopup",
+			"value": "不弹出"
+		},
+		{
+			"key": "NoRecent",
+			"value": "没有最近使用"
+		},
+		{
+			"key": "NoRecentGIFs",
+			"value": "沒有最近使用的 GIF"
+		},
+		{
+			"key": "NoRecentPhotos",
+			"value": "没有最近的图片"
+		},
+		{
+			"key": "NoResult",
+			"value": "无搜索结果"
+		},
+		{
+			"key": "NoSharedAudio",
+			"value": "在此对话中分享音乐，并在您所有的设备上访问。"
+		},
+		{
+			"key": "NoSharedAudioSecret",
+			"value": "此对话中共享的所有音乐都会在这里显示。"
+		},
+		{
+			"key": "NoSharedFiles",
+			"value": "在此对话中分享文件，并在您所有的设备上访问。"
+		},
+		{
+			"key": "NoSharedFilesSecret",
+			"value": "此对话中共享的所有文件都会在这里显示。"
+		},
+		{
+			"key": "NoSharedLinks",
+			"value": "在此对话中分享链接，并在您所有的设备上访问。"
+		},
+		{
+			"key": "NoSharedLinksSecret",
+			"value": "此对话中共享的所有链接都会在这里显示。"
+		},
+		{
+			"key": "NoSharedVoice",
+			"value": "在此对话中发送语音留言，并在您所有的设备上访问。"
+		},
+		{
+			"key": "NoSharedVoiceSecret",
+			"value": "此对话中发送的所有语音留言都会在这里显示。"
+		},
+		{
+			"key": "NoSound",
+			"value": "无声"
+		},
+		{
+			"key": "NoStickers",
+			"value": "暂无贴纸"
+		},
+		{
+			"key": "NoStickersFound",
+			"value": "未找到贴纸"
+		},
+		{
+			"key": "NoUsernameFound",
+			"value": "没有 Telegram 帐户使用此用户名。"
+		},
+		{
+			"key": "NoVotes",
+			"value": "无人投票"
+		},
+		{
+			"key": "NobodyLikesSpam1",
+			"value": "抱歉，您现在只能给双向联系人发送消息。"
+		},
+		{
+			"key": "NobodyLikesSpam2",
+			"value": "抱歉，您现在只能将双向联系人添加到群组。"
+		},
+		{
+			"key": "NobodyLikesSpam3",
+			"value": "抱歉，目前您已被禁止在公开群组中发送消息。"
+		},
+		{
+			"key": "NotMounted",
+			"value": "未挂载存储器"
+		},
+		{
+			"key": "NotificationActionPinnedContact",
+			"value": "%1$s 在群组 %2$s 置顶了一条联系人信息"
+		},
+		{
+			"key": "NotificationActionPinnedContact2",
+			"value": "%1$s 置顶了一条联系人信息 %3$s 在群组 %2$s"
+		},
+		{
+			"key": "NotificationActionPinnedContactChannel",
+			"value": "%1$s 置顶了一条联系人信息"
+		},
+		{
+			"key": "NotificationActionPinnedContactChannel2",
+			"value": "%1$s 置顶了一条联系人信息 %2$s"
+		},
+		{
+			"key": "NotificationActionPinnedFile",
+			"value": "%1$s 在群组 %2$s 置顶了一个文件"
+		},
+		{
+			"key": "NotificationActionPinnedFileChannel",
+			"value": "%1$s 置顶了一个文件"
+		},
+		{
+			"key": "NotificationActionPinnedGame",
+			"value": "%1$s 在群组 %2$s 置顶了一个游戏"
+		},
+		{
+			"key": "NotificationActionPinnedGameChannel",
+			"value": "%1$s 置顶了一个游戏"
+		},
+		{
+			"key": "NotificationActionPinnedGameScore",
+			"value": "%1$s 置顶了一项游戏成绩在群组 %2$s"
+		},
+		{
+			"key": "NotificationActionPinnedGameScoreChannel",
+			"value": "%1$s 置顶了一项游戏成绩"
+		},
+		{
+			"key": "NotificationActionPinnedGeo",
+			"value": "%1$s 在群组 %2$s 置顶了一个地理位置"
+		},
+		{
+			"key": "NotificationActionPinnedGeoChannel",
+			"value": "%1$s 置顶了一个位置"
+		},
+		{
+			"key": "NotificationActionPinnedGeoLive",
+			"value": "%1$s 在群组 %2$s 置顶了一个实时位置"
+		},
+		{
+			"key": "NotificationActionPinnedGeoLiveChannel",
+			"value": "%1$s 置顶了一个实时位置"
+		},
+		{
+			"key": "NotificationActionPinnedGif",
+			"value": "%1$s 在群组 %2$s 置顶了一张 GIF"
+		},
+		{
+			"key": "NotificationActionPinnedGifChannel",
+			"value": "%1$s 置顶了一张 GIF"
+		},
+		{
+			"key": "NotificationActionPinnedInvoice",
+			"value": "%1$s 在群组 %2$s 置顶了一张账单"
+		},
+		{
+			"key": "NotificationActionPinnedInvoiceChannel",
+			"value": "%1$s 置顶了一张留言"
+		},
+		{
+			"key": "NotificationActionPinnedMusic",
+			"value": "%1$s 在群组 %2$s 置顶了一首音乐"
+		},
+		{
+			"key": "NotificationActionPinnedMusicChannel",
+			"value": "%1$s 置顶了一首音乐"
+		},
+		{
+			"key": "NotificationActionPinnedNoText",
+			"value": "%1$s 在群组 %2$s 置顶了一条消息"
+		},
+		{
+			"key": "NotificationActionPinnedNoTextChannel",
+			"value": "%1$s 置顶了一条消息"
+		},
+		{
+			"key": "NotificationActionPinnedPhoto",
+			"value": "%1$s 在群组 %2$s 置顶了一张图片"
+		},
+		{
+			"key": "NotificationActionPinnedPhotoChannel",
+			"value": "%1$s 置顶了一张图片"
+		},
+		{
+			"key": "NotificationActionPinnedPoll",
+			"value": "%1$s 在群组 %2$s 置顶了一项投票"
+		},
+		{
+			"key": "NotificationActionPinnedPoll2",
+			"value": "%1$s 置顶了一项投票 %3$s 在群组 %2$s"
+		},
+		{
+			"key": "NotificationActionPinnedPollChannel",
+			"value": "%1$s 置顶了一项投票"
+		},
+		{
+			"key": "NotificationActionPinnedPollChannel2",
+			"value": "%1$s 置顶了一项投票 %2$s"
+		},
+		{
+			"key": "NotificationActionPinnedRound",
+			"value": "%1$s 在群组 %2$s 置顶了一段视频留言"
+		},
+		{
+			"key": "NotificationActionPinnedRoundChannel",
+			"value": "%1$s 置顶了一条视频留言"
+		},
+		{
+			"key": "NotificationActionPinnedSticker",
+			"value": "%1$s 在群组 %2$s 置顶了一张贴纸"
+		},
+		{
+			"key": "NotificationActionPinnedStickerChannel",
+			"value": "%1$s 置顶了一张贴纸"
+		},
+		{
+			"key": "NotificationActionPinnedStickerEmoji",
+			"value": "%1$s 在群组 %2$s 置顶了一张 %3$s 贴纸"
+		},
+		{
+			"key": "NotificationActionPinnedStickerEmojiChannel",
+			"value": "%1$s 置顶了 1 张 %2$s 贴纸"
+		},
+		{
+			"key": "NotificationActionPinnedText",
+			"value": "%1$s 在群组 %3$s 置顶了 \"%2$s\""
+		},
+		{
+			"key": "NotificationActionPinnedTextChannel",
+			"value": "%1$s 置顶了 \"%2$s\""
+		},
+		{
+			"key": "NotificationActionPinnedVideo",
+			"value": "%1$s 在群组 %2$s 置顶了一段视频"
+		},
+		{
+			"key": "NotificationActionPinnedVideoChannel",
+			"value": "%1$s 置顶了一段视频"
+		},
+		{
+			"key": "NotificationActionPinnedVoice",
+			"value": "%1$s 在群组 %2$s 置顶了一段语音留言"
+		},
+		{
+			"key": "NotificationActionPinnedVoiceChannel",
+			"value": "%1$s 置顶了一条语音留言"
+		},
+		{
+			"key": "NotificationContactJoined",
+			"value": "%1$s 加入了 Telegram！"
+		},
+		{
+			"key": "NotificationContactNewPhoto",
+			"value": "%1$s 更新了头像"
+		},
+		{
+			"key": "NotificationEditedGroupName",
+			"value": "%1$s 重命名了群组 %2$s"
+		},
+		{
+			"key": "NotificationEditedGroupPhoto",
+			"value": "%1$s 更改了群组 %2$s 的头像"
+		},
+		{
+			"key": "NotificationGroupAddMember",
+			"value": "%1$s 邀请了 %3$s 加入群组 %2$s "
+		},
+		{
+			"key": "NotificationGroupAddSelf",
+			"value": "%1$s 回到了群组 %2$s"
+		},
+		{
+			"key": "NotificationGroupAddSelfMega",
+			"value": "%1$s 加入了群组 %2$s"
+		},
+		{
+			"key": "NotificationGroupAlbum",
+			"value": "%1$s 发送了一组图片到群组 %2$s"
+		},
+		{
+			"key": "NotificationGroupFew",
+			"value": "%1$s 发送了 %3$s 到群组 %2$s"
+		},
+		{
+			"key": "NotificationGroupForwardedFew",
+			"value": "%1$s 转发了 %3$s 到群组 %2$s"
+		},
+		{
+			"key": "NotificationGroupKickMember",
+			"value": "%1$s 已将 %3$s 从 %2$s 群组移除"
+		},
+		{
+			"key": "NotificationGroupKickYou",
+			"value": "%1$s 将您移出了 %2$s 群组"
+		},
+		{
+			"key": "NotificationGroupLeftMember",
+			"value": "%1$s 已退出 %2$s 群组"
+		},
+		{
+			"key": "NotificationInvitedToGroup",
+			"value": "%1$s 邀请您加入群组 %2$s "
+		},
+		{
+			"key": "NotificationInvitedToGroupByLink",
+			"value": "%1$s 已通过邀请链接加入群组 %2$s"
+		},
+		{
+			"key": "NotificationMessageAlbum",
+			"value": "%1$s 给您发送了一组图片"
+		},
+		{
+			"key": "NotificationMessageAudio",
+			"value": "%1$s 给您发送了一条语音留言"
+		},
+		{
+			"key": "NotificationMessageContact",
+			"value": "%1$s 给您分享了一条联系人信息"
+		},
+		{
+			"key": "NotificationMessageContact2",
+			"value": "%1$s 给您分享了一条 %2$s 联系人信息"
+		},
+		{
+			"key": "NotificationMessageDocument",
+			"value": "%1$s 给您发送了一个文件"
+		},
+		{
+			"key": "NotificationMessageFew",
+			"value": "%1$s 发送给你 %2$s"
+		},
+		{
+			"key": "NotificationMessageForwardFew",
+			"value": "%1$s 向您转发了 %2$s"
+		},
+		{
+			"key": "NotificationMessageGame",
+			"value": "%1$s 邀请您玩 %2$s "
+		},
+		{
+			"key": "NotificationMessageGameScored",
+			"value": "%1$s 在 %2$s 中获得了 %3$s 分"
+		},
+		{
+			"key": "NotificationMessageGif",
+			"value": "%1$s 给您发送了一张 GIF"
+		},
+		{
+			"key": "NotificationMessageGroupAudio",
+			"value": "%1$s 发送了一条语音留言到群组 %2$s"
+		},
+		{
+			"key": "NotificationMessageGroupContact",
+			"value": "%1$s 分享了一条联系人信息到 %2$s 群组"
+		},
+		{
+			"key": "NotificationMessageGroupContact2",
+			"value": "%1$s 分享了一条联系人信息 %3$s 在群组 %2$s"
+		},
+		{
+			"key": "NotificationMessageGroupDocument",
+			"value": "%1$s 发送了一个文件到群组 %2$s"
+		},
+		{
+			"key": "NotificationMessageGroupGame",
+			"value": "%1$s 邀请您加入群组 %2$s 来玩 %3$s"
+		},
+		{
+			"key": "NotificationMessageGroupGameScored",
+			"value": "%1$s  在 %3$s 中获得了 %4$s 分在群组 %2$s"
+		},
+		{
+			"key": "NotificationMessageGroupGif",
+			"value": "%1$s 发送了一张 GIF 到群组 %2$s"
+		},
+		{
+			"key": "NotificationMessageGroupInvoice",
+			"value": "%1$s 给群组 %2$s 发送了一张 %3$s 的账单"
+		},
+		{
+			"key": "NotificationMessageGroupLiveLocation",
+			"value": "%1$s 共享了实时位置在群组 %2$s "
+		},
+		{
+			"key": "NotificationMessageGroupMap",
+			"value": "%1$s 发送了一个位置到 %2$s 群组"
+		},
+		{
+			"key": "NotificationMessageGroupMusic",
+			"value": "%1$s 发送了一首音乐到群组 %2$s"
+		},
+		{
+			"key": "NotificationMessageGroupNoText",
+			"value": "%1$s 发送了一条消息到 %2$s 群组"
+		},
+		{
+			"key": "NotificationMessageGroupPhoto",
+			"value": "%1$s 发送了一张图片到群组 %2$s"
+		},
+		{
+			"key": "NotificationMessageGroupPoll",
+			"value": "%1$s 发送了一项投票到群组 %2$s"
+		},
+		{
+			"key": "NotificationMessageGroupPoll2",
+			"value": "%1$s  发送了一项投票 %3$s 到群组 %2$s"
+		},
+		{
+			"key": "NotificationMessageGroupRound",
+			"value": "%1$s 发送了一条视频留言到群组 %2$s"
+		},
+		{
+			"key": "NotificationMessageGroupSticker",
+			"value": "%1$s 发送了一张贴纸到群组 %2$s"
+		},
+		{
+			"key": "NotificationMessageGroupStickerEmoji",
+			"value": "%1$s 发送了一张 %3$s 贴纸到群组 %2$s"
+		},
+		{
+			"key": "NotificationMessageGroupText",
+			"value": "%1$s @ %2$s: %3$s"
+		},
+		{
+			"key": "NotificationMessageGroupVideo",
+			"value": "%1$s 发送了一段视频到群组 %2$s"
+		},
+		{
+			"key": "NotificationMessageInvoice",
+			"value": "%1$s 向您发送了一个 %2$s 的订单"
+		},
+		{
+			"key": "NotificationMessageLiveLocation",
+			"value": "%1$s 正在与您共享实时位置"
+		},
+		{
+			"key": "NotificationMessageMap",
+			"value": "%1$s 给您发送了一个位置"
+		},
+		{
+			"key": "NotificationMessageMusic",
+			"value": "%1$s 给您发送了一首音乐"
+		},
+		{
+			"key": "NotificationMessageNoText",
+			"value": "%1$s 给您发送了一条消息"
+		},
+		{
+			"key": "NotificationMessagePhoto",
+			"value": "%1$s 给您发送了一张图片"
+		},
+		{
+			"key": "NotificationMessagePoll",
+			"value": "%1$s 给您发送了一项投票"
+		},
+		{
+			"key": "NotificationMessagePoll2",
+			"value": "%1$s 给您发送了一项头片 %2$s"
+		},
+		{
+			"key": "NotificationMessageRound",
+			"value": "%1$s 给您发送了一条视频留言"
+		},
+		{
+			"key": "NotificationMessageSDPhoto",
+			"value": "%1$s 给您发送了一张自毁图片"
+		},
+		{
+			"key": "NotificationMessageSDVideo",
+			"value": "%1$s 给您发送了一张自毁视频"
+		},
+		{
+			"key": "NotificationMessageSticker",
+			"value": "%1$s 给您发送了一张贴纸"
+		},
+		{
+			"key": "NotificationMessageStickerEmoji",
+			"value": "%1$s 给您发送了一张 %2$s 贴纸"
+		},
+		{
+			"key": "NotificationMessageText",
+			"value": "%1$s: %2$s"
+		},
+		{
+			"key": "NotificationMessageVideo",
+			"value": "%1$s 给您发送了一段视频"
+		},
+		{
+			"key": "NotificationMessagesPeopleDisplayOrder",
+			"value": "%1$s %2$s"
+		},
+		{
+			"key": "NotificationUnrecognizedDevice",
+			"value": "%1$s，\n我们发现您的帐号在 %2$s 从新的设备登录\n\n设备：%3$s\n位置：%4$s\n\n如果这不是您本人，您可以在「设置-隐私和安全-活动会话」中将该会话注销\n\n如果您认为其他人在您不知情的情况下登录了您的帐户，您可以在「设置-隐私和安全」中开启「两步验证」。\n\n此致，\nTelegram 团队"
+		},
+		{
+			"key": "Notifications",
+			"value": "通知"
+		},
+		{
+			"key": "NotificationsAddAnException",
+			"value": "添加一个例外"
+		},
+		{
+			"key": "NotificationsAndSounds",
+			"value": "通知和声音"
+		},
+		{
+			"key": "NotificationsChannels",
+			"value": "频道"
+		},
+		{
+			"key": "NotificationsCustom",
+			"value": "自定义"
+		},
+		{
+			"key": "NotificationsCustomize",
+			"value": "自定义"
+		},
+		{
+			"key": "NotificationsDefaultOff",
+			"value": "默认 （关闭）"
+		},
+		{
+			"key": "NotificationsDefaultOn",
+			"value": "默认 （开启）"
+		},
+		{
+			"key": "NotificationsDeleteAllException",
+			"value": "删除所有例外"
+		},
+		{
+			"key": "NotificationsDeleteAllExceptionAlert",
+			"value": "您确定要删除所有例外吗？"
+		},
+		{
+			"key": "NotificationsDeleteAllExceptionTitle",
+			"value": "删除所有例外"
+		},
+		{
+			"key": "NotificationsEnableCustom",
+			"value": "启用自定义通知"
+		},
+		{
+			"key": "NotificationsExceptions",
+			"value": "例外"
+		},
+		{
+			"key": "NotificationsExceptionsAlert",
+			"value": "请注意，有 **%1$s**被单独设置，不会受到此选项的影响。"
+		},
+		{
+			"key": "NotificationsExceptionsSingleAlert",
+			"value": "请注意，有 **%1$s**被单独设置，不会受到此选项的影响。"
+		},
+		{
+			"key": "NotificationsForChannels",
+			"value": "频道通知"
+		},
+		{
+			"key": "NotificationsForChats",
+			"value": "对话通知"
+		},
+		{
+			"key": "NotificationsForGroups",
+			"value": "群组通知"
+		},
+		{
+			"key": "NotificationsForPrivateChats",
+			"value": "私聊通知"
+		},
+		{
+			"key": "NotificationsGroups",
+			"value": "群组"
+		},
+		{
+			"key": "NotificationsImportance",
+			"value": "优先级"
+		},
+		{
+			"key": "NotificationsLed",
+			"value": "LED"
+		},
+		{
+			"key": "NotificationsLedColor",
+			"value": "颜色"
+		},
+		{
+			"key": "NotificationsLedInfo",
+			"value": "LED 指示灯是在部分设备上能够提示新消息的闪烁的小灯。"
+		},
+		{
+			"key": "NotificationsMuted",
+			"value": "免打扰"
+		},
+		{
+			"key": "NotificationsNewException",
+			"value": "新例外"
+		},
+		{
+			"key": "NotificationsOff",
+			"value": "关闭"
+		},
+		{
+			"key": "NotificationsOffUntil",
+			"value": "关闭到 %1$s"
+		},
+		{
+			"key": "NotificationsOn",
+			"value": "开启"
+		},
+		{
+			"key": "NotificationsOther",
+			"value": "其它"
+		},
+		{
+			"key": "NotificationsPriority",
+			"value": "优先级"
+		},
+		{
+			"key": "NotificationsPriorityDefault",
+			"value": "默认"
+		},
+		{
+			"key": "NotificationsPriorityHigh",
+			"value": "高"
+		},
+		{
+			"key": "NotificationsPriorityLow",
+			"value": "低"
+		},
+		{
+			"key": "NotificationsPriorityMax",
+			"value": "最高"
+		},
+		{
+			"key": "NotificationsPriorityMedium",
+			"value": "中"
+		},
+		{
+			"key": "NotificationsPrioritySettings",
+			"value": "和全局设置相同"
+		},
+		{
+			"key": "NotificationsPriorityUrgent",
+			"value": "紧急"
+		},
+		{
+			"key": "NotificationsPrivateChats",
+			"value": "私聊"
+		},
+		{
+			"key": "NotificationsService",
+			"value": "后台服务常驻"
+		},
+		{
+			"key": "NotificationsServiceConnection",
+			"value": "后台网络连接"
+		},
+		{
+			"key": "NotificationsServiceConnectionInfo",
+			"value": "保持一个与 Telegram 的低功耗后台网络连接以获得可靠的通知。"
+		},
+		{
+			"key": "NotificationsServiceInfo",
+			"value": "当应用被终止时自动重启后台服务，确保及时收到通知。"
+		},
+		{
+			"key": "NotificationsTurnOff",
+			"value": "禁用"
+		},
+		{
+			"key": "NotificationsTurnOn",
+			"value": "启用"
+		},
+		{
+			"key": "NotificationsUnmuted",
+			"value": "可提醒"
+		},
+		{
+			"key": "November",
+			"value": "11月"
+		},
+		{
+			"key": "NowInContacts",
+			"value": "%1$s 现在已位于您的联系人列表中。"
+		},
+		{
+			"key": "NumberUnknown",
+			"value": "未知"
+		},
+		{
+			"key": "OK",
+			"value": "确定"
+		},
+		{
+			"key": "October",
+			"value": "10月"
+		},
+		{
+			"key": "Of",
+			"value": "%1$d / %2$d"
+		},
+		{
+			"key": "Online",
+			"value": "在线"
+		},
+		{
+			"key": "OnlineCount",
+			"other_value": "%1$d 人在线"
+		},
+		{
+			"key": "OnlyIfSilent",
+			"value": "仅静音模式"
+		},
+		{
+			"key": "OnlyWhenScreenOff",
+			"value": "只在屏幕关闭时"
+		},
+		{
+			"key": "OnlyWhenScreenOn",
+			"value": "只在屏幕打开时"
+		},
+		{
+			"key": "Open",
+			"value": "打开"
+		},
+		{
+			"key": "OpenBackground",
+			"value": "查看背景图"
+		},
+		{
+			"key": "OpenChannel",
+			"value": "查看频道"
+		},
+		{
+			"key": "OpenFile",
+			"value": "打开文件"
+		},
+		{
+			"key": "OpenGroup",
+			"value": "查看群组"
+		},
+		{
+			"key": "OpenInBrowser",
+			"value": "使用其他应用打开"
+		},
+		{
+			"key": "OpenInExternalApp",
+			"value": "使用其他应用打开..."
+		},
+		{
+			"key": "OpenMessage",
+			"value": "查看消息"
+		},
+		{
+			"key": "OpenUrlAlert",
+			"value": "是否打开链接 %1$s ？"
+		},
+		{
+			"key": "OpenUrlAlert2",
+			"value": "您想打开 %1$s 吗？"
+		},
+		{
+			"key": "OpenUrlOption1",
+			"value": "以 **%2$s** 身份登录 %1$s"
+		},
+		{
+			"key": "OpenUrlOption2",
+			"value": "允许 **%1$s** 向我发送消息"
+		},
+		{
+			"key": "OpenUrlTitle",
+			"value": "打开链接"
+		},
+		{
+			"key": "Option",
+			"other_value": "%1$d 个选项"
+		},
+		{
+			"key": "OptionHint",
+			"value": "选项"
+		},
+		{
+			"key": "Orange",
+			"value": "橙色"
+		},
+		{
+			"key": "OtherSessions",
+			"value": "活动会话"
+		},
+		{
+			"key": "OtherWebSessions",
+			"value": "已关联的网站"
+		},
+		{
+			"key": "OutgoingCalls",
+			"value": "外拨电话"
+		},
+		{
+			"key": "P2PContacts",
+			"value": "我的联系人"
+		},
+		{
+			"key": "P2PContactsMinus",
+			"value": "我的联系人  (-%1$d)"
+		},
+		{
+			"key": "P2PContactsMinusPlus",
+			"value": "我的联系人 (-%1$d, +%2$d)"
+		},
+		{
+			"key": "P2PContactsPlus",
+			"value": "我的联系人 (+%1$d)"
+		},
+		{
+			"key": "P2PEnabledWith",
+			"value": "对谁启用端对端连接？"
+		},
+		{
+			"key": "P2PEverybody",
+			"value": "所有人"
+		},
+		{
+			"key": "P2PEverybodyMinus",
+			"value": "所有人 (-%1$d)"
+		},
+		{
+			"key": "P2PNobody",
+			"value": "不允许任何人"
+		},
+		{
+			"key": "P2PNobodyPlus",
+			"value": "不允许任何人 (+%1$d)"
+		},
+		{
+			"key": "Page1Message",
+			"value": "世界上**最快的**聊天工具\n**免费**又**安全**"
+		},
+		{
+			"key": "Page1Title",
+			"value": "Telegram"
+		},
+		{
+			"key": "Page2Message",
+			"value": "**Telegram** 以同类软件中最快的速度\n为您传递消息"
+		},
+		{
+			"key": "Page2Title",
+			"value": "极速"
+		},
+		{
+			"key": "Page3Message",
+			"value": "**Telegram** 永久免费，无广告\n不收取任何费用"
+		},
+		{
+			"key": "Page3Title",
+			"value": "免费"
+		},
+		{
+			"key": "Page4Message",
+			"value": "**Telegram** 保障您的消息安全\n免受黑客攻击"
+		},
+		{
+			"key": "Page4Title",
+			"value": "安全"
+		},
+		{
+			"key": "Page5Message",
+			"value": "**Telegram** 不限制\n文件和消息大小"
+		},
+		{
+			"key": "Page5Title",
+			"value": "强大"
+		},
+		{
+			"key": "Page6Message",
+			"value": "**Telegram** 让您能从\n多个设备收发消息"
+		},
+		{
+			"key": "Page6Title",
+			"value": "云端"
+		},
+		{
+			"key": "PaintDelete",
+			"value": "删除"
+		},
+		{
+			"key": "PaintDuplicate",
+			"value": "复制"
+		},
+		{
+			"key": "PaintEdit",
+			"value": "编辑"
+		},
+		{
+			"key": "PaintOutlined",
+			"value": "描边"
+		},
+		{
+			"key": "PaintRegular",
+			"value": "常规"
+		},
+		{
+			"key": "Passcode",
+			"value": "锁定码"
+		},
+		{
+			"key": "PasscodeDoNotMatch",
+			"value": "两次输入的锁定码不匹配"
+		},
+		{
+			"key": "PasscodePIN",
+			"value": "PIN 码"
+		},
+		{
+			"key": "PasscodePassword",
+			"value": "密码"
+		},
+		{
+			"key": "PassportAddAddressUploadInfo",
+			"value": "为了确定您的地址，请上传被选中的文件的所有页面的扫描件或照片。"
+		},
+		{
+			"key": "PassportAddAgreement",
+			"value": "添加租赁合同"
+		},
+		{
+			"key": "PassportAddAgreementInfo",
+			"value": "上传您的租赁合同的扫描件"
+		},
+		{
+			"key": "PassportAddBank",
+			"value": "添加银行对账单"
+		},
+		{
+			"key": "PassportAddBankInfo",
+			"value": "上传您的银行对账单的扫描件"
+		},
+		{
+			"key": "PassportAddBill",
+			"value": "添加水电费账单"
+		},
+		{
+			"key": "PassportAddBillInfo",
+			"value": "上传您的水电费账单的扫描件"
+		},
+		{
+			"key": "PassportAddCard",
+			"value": "添加身份证"
+		},
+		{
+			"key": "PassportAddDriverLicenceInfo",
+			"value": "上传一份经过认证的驾驶证英语翻译扫描件。"
+		},
+		{
+			"key": "PassportAddIdentityCardInfo",
+			"value": "上传一份经过认证的身份证英语翻译扫描件。"
+		},
+		{
+			"key": "PassportAddInternalPassport",
+			"value": "添加户口本"
+		},
+		{
+			"key": "PassportAddInternalPassportInfo",
+			"value": "上传一份经过认证的户口本（Internal Passport）英语翻译扫描件。"
+		},
+		{
+			"key": "PassportAddLicence",
+			"value": "添加驾驶证"
+		},
+		{
+			"key": "PassportAddPassport",
+			"value": "添加护照"
+		},
+		{
+			"key": "PassportAddPassportInfo",
+			"value": "上传一份经过认证的护照英语翻译扫描件。"
+		},
+		{
+			"key": "PassportAddPassportRegistration",
+			"value": "护照注册信息"
+		},
+		{
+			"key": "PassportAddPassportRegistrationInfo",
+			"value": "上传一份护照信息页的扫描件"
+		},
+		{
+			"key": "PassportAddTemporaryRegistration",
+			"value": "临时居住证明"
+		},
+		{
+			"key": "PassportAddTemporaryRegistrationInfo",
+			"value": "上传您的临时居住证明的扫描件"
+		},
+		{
+			"key": "PassportAddTranslationAgreementInfo",
+			"value": "上传一份经过认证的租约英语翻译扫描件。"
+		},
+		{
+			"key": "PassportAddTranslationBankInfo",
+			"value": "上传一份经过认证的银行对账单英语翻译扫描件。"
+		},
+		{
+			"key": "PassportAddTranslationBillInfo",
+			"value": "上传一份经过认证的水电费账单英语翻译扫描件。"
+		},
+		{
+			"key": "PassportAddTranslationPassportRegistrationInfo",
+			"value": "上传一份经过认证的护照注册信息英语翻译扫描件。"
+		},
+		{
+			"key": "PassportAddTranslationTemporaryRegistrationInfo",
+			"value": "上传一份经过认证的临时证明英语翻译扫描件。"
+		},
+		{
+			"key": "PassportAddTranslationUploadInfo",
+			"value": "上传经过认证的所选文件的英语翻译扫描件。"
+		},
+		{
+			"key": "PassportAddress",
+			"value": "地址"
+		},
+		{
+			"key": "PassportAddressHeader",
+			"value": "地址"
+		},
+		{
+			"key": "PassportAddressInfo",
+			"value": "上传您的地址证明"
+		},
+		{
+			"key": "PassportAddressNoUploadInfo",
+			"value": "请输入地址"
+		},
+		{
+			"key": "PassportAuthorize",
+			"value": "授权"
+		},
+		{
+			"key": "PassportBirthdate",
+			"value": "出生日期"
+		},
+		{
+			"key": "PassportCitizenship",
+			"value": "国籍"
+		},
+		{
+			"key": "PassportCity",
+			"value": "城市"
+		},
+		{
+			"key": "PassportCorrectErrors",
+			"value": "点按更正错误"
+		},
+		{
+			"key": "PassportCountry",
+			"value": "国家"
+		},
+		{
+			"key": "PassportDeleteAddressAlert",
+			"value": "您确定要删除您的地址信息吗？"
+		},
+		{
+			"key": "PassportDeleteDocument",
+			"value": "删除此档案"
+		},
+		{
+			"key": "PassportDeleteDocumentAddress",
+			"value": "删除地址信息"
+		},
+		{
+			"key": "PassportDeleteDocumentAlert",
+			"value": "您确定要删除此档案吗？"
+		},
+		{
+			"key": "PassportDeleteDocumentPersonal",
+			"value": "删除个人信息"
+		},
+		{
+			"key": "PassportDeleteEmailAlert",
+			"value": "删除邮箱地址？"
+		},
+		{
+			"key": "PassportDeleteInfo",
+			"value": "删除"
+		},
+		{
+			"key": "PassportDeletePersonalAlert",
+			"value": "您确定要删除您的个人信息吗？"
+		},
+		{
+			"key": "PassportDeletePhoneAlert",
+			"value": "删除手机号码？"
+		},
+		{
+			"key": "PassportDeleteScan",
+			"value": "删除扫描件？"
+		},
+		{
+			"key": "PassportDeleteScanAlert",
+			"value": "您确定要删除此扫描件吗？"
+		},
+		{
+			"key": "PassportDeleteSelfie",
+			"value": "删除自拍？"
+		},
+		{
+			"key": "PassportDeleteSelfieAlert",
+			"value": "您确定要删除这张自拍吗？"
+		},
+		{
+			"key": "PassportDiscard",
+			"value": "丢弃"
+		},
+		{
+			"key": "PassportDiscardChanges",
+			"value": "您确定要放弃所有输入的信息吗？"
+		},
+		{
+			"key": "PassportDocument",
+			"value": "文档详情"
+		},
+		{
+			"key": "PassportDocumentNumber",
+			"value": "证件编号"
+		},
+		{
+			"key": "PassportDocuments",
+			"value": "扫描件"
+		},
+		{
+			"key": "PassportEmail",
+			"value": "电子邮箱"
+		},
+		{
+			"key": "PassportEmailCode",
+			"value": "验证码"
+		},
+		{
+			"key": "PassportEmailInfo",
+			"value": "输入您的邮箱地址"
+		},
+		{
+			"key": "PassportEmailUploadInfo",
+			"value": "注意：您将会收到发送至您提供的邮件地址上的一份验证码。"
+		},
+		{
+			"key": "PassportEmailVerifyInfo",
+			"value": "请输入我们刚刚向 %1$s 发送的验证码。"
+		},
+		{
+			"key": "PassportExpired",
+			"value": "失效日期"
+		},
+		{
+			"key": "PassportFemale",
+			"value": "女"
+		},
+		{
+			"key": "PassportFrontSide",
+			"value": "正面"
+		},
+		{
+			"key": "PassportFrontSideInfo",
+			"value": "上传证件正面"
+		},
+		{
+			"key": "PassportGender",
+			"value": "性别"
+		},
+		{
+			"key": "PassportIdentityDocument",
+			"value": "身份档案"
+		},
+		{
+			"key": "PassportIdentityDocumentInfo",
+			"value": "上传一份护照或其他身份证件的扫描件"
+		},
+		{
+			"key": "PassportIdentityDriverLicence",
+			"value": "上传一份驾驶证扫描件"
+		},
+		{
+			"key": "PassportIdentityID",
+			"value": "上传一份身份证扫描件"
+		},
+		{
+			"key": "PassportIdentityInternalPassport",
+			"value": "上传您的户口本扫描件"
+		},
+		{
+			"key": "PassportIdentityPassport",
+			"value": "上传一份护照扫描件"
+		},
+		{
+			"key": "PassportInfo",
+			"value": "通过使用 Telegram Passport，您可以方便地注册需要实名认证网站和服务。\n\n您的信息、个人数据和档案受端到端加密保护。没有人，包括 Telegram，可以在未经您许可的情况下访问它们。\n\n您可以阅读我们的 FAQ 来了解更多信息。"
+		},
+		{
+			"key": "PassportInfo2",
+			"value": "使用 Telegram Passport，您可以轻松注册需要身份验证的网站和服务。\n\n您的信息、个人数据和文档受端到端加密保护。包括 Telegram 在内所有人，都无法在未经您许可的情况下访问它们。\n\n您可以访问我们的*常见问题*了解更多信息。"
+		},
+		{
+			"key": "PassportInfoTitle",
+			"value": "什么是 Telegram Passport？"
+		},
+		{
+			"key": "PassportInfoUrl",
+			"value": "https://telegram.org/faq#passport"
+		},
+		{
+			"key": "PassportLanguage_AR",
+			"value": "阿拉伯语"
+		},
+		{
+			"key": "PassportLanguage_AZ",
+			"value": "阿塞拜疆语"
+		},
+		{
+			"key": "PassportLanguage_BG",
+			"value": "保加利亚语"
+		},
+		{
+			"key": "PassportLanguage_BN",
+			"value": "孟加拉语"
+		},
+		{
+			"key": "PassportLanguage_CS",
+			"value": "捷克语"
+		},
+		{
+			"key": "PassportLanguage_DA",
+			"value": "丹麦语"
+		},
+		{
+			"key": "PassportLanguage_DE",
+			"value": "德语"
+		},
+		{
+			"key": "PassportLanguage_DV",
+			"value": "迪维西语"
+		},
+		{
+			"key": "PassportLanguage_DZ",
+			"value": "宗喀语（不丹语）"
+		},
+		{
+			"key": "PassportLanguage_EL",
+			"value": "希腊语"
+		},
+		{
+			"key": "PassportLanguage_ES",
+			"value": "西班牙语"
+		},
+		{
+			"key": "PassportLanguage_ET",
+			"value": "爱沙尼亚语"
+		},
+		{
+			"key": "PassportLanguage_FA",
+			"value": "波斯语"
+		},
+		{
+			"key": "PassportLanguage_FR",
+			"value": "法语"
+		},
+		{
+			"key": "PassportLanguage_HE",
+			"value": "希伯来语"
+		},
+		{
+			"key": "PassportLanguage_HR",
+			"value": "克罗地亚语"
+		},
+		{
+			"key": "PassportLanguage_HU",
+			"value": "匈牙利语"
+		},
+		{
+			"key": "PassportLanguage_HY",
+			"value": "亚美尼亚语"
+		},
+		{
+			"key": "PassportLanguage_ID",
+			"value": "印尼语"
+		},
+		{
+			"key": "PassportLanguage_IS",
+			"value": "冰岛语"
+		},
+		{
+			"key": "PassportLanguage_IT",
+			"value": "意大利语"
+		},
+		{
+			"key": "PassportLanguage_JA",
+			"value": "日语"
+		},
+		{
+			"key": "PassportLanguage_KA",
+			"value": "格鲁吉亚语"
+		},
+		{
+			"key": "PassportLanguage_KM",
+			"value": "高棉语"
+		},
+		{
+			"key": "PassportLanguage_KO",
+			"value": "朝鲜语"
+		},
+		{
+			"key": "PassportLanguage_LO",
+			"value": "老挝语"
+		},
+		{
+			"key": "PassportLanguage_LT",
+			"value": "立陶宛语"
+		},
+		{
+			"key": "PassportLanguage_LV",
+			"value": "拉脱维亚语"
+		},
+		{
+			"key": "PassportLanguage_MK",
+			"value": "马其顿语"
+		},
+		{
+			"key": "PassportLanguage_MN",
+			"value": "蒙古语"
+		},
+		{
+			"key": "PassportLanguage_MS",
+			"value": "马来语"
+		},
+		{
+			"key": "PassportLanguage_MY",
+			"value": "缅甸语"
+		},
+		{
+			"key": "PassportLanguage_NE",
+			"value": "尼泊尔语"
+		},
+		{
+			"key": "PassportLanguage_NL",
+			"value": "荷兰语"
+		},
+		{
+			"key": "PassportLanguage_PL",
+			"value": "波兰语"
+		},
+		{
+			"key": "PassportLanguage_PT",
+			"value": "葡萄牙语"
+		},
+		{
+			"key": "PassportLanguage_RO",
+			"value": "罗马尼亚语"
+		},
+		{
+			"key": "PassportLanguage_RU",
+			"value": "俄语"
+		},
+		{
+			"key": "PassportLanguage_SK",
+			"value": "斯洛伐克语"
+		},
+		{
+			"key": "PassportLanguage_SL",
+			"value": "斯洛文尼亚语"
+		},
+		{
+			"key": "PassportLanguage_TH",
+			"value": "泰语"
+		},
+		{
+			"key": "PassportLanguage_TK",
+			"value": "土库曼语"
+		},
+		{
+			"key": "PassportLanguage_TR",
+			"value": "土耳其语"
+		},
+		{
+			"key": "PassportLanguage_UK",
+			"value": "乌克兰语"
+		},
+		{
+			"key": "PassportLanguage_UZ",
+			"value": "乌兹别克语"
+		},
+		{
+			"key": "PassportLanguage_VI",
+			"value": "越南语"
+		},
+		{
+			"key": "PassportMainPage",
+			"value": "首页"
+		},
+		{
+			"key": "PassportMainPageInfo",
+			"value": "上传证件首页"
+		},
+		{
+			"key": "PassportMale",
+			"value": "男"
+		},
+		{
+			"key": "PassportMidname",
+			"value": "中间名"
+		},
+		{
+			"key": "PassportMidnameCountry",
+			"value": "中间名（%1$s）"
+		},
+		{
+			"key": "PassportMidnameLatin",
+			"value": "中间名（拉丁文）"
+		},
+		{
+			"key": "PassportName",
+			"value": "姓名"
+		},
+		{
+			"key": "PassportNameCheckAlert",
+			"value": "请检查该姓名是否正确：\n\n%1$s %2$s %3$s"
+		},
+		{
+			"key": "PassportNameCountry",
+			"value": "名（%1$s）"
+		},
+		{
+			"key": "PassportNameLatin",
+			"value": "名（拉丁文）"
+		},
+		{
+			"key": "PassportNativeHeader",
+			"value": "您的姓名"
+		},
+		{
+			"key": "PassportNativeHeaderLang",
+			"value": "您的%1$s名"
+		},
+		{
+			"key": "PassportNativeInfo",
+			"value": "以您所居住的国家（%1$s）语言填写您的名字。"
+		},
+		{
+			"key": "PassportNoDocuments",
+			"value": "您暂时未上传任何文档"
+		},
+		{
+			"key": "PassportNoDocumentsAdd",
+			"value": "添加一个文档"
+		},
+		{
+			"key": "PassportNoDocumentsInfo",
+			"value": "您可以添加您的手机号码、邮箱地址、身份证件或住宅地址。"
+		},
+		{
+			"key": "PassportNoExpireDate",
+			"value": "无"
+		},
+		{
+			"key": "PassportNoPolicy",
+			"value": "您的档案将直接发往 %1$s 并允许 @%2$s 后续向您发送消息。"
+		},
+		{
+			"key": "PassportPersonal",
+			"value": "个人信息"
+		},
+		{
+			"key": "PassportPersonalDetails",
+			"value": "个人信息"
+		},
+		{
+			"key": "PassportPersonalDetailsInfo",
+			"value": "输入您的个人信息"
+		},
+		{
+			"key": "PassportPersonalUploadInfo",
+			"value": "这份文件必须包含您的照片、姓名、出生日期、证件号、发照城市和有效期。"
+		},
+		{
+			"key": "PassportPhone",
+			"value": "手机号码"
+		},
+		{
+			"key": "PassportPhoneInfo",
+			"value": "输入您的手机号码"
+		},
+		{
+			"key": "PassportPhoneUploadInfo",
+			"value": "注意：您将会收到发送至您提供的手机号码上的一份验证码。"
+		},
+		{
+			"key": "PassportPhoneUseOther",
+			"value": "或输入一个新的手机号码"
+		},
+		{
+			"key": "PassportPhoneUseSame",
+			"value": "使用 %1$s"
+		},
+		{
+			"key": "PassportPhoneUseSameEmailInfo",
+			"value": "使用您登记在 Telegram 上的邮件地址。"
+		},
+		{
+			"key": "PassportPhoneUseSameInfo",
+			"value": "使用当前 Telegram 帐户绑定的手机号码。"
+		},
+		{
+			"key": "PassportPolicy",
+			"value": "您同意 *%1$s 隐私政策* 并允许机器人 @%2$s 向您发送消息。"
+		},
+		{
+			"key": "PassportPostcode",
+			"value": "邮政编码"
+		},
+		{
+			"key": "PassportProvidedInformation",
+			"value": "已有的信息"
+		},
+		{
+			"key": "PassportRequest",
+			"value": "**%1$s** 请求访问您的个人信息来注册其服务。"
+		},
+		{
+			"key": "PassportRequestPasswordInfo",
+			"value": "请输入密码以访问个人信息"
+		},
+		{
+			"key": "PassportRequestedInformation",
+			"value": "所需的信息"
+		},
+		{
+			"key": "PassportRequiredDocuments",
+			"value": "所需档案"
+		},
+		{
+			"key": "PassportResidence",
+			"value": "住址"
+		},
+		{
+			"key": "PassportResidentialAddress",
+			"value": "住宅地址"
+		},
+		{
+			"key": "PassportReverseSide",
+			"value": "反面"
+		},
+		{
+			"key": "PassportReverseSideInfo",
+			"value": "上传证件反面"
+		},
+		{
+			"key": "PassportSDK_Cancel",
+			"value": "取消"
+		},
+		{
+			"key": "PassportSDK_DownloadTelegram",
+			"value": "你需要 Telegram 来登陆 **%s**。你想现在安装吗？"
+		},
+		{
+			"key": "PassportSDK_LogInWithTelegram",
+			"value": "通过 Telegram 登录"
+		},
+		{
+			"key": "PassportSDK_OpenGooglePlay",
+			"value": "打开 Google Play"
+		},
+		{
+			"key": "PassportSDK_TelegramPassport",
+			"value": "Telegram Passport"
+		},
+		{
+			"key": "PassportScanPassport",
+			"value": "扫描你的护照"
+		},
+		{
+			"key": "PassportScanPassportInfo",
+			"value": "扫描带有机读区域的护照或身份证来自动填充个人信息。"
+		},
+		{
+			"key": "PassportSelectBithdayDate",
+			"value": "选择出生日期"
+		},
+		{
+			"key": "PassportSelectExpiredDate",
+			"value": "选择失效日期"
+		},
+		{
+			"key": "PassportSelectGender",
+			"value": "选择性别"
+		},
+		{
+			"key": "PassportSelectNotExpire",
+			"value": "长期"
+		},
+		{
+			"key": "PassportSelfRequest",
+			"value": "请输入密码来访问个人信息"
+		},
+		{
+			"key": "PassportSelfie",
+			"value": "自拍照"
+		},
+		{
+			"key": "PassportSelfieInfo",
+			"value": "上传一张手持证件的自拍照"
+		},
+		{
+			"key": "PassportState",
+			"value": "国家和地区"
+		},
+		{
+			"key": "PassportStreet1",
+			"value": "街道"
+		},
+		{
+			"key": "PassportStreet2",
+			"value": "街道"
+		},
+		{
+			"key": "PassportSurname",
+			"value": "姓氏"
+		},
+		{
+			"key": "PassportSurnameCountry",
+			"value": "姓氏（%1$s）"
+		},
+		{
+			"key": "PassportSurnameLatin",
+			"value": "姓氏（拉丁字母）"
+		},
+		{
+			"key": "PassportTranslation",
+			"value": "翻译"
+		},
+		{
+			"key": "PassportTwoDocuments",
+			"value": "%1$s 或 %2$s"
+		},
+		{
+			"key": "PassportUploadAdditinalDocument",
+			"value": "上传补充扫描件"
+		},
+		{
+			"key": "PassportUploadDocument",
+			"value": "上传扫描件"
+		},
+		{
+			"key": "PassportUploadMaxReached",
+			"value": "您最多只能上传 %1$s 个文件。"
+		},
+		{
+			"key": "PassportUploadNotImage",
+			"value": "您只能上传图片。"
+		},
+		{
+			"key": "PassportUseLatinOnly",
+			"value": "您只能使用拉丁字母。"
+		},
+		{
+			"key": "PasswordAsHintError",
+			"value": "密码提示必须与密码本身不同"
+		},
+		{
+			"key": "PasswordCode",
+			"value": "验证码"
+		},
+		{
+			"key": "PasswordDoNotMatch",
+			"value": "密码不正确"
+		},
+		{
+			"key": "PasswordEmailInvalid",
+			"value": "无效的邮件地址。 请检查您是否输入正确，然后重试。"
+		},
+		{
+			"key": "PasswordHint",
+			"value": "密码提示"
+		},
+		{
+			"key": "PasswordHintText",
+			"value": "请设置一个密码提示"
+		},
+		{
+			"key": "PasswordRecovery",
+			"value": "找回密码"
+		},
+		{
+			"key": "PasswordReset",
+			"value": "密码已删除"
+		},
+		{
+			"key": "PaymentBillingAddress",
+			"value": "账单地址"
+		},
+		{
+			"key": "PaymentCardCvv",
+			"value": "安全码 (CVV)"
+		},
+		{
+			"key": "PaymentCardExpireDate",
+			"value": "月/年"
+		},
+		{
+			"key": "PaymentCardInfo",
+			"value": "付款信息"
+		},
+		{
+			"key": "PaymentCardName",
+			"value": "姓名"
+		},
+		{
+			"key": "PaymentCardNumber",
+			"value": "卡号"
+		},
+		{
+			"key": "PaymentCardSavePaymentInformation",
+			"value": "保存付款信息"
+		},
+		{
+			"key": "PaymentCardSavePaymentInformationInfoLine1",
+			"value": "您可以保存您的付款信息以便在未来使用。"
+		},
+		{
+			"key": "PaymentCardSavePaymentInformationInfoLine2",
+			"value": "请先开启“两步验证”后再启用此功能。"
+		},
+		{
+			"key": "PaymentCardTitle",
+			"value": "银行卡"
+		},
+		{
+			"key": "PaymentCheckout",
+			"value": "结算"
+		},
+		{
+			"key": "PaymentCheckoutEmail",
+			"value": "联系方式"
+		},
+		{
+			"key": "PaymentCheckoutMethod",
+			"value": "支付方式"
+		},
+		{
+			"key": "PaymentCheckoutName",
+			"value": "姓名"
+		},
+		{
+			"key": "PaymentCheckoutPay",
+			"value": "支付 %1$s"
+		},
+		{
+			"key": "PaymentCheckoutPhoneNumber",
+			"value": "手机号码"
+		},
+		{
+			"key": "PaymentCheckoutProvider",
+			"value": "支付服务提供商"
+		},
+		{
+			"key": "PaymentCheckoutShippingMethod",
+			"value": "配送方式"
+		},
+		{
+			"key": "PaymentConfirmationMessage",
+			"value": "您曾保存过您的银行卡（%1$s）信息。要使用此卡付款，请输入您的两步验证密码。"
+		},
+		{
+			"key": "PaymentConfirmationNewCard",
+			"value": "选择另一张卡"
+		},
+		{
+			"key": "PaymentConnectionFailed",
+			"value": "无法连接至支付服务器。请检查您的互联网连接并重试。"
+		},
+		{
+			"key": "PaymentEmailToProvider",
+			"value": "邮箱地址将作为付款信息发送给 %1$s。"
+		},
+		{
+			"key": "PaymentFailed",
+			"value": "抱歉，付款被拒绝。"
+		},
+		{
+			"key": "PaymentInvoice",
+			"value": "账单"
+		},
+		{
+			"key": "PaymentNoShippingMethod",
+			"value": "抱歉，无法配送至您的地址。"
+		},
+		{
+			"key": "PaymentPassword",
+			"value": "密码和电子邮箱"
+		},
+		{
+			"key": "PaymentPasswordEmail",
+			"value": "您的邮箱"
+		},
+		{
+			"key": "PaymentPasswordEmailInfo",
+			"value": "请输入一个有效的电子邮件地址。它是您在遗忘密码后唯一的恢复途径。"
+		},
+		{
+			"key": "PaymentPasswordEmailTitle",
+			"value": "恢复邮箱"
+		},
+		{
+			"key": "PaymentPasswordEnter",
+			"value": "请输入密码"
+		},
+		{
+			"key": "PaymentPasswordInfo",
+			"value": "请创建一个用于保护您的付款信息的密码。您需要在登录时输入此密码。"
+		},
+		{
+			"key": "PaymentPasswordReEnter",
+			"value": "请再次输入密码"
+		},
+		{
+			"key": "PaymentPasswordTitle",
+			"value": "密码"
+		},
+		{
+			"key": "PaymentPhoneEmailToProvider",
+			"value": "手机号码和邮箱地址将作为付款信息发送给 %1$s。"
+		},
+		{
+			"key": "PaymentPhoneToProvider",
+			"value": "手机号码将作为付款信息发送给 %1$s。"
+		},
+		{
+			"key": "PaymentPrecheckoutFailed",
+			"value": "抱歉，付款已被此机器人取消。"
+		},
+		{
+			"key": "PaymentReceipt",
+			"value": "收据"
+		},
+		{
+			"key": "PaymentShippingAddress",
+			"value": "配送地址"
+		},
+		{
+			"key": "PaymentShippingAddress1Placeholder",
+			"value": "地址行 1 (街道)"
+		},
+		{
+			"key": "PaymentShippingAddress2Placeholder",
+			"value": "地址行 2 (街道)"
+		},
+		{
+			"key": "PaymentShippingCityPlaceholder",
+			"value": "城市"
+		},
+		{
+			"key": "PaymentShippingCountry",
+			"value": "国家"
+		},
+		{
+			"key": "PaymentShippingEmailPlaceholder",
+			"value": "电子邮箱"
+		},
+		{
+			"key": "PaymentShippingInfo",
+			"value": "配送信息"
+		},
+		{
+			"key": "PaymentShippingMethod",
+			"value": "配送方式"
+		},
+		{
+			"key": "PaymentShippingName",
+			"value": "姓名"
+		},
+		{
+			"key": "PaymentShippingPhoneNumber",
+			"value": "手机号码"
+		},
+		{
+			"key": "PaymentShippingReceiver",
+			"value": "收件人"
+		},
+		{
+			"key": "PaymentShippingSave",
+			"value": "保存配送信息"
+		},
+		{
+			"key": "PaymentShippingSaveInfo",
+			"value": "您可以保存您的配送信息以便在未来使用。"
+		},
+		{
+			"key": "PaymentShippingStatePlaceholder",
+			"value": "省份"
+		},
+		{
+			"key": "PaymentShippingZipPlaceholder",
+			"value": "邮政编码"
+		},
+		{
+			"key": "PaymentSuccessfullyPaid",
+			"value": "您已成功为 %3$s 向 %2$s 转账 %1$s"
+		},
+		{
+			"key": "PaymentSuccessfullyPaidNoItem",
+			"value": "您已成功向 %2$s 转账 %1$s"
+		},
+		{
+			"key": "PaymentTestInvoice",
+			"value": "测试账单"
+		},
+		{
+			"key": "PaymentTransactionMessage",
+			"value": "您确定要为 %3$s 向机器人 %2$s 转账 %1$s ？"
+		},
+		{
+			"key": "PaymentTransactionReview",
+			"value": "交易检查"
+		},
+		{
+			"key": "PaymentTransactionTotal",
+			"value": "总计"
+		},
+		{
+			"key": "PaymentWarning",
+			"value": "警告"
+		},
+		{
+			"key": "PaymentWarningText",
+			"value": "Telegram 和 %1$s 都无法获得您的信用卡信息。信用卡信息将只会被支付平台 %2$s 处理。\n\n款项将会直接发送给 %1$s 的开发者。Telegram 不能提供任何形式的担保，继续付款所带来的风险将由您自己承担。如果遇到问题，请联系 %1$s 的开发者或者您的银行。"
+		},
+		{
+			"key": "PendingEmailText",
+			"value": "您的两步验证恢复邮箱 %1$s 正等待验证。"
+		},
+		{
+			"key": "PeopleNearby",
+			"value": "附近的人"
+		},
+		{
+			"key": "PeopleNearbyAccessInfo",
+			"value": "快速添加正在查看此页面的人并发现本地群组。\n\n请启用位置访问权限以启用此功能。"
+		},
+		{
+			"key": "PeopleNearbyAllowAccess",
+			"value": "允许访问"
+		},
+		{
+			"key": "PeopleNearbyEmpty",
+			"value": "正在寻您你周围的用户..."
+		},
+		{
+			"key": "PeopleNearbyGps",
+			"value": "打开"
+		},
+		{
+			"key": "PeopleNearbyGpsInfo",
+			"value": "快速添加正在查看此页面的人并发现本地群组。\n\n请启用位置服务以启用此功能。"
+		},
+		{
+			"key": "PeopleNearbyHeader",
+			"value": "附近的人"
+		},
+		{
+			"key": "PeopleNearbyInfo",
+			"value": "让您附近的朋友打开此页面以交换手机号码。"
+		},
+		{
+			"key": "PermissionContacts",
+			"value": "为了让您能在任意设备上和朋友联系，您的联系人将会被即时同步至高度加密的 Telegram 云服务器。"
+		},
+		{
+			"key": "PermissionDrawAboveOtherApps",
+			"value": "Telegram 需要使用出现在其他应用上的权限以在画中画模式中播放视频。"
+		},
+		{
+			"key": "PermissionNoAudio",
+			"value": "Telegram 需要访问您的麦克风来录制语音留言。"
+		},
+		{
+			"key": "PermissionNoAudioVideo",
+			"value": "Telegram 需要访问您的麦克风来录制视频。"
+		},
+		{
+			"key": "PermissionNoCamera",
+			"value": "Telegram 需要访问您的相机来拍照或录像。"
+		},
+		{
+			"key": "PermissionNoLocation",
+			"value": "Telegram 需要使用定位服务才能获取您的地址并分享给您的朋友。"
+		},
+		{
+			"key": "PermissionNoLocationPosition",
+			"value": "Telegram 需要获取您的定位服务权限"
+		},
+		{
+			"key": "PermissionOpenSettings",
+			"value": "设置"
+		},
+		{
+			"key": "PermissionStorage",
+			"value": "Telegram 需要访问您的本地存储才能发送和保存照片，视频，音乐和其他媒体文件。"
+		},
+		{
+			"key": "PermissionXiaomiLockscreen",
+			"value": "请授予 Telegram 在锁屏界面显示的权限以确保通话正常工作。"
+		},
+		{
+			"key": "Phone",
+			"value": "手机号码"
+		},
+		{
+			"key": "PhoneCopied",
+			"value": "手机号码已复制到剪贴板"
+		},
+		{
+			"key": "PhoneHidden",
+			"value": "未知"
+		},
+		{
+			"key": "PhoneHome",
+			"value": "家庭"
+		},
+		{
+			"key": "PhoneMain",
+			"value": "主要"
+		},
+		{
+			"key": "PhoneMobile",
+			"value": "手机"
+		},
+		{
+			"key": "PhoneNumberAlert",
+			"value": "如果您的 Telegram 联系人有您的旧号码，并且您没有在 Telegram 里屏蔽他们，您的新号码将被添加到他们的通讯录里。"
+		},
+		{
+			"key": "PhoneNumberChange",
+			"value": "更换手机号码"
+		},
+		{
+			"key": "PhoneNumberChange2",
+			"value": "更改手机号码"
+		},
+		{
+			"key": "PhoneNumberChangeTitle",
+			"value": "更改手机号码"
+		},
+		{
+			"key": "PhoneNumberFlood",
+			"value": "抱歉，您最近删除并重建您的帐户次数过多。请稍等几天再来重新注册。"
+		},
+		{
+			"key": "PhoneNumberHelp",
+			"value": "您可以在这里更换当前与 Telegram 帐号绑定的手机号码。此帐号的一切资料，包括云端储存的消息、文件、联系人都会被迁移到新号码下。\n\n**注意：** 所有拥有您旧号码且未被您屏蔽的 Telegram 联系人会获得您的**新号码**。"
+		},
+		{
+			"key": "PhoneNumberSearch",
+			"value": "手机号码"
+		},
+		{
+			"key": "PhoneOther",
+			"value": "其它"
+		},
+		{
+			"key": "PhoneWork",
+			"value": "工作"
+		},
+		{
+			"key": "PhotoCaption",
+			"value": "图片说明"
+		},
+		{
+			"key": "Photos",
+			"other_value": "%1$d 张图片"
+		},
+		{
+			"key": "PhotosSelected",
+			"other_value": "已选择 %1$d 张图片"
+		},
+		{
+			"key": "PinMessage",
+			"value": "置顶"
+		},
+		{
+			"key": "PinMessageAlert",
+			"value": "您确定要在群组中置顶此消息？"
+		},
+		{
+			"key": "PinMessageAlertChannel",
+			"value": "您确定要在频道中置顶此消息？"
+		},
+		{
+			"key": "PinMessageAlertChat",
+			"value": "您确定要在对话中置顶此消息？"
+		},
+		{
+			"key": "PinMessageAlertTitle",
+			"value": "置顶消息"
+		},
+		{
+			"key": "PinNotify",
+			"value": "通知所有成员"
+		},
+		{
+			"key": "PinToTop",
+			"value": "置顶"
+		},
+		{
+			"key": "PinToTopLimitReached",
+			"value": "抱歉，您只能在主列表中置顶 %1$s 个对话。 如果您想让您的对话更加的有组织，请尝试归档一些对话 —— 已归档对话文件夹中允许无限数量的置顶对话。"
+		},
+		{
+			"key": "Ping",
+			"value": "Ping: %1$d 毫秒"
+		},
+		{
+			"key": "Pink",
+			"value": "粉色"
+		},
+		{
+			"key": "PinnedMessage",
+			"value": "置顶消息"
+		},
+		{
+			"key": "PinnedMessages",
+			"value": "消息置顶"
+		},
+		{
+			"key": "PinnedPoll",
+			"value": "置顶投票"
+		},
+		{
+			"key": "PleaseDownload",
+			"value": "请先下载此媒体文件"
+		},
+		{
+			"key": "PleaseEnterCurrentPassword",
+			"value": "请输入您的密码"
+		},
+		{
+			"key": "PleaseEnterCurrentPasswordTransfer",
+			"value": "请输入您的密码以完成转让。"
+		},
+		{
+			"key": "PleaseEnterFirstPassword",
+			"value": "请输入一个密码"
+		},
+		{
+			"key": "PleaseEnterPassword",
+			"value": "请输入新的解锁密码"
+		},
+		{
+			"key": "PleaseLoginPassport",
+			"value": "请登陆到 Telegram 来使用 Telegram Passport"
+		},
+		{
+			"key": "PleaseReEnterPassword",
+			"value": "请再次输入密码"
+		},
+		{
+			"key": "PleaseStreamDownload",
+			"value": "请等待视频下载完毕"
+		},
+		{
+			"key": "Points",
+			"other_value": "%1$d"
+		},
+		{
+			"key": "Poll",
+			"value": "投票"
+		},
+		{
+			"key": "PollOptions",
+			"value": "候选项"
+		},
+		{
+			"key": "PopupDisabled",
+			"value": "禁用"
+		},
+		{
+			"key": "PopupEnabled",
+			"value": "启用"
+		},
+		{
+			"key": "PopupNotification",
+			"value": "弹出对话框"
+		},
+		{
+			"key": "PreviewFeedback",
+			"value": "发送关于此预览的反馈"
+		},
+		{
+			"key": "PriorityInfo",
+			"value": "高优先级通知能够在免打扰模式开启时依然正常提醒。"
+		},
+		{
+			"key": "PrivacyAddAnException",
+			"value": "添加用户或群组"
+		},
+		{
+			"key": "PrivacyAdvanced",
+			"value": "高级"
+		},
+		{
+			"key": "PrivacyBots",
+			"value": "机器人与网站"
+		},
+		{
+			"key": "PrivacyBotsInfo",
+			"value": "您使用 Telegram 登录的网站。"
+		},
+		{
+			"key": "PrivacyCallsP2PHelp",
+			"value": "禁用端对端连接后，所有通话流量将使用 Telegram 服务器中转以避免泄露您的 IP 地址，但这可能会轻微降低音质。"
+		},
+		{
+			"key": "PrivacyCallsP2PTitle",
+			"value": "端对端连接"
+		},
+		{
+			"key": "PrivacyClearPayment",
+			"value": "付款信息"
+		},
+		{
+			"key": "PrivacyClearShipping",
+			"value": "配送信息"
+		},
+		{
+			"key": "PrivacyDeleteCloudDrafts",
+			"value": "删除所有云端草稿"
+		},
+		{
+			"key": "PrivacyExceptions",
+			"value": "例外"
+		},
+		{
+			"key": "PrivacyFloodControlError",
+			"value": "抱歉，请求过于频繁。现在暂时无法修改隐私设置，请稍后再试。"
+		},
+		{
+			"key": "PrivacyForwards",
+			"value": "引用转发来源"
+		},
+		{
+			"key": "PrivacyForwardsContacts",
+			"value": "允许时可点击查看个人信息"
+		},
+		{
+			"key": "PrivacyForwardsEverybody",
+			"value": "可以链接到您的帐户"
+		},
+		{
+			"key": "PrivacyForwardsInfo",
+			"value": "当被转发到其他对话时，无法通过您发送的消息链接回您的帐户。"
+		},
+		{
+			"key": "PrivacyForwardsInfo2",
+			"value": "您可以将用户或整个群组添加为覆盖上述设置的例外。"
+		},
+		{
+			"key": "PrivacyForwardsMessageLine",
+			"value": "莱因哈特，我们需要给你找点新的音乐🎶。"
+		},
+		{
+			"key": "PrivacyForwardsNobody",
+			"value": "无法链接到您的帐户"
+		},
+		{
+			"key": "PrivacyForwardsTitle",
+			"value": "谁可以在转发我的消息上附加用户链接？"
+		},
+		{
+			"key": "PrivacyLastSeen",
+			"value": "在线状态"
+		},
+		{
+			"key": "PrivacyP2P",
+			"value": "通话端对端连接"
+		},
+		{
+			"key": "PrivacyP2P2",
+			"value": "使用端到端链接与"
+		},
+		{
+			"key": "PrivacyP2PHeader",
+			"value": "端到端"
+		},
+		{
+			"key": "PrivacyPayments",
+			"value": "付款"
+		},
+		{
+			"key": "PrivacyPaymentsClear",
+			"value": "清除付款和配送信息"
+		},
+		{
+			"key": "PrivacyPaymentsClearAlert",
+			"value": "是否删除您的配送信息，并使所有的付款提供商清除您保存的信用卡？请注意 Telegram 从来不会存储您的信用卡数据。"
+		},
+		{
+			"key": "PrivacyPaymentsClearInfo",
+			"value": "您可以删除您的配送信息并通知所有的支付服务提供商清除您已保存的信用卡信息。请注意：Telegram 从来不会存储您的信用卡数据。"
+		},
+		{
+			"key": "PrivacyPhone",
+			"value": "手机号码"
+		},
+		{
+			"key": "PrivacyPhoneInfo",
+			"value": "已将您的手机号码保存在其联系人中的用户将在 Telegram 上看到该号码。"
+		},
+		{
+			"key": "PrivacyPhoneInfo2",
+			"value": "您可以将用户或整个群组添加为覆盖上述设置的例外。"
+		},
+		{
+			"key": "PrivacyPhoneTitle",
+			"value": "谁可以看到我的手机号码？"
+		},
+		{
+			"key": "PrivacyPolicy",
+			"value": "隐私策略"
+		},
+		{
+			"key": "PrivacyPolicyAndTerms",
+			"value": "隐私政策与服务条款"
+		},
+		{
+			"key": "PrivacyPolicyUrl",
+			"value": "https://telegram.org/privacy"
+		},
+		{
+			"key": "PrivacyProfilePhoto",
+			"value": "头像"
+		},
+		{
+			"key": "PrivacyProfilePhotoInfo",
+			"value": "您可以精确地控制哪些人可以查看您的头像。"
+		},
+		{
+			"key": "PrivacyProfilePhotoInfo2",
+			"value": "您可以将用户或整个群组添加为覆盖上述设置的例外。"
+		},
+		{
+			"key": "PrivacyProfilePhotoTitle",
+			"value": "谁可以看到我的头像？"
+		},
+		{
+			"key": "PrivacySettings",
+			"value": "隐私和安全"
+		},
+		{
+			"key": "PrivacySettingsChangedAlert",
+			"value": "您已更改了一些隐私设置。应用更改？"
+		},
+		{
+			"key": "PrivacyTitle",
+			"value": "隐私"
+		},
+		{
+			"key": "ProfileJoinChannel",
+			"value": "加入频道"
+		},
+		{
+			"key": "ProfileJoinGroup",
+			"value": "加入群组"
+		},
+		{
+			"key": "ProfilePopupNotification",
+			"value": "浮动通知"
+		},
+		{
+			"key": "ProfilePopupNotificationInfo",
+			"value": "当您没有打开 Telegram 时，来自此联系人的新消息也会出现在您的屏幕上。"
+		},
+		{
+			"key": "Proxy",
+			"value": "代理"
+		},
+		{
+			"key": "ProxyConnections",
+			"value": "代理连接"
+		},
+		{
+			"key": "ProxyDetails",
+			"value": "代理信息"
+		},
+		{
+			"key": "ProxySettings",
+			"value": "代理设置"
+		},
+		{
+			"key": "PublicChannelsTooMuch",
+			"value": "抱歉，目标用户已经有太多的公开群组或频道。 请让他们先将他们现有的群组或频道之一更改为私人。"
+		},
+		{
+			"key": "Purple",
+			"value": "紫色"
+		},
+		{
+			"key": "Question",
+			"value": "问题"
+		},
+		{
+			"key": "QuestionHint",
+			"value": "请输入问题"
+		},
+		{
+			"key": "QuickReplyCustom",
+			"value": "自定义消息..."
+		},
+		{
+			"key": "QuickReplyDefault1",
+			"value": "我现在不方便接电话，有什么事吗？"
+		},
+		{
+			"key": "QuickReplyDefault2",
+			"value": "我将尽快回电话。"
+		},
+		{
+			"key": "QuickReplyDefault3",
+			"value": "我将稍后回电话。"
+		},
+		{
+			"key": "QuickReplyDefault4",
+			"value": "我现在不方便接听，能稍后再打过来吗？"
+		},
+		{
+			"key": "RaiseToSpeak",
+			"value": "贴耳语音"
+		},
+		{
+			"key": "RateCallDistorted",
+			"value": "声音听起来扭曲"
+		},
+		{
+			"key": "RateCallDropped",
+			"value": "通话意外结束"
+		},
+		{
+			"key": "RateCallEcho",
+			"value": "我听到了自己的回声"
+		},
+		{
+			"key": "RateCallInterruptions",
+			"value": "对方持续掉线"
+		},
+		{
+			"key": "RateCallNoise",
+			"value": "我听到了背景噪音"
+		},
+		{
+			"key": "RateCallSilentLocal",
+			"value": "我听不到对方的声音"
+		},
+		{
+			"key": "RateCallSilentRemote",
+			"value": "对方听不到我的声音"
+		},
+		{
+			"key": "ReEnterYourPasscode",
+			"value": "请再次输入新的锁定码"
+		},
+		{
+			"key": "Recent",
+			"value": "最近"
+		},
+		{
+			"key": "RecentStickers",
+			"value": "最近使用"
+		},
+		{
+			"key": "RecentlyViewed",
+			"value": "最近查看过"
+		},
+		{
+			"key": "RecentlyViewedHide",
+			"value": "隐藏"
+		},
+		{
+			"key": "Recipient",
+			"other_value": "%1$d 个接收者"
+		},
+		{
+			"key": "RecordingAudio",
+			"value": "正在录制语音留言..."
+		},
+		{
+			"key": "RecordingRound",
+			"value": "正在录制视频留言..."
+		},
+		{
+			"key": "RecoveryEmail",
+			"value": "恢复邮箱"
+		},
+		{
+			"key": "Red",
+			"value": "红色"
+		},
+		{
+			"key": "RegisterText",
+			"value": "请设置您的姓名。"
+		},
+		{
+			"key": "RegisterText2",
+			"value": "输入您的名字并上传一张头像。"
+		},
+		{
+			"key": "Regular",
+			"value": "常规"
+		},
+		{
+			"key": "RemoveFromListText",
+			"value": "长按删除用户。"
+		},
+		{
+			"key": "RemoveStickersCount",
+			"value": "移除 %1$s"
+		},
+		{
+			"key": "RemovedFromFavorites",
+			"value": "此贴纸已从收藏中移除"
+		},
+		{
+			"key": "RemovedUser",
+			"other_value": "%1$d 位用户已被封禁"
+		},
+		{
+			"key": "RepeatDisabled",
+			"value": "关闭"
+		},
+		{
+			"key": "RepeatNotifications",
+			"value": "重复通知"
+		},
+		{
+			"key": "RepeatNotificationsNever",
+			"value": "从不"
+		},
+		{
+			"key": "Reply",
+			"value": "回复"
+		},
+		{
+			"key": "ReplyToGroup",
+			"value": "回复 %1$s"
+		},
+		{
+			"key": "ReplyToUser",
+			"value": "回复给 %1$s"
+		},
+		{
+			"key": "ReportChat",
+			"value": "举报"
+		},
+		{
+			"key": "ReportChatChild",
+			"value": "儿童虐待"
+		},
+		{
+			"key": "ReportChatDescription",
+			"value": "详情"
+		},
+		{
+			"key": "ReportChatOther",
+			"value": "其它"
+		},
+		{
+			"key": "ReportChatPornography",
+			"value": "色情"
+		},
+		{
+			"key": "ReportChatSent",
+			"value": "举报已发送"
+		},
+		{
+			"key": "ReportChatSpam",
+			"value": "垃圾信息"
+		},
+		{
+			"key": "ReportChatViolence",
+			"value": "暴力"
+		},
+		{
+			"key": "ReportSpam",
+			"value": "举报骚扰行为"
+		},
+		{
+			"key": "ReportSpamAlert",
+			"value": "您确定要举报此用户存在骚扰行为？"
+		},
+		{
+			"key": "ReportSpamAlertChannel",
+			"value": "您确定要举报该频道发布垃圾信息吗？"
+		},
+		{
+			"key": "ReportSpamAlertGroup",
+			"value": "您确定要举报此群组发布垃圾信息吗？"
+		},
+		{
+			"key": "ReportSpamAndLeave",
+			"value": "举报骚扰行为并退出"
+		},
+		{
+			"key": "ReportSpamLocation",
+			"value": "群组与位置无关？"
+		},
+		{
+			"key": "ReportSpamTitle",
+			"value": "举报骚扰行为"
+		},
+		{
+			"key": "ReportSpamUser",
+			"value": "屏蔽用户"
+		},
+		{
+			"key": "ReportUnrelatedGroup",
+			"value": "举报无关群组"
+		},
+		{
+			"key": "ReportUnrelatedGroupText",
+			"value": "如果此群组与此位置无关，请告知我们：\n\n**%1$s**"
+		},
+		{
+			"key": "ReportUnrelatedGroupTextNoAddress",
+			"value": "如果此群组与此位置无关，请告知我们。"
+		},
+		{
+			"key": "ResendCode",
+			"value": "重新发送验证码"
+		},
+		{
+			"key": "ResendCodeInfo",
+			"value": "验证码已发送到您的电子邮箱"
+		},
+		{
+			"key": "Reset",
+			"value": "重置"
+		},
+		{
+			"key": "ResetAccount",
+			"value": "重置帐户"
+		},
+		{
+			"key": "ResetAccountButton",
+			"value": "重置帐户"
+		},
+		{
+			"key": "ResetAccountCancelledAlert",
+			"value": "您近期的重置账号请求被当前活动用户取消，请于 7 天后重试。"
+		},
+		{
+			"key": "ResetAccountInfo",
+			"value": "因为账号 **%1$s** 处于活动状态并且被密码保护，出于安全考虑，我们将会在一周后删除它。\n\n在此期间，您可以随时取消此过程。"
+		},
+		{
+			"key": "ResetAccountStatus",
+			"value": "您将能够在此时间后重置您的帐户:"
+		},
+		{
+			"key": "ResetAllNotifications",
+			"value": "重置所有通知设置"
+		},
+		{
+			"key": "ResetAutomaticMediaDownload",
+			"value": "重置自动下载设置"
+		},
+		{
+			"key": "ResetAutomaticMediaDownloadAlert",
+			"value": "您确定要重置自动下载设置吗？"
+		},
+		{
+			"key": "ResetAutomaticMediaDownloadAlertTitle",
+			"value": "重置设置"
+		},
+		{
+			"key": "ResetChatBackgrounds",
+			"value": "重置背景图列表"
+		},
+		{
+			"key": "ResetChatBackgroundsAlert",
+			"value": "您确定要重置背景图列表吗？"
+		},
+		{
+			"key": "ResetChatBackgroundsAlertTitle",
+			"value": "重置聊天窗口背景图"
+		},
+		{
+			"key": "ResetChatBackgroundsInfo",
+			"value": "删除所有上传的背景图并恢复预置的背景图列表。"
+		},
+		{
+			"key": "ResetMyAccount",
+			"value": "重置我的帐户"
+		},
+		{
+			"key": "ResetMyAccountText",
+			"value": "如果您继续重置帐户，您将丢失所有对话与消息，以及您共享的所有媒体和文件。"
+		},
+		{
+			"key": "ResetMyAccountWarning",
+			"value": "警告"
+		},
+		{
+			"key": "ResetMyAccountWarningReset",
+			"value": "重置帐号"
+		},
+		{
+			"key": "ResetMyAccountWarningText",
+			"value": "此操作无法撤销。\n\n如果您重置了您的帐户，所有的消息和对话都将被删除。"
+		},
+		{
+			"key": "ResetNotificationsAlert",
+			"value": "你确定要重置所有通知设置？"
+		},
+		{
+			"key": "ResetNotificationsText",
+			"value": "所有的通知设置已被重置为默认设置"
+		},
+		{
+			"key": "ResetStatistics",
+			"value": "重置统计数据"
+		},
+		{
+			"key": "ResetStatisticsAlert",
+			"value": "您确定要重置统计数据吗？"
+		},
+		{
+			"key": "ResetStatisticsAlertTitle",
+			"value": "重置统计"
+		},
+		{
+			"key": "RestoreEmailSent",
+			"value": "我们已经将验证码发送到您的邮箱：\n\n%1$s"
+		},
+		{
+			"key": "RestoreEmailSentInfo",
+			"value": "请查阅您的邮件并输入我们发送给您的六位数字。"
+		},
+		{
+			"key": "RestoreEmailTrouble",
+			"value": "无法访问您的电子邮箱  %1$s ？"
+		},
+		{
+			"key": "RestoreEmailTroubleText",
+			"value": "如果您无法恢复对电子邮箱的访问权限，那么您就只有想起密码和重置帐户两个选择。"
+		},
+		{
+			"key": "RestorePasswordNoEmailText",
+			"value": "因为您在设置密码时没有同时提供两步验证恢复邮箱，您剩余的选择只有回忆起您的密码或重置您的帐户。"
+		},
+		{
+			"key": "RestorePasswordNoEmailTitle",
+			"value": "抱歉"
+		},
+		{
+			"key": "RestorePasswordResetAccount",
+			"value": "重置帐户"
+		},
+		{
+			"key": "Retry",
+			"value": "重试"
+		},
+		{
+			"key": "ReturnToCall",
+			"value": "返回通话"
+		},
+		{
+			"key": "ReverseOrder",
+			"value": "倒序"
+		},
+		{
+			"key": "RevokeAlert",
+			"value": "您确定要撤销此邀请链接吗？一旦撤销，其他人将不能通过此链接加入本群组。"
+		},
+		{
+			"key": "RevokeAlertNewLink",
+			"value": "之前的邀请链接已被撤销，一个新的链接已生成。"
+		},
+		{
+			"key": "RevokeButton",
+			"value": "撤销"
+		},
+		{
+			"key": "RevokeLink",
+			"value": "撤销链接"
+		},
+		{
+			"key": "RevokeLinkAlert",
+			"value": "您确定要撤销此链接 **%1$s** 吗 ？\n\n群组 \"**%2$s**\" 将转变成私人群组。"
+		},
+		{
+			"key": "RevokeLinkAlertChannel",
+			"value": "您确定要撤销此链接 **%1$s**  吗？\n\n群组 \"**%2$s**\" 将转变成私人频道。"
+		},
+		{
+			"key": "RoamingUsage",
+			"value": "漫游数据使用情况"
+		},
+		{
+			"key": "SETTINGS",
+			"value": "设置"
+		},
+		{
+			"key": "Satellite",
+			"value": "卫星"
+		},
+		{
+			"key": "Saturation",
+			"value": "饱和"
+		},
+		{
+			"key": "Save",
+			"value": "保存"
+		},
+		{
+			"key": "SaveTheme",
+			"value": "保存主题"
+		},
+		{
+			"key": "SaveToDownloads",
+			"value": "保存到下载"
+		},
+		{
+			"key": "SaveToGIFs",
+			"value": "保存到 GIF 库"
+		},
+		{
+			"key": "SaveToGallery",
+			"value": "保存到相册"
+		},
+		{
+			"key": "SaveToGallerySettings",
+			"value": "保存到相册"
+		},
+		{
+			"key": "SaveToMusic",
+			"value": "保存到音乐库"
+		},
+		{
+			"key": "SavedMessages",
+			"value": "收藏夹"
+		},
+		{
+			"key": "SavedMessagesInfo",
+			"value": "转发至此以保存"
+		},
+		{
+			"key": "ScamMessage",
+			"value": "诈骗"
+		},
+		{
+			"key": "ScreenCapture",
+			"value": "在最近任务界面显示应用内容"
+		},
+		{
+			"key": "ScreenCaptureAlert",
+			"value": "这将在最近任务界面中隐藏聊天或聊天列表的内容，但您将无法在 Telegram 上截取屏幕截图。\n\n您可能需要重新启动应用才能生效。"
+		},
+		{
+			"key": "ScreenCaptureInfo",
+			"value": "如果禁用，您将无法在应用中进行截图，且聊天内容将在最近任务界面中隐藏。"
+		},
+		{
+			"key": "SdCard",
+			"value": "SD 卡"
+		},
+		{
+			"key": "Search",
+			"value": "搜索"
+		},
+		{
+			"key": "SearchBackgrounds",
+			"value": "搜索背景"
+		},
+		{
+			"key": "SearchByColor",
+			"value": "按颜色搜索"
+		},
+		{
+			"key": "SearchEmojiHint",
+			"value": "搜索 emoji"
+		},
+		{
+			"key": "SearchForPeople",
+			"value": "搜索人..."
+		},
+		{
+			"key": "SearchForPeopleAndGroups",
+			"value": "搜索用户与群组..."
+		},
+		{
+			"key": "SearchFriends",
+			"value": "搜索联系人"
+		},
+		{
+			"key": "SearchFrom",
+			"value": "来自："
+		},
+		{
+			"key": "SearchGifs",
+			"value": "查找 GIF"
+		},
+		{
+			"key": "SearchGifsTitle",
+			"value": "搜索 GIF"
+		},
+		{
+			"key": "SearchImages",
+			"value": "查找图片"
+		},
+		{
+			"key": "SearchImagesInfo",
+			"value": "通过网络搜索"
+		},
+		{
+			"key": "SearchImagesTitle",
+			"value": "通过网络搜索"
+		},
+		{
+			"key": "SearchInSettings",
+			"value": "搜索设置和常见问题"
+		},
+		{
+			"key": "SearchMembers",
+			"value": "搜索成员"
+		},
+		{
+			"key": "SearchMessages",
+			"value": "消息"
+		},
+		{
+			"key": "SearchStickersHint",
+			"value": "搜索贴纸包"
+		},
+		{
+			"key": "Seconds",
+			"other_value": "%1$d秒"
+		},
+		{
+			"key": "SecondsBold",
+			"other_value": "**%1$d**秒"
+		},
+		{
+			"key": "SecretChat",
+			"value": "加密对话"
+		},
+		{
+			"key": "SecretChatContextBotAlert",
+			"value": "请注意 Inline 机器人是由第三方开发者提供的。为了使机器人工作，您使用这些机器人时发送的消息将会传送给相应的开发者。"
+		},
+		{
+			"key": "SecretChatName",
+			"value": "Telegram"
+		},
+		{
+			"key": "SecretLinkPreviewAlert",
+			"value": "您要启用加密对话中的链接预览功能吗？注意，所有的链接预览均在 Telegram 的服务器上生成。"
+		},
+		{
+			"key": "SecretWebPage",
+			"value": "链接预览"
+		},
+		{
+			"key": "SecretWebPageInfo",
+			"value": "链接预览将在 Telegram 服务器上生成，我们不会储存与您所发送的链接有关的数据。"
+		},
+		{
+			"key": "SecurityTitle",
+			"value": "安全"
+		},
+		{
+			"key": "SelectAccount",
+			"value": "选择帐户"
+		},
+		{
+			"key": "SelectChat",
+			"value": "选择对话"
+		},
+		{
+			"key": "SelectColor",
+			"value": "选择颜色"
+		},
+		{
+			"key": "SelectColorTitle",
+			"value": "选择颜色"
+		},
+		{
+			"key": "SelectContact",
+			"value": "选择联系人"
+		},
+		{
+			"key": "SelectContacts",
+			"value": "选择联系人"
+		},
+		{
+			"key": "SelectFile",
+			"value": "选择文件"
+		},
+		{
+			"key": "SelectFromGallery",
+			"value": "从图库中选择"
+		},
+		{
+			"key": "SelectImage",
+			"value": "选择图片"
+		},
+		{
+			"key": "Send",
+			"value": "发送"
+		},
+		{
+			"key": "SendAsFile",
+			"value": "发送原图"
+		},
+		{
+			"key": "SendAsFiles",
+			"value": "发送原图"
+		},
+		{
+			"key": "SendByEnter",
+			"value": "使用回车键发送消息"
+		},
+		{
+			"key": "SendContactTo",
+			"value": "发送联系人信息给 %1$s ？"
+		},
+		{
+			"key": "SendContactToGroup",
+			"value": "发送联系人到 %1$s ？"
+		},
+		{
+			"key": "SendGameTo",
+			"value": "分享游戏给 %1$s 吗？"
+		},
+		{
+			"key": "SendGameToGroup",
+			"value": "要分享游戏给 %1$s 吗？"
+		},
+		{
+			"key": "SendGifPreview",
+			"value": "发送 GIF"
+		},
+		{
+			"key": "SendItems",
+			"value": "发送 %1$s"
+		},
+		{
+			"key": "SendLiveLocation",
+			"value": "分享我的实时位置..."
+		},
+		{
+			"key": "SendLiveLocationFor15m",
+			"value": "15分钟"
+		},
+		{
+			"key": "SendLiveLocationFor1h",
+			"value": "1小时"
+		},
+		{
+			"key": "SendLiveLocationFor8h",
+			"value": "8小时"
+		},
+		{
+			"key": "SendLiveLocationInfo",
+			"value": "在您移动时实时更新"
+		},
+		{
+			"key": "SendLocation",
+			"value": "发送我当前的位置"
+		},
+		{
+			"key": "SendMessageRestricted",
+			"value": "您已被管理员禁言至 %1$s"
+		},
+		{
+			"key": "SendMessageRestrictedForever",
+			"value": "您已被管理员禁言"
+		},
+		{
+			"key": "SendMessageTo",
+			"value": "添加成员..."
+		},
+		{
+			"key": "SendMessagesTo",
+			"value": "发送消息给 %1$s ？"
+		},
+		{
+			"key": "SendMessagesToGroup",
+			"value": "发送消息到 %1$s ？"
+		},
+		{
+			"key": "SendSelectedLocation",
+			"value": "发送选中的位置"
+		},
+		{
+			"key": "SendSticker",
+			"value": "发送贴纸"
+		},
+		{
+			"key": "SendStickerPreview",
+			"value": "发送贴纸"
+		},
+		{
+			"key": "SendWithoutCompression",
+			"value": "无压缩发送"
+		},
+		{
+			"key": "SendWithoutGrouping",
+			"value": "不以图片组方式发送"
+		},
+		{
+			"key": "SendWithoutSound",
+			"value": "静音发送"
+		},
+		{
+			"key": "SendingAudio",
+			"value": "正在发送音乐..."
+		},
+		{
+			"key": "SendingFile",
+			"value": "正在发送文件..."
+		},
+		{
+			"key": "SendingGame",
+			"value": "正在玩游戏..."
+		},
+		{
+			"key": "SendingGif",
+			"value": "正在发送 GIF..."
+		},
+		{
+			"key": "SendingPhoto",
+			"value": "正在发送图片..."
+		},
+		{
+			"key": "SendingSms",
+			"value": "正在发送短信..."
+		},
+		{
+			"key": "SendingVideo",
+			"value": "正在发送视频..."
+		},
+		{
+			"key": "SendingVideoStatus",
+			"value": "正在发送视频..."
+		},
+		{
+			"key": "SentAppCode",
+			"value": "我们已向您其他设备上的 **Telegram** 应用发送了一条验证码消息。"
+		},
+		{
+			"key": "SentAppCodeTitle",
+			"value": "查看你的 Telegram 消息"
+		},
+		{
+			"key": "SentCallCode",
+			"value": "我们正在呼叫您的手机 **%1$s**。\n\n请不要接听，Telegram 将会自动处理接下来的事情。"
+		},
+		{
+			"key": "SentCallOnly",
+			"value": "正在呼叫您的手机 **%1$s** 并播报验证码。"
+		},
+		{
+			"key": "SentSmsCode",
+			"value": "短信激活码已发送至 **%1$s**。"
+		},
+		{
+			"key": "SentSmsCodeTitle",
+			"value": "输入验证码"
+		},
+		{
+			"key": "September",
+			"value": "9月"
+		},
+		{
+			"key": "ServiceNotifications",
+			"value": "服务通知"
+		},
+		{
+			"key": "SessionsInfo",
+			"value": "控制您在其它设备上的会话。"
+		},
+		{
+			"key": "SessionsTitle",
+			"value": "活动会话"
+		},
+		{
+			"key": "Set",
+			"value": "确定"
+		},
+		{
+			"key": "SetAdditionalPassword",
+			"value": "设置两步验证密码"
+		},
+		{
+			"key": "SetAdditionalPasswordInfo",
+			"value": "您可以设置一个密码，这将作为新设备登录时除短信验证码外的身份验证。"
+		},
+		{
+			"key": "SetAdmins",
+			"value": "设置管理员"
+		},
+		{
+			"key": "SetAdminsAll",
+			"value": "将所有成员都设为管理员"
+		},
+		{
+			"key": "SetAdminsAllInfo",
+			"value": "所有成员都能够添加和移除成员、置顶消息与编辑群组名称和头像。"
+		},
+		{
+			"key": "SetAdminsNotAllInfo",
+			"value": "只有管理员能够添加和移除成员、置顶消息与编辑群组名称和头像。"
+		},
+		{
+			"key": "SetAdminsTitle",
+			"value": "管理员"
+		},
+		{
+			"key": "SetAsAdmin",
+			"value": "设为管理员"
+		},
+		{
+			"key": "SetBackground",
+			"value": "设为背景图"
+		},
+		{
+			"key": "SetColor",
+			"value": "设置纯色背景"
+		},
+		{
+			"key": "SetPasscode",
+			"value": "设置锁定码"
+		},
+		{
+			"key": "SetPasscodeInfo",
+			"value": "用屏幕锁定码保护您的隐私信息。"
+		},
+		{
+			"key": "SetRecoveryEmail",
+			"value": "设置恢复邮箱"
+		},
+		{
+			"key": "SetTimer",
+			"value": "设置阅后即焚计时器"
+		},
+		{
+			"key": "Settings",
+			"value": "设置"
+		},
+		{
+			"key": "SettingsFaqSearchTitle",
+			"value": "常见问题"
+		},
+		{
+			"key": "SettingsHelp",
+			"value": "帮助"
+		},
+		{
+			"key": "SettingsNoRecent",
+			"value": "无最近搜索"
+		},
+		{
+			"key": "SettingsNoResults",
+			"value": "没有结果"
+		},
+		{
+			"key": "SettingsRecent",
+			"value": "最近搜索"
+		},
+		{
+			"key": "SettingsSearchFaq",
+			"value": "常见问题"
+		},
+		{
+			"key": "Shadows",
+			"value": "阴影"
+		},
+		{
+			"key": "ShareComment",
+			"value": "补充评论..."
+		},
+		{
+			"key": "ShareContact",
+			"value": "分享联系人"
+		},
+		{
+			"key": "ShareFile",
+			"value": "分享"
+		},
+		{
+			"key": "ShareLink",
+			"value": "分享链接"
+		},
+		{
+			"key": "ShareLocation",
+			"value": "位置"
+		},
+		{
+			"key": "ShareMyContactInfo",
+			"value": "分享我的联系方式"
+		},
+		{
+			"key": "ShareMyPhone",
+			"value": "分享我的电话号码"
+		},
+		{
+			"key": "SharePhoneNumberWith",
+			"value": "与 %1$s 分享我的电话号码"
+		},
+		{
+			"key": "ShareSendTo",
+			"value": "转发到..."
+		},
+		{
+			"key": "ShareTelegram",
+			"value": "分享 Telegram..."
+		},
+		{
+			"key": "ShareYouLocationInfo",
+			"value": "此操作会把您的当前位置信息发送给机器人。"
+		},
+		{
+			"key": "ShareYouLocationInline",
+			"value": "机器人需要在您每次向它发送请求时获取您的位置信息，以便提供与位置相关的查询结果。"
+		},
+		{
+			"key": "ShareYouLocationTitle",
+			"value": "是否分享您的位置信息？"
+		},
+		{
+			"key": "ShareYouLocationUnable",
+			"value": "应用无法确认您的当前位置"
+		},
+		{
+			"key": "ShareYouLocationUnableManually",
+			"value": "手动选择"
+		},
+		{
+			"key": "ShareYouPhoneNumberTitle",
+			"value": "是否分享您的手机号码？"
+		},
+		{
+			"key": "SharedAudioFiles",
+			"value": "音乐"
+		},
+		{
+			"key": "SharedContent",
+			"value": "分享的内容"
+		},
+		{
+			"key": "SharedContentTitle",
+			"value": "共享的内容"
+		},
+		{
+			"key": "SharedFilesTab",
+			"value": "文件"
+		},
+		{
+			"key": "SharedLinks",
+			"value": "链接"
+		},
+		{
+			"key": "SharedLinksTab",
+			"value": "链接"
+		},
+		{
+			"key": "SharedMedia",
+			"value": "分享的媒体文件"
+		},
+		{
+			"key": "SharedMediaTab",
+			"value": "媒体"
+		},
+		{
+			"key": "SharedMediaTitle",
+			"value": "分享的图片和视频"
+		},
+		{
+			"key": "SharedMusicTab",
+			"value": "音乐"
+		},
+		{
+			"key": "SharedPhotosAndVideos",
+			"value": "图片与视频"
+		},
+		{
+			"key": "SharedPlace",
+			"value": "地点"
+		},
+		{
+			"key": "SharedVoiceTab",
+			"value": "留言"
+		},
+		{
+			"key": "SharingLiveLocationTitle",
+			"value": "您正在与 %1$s 共享您的实时位置"
+		},
+		{
+			"key": "SharingYouAndOtherName",
+			"value": "你和 %1$s"
+		},
+		{
+			"key": "Sharpen",
+			"value": "锐化"
+		},
+		{
+			"key": "Short",
+			"value": "短"
+		},
+		{
+			"key": "ShortMessageLifetimeForever",
+			"value": "关闭"
+		},
+		{
+			"key": "ShowAllFiles",
+			"value": "显示所有文件"
+		},
+		{
+			"key": "ShowAllMedia",
+			"value": "显示所有图片和视频"
+		},
+		{
+			"key": "ShowAllThemes",
+			"value": "显示所有主题"
+		},
+		{
+			"key": "ShowInChat",
+			"value": "在对话中查看"
+		},
+		{
+			"key": "ShowNearbyPlaces",
+			"value": "向上拖动查看附近地点"
+		},
+		{
+			"key": "ShowNotificationsFor",
+			"value": "显示通知"
+		},
+		{
+			"key": "ShowNotificationsForInfo",
+			"value": "如果您只想接收当前帐户的通知，请关闭此选项。"
+		},
+		{
+			"key": "Shuffle",
+			"value": "随机"
+		},
+		{
+			"key": "SignUp",
+			"value": "注册"
+		},
+		{
+			"key": "SinglePhotosHelp",
+			"value": "将媒体文件分开发送"
+		},
+		{
+			"key": "SlideToCancel",
+			"value": "滑动以取消"
+		},
+		{
+			"key": "SlowModeHint",
+			"value": "慢速模式已启用。您可以\n在%1$s后发送下一条消息"
+		},
+		{
+			"key": "Slowmode",
+			"value": "慢速模式"
+		},
+		{
+			"key": "SlowmodeHours",
+			"value": "%1$d小时"
+		},
+		{
+			"key": "SlowmodeInfoOff",
+			"value": "选择每个成员在发送下一条消息之前必须等待的时间。"
+		},
+		{
+			"key": "SlowmodeInfoSelected",
+			"value": "成员每%1$s只能发一条消息。"
+		},
+		{
+			"key": "SlowmodeMinutes",
+			"value": "%1$d分钟"
+		},
+		{
+			"key": "SlowmodeOff",
+			"value": "关闭"
+		},
+		{
+			"key": "SlowmodeSeconds",
+			"value": "%1$d秒"
+		},
+		{
+			"key": "SlowmodeSelectSendError",
+			"value": "慢速模式已启用。 您不能选择更多项目。"
+		},
+		{
+			"key": "SlowmodeSendError",
+			"value": "慢速模式已启用。 您不能一次发送多条消息。"
+		},
+		{
+			"key": "SlowmodeSendErrorTooLong",
+			"value": "抱歉，此文本太长，无法作为一条消息发送。\n\n慢速模式已启用。 您不能一次发送多条消息。"
+		},
+		{
+			"key": "SmartNotifications",
+			"value": "智能通知"
+		},
+		{
+			"key": "SmartNotificationsAlert",
+			"value": "响铃频率"
+		},
+		{
+			"key": "SmartNotificationsDetail",
+			"value": "%2$s 内提醒 %1$s"
+		},
+		{
+			"key": "SmartNotificationsDisabled",
+			"value": "禁用"
+		},
+		{
+			"key": "SmartNotificationsInfo",
+			"value": "%2$s %1$d 次"
+		},
+		{
+			"key": "SmsText",
+			"value": "%1$d:%2$02d 后给您发送短信"
+		},
+		{
+			"key": "SoftUserLimitAlert",
+			"value": "你将能够在完成创建并将其升级为超级群组后添加更多的用户。"
+		},
+		{
+			"key": "SortBy",
+			"value": "排序"
+		},
+		{
+			"key": "SortFirstName",
+			"value": "名字"
+		},
+		{
+			"key": "SortLastName",
+			"value": "姓氏"
+		},
+		{
+			"key": "SortedByLastSeen",
+			"value": "按最后上线时间排序"
+		},
+		{
+			"key": "SortedByName",
+			"value": "按姓名排序"
+		},
+		{
+			"key": "Sound",
+			"value": "声音"
+		},
+		{
+			"key": "SoundDefault",
+			"value": "默认"
+		},
+		{
+			"key": "Start",
+			"value": "开始"
+		},
+		{
+			"key": "StartEncryptedChat",
+			"value": "开始加密对话"
+		},
+		{
+			"key": "StartMessaging",
+			"value": "开始聊天"
+		},
+		{
+			"key": "StartText",
+			"value": "请确认您的国家代码并输入您的手机号码。"
+		},
+		{
+			"key": "Statistics",
+			"value": "统计数据"
+		},
+		{
+			"key": "Stickers",
+			"other_value": "%1$d 张贴纸"
+		},
+		{
+			"key": "StickersAndMasks",
+			"value": "贴纸和装饰"
+		},
+		{
+			"key": "StickersCopy",
+			"value": "复制链接"
+		},
+		{
+			"key": "StickersHide",
+			"value": "归档"
+		},
+		{
+			"key": "StickersName",
+			"value": "贴纸和装饰"
+		},
+		{
+			"key": "StickersRemove",
+			"value": "移除"
+		},
+		{
+			"key": "StickersRemoved",
+			"value": "贴纸包已移除"
+		},
+		{
+			"key": "StickersShare",
+			"value": "分享"
+		},
+		{
+			"key": "Stop",
+			"value": "停止"
+		},
+		{
+			"key": "StopAllLocationSharings",
+			"value": "全部停止"
+		},
+		{
+			"key": "StopDownload",
+			"value": "停止下载"
+		},
+		{
+			"key": "StopLiveLocation",
+			"value": "停止位置共享"
+		},
+		{
+			"key": "StopLiveLocationAlertAll",
+			"value": "您确定要停止所有实时位置更新吗？"
+		},
+		{
+			"key": "StopLiveLocationAlertToGroup",
+			"value": "您确定要停止更新与 %1$s 共享的实时位置吗？"
+		},
+		{
+			"key": "StopLiveLocationAlertToUser",
+			"value": "您确定要停止更新与 %1$s 共享的实时位置吗？"
+		},
+		{
+			"key": "StopLoading",
+			"value": "停止加载？"
+		},
+		{
+			"key": "StopPoll",
+			"value": "终止投票"
+		},
+		{
+			"key": "StopPollAlertText",
+			"value": "如果您现在终止它，其他人将无法继续投票。这个操作无法撤销。"
+		},
+		{
+			"key": "StopPollAlertTitle",
+			"value": "终止投票？"
+		},
+		{
+			"key": "StopVerification",
+			"value": "您想停止验证过程吗？"
+		},
+		{
+			"key": "StorageUsage",
+			"value": "存储使用情况"
+		},
+		{
+			"key": "Streaming",
+			"value": "在线播放"
+		},
+		{
+			"key": "Strike",
+			"value": "删除线"
+		},
+		{
+			"key": "Subscribers",
+			"other_value": "%1$d 位订阅者"
+		},
+		{
+			"key": "SuggestContacts",
+			"value": "推荐频繁往来的联系人"
+		},
+		{
+			"key": "SuggestContactsAlert",
+			"value": "这将删除所有有关您通信频率的统计数据和 Inline 机器人的使用偏好。"
+		},
+		{
+			"key": "SuggestContactsInfo",
+			"value": "在搜索区顶部展示与您频繁有消息往来的用户以便快速访问。"
+		},
+		{
+			"key": "SuggestStickers",
+			"value": "通过 Emoji 推荐贴纸"
+		},
+		{
+			"key": "SuggestStickersAll",
+			"value": "全部贴纸包"
+		},
+		{
+			"key": "SuggestStickersInstalled",
+			"value": "已添加的贴纸包"
+		},
+		{
+			"key": "SuggestStickersNone",
+			"value": "从不推荐"
+		},
+		{
+			"key": "Support",
+			"value": "支持"
+		},
+		{
+			"key": "SupportStatus",
+			"value": "支持"
+		},
+		{
+			"key": "SyncContacts",
+			"value": "同步通讯录"
+		},
+		{
+			"key": "SyncContactsAdded",
+			"value": "此设备上的通讯录已被同步至您的帐户。"
+		},
+		{
+			"key": "SyncContactsDelete",
+			"value": "清空云端通讯录"
+		},
+		{
+			"key": "SyncContactsDeleteInfo",
+			"value": "这将把你的通讯录信息从 Telegram 服务端删除。如果“同步通讯录”选项处于启用状态，通讯录信息将被重新同步。"
+		},
+		{
+			"key": "SyncContactsInfoOff",
+			"value": "开启以持续同步该设备的通讯录至您的账户。"
+		},
+		{
+			"key": "SyncContactsInfoOn",
+			"value": "此设备上的通讯录将被同步至您的帐户。"
+		},
+		{
+			"key": "SyncContactsOff",
+			"value": "此设备上的通讯录将不会被同步至此帐户。"
+		},
+		{
+			"key": "SyncContactsOn",
+			"value": "此设备上的通讯录将被同步至此帐户。"
+		},
+		{
+			"key": "SystemRoot",
+			"value": "系统根目录"
+		},
+		{
+			"key": "TapForVideo",
+			"value": "点按照相，按住录像"
+		},
+		{
+			"key": "TapHereGifs",
+			"value": "点击这里访问保存的 GIF"
+		},
+		{
+			"key": "TapToChange",
+			"value": "点按更改"
+		},
+		{
+			"key": "TapToChangePhone",
+			"value": "手机号码"
+		},
+		{
+			"key": "TapToDownload",
+			"value": "点按下载"
+		},
+		{
+			"key": "Teal",
+			"value": "凫绿"
+		},
+		{
+			"key": "TelegramContacts",
+			"other_value": "%1$d 位 Telegram 用户有此联系人信息"
+		},
+		{
+			"key": "TelegramFAQ",
+			"value": "Telegram 常见问题"
+		},
+		{
+			"key": "TelegramFaq",
+			"value": "Telegram 常见问题"
+		},
+		{
+			"key": "TelegramFaqUrl",
+			"value": "https://telegram.org/faq"
+		},
+		{
+			"key": "TelegramPassport",
+			"value": "Telegram Passport"
+		},
+		{
+			"key": "TelegramPassportCreatePassword",
+			"value": "设置一个密码"
+		},
+		{
+			"key": "TelegramPassportCreatePasswordInfo",
+			"value": "请设置一个密码用于通过端对端保护您的数据。\n\n此密码也将用于登录 Telegram。"
+		},
+		{
+			"key": "TelegramPassportDelete",
+			"value": "删除 Telegram Passport"
+		},
+		{
+			"key": "TelegramPassportDeleteAlert",
+			"value": "您确定要删除您的 Telegram Passport 吗？"
+		},
+		{
+			"key": "TelegramVersion",
+			"value": "Telegram Android 客户端 %1$s"
+		},
+		{
+			"key": "TerminateAllSessions",
+			"value": "注销除本机外所有设备"
+		},
+		{
+			"key": "TerminateAllWebSessions",
+			"value": "取消与所有网站的关联"
+		},
+		{
+			"key": "TerminateSessionInfo",
+			"value": "点击一个会话来注销它。"
+		},
+		{
+			"key": "TerminateSessionQuestion",
+			"value": "注销此会话？"
+		},
+		{
+			"key": "TerminateWebSessionInfo",
+			"value": "轻触以取消该网站与 Telegram 账号的关联"
+		},
+		{
+			"key": "TerminateWebSessionQuestion",
+			"value": "是否取消与 %1$s 的关联？"
+		},
+		{
+			"key": "TerminateWebSessionStop",
+			"value": "屏蔽 %1$s"
+		},
+		{
+			"key": "TermsOfService",
+			"value": "服务协议"
+		},
+		{
+			"key": "TermsOfServiceLogin",
+			"value": "注册即代表您同意*服务条款*。"
+		},
+		{
+			"key": "TextCopied",
+			"value": "文字已复制到剪贴板"
+		},
+		{
+			"key": "TextSize",
+			"value": "消息文字大小"
+		},
+		{
+			"key": "TextSizeHeader",
+			"value": "消息文字大小"
+		},
+		{
+			"key": "Theme",
+			"value": "主题"
+		},
+		{
+			"key": "ThemeArcticBlue",
+			"value": "北极蓝"
+		},
+		{
+			"key": "ThemeBlue",
+			"value": "蓝色"
+		},
+		{
+			"key": "ThemeDark",
+			"value": "暗色"
+		},
+		{
+			"key": "ThemeDarkBlue",
+			"value": "深蓝色"
+		},
+		{
+			"key": "ThemeGraphite",
+			"value": "石墨黑"
+		},
+		{
+			"key": "ThemeInfo",
+			"value": "选择自定义配色方案"
+		},
+		{
+			"key": "ThemePreview",
+			"value": "主题预览"
+		},
+		{
+			"key": "TimeToEdit",
+			"value": "%1$s"
+		},
+		{
+			"key": "TimeToEditExpired",
+			"value": "抱歉，可编辑时间已过。"
+		},
+		{
+			"key": "Times",
+			"other_value": "%1$d 次"
+		},
+		{
+			"key": "TintHighlights",
+			"value": "高光"
+		},
+		{
+			"key": "TintShadows",
+			"value": "阴影"
+		},
+		{
+			"key": "TodayAt",
+			"value": "于"
+		},
+		{
+			"key": "TodayAtFormatted",
+			"value": "%1$s"
+		},
+		{
+			"key": "TooManyTries",
+			"value": "尝试次数过多\n请在 %1$s 后重试"
+		},
+		{
+			"key": "TosAgeText",
+			"value": "点按 同意 确认您已满 %1$s 周岁"
+		},
+		{
+			"key": "TosAgeTitle",
+			"value": "年龄验证"
+		},
+		{
+			"key": "TosDecline",
+			"value": "我们对此感到非常抱歉，但这也意味着您现在无法注册 Telegram。\n\n与其它软件不同，我们不会利用您的个人数据来导向广告或其它商业目的。Telegram 储存的所有文件都是为了给您创造一个功能丰富的云服务体验。 您可以在「设置」—「隐私和安全」 里调整我们使用您数据的方式（例如：删除已同步的联系人）。\n\n但若您完全无法接受 Telegram 的云数据政策，我们将无法为您提供服务。"
+		},
+		{
+			"key": "TosDeclineDeleteAccount",
+			"value": "警告，这将不可逆转地删除您的 Telegram 帐户以及您存储在 Telegram 云中的所有数据。\n\n请注意：您现在可以取消删除操作，并在删除您的账户前下载您的数据以免损失。（为了下载您的数据，请使用最新版本的 Telegram 桌面版客户端，并打开 设置 \u003e 导出 Telegram 数据。）"
+		},
+		{
+			"key": "TosUpdateDecline",
+			"value": "我们感到非常抱歉，但这意味着我们必须分道扬镳了。与其他产品不同，我们并不将您的数据用于广告定位或其他商业目的。Telegram 只储存用于提供功能丰富的云服务所需的信息。您可以在“隐私和安全”设置中调整我们使用您的数据的方式。\n\n但如果您拒绝满足 Telegram 对基本数据的需求，我们就无法提供此项服务。您可以现在就删除您的账号；或是再看看，直到您觉得我们使用您的数据的方式不满意时再删除。"
+		},
+		{
+			"key": "TotalDataUsage",
+			"value": "总计"
+		},
+		{
+			"key": "TurnPasswordOff",
+			"value": "删除密码"
+		},
+		{
+			"key": "TurnPasswordOffPassport",
+			"value": "警告！所有储存在 Telegram Passport 中的数据都将丢失！"
+		},
+		{
+			"key": "TurnPasswordOffQuestion",
+			"value": "您确定要删除您的密码吗？"
+		},
+		{
+			"key": "TwoStepVerification",
+			"value": "两步验证"
+		},
+		{
+			"key": "TwoStepVerificationTitle",
+			"value": "两步验证"
+		},
+		{
+			"key": "TypeLocationGroup",
+			"value": "链接"
+		},
+		{
+			"key": "TypeLocationGroupEdit",
+			"value": "点按即可添加永久链接"
+		},
+		{
+			"key": "TypeMessage",
+			"value": "输入消息"
+		},
+		{
+			"key": "TypePrivate",
+			"value": "私人"
+		},
+		{
+			"key": "TypePrivateGroup",
+			"value": "私人"
+		},
+		{
+			"key": "TypePublic",
+			"value": "公开"
+		},
+		{
+			"key": "TypePublicGroup",
+			"value": "公开"
+		},
+		{
+			"key": "Typing",
+			"value": "正在输入..."
+		},
+		{
+			"key": "URL",
+			"value": "链接"
+		},
+		{
+			"key": "Unarchive",
+			"value": "取消归档"
+		},
+		{
+			"key": "Unavailable",
+			"value": "不可用"
+		},
+		{
+			"key": "Unban",
+			"value": "解除封禁"
+		},
+		{
+			"key": "UnbanText",
+			"value": "触摸并按住用户以解除封禁"
+		},
+		{
+			"key": "Unblock",
+			"value": "取消屏蔽"
+		},
+		{
+			"key": "UnblockText",
+			"value": "长按用户以取消屏蔽"
+		},
+		{
+			"key": "Underline",
+			"value": "下划线"
+		},
+		{
+			"key": "Undo",
+			"value": "撤销"
+		},
+		{
+			"key": "UndoAllCustom",
+			"value": "撤消对所有联系人、群组和频道的自定义通知设置"
+		},
+		{
+			"key": "UnhideFromTop",
+			"value": "置顶"
+		},
+		{
+			"key": "UnknownError",
+			"value": "未知错误"
+		},
+		{
+			"key": "UnlockFingerprint",
+			"value": "指纹解锁"
+		},
+		{
+			"key": "UnmuteNotifications",
+			"value": "恢复消息通知"
+		},
+		{
+			"key": "UnofficialApp",
+			"value": "非官方应用"
+		},
+		{
+			"key": "UnpinFromTop",
+			"value": "取消置顶"
+		},
+		{
+			"key": "UnpinMessage",
+			"value": "取消置顶"
+		},
+		{
+			"key": "UnpinMessageAlert",
+			"value": "您确定要取消置顶此消息吗？"
+		},
+		{
+			"key": "UnpinMessageAlertTitle",
+			"value": "取消置顶消息"
+		},
+		{
+			"key": "UnreadMessages",
+			"value": "未读消息"
+		},
+		{
+			"key": "UnsupportedAttachment",
+			"value": "不支持此附件"
+		},
+		{
+			"key": "UnsupportedMedia",
+			"value": "您当前的 Telegram 版本无法查看这条消息。请前往这里下载新版：https://telegram.org/update"
+		},
+		{
+			"key": "Unvote",
+			"value": "撤回我的投票"
+		},
+		{
+			"key": "Update",
+			"value": "更新"
+		},
+		{
+			"key": "UpdateApp",
+			"value": "更新应用"
+		},
+		{
+			"key": "UpdateAppAlert",
+			"value": "很抱歉，您的 Telegram 程序已经过时，无法处理这个请求。请升级 Telegram。"
+		},
+		{
+			"key": "UpdateContactsMessage",
+			"value": "Telegram 检测到很多未同步的联系人，您想现在将其同步吗？如果您在使用自己的设备、SIM 卡和 Google 帐户，请选择‘确定’。"
+		},
+		{
+			"key": "UpdateContactsTitle",
+			"value": "更新联系人？"
+		},
+		{
+			"key": "UpdateNow",
+			"value": "立刻更新"
+		},
+		{
+			"key": "UpdateTelegram",
+			"value": "更新 Telegram"
+		},
+		{
+			"key": "UpdatedMinutes",
+			"other_value": "更新于%1$d分钟前"
+		},
+		{
+			"key": "Updating",
+			"value": "刷新中..."
+		},
+		{
+			"key": "UpgradeGroup",
+			"value": "升级到超级群组"
+		},
+		{
+			"key": "UploadImage",
+			"value": "上传图片"
+		},
+		{
+			"key": "UploadItems",
+			"value": "上传 %1$s"
+		},
+		{
+			"key": "UsbActive",
+			"value": "已启用 USB 传输"
+		},
+		{
+			"key": "UseLessDataAlways",
+			"value": "总是"
+		},
+		{
+			"key": "UseLessDataNever",
+			"value": "从不"
+		},
+		{
+			"key": "UseLessDataOnMobile",
+			"value": "仅在使用移动数据时"
+		},
+		{
+			"key": "UseLessDataOnRoaming",
+			"value": "仅在漫游时"
+		},
+		{
+			"key": "UseProxyAddress",
+			"value": "服务器"
+		},
+		{
+			"key": "UseProxyForCalls",
+			"value": "对通话启用代理"
+		},
+		{
+			"key": "UseProxyForCallsInfo",
+			"value": "使用代理服务器可能降低通话质量。"
+		},
+		{
+			"key": "UseProxyInfo",
+			"value": "SOCKS5 代理设置"
+		},
+		{
+			"key": "UseProxyPassword",
+			"value": "密码"
+		},
+		{
+			"key": "UseProxyPort",
+			"value": "端口"
+		},
+		{
+			"key": "UseProxySecret",
+			"value": "密钥"
+		},
+		{
+			"key": "UseProxySettings",
+			"value": "使用代理"
+		},
+		{
+			"key": "UseProxySocks5",
+			"value": "SOCKS5 代理"
+		},
+		{
+			"key": "UseProxySponsor",
+			"value": "代理赞助商"
+		},
+		{
+			"key": "UseProxySponsorInfo",
+			"value": "这个频道是由您的代理服务器所展示的。若要从您的对话列表中移除此频道，在 Telegram 设置中禁用代理即可。"
+		},
+		{
+			"key": "UseProxyTelegram",
+			"value": "MTProto 代理"
+		},
+		{
+			"key": "UseProxyTelegramError",
+			"value": "您正在使用的代理没有被正确配置并因此被禁用。请搜寻其它代理。"
+		},
+		{
+			"key": "UseProxyTelegramInfo",
+			"value": "MTProto 代理设置。"
+		},
+		{
+			"key": "UseProxyTelegramInfo2",
+			"value": "这个代理可能会在您的对话列表中显示其赞助频道。代理服务器无法泄露任何您的 Telegram 内容。"
+		},
+		{
+			"key": "UseProxyUsername",
+			"value": "用户名"
+		},
+		{
+			"key": "UserBio",
+			"value": "个人简介"
+		},
+		{
+			"key": "UserBioDetail",
+			"value": "添加一些关于你的介绍"
+		},
+		{
+			"key": "UserBioEmpty",
+			"value": "无"
+		},
+		{
+			"key": "UserBioInfo",
+			"value": "您可以给自己添加一些简介。任何人在打开您的个人资料页后将会看到这个简介。"
+		},
+		{
+			"key": "UserBlocked",
+			"value": "用户已屏蔽"
+		},
+		{
+			"key": "UserRemovedBy",
+			"value": "被 %1$s 封禁"
+		},
+		{
+			"key": "UserRestricted",
+			"value": "抱歉，您无法执行此操作。"
+		},
+		{
+			"key": "UserRestrictions",
+			"value": "用户权限"
+		},
+		{
+			"key": "UserRestrictionsApplyChanges",
+			"value": "确定应用更改吗？"
+		},
+		{
+			"key": "UserRestrictionsApplyChangesText",
+			"value": "您更改了该成员在 **%1$s** 的权限。确定要应用它们吗？"
+		},
+		{
+			"key": "UserRestrictionsBlock",
+			"value": "封禁并从群组中移除"
+		},
+		{
+			"key": "UserRestrictionsBy",
+			"value": "被 %1$s 限制"
+		},
+		{
+			"key": "UserRestrictionsCanDo",
+			"value": "这位用户可以做什么？"
+		},
+		{
+			"key": "UserRestrictionsChangeInfo",
+			"value": "修改群组信息"
+		},
+		{
+			"key": "UserRestrictionsCustom",
+			"value": "自定义"
+		},
+		{
+			"key": "UserRestrictionsDisabled",
+			"value": "该项已在群组默认权限中被禁用。"
+		},
+		{
+			"key": "UserRestrictionsDuration",
+			"value": "时长"
+		},
+		{
+			"key": "UserRestrictionsEmbedLinks",
+			"value": "显示链接预览"
+		},
+		{
+			"key": "UserRestrictionsInviteUsers",
+			"value": "添加成员"
+		},
+		{
+			"key": "UserRestrictionsNoChangeInfo",
+			"value": "无法更改群组信息"
+		},
+		{
+			"key": "UserRestrictionsNoEmbedLinks",
+			"value": "无法使用预览"
+		},
+		{
+			"key": "UserRestrictionsNoInviteUsers",
+			"value": "无法邀请成员"
+		},
+		{
+			"key": "UserRestrictionsNoPinMessages",
+			"value": "无法置顶消息"
+		},
+		{
+			"key": "UserRestrictionsNoRead",
+			"value": "无法查看消息"
+		},
+		{
+			"key": "UserRestrictionsNoSend",
+			"value": "无法发送消息"
+		},
+		{
+			"key": "UserRestrictionsNoSendMedia",
+			"value": "无法发送媒体"
+		},
+		{
+			"key": "UserRestrictionsNoSendPolls",
+			"value": "无法发起投票"
+		},
+		{
+			"key": "UserRestrictionsNoSendStickers",
+			"value": "无法发送贴纸"
+		},
+		{
+			"key": "UserRestrictionsPinMessages",
+			"value": "置顶消息"
+		},
+		{
+			"key": "UserRestrictionsRead",
+			"value": "查看消息"
+		},
+		{
+			"key": "UserRestrictionsSend",
+			"value": "发送消息"
+		},
+		{
+			"key": "UserRestrictionsSendMedia",
+			"value": "发送媒体"
+		},
+		{
+			"key": "UserRestrictionsSendPolls",
+			"value": "发起投票"
+		},
+		{
+			"key": "UserRestrictionsSendStickers",
+			"value": "发送贴纸和 GIF"
+		},
+		{
+			"key": "UserRestrictionsUntil",
+			"value": "封禁至"
+		},
+		{
+			"key": "UserRestrictionsUntilForever",
+			"value": "永久"
+		},
+		{
+			"key": "UserUnblocked",
+			"value": "用户已取消屏蔽"
+		},
+		{
+			"key": "Username",
+			"value": "用户名"
+		},
+		{
+			"key": "UsernameAvailable",
+			"value": "%1$s 可用"
+		},
+		{
+			"key": "UsernameChecking",
+			"value": "正在检查用户名..."
+		},
+		{
+			"key": "UsernameEmpty",
+			"value": "无"
+		},
+		{
+			"key": "UsernameHelp",
+			"value": "您可以在 **Telegram** 上设置一个用户名。设置后，别人将能够在不知道您的手机号码的情况下，通过此用户名找到您并与您联系。\n\n您可以使用 **a–z**、**0–9** 和下划线。最小长度为 **5** 个字符。"
+		},
+		{
+			"key": "UsernameHelpLink",
+			"value": "此链接会打开一个与您的对话窗口：\n%1$s"
+		},
+		{
+			"key": "UsernameInUse",
+			"value": "抱歉，此用户名已被使用。"
+		},
+		{
+			"key": "UsernameInvalid",
+			"value": "抱歉，此用户名无效。"
+		},
+		{
+			"key": "UsernameInvalidLong",
+			"value": "用户名不能超过 32 个字符。"
+		},
+		{
+			"key": "UsernameInvalidShort",
+			"value": "用户名必须包含至少 5 个字符。"
+		},
+		{
+			"key": "UsernameInvalidStartNumber",
+			"value": "抱歉，用户名不能以数字开头。"
+		},
+		{
+			"key": "UsernamePlaceholder",
+			"value": "您的用户名"
+		},
+		{
+			"key": "Users",
+			"other_value": "%1$d 位用户"
+		},
+		{
+			"key": "ViaBot",
+			"value": "通过"
+		},
+		{
+			"key": "Vibrate",
+			"value": "振动"
+		},
+		{
+			"key": "VibrationDefault",
+			"value": "默认"
+		},
+		{
+			"key": "VibrationDisabled",
+			"value": "禁用"
+		},
+		{
+			"key": "VideoCaption",
+			"value": "视频说明"
+		},
+		{
+			"key": "VideoDoesNotSupportStreaming",
+			"value": "这个视频没有针对在线播放进行优化，你可能要完全下载它才能播放。"
+		},
+		{
+			"key": "VideoMessagesAutodownload",
+			"value": "视频留言"
+		},
+		{
+			"key": "Videos",
+			"other_value": "%1$d 个视频"
+		},
+		{
+			"key": "VideosSelected",
+			"other_value": "已选择 %1$d 个视频"
+		},
+		{
+			"key": "ViewContact",
+			"value": "查看联系人"
+		},
+		{
+			"key": "ViewDetails",
+			"value": "查看联系人"
+		},
+		{
+			"key": "ViewExceptions",
+			"value": "查看例外"
+		},
+		{
+			"key": "ViewPackPreview",
+			"value": "查看对应贴纸包"
+		},
+		{
+			"key": "Vignette",
+			"value": "晕影"
+		},
+		{
+			"key": "VoipAnswerCall",
+			"value": "接听"
+		},
+		{
+			"key": "VoipAnsweringAsAccount",
+			"value": "作为 %s 回应"
+		},
+		{
+			"key": "VoipAudioRoutingBluetooth",
+			"value": "蓝牙耳机"
+		},
+		{
+			"key": "VoipAudioRoutingEarpiece",
+			"value": "听筒"
+		},
+		{
+			"key": "VoipAudioRoutingSpeaker",
+			"value": "扬声器"
+		},
+		{
+			"key": "VoipBusy",
+			"value": "线路正忙"
+		},
+		{
+			"key": "VoipCallEnded",
+			"value": "通话结束"
+		},
+		{
+			"key": "VoipConnecting",
+			"value": "正在连接"
+		},
+		{
+			"key": "VoipDeclineCall",
+			"value": "拒接"
+		},
+		{
+			"key": "VoipEndCall",
+			"value": "结束通话"
+		},
+		{
+			"key": "VoipErrorUnknown",
+			"value": "暂时无法呼叫"
+		},
+		{
+			"key": "VoipExchangingKeys",
+			"value": "正在交换密钥"
+		},
+		{
+			"key": "VoipFailed",
+			"value": "连接失败"
+		},
+		{
+			"key": "VoipFeedbackCommentHint",
+			"value": "附加说明"
+		},
+		{
+			"key": "VoipHangingUp",
+			"value": "正在挂断"
+		},
+		{
+			"key": "VoipInCallBranding",
+			"value": "Telegram Call"
+		},
+		{
+			"key": "VoipInCallBrandingWithName",
+			"value": "有人正在呼叫 %s"
+		},
+		{
+			"key": "VoipIncoming",
+			"value": "来电"
+		},
+		{
+			"key": "VoipNeedMicPermission",
+			"value": "Telegram 需要访问您的麦克风来拨打电话。"
+		},
+		{
+			"key": "VoipNotificationSettings",
+			"value": "语音通话"
+		},
+		{
+			"key": "VoipOffline",
+			"value": "您现在正处于离线状态。请连接至互联网后再进行通话。"
+		},
+		{
+			"key": "VoipOfflineAirplane",
+			"value": "您现在正处于飞行模式。请关闭它或者连接到 Wi-Fi 后再进行通话。"
+		},
+		{
+			"key": "VoipOfflineAirplaneTitle",
+			"value": "飞行模式"
+		},
+		{
+			"key": "VoipOfflineOpenSettings",
+			"value": "设置"
+		},
+		{
+			"key": "VoipOfflineTitle",
+			"value": "离线"
+		},
+		{
+			"key": "VoipOngoingAlert",
+			"value": "您现在正在和 **%1$s** 通话。您想要挂断此通话然后和 **%2$s** 开始一个新的通话吗？"
+		},
+		{
+			"key": "VoipOngoingAlertTitle",
+			"value": "另一个通话正在进行"
+		},
+		{
+			"key": "VoipOutgoingCall",
+			"value": "Telegram Call 通话中"
+		},
+		{
+			"key": "VoipPeerIncompatible",
+			"value": "**%1$s** 的应用使用了不兼容的协议。在您能够呼叫他们之前，他们必须先更新他们的应用。"
+		},
+		{
+			"key": "VoipPeerOutdated",
+			"value": "**%1$s** 的应用不支持通话。在您能够呼叫他们之前，他们必须先更新他们的应用。"
+		},
+		{
+			"key": "VoipQuickReplies",
+			"value": "来电拒接消息模板"
+		},
+		{
+			"key": "VoipQuickRepliesExplain",
+			"value": "拒接 Telegram 电话时，你可以使用以上的模板答复。您可以根据喜好来更改它们。"
+		},
+		{
+			"key": "VoipRateCallAlert",
+			"value": "请对此次 Telegram Call 的质量作出评价"
+		},
+		{
+			"key": "VoipRequesting",
+			"value": "正在请求"
+		},
+		{
+			"key": "VoipRinging",
+			"value": "正在响铃"
+		},
+		{
+			"key": "VoipRingtoneInfo",
+			"value": "你可以自定义该联系人在 Telegram 上呼叫您时的铃声。"
+		},
+		{
+			"key": "VoipSettingsRingtone",
+			"value": "铃声"
+		},
+		{
+			"key": "VoipUseLessData",
+			"value": "节省通话时的数据流量"
+		},
+		{
+			"key": "VoipWaiting",
+			"value": "正在等待"
+		},
+		{
+			"key": "Vote",
+			"other_value": "%1$d 人已投票"
+		},
+		{
+			"key": "WaitMore",
+			"value": "继续等待"
+		},
+		{
+			"key": "WaitingForNetwork",
+			"value": "等待网络..."
+		},
+		{
+			"key": "Warmth",
+			"value": "色温"
+		},
+		{
+			"key": "WebSessionsTitle",
+			"value": "使用 Telegram 登录的网站"
+		},
+		{
+			"key": "Weeks",
+			"other_value": "%1$d 周"
+		},
+		{
+			"key": "WhenConnectedOnWiFi",
+			"value": "接入 Wi-Fi 时"
+		},
+		{
+			"key": "WhenRoaming",
+			"value": "漫游时"
+		},
+		{
+			"key": "WhenUsingMobileData",
+			"value": "使用移动数据时"
+		},
+		{
+			"key": "White",
+			"value": "白色"
+		},
+		{
+			"key": "WhoCanAddMe",
+			"value": "谁可以邀请我进入群组？"
+		},
+		{
+			"key": "WhoCanAddMeInfo",
+			"value": "您可以精确控制其他人能否邀请您进入任意群组或频道。"
+		},
+		{
+			"key": "WhoCanAddMembers",
+			"value": "邀请新成员权限"
+		},
+		{
+			"key": "WhoCanAddMembersAdmins",
+			"value": "仅管理员"
+		},
+		{
+			"key": "WhoCanAddMembersAllMembers",
+			"value": "所有成员"
+		},
+		{
+			"key": "WhoCanCallMe",
+			"value": "谁可以给我打电话？"
+		},
+		{
+			"key": "WhoCanCallMeInfo",
+			"value": "您可以限制能够给您打电话的人。"
+		},
+		{
+			"key": "WiFiUsage",
+			"value": "Wi-Fi 数据使用情况"
+		},
+		{
+			"key": "WillUnmuteIn",
+			"value": " %1$s后"
+		},
+		{
+			"key": "WithinAMonth",
+			"value": "最近一个月内曾上线"
+		},
+		{
+			"key": "WithinAWeek",
+			"value": "最近一周内曾上线"
+		},
+		{
+			"key": "WrongCountry",
+			"value": "无效的国家代码"
+		},
+		{
+			"key": "WrongNumber",
+			"value": "号码错误？"
+		},
+		{
+			"key": "Years",
+			"other_value": "%1$d 年"
+		},
+		{
+			"key": "Yellow",
+			"value": "黄色"
+		},
+		{
+			"key": "Yesterday",
+			"value": "昨天"
+		},
+		{
+			"key": "YesterdayAt",
+			"value": "于昨天"
+		},
+		{
+			"key": "YesterdayAtFormatted",
+			"value": "昨天 %1$s"
+		},
+		{
+			"key": "YouBlockedUser",
+			"value": "抱歉，您不能将此用户或机器人添加到群组，因为您已经屏蔽了他们。请先取消屏蔽再继续。"
+		},
+		{
+			"key": "YouCreatedBroadcastList",
+			"value": "您创建了一个群发消息列表"
+		},
+		{
+			"key": "YouHaveNewMessage",
+			"value": "您有一条新消息"
+		},
+		{
+			"key": "YouLeft",
+			"value": "您已经退出此群组"
+		},
+		{
+			"key": "YouWereKicked",
+			"value": "您已被此群组移除"
+		},
+		{
+			"key": "YourCode",
+			"value": "手机验证"
+		},
+		{
+			"key": "YourContacts",
+			"value": "您在 Telegram 上的联系人"
+		},
+		{
+			"key": "YourEmail",
+			"value": "您的电子邮箱地址"
+		},
+		{
+			"key": "YourEmailAlmostThere",
+			"value": "快完成了！"
+		},
+		{
+			"key": "YourEmailAlmostThereText",
+			"value": "请查看您的邮箱（不要忘记垃圾邮件文件夹），并按要求完成两步验证设置。"
+		},
+		{
+			"key": "YourEmailCode",
+			"value": "您的邮件验证码"
+		},
+		{
+			"key": "YourEmailCodeInfo",
+			"value": "请输入您在 %1$s 上收到的代码，以确认您的电子邮件地址"
+		},
+		{
+			"key": "YourEmailInfo",
+			"value": "请输入有效的电子邮箱地址。它是您在遗忘密码后唯一的恢复途径。"
+		},
+		{
+			"key": "YourEmailSkip",
+			"value": "跳过"
+		},
+		{
+			"key": "YourEmailSkipWarning",
+			"value": "警告"
+		},
+		{
+			"key": "YourEmailSkipWarningText",
+			"value": "您确定不设置密码恢复邮箱？\n\n一旦您忘记了密码，您将无法再访问您的 Telegram 帐户，并且我们没有任何恢复帐户数据的方法。"
+		},
+		{
+			"key": "YourEmailSuccessText",
+			"value": "您的两步验证密码恢复邮箱现已启用。"
+		},
+		{
+			"key": "YourLocatedChannelsTooMuch",
+			"value": "抱歉，您已经有太多基于位置的群组了。 请先删除一个现有的。"
+		},
+		{
+			"key": "YourName",
+			"value": "您的姓名"
+		},
+		{
+			"key": "YourPassword",
+			"value": "您的密码"
+		},
+		{
+			"key": "YourPasswordSuccess",
+			"value": "成功！"
+		},
+		{
+			"key": "YourPasswordSuccessText",
+			"value": "您的两步验证密码现已启用。"
+		},
+		{
+			"key": "YourPhone",
+			"value": "您的手机号码"
+		},
+		{
+			"key": "_tg_cancel",
+			"value": "取消"
+		},
+		{
+			"key": "_tg_open_google_play",
+			"value": "打开 Google Play"
+		},
+		{
+			"key": "chatDate",
+			"value": "M月d日"
+		},
+		{
+			"key": "chatFullDate",
+			"value": "yyyy年M月d日"
+		},
+		{
+			"key": "download_telegram_text",
+			"value": "你需要 Telegram 来登陆 **%s**。你想现在安装吗？"
+		},
+		{
+			"key": "formatDateAtTime",
+			"value": "%1$s %2$s"
+		},
+		{
+			"key": "formatDateScheduleDay",
+			"value": "MMMd日EEEE"
+		},
+		{
+			"key": "formatterBannedUntil12H",
+			"value": "yyyy年M月d日 a h:mm"
+		},
+		{
+			"key": "formatterBannedUntil24H",
+			"value": "yyyy年M月d日 HH:mm"
+		},
+		{
+			"key": "formatterBannedUntilThisYear12H",
+			"value": "MM月d日 a h:mm"
+		},
+		{
+			"key": "formatterBannedUntilThisYear24H",
+			"value": "M月d日 HH:mm"
+		},
+		{
+			"key": "formatterDay12H",
+			"value": "a h:mm"
+		},
+		{
+			"key": "formatterDay24H",
+			"value": "HH:mm"
+		},
+		{
+			"key": "formatterMonth",
+			"value": "M月d日"
+		},
+		{
+			"key": "formatterMonthName",
+			"value": "M月"
+		},
+		{
+			"key": "formatterMonthYear",
+			"value": "yyyy年M月"
+		},
+		{
+			"key": "formatterMonthYear2",
+			"value": "yyyy年M月"
+		},
+		{
+			"key": "formatterStats12H",
+			"value": "yyyy年M月d日 a h:mm"
+		},
+		{
+			"key": "formatterStats24H",
+			"value": "yyyy年M月d日 HH:mm"
+		},
+		{
+			"key": "formatterWeek",
+			"value": "EEE"
+		},
+		{
+			"key": "formatterYear",
+			"value": "yyyy年M月d日"
+		},
+		{
+			"key": "formatterYearMax",
+			"value": "yyyy年M月d日"
+		},
+		{
+			"key": "items",
+			"other_value": "%1$d 项"
+		},
+		{
+			"key": "login_with_telegram",
+			"value": "通过 Telegram 登录"
+		},
+		{
+			"key": "messages",
+			"other_value": "%1$d 条消息"
+		},
+		{
+			"key": "telegram_passport",
+			"value": "Telegram Passport"
+		},
+		{
+			"key": "lng_change_phone_about",
+			"": "You can change your Telegram number\\nhere. Your account and all your cloud data\\n— messages, media, contacts, etc. will be\\nmoved to the new number.\\n\\n**Important**: all your Telegram contacts will\\nget your **new number** added to their address\\nbook, provided they had your old number and\\nyou haven't blocked them in Telegram."
+		}
+	]
+}

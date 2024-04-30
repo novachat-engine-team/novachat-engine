@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package data_message;
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+option go_package = "data_message";
+
+option (gogoproto.marshaler_all) = true;
+option (gogoproto.sizer_all) = true;
+option (gogoproto.unmarshaler_all) = true;
+option (gogoproto.gostring_all) = true;
+
+message Entity  {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int32           type        = 1 [(gogoproto.moretags) = "bson:\"type\""];
+  int32           offset      = 2 [(gogoproto.moretags) = "bson:\"offset\""];
+  int32           length      = 3 [(gogoproto.moretags) = "bson:\"length\""];
+  string          language    = 4 [(gogoproto.moretags) = "bson:\"language\""];
+  string          url         = 5 [(gogoproto.moretags) = "bson:\"url\""];
+  int64           user_id     = 6 [(gogoproto.moretags) = "bson:\"user_id\""];
+  int64           peer_id     = 7 [(gogoproto.moretags) = "bson:\"peer_id\""];
+  int32           peer_type   = 8 [(gogoproto.moretags) = "bson:\"peer_type\""];
+  int64           access_hash = 9 [(gogoproto.moretags) = "bson:\"access_hash\""];
+}

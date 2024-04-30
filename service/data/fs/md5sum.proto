@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package data_fs;
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+option go_package = "data_fs";
+
+import "document.proto";
+import "photo.proto";
+
+option (gogoproto.marshaler_all) = true;
+option (gogoproto.sizer_all) = true;
+option (gogoproto.unmarshaler_all) = true;
+option (gogoproto.gostring_all) = true;
+
+message Md5Sum {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  string md5_sum = 1  [(gogoproto.moretags) = "bson:\"_id\""];
+  Photo photo_info = 2 [(gogoproto.moretags) = "bson:\"photo_info\""];
+  Document document_info = 3 [(gogoproto.moretags) = "bson:\"document_info\""];
+}

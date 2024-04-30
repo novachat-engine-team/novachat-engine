@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package data_message;
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+option go_package = "data_message";
+
+option (gogoproto.marshaler_all) = true;
+option (gogoproto.sizer_all) = true;
+option (gogoproto.unmarshaler_all) = true;
+option (gogoproto.gostring_all) = true;
+
+message Fwd  {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int64           peer_id             = 1 [(gogoproto.moretags) = "bson:\"peer_id\""];
+  int32           peer_type           = 2 [(gogoproto.moretags) = "bson:\"peer_type\""];
+  int32           msg_id              = 3 [(gogoproto.moretags) = "bson:\"msg_id\""];
+  int32           date                = 4 [(gogoproto.moretags) = "bson:\"date\""];
+  string          from_name           = 5 [(gogoproto.moretags) = "bson:\"from_name\""];
+  string          psa_type            = 6 [(gogoproto.moretags) = "bson:\"psa_type\""];
+  int64           save_peer_id        = 7 [(gogoproto.moretags) = "bson:\"save_peer_id\""];
+  int32           save_peer_type      = 8 [(gogoproto.moretags) = "bson:\"save_peer_type\""];
+  int32           channel_post        = 9 [(gogoproto.moretags) = "bson:\"channel_post\""];
+  string          post_author         = 10[(gogoproto.moretags) = "bson:\"post_author\""];
+}

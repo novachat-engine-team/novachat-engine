@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package data_restriction;
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+option go_package = "data_restriction";
+
+option (gogoproto.marshaler_all) = true;
+option (gogoproto.sizer_all) = true;
+option (gogoproto.unmarshaler_all) = true;
+option (gogoproto.gostring_all) = true;
+
+message RestrictionReason {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  string platform  = 1 [(gogoproto.moretags) = "bson:\"platform\""];
+  string reason    = 2 [(gogoproto.moretags) = "bson:\"reason\""];
+  string text      = 3 [(gogoproto.moretags) = "bson:\"text\""];
+}

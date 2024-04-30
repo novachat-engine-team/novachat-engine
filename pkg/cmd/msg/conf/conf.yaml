@@ -1,0 +1,76 @@
+
+log:
+  logpath : ./log/msg.log
+  loglevel : warn
+  rotatemaxsize : 100
+  rotatemaxage : 6
+  rotatemaxbackups : 100
+
+pprof:
+  port : 6041
+  isopen : true
+
+server:
+  ver : "0.0.1"
+  serverid : 1
+
+rpcServer:
+  addr : 127.0.0.1:10091
+
+rpcDiscovery:
+  schema : novachat-engine
+  servername : msg
+  etcdaddr : etcd-hosts:2379
+  ttl	: 10
+
+syncRpcClient:
+  schema: novachat-engine
+  servername: sync
+  etcdaddr: etcd-hosts:2379
+  balancer: random
+
+
+messageProducer:
+  topic: novachat_engine-message-topic
+  brokers:
+    - kafka-hosts:9092
+
+messageConsumer:
+  topic:
+    - novachat_engine-message-topic
+  group: novachat_engine-message-topic-group
+  brokers:
+    - kafka-hosts:9092
+
+chatProducer:
+  topic: novachat_engine-chat-topic
+  brokers:
+    - kafka-hosts:9092
+
+chatInConsumer:
+  topic:
+    - novachat_engine-inboxeschat-topic
+  group: novachat_engine-inboxchat-topic-group
+  brokers:
+    - kafka-hosts:9092
+
+mongodb:
+  direct: true
+  addr:
+    - mongodb-hosts:27017
+  replicaset: rs0
+  database: ""
+  username: ""
+  password: ""
+  maxpoolsize: 128
+  minpoolsize: 16
+
+redis:
+  addrs:
+    - redis-hosts:6379
+  mode : alone
+  test : 	true
+  idle :	10
+  active : 5
+  passwd :
+  dbnum : 0

@@ -1,0 +1,359 @@
+syntax = "proto3";
+
+package rpc_client;
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+import "service/data/chat/chat.proto";
+import "service/data/chat/chat_participant.proto";
+import "photo_profile.proto";
+
+option go_package = "rpc_client";
+
+import "schema.msg.proto";
+
+option (gogoproto.marshaler_all) = true;
+option (gogoproto.sizer_all) = true;
+option (gogoproto.unmarshaler_all) = true;
+option (gogoproto.gostring_all) = true;
+
+message Chat {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  data_chat.Chat                     chat_data        = 1;
+  repeated data_chat.ChatParticipant participant_list = 2;
+}
+
+message ChatList {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  repeated Chat values = 1;
+}
+
+message GeoPoint {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  double lat       = 1;
+  double long      = 2;
+  string address  = 3;
+}
+
+message CreateChat {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int64           user_id     = 1;
+  int64           auth_key_id = 2;
+  repeated int64  peer_id     = 3;
+  string          title       = 4;
+  int32           chat_size_max = 5;
+  int32           date        = 6;
+  GeoPoint        geo_point   = 7;
+}
+
+message FullChat {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int64 chat_id = 1;
+}
+
+message ChatCommon {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int64 user_id = 1;
+  int32 max_id = 2;
+  int32 limit = 3;
+}
+
+message EditTitle {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int64 chat_id     = 1;
+  string title      = 2;
+  int64 user_id     = 3;
+  int64 auth_key_id = 4;
+  int32 date        = 5;
+}
+
+message EditAbout {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int64 chat_id     = 1;
+  string about      = 2;
+  int64 user_id     = 3;
+  int64 auth_key_id = 4;
+  int32 date        = 5;
+}
+
+message EditPhoto {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int64 chat_id     = 1;
+  data_fs.PhotoProfile photo = 2;
+  int64 user_id     = 3;
+  int64 auth_key_id = 4;
+  int32 date        = 5;
+}
+
+message BannedRights {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int64 chat_id     = 1;
+  int32 rights      = 2;
+  int64 user_id     = 3;
+  int64 auth_key_id = 4;
+  int32 date        = 5;
+  int32 util_date   = 6;
+}
+
+message EditAdmin {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int64 chat_id     = 1;
+  int64 peer_id     = 2;
+  bool  is_admin    = 3;
+  int64 user_id     = 4;
+  int64 auth_key_id = 5;
+  int32 date        = 6;
+  int32 right       = 8;
+}
+
+message ChatByName {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  string username = 1;
+  int64 user_id = 2;
+}
+
+message AddUser {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int64 user_id     = 1;
+  int64 chat_id     = 2;
+  int64 peer_id     = 3;
+  int32 fwd_limit   = 4;
+  int64 auth_key_id = 5;
+  int32 date        = 6;
+}
+
+message DeleteUser {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int64 user_id     = 1;
+  int64 chat_id     = 2;
+  int64 peer_id     = 3;
+  int64 auth_key_id = 4;
+  int32 date        = 5;
+}
+
+message SendOutboxesMessages {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  rpc_client.SendMessages message = 1;
+}
+
+message SendInBoxesMessages {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  rpc_client.SendMessages message = 1;
+}
+
+message SendMessagesList {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  repeated rpc_client.SendMessages value = 1;
+}
+
+message ChatReadHistory {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  rpc_client.ReadHistory value = 1;
+}
+
+message ReadInMessages {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  rpc_client.ReadHistory value = 1;
+}
+
+message AllChat {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  repeated int64 except_ids = 1;
+  repeated int64 ids        = 2;
+  int64 user_id             = 3;
+}
+
+message ChatPinnedMessage {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  rpc_client.PinnedMessage pinned_message = 1;
+}
+
+message ChatInPinnedMessage {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  rpc_client.PinnedMessage pinned_message = 1;
+}
+
+message CheckUsername {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int64   peer_id   = 1;
+  int32   peer_type = 2;
+  string  username  = 3;
+}
+
+message BannedUser {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int64   peer_id   = 1;
+  int64   user_id   = 2;
+  bool    is_banned = 3;
+  bool    is_deleted = 4;
+  bool    is_left   = 5;
+  int32   rights    = 6;
+  int32   util_date = 7;
+  int64   chat_id   = 8;
+  int32   date      = 9;
+  int64   auth_key_id = 10;
+}
+
+message EditGeoPoint {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int64   peer_id   = 1;
+  int64   user_id   = 2;
+  GeoPoint        geo_point   = 3;
+  int64   auth_key_id = 4;
+}
+
+message InviteToChannel {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int64   chat_id   = 1;
+  int64   user_id   = 2;
+  int64   auth_key_id=3;
+  repeated int64 peer_id_list = 4;
+  int32 date       = 5;
+}
+
+message DeleteChat {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int64 chat_id     = 1;
+  int64 user_id     = 2;
+  int64 auth_key_id = 3;
+  int32 date        = 4;
+}
+
+message HistoryHidden {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int64 chat_id     = 1;
+  int64 user_id     = 2;
+  int64 auth_key_id = 3;
+  int32 date        = 4;
+  bool  enabled     = 5;
+}
+
+message UpdateUsername {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int64 chat_id     = 1;
+  int64 user_id     = 2;
+  int64 auth_key_id = 3;
+  string username   = 4;
+}
+
+message DeleteHistory {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int64 chat_id     = 1;
+  int64 user_id     = 2;
+  int64 auth_key_id = 3;
+  int32 date        = 4;
+  int32 max_id      = 5;
+}
+
+message DeleteMessages {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int64           chat_id           = 1;
+  int64           user_id           = 2;
+  int64           auth_key_id       = 3;
+  int32           date              = 4;
+  repeated int32  ids               = 5;
+}
+
+message DeleteUserHistory {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int64           chat_id           = 1;
+  int64           user_id           = 2;
+  int64           auth_key_id       = 3;
+  int32           date              = 4;
+  int64           peer_id           = 5;
+}

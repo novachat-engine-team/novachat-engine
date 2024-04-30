@@ -1,0 +1,285 @@
+syntax = "proto3";
+
+package rpc_client;
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+//import "google/protobuf/any.proto";
+
+option go_package = "rpc_client";
+
+option (gogoproto.marshaler_all) = true;
+option (gogoproto.sizer_all) = true;
+option (gogoproto.unmarshaler_all) = true;
+option (gogoproto.gostring_all) = true;
+
+message StickerSet {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int32 sticker_set_type = 1;
+  int64 sticker_set_id   = 2;
+  int64 access_hash      = 3;
+  string short_name      = 4;
+  string emoticon        = 5;
+}
+
+//maskCoords#aed6dbb2 n:int x:double y:double zoom:double = MaskCoords;
+message MaskCoords {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int32 n = 1;
+  double x = 2;
+  double y = 3;
+  double zoom = 4;
+}
+
+message Attributes {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int32 attributes_type = 1;
+  // documentAttributeFilename
+  string filename = 2;
+  // documentAttributeImageSize
+  int32 image_w = 3;
+  int32 image_h = 4;
+  // documentAttributeAnimated
+  // documentAttributeSticker
+  int32 sticker_set_type = 6;
+  StickerSet sticker_data = 7;
+  bool mask = 8;
+  string alt = 9;
+  MaskCoords mask_coords = 10;
+  // documentAttributeVideo
+  bool round_message = 11;
+  bool supports_streaming = 12;
+  int32 video_duration = 13;
+  int32 video_w = 14;
+  int32 video_h = 15;
+  //documentAttributeAudio
+  bool voice = 16;
+  int32 audio_duration = 17;
+  string title = 18;
+  string performer = 19;
+  bytes waveform = 20;
+  // documentAttributeHasStickers
+  bool stickers = 21;
+}
+
+message DocumentInfo {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int64               volume_id   = 1;
+  int32               local_id    = 2;
+  string              mime_type   = 3;
+  int32               size        = 4;
+  repeated PhotoInfo  thumbs      = 5;
+  double              video_start_ts = 6;
+  repeated Attributes attributes  = 7;
+  int32               date        = 8;
+  int64               access_hash = 9;
+}
+
+
+message DocumentInfoList {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  repeated DocumentInfo values    = 1;
+}
+
+message FileInfo {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int32             file_type           = 1;
+  bytes             bytes               = 2;
+  int32             mtime               = 3;
+}
+
+message VideoSize {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+//  VolumeId             int64    `protobuf:"varint,3,opt,name=volume_id,json=volumeId,proto3" json:"volume_id,omitempty"`
+//  LocalId              int32    `protobuf:"varint,4,opt,name=local_id,json=localId,proto3" json:"local_id,omitempty"`
+//  Secret               int64    `protobuf:"varint,5,opt,name=secret,proto3" json:"secret,omitempty"`
+//  DcId                 int32    `protobuf:"varint,6,opt,name=dc_id,json=dcId,proto3" json:"dc_id,omitempty"`
+//  FileReference        []byte   `protobuf:"bytes,7,opt,name=file_reference,json=fileReference,proto3" json:"file_reference,omitempty"`
+  string type           = 1;
+  int32 width           = 2;
+  int32 height          = 3;
+  int32 size            = 4;
+  double video_start_ts  = 5;
+//  Type                 string        `protobuf:"bytes,3,opt,name=type,proto3" json:"type,omitempty"`
+//  Location             *FileLocation `protobuf:"bytes,4,opt,name=location,proto3" json:"location,omitempty"`
+//  W                    int32         `protobuf:"varint,5,opt,name=w,proto3" json:"w,omitempty"`
+//  H                    int32         `protobuf:"varint,6,opt,name=h,proto3" json:"h,omitempty"`
+//  Size_                int32         `protobuf:"varint,7,opt,name=size_,json=size,proto3" json:"size_,omitempty"`
+//  Flags                int32         `protobuf:"varint,8,opt,name=flags,proto3" json:"flags,omitempty"`
+//  VideoStartTs         float64       `protobuf:"fixed64,9,opt,name=video_start_ts,json=videoStartTs,proto3" json:"video_start_ts,omitempty"`
+}
+
+//message PhotoSize {
+//  option (gogoproto.goproto_sizecache) = false;
+//  option (gogoproto.goproto_unkeyed) = false;
+//  option (gogoproto.goproto_unrecognized) = false;
+//
+//  int32             width     = 1;
+//  int32             height    = 2;
+//  int32             size      = 3;
+//  string            type      = 4;
+//  bytes             bytes     = 5;
+//}
+
+message PhotoInfo {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int64               volume_id   = 1;
+  int32               local_id    = 2;
+  string              filename    = 3;
+  string              md5sum      = 4;
+  int32               date        = 5;
+  int32               size        = 6;
+  int32               height      = 7;
+  int32               weight      = 8;
+  int32               file_type   = 9;
+  repeated PhotoInfo  photo_size  = 10;
+  int64               access_hash = 11;
+  string              type        = 12;
+  bytes               bytes       = 13;
+}
+
+message PhotoInfoList {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  repeated PhotoInfo   values     = 1;
+}
+
+message GetDocument {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int64 file_id = 1;
+  int32 local_id = 2;
+}
+
+message GetDocumentList {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  repeated int64 file_id = 1;
+}
+
+message GetFile {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  enum FileType {
+    Photo = 0;
+    Document = 1;
+  }
+
+  FileType            file_type           = 1;
+  int64               volume_id           = 2;
+  int32               local_id            = 3;
+  int32               offset              = 4;
+  int32               limit               = 5;
+  string              thumb_size          = 6;
+}
+
+message GetPhoto {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int64 photo_id = 1;
+  int32 local_id = 2;
+}
+
+message GetPhotoList {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  repeated int64 photo_id_list = 1;
+}
+
+message UploadedDocument {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  message Thumb {
+    option (gogoproto.goproto_sizecache) = false;
+    option (gogoproto.goproto_unkeyed) = false;
+    option (gogoproto.goproto_unrecognized) = false;
+
+    int64                     file_id           = 1;
+    string                    file_name         = 2;
+    int32                     parts             = 3;
+    repeated int64            sticker           = 4;
+  }
+
+  int64                     auth_key_id       = 1;
+  int64                     file_id           = 2;
+  string                    file_name         = 3;
+  int32                     parts             = 4;
+  string                    mime_type         = 5;
+  repeated Attributes       attributes        = 6;
+  Thumb                     thumb             = 7;
+  bool                      video             = 8;
+  int32                     ttl_second        = 9;
+  double                    video_start_ts    = 10;
+}
+
+message UploadPhoto {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int64                     auth_key_id       = 1;
+  int64                     file_id           = 2;
+  string                    file_name         = 3;
+  int32                     parts             = 4;
+  repeated int64            stickers          = 5;
+}
+
+message UploadSaveMultiPartFileData {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int64                     auth_key_id       = 1;
+  int64                     file_id           = 2;
+  int32                     file_part         = 3;
+  int32                     file_total_parts  = 4;
+  bytes                     bytes             = 5;
+}
+
+message UploadSavePartFileData {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int64                     auth_key_id       = 1;
+  int64                     file_id           = 2;
+  int32                     file_part         = 3;
+  bytes                     bytes             = 4;
+}

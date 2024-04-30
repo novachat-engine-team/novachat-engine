@@ -1,0 +1,49 @@
+syntax = "proto3";
+
+package rpc_client;
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+import "google/protobuf/any.proto";
+import "chat.proto";
+import "schema.tl.sync.proto";
+
+option go_package = "rpc_client";
+
+option (gogoproto.marshaler_all) = true;
+option (gogoproto.sizer_all) = true;
+option (gogoproto.unmarshaler_all) = true;
+option (gogoproto.gostring_all) = true;
+
+service ChatService {
+  rpc ReqCreateChat(CreateChat) returns(google.protobuf.Any) {}
+  rpc ReqFullChat(FullChat) returns(Chat) {}
+  rpc ReqEditTitle(EditTitle) returns(google.protobuf.Any) {}
+  rpc ReqEditPhoto(EditPhoto) returns(google.protobuf.Any) {}
+  rpc ReqEditAbout(EditAbout) returns(google.protobuf.Any) {}
+  rpc ReqChatCommon(ChatCommon)returns(ChatList) {}
+  rpc ReqBannedRights(BannedRights)returns(google.protobuf.Any) {}
+  rpc ReqEditAdmin(EditAdmin)returns(google.protobuf.Any) {}
+  rpc ReqChatByName(ChatByName)returns(Chat) {}
+  rpc ReqAddUser(AddUser)returns(google.protobuf.Any) {}
+  rpc ReqDeleteUser(DeleteUser)returns(google.protobuf.Any) {}
+  rpc ReqSendOutboxesMessages(SendOutboxesMessages) returns (mtproto.Updates) {}
+  rpc ReqSendInBoxesMessages(SendInBoxesMessages) returns (google.protobuf.Any) {}
+  rpc ReqReadHistory(ChatReadHistory) returns (google.protobuf.Any) {}
+  rpc ReqReadInMessages(ReadInMessages) returns (google.protobuf.Any) {}
+//  rpc ReqEditMessage(rpc_client.EditMessage) returns (mtproto.Updates) {}
+//  rpc ReqRevokeMessages(rpc_client.RevokeMessages) returns (google.protobuf.Any) {}
+//  rpc ReqReadHistory(rpc_client.ReadHistory) returns (google.protobuf.Any) {}
+  rpc ReqAllChat(AllChat) returns (ChatList) {}
+  rpc ReqPinnedMessage(ChatPinnedMessage) returns (google.protobuf.Any) {}
+  rpc ReqInPinnedMessage(ChatInPinnedMessage) returns (google.protobuf.Any) {}
+  rpc ReqCheckUsername(CheckUsername) returns (google.protobuf.Any) {}
+  rpc ReqBannedUser(BannedUser) returns (google.protobuf.Any) {}
+  rpc ReqEditGeoPoint(EditGeoPoint) returns (google.protobuf.Any) {}
+  rpc ReqInviteToChannel(InviteToChannel) returns (google.protobuf.Any) {}
+  rpc ReqDeleteChat(DeleteChat) returns (google.protobuf.Any) {}
+  rpc ReqHistoryHidden(HistoryHidden) returns (google.protobuf.Any) {}
+  rpc ReqUpdateUsername(UpdateUsername) returns (google.protobuf.Any) {}
+  rpc ReqDeleteHistory(DeleteHistory) returns (google.protobuf.Any) {}
+  rpc ReqDeleteMessages(DeleteMessages) returns (google.protobuf.Any) {}
+  rpc ReqDeleteUserHistory(DeleteUserHistory) returns (google.protobuf.Any) {}
+}

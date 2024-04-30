@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package data_fs;
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+option go_package = "data_fs";
+
+option (gogoproto.marshaler_all) = true;
+option (gogoproto.sizer_all) = true;
+option (gogoproto.unmarshaler_all) = true;
+option (gogoproto.gostring_all) = true;
+
+message GeoPoint {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  double long = 1 [(gogoproto.moretags) = "bson:\"long\""];
+  double lat  = 2 [(gogoproto.moretags) = "bson:\"lat\""];
+  int64 access_hash = 3 [(gogoproto.moretags) = "bson:\"access_hash\""];
+  int32 accuracy_radius = 4 [(gogoproto.moretags) = "bson:\"accuracy_radius\""];
+}

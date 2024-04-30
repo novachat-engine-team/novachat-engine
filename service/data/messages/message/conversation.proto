@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+package data_message;
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+option go_package = "data_message";
+
+message PinnedMessage {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int32 id            = 1 [(gogoproto.moretags) = "bson:\"id\""];
+  int64 owner_user_id = 2 [(gogoproto.moretags) = "bson:\"oui\""];
+  bool  full          = 3 [(gogoproto.moretags) = "bson:\"m\""];
+}
+
+message Conversation {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  string          id              = 1 [(gogoproto.moretags) = "bson:\"_id\""];
+  int64           user_id         = 2 [(gogoproto.moretags) = "bson:\"user_id\""];
+  int64           peer_id         = 3 [(gogoproto.moretags) = "bson:\"peer_id\""];
+  int32           peer_type       = 4 [(gogoproto.moretags) = "bson:\"peer_type\""];
+  int32           top             = 5 [(gogoproto.moretags) = "bson:\"top\""];
+  int32           date            = 6 [(gogoproto.moretags) = "bson:\"date\""];
+  int32           unread_count    = 7 [(gogoproto.moretags) = "bson:\"unread_count\""];
+  int32           inbox_max_id    = 8 [(gogoproto.moretags) = "bson:\"inbox_max_id\""];
+  int32           outbox_max_id   = 9 [(gogoproto.moretags) = "bson:\"outbox_max_id\""];
+  string          draft           = 10[(gogoproto.moretags) = "bson:\"draft\""];
+  bool            pinned          = 11[(gogoproto.moretags) = "bson:\"pinned\""];
+  int32           folder_id       = 12[(gogoproto.moretags) = "bson:\"folder_id\""];
+  repeated PinnedMessage pin_ids  = 13[(gogoproto.moretags) = "bson:\"pin_ids\""];
+  int32           pts             = 14[(gogoproto.moretags) = "bson:\"pts\""];
+  int32           clear_max_id    = 15[(gogoproto.moretags) = "bson:\"clear_max_id\""];
+  bool            deleted         = 16[(gogoproto.moretags) = "bson:\"deleted\""];
+}

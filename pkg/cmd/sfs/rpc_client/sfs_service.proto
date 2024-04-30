@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package rpc_client;
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+import "google/protobuf/any.proto";
+//import "pkg/rpc/rpc/rpc.proto";
+import "sfs.proto";
+
+option go_package = "rpc_client";
+
+option (gogoproto.marshaler_all) = true;
+option (gogoproto.sizer_all) = true;
+option (gogoproto.unmarshaler_all) = true;
+option (gogoproto.gostring_all) = true;
+
+service SfsService {
+  rpc ReqGetDocument(GetDocument) returns(DocumentInfo) {}
+  rpc ReqGetDocumentList(GetDocumentList) returns(DocumentInfoList) {}
+
+  rpc ReqGetFile(GetFile) returns(FileInfo) {}
+
+  rpc ReqGetPhoto(GetPhoto) returns(PhotoInfo) {}
+  rpc ReqGetPhotoList(GetPhotoList) returns(PhotoInfoList) {}
+
+  rpc ReqUploadedDocument(UploadedDocument) returns(DocumentInfo) {}
+  rpc ReqUploadPhoto(UploadPhoto) returns(PhotoInfo) {}
+  rpc ReqUploadSaveMultiPartFileData(UploadSaveMultiPartFileData) returns(google.protobuf.Any) {}
+  rpc ReqUploadSavePartFileData(UploadSavePartFileData) returns(google.protobuf.Any) {}
+
+}

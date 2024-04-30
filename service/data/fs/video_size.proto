@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package data_fs;
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+option go_package = "data_fs";
+
+option (gogoproto.marshaler_all) = true;
+option (gogoproto.sizer_all) = true;
+option (gogoproto.unmarshaler_all) = true;
+option (gogoproto.gostring_all) = true;
+
+message VideoSize {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  string type   = 1 [(gogoproto.moretags) = "bson:\"type\""];
+  int32  width  = 2 [(gogoproto.moretags) = "bson:\"width\""];
+  int32  height = 3 [(gogoproto.moretags) = "bson:\"height\""];
+  int32  size   = 4 [(gogoproto.moretags) = "bson:\"size\""];
+}

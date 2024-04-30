@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package rpc_client;
+
+import "schema.tl.sync.proto";
+import "schema.msg.proto";
+import "google/protobuf/any.proto";
+
+option go_package = "rpc_client";
+
+service MsgService {
+  rpc ReqSendMessages(SendMessages) returns (mtproto.Updates) {}
+  rpc ReqEditMessage(EditMessage) returns (mtproto.Updates) {}
+  rpc ReqRevokeMessages(RevokeMessages) returns (google.protobuf.Any) {}
+  rpc ReqReadHistory(ReadHistory) returns (google.protobuf.Any) {}
+  rpc ReqPinnedMessage(PinnedMessage) returns (google.protobuf.Any) {}
+}

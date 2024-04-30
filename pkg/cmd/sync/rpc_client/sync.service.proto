@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package rpc_client;
+
+import "schema.sync.proto";
+import "google/protobuf/any.proto";
+
+option go_package = "rpc_client";
+
+service SyncService {
+  rpc ReqSyncUpdate(SyncUpdate) returns (google.protobuf.Any) {}
+  rpc ReqSyncUpdates(SyncUpdates) returns (google.protobuf.Any) {}
+}

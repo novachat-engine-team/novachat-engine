@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+package data_update;
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+import "media.proto";
+import "message.proto";
+
+option (gogoproto.marshaler_all) = true;
+option (gogoproto.sizer_all) = true;
+option (gogoproto.unmarshaler_all) = true;
+option (gogoproto.gostring_all) = true;
+
+option go_package = "data_update";
+
+message UserUpdate {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  string   update_key             = 21  [(gogoproto.moretags) = "bson:\"_id\""];
+  int32    id                     = 1   [(gogoproto.moretags) = "bson:\"id\""];
+  int64    user_id                = 2   [(gogoproto.moretags) = "bson:\"user_id\""];
+  int64    peer_id                = 3   [(gogoproto.moretags) = "bson:\"peer_id\""];
+  int32    peer_type              = 4   [(gogoproto.moretags) = "bson:\"peer_type\""];
+  int32    pts                    = 5   [(gogoproto.moretags) = "bson:\"pts\""];
+  int32    pts_count              = 6   [(gogoproto.moretags) = "bson:\"pts_count\""];
+  int32    update_type            = 7   [(gogoproto.moretags) = "bson:\"update_type\""];
+  int32    date                   = 8   [(gogoproto.moretags) = "bson:\"date\""];
+  int32    version                = 9   [(gogoproto.moretags) = "bson:\"version\""];
+  string   time                   = 10  [(gogoproto.moretags) = "bson:\"time\""];
+  int64    random_id              = 11  [(gogoproto.moretags) = "bson:\"random_id\""];
+  repeated int32  message_box_ids = 12  [(gogoproto.moretags) = "bson:\"message_box_ids\""];
+  string   message_action         = 13  [(gogoproto.moretags) = "bson:\"message_action\""]; //json []*mtproto.MessageAction typing/ChatUserTyping
+  int64    chat_id                = 14  [(gogoproto.moretags) = "bson:\"chat_id\""];               // ChatUserTyping
+  int32    max_id                 = 15  [(gogoproto.moretags) = "bson:\"max_id\""];
+  data_message.Message message_data = 16  [(gogoproto.moretags) = "bson:\"message_data\""];
+  int32    fold_id                = 17  [(gogoproto.moretags) = "bson:\"fold_id\""];
+  int32    still_unread_count     = 18  [(gogoproto.moretags) = "bson:\"still_unread_count\""];
+  data_message.Media media        = 19  [(gogoproto.moretags) = "bson:\"media\""];
+  int64    owner_user_id          = 20  [(gogoproto.moretags) = "bson:\"owner_user_id\""];
+}

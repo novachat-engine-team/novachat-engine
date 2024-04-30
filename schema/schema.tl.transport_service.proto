@@ -1,0 +1,88 @@
+/*
+ * Copyright (c) 2021-present,  NovaChat-Engine.
+ *  All rights reserved.
+ * 
+ *  
+ * @Author: Coder (coderxw@gmail.com)
+ * @Time : 2023/02/09 16:57
+ * @File : schema.tl.transport_service.proto
+ * @Desc : 
+ *
+ */
+
+syntax = "proto3";
+
+package mtproto;
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+
+option go_package = "mtproto";
+
+option (gogoproto.marshaler_all) = true;
+option (gogoproto.sizer_all) = true;
+option (gogoproto.unmarshaler_all) = true;
+option (gogoproto.gostring_all) = true;
+
+import "schema.tl.cmd.proto";
+// import "schema.tl.core_types.proto";
+
+
+
+///////////////////////////////////////////////////////////////////////////////
+// [contest.saveDeveloperInfo#9a5f6e95 vk_id:int name:string phone_number:string age:int city:string = Bool;]
+message TL_contest_saveDeveloperInfo {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 vk_id = 3;
+    string name = 4;
+    string phone_number = 5;
+    int32 age = 6;
+    string city = 7;
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+// [destroy_session#e7512126 session_id:long = DestroySessionRes;]
+message TL_destroy_session {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int64 session_id = 3;
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+// [get_future_salts#b921bd04 num:int = FutureSalts;]
+message TL_get_future_salts {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 num = 3;
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+// [ping#7abe77ec ping_id:long = Pong;]
+message TL_ping {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int64 ping_id = 3;
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+// [ping_delay_disconnect#f3427b8c ping_id:long disconnect_delay:int = Pong;]
+message TL_ping_delay_disconnect {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int64 ping_id = 3;
+    int32 disconnect_delay = 4;
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+// [rpc_drop_answer#58e4a740 req_msg_id:long = RpcDropAnswer;]
+message TL_rpc_drop_answer {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int64 req_msg_id = 3;
+}
+

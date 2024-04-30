@@ -1,0 +1,53 @@
+syntax = "proto3";
+
+package data_chat;
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+option go_package = "data_chat";
+
+import "photo_profile.proto";
+import "geopoint.proto";
+import "restriction_reason.proto";
+
+option (gogoproto.marshaler_all) = true;
+option (gogoproto.sizer_all) = true;
+option (gogoproto.unmarshaler_all) = true;
+option (gogoproto.gostring_all) = true;
+
+message ChatLink {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  string link           = 1;
+  int64  chat_id        = 2;
+  int64  create_user_id = 3;
+  int64  util_date      = 4;
+}
+
+message Chat {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int64                                       chat_id             = 1 [(gogoproto.moretags) = "bson:\"_id\""];
+  string                                      title               = 2 [(gogoproto.moretags) = "bson:\"title\""];
+  data_fs.PhotoProfile                        photo               = 3 [(gogoproto.moretags) = "bson:\"photo\""];
+  int64                                       creator             = 4 [(gogoproto.moretags) = "bson:\"creator\""];
+  int32                                       date                = 5 [(gogoproto.moretags) = "bson:\"date\""];
+  bool                                        verified            = 7 [(gogoproto.moretags) = "bson:\"verified\""];
+  bool                                        scam                = 8 [(gogoproto.moretags) = "bson:\"scam\""];
+  int64                                       access_hash         = 9 [(gogoproto.moretags) = "bson:\"access_hash\""];
+  int32                                       banned_rights       = 10[(gogoproto.moretags) = "bson:\"banned_rights\""];
+  data_fs.GeoPoint                            geo_point           = 11[(gogoproto.moretags) = "bson:\"geo_point\""];
+  repeated data_restriction.RestrictionReason restriction_reason  = 12[(gogoproto.moretags) = "bson:\"restriction_reason\""];
+  int32                                       rights_util_date    = 13[(gogoproto.moretags) = "bson:\"rights_util_date\""];
+  bool                                        deleted             = 14[(gogoproto.moretags) = "bson:\"deleted\""];
+  string                                      about               = 15[(gogoproto.moretags) = "bson:\"about\""];
+  int32                                       chat_size_max       = 16[(gogoproto.moretags) = "bson:\"chat_size_max\""];
+  string                                      username            = 17[(gogoproto.moretags) = "bson:\"username\""];
+  string                                      address             = 18[(gogoproto.moretags) = "bson:\"address\""];
+  bool                                        broadcast           = 19[(gogoproto.moretags) = "bson:\"broadcast\""];
+  repeated ChatLink                           link                = 20[(gogoproto.moretags) = "bson:\"link\""];
+  bool                                        hidden_history      = 21[(gogoproto.moretags) = "bson:\"hidden_history\""];
+}

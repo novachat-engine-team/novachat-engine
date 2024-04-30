@@ -1,0 +1,35 @@
+/*
+ * Copyright (c) 2021-present,  NovaChat-Engine.
+ *  All rights reserved.
+ *
+ *
+ * @Author: Coder (coderxw@gmail.com)
+ * @Time : 2021/04/13 16:46
+ * @File :
+ * @Desc :
+ *
+ */
+
+syntax = "proto3";
+
+package data_stickerset;
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+
+import "document.proto";
+
+option (gogoproto.marshaler_all) = true;
+option (gogoproto.sizer_all) = true;
+option (gogoproto.unmarshaler_all) = true;
+option (gogoproto.gostring_all) = true;
+
+option go_package = "data_stickerset";
+
+message StickerPack {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  string emoticon = 1 [(gogoproto.moretags) = "bson:\"emoticon\""];
+  repeated data_fs.Document documents = 2 [(gogoproto.moretags) = "bson:\"documents\""];
+}

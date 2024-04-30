@@ -1,0 +1,4191 @@
+/*
+ * Copyright (c) 2021-present,  NovaChat-Engine.
+ *  All rights reserved.
+ * 
+ *  
+ * @Author: Coder (coderxw@gmail.com)
+ * @Time : 2023/02/09 16:57
+ * @File : schema.tl.sync_service.proto
+ * @Desc : 
+ *
+ */
+
+syntax = "proto3";
+
+package mtproto;
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+
+option go_package = "mtproto";
+
+option (gogoproto.marshaler_all) = true;
+option (gogoproto.sizer_all) = true;
+option (gogoproto.unmarshaler_all) = true;
+option (gogoproto.gostring_all) = true;
+
+import "schema.tl.core_types.proto";
+import "schema.tl.sync.proto";
+import "schema.tl.cmd.proto";
+
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.acceptAuthorization#e7027c94 bot_id:int scope:string public_key:string value_hashes:Vector<SecureValueHash> credentials:SecureCredentialsEncrypted = Bool;
+//
+message TL_account_acceptAuthorization {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 bot_id = 3;
+    string scope = 4;
+    string public_key = 5;
+    repeated SecureValueHash value_hashes = 6;
+    SecureCredentialsEncrypted credentials = 7;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.cancelPasswordEmail#c1cbd5b6 = Bool;
+//
+message TL_account_cancelPasswordEmail {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.changePhone#70c32edb phone_number:string phone_code_hash:string phone_code:string = User;
+//
+message TL_account_changePhone {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string phone_number = 3;
+    string phone_code_hash = 4;
+    string phone_code = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.checkUsername#2714d86c username:string = Bool;
+//
+message TL_account_checkUsername {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string username = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.confirmPasswordEmail#8fdf1920 code:string = Bool;
+//
+message TL_account_confirmPasswordEmail {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string code = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.confirmPhone#5f2178c3 phone_code_hash:string phone_code:string = Bool;
+//
+message TL_account_confirmPhone {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string phone_code_hash = 3;
+    string phone_code = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.createTheme#2b7ffd7f slug:string title:string document:InputDocument = Theme;
+//  account.createTheme#8432c21f flags:# slug:string title:string document:flags.2?InputDocument settings:flags.3?InputThemeSettings = Theme;
+//
+message TL_account_createTheme {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string slug = 3;
+    string title = 4;
+    InputDocument document = 5;
+    int32 flags = 6;
+    InputThemeSettings settings = 7;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.deleteAccount#418d4e0b reason:string = Bool;
+//
+message TL_account_deleteAccount {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string reason = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.deleteSecureValue#b880bc4b types:Vector<SecureValueType> = Bool;
+//
+message TL_account_deleteSecureValue {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    repeated SecureValueType types = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.finishTakeoutSession#1d2652ee flags:# success:flags.0?true = Bool;
+//
+message TL_account_finishTakeoutSession {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool success = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.getAccountTTL#8fc711d = AccountDaysTTL;
+//
+message TL_account_getAccountTTL {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.getAllSecureValues#b288bc7d = Vector<SecureValue>;
+//
+message TL_account_getAllSecureValues {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.getAuthorizationForm#b86ba8e1 bot_id:int scope:string public_key:string = account.AuthorizationForm;
+//
+message TL_account_getAuthorizationForm {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 bot_id = 3;
+    string scope = 4;
+    string public_key = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.getAuthorizations#e320c158 = account.Authorizations;
+//
+message TL_account_getAuthorizations {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.getAutoDownloadSettings#56da0b3f = account.AutoDownloadSettings;
+//
+message TL_account_getAutoDownloadSettings {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.getContactSignUpNotification#9f07c728 = Bool;
+//
+message TL_account_getContactSignUpNotification {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.getContentSettings#8b9b4dae = account.ContentSettings;
+//
+message TL_account_getContentSettings {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.getGlobalPrivacySettings#eb2b4cf6 = GlobalPrivacySettings;
+//
+message TL_account_getGlobalPrivacySettings {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.getMultiWallPapers#65ad71dc wallpapers:Vector<InputWallPaper> = Vector<WallPaper>;
+//
+message TL_account_getMultiWallPapers {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    repeated InputWallPaper wallpapers = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.getNotifyExceptions#53577479 flags:# compare_sound:flags.1?true peer:flags.0?InputNotifyPeer = Updates;
+//
+message TL_account_getNotifyExceptions {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool compare_sound = 4;
+    InputNotifyPeer peer = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.getNotifySettings#12b3ad31 peer:InputNotifyPeer = PeerNotifySettings;
+//
+message TL_account_getNotifySettings {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputNotifyPeer peer = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.getPassword#548a30f5 = account.Password;
+//
+message TL_account_getPassword {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.getPasswordSettings#bc8d11bb current_password_hash:bytes = account.PasswordSettings;
+//  account.getPasswordSettings#9cd4eaf9 password:InputCheckPasswordSRP = account.PasswordSettings;
+//
+message TL_account_getPasswordSettings {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    bytes current_password_hash = 3;
+    InputCheckPasswordSRP password = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.getPrivacy#dadbc950 key:InputPrivacyKey = account.PrivacyRules;
+//
+message TL_account_getPrivacy {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputPrivacyKey key = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.getSecureValue#73665bc2 types:Vector<SecureValueType> = Vector<SecureValue>;
+//
+message TL_account_getSecureValue {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    repeated SecureValueType types = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.getTheme#8d9d742b format:string theme:InputTheme document_id:long = Theme;
+//
+message TL_account_getTheme {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string format = 3;
+    InputTheme theme = 4;
+    int64 document_id = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.getThemes#285946f8 format:string hash:int = account.Themes;
+//
+message TL_account_getThemes {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string format = 3;
+    int32 hash = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.getTmpPassword#4a82327e password_hash:bytes period:int = account.TmpPassword;
+//  account.getTmpPassword#449e0b51 password:InputCheckPasswordSRP period:int = account.TmpPassword;
+//
+message TL_account_getTmpPassword {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    bytes password_hash = 3;
+    int32 period = 4;
+    InputCheckPasswordSRP password = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.getWallPaper#fc8ddbea wallpaper:InputWallPaper = WallPaper;
+//
+message TL_account_getWallPaper {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputWallPaper wallpaper = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.getWallPapers#c04cfac2 = Vector<WallPaper>;
+//  account.getWallPapers#aabb1763 hash:int = account.WallPapers;
+//
+message TL_account_getWallPapers {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 hash = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.getWebAuthorizations#182e6d6f = account.WebAuthorizations;
+//
+message TL_account_getWebAuthorizations {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.initTakeoutSession#f05b4804 flags:# contacts:flags.0?true message_users:flags.1?true message_chats:flags.2?true message_megagroups:flags.3?true message_channels:flags.4?true files:flags.5?true file_max_size:flags.5?int = account.Takeout;
+//
+message TL_account_initTakeoutSession {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool contacts = 4;
+    bool message_users = 5;
+    bool message_chats = 6;
+    bool message_megagroups = 7;
+    bool message_channels = 8;
+    bool files = 9;
+    int32 file_max_size = 10;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.installTheme#e0f8439c format:string theme:InputTheme = Bool;
+//  account.installTheme#7ae43737 flags:# dark:flags.0?true format:flags.1?string theme:flags.1?InputTheme = Bool;
+//
+message TL_account_installTheme {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string format = 3;
+    InputTheme theme = 4;
+    int32 flags = 5;
+    bool dark = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.installWallPaper#4a0378ce wallpaper:InputWallPaper = Bool;
+//  account.installWallPaper#feed5769 wallpaper:InputWallPaper settings:WallPaperSettings = Bool;
+//
+message TL_account_installWallPaper {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputWallPaper wallpaper = 3;
+    WallPaperSettings settings = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.registerDevice#637ea878 token_type:int token:string = Bool;
+//  account.registerDevice#446c712c token_type:int token:string device_model:string system_version:string app_version:string app_sandbox:Bool lang_code:string = Bool;
+//  account.registerDevice#5cbea590 token_type:int token:string app_sandbox:Bool secret:bytes other_uids:Vector<int> = Bool;
+//  account.registerDevice#68976c6f flags:# no_muted:flags.0?true token_type:int token:string app_sandbox:Bool secret:bytes other_uids:Vector<int> = Bool;
+//
+message TL_account_registerDevice {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 token_type = 3;
+    string token = 4;
+    string device_model = 5;
+    string system_version = 6;
+    string app_version = 7;
+    Bool app_sandbox = 8;
+    string lang_code = 9;
+    bytes secret = 10;
+    repeated int32 other_uids = 11;
+    int32 flags = 12;
+    bool no_muted = 13;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.reportPeer#ae189d5f peer:InputPeer reason:ReportReason = Bool;
+//
+message TL_account_reportPeer {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputPeer peer = 3;
+    ReportReason reason = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.resendPasswordEmail#7a7f2a15 = Bool;
+//
+message TL_account_resendPasswordEmail {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.resetAuthorization#df77f3bc hash:long = Bool;
+//
+message TL_account_resetAuthorization {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int64 hash = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.resetNotifySettings#db7e1747 = Bool;
+//
+message TL_account_resetNotifySettings {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.resetWallPapers#bb3b9804 = Bool;
+//
+message TL_account_resetWallPapers {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.resetWebAuthorization#2d01b9ef hash:long = Bool;
+//
+message TL_account_resetWebAuthorization {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int64 hash = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.resetWebAuthorizations#682d2594 = Bool;
+//
+message TL_account_resetWebAuthorizations {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.saveAutoDownloadSettings#76f36233 flags:# low:flags.0?true high:flags.1?true settings:AutoDownloadSettings = Bool;
+//
+message TL_account_saveAutoDownloadSettings {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool low = 4;
+    bool high = 5;
+    AutoDownloadSettings settings = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.saveSecureValue#899fe31d value:InputSecureValue secure_secret_id:long = SecureValue;
+//
+message TL_account_saveSecureValue {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputSecureValue value = 3;
+    int64 secure_secret_id = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.saveTheme#f257106c theme:InputTheme unsave:Bool = Bool;
+//
+message TL_account_saveTheme {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputTheme theme = 3;
+    Bool unsave = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.saveWallPaper#189581b3 wallpaper:InputWallPaper unsave:Bool = Bool;
+//  account.saveWallPaper#6c5a5b37 wallpaper:InputWallPaper unsave:Bool settings:WallPaperSettings = Bool;
+//
+message TL_account_saveWallPaper {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputWallPaper wallpaper = 3;
+    Bool unsave = 4;
+    WallPaperSettings settings = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.sendChangePhoneCode#8e57deb flags:# allow_flashcall:flags.0?true phone_number:string current_number:flags.0?Bool = auth.SentCode;
+//  account.sendChangePhoneCode#82574ae5 phone_number:string settings:CodeSettings = auth.SentCode;
+//
+message TL_account_sendChangePhoneCode {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool allow_flashcall = 4;
+    string phone_number = 5;
+    Bool current_number = 6;
+    CodeSettings settings = 7;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.sendConfirmPhoneCode#1516d7bd flags:# allow_flashcall:flags.0?true hash:string current_number:flags.0?Bool = auth.SentCode;
+//  account.sendConfirmPhoneCode#1b3faa88 hash:string settings:CodeSettings = auth.SentCode;
+//
+message TL_account_sendConfirmPhoneCode {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool allow_flashcall = 4;
+    string hash = 5;
+    Bool current_number = 6;
+    CodeSettings settings = 7;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.sendVerifyEmailCode#7011509f email:string = account.SentEmailCode;
+//
+message TL_account_sendVerifyEmailCode {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string email = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.sendVerifyPhoneCode#823380b4 flags:# allow_flashcall:flags.0?true phone_number:string current_number:flags.0?Bool = auth.SentCode;
+//  account.sendVerifyPhoneCode#a5a356f9 phone_number:string settings:CodeSettings = auth.SentCode;
+//
+message TL_account_sendVerifyPhoneCode {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool allow_flashcall = 4;
+    string phone_number = 5;
+    Bool current_number = 6;
+    CodeSettings settings = 7;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.setAccountTTL#2442485e ttl:AccountDaysTTL = Bool;
+//
+message TL_account_setAccountTTL {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    AccountDaysTTL ttl = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.setContactSignUpNotification#cff43f61 silent:Bool = Bool;
+//
+message TL_account_setContactSignUpNotification {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    Bool silent = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.setContentSettings#b574b16b flags:# sensitive_enabled:flags.0?true = Bool;
+//
+message TL_account_setContentSettings {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool sensitive_enabled = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.setGlobalPrivacySettings#1edaaac2 settings:GlobalPrivacySettings = GlobalPrivacySettings;
+//
+message TL_account_setGlobalPrivacySettings {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    GlobalPrivacySettings settings = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.setPrivacy#c9f81ce8 key:InputPrivacyKey rules:Vector<InputPrivacyRule> = account.PrivacyRules;
+//
+message TL_account_setPrivacy {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputPrivacyKey key = 3;
+    repeated InputPrivacyRule rules = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.unregisterDevice#65c55b40 token_type:int token:string = Bool;
+//  account.unregisterDevice#3076c4bf token_type:int token:string other_uids:Vector<int> = Bool;
+//
+message TL_account_unregisterDevice {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 token_type = 3;
+    string token = 4;
+    repeated int32 other_uids = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.updateDeviceLocked#38df3532 period:int = Bool;
+//
+message TL_account_updateDeviceLocked {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 period = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.updateNotifySettings#84be5b93 peer:InputNotifyPeer settings:InputPeerNotifySettings = Bool;
+//
+message TL_account_updateNotifySettings {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputNotifyPeer peer = 3;
+    InputPeerNotifySettings settings = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.updatePasswordSettings#fa7c4b86 current_password_hash:bytes new_settings:account.PasswordInputSettings = Bool;
+//  account.updatePasswordSettings#a59b102f password:InputCheckPasswordSRP new_settings:account.PasswordInputSettings = Bool;
+//
+message TL_account_updatePasswordSettings {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    bytes current_password_hash = 3;
+    account_PasswordInputSettings new_settings = 4;
+    InputCheckPasswordSRP password = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.updateProfile#78515775 flags:# first_name:flags.0?string last_name:flags.1?string about:flags.2?string = User;
+//
+message TL_account_updateProfile {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    string first_name = 4;
+    string last_name = 5;
+    string about = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.updateStatus#6628562c offline:Bool = Bool;
+//
+message TL_account_updateStatus {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    Bool offline = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.updateTheme#f8997176 flags:# theme:InputTheme slug:flags.0?string title:flags.1?string document:flags.2?InputDocument = Theme;
+//  account.updateTheme#3b8ea202 flags:# format:string theme:InputTheme slug:flags.0?string title:flags.1?string document:flags.2?InputDocument = Theme;
+//  account.updateTheme#5cb367d5 flags:# format:string theme:InputTheme slug:flags.0?string title:flags.1?string document:flags.2?InputDocument settings:flags.3?InputThemeSettings = Theme;
+//
+message TL_account_updateTheme {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    InputTheme theme = 4;
+    string slug = 5;
+    string title = 6;
+    InputDocument document = 7;
+    string format = 8;
+    InputThemeSettings settings = 9;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.updateUsername#3e0bdd7c username:string = User;
+//
+message TL_account_updateUsername {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string username = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.uploadTheme#1c3db333 flags:# file:InputFile thumb:flags.0?InputFile file_name:string mime_type:string = Document;
+//
+message TL_account_uploadTheme {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    InputFile file = 4;
+    InputFile thumb = 5;
+    string file_name = 6;
+    string mime_type = 7;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.uploadWallPaper#c7ba9b4d file:InputFile mime_type:string = WallPaper;
+//  account.uploadWallPaper#dd853661 file:InputFile mime_type:string settings:WallPaperSettings = WallPaper;
+//
+message TL_account_uploadWallPaper {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputFile file = 3;
+    string mime_type = 4;
+    WallPaperSettings settings = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.verifyEmail#ecba39db email:string code:string = Bool;
+//
+message TL_account_verifyEmail {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string email = 3;
+    string code = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  account.verifyPhone#4dd3a7f6 phone_number:string phone_code_hash:string phone_code:string = Bool;
+//
+message TL_account_verifyPhone {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string phone_number = 3;
+    string phone_code_hash = 4;
+    string phone_code = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  auth.acceptLoginToken#e894ad4d token:bytes = Authorization;
+//
+message TL_auth_acceptLoginToken {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    bytes token = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  auth.bindTempAuthKey#cdd42a05 perm_auth_key_id:long nonce:long expires_at:int encrypted_message:bytes = Bool;
+//
+message TL_auth_bindTempAuthKey {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int64 perm_auth_key_id = 3;
+    int64 nonce = 4;
+    int32 expires_at = 5;
+    bytes encrypted_message = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  auth.cancelCode#1f040578 phone_number:string phone_code_hash:string = Bool;
+//
+message TL_auth_cancelCode {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string phone_number = 3;
+    string phone_code_hash = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  auth.checkPassword#a63011e password_hash:bytes = auth.Authorization;
+//  auth.checkPassword#d18b4d16 password:InputCheckPasswordSRP = auth.Authorization;
+//
+message TL_auth_checkPassword {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    bytes password_hash = 3;
+    InputCheckPasswordSRP password = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  auth.checkPhone#6fe51dfb phone_number:string = auth.CheckedPhone;
+//
+message TL_auth_checkPhone {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string phone_number = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  auth.dropTempAuthKeys#8e48a188 except_auth_keys:Vector<long> = Bool;
+//
+message TL_auth_dropTempAuthKeys {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    repeated int64 except_auth_keys = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  auth.exportAuthorization#e5bfffcd dc_id:int = auth.ExportedAuthorization;
+//
+message TL_auth_exportAuthorization {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 dc_id = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  auth.exportLoginToken#b1b41517 api_id:int api_hash:string except_ids:Vector<int> = auth.LoginToken;
+//
+message TL_auth_exportLoginToken {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 api_id = 3;
+    string api_hash = 4;
+    repeated int32 except_ids = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  auth.importAuthorization#e3ef9613 id:int bytes:bytes = auth.Authorization;
+//
+message TL_auth_importAuthorization {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 id = 3;
+    bytes bytes = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  auth.importBotAuthorization#67a3ff2c flags:int api_id:int api_hash:string bot_auth_token:string = auth.Authorization;
+//
+message TL_auth_importBotAuthorization {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    int32 api_id = 4;
+    string api_hash = 5;
+    string bot_auth_token = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  auth.importLoginToken#95ac5ce4 token:bytes = auth.LoginToken;
+//
+message TL_auth_importLoginToken {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    bytes token = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  auth.logOut#5717da40 = Bool;
+//
+message TL_auth_logOut {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  auth.recoverPassword#4ea56e92 code:string = auth.Authorization;
+//
+message TL_auth_recoverPassword {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string code = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  auth.requestPasswordRecovery#d897bc66 = auth.PasswordRecovery;
+//
+message TL_auth_requestPasswordRecovery {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  auth.resendCode#3ef1a9bf phone_number:string phone_code_hash:string = auth.SentCode;
+//
+message TL_auth_resendCode {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string phone_number = 3;
+    string phone_code_hash = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  auth.resetAuthorizations#9fab0d1a = Bool;
+//
+message TL_auth_resetAuthorizations {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  auth.sendCode#86aef0ec flags:# allow_flashcall:flags.0?true phone_number:string current_number:flags.0?Bool api_id:int api_hash:string = auth.SentCode;
+//  auth.sendCode#ccfd70cf flags:# allow_flashcall:flags.0?true phone_number:string current_number:flags.0?Bool api_id:int api_hash:string lang_code:string = auth.SentCode;
+//  auth.sendCode#a677244f phone_number:string api_id:int api_hash:string settings:CodeSettings = auth.SentCode;
+//
+message TL_auth_sendCode {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool allow_flashcall = 4;
+    string phone_number = 5;
+    Bool current_number = 6;
+    int32 api_id = 7;
+    string api_hash = 8;
+    string lang_code = 9;
+    CodeSettings settings = 10;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  auth.sendInvites#771c1d97 phone_numbers:Vector<string> message:string = Bool;
+//
+message TL_auth_sendInvites {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    repeated string phone_numbers = 3;
+    string message = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  auth.signIn#bcd51581 phone_number:string phone_code_hash:string phone_code:string = auth.Authorization;
+//
+message TL_auth_signIn {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string phone_number = 3;
+    string phone_code_hash = 4;
+    string phone_code = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  auth.signUp#1b067634 phone_number:string phone_code_hash:string phone_code:string first_name:string last_name:string = auth.Authorization;
+//  auth.signUp#80eee427 phone_number:string phone_code_hash:string first_name:string last_name:string = auth.Authorization;
+//
+message TL_auth_signUp {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string phone_number = 3;
+    string phone_code_hash = 4;
+    string phone_code = 5;
+    string first_name = 6;
+    string last_name = 7;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  bots.answerWebhookJSONQuery#e6213f4d query_id:long data:DataJSON = Bool;
+//
+message TL_bots_answerWebhookJSONQuery {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int64 query_id = 3;
+    DataJSON data = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  bots.sendCustomRequest#aa2769ed custom_method:string params:DataJSON = DataJSON;
+//
+message TL_bots_sendCustomRequest {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string custom_method = 3;
+    DataJSON params = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  bots.setBotCommands#805d46f6 commands:Vector<BotCommand> = Bool;
+//
+message TL_bots_setBotCommands {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    repeated BotCommand commands = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  channels.checkUsername#10e6bd2c channel:InputChannel username:string = Bool;
+//
+message TL_channels_checkUsername {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputChannel channel = 3;
+    string username = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  channels.createChannel#f4893d7f flags:# broadcast:flags.0?true megagroup:flags.1?true title:string about:string = Updates;
+//  channels.createChannel#3d5fb10f flags:# broadcast:flags.0?true megagroup:flags.1?true title:string about:string geo_point:flags.2?InputGeoPoint address:flags.2?string = Updates;
+//
+message TL_channels_createChannel {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool broadcast = 4;
+    bool megagroup = 5;
+    string title = 6;
+    string about = 7;
+    InputGeoPoint geo_point = 8;
+    string address = 9;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  channels.deleteChannel#c0111fe3 channel:InputChannel = Updates;
+//
+message TL_channels_deleteChannel {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputChannel channel = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  channels.deleteHistory#af369d42 channel:InputChannel max_id:int = Bool;
+//
+message TL_channels_deleteHistory {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputChannel channel = 3;
+    int32 max_id = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  channels.deleteMessages#84c1fd4e channel:InputChannel id:Vector<int> = messages.AffectedMessages;
+//
+message TL_channels_deleteMessages {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputChannel channel = 3;
+    repeated int32 id = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  channels.deleteUserHistory#d10dd71b channel:InputChannel user_id:InputUser = messages.AffectedHistory;
+//
+message TL_channels_deleteUserHistory {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputChannel channel = 3;
+    InputUser user_id = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  channels.editAbout#13e27f1e channel:InputChannel about:string = Bool;
+//
+message TL_channels_editAbout {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputChannel channel = 3;
+    string about = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  channels.editAdmin#20b88214 channel:InputChannel user_id:InputUser admin_rights:ChannelAdminRights = Updates;
+//  channels.editAdmin#eb7611d0 channel:InputChannel user_id:InputUser role:ChannelParticipantRole = Updates;
+//  channels.editAdmin#70f893ba channel:InputChannel user_id:InputUser admin_rights:ChatAdminRights = Updates;
+//  channels.editAdmin#d33c8902 channel:InputChannel user_id:InputUser admin_rights:ChatAdminRights rank:string = Updates;
+//
+message TL_channels_editAdmin {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputChannel channel = 3;
+    InputUser user_id = 4;
+    ChannelAdminRights admin_rights20B8821471 = 5;
+    ChannelParticipantRole role = 6;
+    ChatAdminRights admin_rights70F893BA93 = 7;
+    string rank = 8;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  channels.editBanned#bfd915cd channel:InputChannel user_id:InputUser banned_rights:ChannelBannedRights = Updates;
+//  channels.editBanned#72796912 channel:InputChannel user_id:InputUser banned_rights:ChatBannedRights = Updates;
+//
+message TL_channels_editBanned {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputChannel channel = 3;
+    InputUser user_id = 4;
+    ChannelBannedRights banned_rightsBFD915CD71 = 5;
+    ChatBannedRights banned_rights7279691293 = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  channels.editCreator#8f38cd1f channel:InputChannel user_id:InputUser password:InputCheckPasswordSRP = Updates;
+//
+message TL_channels_editCreator {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputChannel channel = 3;
+    InputUser user_id = 4;
+    InputCheckPasswordSRP password = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  channels.editLocation#58e63f6d channel:InputChannel geo_point:InputGeoPoint address:string = Bool;
+//
+message TL_channels_editLocation {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputChannel channel = 3;
+    InputGeoPoint geo_point = 4;
+    string address = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  channels.editPhoto#f12e57c9 channel:InputChannel photo:InputChatPhoto = Updates;
+//
+message TL_channels_editPhoto {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputChannel channel = 3;
+    InputChatPhoto photo = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  channels.editTitle#566decd0 channel:InputChannel title:string = Updates;
+//
+message TL_channels_editTitle {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputChannel channel = 3;
+    string title = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  channels.exportInvite#c7560885 channel:InputChannel = ExportedChatInvite;
+//
+message TL_channels_exportInvite {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputChannel channel = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  channels.exportMessageLink#c846d22d channel:InputChannel id:int = ExportedMessageLink;
+//  channels.exportMessageLink#ceb77163 channel:InputChannel id:int grouped:Bool = ExportedMessageLink;
+//  channels.exportMessageLink#e63fadeb flags:# grouped:flags.0?true thread:flags.1?true channel:InputChannel id:int = ExportedMessageLink;
+//
+message TL_channels_exportMessageLink {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputChannel channel = 3;
+    int32 id = 4;
+    Bool groupedCEB7716385 = 5;
+    int32 flags = 6;
+    bool groupedE63FADEB119 = 7;
+    bool thread = 8;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  channels.getAdminLog#33ddf480 flags:# channel:InputChannel q:string events_filter:flags.0?ChannelAdminLogEventsFilter admins:flags.1?Vector<InputUser> max_id:long min_id:long limit:int = channels.AdminLogResults;
+//
+message TL_channels_getAdminLog {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    InputChannel channel = 4;
+    string q = 5;
+    ChannelAdminLogEventsFilter events_filter = 6;
+    repeated InputUser admins = 7;
+    int64 max_id = 8;
+    int64 min_id = 9;
+    int32 limit = 10;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  channels.getAdminedPublicChannels#8d8d82d7 = messages.Chats;
+//  channels.getAdminedPublicChannels#f8b036af flags:# by_location:flags.0?true check_limit:flags.1?true = messages.Chats;
+//
+message TL_channels_getAdminedPublicChannels {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool by_location = 4;
+    bool check_limit = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  channels.getBroadcastsForDiscussion#1a87f304 = messages.Chats;
+//
+message TL_channels_getBroadcastsForDiscussion {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  channels.getChannels#a7f6bbb id:Vector<InputChannel> = messages.Chats;
+//
+message TL_channels_getChannels {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    repeated InputChannel id = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  channels.getDialogs#a9d3d249 offset:int limit:int = messages.Dialogs;
+//
+message TL_channels_getDialogs {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 offset = 3;
+    int32 limit = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  channels.getFullChannel#8736a09 channel:InputChannel = messages.ChatFull;
+//
+message TL_channels_getFullChannel {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputChannel channel = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  channels.getGroupsForDiscussion#f5dad378 = messages.Chats;
+//
+message TL_channels_getGroupsForDiscussion {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  channels.getImportantHistory#8f494bb2 channel:InputChannel offset_id:int offset_date:int add_offset:int limit:int max_id:int min_id:int = messages.Messages;
+//
+message TL_channels_getImportantHistory {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputChannel channel = 3;
+    int32 offset_id = 4;
+    int32 offset_date = 5;
+    int32 add_offset = 6;
+    int32 limit = 7;
+    int32 max_id = 8;
+    int32 min_id = 9;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  channels.getInactiveChannels#11e831ee = messages.InactiveChats;
+//
+message TL_channels_getInactiveChannels {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  channels.getLeftChannels#8341ecc0 offset:int = messages.Chats;
+//
+message TL_channels_getLeftChannels {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 offset = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  channels.getMessages#93d7b347 channel:InputChannel id:Vector<int> = messages.Messages;
+//  channels.getMessages#ad8c9a23 channel:InputChannel id:Vector<InputMessage> = messages.Messages;
+//
+message TL_channels_getMessages {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputChannel channel = 3;
+    repeated int32 id93D7B34771 = 4;
+    repeated InputMessage idAD8C9A2385 = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  channels.getParticipant#546dd7a6 channel:InputChannel user_id:InputUser = channels.ChannelParticipant;
+//
+message TL_channels_getParticipant {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputChannel channel = 3;
+    InputUser user_id = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  channels.getParticipants#24d98f92 channel:InputChannel filter:ChannelParticipantsFilter offset:int limit:int = channels.ChannelParticipants;
+//  channels.getParticipants#123e05e9 channel:InputChannel filter:ChannelParticipantsFilter offset:int limit:int hash:int = channels.ChannelParticipants;
+//
+message TL_channels_getParticipants {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputChannel channel = 3;
+    ChannelParticipantsFilter filter = 4;
+    int32 offset = 5;
+    int32 limit = 6;
+    int32 hash = 7;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  channels.inviteToChannel#199f3a6c channel:InputChannel users:Vector<InputUser> = Updates;
+//
+message TL_channels_inviteToChannel {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputChannel channel = 3;
+    repeated InputUser users = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  channels.joinChannel#24b524c5 channel:InputChannel = Updates;
+//
+message TL_channels_joinChannel {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputChannel channel = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  channels.kickFromChannel#a672de14 channel:InputChannel user_id:InputUser kicked:Bool = Updates;
+//
+message TL_channels_kickFromChannel {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputChannel channel = 3;
+    InputUser user_id = 4;
+    Bool kicked = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  channels.leaveChannel#f836aa95 channel:InputChannel = Updates;
+//
+message TL_channels_leaveChannel {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputChannel channel = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  channels.readHistory#cc104937 channel:InputChannel max_id:int = Bool;
+//
+message TL_channels_readHistory {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputChannel channel = 3;
+    int32 max_id = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  channels.readMessageContents#eab5dc38 channel:InputChannel id:Vector<int> = Bool;
+//
+message TL_channels_readMessageContents {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputChannel channel = 3;
+    repeated int32 id = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  channels.reportSpam#fe087810 channel:InputChannel user_id:InputUser id:Vector<int> = Bool;
+//
+message TL_channels_reportSpam {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputChannel channel = 3;
+    InputUser user_id = 4;
+    repeated int32 id = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  channels.setDiscussionGroup#40582bb2 broadcast:InputChannel group:InputChannel = Bool;
+//
+message TL_channels_setDiscussionGroup {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputChannel broadcast = 3;
+    InputChannel group = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  channels.setStickers#ea8ca4f9 channel:InputChannel stickerset:InputStickerSet = Bool;
+//
+message TL_channels_setStickers {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputChannel channel = 3;
+    InputStickerSet stickerset = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  channels.toggleComments#aaa29e88 channel:InputChannel enabled:Bool = Updates;
+//
+message TL_channels_toggleComments {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputChannel channel = 3;
+    Bool enabled = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  channels.toggleInvites#49609307 channel:InputChannel enabled:Bool = Updates;
+//
+message TL_channels_toggleInvites {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputChannel channel = 3;
+    Bool enabled = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  channels.togglePreHistoryHidden#eabbb94c channel:InputChannel enabled:Bool = Updates;
+//
+message TL_channels_togglePreHistoryHidden {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputChannel channel = 3;
+    Bool enabled = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  channels.toggleSignatures#1f69b606 channel:InputChannel enabled:Bool = Updates;
+//
+message TL_channels_toggleSignatures {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputChannel channel = 3;
+    Bool enabled = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  channels.toggleSlowMode#edd49ef0 channel:InputChannel seconds:int = Updates;
+//
+message TL_channels_toggleSlowMode {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputChannel channel = 3;
+    int32 seconds = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  channels.updatePinnedMessage#a72ded52 flags:# silent:flags.0?true channel:InputChannel id:int = Updates;
+//
+message TL_channels_updatePinnedMessage {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool silent = 4;
+    InputChannel channel = 5;
+    int32 id = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  channels.updateUsername#3514b3de channel:InputChannel username:string = Bool;
+//
+message TL_channels_updateUsername {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputChannel channel = 3;
+    string username = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  contacts.acceptContact#f831a20f id:InputUser = Updates;
+//
+message TL_contacts_acceptContact {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputUser id = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  contacts.addContact#e8f463d0 flags:# add_phone_privacy_exception:flags.0?true id:InputUser first_name:string last_name:string phone:string = Updates;
+//
+message TL_contacts_addContact {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool add_phone_privacy_exception = 4;
+    InputUser id = 5;
+    string first_name = 6;
+    string last_name = 7;
+    string phone = 8;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  contacts.block#332b49fc id:InputUser = Bool;
+//  contacts.block#68cc1411 id:InputPeer = Bool;
+//
+message TL_contacts_block {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputUser id332B49FC71 = 3;
+    InputPeer id68CC1411119 = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  contacts.blockFromReplies#29a8962c flags:# delete_message:flags.0?true delete_history:flags.1?true report_spam:flags.2?true msg_id:int = Updates;
+//
+message TL_contacts_blockFromReplies {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool delete_message = 4;
+    bool delete_history = 5;
+    bool report_spam = 6;
+    int32 msg_id = 7;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  contacts.deleteByPhones#1013fd9e phones:Vector<string> = Bool;
+//
+message TL_contacts_deleteByPhones {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    repeated string phones = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  contacts.deleteContact#8e953744 id:InputUser = contacts.Link;
+//
+message TL_contacts_deleteContact {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputUser id = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  contacts.deleteContacts#59ab389e id:Vector<InputUser> = Bool;
+//  contacts.deleteContacts#96a0e00 id:Vector<InputUser> = Updates;
+//
+message TL_contacts_deleteContacts {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    repeated InputUser id = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  contacts.exportCard#84e53737 = Vector<int>;
+//
+message TL_contacts_exportCard {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  contacts.getBlocked#f57c350f offset:int limit:int = contacts.Blocked;
+//
+message TL_contacts_getBlocked {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 offset = 3;
+    int32 limit = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  contacts.getContactIDs#2caa4a42 hash:int = Vector<int>;
+//
+message TL_contacts_getContactIDs {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 hash = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  contacts.getContacts#c023849f hash:int = contacts.Contacts;
+//  contacts.getContacts#22c6aa08 hash:string = contacts.Contacts;
+//
+message TL_contacts_getContacts {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 hashC023849F71 = 3;
+    string hash22C6AA0851 = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  contacts.getLocated#a356056 geo_point:InputGeoPoint = Updates;
+//  contacts.getLocated#d348bc44 flags:# background:flags.1?true geo_point:InputGeoPoint self_expires:flags.0?int = Updates;
+//
+message TL_contacts_getLocated {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputGeoPoint geo_point = 3;
+    int32 flags = 4;
+    bool background = 5;
+    int32 self_expires = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  contacts.getSaved#82f1e39f = Vector<SavedContact>;
+//
+message TL_contacts_getSaved {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  contacts.getStatuses#c4a353ee = Vector<ContactStatus>;
+//
+message TL_contacts_getStatuses {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  contacts.getTopPeers#d4982db5 flags:# correspondents:flags.0?true bots_pm:flags.1?true bots_inline:flags.2?true phone_calls:flags.3?true groups:flags.10?true channels:flags.15?true offset:int limit:int hash:int = contacts.TopPeers;
+//
+message TL_contacts_getTopPeers {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool correspondents = 4;
+    bool bots_pm = 5;
+    bool bots_inline = 6;
+    bool phone_calls = 7;
+    bool groups = 8;
+    bool channels = 9;
+    int32 offset = 10;
+    int32 limit = 11;
+    int32 hash = 12;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  contacts.importCard#4fe196fe export_card:Vector<int> = User;
+//
+message TL_contacts_importCard {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    repeated int32 export_card = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  contacts.importContacts#2c800be5 contacts:Vector<InputContact> = contacts.ImportedContacts;
+//  contacts.importContacts#da30b32d contacts:Vector<InputContact> replace:Bool = contacts.ImportedContacts;
+//
+message TL_contacts_importContacts {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    repeated InputContact contacts = 3;
+    Bool replace = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  contacts.resetSaved#879537f1 = Bool;
+//
+message TL_contacts_resetSaved {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  contacts.resetTopPeerRating#1ae373ac category:TopPeerCategory peer:InputPeer = Bool;
+//
+message TL_contacts_resetTopPeerRating {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    TopPeerCategory category = 3;
+    InputPeer peer = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  contacts.resolveUsername#f93ccba3 username:string = contacts.ResolvedPeer;
+//
+message TL_contacts_resolveUsername {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string username = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  contacts.search#11f812d8 q:string limit:int = contacts.Found;
+//
+message TL_contacts_search {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string q = 3;
+    int32 limit = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  contacts.toggleTopPeers#8514bdda enabled:Bool = Bool;
+//
+message TL_contacts_toggleTopPeers {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    Bool enabled = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  contacts.unblock#e54100bd id:InputUser = Bool;
+//  contacts.unblock#bea65d50 id:InputPeer = Bool;
+//
+message TL_contacts_unblock {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputUser idE54100BD71 = 3;
+    InputPeer idBEA65D50119 = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  folders.deleteFolder#1c295881 folder_id:int = Updates;
+//
+message TL_folders_deleteFolder {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 folder_id = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  folders.editPeerFolders#6847d0ab folder_peers:Vector<InputFolderPeer> = Updates;
+//
+message TL_folders_editPeerFolders {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    repeated InputFolderPeer folder_peers = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  help.acceptTermsOfService#ee72f79a id:DataJSON = Bool;
+//
+message TL_help_acceptTermsOfService {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    DataJSON id = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  help.dismissSuggestion#77fa99f suggestion:string = Bool;
+//
+message TL_help_dismissSuggestion {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string suggestion = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  help.editUserInfo#66b91b70 user_id:InputUser message:string entities:Vector<MessageEntity> = help.UserInfo;
+//
+message TL_help_editUserInfo {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputUser user_id = 3;
+    string message = 4;
+    repeated MessageEntity entities = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  help.getAppChangelog#9010ef6f prev_app_version:string = Updates;
+//  help.getAppChangelog#5bab7fb2 device_model:string system_version:string app_version:string lang_code:string = help.AppChangelog;
+//
+message TL_help_getAppChangelog {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string prev_app_version = 3;
+    string device_model = 4;
+    string system_version = 5;
+    string app_version = 6;
+    string lang_code = 7;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  help.getAppConfig#98914110 = JSONValue;
+//
+message TL_help_getAppConfig {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  help.getAppUpdate#ae2de196 = help.AppUpdate;
+//  help.getAppUpdate#c812ac7e device_model:string system_version:string app_version:string lang_code:string = help.AppUpdate;
+//  help.getAppUpdate#522d5a7d source:string = help.AppUpdate;
+//
+message TL_help_getAppUpdate {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string device_model = 3;
+    string system_version = 4;
+    string app_version = 5;
+    string lang_code = 6;
+    string source = 7;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  help.getCdnConfig#52029342 = CdnConfig;
+//
+message TL_help_getCdnConfig {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  help.getConfig#c4f9186b = Config;
+//
+message TL_help_getConfig {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  help.getCountriesList#735787a8 lang_code:string hash:int = help.CountriesList;
+//
+message TL_help_getCountriesList {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string lang_code = 3;
+    int32 hash = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  help.getDeepLinkInfo#3fedc75f path:string = help.DeepLinkInfo;
+//
+message TL_help_getDeepLinkInfo {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string path = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  help.getInviteText#4d392343 = help.InviteText;
+//  help.getInviteText#a4a95186 lang_code:string = help.InviteText;
+//
+message TL_help_getInviteText {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string lang_code = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  help.getNearestDc#1fb33026 = NearestDc;
+//
+message TL_help_getNearestDc {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  help.getPassportConfig#c661ad08 hash:int = help.PassportConfig;
+//
+message TL_help_getPassportConfig {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 hash = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  help.getPromoData#c0977421 = help.PromoData;
+//
+message TL_help_getPromoData {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  help.getProxyData#3d7758e1 = help.ProxyData;
+//
+message TL_help_getProxyData {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  help.getRecentMeUrls#3dc0f114 referer:string = help.RecentMeUrls;
+//
+message TL_help_getRecentMeUrls {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string referer = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  help.getSupport#9cdf08cd = help.Support;
+//
+message TL_help_getSupport {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  help.getSupportName#d360e72c = help.SupportName;
+//
+message TL_help_getSupportName {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  help.getTermsOfService#350170f3 = help.TermsOfService;
+//  help.getTermsOfService#37d78f83 lang_code:string = help.TermsOfService;
+//
+message TL_help_getTermsOfService {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string lang_code = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  help.getTermsOfServiceUpdate#2ca51fd1 = help.TermsOfServiceUpdate;
+//
+message TL_help_getTermsOfServiceUpdate {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  help.getUserInfo#38a08d3 user_id:InputUser = help.UserInfo;
+//
+message TL_help_getUserInfo {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputUser user_id = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  help.hidePromoData#1e251c95 peer:InputPeer = Bool;
+//
+message TL_help_hidePromoData {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputPeer peer = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  help.saveAppLog#6f02f748 events:Vector<InputAppEvent> = Bool;
+//
+message TL_help_saveAppLog {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    repeated InputAppEvent events = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  help.setBotUpdatesStatus#ec22cfcd pending_updates_count:int message:string = Bool;
+//
+message TL_help_setBotUpdatesStatus {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 pending_updates_count = 3;
+    string message = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  help.test#c0e202f7 = Bool;
+//
+message TL_help_test {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  langpack.getDifference#b2e4d7d from_version:int = LangPackDifference;
+//  langpack.getDifference#9d51e814 lang_code:string from_version:int = LangPackDifference;
+//  langpack.getDifference#cd984aa5 lang_pack:string lang_code:string from_version:int = LangPackDifference;
+//
+message TL_langpack_getDifference {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 from_version = 3;
+    string lang_code = 4;
+    string lang_pack = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  langpack.getLangPack#9ab5c58e lang_code:string = LangPackDifference;
+//  langpack.getLangPack#f2f2330a lang_pack:string lang_code:string = LangPackDifference;
+//
+message TL_langpack_getLangPack {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string lang_code = 3;
+    string lang_pack = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  langpack.getLanguage#6a596502 lang_pack:string lang_code:string = LangPackLanguage;
+//
+message TL_langpack_getLanguage {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string lang_pack = 3;
+    string lang_code = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  langpack.getLanguages#800fd57d = Vector<LangPackLanguage>;
+//  langpack.getLanguages#42c6978f lang_pack:string = Vector<LangPackLanguage>;
+//
+message TL_langpack_getLanguages {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string lang_pack = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  langpack.getStrings#2e1ee318 lang_code:string keys:Vector<string> = Vector<LangPackString>;
+//  langpack.getStrings#efea3803 lang_pack:string lang_code:string keys:Vector<string> = Vector<LangPackString>;
+//
+message TL_langpack_getStrings {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string lang_code = 3;
+    repeated string keys = 4;
+    string lang_pack = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.acceptEncryption#3dbc0415 peer:InputEncryptedChat g_b:bytes key_fingerprint:long = EncryptedChat;
+//
+message TL_messages_acceptEncryption {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputEncryptedChat peer = 3;
+    bytes g_b = 4;
+    int64 key_fingerprint = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.acceptUrlAuth#f729ea98 flags:# write_allowed:flags.0?true peer:InputPeer msg_id:int button_id:int = UrlAuthResult;
+//
+message TL_messages_acceptUrlAuth {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool write_allowed = 4;
+    InputPeer peer = 5;
+    int32 msg_id = 6;
+    int32 button_id = 7;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.addChatUser#f9a0aa09 chat_id:int user_id:InputUser fwd_limit:int = Updates;
+//
+message TL_messages_addChatUser {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 chat_id = 3;
+    InputUser user_id = 4;
+    int32 fwd_limit = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.checkChatInvite#3eadb1bb hash:string = ChatInvite;
+//
+message TL_messages_checkChatInvite {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string hash = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.clearAllDrafts#7e58ee9c = Bool;
+//
+message TL_messages_clearAllDrafts {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.clearRecentStickers#8999602d flags:# attached:flags.0?true = Bool;
+//
+message TL_messages_clearRecentStickers {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool attached = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.createChat#9cb126e users:Vector<InputUser> title:string = Updates;
+//
+message TL_messages_createChat {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    repeated InputUser users = 3;
+    string title = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.deleteChatUser#e0611f16 chat_id:int user_id:InputUser = Updates;
+//
+message TL_messages_deleteChatUser {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 chat_id = 3;
+    InputUser user_id = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.deleteHistory#b7c13bd9 peer:InputPeer max_id:int = messages.AffectedHistory;
+//  messages.deleteHistory#1c015b09 flags:# just_clear:flags.0?true revoke:flags.1?true peer:InputPeer max_id:int = messages.AffectedHistory;
+//
+message TL_messages_deleteHistory {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputPeer peer = 3;
+    int32 max_id = 4;
+    int32 flags = 5;
+    bool just_clear = 6;
+    bool revoke = 7;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.deleteMessages#e58e95d2 flags:# revoke:flags.0?true id:Vector<int> = messages.AffectedMessages;
+//  messages.deleteMessages#a5f18925 id:Vector<int> = messages.AffectedMessages;
+//
+message TL_messages_deleteMessages {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool revoke = 4;
+    repeated int32 id = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.deleteScheduledMessages#59ae2b16 peer:InputPeer id:Vector<int> = Updates;
+//
+message TL_messages_deleteScheduledMessages {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputPeer peer = 3;
+    repeated int32 id = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.discardEncryption#edd923c5 chat_id:int = Bool;
+//
+message TL_messages_discardEncryption {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 chat_id = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.editChatAbout#def60797 peer:InputPeer about:string = Bool;
+//
+message TL_messages_editChatAbout {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputPeer peer = 3;
+    string about = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.editChatAdmin#a9e69f2e chat_id:int user_id:InputUser is_admin:Bool = Bool;
+//
+message TL_messages_editChatAdmin {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 chat_id = 3;
+    InputUser user_id = 4;
+    Bool is_admin = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.editChatDefaultBannedRights#a5866b41 peer:InputPeer banned_rights:ChatBannedRights = Updates;
+//
+message TL_messages_editChatDefaultBannedRights {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputPeer peer = 3;
+    ChatBannedRights banned_rights = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.editChatPhoto#ca4c79d8 chat_id:int photo:InputChatPhoto = Updates;
+//
+message TL_messages_editChatPhoto {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 chat_id = 3;
+    InputChatPhoto photo = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.editChatTitle#dc452855 chat_id:int title:string = Updates;
+//
+message TL_messages_editChatTitle {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 chat_id = 3;
+    string title = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.editInlineBotMessage#130c2c85 flags:# no_webpage:flags.1?true id:InputBotInlineMessageID message:flags.11?string reply_markup:flags.2?ReplyMarkup entities:flags.3?Vector<MessageEntity> = Bool;
+//  messages.editInlineBotMessage#adc3e828 flags:# no_webpage:flags.1?true stop_geo_live:flags.12?true id:InputBotInlineMessageID message:flags.11?string media:flags.14?InputMedia reply_markup:flags.2?ReplyMarkup entities:flags.3?Vector<MessageEntity> geo_point:flags.13?InputGeoPoint = Bool;
+//  messages.editInlineBotMessage#83557dba flags:# no_webpage:flags.1?true id:InputBotInlineMessageID message:flags.11?string media:flags.14?InputMedia reply_markup:flags.2?ReplyMarkup entities:flags.3?Vector<MessageEntity> = Bool;
+//
+message TL_messages_editInlineBotMessage {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool no_webpage = 4;
+    InputBotInlineMessageID id = 5;
+    string message = 6;
+    ReplyMarkup reply_markup = 7;
+    repeated MessageEntity entities = 8;
+    bool stop_geo_live = 9;
+    InputMedia media = 10;
+    InputGeoPoint geo_point = 11;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.editMessage#ce91e4ca flags:# no_webpage:flags.1?true peer:InputPeer id:int message:flags.11?string reply_markup:flags.2?ReplyMarkup entities:flags.3?Vector<MessageEntity> = Updates;
+//  messages.editMessage#c000e4c8 flags:# no_webpage:flags.1?true stop_geo_live:flags.12?true peer:InputPeer id:int message:flags.11?string media:flags.14?InputMedia reply_markup:flags.2?ReplyMarkup entities:flags.3?Vector<MessageEntity> geo_point:flags.13?InputGeoPoint = Updates;
+//  messages.editMessage#d116f31e flags:# no_webpage:flags.1?true peer:InputPeer id:int message:flags.11?string media:flags.14?InputMedia reply_markup:flags.2?ReplyMarkup entities:flags.3?Vector<MessageEntity> = Updates;
+//  messages.editMessage#48f71778 flags:# no_webpage:flags.1?true peer:InputPeer id:int message:flags.11?string media:flags.14?InputMedia reply_markup:flags.2?ReplyMarkup entities:flags.3?Vector<MessageEntity> schedule_date:flags.15?int = Updates;
+//
+message TL_messages_editMessage {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool no_webpage = 4;
+    InputPeer peer = 5;
+    int32 id = 6;
+    string message = 7;
+    ReplyMarkup reply_markup = 8;
+    repeated MessageEntity entities = 9;
+    bool stop_geo_live = 10;
+    InputMedia media = 11;
+    InputGeoPoint geo_point = 12;
+    int32 schedule_date = 13;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.exportChatInvite#7d885289 chat_id:int = ExportedChatInvite;
+//  messages.exportChatInvite#df7534c peer:InputPeer = ExportedChatInvite;
+//
+message TL_messages_exportChatInvite {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 chat_id = 3;
+    InputPeer peer = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.faveSticker#b9ffc55b id:InputDocument unfave:Bool = Bool;
+//
+message TL_messages_faveSticker {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputDocument id = 3;
+    Bool unfave = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.forwardMessage#33963bf9 peer:InputPeer id:int random_id:long = Updates;
+//
+message TL_messages_forwardMessage {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputPeer peer = 3;
+    int32 id = 4;
+    int64 random_id = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.forwardMessages#708e0195 flags:# silent:flags.5?true background:flags.6?true with_my_score:flags.8?true from_peer:InputPeer id:Vector<int> random_id:Vector<long> to_peer:InputPeer = Updates;
+//  messages.forwardMessages#d9fee60e flags:# silent:flags.5?true background:flags.6?true with_my_score:flags.8?true from_peer:InputPeer id:Vector<int> random_id:Vector<long> to_peer:InputPeer schedule_date:flags.10?int = Updates;
+//
+message TL_messages_forwardMessages {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool silent = 4;
+    bool background = 5;
+    bool with_my_score = 6;
+    InputPeer from_peer = 7;
+    repeated int32 id = 8;
+    repeated int64 random_id = 9;
+    InputPeer to_peer = 10;
+    int32 schedule_date = 11;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.getAllChats#eba80ff0 except_ids:Vector<int> = messages.Chats;
+//
+message TL_messages_getAllChats {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    repeated int32 except_ids = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.getAllDrafts#6a3f8d65 = Updates;
+//
+message TL_messages_getAllDrafts {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.getAllStickers#1c9618b1 hash:int = messages.AllStickers;
+//
+message TL_messages_getAllStickers {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 hash = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.getArchivedStickers#57f17692 flags:# masks:flags.0?true offset_id:long limit:int = messages.ArchivedStickers;
+//
+message TL_messages_getArchivedStickers {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool masks = 4;
+    int64 offset_id = 5;
+    int32 limit = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.getAttachedStickers#cc5b67cc media:InputStickeredMedia = Vector<StickerSetCovered>;
+//
+message TL_messages_getAttachedStickers {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputStickeredMedia media = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.getBotCallbackAnswer#810a9fec flags:# game:flags.1?true peer:InputPeer msg_id:int data:flags.0?bytes = messages.BotCallbackAnswer;
+//  messages.getBotCallbackAnswer#a6e94f04 peer:InputPeer msg_id:int data:bytes = messages.BotCallbackAnswer;
+//  messages.getBotCallbackAnswer#9342ca07 flags:# game:flags.1?true peer:InputPeer msg_id:int data:flags.0?bytes password:flags.2?InputCheckPasswordSRP = messages.BotCallbackAnswer;
+//
+message TL_messages_getBotCallbackAnswer {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool game = 4;
+    InputPeer peer = 5;
+    int32 msg_id = 6;
+    bytes data = 7;
+    InputCheckPasswordSRP password = 8;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.getChats#3c6aa187 id:Vector<int> = messages.Chats;
+//
+message TL_messages_getChats {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    repeated int32 id = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.getCommonChats#d0a48c4 user_id:InputUser max_id:int limit:int = messages.Chats;
+//
+message TL_messages_getCommonChats {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputUser user_id = 3;
+    int32 max_id = 4;
+    int32 limit = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.getDhConfig#26cf8950 version:int random_length:int = messages.DhConfig;
+//
+message TL_messages_getDhConfig {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 version = 3;
+    int32 random_length = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.getDialogFilters#f19ed96d = Vector<DialogFilter>;
+//
+message TL_messages_getDialogFilters {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.getDialogUnreadMarks#22e24e22 = Vector<DialogPeer>;
+//
+message TL_messages_getDialogUnreadMarks {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.getDialogs#191ba9c5 flags:# exclude_pinned:flags.0?true offset_date:int offset_id:int offset_peer:InputPeer limit:int = messages.Dialogs;
+//  messages.getDialogs#6b47f94d offset_date:int offset_id:int offset_peer:InputPeer limit:int = messages.Dialogs;
+//  messages.getDialogs#b098aee6 flags:# exclude_pinned:flags.0?true offset_date:int offset_id:int offset_peer:InputPeer limit:int hash:int = messages.Dialogs;
+//  messages.getDialogs#a0ee3b73 flags:# exclude_pinned:flags.0?true folder_id:flags.1?int offset_date:int offset_id:int offset_peer:InputPeer limit:int hash:int = messages.Dialogs;
+//
+message TL_messages_getDialogs {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool exclude_pinned = 4;
+    int32 offset_date = 5;
+    int32 offset_id = 6;
+    InputPeer offset_peer = 7;
+    int32 limit = 8;
+    int32 hash = 9;
+    int32 folder_id = 10;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.getDiscussionMessage#446972fd peer:InputPeer msg_id:int = messages.DiscussionMessage;
+//
+message TL_messages_getDiscussionMessage {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputPeer peer = 3;
+    int32 msg_id = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.getDocumentByHash#338e2464 sha256:bytes size:int mime_type:string = Document;
+//
+message TL_messages_getDocumentByHash {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    bytes sha256 = 3;
+    int32 size_ = 4;
+    string mime_type = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.getEmojiKeywords#35a0e062 lang_code:string = EmojiKeywordsDifference;
+//
+message TL_messages_getEmojiKeywords {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string lang_code = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.getEmojiKeywordsDifference#1508b6af lang_code:string from_version:int = EmojiKeywordsDifference;
+//
+message TL_messages_getEmojiKeywordsDifference {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string lang_code = 3;
+    int32 from_version = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.getEmojiKeywordsLanguages#4e9963b2 lang_codes:Vector<string> = Vector<EmojiLanguage>;
+//
+message TL_messages_getEmojiKeywordsLanguages {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    repeated string lang_codes = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.getEmojiURL#d5b10c26 lang_code:string = EmojiURL;
+//
+message TL_messages_getEmojiURL {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string lang_code = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.getFavedStickers#21ce0b0e hash:int = messages.FavedStickers;
+//
+message TL_messages_getFavedStickers {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 hash = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.getFeaturedStickers#2dacca4f hash:int = messages.FeaturedStickers;
+//
+message TL_messages_getFeaturedStickers {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 hash = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.getFullChat#3b831c66 chat_id:int = messages.ChatFull;
+//
+message TL_messages_getFullChat {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 chat_id = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.getGameHighScores#e822649d peer:InputPeer id:int user_id:InputUser = messages.HighScores;
+//
+message TL_messages_getGameHighScores {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputPeer peer = 3;
+    int32 id = 4;
+    InputUser user_id = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.getHistory#afa92846 peer:InputPeer offset_id:int offset_date:int add_offset:int limit:int max_id:int min_id:int = messages.Messages;
+//  messages.getHistory#dcbb8260 peer:InputPeer offset_id:int offset_date:int add_offset:int limit:int max_id:int min_id:int hash:int = messages.Messages;
+//
+message TL_messages_getHistory {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputPeer peer = 3;
+    int32 offset_id = 4;
+    int32 offset_date = 5;
+    int32 add_offset = 6;
+    int32 limit = 7;
+    int32 max_id = 8;
+    int32 min_id = 9;
+    int32 hash = 10;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.getInlineBotResults#514e999d flags:# bot:InputUser peer:InputPeer geo_point:flags.0?InputGeoPoint query:string offset:string = messages.BotResults;
+//
+message TL_messages_getInlineBotResults {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    InputUser bot = 4;
+    InputPeer peer = 5;
+    InputGeoPoint geo_point = 6;
+    string query = 7;
+    string offset = 8;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.getInlineGameHighScores#f635e1b id:InputBotInlineMessageID user_id:InputUser = messages.HighScores;
+//
+message TL_messages_getInlineGameHighScores {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputBotInlineMessageID id = 3;
+    InputUser user_id = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.getMaskStickers#65b8c79f hash:int = messages.AllStickers;
+//
+message TL_messages_getMaskStickers {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 hash = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.getMessageEditData#fda68d36 peer:InputPeer id:int = messages.MessageEditData;
+//
+message TL_messages_getMessageEditData {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputPeer peer = 3;
+    int32 id = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.getMessages#4222fa74 id:Vector<int> = messages.Messages;
+//  messages.getMessages#63c66506 id:Vector<InputMessage> = messages.Messages;
+//
+message TL_messages_getMessages {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    repeated int32 id4222FA7471 = 3;
+    repeated InputMessage id63C6650685 = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.getMessagesViews#c4c8a55d peer:InputPeer id:Vector<int> increment:Bool = Vector<int>;
+//  messages.getMessagesViews#5784d3e1 peer:InputPeer id:Vector<int> increment:Bool = messages.MessageViews;
+//
+message TL_messages_getMessagesViews {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputPeer peer = 3;
+    repeated int32 id = 4;
+    Bool increment = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.getOldFeaturedStickers#5fe7025b offset:int limit:int hash:int = messages.FeaturedStickers;
+//
+message TL_messages_getOldFeaturedStickers {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 offset = 3;
+    int32 limit = 4;
+    int32 hash = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.getOnlines#6e2be050 peer:InputPeer = ChatOnlines;
+//
+message TL_messages_getOnlines {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputPeer peer = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.getPeerDialogs#2d9776b9 peers:Vector<InputPeer> = messages.PeerDialogs;
+//  messages.getPeerDialogs#e470bcfd peers:Vector<InputDialogPeer> = messages.PeerDialogs;
+//
+message TL_messages_getPeerDialogs {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    repeated InputPeer peers2D9776B971 = 3;
+    repeated InputDialogPeer peersE470BCFD85 = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.getPeerSettings#3672e09c peer:InputPeer = PeerSettings;
+//
+message TL_messages_getPeerSettings {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputPeer peer = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.getPinnedDialogs#e254d64e = messages.PeerDialogs;
+//  messages.getPinnedDialogs#d6b94df2 folder_id:int = messages.PeerDialogs;
+//
+message TL_messages_getPinnedDialogs {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 folder_id = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.getPollResults#73bb643b peer:InputPeer msg_id:int = Updates;
+//
+message TL_messages_getPollResults {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputPeer peer = 3;
+    int32 msg_id = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.getPollVotes#b86e380e flags:# peer:InputPeer id:int option:flags.0?bytes offset:flags.1?string limit:int = messages.VotesList;
+//
+message TL_messages_getPollVotes {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    InputPeer peer = 4;
+    int32 id = 5;
+    bytes option = 6;
+    string offset = 7;
+    int32 limit = 8;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.getRecentLocations#249431e2 peer:InputPeer limit:int = messages.Messages;
+//  messages.getRecentLocations#bbc45b09 peer:InputPeer limit:int hash:int = messages.Messages;
+//
+message TL_messages_getRecentLocations {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputPeer peer = 3;
+    int32 limit = 4;
+    int32 hash = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.getRecentStickers#5ea192c9 flags:# attached:flags.0?true hash:int = messages.RecentStickers;
+//
+message TL_messages_getRecentStickers {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool attached = 4;
+    int32 hash = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.getReplies#24b581ba peer:InputPeer msg_id:int offset_id:int offset_date:int add_offset:int limit:int max_id:int min_id:int hash:int = messages.Messages;
+//
+message TL_messages_getReplies {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputPeer peer = 3;
+    int32 msg_id = 4;
+    int32 offset_id = 5;
+    int32 offset_date = 6;
+    int32 add_offset = 7;
+    int32 limit = 8;
+    int32 max_id = 9;
+    int32 min_id = 10;
+    int32 hash = 11;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.getSavedGifs#83bf3d52 hash:int = messages.SavedGifs;
+//
+message TL_messages_getSavedGifs {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 hash = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.getScheduledHistory#e2c2685b peer:InputPeer hash:int = messages.Messages;
+//
+message TL_messages_getScheduledHistory {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputPeer peer = 3;
+    int32 hash = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.getScheduledMessages#bdbb0464 peer:InputPeer id:Vector<int> = messages.Messages;
+//
+message TL_messages_getScheduledMessages {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputPeer peer = 3;
+    repeated int32 id = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.getSearchCounters#732eef00 peer:InputPeer filters:Vector<MessagesFilter> = Vector<messages.SearchCounter>;
+//
+message TL_messages_getSearchCounters {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputPeer peer = 3;
+    repeated MessagesFilter filters = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.getSplitRanges#1cff7e08 = Vector<MessageRange>;
+//
+message TL_messages_getSplitRanges {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.getStatsURL#83f6c0cd peer:InputPeer = StatsURL;
+//  messages.getStatsURL#812c2ae6 flags:# dark:flags.0?true peer:InputPeer params:string = StatsURL;
+//
+message TL_messages_getStatsURL {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputPeer peer = 3;
+    int32 flags = 4;
+    bool dark = 5;
+    string params = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.getStickerSet#2619a90e stickerset:InputStickerSet = messages.StickerSet;
+//
+message TL_messages_getStickerSet {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputStickerSet stickerset = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.getStickers#ae22e045 emoticon:string hash:string = messages.Stickers;
+//  messages.getStickers#43d4f2c emoticon:string hash:int = messages.Stickers;
+//
+message TL_messages_getStickers {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string emoticon = 3;
+    string hashAE22E04551 = 4;
+    int32 hash43D4F2C85 = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.getSuggestedDialogFilters#a29cd42c = Vector<DialogFilterSuggested>;
+//
+message TL_messages_getSuggestedDialogFilters {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.getUnreadMentions#46578472 peer:InputPeer offset_id:int add_offset:int limit:int max_id:int min_id:int = messages.Messages;
+//
+message TL_messages_getUnreadMentions {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputPeer peer = 3;
+    int32 offset_id = 4;
+    int32 add_offset = 5;
+    int32 limit = 6;
+    int32 max_id = 7;
+    int32 min_id = 8;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.getWebPage#32ca8f91 url:string hash:int = WebPage;
+//
+message TL_messages_getWebPage {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string url = 3;
+    int32 hash = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.getWebPagePreview#25223e24 message:string = MessageMedia;
+//  messages.getWebPagePreview#8b68b0cc flags:# message:string entities:flags.3?Vector<MessageEntity> = MessageMedia;
+//
+message TL_messages_getWebPagePreview {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string message = 3;
+    int32 flags = 4;
+    repeated MessageEntity entities = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.hidePeerSettingsBar#4facb138 peer:InputPeer = Bool;
+//
+message TL_messages_hidePeerSettingsBar {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputPeer peer = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.hideReportSpam#a8f1709b peer:InputPeer = Bool;
+//
+message TL_messages_hideReportSpam {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputPeer peer = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.importChatInvite#6c50051c hash:string = Updates;
+//
+message TL_messages_importChatInvite {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string hash = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.installStickerSet#c78fe460 stickerset:InputStickerSet archived:Bool = messages.StickerSetInstallResult;
+//  messages.installStickerSet#7b30c3a6 stickerset:InputStickerSet disabled:Bool = Bool;
+//
+message TL_messages_installStickerSet {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputStickerSet stickerset = 3;
+    Bool archived = 4;
+    Bool disabled = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.markDialogUnread#c286d98f flags:# unread:flags.0?true peer:InputDialogPeer = Bool;
+//
+message TL_messages_markDialogUnread {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool unread = 4;
+    InputDialogPeer peer = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.migrateChat#15a3b8e3 chat_id:int = Updates;
+//
+message TL_messages_migrateChat {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 chat_id = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.readDiscussion#f731a9f4 peer:InputPeer msg_id:int read_max_id:int = Bool;
+//
+message TL_messages_readDiscussion {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputPeer peer = 3;
+    int32 msg_id = 4;
+    int32 read_max_id = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.readEncryptedHistory#7f4b690a peer:InputEncryptedChat max_date:int = Bool;
+//
+message TL_messages_readEncryptedHistory {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputEncryptedChat peer = 3;
+    int32 max_date = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.readFeaturedStickers#5b118126 id:Vector<long> = Bool;
+//
+message TL_messages_readFeaturedStickers {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    repeated int64 id = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.readHistory#e306d3a peer:InputPeer max_id:int = messages.AffectedMessages;
+//  messages.readHistory#b04f2510 peer:InputPeer max_id:int offset:int = messages.AffectedHistory;
+//
+message TL_messages_readHistory {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputPeer peer = 3;
+    int32 max_id = 4;
+    int32 offset = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.readMentions#f0189d3 peer:InputPeer = messages.AffectedHistory;
+//
+message TL_messages_readMentions {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputPeer peer = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.readMessageContents#36a73f77 id:Vector<int> = messages.AffectedMessages;
+//
+message TL_messages_readMessageContents {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    repeated int32 id = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.receivedMessages#5a954c0 max_id:int = Vector<ReceivedNotifyMessage>;
+//
+message TL_messages_receivedMessages {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 max_id = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.receivedQueue#55a5bb66 max_qts:int = Vector<long>;
+//
+message TL_messages_receivedQueue {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 max_qts = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.reorderPinnedDialogs#959ff644 flags:# force:flags.0?true order:Vector<InputPeer> = Bool;
+//  messages.reorderPinnedDialogs#5b51d63f flags:# force:flags.0?true order:Vector<InputDialogPeer> = Bool;
+//  messages.reorderPinnedDialogs#3b1adf37 flags:# force:flags.0?true folder_id:int order:Vector<InputDialogPeer> = Bool;
+//
+message TL_messages_reorderPinnedDialogs {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool force = 4;
+    repeated InputPeer order959FF64471 = 5;
+    repeated InputDialogPeer order5B51D63F85 = 6;
+    int32 folder_id = 7;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.reorderStickerSets#78337739 flags:# masks:flags.0?true order:Vector<long> = Bool;
+//  messages.reorderStickerSets#9fcfbc30 order:Vector<long> = Bool;
+//
+message TL_messages_reorderStickerSets {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool masks = 4;
+    repeated int64 order = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.report#bd82b658 peer:InputPeer id:Vector<int> reason:ReportReason = Bool;
+//
+message TL_messages_report {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputPeer peer = 3;
+    repeated int32 id = 4;
+    ReportReason reason = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.reportEncryptedSpam#4b0c8c0f peer:InputEncryptedChat = Bool;
+//
+message TL_messages_reportEncryptedSpam {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputEncryptedChat peer = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.reportSpam#cf1592db peer:InputPeer = Bool;
+//
+message TL_messages_reportSpam {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputPeer peer = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.requestEncryption#f64daf43 user_id:InputUser random_id:int g_a:bytes = EncryptedChat;
+//
+message TL_messages_requestEncryption {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputUser user_id = 3;
+    int32 random_id = 4;
+    bytes g_a = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.requestUrlAuth#e33f5613 peer:InputPeer msg_id:int button_id:int = UrlAuthResult;
+//
+message TL_messages_requestUrlAuth {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputPeer peer = 3;
+    int32 msg_id = 4;
+    int32 button_id = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.saveDraft#bc39e14b flags:# no_webpage:flags.1?true reply_to_msg_id:flags.0?int peer:InputPeer message:string entities:flags.3?Vector<MessageEntity> = Bool;
+//
+message TL_messages_saveDraft {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool no_webpage = 4;
+    int32 reply_to_msg_id = 5;
+    InputPeer peer = 6;
+    string message = 7;
+    repeated MessageEntity entities = 8;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.saveGif#327a30cb id:InputDocument unsave:Bool = Bool;
+//
+message TL_messages_saveGif {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputDocument id = 3;
+    Bool unsave = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.saveRecentSticker#392718f8 flags:# attached:flags.0?true id:InputDocument unsave:Bool = Bool;
+//  messages.saveRecentSticker#348e39bf id:InputDocument unsave:Bool = Bool;
+//
+message TL_messages_saveRecentSticker {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool attached = 4;
+    InputDocument id = 5;
+    Bool unsave = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.search#39e9ea0 flags:# peer:InputPeer q:string from_id:flags.0?InputUser filter:MessagesFilter min_date:int max_date:int offset_id:int add_offset:int limit:int max_id:int min_id:int = messages.Messages;
+//  messages.search#f288a275 flags:# peer:InputPeer q:string from_id:flags.0?InputUser filter:MessagesFilter min_date:int max_date:int offset:int max_id:int limit:int = messages.Messages;
+//  messages.search#d4569248 flags:# important_only:flags.0?true peer:InputPeer q:string filter:MessagesFilter min_date:int max_date:int offset:int max_id:int limit:int = messages.Messages;
+//  messages.search#8614ef68 flags:# peer:InputPeer q:string from_id:flags.0?InputUser filter:MessagesFilter min_date:int max_date:int offset_id:int add_offset:int limit:int max_id:int min_id:int hash:int = messages.Messages;
+//  messages.search#4e17810b flags:# peer:InputPeer q:string from_id:flags.0?InputUser top_msg_id:flags.1?int filter:MessagesFilter min_date:int max_date:int offset_id:int add_offset:int limit:int max_id:int min_id:int hash:int = messages.Messages;
+//  messages.search#c352eec flags:# peer:InputPeer q:string from_id:flags.0?InputPeer top_msg_id:flags.1?int filter:MessagesFilter min_date:int max_date:int offset_id:int add_offset:int limit:int max_id:int min_id:int hash:int = messages.Messages;
+//
+message TL_messages_search {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    InputPeer peer = 4;
+    string q = 5;
+    InputUser from_id39E9EA071 = 6;
+    MessagesFilter filter = 7;
+    int32 min_date = 8;
+    int32 max_date = 9;
+    int32 offset_id = 10;
+    int32 add_offset = 11;
+    int32 limit = 12;
+    int32 max_id = 13;
+    int32 min_id = 14;
+    int32 offset = 15;
+    bool important_only = 16;
+    int32 hash = 17;
+    int32 top_msg_id = 18;
+    InputPeer from_idC352EEC120 = 19;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.searchGifs#bf9a776b q:string offset:int = messages.FoundGifs;
+//
+message TL_messages_searchGifs {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string q = 3;
+    int32 offset = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.searchGlobal#9e3cacb0 q:string offset_date:int offset_peer:InputPeer offset_id:int limit:int = messages.Messages;
+//  messages.searchGlobal#f79c611 q:string offset_rate:int offset_peer:InputPeer offset_id:int limit:int = messages.Messages;
+//  messages.searchGlobal#bf7225a4 flags:# folder_id:flags.0?int q:string offset_rate:int offset_peer:InputPeer offset_id:int limit:int = messages.Messages;
+//  messages.searchGlobal#4bc6589a flags:# folder_id:flags.0?int q:string filter:MessagesFilter min_date:int max_date:int offset_rate:int offset_peer:InputPeer offset_id:int limit:int = messages.Messages;
+//
+message TL_messages_searchGlobal {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string q = 3;
+    int32 offset_date = 4;
+    InputPeer offset_peer = 5;
+    int32 offset_id = 6;
+    int32 limit = 7;
+    int32 offset_rate = 8;
+    int32 flags = 9;
+    int32 folder_id = 10;
+    MessagesFilter filter = 11;
+    int32 min_date = 12;
+    int32 max_date = 13;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.searchStickerSets#c2b7d08b flags:# exclude_featured:flags.0?true q:string hash:int = messages.FoundStickerSets;
+//
+message TL_messages_searchStickerSets {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool exclude_featured = 4;
+    string q = 5;
+    int32 hash = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.sendBroadcast#bf73f4da contacts:Vector<InputUser> random_id:Vector<long> message:string media:InputMedia = Updates;
+//
+message TL_messages_sendBroadcast {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    repeated InputUser contacts = 3;
+    repeated int64 random_id = 4;
+    string message = 5;
+    InputMedia media = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.sendEncrypted#a9776773 peer:InputEncryptedChat random_id:long data:bytes = messages.SentEncryptedMessage;
+//  messages.sendEncrypted#44fa7a15 flags:# silent:flags.0?true peer:InputEncryptedChat random_id:long data:bytes = messages.SentEncryptedMessage;
+//
+message TL_messages_sendEncrypted {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputEncryptedChat peer = 3;
+    int64 random_id = 4;
+    bytes data = 5;
+    int32 flags = 6;
+    bool silent = 7;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.sendEncryptedFile#9a901b66 peer:InputEncryptedChat random_id:long data:bytes file:InputEncryptedFile = messages.SentEncryptedMessage;
+//  messages.sendEncryptedFile#5559481d flags:# silent:flags.0?true peer:InputEncryptedChat random_id:long data:bytes file:InputEncryptedFile = messages.SentEncryptedMessage;
+//
+message TL_messages_sendEncryptedFile {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputEncryptedChat peer = 3;
+    int64 random_id = 4;
+    bytes data = 5;
+    InputEncryptedFile file = 6;
+    int32 flags = 7;
+    bool silent = 8;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.sendEncryptedService#32d439a4 peer:InputEncryptedChat random_id:long data:bytes = messages.SentEncryptedMessage;
+//
+message TL_messages_sendEncryptedService {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputEncryptedChat peer = 3;
+    int64 random_id = 4;
+    bytes data = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.sendInlineBotResult#b16e06fe flags:# silent:flags.5?true background:flags.6?true clear_draft:flags.7?true peer:InputPeer reply_to_msg_id:flags.0?int random_id:long query_id:long id:string = Updates;
+//  messages.sendInlineBotResult#220815b0 flags:# silent:flags.5?true background:flags.6?true clear_draft:flags.7?true hide_via:flags.11?true peer:InputPeer reply_to_msg_id:flags.0?int random_id:long query_id:long id:string schedule_date:flags.10?int = Updates;
+//
+message TL_messages_sendInlineBotResult {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool silent = 4;
+    bool background = 5;
+    bool clear_draft = 6;
+    InputPeer peer = 7;
+    int32 reply_to_msg_id = 8;
+    int64 random_id = 9;
+    int64 query_id = 10;
+    string id = 11;
+    bool hide_via = 12;
+    int32 schedule_date = 13;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.sendMedia#c8f16791 flags:# silent:flags.5?true background:flags.6?true clear_draft:flags.7?true peer:InputPeer reply_to_msg_id:flags.0?int media:InputMedia random_id:long reply_markup:flags.2?ReplyMarkup = Updates;
+//  messages.sendMedia#b8d1262b flags:# silent:flags.5?true background:flags.6?true clear_draft:flags.7?true peer:InputPeer reply_to_msg_id:flags.0?int media:InputMedia message:string random_id:long reply_markup:flags.2?ReplyMarkup entities:flags.3?Vector<MessageEntity> = Updates;
+//  messages.sendMedia#3491eba9 flags:# silent:flags.5?true background:flags.6?true clear_draft:flags.7?true peer:InputPeer reply_to_msg_id:flags.0?int media:InputMedia message:string random_id:long reply_markup:flags.2?ReplyMarkup entities:flags.3?Vector<MessageEntity> schedule_date:flags.10?int = Updates;
+//
+message TL_messages_sendMedia {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool silent = 4;
+    bool background = 5;
+    bool clear_draft = 6;
+    InputPeer peer = 7;
+    int32 reply_to_msg_id = 8;
+    InputMedia media = 9;
+    int64 random_id = 10;
+    ReplyMarkup reply_markup = 11;
+    string message = 12;
+    repeated MessageEntity entities = 13;
+    int32 schedule_date = 14;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.sendMessage#fa88427a flags:# no_webpage:flags.1?true silent:flags.5?true background:flags.6?true clear_draft:flags.7?true peer:InputPeer reply_to_msg_id:flags.0?int message:string random_id:long reply_markup:flags.2?ReplyMarkup entities:flags.3?Vector<MessageEntity> = Updates;
+//  messages.sendMessage#520c3870 flags:# no_webpage:flags.1?true silent:flags.5?true background:flags.6?true clear_draft:flags.7?true peer:InputPeer reply_to_msg_id:flags.0?int message:string random_id:long reply_markup:flags.2?ReplyMarkup entities:flags.3?Vector<MessageEntity> schedule_date:flags.10?int = Updates;
+//
+message TL_messages_sendMessage {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool no_webpage = 4;
+    bool silent = 5;
+    bool background = 6;
+    bool clear_draft = 7;
+    InputPeer peer = 8;
+    int32 reply_to_msg_id = 9;
+    string message = 10;
+    int64 random_id = 11;
+    ReplyMarkup reply_markup = 12;
+    repeated MessageEntity entities = 13;
+    int32 schedule_date = 14;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.sendMultiMedia#2095512f flags:# silent:flags.5?true background:flags.6?true clear_draft:flags.7?true peer:InputPeer reply_to_msg_id:flags.0?int multi_media:Vector<InputSingleMedia> = Updates;
+//  messages.sendMultiMedia#cc0110cb flags:# silent:flags.5?true background:flags.6?true clear_draft:flags.7?true peer:InputPeer reply_to_msg_id:flags.0?int multi_media:Vector<InputSingleMedia> schedule_date:flags.10?int = Updates;
+//
+message TL_messages_sendMultiMedia {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool silent = 4;
+    bool background = 5;
+    bool clear_draft = 6;
+    InputPeer peer = 7;
+    int32 reply_to_msg_id = 8;
+    repeated InputSingleMedia multi_media = 9;
+    int32 schedule_date = 10;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.sendScheduledMessages#bd38850a peer:InputPeer id:Vector<int> = Updates;
+//
+message TL_messages_sendScheduledMessages {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputPeer peer = 3;
+    repeated int32 id = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.sendScreenshotNotification#c97df020 peer:InputPeer reply_to_msg_id:int random_id:long = Updates;
+//
+message TL_messages_sendScreenshotNotification {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputPeer peer = 3;
+    int32 reply_to_msg_id = 4;
+    int64 random_id = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.sendVote#10ea6184 peer:InputPeer msg_id:int options:Vector<bytes> = Updates;
+//
+message TL_messages_sendVote {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputPeer peer = 3;
+    int32 msg_id = 4;
+    repeated bytes options = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.setBotCallbackAnswer#d58f130a flags:# alert:flags.1?true query_id:long message:flags.0?string url:flags.2?string cache_time:int = Bool;
+//  messages.setBotCallbackAnswer#481c591a flags:# alert:flags.1?true query_id:long message:flags.0?string = Bool;
+//
+message TL_messages_setBotCallbackAnswer {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool alert = 4;
+    int64 query_id = 5;
+    string message = 6;
+    string url = 7;
+    int32 cache_time = 8;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.setBotPrecheckoutResults#9c2dd95 flags:# success:flags.1?true query_id:long error:flags.0?string = Bool;
+//
+message TL_messages_setBotPrecheckoutResults {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool success = 4;
+    int64 query_id = 5;
+    string error = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.setBotShippingResults#e5f672fa flags:# query_id:long error:flags.0?string shipping_options:flags.1?Vector<ShippingOption> = Bool;
+//
+message TL_messages_setBotShippingResults {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    int64 query_id = 4;
+    string error = 5;
+    repeated ShippingOption shipping_options = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.setEncryptedTyping#791451ed peer:InputEncryptedChat typing:Bool = Bool;
+//
+message TL_messages_setEncryptedTyping {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputEncryptedChat peer = 3;
+    Bool typing = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.setGameScore#8ef8ecc0 flags:# edit_message:flags.0?true force:flags.1?true peer:InputPeer id:int user_id:InputUser score:int = Updates;
+//
+message TL_messages_setGameScore {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool edit_message = 4;
+    bool force = 5;
+    InputPeer peer = 6;
+    int32 id = 7;
+    InputUser user_id = 8;
+    int32 score = 9;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.setInlineBotResults#eb5ea206 flags:# gallery:flags.0?true private:flags.1?true query_id:long results:Vector<InputBotInlineResult> cache_time:int next_offset:flags.2?string switch_pm:flags.3?InlineBotSwitchPM = Bool;
+//
+message TL_messages_setInlineBotResults {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool gallery = 4;
+    bool private = 5;
+    int64 query_id = 6;
+    repeated InputBotInlineResult results = 7;
+    int32 cache_time = 8;
+    string next_offset = 9;
+    InlineBotSwitchPM switch_pm = 10;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.setInlineGameScore#15ad9f64 flags:# edit_message:flags.0?true force:flags.1?true id:InputBotInlineMessageID user_id:InputUser score:int = Bool;
+//
+message TL_messages_setInlineGameScore {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool edit_message = 4;
+    bool force = 5;
+    InputBotInlineMessageID id = 6;
+    InputUser user_id = 7;
+    int32 score = 8;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.setTyping#a3825e50 peer:InputPeer action:SendMessageAction = Bool;
+//  messages.setTyping#58943ee2 flags:# peer:InputPeer top_msg_id:flags.0?int action:SendMessageAction = Bool;
+//
+message TL_messages_setTyping {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputPeer peer = 3;
+    SendMessageAction action = 4;
+    int32 flags = 5;
+    int32 top_msg_id = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.startBot#e6df7378 bot:InputUser peer:InputPeer random_id:long start_param:string = Updates;
+//
+message TL_messages_startBot {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputUser bot = 3;
+    InputPeer peer = 4;
+    int64 random_id = 5;
+    string start_param = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.toggleChatAdmins#ec8bd9e1 chat_id:int enabled:Bool = Updates;
+//
+message TL_messages_toggleChatAdmins {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 chat_id = 3;
+    Bool enabled = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.toggleDialogPin#3289be6a flags:# pinned:flags.0?true peer:InputPeer = Bool;
+//  messages.toggleDialogPin#a731e257 flags:# pinned:flags.0?true peer:InputDialogPeer = Bool;
+//
+message TL_messages_toggleDialogPin {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool pinned = 4;
+    InputPeer peer3289BE6A71 = 5;
+    InputDialogPeer peerA731E25785 = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.toggleStickerSets#b5052fea flags:# uninstall:flags.0?true archive:flags.1?true unarchive:flags.2?true stickersets:Vector<InputStickerSet> = Bool;
+//
+message TL_messages_toggleStickerSets {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool uninstall = 4;
+    bool archive = 5;
+    bool unarchive = 6;
+    repeated InputStickerSet stickersets = 7;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.uninstallStickerSet#f96e55de stickerset:InputStickerSet = Bool;
+//
+message TL_messages_uninstallStickerSet {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputStickerSet stickerset = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.unpinAllMessages#f025bc8b peer:InputPeer = messages.AffectedHistory;
+//
+message TL_messages_unpinAllMessages {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputPeer peer = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.updateDialogFilter#1ad4a04a flags:# id:int filter:flags.0?DialogFilter = Bool;
+//
+message TL_messages_updateDialogFilter {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    int32 id = 4;
+    DialogFilter filter = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.updateDialogFiltersOrder#c563c1e4 order:Vector<int> = Bool;
+//
+message TL_messages_updateDialogFiltersOrder {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    repeated int32 order = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.updatePinnedMessage#d2aaf7ec flags:# silent:flags.0?true peer:InputPeer id:int = Updates;
+//
+message TL_messages_updatePinnedMessage {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool silent = 4;
+    InputPeer peer = 5;
+    int32 id = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.uploadEncryptedFile#5057c497 peer:InputEncryptedChat file:InputEncryptedFile = EncryptedFile;
+//
+message TL_messages_uploadEncryptedFile {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputEncryptedChat peer = 3;
+    InputEncryptedFile file = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  messages.uploadMedia#519bc2b1 peer:InputPeer media:InputMedia = MessageMedia;
+//
+message TL_messages_uploadMedia {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputPeer peer = 3;
+    InputMedia media = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  payments.clearSavedInfo#d83d70c1 flags:# credentials:flags.0?true info:flags.1?true = Bool;
+//
+message TL_payments_clearSavedInfo {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool credentials = 4;
+    bool info = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  payments.getBankCardData#2e79d779 number:string = payments.BankCardData;
+//
+message TL_payments_getBankCardData {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string number = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  payments.getPaymentForm#99f09745 msg_id:int = payments.PaymentForm;
+//
+message TL_payments_getPaymentForm {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 msg_id = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  payments.getPaymentReceipt#a092a980 msg_id:int = payments.PaymentReceipt;
+//
+message TL_payments_getPaymentReceipt {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 msg_id = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  payments.getSavedInfo#227d824b = payments.SavedInfo;
+//
+message TL_payments_getSavedInfo {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  payments.sendPaymentForm#2b8879b3 flags:# msg_id:int requested_info_id:flags.0?string shipping_option_id:flags.1?string credentials:InputPaymentCredentials = payments.PaymentResult;
+//
+message TL_payments_sendPaymentForm {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    int32 msg_id = 4;
+    string requested_info_id = 5;
+    string shipping_option_id = 6;
+    InputPaymentCredentials credentials = 7;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  payments.validateRequestedInfo#770a8e74 flags:# save:flags.0?true msg_id:int info:PaymentRequestedInfo = payments.ValidatedRequestedInfo;
+//
+message TL_payments_validateRequestedInfo {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool save = 4;
+    int32 msg_id = 5;
+    PaymentRequestedInfo info = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  phone.acceptCall#3bd2b4a0 peer:InputPhoneCall g_b:bytes protocol:PhoneCallProtocol = phone.PhoneCall;
+//
+message TL_phone_acceptCall {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputPhoneCall peer = 3;
+    bytes g_b = 4;
+    PhoneCallProtocol protocol = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  phone.checkGroupCall#b74a7bea call:InputGroupCall source:int = Bool;
+//
+message TL_phone_checkGroupCall {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputGroupCall call = 3;
+    int32 source = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  phone.confirmCall#2efe1722 peer:InputPhoneCall g_a:bytes key_fingerprint:long protocol:PhoneCallProtocol = phone.PhoneCall;
+//
+message TL_phone_confirmCall {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputPhoneCall peer = 3;
+    bytes g_a = 4;
+    int64 key_fingerprint = 5;
+    PhoneCallProtocol protocol = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  phone.createGroupCall#bd3dabe0 peer:InputPeer random_id:int = Updates;
+//
+message TL_phone_createGroupCall {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputPeer peer = 3;
+    int32 random_id = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  phone.discardCall#78d413a6 peer:InputPhoneCall duration:int reason:PhoneCallDiscardReason connection_id:long = Updates;
+//  phone.discardCall#b2cbc1c0 flags:# video:flags.0?true peer:InputPhoneCall duration:int reason:PhoneCallDiscardReason connection_id:long = Updates;
+//
+message TL_phone_discardCall {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputPhoneCall peer = 3;
+    int32 duration = 4;
+    PhoneCallDiscardReason reason = 5;
+    int64 connection_id = 6;
+    int32 flags = 7;
+    bool video = 8;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  phone.discardGroupCall#7a777135 call:InputGroupCall = Updates;
+//
+message TL_phone_discardGroupCall {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputGroupCall call = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  phone.editGroupCallMember#63146ae4 flags:# muted:flags.0?true call:InputGroupCall user_id:InputUser = Updates;
+//
+message TL_phone_editGroupCallMember {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool muted = 4;
+    InputGroupCall call = 5;
+    InputUser user_id = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  phone.getCallConfig#55451fa9 = DataJSON;
+//
+message TL_phone_getCallConfig {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  phone.getGroupCall#c7cb017 call:InputGroupCall = phone.GroupCall;
+//
+message TL_phone_getGroupCall {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputGroupCall call = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  phone.getGroupParticipants#c9f1d285 call:InputGroupCall ids:Vector<int> sources:Vector<int> offset:string limit:int = phone.GroupParticipants;
+//
+message TL_phone_getGroupParticipants {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputGroupCall call = 3;
+    repeated int32 ids = 4;
+    repeated int32 sources = 5;
+    string offset = 6;
+    int32 limit = 7;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  phone.inviteToGroupCall#7b393160 call:InputGroupCall users:Vector<InputUser> = Updates;
+//
+message TL_phone_inviteToGroupCall {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputGroupCall call = 3;
+    repeated InputUser users = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  phone.joinGroupCall#5f9c8e62 flags:# muted:flags.0?true call:InputGroupCall params:DataJSON = Updates;
+//
+message TL_phone_joinGroupCall {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool muted = 4;
+    InputGroupCall call = 5;
+    DataJSON params = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  phone.leaveGroupCall#500377f9 call:InputGroupCall source:int = Updates;
+//
+message TL_phone_leaveGroupCall {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputGroupCall call = 3;
+    int32 source = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  phone.receivedCall#17d54f61 peer:InputPhoneCall = Bool;
+//
+message TL_phone_receivedCall {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputPhoneCall peer = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  phone.requestCall#5b95b3d4 user_id:InputUser random_id:int g_a_hash:bytes protocol:PhoneCallProtocol = phone.PhoneCall;
+//  phone.requestCall#42ff96ed flags:# video:flags.0?true user_id:InputUser random_id:int g_a_hash:bytes protocol:PhoneCallProtocol = phone.PhoneCall;
+//
+message TL_phone_requestCall {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputUser user_id = 3;
+    int32 random_id = 4;
+    bytes g_a_hash = 5;
+    PhoneCallProtocol protocol = 6;
+    int32 flags = 7;
+    bool video = 8;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  phone.saveCallDebug#277add7e peer:InputPhoneCall debug:DataJSON = Bool;
+//
+message TL_phone_saveCallDebug {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputPhoneCall peer = 3;
+    DataJSON debug = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  phone.sendSignalingData#ff7a9383 peer:InputPhoneCall data:bytes = Bool;
+//
+message TL_phone_sendSignalingData {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputPhoneCall peer = 3;
+    bytes data = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  phone.setCallRating#1c536a34 peer:InputPhoneCall rating:int comment:string = Updates;
+//  phone.setCallRating#59ead627 flags:# user_initiative:flags.0?true peer:InputPhoneCall rating:int comment:string = Updates;
+//
+message TL_phone_setCallRating {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputPhoneCall peer = 3;
+    int32 rating = 4;
+    string comment = 5;
+    int32 flags = 6;
+    bool user_initiative = 7;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  phone.toggleGroupCallSettings#74bbb43d flags:# call:InputGroupCall join_muted:flags.0?Bool = Updates;
+//
+message TL_phone_toggleGroupCallSettings {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    InputGroupCall call = 4;
+    Bool join_muted = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  photos.deletePhotos#87cf7f2f id:Vector<InputPhoto> = Vector<long>;
+//
+message TL_photos_deletePhotos {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    repeated InputPhoto id = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  photos.getUserPhotos#91cd32a8 user_id:InputUser offset:int max_id:long limit:int = photos.Photos;
+//
+message TL_photos_getUserPhotos {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputUser user_id = 3;
+    int32 offset = 4;
+    int64 max_id = 5;
+    int32 limit = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  photos.updateProfilePhoto#f0bb5152 id:InputPhoto = UserProfilePhoto;
+//  photos.updateProfilePhoto#eef579a0 id:InputPhoto crop:InputPhotoCrop = UserProfilePhoto;
+//  photos.updateProfilePhoto#72d4742c id:InputPhoto = photos.Photo;
+//
+message TL_photos_updateProfilePhoto {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputPhoto id = 3;
+    InputPhotoCrop crop = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  photos.uploadProfilePhoto#4f32c098 file:InputFile = photos.Photo;
+//  photos.uploadProfilePhoto#d50f9c88 file:InputFile caption:string geo_point:InputGeoPoint crop:InputPhotoCrop = photos.Photo;
+//  photos.uploadProfilePhoto#89f30f69 flags:# file:flags.0?InputFile video:flags.1?InputFile video_start_ts:flags.2?double = photos.Photo;
+//
+message TL_photos_uploadProfilePhoto {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputFile file = 3;
+    string caption = 4;
+    InputGeoPoint geo_point = 5;
+    InputPhotoCrop crop = 6;
+    int32 flags = 7;
+    InputFile video = 8;
+    double video_start_ts = 9;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  stats.getBroadcastStats#ab42441a flags:# dark:flags.0?true channel:InputChannel = stats.BroadcastStats;
+//  stats.getBroadcastStats#e6300dba flags:# dark:flags.0?true channel:InputChannel tz_offset:int = stats.BroadcastStats;
+//
+message TL_stats_getBroadcastStats {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool dark = 4;
+    InputChannel channel = 5;
+    int32 tz_offset = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  stats.getMegagroupStats#dcdf8607 flags:# dark:flags.0?true channel:InputChannel = stats.MegagroupStats;
+//
+message TL_stats_getMegagroupStats {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool dark = 4;
+    InputChannel channel = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  stats.getMessagePublicForwards#5630281b channel:InputChannel msg_id:int offset_rate:int offset_peer:InputPeer offset_id:int limit:int = messages.Messages;
+//
+message TL_stats_getMessagePublicForwards {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputChannel channel = 3;
+    int32 msg_id = 4;
+    int32 offset_rate = 5;
+    InputPeer offset_peer = 6;
+    int32 offset_id = 7;
+    int32 limit = 8;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  stats.getMessageStats#b6e0a3f5 flags:# dark:flags.0?true channel:InputChannel msg_id:int = stats.MessageStats;
+//
+message TL_stats_getMessageStats {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool dark = 4;
+    InputChannel channel = 5;
+    int32 msg_id = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  stats.loadAsyncGraph#621d5fa0 flags:# token:string x:flags.0?long = StatsGraph;
+//
+message TL_stats_loadAsyncGraph {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    string token = 4;
+    int64 x = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  stickers.addStickerToSet#8653febe stickerset:InputStickerSet sticker:InputStickerSetItem = messages.StickerSet;
+//
+message TL_stickers_addStickerToSet {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputStickerSet stickerset = 3;
+    InputStickerSetItem sticker = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  stickers.changeStickerPosition#ffb6d4ca sticker:InputDocument position:int = messages.StickerSet;
+//
+message TL_stickers_changeStickerPosition {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputDocument sticker = 3;
+    int32 position = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  stickers.createStickerSet#9bd86e6a flags:# masks:flags.0?true user_id:InputUser title:string short_name:string stickers:Vector<InputStickerSetItem> = messages.StickerSet;
+//  stickers.createStickerSet#f1036780 flags:# masks:flags.0?true animated:flags.1?true user_id:InputUser title:string short_name:string thumb:flags.2?InputDocument stickers:Vector<InputStickerSetItem> = messages.StickerSet;
+//
+message TL_stickers_createStickerSet {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool masks = 4;
+    InputUser user_id = 5;
+    string title = 6;
+    string short_name = 7;
+    repeated InputStickerSetItem stickers = 8;
+    bool animated = 9;
+    InputDocument thumb = 10;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  stickers.removeStickerFromSet#f7760f51 sticker:InputDocument = messages.StickerSet;
+//
+message TL_stickers_removeStickerFromSet {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputDocument sticker = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  stickers.setStickerSetThumb#9a364e30 stickerset:InputStickerSet thumb:InputDocument = messages.StickerSet;
+//
+message TL_stickers_setStickerSetThumb {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputStickerSet stickerset = 3;
+    InputDocument thumb = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  updates.getChannelDifference#3173d78 flags:# force:flags.0?true channel:InputChannel filter:ChannelMessagesFilter pts:int limit:int = updates.ChannelDifference;
+//  updates.getChannelDifference#bb32d7c0 channel:InputChannel filter:ChannelMessagesFilter pts:int limit:int = updates.ChannelDifference;
+//
+message TL_updates_getChannelDifference {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool force = 4;
+    InputChannel channel = 5;
+    ChannelMessagesFilter filter = 6;
+    int32 pts = 7;
+    int32 limit = 8;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  updates.getDifference#25939651 flags:# pts:int pts_total_limit:flags.0?int date:int qts:int = updates.Difference;
+//  updates.getDifference#a041495 pts:int date:int qts:int = updates.Difference;
+//
+message TL_updates_getDifference {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    int32 pts = 4;
+    int32 pts_total_limit = 5;
+    int32 date = 6;
+    int32 qts = 7;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  updates.getState#edd4882a = updates.State;
+//
+message TL_updates_getState {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  upload.getCdnFile#2000bcc3 file_token:bytes offset:int limit:int = upload.CdnFile;
+//
+message TL_upload_getCdnFile {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    bytes file_token = 3;
+    int32 offset = 4;
+    int32 limit = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  upload.getCdnFileHashes#f715c87b file_token:bytes offset:int = Vector<CdnFileHash>;
+//  upload.getCdnFileHashes#4da54231 file_token:bytes offset:int = Vector<FileHash>;
+//
+message TL_upload_getCdnFileHashes {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    bytes file_token = 3;
+    int32 offset = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  upload.getFile#e3a6cfb5 location:InputFileLocation offset:int limit:int = upload.File;
+//  upload.getFile#b15a9afc flags:# precise:flags.0?true location:InputFileLocation offset:int limit:int = upload.File;
+//
+message TL_upload_getFile {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputFileLocation location = 3;
+    int32 offset = 4;
+    int32 limit = 5;
+    int32 flags = 6;
+    bool precise = 7;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  upload.getFileHashes#c7025931 location:InputFileLocation offset:int = Vector<FileHash>;
+//
+message TL_upload_getFileHashes {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputFileLocation location = 3;
+    int32 offset = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  upload.getWebFile#24e6818d location:InputWebFileLocation offset:int limit:int = upload.WebFile;
+//
+message TL_upload_getWebFile {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputWebFileLocation location = 3;
+    int32 offset = 4;
+    int32 limit = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  upload.reuploadCdnFile#1af91c09 file_token:bytes request_token:bytes = Vector<CdnFileHash>;
+//  upload.reuploadCdnFile#9b2754a8 file_token:bytes request_token:bytes = Vector<FileHash>;
+//
+message TL_upload_reuploadCdnFile {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    bytes file_token = 3;
+    bytes request_token = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  upload.saveBigFilePart#de7b673d file_id:long file_part:int file_total_parts:int bytes:bytes = Bool;
+//
+message TL_upload_saveBigFilePart {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int64 file_id = 3;
+    int32 file_part = 4;
+    int32 file_total_parts = 5;
+    bytes bytes = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  upload.saveFilePart#b304a621 file_id:long file_part:int bytes:bytes = Bool;
+//
+message TL_upload_saveFilePart {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int64 file_id = 3;
+    int32 file_part = 4;
+    bytes bytes = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  users.getFullUser#ca30a5b1 id:InputUser = UserFull;
+//
+message TL_users_getFullUser {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputUser id = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  users.getUsers#d91a548 id:Vector<InputUser> = Vector<User>;
+//
+message TL_users_getUsers {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    repeated InputUser id = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  users.setSecureValueErrors#90c894b5 id:InputUser errors:Vector<SecureValueError> = Bool;
+//
+message TL_users_setSecureValueErrors {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputUser id = 3;
+    repeated SecureValueError errors = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  wallet.getKeySecretSalt#b57f346 revoke:Bool = wallet.KeySecretSalt;
+//
+message TL_wallet_getKeySecretSalt {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    Bool revoke = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//  wallet.sendLiteRequest#e2c9d33e body:bytes = wallet.LiteResponse;
+//
+message TL_wallet_sendLiteRequest {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    bytes body = 3;
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+// Vector api result type
+message Vector_WallPaper {
+    repeated WallPaper datas = 1;
+}
+message Vector_User {
+    repeated User datas = 1;
+}
+message Vector_ContactStatus {
+    repeated ContactStatus datas = 1;
+}
+message Vector_int {
+    repeated int32 datas = 1;
+}
+message Vector_ReceivedNotifyMessage {
+    repeated ReceivedNotifyMessage datas = 1;
+}
+message Vector_long {
+    repeated int64 datas = 1;
+}
+message Vector_StickerSetCovered {
+    repeated StickerSetCovered datas = 1;
+}
+message Vector_CdnFileHash {
+    repeated CdnFileHash datas = 1;
+}
+message Vector_LangPackString {
+    repeated LangPackString datas = 1;
+}
+message Vector_LangPackLanguage {
+    repeated LangPackLanguage datas = 1;
+}
+message Vector_SecureValue {
+    repeated SecureValue datas = 1;
+}
+message Vector_SavedContact {
+    repeated SavedContact datas = 1;
+}
+message Vector_MessageRange {
+    repeated MessageRange datas = 1;
+}
+message Vector_DialogPeer {
+    repeated DialogPeer datas = 1;
+}
+message Vector_FileHash {
+    repeated FileHash datas = 1;
+}
+message Vector_EmojiLanguage {
+    repeated EmojiLanguage datas = 1;
+}
+message Vector_messages_SearchCounter {
+    repeated messages_SearchCounter datas = 1;
+}
+message Vector_DialogFilter {
+    repeated DialogFilter datas = 1;
+}
+message Vector_DialogFilterSuggested {
+    repeated DialogFilterSuggested datas = 1;
+}
+

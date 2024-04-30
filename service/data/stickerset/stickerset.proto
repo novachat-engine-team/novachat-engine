@@ -1,0 +1,49 @@
+/*
+ * Copyright (c) 2021-present,  NovaChat-Engine.
+ *  All rights reserved.
+ *
+ *
+ * @Author: Coder (coderxw@gmail.com)
+ * @Time : 2021/04/13 16:46
+ * @File :
+ * @Desc :
+ *
+ */
+
+syntax = "proto3";
+
+package data_stickerset;
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+
+import "stickerpack.proto";
+import "document.proto";
+
+option (gogoproto.marshaler_all) = true;
+option (gogoproto.sizer_all) = true;
+option (gogoproto.unmarshaler_all) = true;
+option (gogoproto.gostring_all) = true;
+
+option go_package = "data_stickerset";
+
+message StickerSet {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int64 id = 1 [(gogoproto.moretags) = "bson:\"_id\""];
+  bool official = 2 [(gogoproto.moretags) = "bson:\"official\""];
+  bool masks = 3 [(gogoproto.moretags) = "bson:\"masks\""];
+  bool animated = 4 [(gogoproto.moretags) = "bson:\"animated\""];
+  int64 access_hash = 5 [(gogoproto.moretags) = "bson:\"access_hash\""];
+  string title = 6 [(gogoproto.moretags) = "bson:\"title\""];
+  string short_name = 7 [(gogoproto.moretags) = "bson:\"short_name\""];
+  repeated data_fs.Document thumbs = 8 [(gogoproto.moretags) = "bson:\"thumbs\""];
+  int32 thumb_dc_id = 9 [(gogoproto.moretags) = "bson:\"thumb_dc_id\""];
+  int32 count = 10 [(gogoproto.moretags) = "bson:\"count\""];
+  int32 hash = 11 [(gogoproto.moretags) = "bson:\"hash\""];
+  repeated string emoticons = 12[(gogoproto.moretags) = "bson:\"emoticons\""];
+  int32 version = 13 [(gogoproto.moretags) = "bson:\"version\""];
+  repeated StickerPack packs = 14 [(gogoproto.moretags) = "bson:\"packs\""];
+  //Archived 	bool 	`json:"archived" bson:"archived"`
+}

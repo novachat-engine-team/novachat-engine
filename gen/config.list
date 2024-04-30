@@ -1,0 +1,7 @@
+
+cmd/biz_server/config/*.json
+pkg/cmd/gate/conf/*.key
+pkg/cmd/gate/conf/*.pub
+pkg/cmd/biz_server/rpc/help/*.json
+service/app/country/numbers.txt
+

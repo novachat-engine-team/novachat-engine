@@ -1,0 +1,101 @@
+/*
+ * Copyright (c) 2021-present,  NovaChat-Engine.
+ *  All rights reserved.
+ * 
+ *  
+ * @Author: Coder (coderxw@gmail.com)
+ * @Time : 2023/02/09 16:57
+ * @File : schema.tl.core_types.proto
+ * @Desc : 
+ *
+ */
+
+syntax = "proto3";
+
+package mtproto;
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+
+option go_package = "mtproto";
+
+option (gogoproto.marshaler_all) = true;
+option (gogoproto.sizer_all) = true;
+option (gogoproto.unmarshaler_all) = true;
+option (gogoproto.gostring_all) = true;
+
+import "schema.tl.cmd.proto";
+
+
+///////////////////////////////////////////////////////////////////////////////
+// Bool <--
+//  + TL_boolFalse
+//  + TL_boolTrue
+//
+message Bool {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+//  boolFalse#bc799737 = Bool;
+//
+message TL_boolFalse {
+    Bool data2 = 1;
+}
+
+//  boolTrue#997275b5 = Bool;
+//
+message TL_boolTrue {
+    Bool data2 = 1;
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+// Error <--
+//  + TL_error
+//
+message Error {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 code = 3;
+    string text = 4;
+}
+
+//  error#c4b9f9bb code:int text:string = Error;
+//
+message TL_error {
+    Error data2 = 1;
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+// Null <--
+//  + TL_null
+//
+message Null {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+//  null#56730bcc = Null;
+//
+message TL_null {
+    Null data2 = 1;
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+// True <--
+//  + TL_true
+//
+message True {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+//  true#3fedd339 = True;
+//
+message TL_true {
+    True data2 = 1;
+}
+
+

@@ -1,0 +1,47 @@
+/*
+ * Copyright (c) 2021-present,  NovaChat-Engine.
+ *  All rights reserved.
+ *
+ *
+ * @Author: Coder (coderxw@gmail.com)
+ * @Time : 2021/04/13 16:46
+ * @File :
+ * @Desc :
+ *
+ */
+
+syntax = "proto3";
+
+package data_stickerset;
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+
+option (gogoproto.marshaler_all) = true;
+option (gogoproto.sizer_all) = true;
+option (gogoproto.unmarshaler_all) = true;
+option (gogoproto.gostring_all) = true;
+
+option go_package = "data_stickerset";
+
+message StickerInstall {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  string id               = 1 [(gogoproto.moretags) = "bson:\"_id\""];
+  int64 user_id           = 2 [(gogoproto.moretags) = "bson:\"user_id\""];
+  int64 sticker_set_id    = 3 [(gogoproto.moretags) = "bson:\"sticker_set_id\""];
+  bool  installed         = 4 [(gogoproto.moretags) = "bson:\"installed\""];
+  int32 date              = 5 [(gogoproto.moretags) = "bson:\"date\""];
+  bool  archived          = 6 [(gogoproto.moretags) = "bson:\"archived\""];
+}
+
+message StickerSetRecent {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int64 user_id           = 1 [(gogoproto.moretags) = "bson:\"_id\""];
+  repeated int64 faved    = 2 [(gogoproto.moretags) = "bson:\"faved\""];
+  repeated int64 recent   = 3 [(gogoproto.moretags) = "bson:\"recent\""];
+}

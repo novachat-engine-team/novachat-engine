@@ -1,0 +1,65 @@
+syntax = "proto3";
+
+package rpc_client;
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+
+option go_package = "rpc_client";
+
+option (gogoproto.marshaler_all) = true;
+option (gogoproto.sizer_all) = true;
+option (gogoproto.unmarshaler_all) = true;
+option (gogoproto.gostring_all) = true;
+
+message CallConnections {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  message Connect {
+    option (gogoproto.goproto_sizecache) = false;
+    option (gogoproto.goproto_unkeyed) = false;
+    option (gogoproto.goproto_unrecognized) = false;
+
+    bytes   peer_tag      = 1;
+    string  ip            = 2;
+    string  ipv6          = 3;
+    int32   port          = 4;
+  }
+
+  message WebRTCConnect {
+    option (gogoproto.goproto_sizecache) = false;
+    option (gogoproto.goproto_unkeyed) = false;
+    option (gogoproto.goproto_unrecognized) = false;
+
+    bool    stun          = 1;
+    string  ip            = 2;
+    string  ipv6          = 3;
+    int32   port          = 4;
+    string  username      = 5;
+    string  password      = 6;
+  }
+
+  int64                   endpoint_id     = 1;
+  Connect                 connect         = 2;
+  repeated WebRTCConnect  webRTC_connect  = 3;
+}
+
+message CreatePhoneCall {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int64   id                = 1;
+  int64   admin_id          = 2;
+  int64   participant_id    = 3;
+  string  version           = 4;
+}
+
+message DiscardPhoneCall {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int64   id                = 1;
+}

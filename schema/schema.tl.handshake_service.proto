@@ -1,0 +1,75 @@
+/*
+ * Copyright (c) 2021-present,  NovaChat-Engine.
+ *  All rights reserved.
+ * 
+ *  
+ * @Author: Coder (coderxw@gmail.com)
+ * @Time : 2023/02/09 16:57
+ * @File : schema.tl.handshake_service.proto
+ * @Desc : 
+ *
+ */
+
+syntax = "proto3";
+
+package mtproto;
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+
+option go_package = "mtproto";
+
+option (gogoproto.marshaler_all) = true;
+option (gogoproto.sizer_all) = true;
+option (gogoproto.unmarshaler_all) = true;
+option (gogoproto.gostring_all) = true;
+
+import "schema.tl.cmd.proto";
+
+
+///////////////////////////////////////////////////////////////////////////////
+// [destroy_auth_key#d1435160 = DestroyAuthKeyRes;]
+message TL_destroy_auth_key {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// [req_DH_params#d712e4be nonce:int128 server_nonce:int128 p:string q:string public_key_fingerprint:long encrypted_data:string = Server_DH_Params;]
+message TL_req_DH_params {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    bytes nonce = 3;
+    bytes server_nonce = 4;
+    string p = 5;
+    string q = 6;
+    int64 public_key_fingerprint = 7;
+    string encrypted_data = 8;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// [req_pq#60469778 nonce:int128 = ResPQ;]
+message TL_req_pq {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    bytes nonce = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// [req_pq_multi#be7e8ef1 nonce:int128 = ResPQ;]
+message TL_req_pq_multi {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    bytes nonce = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// [set_client_DH_params#f5045f1f nonce:int128 server_nonce:int128 encrypted_data:string = Set_client_DH_params_answer;]
+message TL_set_client_DH_params {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    bytes nonce = 3;
+    bytes server_nonce = 4;
+    string encrypted_data = 5;
+}
+
+

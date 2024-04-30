@@ -1,0 +1,52 @@
+syntax = "proto3";
+
+package rpc_client;
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+import "google/protobuf/any.proto";
+
+option go_package = "rpc_client";
+
+option (gogoproto.marshaler_all) = true;
+option (gogoproto.sizer_all) = true;
+option (gogoproto.unmarshaler_all) = true;
+option (gogoproto.gostring_all) = true;
+
+message TransformData {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int64 auth_key_id = 1;
+  string src_server = 2;
+  string ip         = 3;
+  uint64 conn_id    = 4;
+  bytes buf         = 5;
+  int32 valid_until = 6;
+  int32 expires_in = 7;
+  int32 valid_since = 8;
+  int32 layer = 9;
+  int32 temp_auth_key = 10;
+  int64 msg_id      = 11;
+}
+
+message CloseEvent {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int64 auth_key_id = 1;
+  uint64 conn_id    = 2;
+}
+
+message PushUpdatesEvent {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int64 auth_key_id = 1;
+  repeated int64 session_id  = 2;
+  google.protobuf.Any  updates = 3;
+  string server_peer = 4;
+}
+

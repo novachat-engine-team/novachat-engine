@@ -1,0 +1,67 @@
+syntax = "proto3";
+
+package mtproto;
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+import "schema.tl.sync.proto";
+import "schema.tl.sync.tl.proto";
+import "google/protobuf/any.proto";
+
+option go_package = "mtproto";
+
+option (gogoproto.marshaler_all) = true;
+option (gogoproto.sizer_all) = true;
+option (gogoproto.unmarshaler_all) = true;
+option (gogoproto.gostring_all) = true;
+
+/////  Internal Struct
+//
+// TL_int32
+message TL_int32 {
+  int32 value = 1;
+}
+
+// TL_int64
+message TL_int64 {
+  int64 value = 1;
+}
+
+// TL_string
+message TL_string {
+  string value = 1;
+}
+
+// TL_users
+message TL_users {
+  repeated mtproto.TL_user user_list = 1;
+}
+
+// TL_int32s
+message TL_int32s {
+  repeated int32 value = 1;
+}
+
+// TL_int64s
+message TL_int64s {
+  repeated int64 value = 1;
+}
+
+// TL_strings
+message TL_strings {
+  repeated TL_string value = 1;
+}
+
+// Users
+message Users {
+  repeated mtproto.User user_list = 1;
+}
+
+// InitConnection
+message InitConnection {
+  int64 auth_key_id = 1;
+  int64 origin_auth_key_id = 2;
+  int32 layer = 3;
+  google.protobuf.Any extend_data = 4;
+  string ip = 5;
+}
+

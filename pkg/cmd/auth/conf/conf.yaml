@@ -1,0 +1,48 @@
+
+log:
+  logpath: ./log/auth.log
+  loglevel: "debug"
+  rotatemaxsize: 100
+  rotatemaxage: 6
+  rotatemaxbackups: 100
+
+pprof:
+  port: 6021
+  isopen: false
+
+server:
+  ver: 0.0.1
+  serverid: 1
+
+rpcserver:
+  addr: 127.0.0.1:10061
+
+rpcdiscovery:
+  schema: novachat-engine
+  servername: auth
+  etcdaddr: etcd-hosts:2379
+  ttl: 10
+
+authclient:
+  schema: novachat-engine
+  servername: auth
+  etcdaddr: etcd-hosts:2379
+  dialtimeout:
+  dialkeepalivetime:
+  dialkeepalivetimeout:
+  maxcallsendmsgsize:
+  maxcallrecvmsgsize:
+  username:
+  password:
+  balancer: random
+
+mongodb:
+  direct: true
+  addr:
+    - mongodb-hosts:27017
+  replicaset: rs0
+  database: ""
+  username: ""
+  password: ""
+  maxpoolsize: 128
+  minpoolsize: 16

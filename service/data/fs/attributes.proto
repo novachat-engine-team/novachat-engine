@@ -1,0 +1,69 @@
+syntax = "proto3";
+
+package data_fs;
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+option go_package = "data_fs";
+
+option (gogoproto.marshaler_all) = true;
+option (gogoproto.sizer_all) = true;
+option (gogoproto.unmarshaler_all) = true;
+option (gogoproto.gostring_all) = true;
+
+message StickerSet {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int32 sticker_set_type = 1 [(gogoproto.moretags) = "bson:\"sticker_set_type\""];
+  int64 sticker_set_id   = 2 [(gogoproto.moretags) = "bson:\"sticker_set_id\""];
+  int64 access_hash      = 3 [(gogoproto.moretags) = "bson:\"access_hash\""];
+  string short_name      = 4 [(gogoproto.moretags) = "bson:\"short_name\""];
+  string emoticon        = 5 [(gogoproto.moretags) = "bson:\"emoticon\""];
+}
+
+//maskCoords#aed6dbb2 n:int x:double y:double zoom:double = MaskCoords;
+message MaskCoords {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int32 n     = 1 [(gogoproto.moretags) = "bson:\"n\""];
+  double x    = 2 [(gogoproto.moretags) = "bson:\"x\""];
+  double y    = 3 [(gogoproto.moretags) = "bson:\"y\""];
+  double zoom = 4 [(gogoproto.moretags) = "bson:\"zoom\""];
+}
+
+message Attributes {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int32 attributes_type = 1 [(gogoproto.moretags) = "bson:\"attributes_type\""];
+// documentAttributeFilename
+    string filename  = 2 [(gogoproto.moretags) = "bson:\"filename\""];
+// documentAttributeImageSize
+    int32 image_w = 3 [(gogoproto.moretags) = "bson:\"image_w\""];
+    int32 image_h = 4 [(gogoproto.moretags) = "bson:\"image_h\""];
+// documentAttributeAnimated
+    //bool animated = 5 [(gogoproto.moretags) = "bson:\"animated\""];
+// documentAttributeSticker
+    StickerSet sticker_data = 7 [(gogoproto.moretags) = "bson:\"sticker_data\""];
+    bool mask = 8 [(gogoproto.moretags) = "bson:\"mask\""];
+    string alt = 9 [(gogoproto.moretags) = "bson:\"alt\""];
+    MaskCoords mask_coords = 10 [(gogoproto.moretags) = "bson:\"mask_coords\""];
+// documentAttributeVideo
+    bool round_message  = 11 [(gogoproto.moretags) = "bson:\"round_message\""];
+    bool supports_streaming = 12 [(gogoproto.moretags) = "bson:\"supports_streaming\""];
+    int32 video_duration = 13 [(gogoproto.moretags) = "bson:\"video_duration\""];
+    int32 video_w = 14 [(gogoproto.moretags) = "bson:\"video_w\""];
+    int32 video_h = 15 [(gogoproto.moretags) = "bson:\"video_h\""];
+//documentAttributeAudio
+    bool voice  = 16 [(gogoproto.moretags) = "bson:\"voice\""];
+    int32 audio_duration = 17 [(gogoproto.moretags) = "bson:\"audio_duration\""];
+    string title = 18 [(gogoproto.moretags) = "bson:\"title\""];
+    string performer = 19 [(gogoproto.moretags) = "bson:\"performer\""];
+    bytes waveform =  20 [(gogoproto.moretags) = "bson:\"waveform\""];
+// documentAttributeHasStickers
+    bool stickers = 21 [(gogoproto.moretags) = "bson:\"stickers\""];
+}

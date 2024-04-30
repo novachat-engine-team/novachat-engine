@@ -1,0 +1,25 @@
+#folder
+
+#fixed file
+.class
+.exe
+.log
+.prefs
+.classpath
+.metadata
+.settings
+.DS_Store
+Thumbs.db
+.project
+*.iml
+*.ipr
+*.iws
+*.tar.gz
+*.bak
+*.log
+*.swp
+*.swo
+*.out
+*.exe
+/gen
+

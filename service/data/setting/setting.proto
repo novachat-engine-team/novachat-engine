@@ -1,0 +1,38 @@
+/*
+ * Copyright (c) 2021-present,  NovaChat-Engine.
+ *  All rights reserved.
+ *
+ *
+ * @Author: Coder (coderxw@gmail.com)
+ * @Time : 2021/04/13 16:46
+ * @File :
+ * @Desc :
+ *
+ */
+
+syntax = "proto3";
+
+package data_setting;
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+import "notify_setting.proto";
+
+option (gogoproto.marshaler_all) = true;
+option (gogoproto.sizer_all) = true;
+option (gogoproto.unmarshaler_all) = true;
+option (gogoproto.gostring_all) = true;
+
+option go_package = "data_setting";
+
+message Setting {
+	option (gogoproto.goproto_sizecache) = false;
+	option (gogoproto.goproto_unkeyed) = false;
+	option (gogoproto.goproto_unrecognized) = false;
+
+	int64 user_id 			  = 1  [(gogoproto.moretags) = "bson:\"user_id\""];
+	int64 peer_id 			  = 2  [(gogoproto.moretags) = "bson:\"peer_id\""];
+	int32 peer_type 		  = 3  [(gogoproto.moretags) = "bson:\"peer_type\""];
+	NotifySetting setting = 4  [(gogoproto.moretags) = "bson:\"setting\""];
+	int32 notify_type		  = 5  [(gogoproto.moretags) = "bson:\"notify_type\""];
+	string id						  = 6 [(gogoproto.moretags) = "bson:\"_id\""];
+}

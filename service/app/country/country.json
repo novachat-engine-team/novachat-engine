@@ -1,0 +1,2940 @@
+[{
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "JM",
+  "default_name": "Jamaica",
+  "name": "Jamaica",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "1876",
+    "prefixes": ["1876"],
+    "patterns": ["XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "KN",
+  "default_name": "Saint Kitts \u0026 Nevis",
+  "name": "Saint Kitts \u0026 Nevis",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "1869",
+    "prefixes": ["1869"],
+    "patterns": ["XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "TT",
+  "default_name": "Trinidad \u0026 Tobago",
+  "name": "Trinidad \u0026 Tobago",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "1868",
+    "prefixes": ["1868"],
+    "patterns": ["XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "VC",
+  "default_name": "Saint Vincent \u0026 the Grenadines",
+  "name": "Saint Vincent \u0026 the Grenadines",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "1784",
+    "prefixes": ["1784"],
+    "patterns": ["XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "DM",
+  "default_name": "Dominica",
+  "name": "Dominica",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "1767",
+    "prefixes": ["1767"],
+    "patterns": ["XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "LC",
+  "default_name": "Saint Lucia",
+  "name": "Saint Lucia",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "1758",
+    "prefixes": ["1758"],
+    "patterns": ["XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "SX",
+  "default_name": "Sint Maarten",
+  "name": "Sint Maarten",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "1721",
+    "prefixes": ["1721"],
+    "patterns": ["XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "AS",
+  "default_name": "American Samoa",
+  "name": "American Samoa",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "1684",
+    "prefixes": ["1684"],
+    "patterns": ["XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "GU",
+  "default_name": "Guam",
+  "name": "Guam",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "1671",
+    "prefixes": ["1671"],
+    "patterns": ["XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "MP",
+  "default_name": "Northern Mariana Islands",
+  "name": "Northern Mariana Islands",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "1670",
+    "prefixes": ["1670"],
+    "patterns": ["XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "MS",
+  "default_name": "Montserrat",
+  "name": "Montserrat",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "1664",
+    "prefixes": ["1664"],
+    "patterns": ["XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "TC",
+  "default_name": "Turks \u0026 Caicos Islands",
+  "name": "Turks \u0026 Caicos Islands",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "1649",
+    "prefixes": ["1649"],
+    "patterns": ["XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "GD",
+  "default_name": "Grenada",
+  "name": "Grenada",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "1473",
+    "prefixes": ["1473"],
+    "patterns": ["XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "BM",
+  "default_name": "Bermuda",
+  "name": "Bermuda",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "1441",
+    "prefixes": ["1441"],
+    "patterns": ["XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "KY",
+  "default_name": "Cayman Islands",
+  "name": "Cayman Islands",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "1345",
+    "prefixes": ["1345"],
+    "patterns": ["XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "VI",
+  "default_name": "US Virgin Islands",
+  "name": "US Virgin Islands",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "1340",
+    "prefixes": ["1340"],
+    "patterns": ["XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "VG",
+  "default_name": "British Virgin Islands",
+  "name": "British Virgin Islands",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "1284",
+    "prefixes": ["1284"],
+    "patterns": ["XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "AG",
+  "default_name": "Antigua \u0026 Barbuda",
+  "name": "Antigua \u0026 Barbuda",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "1268",
+    "prefixes": ["1268"],
+    "patterns": ["XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "AI",
+  "default_name": "Anguilla",
+  "name": "Anguilla",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "1264",
+    "prefixes": ["1264"],
+    "patterns": ["XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "BB",
+  "default_name": "Barbados",
+  "name": "Barbados",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "1246",
+    "prefixes": ["1246"],
+    "patterns": ["XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "BS",
+  "default_name": "Bahamas",
+  "name": "Bahamas",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "1242",
+    "prefixes": ["1242"],
+    "patterns": ["XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "UZ",
+  "default_name": "Uzbekistan",
+  "name": "Uzbekistan",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "998",
+    "prefixes": ["998"],
+    "patterns": ["XX", "XXXXXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "KG",
+  "default_name": "Kyrgyzstan",
+  "name": "Kyrgyzstan",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "996",
+    "prefixes": ["996"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "GE",
+  "default_name": "Georgia",
+  "name": "Georgia",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "995",
+    "prefixes": ["995"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "AZ",
+  "default_name": "Azerbaijan",
+  "name": "Azerbaijan",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "994",
+    "prefixes": ["994"],
+    "patterns": ["XX", "XXX", "XX", "XX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "TM",
+  "default_name": "Turkmenistan",
+  "name": "Turkmenistan",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "993",
+    "prefixes": ["993"],
+    "patterns": ["XX", "XXXXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "TJ",
+  "default_name": "Tajikistan",
+  "name": "Tajikistan",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "992",
+    "prefixes": ["992"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "NP",
+  "default_name": "Nepal",
+  "name": "Nepal",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "977",
+    "prefixes": ["977"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "MN",
+  "default_name": "Mongolia",
+  "name": "Mongolia",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "976",
+    "prefixes": ["976"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "BT",
+  "default_name": "Bhutan",
+  "name": "Bhutan",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "975",
+    "prefixes": ["975"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "QA",
+  "default_name": "Qatar",
+  "name": "Qatar",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "974",
+    "prefixes": ["974"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "BH",
+  "default_name": "Bahrain",
+  "name": "Bahrain",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "973",
+    "prefixes": ["973"],
+    "patterns": ["XXXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "IL",
+  "default_name": "Israel",
+  "name": "Israel",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "972",
+    "prefixes": ["972"],
+    "patterns": ["XX", "XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "AE",
+  "default_name": "United Arab Emirates",
+  "name": "United Arab Emirates",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "971",
+    "prefixes": ["971"],
+    "patterns": ["XX", "XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "PS",
+  "default_name": "Palestine",
+  "name": "Palestine",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "970",
+    "prefixes": ["970"],
+    "patterns": ["XXX", "XX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "OM",
+  "default_name": "Oman",
+  "name": "Oman",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "968",
+    "prefixes": ["968"],
+    "patterns": ["XXXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "YE",
+  "default_name": "Yemen",
+  "name": "Yemen",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "967",
+    "prefixes": ["967"],
+    "patterns": ["XXX", "XXX", "XXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "SA",
+  "default_name": "Saudi Arabia",
+  "name": "Saudi Arabia",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "966",
+    "prefixes": ["966"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "KW",
+  "default_name": "Kuwait",
+  "name": "Kuwait",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "965",
+    "prefixes": ["965"],
+    "patterns": ["XXXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "IQ",
+  "default_name": "Iraq",
+  "name": "Iraq",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "964",
+    "prefixes": ["964"],
+    "patterns": ["XXX", "XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "SY",
+  "default_name": "Syria",
+  "name": "Syria",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "963",
+    "prefixes": ["963"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "JO",
+  "default_name": "Jordan",
+  "name": "Jordan",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "962",
+    "prefixes": ["962"],
+    "patterns": ["X", "XXXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "LB",
+  "default_name": "Lebanon",
+  "name": "Lebanon",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "961",
+    "prefixes": ["961"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "MV",
+  "default_name": "Maldives",
+  "name": "Maldives",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "960",
+    "prefixes": ["960"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "TW",
+  "default_name": "Taiwan",
+  "name": "Taiwan",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "886",
+    "prefixes": ["886"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "BD",
+  "default_name": "Bangladesh",
+  "name": "Bangladesh",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "880",
+    "prefixes": ["880"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "LA",
+  "default_name": "Laos",
+  "name": "Laos",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "856",
+    "prefixes": ["856"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "KH",
+  "default_name": "Cambodia",
+  "name": "Cambodia",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "855",
+    "prefixes": ["855"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "MO",
+  "default_name": "Macau",
+  "name": "Macau",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "853",
+    "prefixes": ["853"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "HK",
+  "default_name": "Hong Kong",
+  "name": "Hong Kong",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "852",
+    "prefixes": ["852"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "KP",
+  "default_name": "North Korea",
+  "name": "North Korea",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "850",
+    "prefixes": ["850"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "MH",
+  "default_name": "Marshall Islands",
+  "name": "Marshall Islands",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "692",
+    "prefixes": ["692"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "FM",
+  "default_name": "Micronesia",
+  "name": "Micronesia",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "691",
+    "prefixes": ["691"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "TK",
+  "default_name": "Tokelau",
+  "name": "Tokelau",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "690",
+    "prefixes": ["690"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "PF",
+  "default_name": "French Polynesia",
+  "name": "French Polynesia",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "689",
+    "prefixes": ["689"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "TV",
+  "default_name": "Tuvalu",
+  "name": "Tuvalu",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "688",
+    "prefixes": ["688"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "NC",
+  "default_name": "New Caledonia",
+  "name": "New Caledonia",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "687",
+    "prefixes": ["687"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "KI",
+  "default_name": "Kiribati",
+  "name": "Kiribati",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "686",
+    "prefixes": ["686"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "WS",
+  "default_name": "Samoa",
+  "name": "Samoa",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "685",
+    "prefixes": ["685"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "NU",
+  "default_name": "Niue",
+  "name": "Niue",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "683",
+    "prefixes": ["683"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "CK",
+  "default_name": "Cook Islands",
+  "name": "Cook Islands",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "682",
+    "prefixes": ["682"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "WF",
+  "default_name": "Wallis \u0026 Futuna",
+  "name": "Wallis \u0026 Futuna",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "681",
+    "prefixes": ["681"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "PW",
+  "default_name": "Palau",
+  "name": "Palau",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "680",
+    "prefixes": ["680"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "FJ",
+  "default_name": "Fiji",
+  "name": "Fiji",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "679",
+    "prefixes": ["679"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "VU",
+  "default_name": "Vanuatu",
+  "name": "Vanuatu",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "678",
+    "prefixes": ["678"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "SB",
+  "default_name": "Solomon Islands",
+  "name": "Solomon Islands",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "677",
+    "prefixes": ["677"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "TO",
+  "default_name": "Tonga",
+  "name": "Tonga",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "676",
+    "prefixes": ["676"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "PG",
+  "default_name": "Papua New Guinea",
+  "name": "Papua New Guinea",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "675",
+    "prefixes": ["675"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "NR",
+  "default_name": "Nauru",
+  "name": "Nauru",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "674",
+    "prefixes": ["674"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "BN",
+  "default_name": "Brunei Darussalam",
+  "name": "Brunei Darussalam",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "673",
+    "prefixes": ["673"],
+    "patterns": ["XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "NF",
+  "default_name": "Norfolk Island",
+  "name": "Norfolk Island",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "672",
+    "prefixes": ["672"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "TL",
+  "default_name": "Timor-Leste",
+  "name": "Timor-Leste",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "670",
+    "prefixes": ["670"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "BQ",
+  "default_name": "Bonaire, Sint Eustatius \u0026 Saba",
+  "name": "Bonaire, Sint Eustatius \u0026 Saba",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "599",
+    "prefixes": ["599"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "CW",
+  "default_name": "Curaçao",
+  "name": "Curaçao",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "599",
+    "prefixes": ["599"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "UY",
+  "default_name": "Uruguay",
+  "name": "Uruguay",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "598",
+    "prefixes": ["598"],
+    "patterns": ["XXXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "SR",
+  "default_name": "Suriname",
+  "name": "Suriname",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "597",
+    "prefixes": ["597"],
+    "patterns": ["XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "MQ",
+  "default_name": "Martinique",
+  "name": "Martinique",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "596",
+    "prefixes": ["596"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "PY",
+  "default_name": "Paraguay",
+  "name": "Paraguay",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "595",
+    "prefixes": ["595"],
+    "patterns": ["XXX", "XXX", "XXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "GF",
+  "default_name": "French Guiana",
+  "name": "French Guiana",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "594",
+    "prefixes": ["594"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "EC",
+  "default_name": "Ecuador",
+  "name": "Ecuador",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "593",
+    "prefixes": ["593"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "GY",
+  "default_name": "Guyana",
+  "name": "Guyana",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "592",
+    "prefixes": ["592"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "BO",
+  "default_name": "Bolivia",
+  "name": "Bolivia",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "591",
+    "prefixes": ["591"],
+    "patterns": ["X", "XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "GP",
+  "default_name": "Guadeloupe",
+  "name": "Guadeloupe",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "590",
+    "prefixes": ["590"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "HT",
+  "default_name": "Haiti",
+  "name": "Haiti",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "509",
+    "prefixes": ["509"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "PM",
+  "default_name": "Saint Pierre \u0026 Miquelon",
+  "name": "Saint Pierre \u0026 Miquelon",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "508",
+    "prefixes": ["508"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "PA",
+  "default_name": "Panama",
+  "name": "Panama",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "507",
+    "prefixes": ["507"],
+    "patterns": ["XXXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "CR",
+  "default_name": "Costa Rica",
+  "name": "Costa Rica",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "506",
+    "prefixes": ["506"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "NI",
+  "default_name": "Nicaragua",
+  "name": "Nicaragua",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "505",
+    "prefixes": ["505"],
+    "patterns": ["XXXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "HN",
+  "default_name": "Honduras",
+  "name": "Honduras",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "504",
+    "prefixes": ["504"],
+    "patterns": ["XXXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "SV",
+  "default_name": "El Salvador",
+  "name": "El Salvador",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "503",
+    "prefixes": ["503"],
+    "patterns": ["XXXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "GT",
+  "default_name": "Guatemala",
+  "name": "Guatemala",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "502",
+    "prefixes": ["502"],
+    "patterns": ["X", "XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "BZ",
+  "default_name": "Belize",
+  "name": "Belize",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "501",
+    "prefixes": ["501"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "FK",
+  "default_name": "Falkland Islands",
+  "name": "Falkland Islands",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "500",
+    "prefixes": ["500"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "LI",
+  "default_name": "Liechtenstein",
+  "name": "Liechtenstein",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "423",
+    "prefixes": ["423"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "SK",
+  "default_name": "Slovakia",
+  "name": "Slovakia",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "421",
+    "prefixes": ["421"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "CZ",
+  "default_name": "Czech Republic",
+  "name": "Czech Republic",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "420",
+    "prefixes": ["420"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "MK",
+  "default_name": "Macedonia",
+  "name": "Macedonia",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "389",
+    "prefixes": ["389"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "BA",
+  "default_name": "Bosnia \u0026 Herzegovina",
+  "name": "Bosnia \u0026 Herzegovina",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "387",
+    "prefixes": ["387"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "SI",
+  "default_name": "Slovenia",
+  "name": "Slovenia",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "386",
+    "prefixes": ["386"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "HR",
+  "default_name": "Croatia",
+  "name": "Croatia",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "385",
+    "prefixes": ["385"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "XK",
+  "default_name": "Kosovo",
+  "name": "Kosovo",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "383",
+    "prefixes": ["383"],
+    "patterns": ["XXXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "ME",
+  "default_name": "Montenegro",
+  "name": "Montenegro",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "382",
+    "prefixes": ["382"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "RS",
+  "default_name": "Serbia",
+  "name": "Serbia",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "381",
+    "prefixes": ["381"],
+    "patterns": ["XX", "XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "UA",
+  "default_name": "Ukraine",
+  "name": "Ukraine",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "380",
+    "prefixes": ["380"],
+    "patterns": ["XX", "XXX", "XX", "XX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "SM",
+  "default_name": "San Marino",
+  "name": "San Marino",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "378",
+    "prefixes": ["378"],
+    "patterns": ["XXX", "XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "MC",
+  "default_name": "Monaco",
+  "name": "Monaco",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "377",
+    "prefixes": ["377"],
+    "patterns": ["XXXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "AD",
+  "default_name": "Andorra",
+  "name": "Andorra",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "376",
+    "prefixes": ["376"],
+    "patterns": ["XX", "XX", "XX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "BY",
+  "default_name": "Belarus",
+  "name": "Belarus",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "375",
+    "prefixes": ["375"],
+    "patterns": ["XX", "XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "AM",
+  "default_name": "Armenia",
+  "name": "Armenia",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "374",
+    "prefixes": ["374"],
+    "patterns": ["XX", "XXX", "XXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "MD",
+  "default_name": "Moldova",
+  "name": "Moldova",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "373",
+    "prefixes": ["373"],
+    "patterns": ["XX", "XXX", "XXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "EE",
+  "default_name": "Estonia",
+  "name": "Estonia",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "372",
+    "prefixes": ["372"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "LV",
+  "default_name": "Latvia",
+  "name": "Latvia",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "371",
+    "prefixes": ["371"],
+    "patterns": ["XXX", "XXXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "LT",
+  "default_name": "Lithuania",
+  "name": "Lithuania",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "370",
+    "prefixes": ["370"],
+    "patterns": ["XXX", "XXXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "BG",
+  "default_name": "Bulgaria",
+  "name": "Bulgaria",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "359",
+    "prefixes": ["359"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "FI",
+  "default_name": "Finland",
+  "name": "Finland",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "358",
+    "prefixes": ["358"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "CY",
+  "default_name": "Cyprus",
+  "name": "Cyprus",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "357",
+    "prefixes": ["357"],
+    "patterns": ["XXXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "MT",
+  "default_name": "Malta",
+  "name": "Malta",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "356",
+    "prefixes": ["356"],
+    "patterns": ["XX", "XX", "XX", "XX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "AL",
+  "default_name": "Albania",
+  "name": "Albania",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "355",
+    "prefixes": ["355"],
+    "patterns": ["XX", "XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "IS",
+  "default_name": "Iceland",
+  "name": "Iceland",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "354",
+    "prefixes": ["354"],
+    "patterns": ["XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "IE",
+  "default_name": "Ireland",
+  "name": "Ireland",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "353",
+    "prefixes": ["353"],
+    "patterns": ["XX", "XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "LU",
+  "default_name": "Luxembourg",
+  "name": "Luxembourg",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "352",
+    "prefixes": ["352"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "PT",
+  "default_name": "Portugal",
+  "name": "Portugal",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "351",
+    "prefixes": ["351"],
+    "patterns": ["X", "XXXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "GI",
+  "default_name": "Gibraltar",
+  "name": "Gibraltar",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "350",
+    "prefixes": ["350"],
+    "patterns": ["XXXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "GL",
+  "default_name": "Greenland",
+  "name": "Greenland",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "299",
+    "prefixes": ["299"],
+    "patterns": ["XXX", "XXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "FO",
+  "default_name": "Faroe Islands",
+  "name": "Faroe Islands",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "298",
+    "prefixes": ["298"],
+    "patterns": ["XXX", "XXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "AW",
+  "default_name": "Aruba",
+  "name": "Aruba",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "297",
+    "prefixes": ["297"],
+    "patterns": ["XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "ER",
+  "default_name": "Eritrea",
+  "name": "Eritrea",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "291",
+    "prefixes": ["291"],
+    "patterns": ["X", "XXX", "XXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "SH",
+  "default_name": "Saint Helena",
+  "name": "Saint Helena",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "290",
+    "prefixes": ["290"],
+    "patterns": ["XX", "XXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "KM",
+  "default_name": "Comoros",
+  "name": "Comoros",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "269",
+    "prefixes": ["269"],
+    "patterns": ["XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "SZ",
+  "default_name": "Swaziland",
+  "name": "Swaziland",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "268",
+    "prefixes": ["268"],
+    "patterns": ["XXXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "BW",
+  "default_name": "Botswana",
+  "name": "Botswana",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "267",
+    "prefixes": ["267"],
+    "patterns": ["XX", "XXX", "XXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "LS",
+  "default_name": "Lesotho",
+  "name": "Lesotho",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "266",
+    "prefixes": ["266"],
+    "patterns": ["XX", "XXX", "XXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "MW",
+  "default_name": "Malawi",
+  "name": "Malawi",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "265",
+    "prefixes": ["265"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "NA",
+  "default_name": "Namibia",
+  "name": "Namibia",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "264",
+    "prefixes": ["264"],
+    "patterns": ["XX", "XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "ZW",
+  "default_name": "Zimbabwe",
+  "name": "Zimbabwe",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "263",
+    "prefixes": ["263"],
+    "patterns": ["XX", "XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "RE",
+  "default_name": "Réunion",
+  "name": "Réunion",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "262",
+    "prefixes": ["262"],
+    "patterns": ["XXX", "XXX", "XXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "MG",
+  "default_name": "Madagascar",
+  "name": "Madagascar",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "261",
+    "prefixes": ["261"],
+    "patterns": ["XX", "XX", "XXX", "XX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "ZM",
+  "default_name": "Zambia",
+  "name": "Zambia",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "260",
+    "prefixes": ["260"],
+    "patterns": ["XX", "XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "MZ",
+  "default_name": "Mozambique",
+  "name": "Mozambique",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "258",
+    "prefixes": ["258"],
+    "patterns": ["XX", "XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "BI",
+  "default_name": "Burundi",
+  "name": "Burundi",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "257",
+    "prefixes": ["257"],
+    "patterns": ["XX", "XX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "UG",
+  "default_name": "Uganda",
+  "name": "Uganda",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "256",
+    "prefixes": ["256"],
+    "patterns": ["XX", "XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "TZ",
+  "default_name": "Tanzania",
+  "name": "Tanzania",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "255",
+    "prefixes": ["255"],
+    "patterns": ["XX", "XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "KE",
+  "default_name": "Kenya",
+  "name": "Kenya",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "254",
+    "prefixes": ["254"],
+    "patterns": ["XXX", "XXX", "XXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "DJ",
+  "default_name": "Djibouti",
+  "name": "Djibouti",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "253",
+    "prefixes": ["253"],
+    "patterns": ["XX", "XX", "XX", "XX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "SO",
+  "default_name": "Somalia",
+  "name": "Somalia",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "252",
+    "prefixes": ["252"],
+    "patterns": ["XX", "XXX", "XXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "ET",
+  "default_name": "Ethiopia",
+  "name": "Ethiopia",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "251",
+    "prefixes": ["251"],
+    "patterns": ["XX", "XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "RW",
+  "default_name": "Rwanda",
+  "name": "Rwanda",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "250",
+    "prefixes": ["250"],
+    "patterns": ["XXX", "XXX", "XXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "SD",
+  "default_name": "Sudan",
+  "name": "Sudan",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "249",
+    "prefixes": ["249"],
+    "patterns": ["XX", "XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "SC",
+  "default_name": "Seychelles",
+  "name": "Seychelles",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "248",
+    "prefixes": ["248"],
+    "patterns": ["X", "XX", "XX", "XX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "SH",
+  "default_name": "Saint Helena",
+  "name": "Saint Helena",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "247",
+    "prefixes": ["247"],
+    "patterns": ["XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "IO",
+  "default_name": "Diego Garcia",
+  "name": "Diego Garcia",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "246",
+    "prefixes": ["246"],
+    "patterns": ["XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "GW",
+  "default_name": "Guinea-Bissau",
+  "name": "Guinea-Bissau",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "245",
+    "prefixes": ["245"],
+    "patterns": ["XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "AO",
+  "default_name": "Angola",
+  "name": "Angola",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "244",
+    "prefixes": ["244"],
+    "patterns": ["XXX", "XXX", "XXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "CD",
+  "default_name": "Congo (Dem. Rep.)",
+  "name": "Congo (Dem. Rep.)",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "243",
+    "prefixes": ["243"],
+    "patterns": ["XX", "XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "CG",
+  "default_name": "Congo (Rep.)",
+  "name": "Congo (Rep.)",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "242",
+    "prefixes": ["242"],
+    "patterns": ["XX", "XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "GA",
+  "default_name": "Gabon",
+  "name": "Gabon",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "241",
+    "prefixes": ["241"],
+    "patterns": ["X", "XX", "XX", "XX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "GQ",
+  "default_name": "Equatorial Guinea",
+  "name": "Equatorial Guinea",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "240",
+    "prefixes": ["240"],
+    "patterns": ["XXX", "XXX", "XXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "ST",
+  "default_name": "São Tomé \u0026 Príncipe",
+  "name": "São Tomé \u0026 Príncipe",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "239",
+    "prefixes": ["239"],
+    "patterns": ["XX", "XXXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "CV",
+  "default_name": "Cape Verde",
+  "name": "Cape Verde",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "238",
+    "prefixes": ["238"],
+    "patterns": ["XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "CM",
+  "default_name": "Cameroon",
+  "name": "Cameroon",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "237",
+    "prefixes": ["237"],
+    "patterns": ["XXXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "CF",
+  "default_name": "Central African Rep.",
+  "name": "Central African Rep.",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "236",
+    "prefixes": ["236"],
+    "patterns": ["XX", "XX", "XX", "XX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "TD",
+  "default_name": "Chad",
+  "name": "Chad",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "235",
+    "prefixes": ["235"],
+    "patterns": ["XX", "XX", "XX", "XX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "NG",
+  "default_name": "Nigeria",
+  "name": "Nigeria",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "234",
+    "prefixes": ["234"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "GH",
+  "default_name": "Ghana",
+  "name": "Ghana",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "233",
+    "prefixes": ["233"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "SL",
+  "default_name": "Sierra Leone",
+  "name": "Sierra Leone",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "232",
+    "prefixes": ["232"],
+    "patterns": ["XX", "XXX", "XXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "LR",
+  "default_name": "Liberia",
+  "name": "Liberia",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "231",
+    "prefixes": ["231"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "MU",
+  "default_name": "Mauritius",
+  "name": "Mauritius",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "230",
+    "prefixes": ["230"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "BJ",
+  "default_name": "Benin",
+  "name": "Benin",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "229",
+    "prefixes": ["229"],
+    "patterns": ["XX", "XXX", "XXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "TG",
+  "default_name": "Togo",
+  "name": "Togo",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "228",
+    "prefixes": ["228"],
+    "patterns": ["XX", "XXX", "XXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "NE",
+  "default_name": "Niger",
+  "name": "Niger",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "227",
+    "prefixes": ["227"],
+    "patterns": ["XX", "XX", "XX", "XX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "BF",
+  "default_name": "Burkina Faso",
+  "name": "Burkina Faso",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "226",
+    "prefixes": ["226"],
+    "patterns": ["XX", "XX", "XX", "XX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "CI",
+  "default_name": "Côte d`Ivoire",
+  "name": "Côte d`Ivoire",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "225",
+    "prefixes": ["225"],
+    "patterns": ["XX", "XXX", "XXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "GN",
+  "default_name": "Guinea",
+  "name": "Guinea",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "224",
+    "prefixes": ["224"],
+    "patterns": ["XXX", "XXX", "XXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "ML",
+  "default_name": "Mali",
+  "name": "Mali",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "223",
+    "prefixes": ["223"],
+    "patterns": ["XXXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "MR",
+  "default_name": "Mauritania",
+  "name": "Mauritania",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "222",
+    "prefixes": ["222"],
+    "patterns": ["XXXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "SN",
+  "default_name": "Senegal",
+  "name": "Senegal",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "221",
+    "prefixes": ["221"],
+    "patterns": ["XX", "XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "GM",
+  "default_name": "Gambia",
+  "name": "Gambia",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "220",
+    "prefixes": ["220"],
+    "patterns": ["XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "LY",
+  "default_name": "Libya",
+  "name": "Libya",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "218",
+    "prefixes": ["218"],
+    "patterns": ["XX", "XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "TN",
+  "default_name": "Tunisia",
+  "name": "Tunisia",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "216",
+    "prefixes": ["216"],
+    "patterns": ["XX", "XXX", "XXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "DZ",
+  "default_name": "Algeria",
+  "name": "Algeria",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "213",
+    "prefixes": ["213"],
+    "patterns": ["XXX", "XX", "XX", "XX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "MA",
+  "default_name": "Morocco",
+  "name": "Morocco",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "212",
+    "prefixes": ["212"],
+    "patterns": ["XX", "XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "SS",
+  "default_name": "South Sudan",
+  "name": "South Sudan",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "211",
+    "prefixes": ["211"],
+    "patterns": ["XX", "XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "IR",
+  "default_name": "Iran",
+  "name": "Iran",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "98",
+    "prefixes": ["98"],
+    "patterns": ["XXX", "XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "MM",
+  "default_name": "Myanmar",
+  "name": "Myanmar",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "95",
+    "prefixes": ["95"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "LK",
+  "default_name": "Sri Lanka",
+  "name": "Sri Lanka",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "94",
+    "prefixes": ["94"],
+    "patterns": ["XX", "XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "AF",
+  "default_name": "Afghanistan",
+  "name": "Afghanistan",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "93",
+    "prefixes": ["93"],
+    "patterns": ["XXX", "XXX", "XXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "PK",
+  "default_name": "Pakistan",
+  "name": "Pakistan",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "92",
+    "prefixes": ["92"],
+    "patterns": ["XXX", "XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "IN",
+  "default_name": "India",
+  "name": "India",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "91",
+    "prefixes": ["91"],
+    "patterns": ["XXXXX", "XXXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "TR",
+  "default_name": "Turkey",
+  "name": "Turkey",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "90",
+    "prefixes": ["90"],
+    "patterns": ["XXX", "XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "CN",
+  "default_name": "China",
+  "name": "China",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "86",
+    "prefixes": ["86"],
+    "patterns": ["XXX", "XXXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "VN",
+  "default_name": "Vietnam",
+  "name": "Vietnam",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "84",
+    "prefixes": ["84"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "KR",
+  "default_name": "South Korea",
+  "name": "South Korea",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "82",
+    "prefixes": ["82"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "JP",
+  "default_name": "Japan",
+  "name": "Japan",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "81",
+    "prefixes": ["81"],
+    "patterns": ["XX", "XXXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "TH",
+  "default_name": "Thailand",
+  "name": "Thailand",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "66",
+    "prefixes": ["66"],
+    "patterns": ["X", "XXXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "SG",
+  "default_name": "Singapore",
+  "name": "Singapore",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "65",
+    "prefixes": ["65"],
+    "patterns": ["XXXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "NZ",
+  "default_name": "New Zealand",
+  "name": "New Zealand",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "64",
+    "prefixes": ["64"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "PH",
+  "default_name": "Philippines",
+  "name": "Philippines",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "63",
+    "prefixes": ["63"],
+    "patterns": ["XXX", "XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "ID",
+  "default_name": "Indonesia",
+  "name": "Indonesia",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "62",
+    "prefixes": ["62"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "AU",
+  "default_name": "Australia",
+  "name": "Australia",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "61",
+    "prefixes": ["61"],
+    "patterns": ["XXX", "XXX", "XXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "MY",
+  "default_name": "Malaysia",
+  "name": "Malaysia",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "60",
+    "prefixes": ["60"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "VE",
+  "default_name": "Venezuela",
+  "name": "Venezuela",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "58",
+    "prefixes": ["58"],
+    "patterns": ["XXX", "XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "CO",
+  "default_name": "Colombia",
+  "name": "Colombia",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "57",
+    "prefixes": ["57"],
+    "patterns": ["XXX", "XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "CL",
+  "default_name": "Chile",
+  "name": "Chile",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "56",
+    "prefixes": ["56"],
+    "patterns": ["X", "XXXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "BR",
+  "default_name": "Brazil",
+  "name": "Brazil",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "55",
+    "prefixes": ["55"],
+    "patterns": ["XX", "XXXXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "AR",
+  "default_name": "Argentina",
+  "name": "Argentina",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "54",
+    "prefixes": ["54"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "CU",
+  "default_name": "Cuba",
+  "name": "Cuba",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "53",
+    "prefixes": ["53"],
+    "patterns": ["XXXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "MX",
+  "default_name": "Mexico",
+  "name": "Mexico",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "52",
+    "prefixes": ["52"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "PE",
+  "default_name": "Peru",
+  "name": "Peru",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "51",
+    "prefixes": ["51"],
+    "patterns": ["XXX", "XXX", "XXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "DE",
+  "default_name": "Germany",
+  "name": "Germany",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "49",
+    "prefixes": ["49"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "PL",
+  "default_name": "Poland",
+  "name": "Poland",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "48",
+    "prefixes": ["48"],
+    "patterns": ["XXX", "XXX", "XXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "NO",
+  "default_name": "Norway",
+  "name": "Norway",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "47",
+    "prefixes": ["47"],
+    "patterns": ["XXXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "SE",
+  "default_name": "Sweden",
+  "name": "Sweden",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "46",
+    "prefixes": ["46"],
+    "patterns": ["XX", "XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "DK",
+  "default_name": "Denmark",
+  "name": "Denmark",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "45",
+    "prefixes": ["45"],
+    "patterns": ["XXXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "GB",
+  "default_name": "United Kingdom",
+  "name": "United Kingdom",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "44",
+    "prefixes": ["44"],
+    "patterns": ["XXXX", "XXXXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "AT",
+  "default_name": "Austria",
+  "name": "Austria",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "43",
+    "prefixes": ["43"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "CH",
+  "default_name": "Switzerland",
+  "name": "Switzerland",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "41",
+    "prefixes": ["41"],
+    "patterns": ["XX", "XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "RO",
+  "default_name": "Romania",
+  "name": "Romania",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "40",
+    "prefixes": ["40"],
+    "patterns": ["XXX", "XXX", "XXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "IT",
+  "default_name": "Italy",
+  "name": "Italy",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "39",
+    "prefixes": ["39"],
+    "patterns": ["XXX", "XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "HU",
+  "default_name": "Hungary",
+  "name": "Hungary",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "36",
+    "prefixes": ["36"],
+    "patterns": ["XX", "XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "ES",
+  "default_name": "Spain",
+  "name": "Spain",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "34",
+    "prefixes": ["34"],
+    "patterns": ["XXX", "XXX", "XXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "FR",
+  "default_name": "France",
+  "name": "France",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "33",
+    "prefixes": ["33"],
+    "patterns": ["X", "XX", "XX", "XX", "XX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "BE",
+  "default_name": "Belgium",
+  "name": "Belgium",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "32",
+    "prefixes": ["32"],
+    "patterns": ["XXX", "XX", "XX", "XX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "NL",
+  "default_name": "Netherlands",
+  "name": "Netherlands",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "31",
+    "prefixes": ["31"],
+    "patterns": ["X", "XX", "XX", "XX", "XX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "GR",
+  "default_name": "Greece",
+  "name": "Greece",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "30",
+    "prefixes": ["30"],
+    "patterns": ["XX", "XXXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "ZA",
+  "default_name": "South Africa",
+  "name": "South Africa",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "27",
+    "prefixes": ["27"],
+    "patterns": ["XX", "XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "EG",
+  "default_name": "Egypt",
+  "name": "Egypt",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "20",
+    "prefixes": ["20"],
+    "patterns": ["XX", "XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "RU",
+  "default_name": "Russian Federation",
+  "name": "Russian Federation",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "7",
+    "prefixes": ["7"],
+    "patterns": ["XXX", "XXX", "XX", "XX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "KZ",
+  "default_name": "Kazakhstan",
+  "name": "Kazakhstan",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "7",
+    "prefixes": ["7"],
+    "patterns": ["XXX", "XXX", "XX", "XX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "US",
+  "default_name": "USA",
+  "name": "USA",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "1",
+    "prefixes": ["1"],
+    "patterns": ["XXX", "XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "PR",
+  "default_name": "Puerto Rico",
+  "name": "Puerto Rico",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "1",
+    "prefixes": ["1"],
+    "patterns": ["XXX", "XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "DO",
+  "default_name": "Dominican Rep.",
+  "name": "Dominican Rep.",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "1",
+    "prefixes": ["1"],
+    "patterns": ["XXX", "XXX", "XXXX"]
+  }]
+}, {
+  "cmd": -1014526429,
+  "class_name": "TLHelpCountry",
+  "iso2": "CA",
+  "default_name": "Canada",
+  "name": "Canada",
+  "country_codes": [{
+    "cmd": 1107543535,
+    "class_name": "TLHelpCountryCode",
+    "country_code": "1",
+    "prefixes": ["1"],
+    "patterns": ["XXX", "XXX", "XXXX"]
+  }]
+}]

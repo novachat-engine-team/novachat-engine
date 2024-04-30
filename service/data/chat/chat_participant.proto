@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+package data_chat;
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+option go_package = "data_chat";
+
+option (gogoproto.marshaler_all) = true;
+option (gogoproto.sizer_all) = true;
+option (gogoproto.unmarshaler_all) = true;
+option (gogoproto.gostring_all) = true;
+
+enum ParticipantState {
+    ParticipantStateNormal = 0;
+    ParticipantStateLeft = 1;
+    ParticipantStateBan = 2;
+    ParticipantStateDelete = 3;
+}
+
+message ChatParticipant {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  string            chat_participant_key  = 1 [(gogoproto.moretags) = "bson:\"_id\""];
+  int64             chat_id               = 2 [(gogoproto.moretags) = "bson:\"chat_id\""];
+  int64             user_id               = 3 [(gogoproto.moretags) = "bson:\"user_id\""];
+  int64             invite_id             = 4 [(gogoproto.moretags) = "bson:\"invite_id\""];
+  int32             date                  = 5 [(gogoproto.moretags) = "bson:\"date\""];
+  bool              admin                 = 6 [(gogoproto.moretags) = "bson:\"admin\""];
+  int32             admin_rights          = 7 [(gogoproto.moretags) = "bson:\"admin_rights\""];
+  ParticipantState  state                 = 8 [(gogoproto.moretags) = "bson:\"state\""];
+  int32             rights                = 9 [(gogoproto.moretags) = "bson:\"rights\""];
+}

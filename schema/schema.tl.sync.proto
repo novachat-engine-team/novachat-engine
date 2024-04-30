@@ -1,0 +1,5497 @@
+/*
+ * Copyright (c) 2021-present,  NovaChat-Engine.
+ *  All rights reserved.
+ * 
+ *  
+ * @Author: Coder (coderxw@gmail.com)
+ * @Time : 2023/02/09 16:57
+ * @File : schema.tl.sync.proto
+ * @Desc : 
+ *
+ */
+
+syntax = "proto3";
+
+package mtproto;
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+
+option go_package = "mtproto";
+
+option (gogoproto.marshaler_all) = true;
+option (gogoproto.sizer_all) = true;
+option (gogoproto.unmarshaler_all) = true;
+option (gogoproto.gostring_all) = true;
+
+import "schema.tl.cmd.proto";
+import "schema.tl.core_types.proto";
+
+
+
+///////////////////////////////////////////////////////////////////////////////
+// AccountDaysTTL <--
+//  + TL_accountDaysTTL
+//
+message AccountDaysTTL {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 days = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// Authorization <--
+//  + TL_authorization
+//
+message Authorization {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int64 hash = 3;
+    int32 flags = 4;
+    string device_model = 5;
+    string platform = 6;
+    string system_version = 7;
+    int32 api_id = 8;
+    string app_name = 9;
+    string app_version = 10;
+    int32 date_created = 11;
+    int32 date_active = 12;
+    string ip = 13;
+    string country = 14;
+    string region = 15;
+    bool current = 16;
+    bool official_app = 17;
+    bool password_pending = 18;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// AutoDownloadSettings <--
+//  + TL_autoDownloadSettings
+//
+message AutoDownloadSettings {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool disabled = 4;
+    bool video_preload_large = 5;
+    bool audio_preload_next = 6;
+    bool phonecalls_less_data = 7;
+    int32 photo_size_max = 8;
+    int32 video_size_max = 9;
+    int32 file_size_max = 10;
+    int32 video_upload_maxbitrate = 11;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// BankCardOpenUrl <--
+//  + TL_bankCardOpenUrl
+//
+message BankCardOpenUrl {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string url = 3;
+    string name = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// BaseTheme <--
+//  + TL_baseThemeClassic
+//  + TL_baseThemeDay
+//  + TL_baseThemeNight
+//  + TL_baseThemeTinted
+//  + TL_baseThemeArctic
+//
+message BaseTheme {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// BotCommand <--
+//  + TL_botCommand
+//
+message BotCommand {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string command = 3;
+    string description = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// BotInfo <--
+//  + TL_botInfo
+//
+message BotInfo {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 user_id = 3;
+    string description = 4;
+    repeated BotCommand commands = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// BotInlineMessage <--
+//  + TL_botInlineMessageMediaAuto
+//  + TL_botInlineMessageText
+//  + TL_botInlineMessageMediaGeo
+//  + TL_botInlineMessageMediaVenue
+//  + TL_botInlineMessageMediaContact
+//
+message BotInlineMessage {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    string caption = 4;
+    ReplyMarkup reply_markup = 5;
+    bool no_webpage = 6;
+    string message = 7;
+    repeated MessageEntity entities = 8;
+    GeoPoint geo = 9;
+    string title = 10;
+    string address = 11;
+    string provider = 12;
+    string venue_id = 13;
+    string phone_number = 14;
+    string first_name = 15;
+    string last_name = 16;
+    int32 period = 17;
+    string venue_type = 18;
+    string vcard = 19;
+    int32 heading = 20;
+    int32 proximity_notification_radius = 21;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// BotInlineResult <--
+//  + TL_botInlineResult
+//  + TL_botInlineMediaResult
+//
+message BotInlineResult {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    string id = 4;
+    string type = 5;
+    string title = 6;
+    string description = 7;
+    string url = 8;
+    string thumb_url = 9;
+    string content_url = 10;
+    string content_type = 11;
+    int32 w = 12;
+    int32 h = 13;
+    int32 duration = 14;
+    BotInlineMessage send_message = 15;
+    Photo photo = 16;
+    Document document = 17;
+    WebDocument thumb = 18;
+    WebDocument content = 19;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// CdnConfig <--
+//  + TL_cdnConfig
+//
+message CdnConfig {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    repeated CdnPublicKey public_keys = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// CdnFileHash <--
+//  + TL_cdnFileHash
+//
+message CdnFileHash {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 offset = 3;
+    int32 limit = 4;
+    bytes hash = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// CdnPublicKey <--
+//  + TL_cdnPublicKey
+//
+message CdnPublicKey {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 dc_id = 3;
+    string public_key = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// ChannelAdminLogEvent <--
+//  + TL_channelAdminLogEvent
+//
+message ChannelAdminLogEvent {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int64 id = 3;
+    int32 date = 4;
+    int32 user_id = 5;
+    ChannelAdminLogEventAction action = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// ChannelAdminLogEventAction <--
+//  + TL_channelAdminLogEventActionChangeTitle
+//  + TL_channelAdminLogEventActionChangeAbout
+//  + TL_channelAdminLogEventActionChangeUsername
+//  + TL_channelAdminLogEventActionChangePhoto
+//  + TL_channelAdminLogEventActionToggleInvites
+//  + TL_channelAdminLogEventActionToggleSignatures
+//  + TL_channelAdminLogEventActionUpdatePinned
+//  + TL_channelAdminLogEventActionEditMessage
+//  + TL_channelAdminLogEventActionDeleteMessage
+//  + TL_channelAdminLogEventActionParticipantJoin
+//  + TL_channelAdminLogEventActionParticipantLeave
+//  + TL_channelAdminLogEventActionParticipantInvite
+//  + TL_channelAdminLogEventActionParticipantToggleBan
+//  + TL_channelAdminLogEventActionParticipantToggleAdmin
+//  + TL_channelAdminLogEventActionChangeStickerSet
+//  + TL_channelAdminLogEventActionTogglePreHistoryHidden
+//  + TL_channelAdminLogEventActionDefaultBannedRights
+//  + TL_channelAdminLogEventActionStopPoll
+//  + TL_channelAdminLogEventActionChangeLinkedChat
+//  + TL_channelAdminLogEventActionChangeLocation
+//  + TL_channelAdminLogEventActionToggleSlowMode
+//  + TL_channelAdminLogEventActionStartGroupCall
+//  + TL_channelAdminLogEventActionDiscardGroupCall
+//  + TL_channelAdminLogEventActionParticipantMute
+//  + TL_channelAdminLogEventActionParticipantUnmute
+//  + TL_channelAdminLogEventActionToggleGroupCallSetting
+//
+message ChannelAdminLogEventAction {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string prev_valueE6DFB82571 = 3;
+    string new_valueE6DFB82571 = 4;
+    ChatPhoto prev_photoB82F55C371 = 5;
+    ChatPhoto new_photoB82F55C371 = 6;
+    Bool new_value1B7907AE71 = 7;
+    Message message = 8;
+    Message prev_message = 9;
+    Message new_message = 10;
+    ChannelParticipant participantE31C34D871 = 11;
+    ChannelParticipant prev_participant = 12;
+    ChannelParticipant new_participant = 13;
+    InputStickerSet prev_stickerset = 14;
+    InputStickerSet new_stickerset = 15;
+    ChatBannedRights prev_banned_rights = 16;
+    ChatBannedRights new_banned_rights = 17;
+    Photo prev_photo434BD2AF98 = 18;
+    Photo new_photo434BD2AF98 = 19;
+    int32 prev_valueA26F881B100 = 20;
+    int32 new_valueA26F881B100 = 21;
+    ChannelLocation prev_valueE6B76AE102 = 22;
+    ChannelLocation new_valueE6B76AE102 = 23;
+    InputGroupCall call = 24;
+    GroupCallParticipant participantF92424D2122 = 25;
+    Bool join_muted = 26;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// ChannelAdminLogEventsFilter <--
+//  + TL_channelAdminLogEventsFilter
+//
+message ChannelAdminLogEventsFilter {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool join = 4;
+    bool leave = 5;
+    bool invite = 6;
+    bool ban = 7;
+    bool unban = 8;
+    bool kick = 9;
+    bool unkick = 10;
+    bool promote = 11;
+    bool demote = 12;
+    bool info = 13;
+    bool settings = 14;
+    bool pinned = 15;
+    bool edit = 16;
+    bool delete = 17;
+    bool group_call = 18;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// ChannelAdminRights <--
+//  + TL_channelAdminRights
+//
+message ChannelAdminRights {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool change_info = 4;
+    bool post_messages = 5;
+    bool edit_messages = 6;
+    bool delete_messages = 7;
+    bool ban_users = 8;
+    bool invite_users = 9;
+    bool invite_link = 10;
+    bool pin_messages = 11;
+    bool add_admins = 12;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// ChannelBannedRights <--
+//  + TL_channelBannedRights
+//
+message ChannelBannedRights {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool view_messages = 4;
+    bool send_messages = 5;
+    bool send_media = 6;
+    bool send_stickers = 7;
+    bool send_gifs = 8;
+    bool send_games = 9;
+    bool send_inline = 10;
+    bool embed_links = 11;
+    int32 until_date = 12;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// ChannelLocation <--
+//  + TL_channelLocationEmpty
+//  + TL_channelLocation
+//
+message ChannelLocation {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    GeoPoint geo_point = 3;
+    string address = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// ChannelMessagesFilter <--
+//  + TL_channelMessagesFilterEmpty
+//  + TL_channelMessagesFilter
+//  + TL_channelMessagesFilterCollapsed
+//
+message ChannelMessagesFilter {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool exclude_new_messages = 4;
+    repeated MessageRange ranges = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// ChannelParticipant <--
+//  + TL_channelParticipant
+//  + TL_channelParticipantSelf
+//  + TL_channelParticipantCreator
+//  + TL_channelParticipantAdmin
+//  + TL_channelParticipantBanned
+//  + TL_channelParticipantModerator
+//  + TL_channelParticipantEditor
+//  + TL_channelParticipantKicked
+//  + TL_channelParticipantLeft
+//
+message ChannelParticipant {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 user_id = 3;
+    int32 date = 4;
+    int32 inviter_id = 5;
+    int32 flags = 6;
+    bool can_edit = 7;
+    int32 promoted_by = 8;
+    ChannelAdminRights admin_rightsA82FA89871 = 9;
+    bool left = 10;
+    int32 kicked_by = 11;
+    ChannelBannedRights banned_rights222C188671 = 12;
+    bool self = 13;
+    ChatAdminRights admin_rights5DAA6E2393 = 14;
+    ChatBannedRights banned_rights1C0FACAF93 = 15;
+    string rank = 16;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// ChannelParticipantRole <--
+//  + TL_channelRoleEmpty
+//  + TL_channelRoleModerator
+//  + TL_channelRoleEditor
+//
+message ChannelParticipantRole {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// ChannelParticipantsFilter <--
+//  + TL_channelParticipantsRecent
+//  + TL_channelParticipantsAdmins
+//  + TL_channelParticipantsKicked
+//  + TL_channelParticipantsBots
+//  + TL_channelParticipantsBanned
+//  + TL_channelParticipantsSearch
+//  + TL_channelParticipantsContacts
+//  + TL_channelParticipantsMentions
+//
+message ChannelParticipantsFilter {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string q = 3;
+    int32 flags = 4;
+    int32 top_msg_id = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// Chat <--
+//  + TL_chatEmpty
+//  + TL_chat
+//  + TL_chatForbidden
+//  + TL_channel
+//  + TL_channelForbidden
+//
+message Chat {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 id = 3;
+    int32 flags = 4;
+    bool creator = 5;
+    bool kicked = 6;
+    bool left = 7;
+    bool admins_enabled = 8;
+    bool admin = 9;
+    bool deactivated = 10;
+    string title = 11;
+    ChatPhoto photo = 12;
+    int32 participants_count = 13;
+    int32 date = 14;
+    int32 version = 15;
+    InputChannel migrated_to = 16;
+    bool editor = 17;
+    bool broadcast = 18;
+    bool verified = 19;
+    bool megagroup = 20;
+    bool restricted = 21;
+    bool democracy = 22;
+    bool signatures = 23;
+    bool min = 24;
+    int64 access_hash = 25;
+    string username = 26;
+    string restriction_reasonCB44B1C71 = 27;
+    ChannelAdminRights admin_rightsCB44B1C71 = 28;
+    ChannelBannedRights banned_rightsCB44B1C71 = 29;
+    int32 until_date = 30;
+    bool moderator = 31;
+    ChatAdminRights admin_rights4DF3083493 = 32;
+    ChatBannedRights banned_rights4DF3083493 = 33;
+    ChatBannedRights default_banned_rights = 34;
+    bool call_active = 35;
+    bool call_not_empty = 36;
+    bool scam = 37;
+    bool has_link = 38;
+    bool has_geo = 39;
+    bool slowmode_enabled = 40;
+    repeated RestrictionReason restriction_reasonD31A961E122 = 41;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// ChatAdminRights <--
+//  + TL_chatAdminRights
+//
+message ChatAdminRights {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool change_info = 4;
+    bool post_messages = 5;
+    bool edit_messages = 6;
+    bool delete_messages = 7;
+    bool ban_users = 8;
+    bool invite_users = 9;
+    bool pin_messages = 10;
+    bool add_admins = 11;
+    bool anonymous = 12;
+    bool manage_call = 13;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// ChatBannedRights <--
+//  + TL_chatBannedRights
+//
+message ChatBannedRights {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool view_messages = 4;
+    bool send_messages = 5;
+    bool send_media = 6;
+    bool send_stickers = 7;
+    bool send_gifs = 8;
+    bool send_games = 9;
+    bool send_inline = 10;
+    bool embed_links = 11;
+    bool send_polls = 12;
+    bool change_info = 13;
+    bool invite_users = 14;
+    bool pin_messages = 15;
+    int32 until_date = 16;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// ChatFull <--
+//  + TL_chatFull
+//  + TL_channelFull
+//
+message ChatFull {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 id = 3;
+    ChatParticipants participants = 4;
+    Photo chat_photo = 5;
+    PeerNotifySettings notify_settings = 6;
+    ExportedChatInvite exported_invite = 7;
+    repeated BotInfo bot_info = 8;
+    int32 flags = 9;
+    bool can_view_participants = 10;
+    bool can_set_username = 11;
+    bool can_set_stickers = 12;
+    string about = 13;
+    int32 participants_count = 14;
+    int32 admins_count = 15;
+    int32 kicked_count = 16;
+    int32 banned_count = 17;
+    int32 read_inbox_max_id = 18;
+    int32 read_outbox_max_id = 19;
+    int32 unread_count = 20;
+    int32 migrated_from_chat_id = 21;
+    int32 migrated_from_max_id = 22;
+    int32 pinned_msg_id = 23;
+    StickerSet stickerset = 24;
+    int32 unread_important_count = 25;
+    bool hidden_prehistory = 26;
+    int32 available_min_id = 27;
+    bool can_view_stats = 28;
+    int32 online_count = 29;
+    int32 folder_id = 30;
+    int32 pts = 31;
+    int32 linked_chat_id = 32;
+    bool can_set_location = 33;
+    ChannelLocation location = 34;
+    int32 slowmode_seconds = 35;
+    int32 slowmode_next_send_date = 36;
+    bool has_scheduled = 37;
+    bool blocked = 38;
+    int32 stats_dc = 39;
+    InputGroupCall call = 40;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// ChatInvite <--
+//  + TL_chatInviteAlready
+//  + TL_chatInvite
+//  + TL_chatInvitePeek
+//
+message ChatInvite {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    Chat chat = 3;
+    int32 flags = 4;
+    bool channel = 5;
+    bool broadcast = 6;
+    bool public = 7;
+    bool megagroup = 8;
+    string title = 9;
+    ChatPhoto photoDB74F55871 = 10;
+    int32 participants_count = 11;
+    repeated User participants = 12;
+    Photo photoDFC2F58E98 = 13;
+    int32 expires = 14;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// ChatOnlines <--
+//  + TL_chatOnlines
+//
+message ChatOnlines {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 onlines = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// ChatParticipant <--
+//  + TL_chatParticipant
+//  + TL_chatParticipantCreator
+//  + TL_chatParticipantAdmin
+//
+message ChatParticipant {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 user_id = 3;
+    int32 inviter_id = 4;
+    int32 date = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// ChatParticipants <--
+//  + TL_chatParticipantsForbidden
+//  + TL_chatParticipants
+//
+message ChatParticipants {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    int32 chat_id = 4;
+    ChatParticipant self_participant = 5;
+    repeated ChatParticipant participants = 6;
+    int32 version = 7;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// ChatPhoto <--
+//  + TL_chatPhotoEmpty
+//  + TL_chatPhoto
+//
+message ChatPhoto {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    FileLocation photo_small = 3;
+    FileLocation photo_big = 4;
+    int32 dc_id = 5;
+    int32 flags = 6;
+    bool has_video = 7;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// CodeSettings <--
+//  + TL_codeSettings
+//
+message CodeSettings {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool allow_flashcall = 4;
+    bool current_number = 5;
+    bool app_hash_persistent = 6;
+    string app_hash = 7;
+    bool allow_app_hash = 8;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// Config <--
+//  + TL_config
+//
+message Config {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool phonecalls_enabled = 4;
+    int32 date = 5;
+    int32 expires = 6;
+    Bool test_mode = 7;
+    int32 this_dc = 8;
+    repeated DcOption dc_options = 9;
+    int32 chat_size_max = 10;
+    int32 megagroup_size_max = 11;
+    int32 forwarded_count_max = 12;
+    int32 online_update_period_ms = 13;
+    int32 offline_blur_timeout_ms = 14;
+    int32 offline_idle_timeout_ms = 15;
+    int32 online_cloud_timeout_ms = 16;
+    int32 notify_cloud_delay_ms = 17;
+    int32 notify_default_delay_ms = 18;
+    int32 chat_big_size = 19;
+    int32 push_chat_period_ms = 20;
+    int32 push_chat_limit = 21;
+    int32 saved_gifs_limit = 22;
+    int32 edit_time_limit = 23;
+    int32 rating_e_decay = 24;
+    int32 stickers_recent_limit = 25;
+    int32 stickers_faved_limit = 26;
+    int32 tmp_sessions = 27;
+    int32 pinned_dialogs_count_max = 28;
+    int32 call_receive_timeout_ms = 29;
+    int32 call_ring_timeout_ms = 30;
+    int32 call_connect_timeout_ms = 31;
+    int32 call_packet_timeout_ms = 32;
+    string me_url_prefix = 33;
+    string suggested_lang_code = 34;
+    int32 lang_pack_version = 35;
+    repeated DisabledFeature disabled_features = 36;
+    bool default_p2p_contacts = 37;
+    bool preload_featured_stickers = 38;
+    bool ignore_phone_entities = 39;
+    bool revoke_pm_inbox = 40;
+    bool blocked_mode = 41;
+    string dc_txt_domain_name = 42;
+    int32 revoke_time_limit = 43;
+    int32 revoke_pm_time_limit = 44;
+    int32 channels_read_media_period = 45;
+    string autoupdate_url_prefix = 46;
+    string gif_search_username = 47;
+    string venue_search_username = 48;
+    string img_search_username = 49;
+    string static_maps_provider = 50;
+    int32 caption_length_max = 51;
+    int32 message_length_max = 52;
+    int32 webfile_dc_id = 53;
+    int32 base_lang_pack_version = 54;
+    bool pfs_enabled = 55;
+    int32 pinned_infolder_count_max = 56;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// Contact <--
+//  + TL_contact
+//
+message Contact {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 user_id = 3;
+    Bool mutual = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// ContactBlocked <--
+//  + TL_contactBlocked
+//
+message ContactBlocked {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 user_id = 3;
+    int32 date = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// ContactLink <--
+//  + TL_contactLinkUnknown
+//  + TL_contactLinkNone
+//  + TL_contactLinkHasPhone
+//  + TL_contactLinkContact
+//
+message ContactLink {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// ContactStatus <--
+//  + TL_contactStatus
+//
+message ContactStatus {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 user_id = 3;
+    UserStatus status = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// DataJSON <--
+//  + TL_dataJSON
+//
+message DataJSON {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string data = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// DcOption <--
+//  + TL_dcOption
+//
+message DcOption {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool ipv6 = 4;
+    bool media_only = 5;
+    bool tcpo_only = 6;
+    bool cdn = 7;
+    bool static = 8;
+    int32 id = 9;
+    string ip_address = 10;
+    int32 port = 11;
+    bytes secret = 12;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// Dialog <--
+//  + TL_dialog
+//  + TL_dialogChannel
+//  + TL_dialogFolder
+//
+message Dialog {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool pinned = 4;
+    Peer peer = 5;
+    int32 top_message = 6;
+    int32 read_inbox_max_id = 7;
+    int32 read_outbox_max_id = 8;
+    int32 unread_count = 9;
+    int32 unread_mentions_count = 10;
+    PeerNotifySettings notify_settings = 11;
+    int32 pts = 12;
+    DraftMessage draft = 13;
+    int32 top_important_message = 14;
+    int32 unread_important_count = 15;
+    bool unread_mark = 16;
+    int32 folder_id = 17;
+    Folder folder = 18;
+    int32 unread_muted_peers_count = 19;
+    int32 unread_unmuted_peers_count = 20;
+    int32 unread_muted_messages_count = 21;
+    int32 unread_unmuted_messages_count = 22;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// DialogFilter <--
+//  + TL_dialogFilter
+//
+message DialogFilter {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool contacts = 4;
+    bool non_contacts = 5;
+    bool groups = 6;
+    bool broadcasts = 7;
+    bool bots = 8;
+    bool exclude_muted = 9;
+    bool exclude_read = 10;
+    bool exclude_archived = 11;
+    int32 id = 12;
+    string title = 13;
+    string emoticon = 14;
+    repeated InputPeer pinned_peers = 15;
+    repeated InputPeer include_peers = 16;
+    repeated InputPeer exclude_peers = 17;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// DialogFilterSuggested <--
+//  + TL_dialogFilterSuggested
+//
+message DialogFilterSuggested {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    DialogFilter filter = 3;
+    string description = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// DialogPeer <--
+//  + TL_dialogPeer
+//  + TL_dialogPeerFolder
+//
+message DialogPeer {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    Peer peer = 3;
+    int32 folder_id = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// DisabledFeature <--
+//  + TL_disabledFeature
+//
+message DisabledFeature {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string feature = 3;
+    string description = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// Document <--
+//  + TL_documentEmpty
+//  + TL_document
+//
+message Document {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int64 id = 3;
+    int64 access_hash = 4;
+    int32 date = 5;
+    string mime_type = 6;
+    int32 size_ = 7;
+    PhotoSize thumb = 8;
+    int32 dc_id = 9;
+    int32 version = 10;
+    repeated DocumentAttribute attributes = 11;
+    bytes file_reference = 12;
+    int32 flags = 13;
+    repeated PhotoSize thumbs = 14;
+    repeated VideoSize video_thumbs = 15;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// DocumentAttribute <--
+//  + TL_documentAttributeImageSize
+//  + TL_documentAttributeAnimated
+//  + TL_documentAttributeSticker
+//  + TL_documentAttributeVideo
+//  + TL_documentAttributeAudio
+//  + TL_documentAttributeFilename
+//  + TL_documentAttributeHasStickers
+//
+message DocumentAttribute {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 w = 3;
+    int32 h = 4;
+    int32 flags = 5;
+    bool mask = 6;
+    string alt = 7;
+    InputStickerSet stickerset = 8;
+    MaskCoords mask_coords = 9;
+    bool round_message = 10;
+    int32 duration = 11;
+    bool voice = 12;
+    string title = 13;
+    string performer = 14;
+    bytes waveform = 15;
+    string file_name = 16;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// DraftMessage <--
+//  + TL_draftMessageEmpty
+//  + TL_draftMessage
+//
+message DraftMessage {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool no_webpage = 4;
+    int32 reply_to_msg_id = 5;
+    string message = 6;
+    repeated MessageEntity entities = 7;
+    int32 date = 8;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// EmojiKeyword <--
+//  + TL_emojiKeyword
+//  + TL_emojiKeywordDeleted
+//
+message EmojiKeyword {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string keyword = 3;
+    repeated string emoticons = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// EmojiKeywordsDifference <--
+//  + TL_emojiKeywordsDifference
+//
+message EmojiKeywordsDifference {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string lang_code = 3;
+    int32 from_version = 4;
+    int32 version = 5;
+    repeated EmojiKeyword keywords = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// EmojiLanguage <--
+//  + TL_emojiLanguage
+//
+message EmojiLanguage {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string lang_code = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// EmojiURL <--
+//  + TL_emojiURL
+//
+message EmojiURL {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string url = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// EncryptedChat <--
+//  + TL_encryptedChatEmpty
+//  + TL_encryptedChatWaiting
+//  + TL_encryptedChatRequested
+//  + TL_encryptedChat
+//  + TL_encryptedChatDiscarded
+//
+message EncryptedChat {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 id = 3;
+    int64 access_hash = 4;
+    int32 date = 5;
+    int32 admin_id = 6;
+    int32 participant_id = 7;
+    bytes g_a = 8;
+    bytes g_a_or_b = 9;
+    int64 key_fingerprint = 10;
+    int32 flags = 11;
+    int32 folder_id = 12;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// EncryptedFile <--
+//  + TL_encryptedFileEmpty
+//  + TL_encryptedFile
+//
+message EncryptedFile {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int64 id = 3;
+    int64 access_hash = 4;
+    int32 size_ = 5;
+    int32 dc_id = 6;
+    int32 key_fingerprint = 7;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// EncryptedMessage <--
+//  + TL_encryptedMessage
+//  + TL_encryptedMessageService
+//
+message EncryptedMessage {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int64 random_id = 3;
+    int32 chat_id = 4;
+    int32 date = 5;
+    bytes bytes = 6;
+    EncryptedFile file = 7;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// ExportedChatInvite <--
+//  + TL_chatInviteEmpty
+//  + TL_chatInviteExported
+//
+message ExportedChatInvite {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string link = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// ExportedMessageLink <--
+//  + TL_exportedMessageLink
+//
+message ExportedMessageLink {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string link = 3;
+    string html = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// FileHash <--
+//  + TL_fileHash
+//
+message FileHash {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 offset = 3;
+    int32 limit = 4;
+    bytes hash = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// FileLocation <--
+//  + TL_fileLocationUnavailable
+//  + TL_fileLocation
+//  + TL_fileLocationToBeDeprecated
+//
+message FileLocation {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int64 volume_id = 3;
+    int32 local_id = 4;
+    int64 secret = 5;
+    int32 dc_id = 6;
+    bytes file_reference = 7;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// Folder <--
+//  + TL_folder
+//
+message Folder {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool autofill_new_broadcasts = 4;
+    bool autofill_public_groups = 5;
+    bool autofill_new_correspondents = 6;
+    int32 id = 7;
+    string title = 8;
+    ChatPhoto photo = 9;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// FolderPeer <--
+//  + TL_folderPeer
+//
+message FolderPeer {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    Peer peer = 3;
+    int32 folder_id = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// FoundGif <--
+//  + TL_foundGif
+//  + TL_foundGifCached
+//
+message FoundGif {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string url = 3;
+    string thumb_url = 4;
+    string content_url = 5;
+    string content_type = 6;
+    int32 w = 7;
+    int32 h = 8;
+    Photo photo = 9;
+    Document document = 10;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// Game <--
+//  + TL_game
+//
+message Game {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    int64 id = 4;
+    int64 access_hash = 5;
+    string short_name = 6;
+    string title = 7;
+    string description = 8;
+    Photo photo = 9;
+    Document document = 10;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// GeoPoint <--
+//  + TL_geoPointEmpty
+//  + TL_geoPoint
+//
+message GeoPoint {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    double long = 3;
+    double lat = 4;
+    int64 access_hash = 5;
+    int32 flags = 6;
+    int32 accuracy_radius = 7;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// GlobalPrivacySettings <--
+//  + TL_globalPrivacySettings
+//
+message GlobalPrivacySettings {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    Bool archive_and_mute_new_noncontact_peers = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// GroupCall <--
+//  + TL_groupCallDiscarded
+//  + TL_groupCall
+//
+message GroupCall {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int64 id = 3;
+    int64 access_hash = 4;
+    int32 duration = 5;
+    int32 flags = 6;
+    bool join_muted = 7;
+    bool can_change_join_muted = 8;
+    int32 participants_count = 9;
+    DataJSON params = 10;
+    int32 version = 11;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// GroupCallParticipant <--
+//  + TL_groupCallParticipant
+//
+message GroupCallParticipant {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool muted = 4;
+    bool left = 5;
+    bool can_self_unmute = 6;
+    bool just_joined = 7;
+    bool versioned = 8;
+    int32 user_id = 9;
+    int32 date = 10;
+    int32 active_date = 11;
+    int32 source = 12;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// HighScore <--
+//  + TL_highScore
+//
+message HighScore {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 pos = 3;
+    int32 user_id = 4;
+    int32 score = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// ImportedContact <--
+//  + TL_importedContact
+//
+message ImportedContact {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 user_id = 3;
+    int64 client_id = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// InlineBotSwitchPM <--
+//  + TL_inlineBotSwitchPM
+//
+message InlineBotSwitchPM {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string text = 3;
+    string start_param = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// InlineQueryPeerType <--
+//  + TL_inlineQueryPeerTypeSameBotPM
+//  + TL_inlineQueryPeerTypePM
+//  + TL_inlineQueryPeerTypeChat
+//  + TL_inlineQueryPeerTypeMegagroup
+//  + TL_inlineQueryPeerTypeBroadcast
+//
+message InlineQueryPeerType {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// InputAppEvent <--
+//  + TL_inputAppEvent
+//
+message InputAppEvent {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    double time = 3;
+    string type = 4;
+    int64 peer = 5;
+    string data770656A871 = 6;
+    JSONValue data1D1B124590 = 7;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// InputBotInlineMessage <--
+//  + TL_inputBotInlineMessageMediaAuto
+//  + TL_inputBotInlineMessageText
+//  + TL_inputBotInlineMessageMediaGeo
+//  + TL_inputBotInlineMessageMediaVenue
+//  + TL_inputBotInlineMessageMediaContact
+//  + TL_inputBotInlineMessageGame
+//
+message InputBotInlineMessage {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    string caption = 4;
+    ReplyMarkup reply_markup = 5;
+    bool no_webpage = 6;
+    string message = 7;
+    repeated MessageEntity entities = 8;
+    InputGeoPoint geo_point = 9;
+    string title = 10;
+    string address = 11;
+    string provider = 12;
+    string venue_id = 13;
+    string phone_number = 14;
+    string first_name = 15;
+    string last_name = 16;
+    int32 period = 17;
+    string venue_type = 18;
+    string vcard = 19;
+    int32 heading = 20;
+    int32 proximity_notification_radius = 21;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// InputBotInlineMessageID <--
+//  + TL_inputBotInlineMessageID
+//
+message InputBotInlineMessageID {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 dc_id = 3;
+    int64 id = 4;
+    int64 access_hash = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// InputBotInlineResult <--
+//  + TL_inputBotInlineResult
+//  + TL_inputBotInlineResultPhoto
+//  + TL_inputBotInlineResultDocument
+//  + TL_inputBotInlineResultGame
+//
+message InputBotInlineResult {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    string id = 4;
+    string type = 5;
+    string title = 6;
+    string description = 7;
+    string url = 8;
+    string thumb_url = 9;
+    string content_url = 10;
+    string content_type = 11;
+    int32 w = 12;
+    int32 h = 13;
+    int32 duration = 14;
+    InputBotInlineMessage send_message = 15;
+    InputPhoto photo = 16;
+    InputDocument document = 17;
+    string short_name = 18;
+    InputWebDocument thumb = 19;
+    InputWebDocument content = 20;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// InputChannel <--
+//  + TL_inputChannelEmpty
+//  + TL_inputChannel
+//  + TL_inputChannelFromMessage
+//
+message InputChannel {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 channel_id = 3;
+    int64 access_hash = 4;
+    InputPeer peer = 5;
+    int32 msg_id = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// InputChatPhoto <--
+//  + TL_inputChatPhotoEmpty
+//  + TL_inputChatUploadedPhoto
+//  + TL_inputChatPhoto
+//
+message InputChatPhoto {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputFile file = 3;
+    InputPhoto id = 4;
+    InputPhotoCrop crop = 5;
+    int32 flags = 6;
+    InputFile video = 7;
+    double video_start_ts = 8;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// InputCheckPasswordSRP <--
+//  + TL_inputCheckPasswordEmpty
+//  + TL_inputCheckPasswordSRP
+//
+message InputCheckPasswordSRP {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int64 srp_id = 3;
+    bytes A = 4;
+    bytes M1 = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// InputClientProxy <--
+//  + TL_inputClientProxy
+//
+message InputClientProxy {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string address = 3;
+    int32 port = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// InputContact <--
+//  + TL_inputPhoneContact
+//
+message InputContact {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int64 client_id = 3;
+    string phone = 4;
+    string first_name = 5;
+    string last_name = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// InputDialogPeer <--
+//  + TL_inputDialogPeer
+//  + TL_inputDialogPeerFolder
+//
+message InputDialogPeer {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputPeer peer = 3;
+    int32 folder_id = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// InputDocument <--
+//  + TL_inputDocumentEmpty
+//  + TL_inputDocument
+//
+message InputDocument {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int64 id = 3;
+    int64 access_hash = 4;
+    bytes file_reference = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// InputEncryptedChat <--
+//  + TL_inputEncryptedChat
+//
+message InputEncryptedChat {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 chat_id = 3;
+    int64 access_hash = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// InputEncryptedFile <--
+//  + TL_inputEncryptedFileEmpty
+//  + TL_inputEncryptedFileUploaded
+//  + TL_inputEncryptedFile
+//  + TL_inputEncryptedFileBigUploaded
+//
+message InputEncryptedFile {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int64 id = 3;
+    int32 parts = 4;
+    string md5_checksum = 5;
+    int32 key_fingerprint = 6;
+    int64 access_hash = 7;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// InputFile <--
+//  + TL_inputFile
+//  + TL_inputFileBig
+//
+message InputFile {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int64 id = 3;
+    int32 parts = 4;
+    string name = 5;
+    string md5_checksum = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// InputFileLocation <--
+//  + TL_inputFileLocation
+//  + TL_inputEncryptedFileLocation
+//  + TL_inputDocumentFileLocation
+//  + TL_inputSecureFileLocation
+//  + TL_inputTakeoutFileLocation
+//  + TL_inputPhotoFileLocation
+//  + TL_inputPeerPhotoFileLocation
+//  + TL_inputStickerSetThumb
+//  + TL_inputPhotoLegacyFileLocation
+//
+message InputFileLocation {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int64 volume_id = 3;
+    int32 local_id = 4;
+    int64 secret = 5;
+    int64 id = 6;
+    int64 access_hash = 7;
+    int32 version = 8;
+    bytes file_reference = 9;
+    string thumb_size = 10;
+    int32 flags = 11;
+    bool big = 12;
+    InputPeer peer = 13;
+    InputStickerSet stickerset = 14;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// InputFolderPeer <--
+//  + TL_inputFolderPeer
+//
+message InputFolderPeer {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputPeer peer = 3;
+    int32 folder_id = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// InputGame <--
+//  + TL_inputGameID
+//  + TL_inputGameShortName
+//
+message InputGame {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int64 id = 3;
+    int64 access_hash = 4;
+    InputUser bot_id = 5;
+    string short_name = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// InputGeoPoint <--
+//  + TL_inputGeoPointEmpty
+//  + TL_inputGeoPoint
+//
+message InputGeoPoint {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    double lat = 3;
+    double long = 4;
+    int32 flags = 5;
+    int32 accuracy_radius = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// InputGroupCall <--
+//  + TL_inputGroupCall
+//
+message InputGroupCall {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int64 id = 3;
+    int64 access_hash = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// InputMedia <--
+//  + TL_inputMediaEmpty
+//  + TL_inputMediaUploadedPhoto
+//  + TL_inputMediaPhoto
+//  + TL_inputMediaGeoPoint
+//  + TL_inputMediaContact
+//  + TL_inputMediaUploadedDocument
+//  + TL_inputMediaDocument
+//  + TL_inputMediaVenue
+//  + TL_inputMediaGifExternal
+//  + TL_inputMediaPhotoExternal
+//  + TL_inputMediaDocumentExternal
+//  + TL_inputMediaGame
+//  + TL_inputMediaInvoice
+//  + TL_inputMediaUploadedThumbDocument
+//  + TL_inputMediaGeoLive
+//  + TL_inputMediaPoll
+//  + TL_inputMediaDice
+//
+message InputMedia {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    InputFile file = 4;
+    string caption = 5;
+    repeated InputDocument stickers = 6;
+    int32 ttl_seconds = 7;
+    InputPhoto id81FA373A71 = 8;
+    InputGeoPoint geo_point = 9;
+    string phone_number = 10;
+    string first_name = 11;
+    string last_name = 12;
+    InputFile thumb = 13;
+    string mime_type = 14;
+    repeated DocumentAttribute attributes = 15;
+    InputDocument id5ACB668E71 = 16;
+    string title = 17;
+    string address = 18;
+    string provider = 19;
+    string venue_id = 20;
+    string url = 21;
+    string q = 22;
+    InputGame idD33F43F371 = 23;
+    string description = 24;
+    InputWebDocument photo = 25;
+    Invoice invoice = 26;
+    bytes payload = 27;
+    string start_param = 28;
+    string vcard = 29;
+    string venue_type = 30;
+    DataJSON provider_data = 31;
+    int32 period = 32;
+    bool stopped = 33;
+    Poll poll = 34;
+    repeated bytes correct_answers = 35;
+    string solution = 36;
+    repeated MessageEntity solution_entities = 37;
+    string emoticon = 38;
+    bool nosound_video = 39;
+    bool force_file = 40;
+    int32 heading = 41;
+    int32 proximity_notification_radius = 42;
+    string query = 43;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// InputMessage <--
+//  + TL_inputMessageID
+//  + TL_inputMessageReplyTo
+//  + TL_inputMessagePinned
+//  + TL_inputMessageCallbackQuery
+//
+message InputMessage {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 id = 3;
+    int64 query_id = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// InputNotifyPeer <--
+//  + TL_inputNotifyPeer
+//  + TL_inputNotifyUsers
+//  + TL_inputNotifyChats
+//  + TL_inputNotifyAll
+//  + TL_inputNotifyBroadcasts
+//
+message InputNotifyPeer {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputPeer peer = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// InputPaymentCredentials <--
+//  + TL_inputPaymentCredentialsSaved
+//  + TL_inputPaymentCredentials
+//  + TL_inputPaymentCredentialsApplePay
+//  + TL_inputPaymentCredentialsAndroidPay
+//
+message InputPaymentCredentials {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string id = 3;
+    bytes tmp_password = 4;
+    int32 flags = 5;
+    bool save = 6;
+    DataJSON data = 7;
+    DataJSON payment_data = 8;
+    DataJSON payment_token = 9;
+    string google_transaction_id = 10;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// InputPeer <--
+//  + TL_inputPeerEmpty
+//  + TL_inputPeerSelf
+//  + TL_inputPeerChat
+//  + TL_inputPeerUser
+//  + TL_inputPeerChannel
+//  + TL_inputPeerUserFromMessage
+//  + TL_inputPeerChannelFromMessage
+//
+message InputPeer {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 chat_id = 3;
+    int32 user_id = 4;
+    int64 access_hash = 5;
+    int32 channel_id = 6;
+    InputPeer peer = 7;
+    int32 msg_id = 8;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// InputPeerNotifyEvents <--
+//  + TL_inputPeerNotifyEventsEmpty
+//  + TL_inputPeerNotifyEventsAll
+//
+message InputPeerNotifyEvents {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// InputPeerNotifySettings <--
+//  + TL_inputPeerNotifySettings
+//
+message InputPeerNotifySettings {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool show_previews38935EB271 = 4;
+    bool silent38935EB271 = 5;
+    int32 mute_until = 6;
+    string sound = 7;
+    Bool show_previews9C3D198E85 = 8;
+    Bool silent9C3D198E85 = 9;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// InputPhoneCall <--
+//  + TL_inputPhoneCall
+//
+message InputPhoneCall {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int64 id = 3;
+    int64 access_hash = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// InputPhoto <--
+//  + TL_inputPhotoEmpty
+//  + TL_inputPhoto
+//
+message InputPhoto {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int64 id = 3;
+    int64 access_hash = 4;
+    bytes file_reference = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// InputPhotoCrop <--
+//  + TL_inputPhotoCrop
+//  + TL_inputPhotoCropAuto
+//
+message InputPhotoCrop {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    double crop_left = 3;
+    double crop_top = 4;
+    double crop_width = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// InputPrivacyKey <--
+//  + TL_inputPrivacyKeyStatusTimestamp
+//  + TL_inputPrivacyKeyChatInvite
+//  + TL_inputPrivacyKeyPhoneCall
+//  + TL_inputPrivacyKeyPhoneP2P
+//  + TL_inputPrivacyKeyForwards
+//  + TL_inputPrivacyKeyProfilePhoto
+//  + TL_inputPrivacyKeyPhoneNumber
+//  + TL_inputPrivacyKeyAddedByPhone
+//
+message InputPrivacyKey {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// InputPrivacyRule <--
+//  + TL_inputPrivacyValueAllowContacts
+//  + TL_inputPrivacyValueAllowAll
+//  + TL_inputPrivacyValueAllowUsers
+//  + TL_inputPrivacyValueDisallowContacts
+//  + TL_inputPrivacyValueDisallowAll
+//  + TL_inputPrivacyValueDisallowUsers
+//  + TL_inputPrivacyValueAllowChatParticipants
+//  + TL_inputPrivacyValueDisallowChatParticipants
+//
+message InputPrivacyRule {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    repeated InputUser users = 3;
+    repeated int32 chats = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// InputSecureFile <--
+//  + TL_inputSecureFileUploaded
+//  + TL_inputSecureFile
+//
+message InputSecureFile {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int64 id = 3;
+    int32 parts = 4;
+    string md5_checksum = 5;
+    bytes file_hash = 6;
+    bytes secret = 7;
+    int64 access_hash = 8;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// InputSecureValue <--
+//  + TL_inputSecureValue
+//
+message InputSecureValue {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    SecureValueType type = 4;
+    SecureData data = 5;
+    InputSecureFile front_side = 6;
+    InputSecureFile reverse_side = 7;
+    InputSecureFile selfie = 8;
+    repeated InputSecureFile translation = 9;
+    repeated InputSecureFile files = 10;
+    SecurePlainData plain_data = 11;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// InputSingleMedia <--
+//  + TL_inputSingleMedia
+//
+message InputSingleMedia {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    InputMedia media = 4;
+    int64 random_id = 5;
+    string message = 6;
+    repeated MessageEntity entities = 7;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// InputStickerSet <--
+//  + TL_inputStickerSetEmpty
+//  + TL_inputStickerSetID
+//  + TL_inputStickerSetShortName
+//  + TL_inputStickerSetAnimatedEmoji
+//  + TL_inputStickerSetDice
+//
+message InputStickerSet {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int64 id = 3;
+    int64 access_hash = 4;
+    string short_name = 5;
+    string emoticon = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// InputStickerSetItem <--
+//  + TL_inputStickerSetItem
+//
+message InputStickerSetItem {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    InputDocument document = 4;
+    string emoji = 5;
+    MaskCoords mask_coords = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// InputStickeredMedia <--
+//  + TL_inputStickeredMediaPhoto
+//  + TL_inputStickeredMediaDocument
+//
+message InputStickeredMedia {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    InputPhoto id4A99215771 = 3;
+    InputDocument id438865B71 = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// InputTheme <--
+//  + TL_inputTheme
+//  + TL_inputThemeSlug
+//
+message InputTheme {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int64 id = 3;
+    int64 access_hash = 4;
+    string slug = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// InputThemeSettings <--
+//  + TL_inputThemeSettings
+//
+message InputThemeSettings {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    BaseTheme base_theme = 4;
+    int32 accent_color = 5;
+    int32 message_top_color = 6;
+    int32 message_bottom_color = 7;
+    InputWallPaper wallpaper = 8;
+    WallPaperSettings wallpaper_settings = 9;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// InputUser <--
+//  + TL_inputUserEmpty
+//  + TL_inputUserSelf
+//  + TL_inputUser
+//  + TL_inputUserFromMessage
+//
+message InputUser {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 user_id = 3;
+    int64 access_hash = 4;
+    InputPeer peer = 5;
+    int32 msg_id = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// InputWallPaper <--
+//  + TL_inputWallPaper
+//  + TL_inputWallPaperSlug
+//  + TL_inputWallPaperNoFile
+//
+message InputWallPaper {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int64 id = 3;
+    int64 access_hash = 4;
+    string slug = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// InputWebDocument <--
+//  + TL_inputWebDocument
+//
+message InputWebDocument {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string url = 3;
+    int32 size_ = 4;
+    string mime_type = 5;
+    repeated DocumentAttribute attributes = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// InputWebFileLocation <--
+//  + TL_inputWebFileLocation
+//  + TL_inputWebFileGeoPointLocation
+//
+message InputWebFileLocation {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string url = 3;
+    int64 access_hash = 4;
+    InputGeoPoint geo_point = 5;
+    int32 w = 6;
+    int32 h = 7;
+    int32 zoom = 8;
+    int32 scale = 9;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// Invoice <--
+//  + TL_invoice
+//
+message Invoice {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool test = 4;
+    bool name_requested = 5;
+    bool phone_requested = 6;
+    bool email_requested = 7;
+    bool shipping_address_requested = 8;
+    bool flexible = 9;
+    string currency = 10;
+    repeated LabeledPrice prices = 11;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// JSONObjectValue <--
+//  + TL_jsonObjectValue
+//
+message JSONObjectValue {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string key = 3;
+    JSONValue value = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// JSONValue <--
+//  + TL_jsonNull
+//  + TL_jsonBool
+//  + TL_jsonNumber
+//  + TL_jsonString
+//  + TL_jsonArray
+//  + TL_jsonObject
+//
+message JSONValue {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    Bool valueC7345E6A90 = 3;
+    double value2BE0DFA490 = 4;
+    string valueB71E767A90 = 5;
+    repeated JSONValue valueF744476390 = 6;
+    repeated JSONObjectValue value99C1D49D90 = 7;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// KeyboardButton <--
+//  + TL_keyboardButton
+//  + TL_keyboardButtonUrl
+//  + TL_keyboardButtonCallback
+//  + TL_keyboardButtonRequestPhone
+//  + TL_keyboardButtonRequestGeoLocation
+//  + TL_keyboardButtonSwitchInline
+//  + TL_keyboardButtonGame
+//  + TL_keyboardButtonBuy
+//  + TL_keyboardButtonUrlAuth
+//  + TL_inputKeyboardButtonUrlAuth
+//  + TL_keyboardButtonRequestPoll
+//
+message KeyboardButton {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string text = 3;
+    string url = 4;
+    bytes data = 5;
+    int32 flags = 6;
+    bool same_peer = 7;
+    string query = 8;
+    string fwd_text = 9;
+    int32 button_id = 10;
+    bool request_write_access = 11;
+    InputUser bot = 12;
+    Bool quiz = 13;
+    bool requires_password = 14;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// KeyboardButtonRow <--
+//  + TL_keyboardButtonRow
+//
+message KeyboardButtonRow {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    repeated KeyboardButton buttons = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// LabeledPrice <--
+//  + TL_labeledPrice
+//
+message LabeledPrice {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string label = 3;
+    int64 amount = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// LangPackDifference <--
+//  + TL_langPackDifference
+//
+message LangPackDifference {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string lang_code = 3;
+    int32 from_version = 4;
+    int32 version = 5;
+    repeated LangPackString strings = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// LangPackLanguage <--
+//  + TL_langPackLanguage
+//
+message LangPackLanguage {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string name = 3;
+    string native_name = 4;
+    string lang_code = 5;
+    int32 flags = 6;
+    bool official = 7;
+    bool rtl = 8;
+    string base_lang_code = 9;
+    string plural_code = 10;
+    int32 strings_count = 11;
+    int32 translated_count = 12;
+    string translations_url = 13;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// LangPackString <--
+//  + TL_langPackString
+//  + TL_langPackStringPluralized
+//  + TL_langPackStringDeleted
+//
+message LangPackString {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string key = 3;
+    string value = 4;
+    int32 flags = 5;
+    string zero_value = 6;
+    string one_value = 7;
+    string two_value = 8;
+    string few_value = 9;
+    string many_value = 10;
+    string other_value = 11;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// MaskCoords <--
+//  + TL_maskCoords
+//
+message MaskCoords {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 n = 3;
+    double x = 4;
+    double y = 5;
+    double zoom = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// Message <--
+//  + TL_messageEmpty
+//  + TL_message
+//  + TL_messageService
+//
+message Message {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 id = 3;
+    int32 flags = 4;
+    bool out = 5;
+    bool mentioned = 6;
+    bool media_unread = 7;
+    bool silent = 8;
+    bool post = 9;
+    int32 from_id90DDDC1171 = 10;
+    Peer to_id = 11;
+    MessageFwdHeader fwd_from = 12;
+    int32 via_bot_id = 13;
+    int32 reply_to_msg_id = 14;
+    int32 date = 15;
+    string message = 16;
+    MessageMedia media = 17;
+    ReplyMarkup reply_markup = 18;
+    repeated MessageEntity entities = 19;
+    int32 views = 20;
+    int32 edit_date = 21;
+    string post_author = 22;
+    MessageAction action = 23;
+    bool unread = 24;
+    int64 grouped_id = 25;
+    bool from_scheduled = 26;
+    bool legacy = 27;
+    bool edit_hide = 28;
+    repeated RestrictionReason restriction_reason = 29;
+    Peer from_id286FA604119 = 30;
+    Peer peer_id = 31;
+    MessageReplyHeader reply_to = 32;
+    bool pinned = 33;
+    int32 forwards = 34;
+    MessageReplies replies = 35;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// MessageAction <--
+//  + TL_messageActionEmpty
+//  + TL_messageActionChatCreate
+//  + TL_messageActionChatEditTitle
+//  + TL_messageActionChatEditPhoto
+//  + TL_messageActionChatDeletePhoto
+//  + TL_messageActionChatAddUser
+//  + TL_messageActionChatDeleteUser
+//  + TL_messageActionChatJoinedByLink
+//  + TL_messageActionChannelCreate
+//  + TL_messageActionChatMigrateTo
+//  + TL_messageActionChannelMigrateFrom
+//  + TL_messageActionPinMessage
+//  + TL_messageActionHistoryClear
+//  + TL_messageActionGameScore
+//  + TL_messageActionPaymentSentMe
+//  + TL_messageActionPaymentSent
+//  + TL_messageActionScreenshotTaken
+//  + TL_messageActionCustomAction
+//  + TL_messageActionBotAllowed
+//  + TL_messageActionSecureValuesSentMe
+//  + TL_messageActionSecureValuesSent
+//  + TL_messageActionContactSignUp
+//  + TL_messageActionPhoneCall
+//  + TL_messageActionGeoProximityReached
+//  + TL_messageActionGroupCall
+//  + TL_messageActionInviteToGroupCall
+//
+message MessageAction {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string title = 3;
+    repeated int32 users = 4;
+    Photo photo = 5;
+    int32 user_id = 6;
+    int32 inviter_id = 7;
+    int32 channel_id = 8;
+    int32 chat_id = 9;
+    int64 game_id = 10;
+    int32 score = 11;
+    int32 flags = 12;
+    string currency = 13;
+    int64 total_amount = 14;
+    bytes payload = 15;
+    PaymentRequestedInfo info = 16;
+    string shipping_option_id = 17;
+    PaymentCharge charge = 18;
+    string message = 19;
+    string domain = 20;
+    repeated SecureValue values = 21;
+    SecureCredentialsEncrypted credentials = 22;
+    repeated SecureValueType types = 23;
+    bool silent = 24;
+    bool video = 25;
+    int64 call_id = 26;
+    PhoneCallDiscardReason reason = 27;
+    int32 duration = 28;
+    Peer from_id = 29;
+    Peer to_id = 30;
+    int32 distance = 31;
+    InputGroupCall call = 32;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// MessageEntity <--
+//  + TL_messageEntityUnknown
+//  + TL_messageEntityMention
+//  + TL_messageEntityHashtag
+//  + TL_messageEntityBotCommand
+//  + TL_messageEntityUrl
+//  + TL_messageEntityEmail
+//  + TL_messageEntityBold
+//  + TL_messageEntityItalic
+//  + TL_messageEntityCode
+//  + TL_messageEntityPre
+//  + TL_messageEntityTextUrl
+//  + TL_messageEntityMentionName
+//  + TL_inputMessageEntityMentionName
+//  + TL_messageEntityPhone
+//  + TL_messageEntityCashtag
+//  + TL_messageEntityUnderline
+//  + TL_messageEntityStrike
+//  + TL_messageEntityBlockquote
+//  + TL_messageEntityBankCard
+//
+message MessageEntity {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 offset = 3;
+    int32 length = 4;
+    string language = 5;
+    string url = 6;
+    int32 user_id352DCA5871 = 7;
+    InputUser user_id208E68C971 = 8;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// MessageFwdHeader <--
+//  + TL_messageFwdHeader
+//
+message MessageFwdHeader {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    int32 from_idFADFF4AC71 = 4;
+    int32 date = 5;
+    int32 channel_id = 6;
+    int32 channel_post = 7;
+    string post_author = 8;
+    Peer saved_from_peer = 9;
+    int32 saved_from_msg_id = 10;
+    string from_name = 11;
+    string psa_type = 12;
+    Peer from_id5F777DCE119 = 13;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// MessageGroup <--
+//  + TL_messageGroup
+//
+message MessageGroup {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 min_id = 3;
+    int32 max_id = 4;
+    int32 count = 5;
+    int32 date = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// MessageInteractionCounters <--
+//  + TL_messageInteractionCounters
+//
+message MessageInteractionCounters {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 msg_id = 3;
+    int32 views = 4;
+    int32 forwards = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// MessageMedia <--
+//  + TL_messageMediaEmpty
+//  + TL_messageMediaPhoto
+//  + TL_messageMediaGeo
+//  + TL_messageMediaContact
+//  + TL_messageMediaUnsupported
+//  + TL_messageMediaDocument
+//  + TL_messageMediaWebPage
+//  + TL_messageMediaVenue
+//  + TL_messageMediaGame
+//  + TL_messageMediaInvoice
+//  + TL_messageMediaGeoLive
+//  + TL_messageMediaPoll
+//  + TL_messageMediaDice
+//
+message MessageMedia {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    Photo photoB5223B0F71 = 4;
+    string caption = 5;
+    int32 ttl_seconds = 6;
+    GeoPoint geo = 7;
+    string phone_number = 8;
+    string first_name = 9;
+    string last_name = 10;
+    int32 user_id = 11;
+    Document document = 12;
+    WebPage webpage = 13;
+    string title = 14;
+    string address = 15;
+    string provider = 16;
+    string venue_id = 17;
+    Game game = 18;
+    bool shipping_address_requested = 19;
+    bool test = 20;
+    string description = 21;
+    WebDocument photo8455134771 = 22;
+    int32 receipt_msg_id = 23;
+    string currency = 24;
+    int64 total_amount = 25;
+    string start_param = 26;
+    string vcard = 27;
+    string venue_type = 28;
+    int32 period = 29;
+    Poll poll = 30;
+    PollResults results = 31;
+    int32 value = 32;
+    string emoticon = 33;
+    int32 heading = 34;
+    int32 proximity_notification_radius = 35;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// MessageRange <--
+//  + TL_messageRange
+//
+message MessageRange {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 min_id = 3;
+    int32 max_id = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// MessageReplies <--
+//  + TL_messageReplies
+//
+message MessageReplies {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool comments = 4;
+    int32 replies = 5;
+    int32 replies_pts = 6;
+    repeated Peer recent_repliers = 7;
+    int32 channel_id = 8;
+    int32 max_id = 9;
+    int32 read_max_id = 10;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// MessageReplyHeader <--
+//  + TL_messageReplyHeader
+//
+message MessageReplyHeader {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    int32 reply_to_msg_id = 4;
+    Peer reply_to_peer_id = 5;
+    int32 reply_to_top_id = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// MessageUserVote <--
+//  + TL_messageUserVote
+//  + TL_messageUserVoteInputOption
+//  + TL_messageUserVoteMultiple
+//
+message MessageUserVote {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 user_id = 3;
+    bytes option = 4;
+    int32 date = 5;
+    repeated bytes options = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// MessageViews <--
+//  + TL_messageViews
+//
+message MessageViews {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    int32 views = 4;
+    int32 forwards = 5;
+    MessageReplies replies = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// MessagesFilter <--
+//  + TL_inputMessagesFilterEmpty
+//  + TL_inputMessagesFilterPhotos
+//  + TL_inputMessagesFilterVideo
+//  + TL_inputMessagesFilterPhotoVideo
+//  + TL_inputMessagesFilterPhotoVideoDocuments
+//  + TL_inputMessagesFilterDocument
+//  + TL_inputMessagesFilterUrl
+//  + TL_inputMessagesFilterGif
+//  + TL_inputMessagesFilterVoice
+//  + TL_inputMessagesFilterMusic
+//  + TL_inputMessagesFilterChatPhotos
+//  + TL_inputMessagesFilterPhoneCalls
+//  + TL_inputMessagesFilterRoundVoice
+//  + TL_inputMessagesFilterRoundVideo
+//  + TL_inputMessagesFilterMyMentions
+//  + TL_inputMessagesFilterGeo
+//  + TL_inputMessagesFilterContacts
+//  + TL_inputMessagesFilterPinned
+//
+message MessagesFilter {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool missed = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// NearestDc <--
+//  + TL_nearestDc
+//
+message NearestDc {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string country = 3;
+    int32 this_dc = 4;
+    int32 nearest_dc = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// NotifyPeer <--
+//  + TL_notifyPeer
+//  + TL_notifyUsers
+//  + TL_notifyChats
+//  + TL_notifyAll
+//  + TL_notifyBroadcasts
+//
+message NotifyPeer {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    Peer peer = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// Page <--
+//  + TL_pagePart
+//  + TL_pageFull
+//  + TL_page
+//
+message Page {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    repeated PageBlock blocks = 3;
+    repeated Photo photos = 4;
+    repeated Document documents = 5;
+    int32 flags = 6;
+    bool part = 7;
+    bool rtl = 8;
+    string url = 9;
+    bool v2 = 10;
+    int32 views = 11;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// PageBlock <--
+//  + TL_pageBlockUnsupported
+//  + TL_pageBlockTitle
+//  + TL_pageBlockSubtitle
+//  + TL_pageBlockAuthorDate
+//  + TL_pageBlockHeader
+//  + TL_pageBlockSubheader
+//  + TL_pageBlockParagraph
+//  + TL_pageBlockPreformatted
+//  + TL_pageBlockFooter
+//  + TL_pageBlockDivider
+//  + TL_pageBlockAnchor
+//  + TL_pageBlockList
+//  + TL_pageBlockBlockquote
+//  + TL_pageBlockPullquote
+//  + TL_pageBlockPhoto
+//  + TL_pageBlockVideo
+//  + TL_pageBlockCover
+//  + TL_pageBlockEmbed
+//  + TL_pageBlockEmbedPost
+//  + TL_pageBlockCollage
+//  + TL_pageBlockSlideshow
+//  + TL_pageBlockChannel
+//  + TL_pageBlockAudio
+//  + TL_pageBlockKicker
+//  + TL_pageBlockTable
+//  + TL_pageBlockOrderedList
+//  + TL_pageBlockDetails
+//  + TL_pageBlockRelatedArticles
+//  + TL_pageBlockMap
+//
+message PageBlock {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    RichText text = 3;
+    RichText authorBAAFE5E071 = 4;
+    int32 published_date = 5;
+    string language = 6;
+    string name = 7;
+    Bool ordered = 8;
+    repeated RichText items3A58C7F471 = 9;
+    RichText caption263D7C2671 = 10;
+    int64 photo_id = 11;
+    int32 flags = 12;
+    bool autoplay = 13;
+    bool loop = 14;
+    int64 video_id = 15;
+    PageBlock cover = 16;
+    bool full_width = 17;
+    bool allow_scrolling = 18;
+    string url = 19;
+    string html = 20;
+    int64 poster_photo_id = 21;
+    int32 w = 22;
+    int32 h = 23;
+    int64 webpage_id = 24;
+    int64 author_photo_id = 25;
+    string author292C7BE971 = 26;
+    int32 date = 27;
+    repeated PageBlock blocks = 28;
+    repeated PageBlock items8B31C4F71 = 29;
+    Chat channel = 30;
+    int64 audio_id = 31;
+    repeated PageListItem itemsE4E8801188 = 32;
+    PageCaption caption1759C56088 = 33;
+    bool bordered = 34;
+    bool striped = 35;
+    RichText title = 36;
+    repeated PageTableRow rows = 37;
+    repeated PageListOrderedItem items9A8AE1E188 = 38;
+    bool open = 39;
+    repeated PageRelatedArticle articles = 40;
+    GeoPoint geo = 41;
+    int32 zoom = 42;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// PageCaption <--
+//  + TL_pageCaption
+//
+message PageCaption {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    RichText text = 3;
+    RichText credit = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// PageListItem <--
+//  + TL_pageListItemText
+//  + TL_pageListItemBlocks
+//
+message PageListItem {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    RichText text = 3;
+    repeated PageBlock blocks = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// PageListOrderedItem <--
+//  + TL_pageListOrderedItemText
+//  + TL_pageListOrderedItemBlocks
+//
+message PageListOrderedItem {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string num = 3;
+    RichText text = 4;
+    repeated PageBlock blocks = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// PageRelatedArticle <--
+//  + TL_pageRelatedArticle
+//
+message PageRelatedArticle {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    string url = 4;
+    int64 webpage_id = 5;
+    string title = 6;
+    string description = 7;
+    int64 photo_id = 8;
+    string author = 9;
+    int32 published_date = 10;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// PageTableCell <--
+//  + TL_pageTableCell
+//
+message PageTableCell {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool header = 4;
+    bool align_center = 5;
+    bool align_right = 6;
+    bool valign_middle = 7;
+    bool valign_bottom = 8;
+    RichText text = 9;
+    int32 colspan = 10;
+    int32 rowspan = 11;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// PageTableRow <--
+//  + TL_pageTableRow
+//
+message PageTableRow {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    repeated PageTableCell cells = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// PasswordKdfAlgo <--
+//  + TL_passwordKdfAlgoUnknown
+//  + TL_passwordKdfAlgoSHA256SHA256PBKDF2HMACSHA512iter100000SHA256ModPow
+//
+message PasswordKdfAlgo {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    bytes salt1 = 3;
+    bytes salt2 = 4;
+    int32 g = 5;
+    bytes p = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// PaymentCharge <--
+//  + TL_paymentCharge
+//
+message PaymentCharge {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string id = 3;
+    string provider_charge_id = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// PaymentRequestedInfo <--
+//  + TL_paymentRequestedInfo
+//
+message PaymentRequestedInfo {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    string name = 4;
+    string phone = 5;
+    string email = 6;
+    PostAddress shipping_address = 7;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// PaymentSavedCredentials <--
+//  + TL_paymentSavedCredentialsCard
+//
+message PaymentSavedCredentials {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string id = 3;
+    string title = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// Peer <--
+//  + TL_peerUser
+//  + TL_peerChat
+//  + TL_peerChannel
+//
+message Peer {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 user_id = 3;
+    int32 chat_id = 4;
+    int32 channel_id = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// PeerBlocked <--
+//  + TL_peerBlocked
+//
+message PeerBlocked {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    Peer peer_id = 3;
+    int32 date = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// PeerLocated <--
+//  + TL_peerLocated
+//  + TL_peerSelfLocated
+//
+message PeerLocated {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    Peer peer = 3;
+    int32 expires = 4;
+    int32 distance = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// PeerNotifyEvents <--
+//  + TL_peerNotifyEventsEmpty
+//  + TL_peerNotifyEventsAll
+//
+message PeerNotifyEvents {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// PeerNotifySettings <--
+//  + TL_peerNotifySettingsEmpty
+//  + TL_peerNotifySettings
+//
+message PeerNotifySettings {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool show_previews9ACDA4C071 = 4;
+    bool silent9ACDA4C071 = 5;
+    int32 mute_until = 6;
+    string sound = 7;
+    Bool show_previewsAF509D2085 = 8;
+    Bool silentAF509D2085 = 9;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// PeerSettings <--
+//  + TL_peerSettings
+//
+message PeerSettings {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool report_spam = 4;
+    bool add_contact = 5;
+    bool block_contact = 6;
+    bool share_contact = 7;
+    bool need_contacts_exception = 8;
+    bool report_geo = 9;
+    bool autoarchived = 10;
+    int32 geo_distance = 11;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// PhoneCall <--
+//  + TL_phoneCallEmpty
+//  + TL_phoneCallRequested
+//  + TL_phoneCallAccepted
+//  + TL_phoneCall
+//  + TL_phoneCallWaiting
+//  + TL_phoneCallDiscarded
+//
+message PhoneCall {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int64 id = 3;
+    int64 access_hash = 4;
+    int32 date = 5;
+    int32 admin_id = 6;
+    int32 participant_id = 7;
+    bytes g_a_hash = 8;
+    PhoneCallProtocol protocol = 9;
+    bytes g_b = 10;
+    bytes g_a_or_b = 11;
+    int64 key_fingerprint = 12;
+    PhoneConnection connection = 13;
+    repeated PhoneConnection alternative_connections = 14;
+    int32 start_date = 15;
+    int32 flags = 16;
+    bool p2p_allowed = 17;
+    bool video = 18;
+    int32 receive_date = 19;
+    repeated PhoneConnection connections = 20;
+    bool need_rating = 21;
+    bool need_debug = 22;
+    PhoneCallDiscardReason reason = 23;
+    int32 duration = 24;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// PhoneCallDiscardReason <--
+//  + TL_phoneCallDiscardReasonMissed
+//  + TL_phoneCallDiscardReasonDisconnect
+//  + TL_phoneCallDiscardReasonHangup
+//  + TL_phoneCallDiscardReasonBusy
+//
+message PhoneCallDiscardReason {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// PhoneCallProtocol <--
+//  + TL_phoneCallProtocol
+//
+message PhoneCallProtocol {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool udp_p2p = 4;
+    bool udp_reflector = 5;
+    int32 min_layer = 6;
+    int32 max_layer = 7;
+    repeated string library_versions = 8;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// PhoneConnection <--
+//  + TL_phoneConnection
+//  + TL_phoneConnectionWebrtc
+//
+message PhoneConnection {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int64 id = 3;
+    string ip = 4;
+    string ipv6 = 5;
+    int32 port = 6;
+    bytes peer_tag = 7;
+    int32 flags = 8;
+    bool turn = 9;
+    bool stun = 10;
+    string username = 11;
+    string password = 12;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// Photo <--
+//  + TL_photoEmpty
+//  + TL_photo
+//
+message Photo {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int64 id = 3;
+    int32 flags = 4;
+    bool has_stickers = 5;
+    int64 access_hash = 6;
+    int32 date = 7;
+    repeated PhotoSize sizes = 8;
+    bytes file_reference = 9;
+    int32 dc_id = 10;
+    repeated VideoSize video_sizes = 11;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// PhotoSize <--
+//  + TL_photoSizeEmpty
+//  + TL_photoSize
+//  + TL_photoCachedSize
+//  + TL_photoStrippedSize
+//  + TL_photoSizeProgressive
+//  + TL_photoPathSize
+//
+message PhotoSize {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string type = 3;
+    FileLocation location = 4;
+    int32 w = 5;
+    int32 h = 6;
+    int32 size_ = 7;
+    bytes bytes = 8;
+    repeated int32 sizes = 9;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// Poll <--
+//  + TL_poll
+//
+message Poll {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int64 id = 3;
+    int32 flags = 4;
+    bool closed = 5;
+    string question = 6;
+    repeated PollAnswer answers = 7;
+    bool public_voters = 8;
+    bool multiple_choice = 9;
+    bool quiz = 10;
+    int32 close_period = 11;
+    int32 close_date = 12;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// PollAnswer <--
+//  + TL_pollAnswer
+//
+message PollAnswer {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string text = 3;
+    bytes option = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// PollAnswerVoters <--
+//  + TL_pollAnswerVoters
+//
+message PollAnswerVoters {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool chosen = 4;
+    bytes option = 5;
+    int32 voters = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// PollResults <--
+//  + TL_pollResults
+//
+message PollResults {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool min = 4;
+    repeated PollAnswerVoters results = 5;
+    int32 total_voters = 6;
+    repeated int32 recent_voters = 7;
+    string solution = 8;
+    repeated MessageEntity solution_entities = 9;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// PopularContact <--
+//  + TL_popularContact
+//
+message PopularContact {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int64 client_id = 3;
+    int32 importers = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// PostAddress <--
+//  + TL_postAddress
+//
+message PostAddress {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string street_line1 = 3;
+    string street_line2 = 4;
+    string city = 5;
+    string state = 6;
+    string country_iso2 = 7;
+    string post_code = 8;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// PrivacyKey <--
+//  + TL_privacyKeyStatusTimestamp
+//  + TL_privacyKeyChatInvite
+//  + TL_privacyKeyPhoneCall
+//  + TL_privacyKeyPhoneP2P
+//  + TL_privacyKeyForwards
+//  + TL_privacyKeyProfilePhoto
+//  + TL_privacyKeyPhoneNumber
+//  + TL_privacyKeyAddedByPhone
+//
+message PrivacyKey {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// PrivacyRule <--
+//  + TL_privacyValueAllowContacts
+//  + TL_privacyValueAllowAll
+//  + TL_privacyValueAllowUsers
+//  + TL_privacyValueDisallowContacts
+//  + TL_privacyValueDisallowAll
+//  + TL_privacyValueDisallowUsers
+//  + TL_privacyValueAllowChatParticipants
+//  + TL_privacyValueDisallowChatParticipants
+//
+message PrivacyRule {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    repeated int32 users = 3;
+    repeated int32 chats = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// ReceivedNotifyMessage <--
+//  + TL_receivedNotifyMessage
+//
+message ReceivedNotifyMessage {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 id = 3;
+    int32 flags = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// RecentMeUrl <--
+//  + TL_recentMeUrlUnknown
+//  + TL_recentMeUrlUser
+//  + TL_recentMeUrlChat
+//  + TL_recentMeUrlChatInvite
+//  + TL_recentMeUrlStickerSet
+//
+message RecentMeUrl {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string url = 3;
+    int32 user_id = 4;
+    int32 chat_id = 5;
+    ChatInvite chat_invite = 6;
+    StickerSetCovered set = 7;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// ReplyMarkup <--
+//  + TL_replyKeyboardHide
+//  + TL_replyKeyboardForceReply
+//  + TL_replyKeyboardMarkup
+//  + TL_replyInlineMarkup
+//
+message ReplyMarkup {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool selective = 4;
+    bool single_use = 5;
+    bool resize = 6;
+    repeated KeyboardButtonRow rows = 7;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// ReportReason <--
+//  + TL_inputReportReasonSpam
+//  + TL_inputReportReasonViolence
+//  + TL_inputReportReasonPornography
+//  + TL_inputReportReasonOther
+//  + TL_inputReportReasonCopyright
+//  + TL_inputReportReasonChildAbuse
+//  + TL_inputReportReasonGeoIrrelevant
+//
+message ReportReason {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string text = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// RestrictionReason <--
+//  + TL_restrictionReason
+//
+message RestrictionReason {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string platform = 3;
+    string reason = 4;
+    string text = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// RichText <--
+//  + TL_textEmpty
+//  + TL_textPlain
+//  + TL_textBold
+//  + TL_textItalic
+//  + TL_textUnderline
+//  + TL_textStrike
+//  + TL_textFixed
+//  + TL_textUrl
+//  + TL_textEmail
+//  + TL_textConcat
+//  + TL_textSubscript
+//  + TL_textSuperscript
+//  + TL_textMarked
+//  + TL_textPhone
+//  + TL_textImage
+//  + TL_textAnchor
+//
+message RichText {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string text744694E071 = 3;
+    RichText text6724ABC471 = 4;
+    string url = 5;
+    int64 webpage_id = 6;
+    string email = 7;
+    repeated RichText texts = 8;
+    string phone = 9;
+    int64 document_id = 10;
+    int32 w = 11;
+    int32 h = 12;
+    string name = 13;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// SavedContact <--
+//  + TL_savedPhoneContact
+//
+message SavedContact {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string phone = 3;
+    string first_name = 4;
+    string last_name = 5;
+    int32 date = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// SecureCredentialsEncrypted <--
+//  + TL_secureCredentialsEncrypted
+//
+message SecureCredentialsEncrypted {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    bytes data = 3;
+    bytes hash = 4;
+    bytes secret = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// SecureData <--
+//  + TL_secureData
+//
+message SecureData {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    bytes data = 3;
+    bytes data_hash = 4;
+    bytes secret = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// SecureFile <--
+//  + TL_secureFileEmpty
+//  + TL_secureFile
+//
+message SecureFile {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int64 id = 3;
+    int64 access_hash = 4;
+    int32 size_ = 5;
+    int32 dc_id = 6;
+    int32 date = 7;
+    bytes file_hash = 8;
+    bytes secret = 9;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// SecurePasswordKdfAlgo <--
+//  + TL_securePasswordKdfAlgoUnknown
+//  + TL_securePasswordKdfAlgoPBKDF2HMACSHA512iter100000
+//  + TL_securePasswordKdfAlgoSHA512
+//
+message SecurePasswordKdfAlgo {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    bytes salt = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// SecurePlainData <--
+//  + TL_securePlainPhone
+//  + TL_securePlainEmail
+//
+message SecurePlainData {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string phone = 3;
+    string email = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// SecureRequiredType <--
+//  + TL_secureRequiredType
+//  + TL_secureRequiredTypeOneOf
+//
+message SecureRequiredType {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool native_names = 4;
+    bool selfie_required = 5;
+    bool translation_required = 6;
+    SecureValueType type = 7;
+    repeated SecureRequiredType types = 8;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// SecureSecretSettings <--
+//  + TL_secureSecretSettings
+//
+message SecureSecretSettings {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    SecurePasswordKdfAlgo secure_algo = 3;
+    bytes secure_secret = 4;
+    int64 secure_secret_id = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// SecureValue <--
+//  + TL_secureValue
+//
+message SecureValue {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    SecureValueType type = 4;
+    SecureData data = 5;
+    SecureFile front_side = 6;
+    SecureFile reverse_side = 7;
+    SecureFile selfie = 8;
+    repeated SecureFile translation = 9;
+    repeated SecureFile files = 10;
+    SecurePlainData plain_data = 11;
+    bytes hash = 12;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// SecureValueError <--
+//  + TL_secureValueErrorData
+//  + TL_secureValueErrorFrontSide
+//  + TL_secureValueErrorReverseSide
+//  + TL_secureValueErrorSelfie
+//  + TL_secureValueErrorFile
+//  + TL_secureValueErrorFiles
+//  + TL_secureValueError
+//  + TL_secureValueErrorTranslationFile
+//  + TL_secureValueErrorTranslationFiles
+//
+message SecureValueError {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    SecureValueType type = 3;
+    bytes data_hash = 4;
+    string field = 5;
+    string text = 6;
+    bytes file_hashBE3DFA85 = 7;
+    repeated bytes file_hash666220E985 = 8;
+    bytes hash = 9;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// SecureValueHash <--
+//  + TL_secureValueHash
+//
+message SecureValueHash {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    SecureValueType type = 3;
+    bytes hash = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// SecureValueType <--
+//  + TL_secureValueTypePersonalDetails
+//  + TL_secureValueTypePassport
+//  + TL_secureValueTypeDriverLicense
+//  + TL_secureValueTypeIdentityCard
+//  + TL_secureValueTypeInternalPassport
+//  + TL_secureValueTypeAddress
+//  + TL_secureValueTypeUtilityBill
+//  + TL_secureValueTypeBankStatement
+//  + TL_secureValueTypeRentalAgreement
+//  + TL_secureValueTypePassportRegistration
+//  + TL_secureValueTypeTemporaryRegistration
+//  + TL_secureValueTypePhone
+//  + TL_secureValueTypeEmail
+//
+message SecureValueType {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// SendMessageAction <--
+//  + TL_sendMessageTypingAction
+//  + TL_sendMessageCancelAction
+//  + TL_sendMessageRecordVideoAction
+//  + TL_sendMessageUploadVideoAction
+//  + TL_sendMessageRecordAudioAction
+//  + TL_sendMessageUploadAudioAction
+//  + TL_sendMessageUploadPhotoAction
+//  + TL_sendMessageUploadDocumentAction
+//  + TL_sendMessageGeoLocationAction
+//  + TL_sendMessageChooseContactAction
+//  + TL_sendMessageGamePlayAction
+//  + TL_sendMessageRecordRoundAction
+//  + TL_sendMessageUploadRoundAction
+//  + TL_speakingInGroupCallAction
+//
+message SendMessageAction {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 progress = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// ShippingOption <--
+//  + TL_shippingOption
+//
+message ShippingOption {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string id = 3;
+    string title = 4;
+    repeated LabeledPrice prices = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// StatsAbsValueAndPrev <--
+//  + TL_statsAbsValueAndPrev
+//
+message StatsAbsValueAndPrev {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    double current = 3;
+    double previous = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// StatsDateRangeDays <--
+//  + TL_statsDateRangeDays
+//
+message StatsDateRangeDays {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 min_date = 3;
+    int32 max_date = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// StatsGraph <--
+//  + TL_statsGraphAsync
+//  + TL_statsGraphError
+//  + TL_statsGraph
+//
+message StatsGraph {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string token = 3;
+    string error = 4;
+    int32 flags = 5;
+    DataJSON json = 6;
+    string zoom_token = 7;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// StatsGroupTopAdmin <--
+//  + TL_statsGroupTopAdmin
+//
+message StatsGroupTopAdmin {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 user_id = 3;
+    int32 deleted = 4;
+    int32 kicked = 5;
+    int32 banned = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// StatsGroupTopInviter <--
+//  + TL_statsGroupTopInviter
+//
+message StatsGroupTopInviter {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 user_id = 3;
+    int32 invitations = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// StatsGroupTopPoster <--
+//  + TL_statsGroupTopPoster
+//
+message StatsGroupTopPoster {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 user_id = 3;
+    int32 messages = 4;
+    int32 avg_chars = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// StatsPercentValue <--
+//  + TL_statsPercentValue
+//
+message StatsPercentValue {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    double part = 3;
+    double total = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// StatsURL <--
+//  + TL_statsURL
+//
+message StatsURL {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string url = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// StickerPack <--
+//  + TL_stickerPack
+//
+message StickerPack {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string emoticon = 3;
+    repeated int64 documents = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// StickerSet <--
+//  + TL_stickerSet
+//
+message StickerSet {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool installed = 4;
+    bool archived = 5;
+    bool official = 6;
+    bool masks = 7;
+    int64 id = 8;
+    int64 access_hash = 9;
+    string title = 10;
+    string short_name = 11;
+    int32 count = 12;
+    int32 hash = 13;
+    int32 installed_date = 14;
+    PhotoSize thumb = 15;
+    int32 thumb_dc_id = 16;
+    bool animated = 17;
+    repeated PhotoSize thumbs = 18;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// StickerSetCovered <--
+//  + TL_stickerSetCovered
+//  + TL_stickerSetMultiCovered
+//
+message StickerSetCovered {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    StickerSet set = 3;
+    Document cover = 4;
+    repeated Document covers = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// Theme <--
+//  + TL_themeDocumentNotModified
+//  + TL_theme
+//
+message Theme {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool creator = 4;
+    bool default = 5;
+    int64 id = 6;
+    int64 access_hash = 7;
+    string slug = 8;
+    string title = 9;
+    Document document = 10;
+    int32 installs_count = 11;
+    ThemeSettings settings = 12;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// ThemeSettings <--
+//  + TL_themeSettings
+//
+message ThemeSettings {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    BaseTheme base_theme = 4;
+    int32 accent_color = 5;
+    int32 message_top_color = 6;
+    int32 message_bottom_color = 7;
+    WallPaper wallpaper = 8;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// TopPeer <--
+//  + TL_topPeer
+//
+message TopPeer {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    Peer peer = 3;
+    double rating = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// TopPeerCategory <--
+//  + TL_topPeerCategoryBotsPM
+//  + TL_topPeerCategoryBotsInline
+//  + TL_topPeerCategoryCorrespondents
+//  + TL_topPeerCategoryGroups
+//  + TL_topPeerCategoryChannels
+//  + TL_topPeerCategoryPhoneCalls
+//  + TL_topPeerCategoryForwardUsers
+//  + TL_topPeerCategoryForwardChats
+//
+message TopPeerCategory {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// TopPeerCategoryPeers <--
+//  + TL_topPeerCategoryPeers
+//
+message TopPeerCategoryPeers {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    TopPeerCategory category = 3;
+    int32 count = 4;
+    repeated TopPeer peers = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// Update <--
+//  + TL_updateNewMessage
+//  + TL_updateMessageID
+//  + TL_updateDeleteMessages
+//  + TL_updateUserTyping
+//  + TL_updateChatUserTyping
+//  + TL_updateChatParticipants
+//  + TL_updateUserStatus
+//  + TL_updateUserName
+//  + TL_updateUserPhoto
+//  + TL_updateContactRegistered
+//  + TL_updateContactLink
+//  + TL_updateNewEncryptedMessage
+//  + TL_updateEncryptedChatTyping
+//  + TL_updateEncryption
+//  + TL_updateEncryptedMessagesRead
+//  + TL_updateChatParticipantAdd
+//  + TL_updateChatParticipantDelete
+//  + TL_updateDcOptions
+//  + TL_updateUserBlocked
+//  + TL_updateNotifySettings
+//  + TL_updateServiceNotification
+//  + TL_updatePrivacy
+//  + TL_updateUserPhone
+//  + TL_updateReadHistoryInbox
+//  + TL_updateReadHistoryOutbox
+//  + TL_updateWebPage
+//  + TL_updateReadMessagesContents
+//  + TL_updateChannelTooLong
+//  + TL_updateChannel
+//  + TL_updateNewChannelMessage
+//  + TL_updateReadChannelInbox
+//  + TL_updateDeleteChannelMessages
+//  + TL_updateChannelMessageViews
+//  + TL_updateChatAdmins
+//  + TL_updateChatParticipantAdmin
+//  + TL_updateNewStickerSet
+//  + TL_updateStickerSetsOrder
+//  + TL_updateStickerSets
+//  + TL_updateSavedGifs
+//  + TL_updateBotInlineQuery
+//  + TL_updateBotInlineSend
+//  + TL_updateEditChannelMessage
+//  + TL_updateChannelPinnedMessage
+//  + TL_updateBotCallbackQuery
+//  + TL_updateEditMessage
+//  + TL_updateInlineBotCallbackQuery
+//  + TL_updateReadChannelOutbox
+//  + TL_updateDraftMessage
+//  + TL_updateReadFeaturedStickers
+//  + TL_updateRecentStickers
+//  + TL_updateConfig
+//  + TL_updatePtsChanged
+//  + TL_updateChannelWebPage
+//  + TL_updateDialogPinned
+//  + TL_updatePinnedDialogs
+//  + TL_updateBotWebhookJSON
+//  + TL_updateBotWebhookJSONQuery
+//  + TL_updateBotShippingQuery
+//  + TL_updateBotPrecheckoutQuery
+//  + TL_updatePhoneCall
+//  + TL_updateLangPackTooLong
+//  + TL_updateLangPack
+//  + TL_updateFavedStickers
+//  + TL_updateChannelReadMessagesContents
+//  + TL_updateContactsReset
+//  + TL_updateNewAuthorization
+//  + TL_updateChannelGroup
+//  + TL_updateChannelAvailableMessages
+//  + TL_updateDialogUnreadMark
+//  + TL_updateUserPinnedMessage
+//  + TL_updateChatPinnedMessage
+//  + TL_updateMessagePoll
+//  + TL_updateChatDefaultBannedRights
+//  + TL_updateFolderPeers
+//  + TL_updatePeerSettings
+//  + TL_updatePeerLocated
+//  + TL_updateNewScheduledMessage
+//  + TL_updateDeleteScheduledMessages
+//  + TL_updateTheme
+//  + TL_updateGeoLiveViewed
+//  + TL_updateLoginToken
+//  + TL_updateMessagePollVote
+//  + TL_updateDialogFilter
+//  + TL_updateDialogFilterOrder
+//  + TL_updateDialogFilters
+//  + TL_updatePhoneCallSignalingData
+//  + TL_updateChannelParticipant
+//  + TL_updateChannelMessageForwards
+//  + TL_updateReadChannelDiscussionInbox
+//  + TL_updateReadChannelDiscussionOutbox
+//  + TL_updatePeerBlocked
+//  + TL_updateChannelUserTyping
+//  + TL_updatePinnedMessages
+//  + TL_updatePinnedChannelMessages
+//  + TL_updateChat
+//  + TL_updateGroupCallParticipants
+//  + TL_updateGroupCall
+//
+message Update {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    Message message1F2B0AFD71 = 3;
+    int32 pts = 4;
+    int32 pts_count = 5;
+    int32 id4E90BFD671 = 6;
+    int64 random_id = 7;
+    repeated int32 messages = 8;
+    int32 user_id = 9;
+    SendMessageAction action = 10;
+    int32 chat_id = 11;
+    ChatParticipants participants776119871 = 12;
+    UserStatus status = 13;
+    string first_name = 14;
+    string last_name = 15;
+    string username = 16;
+    int32 date = 17;
+    UserProfilePhoto photo = 18;
+    Bool previous = 19;
+    ContactLink my_link = 20;
+    ContactLink foreign_link = 21;
+    EncryptedMessage message12BCBD9A71 = 22;
+    int32 qts = 23;
+    EncryptedChat chat = 24;
+    int32 max_date = 25;
+    int32 inviter_id = 26;
+    int32 version = 27;
+    repeated DcOption dc_options = 28;
+    Bool blocked = 29;
+    NotifyPeer peerBEC268EF71 = 30;
+    PeerNotifySettings notify_settings = 31;
+    int32 flags = 32;
+    bool popupEBE4681971 = 33;
+    int32 inbox_date = 34;
+    string type = 35;
+    string messageEBE4681971 = 36;
+    MessageMedia media = 37;
+    repeated MessageEntity entities = 38;
+    PrivacyKey key = 39;
+    repeated PrivacyRule rules = 40;
+    string phone = 41;
+    Peer peer9961FD5C71 = 42;
+    int32 max_id = 43;
+    WebPage webpage = 44;
+    int32 channel_id = 45;
+    int32 views = 46;
+    Bool enabled = 47;
+    Bool is_admin = 48;
+    messages_StickerSet stickerset = 49;
+    bool masks = 50;
+    repeated int64 orderBB2D20171 = 51;
+    int64 query_id = 52;
+    string query = 53;
+    GeoPoint geo = 54;
+    string offset = 55;
+    string idE48F96471 = 56;
+    InputBotInlineMessageID msg_idE48F96471 = 57;
+    int32 msg_idE73547E171 = 58;
+    int64 chat_instance = 59;
+    bytes dataE73547E171 = 60;
+    string game_short_name = 61;
+    DraftMessage draft = 62;
+    bool pinned = 63;
+    repeated Peer orderD8CAF68D71 = 64;
+    DataJSON data8317C0C371 = 65;
+    int32 timeout = 66;
+    bytes payload = 67;
+    PostAddress shipping_address = 68;
+    PaymentRequestedInfo info = 69;
+    string shipping_option_id = 70;
+    string currency = 71;
+    int64 total_amount = 72;
+    PhoneCall phone_call = 73;
+    LangPackDifference difference = 74;
+    int64 auth_key_id = 75;
+    string device = 76;
+    string location = 77;
+    Bool popup382DD3E451 = 78;
+    MessageGroup group = 79;
+    DialogPeer peer19D27F3C85 = 80;
+    repeated DialogPeer orderEA4CB65B85 = 81;
+    int32 available_min_id = 82;
+    bool unread = 83;
+    string lang_code = 84;
+    int64 poll_id = 85;
+    Poll poll = 86;
+    PollResults results = 87;
+    ChatBannedRights default_banned_rights = 88;
+    int32 folder_id = 89;
+    int32 still_unread_count = 90;
+    repeated FolderPeer folder_peers = 91;
+    PeerSettings settings = 92;
+    repeated PeerLocated peers = 93;
+    Theme theme = 94;
+    repeated bytes options = 95;
+    DialogFilter filter = 96;
+    repeated int32 orderA5D72105111 = 97;
+    int64 phone_call_id = 98;
+    ChannelParticipant prev_participant = 99;
+    ChannelParticipant new_participant = 100;
+    int32 forwards = 101;
+    int32 top_msg_id = 102;
+    int32 read_max_id = 103;
+    int32 broadcast_id = 104;
+    int32 broadcast_post = 105;
+    Peer peer_id = 106;
+    InlineQueryPeerType peer_type = 107;
+    InputGroupCall callF2EBDB4E122 = 108;
+    repeated GroupCallParticipant participantsF2EBDB4E122 = 109;
+    GroupCall callA45EB99B122 = 110;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// Updates <--
+//  + TL_updatesTooLong
+//  + TL_updateShortMessage
+//  + TL_updateShortChatMessage
+//  + TL_updateShort
+//  + TL_updatesCombined
+//  + TL_updates
+//  + TL_updateShortSentMessage
+//
+message Updates {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool out = 4;
+    bool mentioned = 5;
+    bool media_unread = 6;
+    bool silent = 7;
+    int32 id = 8;
+    int32 user_id = 9;
+    string message = 10;
+    int32 pts = 11;
+    int32 pts_count = 12;
+    int32 date = 13;
+    MessageFwdHeader fwd_from = 14;
+    int32 via_bot_id = 15;
+    int32 reply_to_msg_id = 16;
+    repeated MessageEntity entities = 17;
+    int32 from_id = 18;
+    int32 chat_id = 19;
+    Update update = 20;
+    repeated Update updates = 21;
+    repeated User users = 22;
+    repeated Chat chats = 23;
+    int32 seq_start = 24;
+    int32 seq = 25;
+    MessageMedia media = 26;
+    MessageReplyHeader reply_to = 27;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// UrlAuthResult <--
+//  + TL_urlAuthResultRequest
+//  + TL_urlAuthResultAccepted
+//  + TL_urlAuthResultDefault
+//
+message UrlAuthResult {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool request_write_access = 4;
+    User bot = 5;
+    string domain = 6;
+    string url = 7;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// User <--
+//  + TL_userEmpty
+//  + TL_user
+//
+message User {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 id = 3;
+    int32 flags = 4;
+    bool self = 5;
+    bool contact = 6;
+    bool mutual_contact = 7;
+    bool deleted = 8;
+    bool bot = 9;
+    bool bot_chat_history = 10;
+    bool bot_nochats = 11;
+    bool verified = 12;
+    bool restricted = 13;
+    bool min = 14;
+    bool bot_inline_geo = 15;
+    int64 access_hash = 16;
+    string first_name = 17;
+    string last_name = 18;
+    string username = 19;
+    string phone = 20;
+    UserProfilePhoto photo = 21;
+    UserStatus status = 22;
+    int32 bot_info_version = 23;
+    string restriction_reason2E13F4C371 = 24;
+    string bot_inline_placeholder = 25;
+    string lang_code = 26;
+    bool support = 27;
+    bool scam = 28;
+    bool apply_min_photo = 29;
+    repeated RestrictionReason restriction_reason938458C1117 = 30;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// UserFull <--
+//  + TL_userFull
+//
+message UserFull {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool blocked = 4;
+    bool phone_calls_available = 5;
+    bool phone_calls_private = 6;
+    User user = 7;
+    string about = 8;
+    contacts_Link link = 9;
+    Photo profile_photo = 10;
+    PeerNotifySettings notify_settings = 11;
+    BotInfo bot_info = 12;
+    int32 common_chats_count = 13;
+    bool can_pin_message = 14;
+    int32 pinned_msg_id = 15;
+    int32 folder_id = 16;
+    bool has_scheduled = 17;
+    bool video_calls_available = 18;
+    PeerSettings settings = 19;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// UserProfilePhoto <--
+//  + TL_userProfilePhotoEmpty
+//  + TL_userProfilePhoto
+//
+message UserProfilePhoto {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int64 photo_id = 3;
+    FileLocation photo_small = 4;
+    FileLocation photo_big = 5;
+    int32 dc_id = 6;
+    int32 flags = 7;
+    bool has_video = 8;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// UserStatus <--
+//  + TL_userStatusEmpty
+//  + TL_userStatusOnline
+//  + TL_userStatusOffline
+//  + TL_userStatusRecently
+//  + TL_userStatusLastWeek
+//  + TL_userStatusLastMonth
+//
+message UserStatus {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 expires = 3;
+    int32 was_online = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// VideoSize <--
+//  + TL_videoSize
+//
+message VideoSize {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string type = 3;
+    FileLocation location = 4;
+    int32 w = 5;
+    int32 h = 6;
+    int32 size_ = 7;
+    int32 flags = 8;
+    double video_start_ts = 9;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// WallPaper <--
+//  + TL_wallPaper
+//  + TL_wallPaperSolid
+//  + TL_wallPaperNoFile
+//
+message WallPaper {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 idCCB0365771 = 3;
+    string title = 4;
+    repeated PhotoSize sizes = 5;
+    int32 color = 6;
+    int32 bg_color = 7;
+    int64 idF04F91EC93 = 8;
+    int32 flags = 9;
+    bool creator = 10;
+    bool default = 11;
+    int64 access_hash = 12;
+    string slug = 13;
+    Document document = 14;
+    bool pattern = 15;
+    bool dark = 16;
+    WallPaperSettings settings = 17;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// WallPaperSettings <--
+//  + TL_wallPaperSettings
+//
+message WallPaperSettings {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool blur = 4;
+    bool motion = 5;
+    int32 background_color = 6;
+    int32 intensity = 7;
+    int32 second_background_color = 8;
+    int32 rotation = 9;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// WebAuthorization <--
+//  + TL_webAuthorization
+//
+message WebAuthorization {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int64 hash = 3;
+    int32 bot_id = 4;
+    string domain = 5;
+    string browser = 6;
+    string platform = 7;
+    int32 date_created = 8;
+    int32 date_active = 9;
+    string ip = 10;
+    string region = 11;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// WebDocument <--
+//  + TL_webDocument
+//  + TL_webDocumentNoProxy
+//
+message WebDocument {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string url = 3;
+    int64 access_hash = 4;
+    int32 size_ = 5;
+    string mime_type = 6;
+    repeated DocumentAttribute attributes = 7;
+    int32 dc_id = 8;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// WebPage <--
+//  + TL_webPageEmpty
+//  + TL_webPagePending
+//  + TL_webPage
+//  + TL_webPageNotModified
+//
+message WebPage {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int64 id = 3;
+    int32 date = 4;
+    int32 flags = 5;
+    string url = 6;
+    string display_url = 7;
+    int32 hash = 8;
+    string type = 9;
+    string site_name = 10;
+    string title = 11;
+    string description = 12;
+    Photo photo = 13;
+    string embed_url = 14;
+    string embed_type = 15;
+    int32 embed_width = 16;
+    int32 embed_height = 17;
+    int32 duration = 18;
+    string author = 19;
+    Document document = 20;
+    Page cached_page = 21;
+    repeated Document documents = 22;
+    repeated WebPageAttribute attributes = 23;
+    int32 cached_page_views = 24;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// WebPageAttribute <--
+//  + TL_webPageAttributeTheme
+//
+message WebPageAttribute {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    repeated Document documents = 4;
+    ThemeSettings settings = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// account_AuthorizationForm <--
+//  + TL_account_authorizationForm
+//
+message account_AuthorizationForm {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    repeated SecureRequiredType required_types = 4;
+    repeated SecureValue values = 5;
+    repeated SecureValueError errors = 6;
+    repeated User users = 7;
+    string privacy_policy_url = 8;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// account_Authorizations <--
+//  + TL_account_authorizations
+//
+message account_Authorizations {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    repeated Authorization authorizations = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// account_AutoDownloadSettings <--
+//  + TL_account_autoDownloadSettings
+//
+message account_AutoDownloadSettings {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    AutoDownloadSettings low = 3;
+    AutoDownloadSettings medium = 4;
+    AutoDownloadSettings high = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// account_ContentSettings <--
+//  + TL_account_contentSettings
+//
+message account_ContentSettings {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool sensitive_enabled = 4;
+    bool sensitive_can_change = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// account_Password <--
+//  + TL_account_noPassword
+//  + TL_account_password
+//
+message account_Password {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    bytes new_salt = 3;
+    string email_unconfirmed_pattern = 4;
+    bytes current_salt = 5;
+    string hint = 6;
+    Bool has_recovery7C18141C71 = 7;
+    int32 flags = 8;
+    bool has_recoveryAD2641F885 = 9;
+    bool has_secure_values = 10;
+    bool has_password = 11;
+    PasswordKdfAlgo current_algo = 12;
+    bytes srp_B = 13;
+    int64 srp_id = 14;
+    PasswordKdfAlgo new_algo = 15;
+    SecurePasswordKdfAlgo new_secure_algo = 16;
+    bytes secure_random = 17;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// account_PasswordInputSettings <--
+//  + TL_account_passwordInputSettings
+//
+message account_PasswordInputSettings {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bytes new_salt = 4;
+    bytes new_password_hash = 5;
+    string hint = 6;
+    string email = 7;
+    PasswordKdfAlgo new_algo = 8;
+    SecureSecretSettings new_secure_settings = 9;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// account_PasswordSettings <--
+//  + TL_account_passwordSettings
+//
+message account_PasswordSettings {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string email = 3;
+    int32 flags = 4;
+    SecureSecretSettings secure_settings = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// account_PrivacyRules <--
+//  + TL_account_privacyRules
+//
+message account_PrivacyRules {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    repeated PrivacyRule rules = 3;
+    repeated User users = 4;
+    repeated Chat chats = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// account_SentEmailCode <--
+//  + TL_account_sentEmailCode
+//
+message account_SentEmailCode {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string email_pattern = 3;
+    int32 length = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// account_Takeout <--
+//  + TL_account_takeout
+//
+message account_Takeout {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int64 id = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// account_Themes <--
+//  + TL_account_themesNotModified
+//  + TL_account_themes
+//
+message account_Themes {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 hash = 3;
+    repeated Theme themes = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// account_TmpPassword <--
+//  + TL_account_tmpPassword
+//
+message account_TmpPassword {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    bytes tmp_password = 3;
+    int32 valid_until = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// account_WallPapers <--
+//  + TL_account_wallPapersNotModified
+//  + TL_account_wallPapers
+//
+message account_WallPapers {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 hash = 3;
+    repeated WallPaper wallpapers = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// account_WebAuthorizations <--
+//  + TL_account_webAuthorizations
+//
+message account_WebAuthorizations {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    repeated WebAuthorization authorizations = 3;
+    repeated User users = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// auth_Authorization <--
+//  + TL_auth_authorization
+//  + TL_auth_authorizationSignUpRequired
+//
+message auth_Authorization {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    int32 tmp_sessions = 4;
+    User user = 5;
+    help_TermsOfService terms_of_service = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// auth_CheckedPhone <--
+//  + TL_auth_checkedPhone
+//
+message auth_CheckedPhone {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    Bool phone_registered = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// auth_CodeType <--
+//  + TL_auth_codeTypeSms
+//  + TL_auth_codeTypeCall
+//  + TL_auth_codeTypeFlashCall
+//
+message auth_CodeType {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// auth_ExportedAuthorization <--
+//  + TL_auth_exportedAuthorization
+//
+message auth_ExportedAuthorization {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 id = 3;
+    bytes bytes = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// auth_LoginToken <--
+//  + TL_auth_loginToken
+//  + TL_auth_loginTokenMigrateTo
+//  + TL_auth_loginTokenSuccess
+//
+message auth_LoginToken {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 expires = 3;
+    bytes token = 4;
+    int32 dc_id = 5;
+    auth_Authorization authorization = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// auth_PasswordRecovery <--
+//  + TL_auth_passwordRecovery
+//
+message auth_PasswordRecovery {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string email_pattern = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// auth_SentCode <--
+//  + TL_auth_sentCode
+//
+message auth_SentCode {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool phone_registered = 4;
+    auth_SentCodeType type = 5;
+    string phone_code_hash = 6;
+    auth_CodeType next_type = 7;
+    int32 timeout = 8;
+    help_TermsOfService terms_of_service = 9;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// auth_SentCodeType <--
+//  + TL_auth_sentCodeTypeApp
+//  + TL_auth_sentCodeTypeSms
+//  + TL_auth_sentCodeTypeCall
+//  + TL_auth_sentCodeTypeFlashCall
+//
+message auth_SentCodeType {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 length = 3;
+    string pattern = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// channels_AdminLogResults <--
+//  + TL_channels_adminLogResults
+//
+message channels_AdminLogResults {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    repeated ChannelAdminLogEvent events = 3;
+    repeated Chat chats = 4;
+    repeated User users = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// channels_ChannelParticipant <--
+//  + TL_channels_channelParticipant
+//
+message channels_ChannelParticipant {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    ChannelParticipant participant = 3;
+    repeated User users = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// channels_ChannelParticipants <--
+//  + TL_channels_channelParticipants
+//  + TL_channels_channelParticipantsNotModified
+//
+message channels_ChannelParticipants {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 count = 3;
+    repeated ChannelParticipant participants = 4;
+    repeated User users = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// contacts_Blocked <--
+//  + TL_contacts_blocked
+//  + TL_contacts_blockedSlice
+//
+message contacts_Blocked {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    repeated ContactBlocked blocked1C138D1571 = 3;
+    repeated User users = 4;
+    int32 count = 5;
+    repeated PeerBlocked blockedADE1591119 = 6;
+    repeated Chat chats = 7;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// contacts_Contacts <--
+//  + TL_contacts_contactsNotModified
+//  + TL_contacts_contacts
+//
+message contacts_Contacts {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    repeated Contact contacts = 3;
+    int32 saved_count = 4;
+    repeated User users = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// contacts_Found <--
+//  + TL_contacts_found
+//
+message contacts_Found {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    repeated Peer results = 3;
+    repeated Chat chats = 4;
+    repeated User users = 5;
+    repeated Peer my_results = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// contacts_ImportedContacts <--
+//  + TL_contacts_importedContacts
+//
+message contacts_ImportedContacts {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    repeated ImportedContact imported = 3;
+    repeated PopularContact popular_invites = 4;
+    repeated int64 retry_contacts = 5;
+    repeated User users = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// contacts_Link <--
+//  + TL_contacts_link
+//
+message contacts_Link {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    ContactLink my_link = 3;
+    ContactLink foreign_link = 4;
+    User user = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// contacts_ResolvedPeer <--
+//  + TL_contacts_resolvedPeer
+//
+message contacts_ResolvedPeer {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    Peer peer = 3;
+    repeated Chat chats = 4;
+    repeated User users = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// contacts_TopPeers <--
+//  + TL_contacts_topPeersNotModified
+//  + TL_contacts_topPeers
+//  + TL_contacts_topPeersDisabled
+//
+message contacts_TopPeers {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    repeated TopPeerCategoryPeers categories = 3;
+    repeated Chat chats = 4;
+    repeated User users = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// help_AppChangelog <--
+//  + TL_help_appChangelogEmpty
+//  + TL_help_appChangelog
+//
+message help_AppChangelog {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string text = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// help_AppUpdate <--
+//  + TL_help_appUpdate
+//  + TL_help_noAppUpdate
+//
+message help_AppUpdate {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 id = 3;
+    Bool critical = 4;
+    string url = 5;
+    string text = 6;
+    int32 flags = 7;
+    bool popup = 8;
+    string version = 9;
+    repeated MessageEntity entities = 10;
+    Document document = 11;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// help_CountriesList <--
+//  + TL_help_countriesListNotModified
+//  + TL_help_countriesList
+//
+message help_CountriesList {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    repeated help_Country countries = 3;
+    int32 hash = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// help_Country <--
+//  + TL_help_country
+//
+message help_Country {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool hidden = 4;
+    string iso2 = 5;
+    string default_name = 6;
+    string name = 7;
+    repeated help_CountryCode country_codes = 8;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// help_CountryCode <--
+//  + TL_help_countryCode
+//
+message help_CountryCode {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    string country_code = 4;
+    repeated string prefixes = 5;
+    repeated string patterns = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// help_DeepLinkInfo <--
+//  + TL_help_deepLinkInfoEmpty
+//  + TL_help_deepLinkInfo
+//
+message help_DeepLinkInfo {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool update_app = 4;
+    string message = 5;
+    repeated MessageEntity entities = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// help_InviteText <--
+//  + TL_help_inviteText
+//
+message help_InviteText {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string message = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// help_PassportConfig <--
+//  + TL_help_passportConfigNotModified
+//  + TL_help_passportConfig
+//
+message help_PassportConfig {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 hash = 3;
+    DataJSON countries_langs = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// help_PromoData <--
+//  + TL_help_promoDataEmpty
+//  + TL_help_promoData
+//
+message help_PromoData {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 expires = 3;
+    int32 flags = 4;
+    bool proxy = 5;
+    bool psa = 6;
+    Peer peer = 7;
+    repeated Chat chats = 8;
+    repeated User users = 9;
+    string psa_message = 10;
+    string psa_type = 11;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// help_ProxyData <--
+//  + TL_help_proxyDataEmpty
+//  + TL_help_proxyDataPromo
+//
+message help_ProxyData {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 expires = 3;
+    Peer peer = 4;
+    repeated Chat chats = 5;
+    repeated User users = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// help_RecentMeUrls <--
+//  + TL_help_recentMeUrls
+//
+message help_RecentMeUrls {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    repeated RecentMeUrl urls = 3;
+    repeated Chat chats = 4;
+    repeated User users = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// help_Support <--
+//  + TL_help_support
+//
+message help_Support {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string phone_number = 3;
+    User user = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// help_SupportName <--
+//  + TL_help_supportName
+//
+message help_SupportName {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string name = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// help_TermsOfService <--
+//  + TL_help_termsOfService
+//
+message help_TermsOfService {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string text = 3;
+    int32 flags = 4;
+    bool popup = 5;
+    DataJSON id = 6;
+    repeated MessageEntity entities = 7;
+    int32 min_age_confirm = 8;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// help_TermsOfServiceUpdate <--
+//  + TL_help_termsOfServiceUpdateEmpty
+//  + TL_help_termsOfServiceUpdate
+//
+message help_TermsOfServiceUpdate {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 expires = 3;
+    help_TermsOfService terms_of_service = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// help_UserInfo <--
+//  + TL_help_userInfoEmpty
+//  + TL_help_userInfo
+//
+message help_UserInfo {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string message = 3;
+    repeated MessageEntity entities = 4;
+    string author = 5;
+    int32 date = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// messages_AffectedHistory <--
+//  + TL_messages_affectedHistory
+//
+message messages_AffectedHistory {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 pts = 3;
+    int32 pts_count = 4;
+    int32 offset = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// messages_AffectedMessages <--
+//  + TL_messages_affectedMessages
+//
+message messages_AffectedMessages {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 pts = 3;
+    int32 pts_count = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// messages_AllStickers <--
+//  + TL_messages_allStickersNotModified
+//  + TL_messages_allStickers
+//
+message messages_AllStickers {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 hash = 3;
+    repeated StickerSet sets = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// messages_ArchivedStickers <--
+//  + TL_messages_archivedStickers
+//
+message messages_ArchivedStickers {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 count = 3;
+    repeated StickerSetCovered sets = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// messages_BotCallbackAnswer <--
+//  + TL_messages_botCallbackAnswer
+//
+message messages_BotCallbackAnswer {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool alert = 4;
+    bool has_url = 5;
+    string message = 6;
+    string url = 7;
+    int32 cache_time = 8;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// messages_BotResults <--
+//  + TL_messages_botResults
+//
+message messages_BotResults {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool gallery = 4;
+    int64 query_id = 5;
+    string next_offset = 6;
+    InlineBotSwitchPM switch_pm = 7;
+    repeated BotInlineResult results = 8;
+    int32 cache_time = 9;
+    repeated User users = 10;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// messages_ChatFull <--
+//  + TL_messages_chatFull
+//
+message messages_ChatFull {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    ChatFull full_chat = 3;
+    repeated Chat chats = 4;
+    repeated User users = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// messages_Chats <--
+//  + TL_messages_chats
+//  + TL_messages_chatsSlice
+//
+message messages_Chats {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    repeated Chat chats = 3;
+    int32 count = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// messages_DhConfig <--
+//  + TL_messages_dhConfigNotModified
+//  + TL_messages_dhConfig
+//
+message messages_DhConfig {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    bytes random = 3;
+    int32 g = 4;
+    bytes p = 5;
+    int32 version = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// messages_Dialogs <--
+//  + TL_messages_dialogs
+//  + TL_messages_dialogsSlice
+//  + TL_messages_dialogsNotModified
+//
+message messages_Dialogs {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    repeated Dialog dialogs = 3;
+    repeated Message messages = 4;
+    repeated Chat chats = 5;
+    repeated User users = 6;
+    int32 count = 7;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// messages_DiscussionMessage <--
+//  + TL_messages_discussionMessage
+//
+message messages_DiscussionMessage {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    repeated Message messages = 4;
+    int32 max_id = 5;
+    int32 read_inbox_max_id = 6;
+    int32 read_outbox_max_id = 7;
+    repeated Chat chats = 8;
+    repeated User users = 9;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// messages_FavedStickers <--
+//  + TL_messages_favedStickersNotModified
+//  + TL_messages_favedStickers
+//
+message messages_FavedStickers {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 hash = 3;
+    repeated StickerPack packs = 4;
+    repeated Document stickers = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// messages_FeaturedStickers <--
+//  + TL_messages_featuredStickersNotModified
+//  + TL_messages_featuredStickers
+//
+message messages_FeaturedStickers {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 hash = 3;
+    repeated StickerSetCovered sets = 4;
+    repeated int64 unread = 5;
+    int32 count = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// messages_FoundGifs <--
+//  + TL_messages_foundGifs
+//
+message messages_FoundGifs {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 next_offset = 3;
+    repeated FoundGif results = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// messages_FoundStickerSets <--
+//  + TL_messages_foundStickerSetsNotModified
+//  + TL_messages_foundStickerSets
+//
+message messages_FoundStickerSets {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 hash = 3;
+    repeated StickerSetCovered sets = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// messages_HighScores <--
+//  + TL_messages_highScores
+//
+message messages_HighScores {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    repeated HighScore scores = 3;
+    repeated User users = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// messages_InactiveChats <--
+//  + TL_messages_inactiveChats
+//
+message messages_InactiveChats {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    repeated int32 dates = 3;
+    repeated Chat chats = 4;
+    repeated User users = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// messages_MessageEditData <--
+//  + TL_messages_messageEditData
+//
+message messages_MessageEditData {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool caption = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// messages_MessageViews <--
+//  + TL_messages_messageViews
+//
+message messages_MessageViews {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    repeated MessageViews views = 3;
+    repeated Chat chats = 4;
+    repeated User users = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// messages_Messages <--
+//  + TL_messages_messages
+//  + TL_messages_messagesSlice
+//  + TL_messages_channelMessages
+//  + TL_messages_messagesNotModified
+//
+message messages_Messages {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    repeated Message messages = 3;
+    repeated Chat chats = 4;
+    repeated User users = 5;
+    int32 count = 6;
+    int32 flags = 7;
+    int32 pts = 8;
+    repeated MessageGroup collapsed = 9;
+    bool inexact = 10;
+    int32 next_rate = 11;
+    int32 offset_id_offset = 12;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// messages_PeerDialogs <--
+//  + TL_messages_peerDialogs
+//
+message messages_PeerDialogs {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    repeated Dialog dialogs = 3;
+    repeated Message messages = 4;
+    repeated Chat chats = 5;
+    repeated User users = 6;
+    updates_State state = 7;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// messages_RecentStickers <--
+//  + TL_messages_recentStickersNotModified
+//  + TL_messages_recentStickers
+//
+message messages_RecentStickers {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 hash = 3;
+    repeated Document stickers = 4;
+    repeated StickerPack packs = 5;
+    repeated int32 dates = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// messages_SavedGifs <--
+//  + TL_messages_savedGifsNotModified
+//  + TL_messages_savedGifs
+//
+message messages_SavedGifs {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 hash = 3;
+    repeated Document gifs = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// messages_SearchCounter <--
+//  + TL_messages_searchCounter
+//
+message messages_SearchCounter {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool inexact = 4;
+    MessagesFilter filter = 5;
+    int32 count = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// messages_SentEncryptedMessage <--
+//  + TL_messages_sentEncryptedMessage
+//  + TL_messages_sentEncryptedFile
+//
+message messages_SentEncryptedMessage {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 date = 3;
+    EncryptedFile file = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// messages_StickerSet <--
+//  + TL_messages_stickerSet
+//
+message messages_StickerSet {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    StickerSet set = 3;
+    repeated StickerPack packs = 4;
+    repeated Document documents = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// messages_StickerSetInstallResult <--
+//  + TL_messages_stickerSetInstallResultSuccess
+//  + TL_messages_stickerSetInstallResultArchive
+//
+message messages_StickerSetInstallResult {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    repeated StickerSetCovered sets = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// messages_Stickers <--
+//  + TL_messages_stickersNotModified
+//  + TL_messages_stickers
+//
+message messages_Stickers {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string hash8A8ECD3271 = 3;
+    repeated Document stickers = 4;
+    int32 hashE4599BBD85 = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// messages_VotesList <--
+//  + TL_messages_votesList
+//
+message messages_VotesList {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    int32 count = 4;
+    repeated MessageUserVote votes = 5;
+    repeated User users = 6;
+    string next_offset = 7;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// payments_BankCardData <--
+//  + TL_payments_bankCardData
+//
+message payments_BankCardData {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    string title = 3;
+    repeated BankCardOpenUrl open_urls = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// payments_PaymentForm <--
+//  + TL_payments_paymentForm
+//
+message payments_PaymentForm {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool can_save_credentials = 4;
+    bool password_missing = 5;
+    int32 bot_id = 6;
+    Invoice invoice = 7;
+    int32 provider_id = 8;
+    string url = 9;
+    string native_provider = 10;
+    DataJSON native_params = 11;
+    PaymentRequestedInfo saved_info = 12;
+    PaymentSavedCredentials saved_credentials = 13;
+    repeated User users = 14;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// payments_PaymentReceipt <--
+//  + TL_payments_paymentReceipt
+//
+message payments_PaymentReceipt {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    int32 date = 4;
+    int32 bot_id = 5;
+    Invoice invoice = 6;
+    int32 provider_id = 7;
+    PaymentRequestedInfo info = 8;
+    ShippingOption shipping = 9;
+    string currency = 10;
+    int64 total_amount = 11;
+    string credentials_title = 12;
+    repeated User users = 13;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// payments_PaymentResult <--
+//  + TL_payments_paymentResult
+//  + TL_payments_paymentVerficationNeeded
+//  + TL_payments_paymentVerificationNeeded
+//
+message payments_PaymentResult {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    Updates updates = 3;
+    string url = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// payments_SavedInfo <--
+//  + TL_payments_savedInfo
+//
+message payments_SavedInfo {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool has_saved_credentials = 4;
+    PaymentRequestedInfo saved_info = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// payments_ValidatedRequestedInfo <--
+//  + TL_payments_validatedRequestedInfo
+//
+message payments_ValidatedRequestedInfo {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    string id = 4;
+    repeated ShippingOption shipping_options = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// phone_GroupCall <--
+//  + TL_phone_groupCall
+//
+message phone_GroupCall {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    GroupCall call = 3;
+    repeated GroupCallParticipant participants = 4;
+    string participants_next_offset = 5;
+    repeated User users = 6;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// phone_GroupParticipants <--
+//  + TL_phone_groupParticipants
+//
+message phone_GroupParticipants {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 count = 3;
+    repeated GroupCallParticipant participants = 4;
+    string next_offset = 5;
+    repeated User users = 6;
+    int32 version = 7;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// phone_PhoneCall <--
+//  + TL_phone_phoneCall
+//
+message phone_PhoneCall {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    PhoneCall phone_call = 3;
+    repeated User users = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// photos_Photo <--
+//  + TL_photos_photo
+//
+message photos_Photo {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    Photo photo = 3;
+    repeated User users = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// photos_Photos <--
+//  + TL_photos_photos
+//  + TL_photos_photosSlice
+//
+message photos_Photos {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    repeated Photo photos = 3;
+    repeated User users = 4;
+    int32 count = 5;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// stats_BroadcastStats <--
+//  + TL_stats_broadcastStats
+//
+message stats_BroadcastStats {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    StatsDateRangeDays period = 3;
+    StatsAbsValueAndPrev followers = 4;
+    StatsAbsValueAndPrev views_per_post = 5;
+    StatsAbsValueAndPrev shares_per_post = 6;
+    StatsPercentValue enabled_notifications = 7;
+    StatsGraph growth_graph = 8;
+    StatsGraph followers_graph = 9;
+    StatsGraph mute_graph = 10;
+    StatsGraph top_hours_graph = 11;
+    StatsGraph interactions_graph = 12;
+    StatsGraph iv_interactions_graph = 13;
+    StatsGraph views_by_source_graph = 14;
+    StatsGraph new_followers_by_source_graph = 15;
+    StatsGraph languages_graph = 16;
+    repeated MessageInteractionCounters recent_message_interactions = 17;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// stats_MegagroupStats <--
+//  + TL_stats_megagroupStats
+//
+message stats_MegagroupStats {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    StatsDateRangeDays period = 3;
+    StatsAbsValueAndPrev members = 4;
+    StatsAbsValueAndPrev messages = 5;
+    StatsAbsValueAndPrev viewers = 6;
+    StatsAbsValueAndPrev posters = 7;
+    StatsGraph growth_graph = 8;
+    StatsGraph members_graph = 9;
+    StatsGraph new_members_by_source_graph = 10;
+    StatsGraph languages_graph = 11;
+    StatsGraph messages_graph = 12;
+    StatsGraph actions_graph = 13;
+    StatsGraph top_hours_graph = 14;
+    StatsGraph weekdays_graph = 15;
+    repeated StatsGroupTopPoster top_posters = 16;
+    repeated StatsGroupTopAdmin top_admins = 17;
+    repeated StatsGroupTopInviter top_inviters = 18;
+    repeated User users = 19;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// stats_MessageStats <--
+//  + TL_stats_messageStats
+//
+message stats_MessageStats {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    StatsGraph views_graph = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// storage_FileType <--
+//  + TL_storage_fileUnknown
+//  + TL_storage_filePartial
+//  + TL_storage_fileJpeg
+//  + TL_storage_fileGif
+//  + TL_storage_filePng
+//  + TL_storage_filePdf
+//  + TL_storage_fileMp3
+//  + TL_storage_fileMov
+//  + TL_storage_fileMp4
+//  + TL_storage_fileWebp
+//
+message storage_FileType {
+    TLCmd cmd = 1;
+    string class_name = 2;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// updates_ChannelDifference <--
+//  + TL_updates_channelDifferenceEmpty
+//  + TL_updates_channelDifferenceTooLong
+//  + TL_updates_channelDifference
+//
+message updates_ChannelDifference {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 flags = 3;
+    bool final = 4;
+    int32 pts = 5;
+    int32 timeout = 6;
+    int32 top_message = 7;
+    int32 read_inbox_max_id = 8;
+    int32 read_outbox_max_id = 9;
+    int32 unread_count = 10;
+    int32 unread_mentions_count = 11;
+    repeated Message messages = 12;
+    repeated Chat chats = 13;
+    repeated User users = 14;
+    repeated Message new_messages = 15;
+    repeated Update other_updates = 16;
+    int32 top_important_message = 17;
+    int32 unread_important_count = 18;
+    Dialog dialog = 19;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// updates_Difference <--
+//  + TL_updates_differenceEmpty
+//  + TL_updates_difference
+//  + TL_updates_differenceSlice
+//  + TL_updates_differenceTooLong
+//
+message updates_Difference {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 date = 3;
+    int32 seq = 4;
+    repeated Message new_messages = 5;
+    repeated EncryptedMessage new_encrypted_messages = 6;
+    repeated Update other_updates = 7;
+    repeated Chat chats = 8;
+    repeated User users = 9;
+    updates_State state = 10;
+    updates_State intermediate_state = 11;
+    int32 pts = 12;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// updates_State <--
+//  + TL_updates_state
+//
+message updates_State {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 pts = 3;
+    int32 qts = 4;
+    int32 date = 5;
+    int32 seq = 6;
+    int32 unread_count = 7;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// upload_CdnFile <--
+//  + TL_upload_cdnFileReuploadNeeded
+//  + TL_upload_cdnFile
+//
+message upload_CdnFile {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    bytes request_token = 3;
+    bytes bytes = 4;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// upload_File <--
+//  + TL_upload_file
+//  + TL_upload_fileCdnRedirect
+//
+message upload_File {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    storage_FileType type = 3;
+    int32 mtime = 4;
+    bytes bytes = 5;
+    int32 dc_id = 6;
+    bytes file_token = 7;
+    bytes encryption_key = 8;
+    bytes encryption_iv = 9;
+    repeated CdnFileHash cdn_file_hashes = 10;
+    repeated FileHash file_hashes = 11;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// upload_WebFile <--
+//  + TL_upload_webFile
+//
+message upload_WebFile {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    int32 size_ = 3;
+    string mime_type = 4;
+    storage_FileType file_type = 5;
+    int32 mtime = 6;
+    bytes bytes = 7;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// wallet_KeySecretSalt <--
+//  + TL_wallet_secretSalt
+//
+message wallet_KeySecretSalt {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    bytes salt = 3;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// wallet_LiteResponse <--
+//  + TL_wallet_liteResponse
+//
+message wallet_LiteResponse {
+    TLCmd cmd = 1;
+    string class_name = 2;
+    bytes response = 3;
+}

@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package data_message;
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+option go_package = "data_id";
+
+message id {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int64         user_id         = 1 [(gogoproto.moretags) = "bson:\"_id\""];;
+  int32         message_id      = 2 [(gogoproto.moretags) = "bson:\"message_id\""];;
+  int32         pts             = 3 [(gogoproto.moretags) = "bson:\"pts\""];;
+}

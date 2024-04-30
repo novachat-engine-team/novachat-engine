@@ -1,0 +1,21 @@
+
+{
+  "dialog_filters_enabled": false,
+  "dialog_filters_tooltip": false,
+  "youtube_pip": "",
+  "background_connection": true,
+  "keep_alive_service": true,
+  "qr_login_camera": false,
+  "save_gifs_with_stickers": false,
+  "autologin_domains": [],
+  "autologin_token": "",
+  "emojies_send_dice": [],
+  "gif_search_emojies": [],
+  "autoarchive_setting_available": false,
+  "stickers_emoji_suggest_only_api": false,
+  "export_regex": [],
+  "export_group_urls": [],
+  "export_private_urls": [],
+  "chat_read_mark_expire_period": 604800,
+  "chat_read_mark_size_threshold": 100
+}

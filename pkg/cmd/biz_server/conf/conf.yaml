@@ -1,0 +1,132 @@
+envmode: test
+configpath: ./config
+countryfile: numbers.txt
+invitetext:
+# 16/32 length
+#qrlogincodekey: da2X3U5ZFdfkm3drNfeUWN
+appconfig: ./appconfig.json
+log:
+  logpath: ./log/biz.log
+  loglevel: "debug"
+  rotatemaxsize: 100
+  rotatemaxage: 6
+  rotatemaxbackups: 100
+
+pprof:
+  port: 6021
+  isopen: false
+
+server:
+  ver: 0.0.1
+  serverid: 1
+
+rpcserver:
+  addr: 127.0.0.1:10069
+
+relayconfig:
+  phonecallwebrtc: false
+  p2p : false
+  # udp_relay 2.4.4/2.5.0
+  # webrtc 2.7.7 3.0.0
+  # rtc 2.8.8
+  libversion: 2.4.4
+
+rpcdiscovery:
+  schema: novachat-engine
+  servername: biz
+  etcdaddr: etcd-hosts:2379
+  ttl: 10
+
+sfsclient:
+  schema: novachat-engine
+  servername: sfs
+  etcdaddr: etcd-hosts:2379
+  dialtimeout:
+  dialkeepalivetime:
+  dialkeepalivetimeout:
+  maxcallsendmsgsize:
+  maxcallrecvmsgsize:
+  username:
+  password:
+  balancer: random
+
+msgclient:
+  schema: novachat-engine
+  servername: msg
+  etcdaddr: etcd-hosts:2379
+  dialtimeout:
+  dialkeepalivetime:
+  dialkeepalivetimeout:
+  maxcallsendmsgsize:
+  maxcallrecvmsgsize:
+  username:
+  password:
+  balancer: random
+
+syncclient:
+  schema: novachat-engine
+  servername: sync
+  etcdaddr: etcd-hosts:2379
+  dialtimeout:
+  dialkeepalivetime:
+  dialkeepalivetimeout:
+  maxcallsendmsgsize:
+  maxcallrecvmsgsize:
+  username:
+  password:
+  balancer: random
+
+authclient:
+  schema: novachat-engine
+  servername: auth
+  etcdaddr: etcd-hosts:2379
+  dialtimeout:
+  dialkeepalivetime:
+  dialkeepalivetimeout:
+  maxcallsendmsgsize:
+  maxcallrecvmsgsize:
+  username:
+  password:
+  balancer: random
+
+sessionclient:
+  schema: novachat-engine
+  servername: session
+  etcdaddr: etcd-hosts:2379
+  dialtimeout:
+  dialkeepalivetime:
+  dialkeepalivetimeout:
+  maxcallsendmsgsize:
+  maxcallrecvmsgsize:
+  username:
+  password:
+  balancer: random
+
+mongodb:
+  direct: true
+  addr:
+    - mongodb-hosts:27017
+  replicaset: rs0
+  database: ""
+  username: ""
+  password: ""
+  maxpoolsize: 128
+  minpoolsize: 16
+
+redis:
+  addrs:
+    - redis-hosts:6379
+  mode : alone
+  test : 	true
+  idle :	10
+  active : 5
+  passwd :
+  dbnum : 0
+
+mysql:
+  name: mysql
+  dsn: root:123456@tcp(mysql-hosts:3306)/enterprise?timeout=5s&readTimeout=5s&writeTimeout=5s&parseTime=true&loc=Local&charset=utf8mb4,utf8
+  active: 100
+  idle: 10
+  migrate: true
+  debug: true

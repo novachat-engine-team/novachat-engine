@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+package metadata;
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+option go_package = "metadata";
+
+option (gogoproto.marshaler_all) = true;
+option (gogoproto.sizer_all) = true;
+option (gogoproto.unmarshaler_all) = true;
+option (gogoproto.gostring_all) = true;
+
+// rpc
+// rpc_meta_data
+message rpc_meta_data {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int64             auth_key_id               = 1;
+  int64             session_id                = 2;
+  int64             user_id                   = 3;
+  string            server_peer               = 4;
+  int32             layer                     = 5;
+  string            ip                        = 6;
+  string            session_server_peer       = 7;
+  repeated string   server_trace              = 8;
+  int64             req_msg_id                = 9;
+  int32             api_id                    = 10;
+  string            device_model              = 11;
+  string            system_version            = 12;
+  string            app_version               = 13;
+  string            system_lang_code          = 14;
+  string            lang_pack                 = 15;
+  string            lang_code                 = 16;
+  string            proxy_address             = 17;
+  int32             proxy_port                = 18;
+  int64             perm_auth_key_id          = 19;
+}

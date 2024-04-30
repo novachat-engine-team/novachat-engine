@@ -1,0 +1,5823 @@
+﻿
+"Messages.UnreadMark" = "未讀訊息";
+"Messages.ForwardHeader" = "轉傳的訊息";
+"Messages.File.State.FetchingIn_1" = "%d% 已下載";
+"Messages.File.State.FetchingOut_1" = "%d% 已上傳";
+
+"Messages.File.State.Remote" = "下載";
+"Messages.File.State.Local" = "在 Finder 中顯示";
+"Messages.DeletedMessage" = "已刪除的訊息";
+
+"SearchField.Search" = "搜尋";
+"Contacts.ContacsSeparator" = "聯絡人";
+"Navigation.back" = "返回";
+"Navigation.Edit" = "編輯";
+"Navigation.Done" = "完成";
+"Navigation.Close" = "關閉";
+"Navigation.Cancel" = "取消";
+"Navigation.Next" = "下一步";
+"Navigation.Add" = "新增";
+
+
+"Peer.Status.online" = "線上";
+"Peer.Status.recently" = "最後上線於不久前";
+"Peer.Status.justNow" = "最後上線於剛才";
+"Peer.Status.lastWeek" = "最後上線於一週內";
+"Peer.Status.lastMonth" = "最後上線於一個月內";
+"Peer.Status.longTimeAgo" = "最後上線於很久以前";
+
+"Peer.Status.Today" = "今天";
+"Peer.Status.Yesterday" = "昨天";
+"Peer.Status.LastSeenAt" = "最後上線於%@ %@";
+
+
+/* do not translate key with 'countable' suffix */
+
+"Peer.Status.Member_countable" = "%d";
+
+
+
+
+
+"Peer.Status.Member_other" = "%d 位成員";
+
+
+"Peer.Status.Subscribers_countable" = "%d";
+
+
+
+
+
+"Peer.Status.Subscribers_other" = "%d 位訂閱者";
+
+/* do not translate key with 'countable' suffix */
+"Peer.Status.Member.Online_countable" = "%d";
+
+
+
+
+
+"Peer.Status.Member.Online_other" = "%d 人在線上";
+
+
+/* do not translate key with 'countable' suffix */
+"Peer.Status.minAgo_countable" = "%d";
+
+
+
+
+
+"Peer.Status.minAgo_other" = "最後上線於 %d 分鐘前";
+
+"Peer.Status.channel" = "頻道";
+"Peer.Status.group" = "群組";
+
+"Telegram.PeerInfoController" = "資訊";
+"PeerInfo.SendMessage" = "傳送訊息";
+"PeerInfo.ShareContact" = "分享聯絡人";
+"PeerInfo.ShareMyInfo" = "分享我的聯絡資訊";
+"PeerInfo.StartSecretChat" = "開始秘密聊天";
+"PeerInfo.SharedMedia" = "共享的媒體";
+"PeerInfo.Notifications" = "通知";
+"PeerInfo.BlockUser" = "封鎖用戶";
+"PeerInfo.Unarchive" = "取消封存";
+
+"PeerInfo.UnblockUser" = "解除封鎖用戶";
+"PeerInfo.username" = "用戶名稱";
+"PeerInfo.about" = "關於";
+"PeerInfo.bio" = "個人簡介";
+"PeerInfo.scam" = "詐騙";
+"PeerInfo.fake" = "假冒";
+"PeerInfo.info" = "資訊";
+"PeerInfo.SetGroupPhoto" = "設定群組大頭貼";
+"PeerInfo.AddMember" = "新增成員";
+"PeerInfo.DeleteAndExit" = "刪除並退出";
+"PeerInfo.DeleteGroup" = "刪除群組";
+"PeerInfo.Permissions" = "權限";
+"PeerInfo.Administrators" = "管理員";
+
+"PeerInfo.Action.Message" = "訊息";
+"PeerInfo.Action.Mute" = "關閉通知";
+"PeerInfo.Action.Unmute" = "開啟通知";
+"PeerInfo.Action.SecretChat" = "秘密";
+"PeerInfo.Action.Call" = "通話";
+"PeerInfo.Action.VideoCall" = "視訊";
+"PeerInfo.Action.More" = "更多";
+"PeerInfo.Action.Share" = "分享";
+"PeerInfo.Action.Report" = "檢舉";
+"PeerInfo.Action.Statistics" = "統計資料";
+"PeerInfo.Action.Leave" = "退出";
+"PeerInfo.Action.AddMembers" = "新增";
+"PeerInfo.Action.Discussion" = "討論";
+
+"PeerInfo.Action.VoiceChat" = "視訊聊天";
+"PeerInfo.Action.LiveStream" = "直播";
+
+
+"PeerInfo.Confirm.DeleteGroupConfirmation" = "等一下！刪除此群組將移除所有成員，而且所有的訊息都會消失。您確定要刪除群組？";
+
+
+"PeerInfo.ShowMore" = "顯示更多";
+"PeerInfo.LeaveGroup" = "退出群組";
+
+"PeerInfo.StopBot" = "讓機器人停止";
+"PeerInfo.RestartBot" = "重啟機器人";
+
+"PeerInfo.LeaveChannel" = "退出頻道";
+"PeerInfo.Report" = "檢舉";
+"PeerInfo.sharelink" = "分享連結";
+"PeerInfo.Confirm.LeaveChannel" = "您確定要退出此頻道？";
+"PeerInfo.Confirm.LeaveGroup" = "您確定要退出此群組？\n\n此操作無法復原。";
+"PeerInfo.Confirm.DeleteChat" = "您確定要清空所有聊天紀錄並退出「%@」？\n\n這個操作無法復原。";
+"Confirm.DeleteAdminedChannel" = "等一下！刪除此頻道將移除所有訂閱者，而且所有的訊息都會消失。 \n\n您確定要刪除此頻道？";
+"Confirm.DeleteChatUser" = "您確定要清空所有聊天紀錄？\n\n此操作無法復原。";
+"Confirm.LeaveGroup" = "您確定要退出此群組嗎？";
+
+
+"PeerInfo.Confirm.DeleteUserChat" = "您確定要刪除聊天嗎？";
+
+"PeerMedia.SharedMedia" = "共享的媒體";
+"EmptyPeer.Description" = "請選擇聊天對象，開始傳訊息";
+
+"Emoji.Recent" = "常用";
+"Emoji.SmilesAndPeople" = "表情符號與人物";
+"Emoji.AnimalsAndNature" = "動物與自然";
+"Emoji.FoodAndDrink" = "飲食";
+"Emoji.ActivityAndSport" = "活動";
+"Emoji.TravelAndPlaces" = "旅遊與地點";
+"Emoji.Objects" = "物品";
+"Emoji.Symbols" = "符號";
+"Emoji.Flags" = "旗幟";
+
+
+"Chat.DropTitle" = "將圖檔拖放到這裡";
+"Chat.DropQuickDesc" = "以照片的方式，透過壓縮快速傳送";
+"Chat.DropAsFilesDesc" = "以檔案的方式，不經過壓縮就傳送";
+
+"Chat.DropEditTitle" = "將檔案拖放到這裡以編輯媒體";
+"Chat.DropEditDesc" = "編輯媒體";
+
+
+
+
+"Chat.DropFolder.Title" = "將資料夾拖到此處傳送";
+"Chat.DropFolder.Desc" = "作為一個壓縮檔";
+
+"Message.ActionsPanel.Delete" = "刪除";
+"Message.ActionsPanel.Forward" = "轉傳";
+"Message.ActionsPanel.EmptySelected" = "選擇訊息";
+
+
+/* do not translate key with 'countable' suffix */
+"Message.ActionsPanel.SelectedCount_countable" = "%d";
+
+
+
+
+
+"Message.ActionsPanel.SelectedCount_other" = "%d 則訊息已選取";
+
+
+/* do not translate key with 'countable' suffix */
+"Message.AccessoryPanel.Forwarded_countable" = "%d";
+
+
+
+
+
+"Message.AccessoryPanel.Forwarded_other" = " %d 則轉傳的訊息";
+
+
+
+/* do not translate key with 'countable' suffix */
+"ForwardModalAction.Title_countable" = "%d";
+
+
+
+
+
+"ForwardModalAction.Title_other" = "正在轉傳訊息";
+
+
+/*
+ _zero
+ _one
+ _two
+ _few
+ _many
+ _other
+ */
+
+/* do not translate key with 'countable' suffix */
+"ForwardModalAction.description_countable" = "%d %@";
+
+
+
+
+
+"ForwardModalAction.description_other" = "選擇一用戶或聊天室以轉傳來自 %@ 的訊息";
+
+
+"Alert.OK" = "好";
+"Alert.Cancel" = "取消";
+"Alert.Discard" = "放棄";
+"Alert.NO" = "否";
+"Alert.Yes" = "是的";
+
+"Alert.Forward.Error" = "無法轉傳訊息到這個聊天。";
+
+"PreviewSender.CompressFile" = "以壓縮形式傳送";
+"PreviewSender.CaptionPlaceholder" = "加入說明文字…";
+"PreviewSender.CommentPlaceholder" = "寫個評論…";
+"PreviewSender.FileTooltip" = "不經壓縮就傳送";
+"PreviewSender.MediaTooltip" = "用快速方式傳送";
+"PreviewSender.CollageTooltip" = "將媒體合併至一條訊息";
+"PreviewSender.ArchiveTooltip" = "將所有媒體打包至一個 zip 檔中";
+
+
+
+"Modal.Send" = "傳送";
+"Modal.Share" = "分享";
+"Modal.Report" = "檢舉";
+"Modal.CopyLink" = "複製連結";
+"Modal.Cancel" = "取消";
+"Modal.OK" = "好";
+"Modal.Apply" = "套用";
+"Modal.Set" = "套用";
+"Modal.Yes" = "是";
+"Modal.Save" = "儲存";
+"Modal.Done" = "完成";
+"Modal.NotNow" = "現在不要";
+
+"QuickLook.Preview" = "預覽";
+
+
+"Chat.Service.You" = "您";
+
+"Chat.Service.Group.Created1" = "%1$@ 建立了群組「%2$@」";
+"Chat.Service.Group.AddedMembers1" = "%1$@ 邀請了 %2$@";
+"Chat.Service.Group.AddedSelf" = "%@ 加入了群組";
+"Chat.Service.Group.RemovedMembers1" = "%1$@ 移除了 %2$@";
+"Chat.Service.Group.RemovedSelf" = "%@ 退出了群組";
+"Chat.Service.Group.UpdatedTitle1" = "%1$@ 將群組名稱變更為「%2$@」";
+"Chat.Service.Group.UpdatedPinnedMessage1" = "%1$@ 置頂了「%2$@」";
+"Chat.Service.Group.JoinedByLink" = "%@ 透過邀請連結加入了群組";
+"Chat.Service.Group.MigratedToSupergroup" = "此群組已升級為超級群組";
+"Chat.Service.Group.TookScreenshot" = "%@ 擷取了螢幕畫面！";
+"Chat.Service.PinnedMessage" = "置頂訊息";
+"Chat.Service.PeerJoinedTelegram" = "%@ 加入了 Telegram";
+
+
+
+"Notification.ProximityReached_1" = "%1$@ 現在距離 %3$@ 約 %2$@之內";
+"Notification.ProximityReachedYou_1" = "%1$@ 現在距離您約 %2$@之內";
+"Notification.ProximityYouReached_1" = "您現在距離 %2$@ 約 %1$@之內";
+
+
+
+"Chat.Service.Group.UpdatedPhoto" = "%@ 更新了群組大頭貼";
+"Chat.Service.Group.RemovedPhoto" = "%@ 移除了群組大頭貼";
+"Chat.Service.Channel.UpdatedPhoto" = "頻道大頭貼已更新";
+"Chat.Service.Channel.RemovedPhoto" = "頻道大頭貼已移除";
+
+"Chat.Service.Group.UpdatedVideo" = "%@ 更新了群組動態大頭貼";
+"Chat.Service.Channel.UpdatedVideo" = "頻道動態大頭貼已更新";
+
+
+"Chat.Service.Channel.UpdatedTitle" = "頻道重新命名為「%@」";
+
+
+//"Chat.Service.SecretChat.SetTimer" = "%@ set the self-destruct timer to %@";
+//"Chat.Service.SecretChat.SetTimer.Self" = "You set the self-destruct timer to %@";
+//"Chat.Service.SecretChat.DisabledTimer" = "%@ disabled the self-destruct timer";
+//"Chat.Service.SecretChat.DisabledTimer.Self" = "You disabled the self-destruct timer";
+
+"Chat.Service.SecretChat.SetTimer1" = "%@ 將訊息設定為在%@之後自動刪除";
+"Chat.Service.SecretChat.SetTimer.Self1" = "您設定在%@之後訊息自動刪除";
+"Chat.Service.SecretChat.DisabledTimer1" = "%@ 停用了自動刪除計時器";
+"Chat.Service.SecretChat.DisabledTimer.Self1" = "您停用了自動刪除計時器";
+
+"Chat.Service.Group.SetTimer" = "群組管理員將訊息設定為在%@之後自動刪除";
+"Chat.Service.Group.DisabledTimer" = "群組管理員停用了自動刪除計時器";
+
+"Chat.Service.Channel.SetTimer" = "此頻道中的新訊息將在%@之後自動刪除";
+"Chat.Service.Channel.DisabledTimer" = "此頻道中的新訊息將不再自動刪除";
+
+
+"Chat.Input.Mute" = "關閉通知";
+"Chat.Input.Unmute" = "開啟通知";
+"Chat.Input.Return" = "返回群組";
+"Chat.Input.SecretChat.WaitingToUserOnline" = "正在等待 %@ 上線…";
+
+"Chat.Input.Delete" = "刪除並退出";
+"Chat.Input.Join" = "加入";
+"Chat.Input.Discuss" = "討論";
+"Chat.Input.Unblock" = "解除封鎖";
+"Chat.Input.Restart" = "重新啟動";
+"Chat.Input.Close" = "關閉";
+
+"Message.Context.Reply1" = "回覆";
+"Message.Context.ReplyHelp" = "雙擊";
+"Message.Context.Report" = "檢舉";
+"Message.Context.Forward" = "轉傳";
+"Message.Context.Delete" = "刪除";
+"Message.Context.Select" = "選取\n";
+"Message.Context.Edit" = "編輯";
+"Message.Context.Goto" = "在聊天中顯示";
+"Message.Context.Pin" = "置頂";
+"Message.Context.Unpin" = "取消置頂";
+"Message.Context.Share" = "分享";
+
+
+"Message.Context.Report.AlertOK" = "感謝！您的檢舉將由我們的小組進行審查。";
+
+
+"Message.Context.Confirm.Pin1" = "您想要置頂這則訊息嗎？";
+"Message.Context.Confirm.NotifyPin" = "通知所有成員";
+
+"Message.Context.ForwardToCloud" = "轉傳到「我的收藏」";
+
+"Entertainment.Switch.GifAndStickers" = "貼圖和GIF";
+"Entertainment.Switch.Emoji" = "表情符號";
+"Telegram.LayoutAccountController" = "設定";
+
+"AccountSettings.SetProfilePhoto" = "設定大頭貼";
+"AccountSettings.General" = "一般";
+"AccountSettings.Proxy" = "Proxy";
+"AccountSettings.Proxy.Connecting" = "正在連線";
+"AccountSettings.Proxy.Connected" = "已連線";
+"AccountSettings.Proxy.Disabled" = "已停用";
+"AccountSettings.Stickers" = "貼圖";
+"AccountSettings.Notifications" = "通知";
+"AccountSettings.Username" = "用戶名稱";
+"AccountSettings.Language" = "語言";
+"AccountSettings.PrivacyAndSecurity" = "隱私和安全";
+"AccountSettings.Filters" = "聊天室分類";
+
+"AccountSettings.About" = "關於";
+"AccountSettings.FAQ" = "常見問題";
+"AccountSettings.AskQuestion" = "提出疑問";
+
+"AccountSettings.Wallet" = "Gram Wallet";
+
+
+"ConnectingStatus.connecting" = "正在連線";
+"ConnectingStatus.online" = "線上";
+"ConnectingStatus.updating" = "正在更新";
+"ConnectingStatus.waitingNetwork" = "等待網路連線";
+"ConnectingStatus.connectingToProxy" = "正在連線到 Proxy 伺服器";
+
+"Chat.ConnectingStatus.connecting" = "正在連線";
+"Chat.ConnectingStatus.updating" = "正在更新";
+"Chat.ConnectingStatus.waitingNetwork" = "等待網路連線";
+"Chat.ConnectingStatus.connectingToProxy" = "正在連線到 Proxy 伺服器";
+
+"InputAttach.Popover.PhotoOrVideo" = "照片或影片";
+"InputAttach.Popover.Picture" = "相機";
+"InputAttach.Popover.File" = "檔案";
+"InputAttach.Popover.Location" = "位置";
+"InputAttach.Popover.Poll" = "投票";
+
+"InputAttach.Popover.Music" = "音訊檔";
+
+"Compose.Popover.NewGroup" = "建立群組";
+"Compose.Popover.NewChannel" = "建立頻道";
+"Compose.Popover.NewSecretChat" = "建立秘密聊天";
+
+
+"Chat.Cancel" = "取消";
+"Gallery.Context.SaveAs" = "另存為⋯";
+"Gallery.Context.ShowMessage" = "顯示訊息";
+"Gallery.Context.CopyToClipboard" = "複製媒體";
+"Gallery.ContextDeletePhoto" = "刪除";
+
+"Gallery.WaitDownload.Photo" = "請等待照片完全下載。";
+"Gallery.WaitDownload.Video" = "請等待影片完整下載。";
+
+"Chat.Input.Accessory.EditMessage" = "編輯訊息";
+"Chat.Message.edited" = "已編輯";
+
+"Chat.Message.ImportedShort" = "匯入的";
+
+
+
+"Chat.Input.Error.MessageTooLong_countable" = "%d";
+
+
+
+
+
+"Chat.Input.Error.MessageTooLong_other" = "您的訊息太長，無法儲存。請移除 %d 個字元。";
+
+
+"PeerMedia.Popover.SharedMedia" = "共享的媒體";
+"PeerMedia.Popover.SharedFiles" = "共享的檔案";
+"PeerMedia.Popover.SharedLinks" = "共享的連結";
+"PeerMedia.Popover.SharedAudio" = "共享的音訊";
+
+
+"PeerMedia.Media" = "媒體";
+"PeerMedia.Files" = "檔案";
+"PeerMedia.Links" = "連結";
+"PeerMedia.Audio" = "音訊";
+"PeerMedia.Music" = " 音樂";
+"PeerMedia.Members" = "成員";
+"PeerMedia.Voice" = "語音";
+"PeerMedia.CommonGroups" = "群組";
+"PeerMedia.Gifs" = "GIF";
+
+"Chat.Message.Via" = "透過";
+
+"Audio.UnknownArtist" = "未知的藝術家";
+"Audio.UntitledSong" = "無標題";
+
+"AudioController.voiceMessage" = "語音訊息";
+"AudioController.videoMessage" = "視訊訊息";
+"You" = "您";
+
+
+"Login.WelcomeDescription" = "歡迎使用 macOS 應用程式";
+"Login.countryLabel" = "國家";
+"Login.phoneFieldPlaceholder" = "電話號碼";
+"Login.Next" = "下一步";
+
+"Login.InvalidCountryCode" = "無效的國際電話區號";
+"Login.codePlaceholder" = "驗證碼";
+
+
+"Login.QR.Title" = "從行動版 Telegram 掃描";
+"Login.QR.Help1" = "在您的手機上開啟 Telegram";
+"Login.QR.Help2" = "前往「設定」>「裝置」>「掃描 QR Code」";
+"Login.QR.Help3" = "掃描此圖片以登入";
+"Login.QR.Cancel" = "或使用您的電話號碼登入";
+"Login.QR.Login" = "使用 QR Code 快速登入";
+
+"Login.EnterCodeFromApp" = "請輸入您剛才在其它裝置上的 Telegram 中收到的驗證碼。";
+"Login.SendSmsIfNotReceivedAppCode" = "仍未收到驗證碼？";
+"Login.JustSentSms" = "我們已經透過簡訊向您傳送驗證碼。請在上面輸入它。";
+"Login.PhoneCalledCode" = "我們剛撥打了您的手機。請在上方輸入該驗證碼。";
+"Login.PhoneDialed" = "Telegram 撥打了您的電話號碼";
+"Login.willCall" = "Telegram 會於 %d:%@ 打電話給您";
+"Login.willSendSms" = "在 %d:%@ 之內會傳送給您一則簡訊";
+"Login.passwordPlaceholder" = "密碼";
+
+"Login.EnterPasswordDescription" = "您啟用了「兩步驟驗證」，因此您的帳號受到額外密碼的保護。";
+"Login.RecoveryMailFailed" = "由於您在設定密碼時沒有提供復原用的電子信箱，您剩餘的選項就是要記起您的密碼，或是重置您的帳號。";
+
+"Login.PasswordForgot" = "忘記密碼？";
+"Login.ResetAccountText" = "重置帳號";
+
+
+"Login.ResetAccount" = "重置我的帳號";
+"Login.ResetAccountDescription" = "如果您繼續重置您的帳號，您將失去所有的聊天和訊息，連同任何您分享的媒體和檔案。";
+
+
+"PHONE_NUMBER_INVALID" = "無效的電話號碼";
+"Login.FloodWait" = "嘗試次數已超過，請稍後再試。";
+"PHONE_CODE_INVALID" = "驗證碼無效";
+"PHONE_CODE_EXPIRED" = "驗證碼過期了";
+"PASSWORD_HASH_INVALID" = "密碼不正確";
+
+
+
+"Chat.ForwardActionHeader" = "轉傳訊息";
+
+
+"GeneralSettings.MediaKeysForInAppPlayer" = "處理程式內播放器的媒體鍵";
+"GeneralSettings.EmojiReplacements" = "自動替換表情符號";
+"GeneralSettings.InputSettings" = "輸入設定";
+"GeneralSettings.GeneralSettings" = "一般設定";
+
+"GeneralSettings.SendByEnter" = "按下 Enter 鍵就送出訊息";
+"GeneralSettings.SendByCmdEnter" = "按下 ⌘ + Enter 鍵才送出訊息";
+
+"GeneralSettings.InterfaceHeader" = "介面";
+"GeneralSettings.AdvancedHeader" = "進階";
+"GeneralSettings.EmojiAndStickers" = "表情符號和貼圖";
+
+
+"Telegram.GeneralSettingsViewController" = "一般設定";
+"AccountSettings.Logout" = "登出";
+"NotificationSettings.ToggleNotifications.Header" = "通知";
+"NotificationSettings.ToggleNotifications" = "通知";
+"NotificationSettings.MessagesPreview" = "訊息預覽";
+"NotificationSettings.IncludeMutedChats" = "包括已關通知的聊天";
+"NotificationSettings.BadgeEnabled" = "開關";
+
+"NotificationSettings.CountUnreadMessages" = "計算未讀訊息";
+
+"NotificationSettings.IncludeGroups" = "包含群組";
+"NotificationSettings.IncludeChannels" = "包括頻道";
+
+"NotificationSettings.BounceDockIcon" = "彈跳 Dock 圖示";
+
+"NotificationSettings.BadgeHeader" = "未讀數量標記";
+"NotificationSettings.BadgeDesc" = "關閉以顯示未讀聊天的數量而不是訊息。";
+
+
+"NotificationSettings.NotificationTone" = "通知鈴聲";
+"NotificationSettings.ResetNotifications" = "重置通知";
+"NotificationSettings.ResetNotificationsText" = "您可以針對以下特定聊天設定自訂通知。";
+"Telegram.NotificationSettingsViewController" = "通知";
+"AccountSettings.DataAndStorage" = "數據和儲存";
+"DefaultSoundName" = "預設";
+"NotificationSettings.Tone.Default" = "預設";
+"NotificationSettingsToneNone" = "無";
+
+"NotificationSettings.Confirm.Reset" = "重置通知";
+
+
+"Weekday.ShortFriday" = "週五";
+"Weekday.ShortMonday" = "週一";
+"Weekday.ShortSaturday" = "週六";
+"Weekday.ShortSunday" = "週日";
+"Weekday.ShortThursday" = "週四";
+"Weekday.ShortTuesday" = "週二";
+"Weekday.ShortWednesday" = "週三";
+
+
+"Time.at" = "的";
+"Time.last_seen" = "最後上線";
+"Time.today" = "今天";
+"Time.yesterday" = "昨天";
+
+
+"Time.TomorrowAt" = "明天%@";
+
+
+"Chat.EmptyChat" = "還沒有訊息在這裡";
+
+"Chat.List.Sticker" = "%@ 貼圖";
+"Chat.List.Voice" = "語音訊息";
+"Chat.List.InstantVideo" = "視訊訊息";
+"Chat.List.Video" = "影片";
+
+"Chat.List.GIF" = "GIF";
+"Chat.List.Map" = "位置";
+"Chat.List.Contact" = "聯絡資訊";
+
+
+"Chat.List.Video1_countable" = "%d";
+
+
+
+
+
+"Chat.List.Video1_other" = "%d 個影片";
+
+
+"Chat.List.Photo1_countable" = "%d";
+
+
+
+
+
+"Chat.List.Photo1_other" = "%d 張照片";
+
+"UsernameSettings.ChangeDescription" = "您可以在 Telegram 上選擇一個用戶名稱。如果您這樣做，別人就可以透過此用戶名稱找到您，而且不需要您的電話號碼就可以與您聯絡。\n\n您可以使用 a-z、0-9 及底線。最小長度是 5 個字元。";
+"UsernameSettings.InputPlaceholder" = "輸入您的用戶名稱";
+"Telegram.UsernameSettingsViewController" = "用戶名稱";
+"UsernameSettings.available" = "%@ 是可用的。";
+
+"Error.Username.UnderscopeStart" = "用戶名稱不能以底線開頭。";
+"Error.Username.UnderscopeEnd" = "用戶名稱不能以底線結束。";
+"Error.Username.NumberStart" = "用戶名稱不能以數字開頭。";
+"Error.Username.Invalid" = "此用戶名稱無效。";
+"Error.Username.MinimumLength" = "用戶名稱必須至少有 5 個字元。";
+"Error.Username.AlreadyTaken" = "抱歉，此用戶名稱已被佔用。";
+"UsernameSettings.Done" = "完成";
+
+"Search.Separator.ChatsAndContacts" = "聯絡人與聊天";
+"Search.Separator.GlobalPeers" = "全域搜尋";
+"Search.Separator.Messages" = "訊息";
+"Search.Separator.Recent" = "最近的";
+"Search.Separator.Popular" = "人們";
+"PeerInfo.AdminLabel" = "管理員";
+"Share.Link.Copied" = "已複製到剪貼簿";
+
+
+"Presence.bot" = "機器人";
+"Presence.Support" = "支援";
+"CreateGroup.NameHolder" = "群組名稱";
+"Telegram.ChannelIntroViewController" = "頻道";
+"Channel.IntroDescriptionHeader" = "什麼是頻道？";
+"Channel.IntroDescription" = "頻道是一對多的工具，用於將您的訊息廣播給無限的觀眾。";
+"Channel.Intro.CreateChannel" = "建立頻道";
+"Channel.Create" = "建立";
+"Channel.NewChannel" = "建立頻道";
+"Group.CreateGroup" = "新的群組";
+"Compose.Create" = "建立";
+"Compose.Next" = "下一步";
+"Channel.ChannelNameHolder" = "頻道名稱";
+"Channel.NameHeader" = "頻道名稱";
+"Channel.DescriptionHolder" = "簡介";
+"Channel.DescHeader" = "描述";
+"Channel.DescriptionHolderDescrpiton" = "您可以為您的頻道提供選擇性的描述。";
+
+
+"Channel.TypeHeaderChannel" = "頻道類型";
+"Channel.TypeHeaderGroup" = "群組類型";
+
+
+"Channel.Public" = "公開";
+"Channel.Private" = "私人";
+
+"Channel.RevokeLink" = "撤銷連結";
+"Channel.RevokeLink.Confirm.Header" = "撤銷連結";
+"Channel.RevokeLink.Confirm.Text" = "您確定要撤銷此連結？一旦您這樣做，沒有人能夠使用它加入群組。";
+"Channel.RevokeLink.Confirm.OK" = "撤銷";
+
+"Channel.PrivateAboutChannel" = "私人頻道只能透過邀請連結加入。";
+"Channel.PublicAboutChannel" = "公開頻道可以用搜尋找到，且任何人都可以加入。";
+"Channel.PrivateAboutGroup" = "只有在您被邀請或有邀請連結的情況下, 才能加入私人群組。";
+"Channel.PublicAboutGroup" = "公開的群組可以透過搜尋找到，聊天紀錄每個人都看得見，且任何人都可以加入。";
+
+"Channel.PublicNamesLimitError" = "您擁有太多公開的連結。試著撤掉一個舊群組或頻道的公開連結，或者改為建立私人群組或頻道。";
+
+
+"Channel.ExportLinkAboutChannel" = "人們可以透過點擊此連結加入您的頻道。任何時間，您都可以撤銷連結。";
+"Channel.ExportLinkAboutGroup" = "人們可以透過點擊此連結加入您的群組。任何時間，您都可以撤銷連結。";
+"Channel.UsernameAboutChannel" = "人們可以分享此連結給其他人，並且也能用 Telegram 的搜尋功能來找到您的頻道。";
+"Channel.UsernameAboutGroup" = "人們可以分享此連結給其他人，並且也能用 Telegram 的搜尋功能來找到您的群組。";
+
+
+"Group.NewGroup" = "新的群組";
+
+"Chat.Confirm.ActionUndonable" = "這個操作無法復原";
+"Chat.Confirm.DeleteMessagesForEveryone" = "從所有人的裝置中刪除";
+
+
+"Chat.Confirm.DeleteMessages1_countable" = "%d";
+
+
+
+
+
+"Chat.Confirm.DeleteMessages1_other" = "刪除所選的訊息？";
+
+"Chat.Confirm.DeleteForEveryone_countable" = "%d";
+
+
+
+
+
+"Chat.Confirm.DeleteForEveryone_other" = "您確定要為所有人刪除這些訊息嗎？";
+
+
+"Telegram.PrivacyAndSecurityViewController" = "隱私和安全";
+"PrivacySettings.PrivacyHeader" = "隱私";
+"PrivacySettings.BlockedUsers" = "封鎖名單";
+"PrivacySettings.LastSeen" = "最後上線 & 在線上";
+"PrivacySettings.Groups" = "群組和頻道";
+"PrivacySettings.PhoneNumber" = "電話號碼";
+"PrivacySettings.VoiceCalls" = "通話";
+"PrivacySettings.ProfilePhoto" = "大頭貼";
+"PrivacySettings.Forwards" = "轉傳的訊息";
+
+
+"PrivacySettings.GroupMembersCount_countable" = "%d";
+
+
+
+
+
+"PrivacySettings.GroupMembersCount_other" = "%d 位成員";
+
+"PrivacySettings.SecurityHeader" = "安全";
+"PrivacySettings.Passcode" = "密碼";
+"PrivacySettings.ActiveSessions" = "已登入的裝置";
+
+"PrivacySettings.UseProxy" = "使用 Proxy";
+"PrivacySettings.ProxyHeader" = "連線類型";
+
+"PrivacySettings.TwoStepVerification" = "兩步驟驗證";
+
+"Telegram.PasscodeSettingsViewController" = "密碼";
+"Passcode.Lost.Description" = "如果您忘記了密碼，您可以[登出]()";
+
+
+
+
+
+"Chat.Input.StartBot" = "開始";
+
+"InlineModalAction.Title" = "分享機器人內容";
+"InlineModalAction.Desc" = "透過 %@ 選擇用戶或聊天室來分享內容";
+
+
+"ChatList.Context.HidePromo" = "隱藏";
+
+"ChatList.Context.Unmute" = "開啟通知";
+"ChatList.Context.Mute" = "關閉通知";
+"ChatList.Context.ClearHistory" = "清除聊天紀錄";
+"ChatList.Context.Call" = "通話";
+"ChatList.Context.DeleteChat" = "刪除聊天";
+"ChatList.Context.DeleteAndExit" = "刪除並退出";
+"ChatList.Context.LeaveChannel" = "退出頻道";
+"ChatList.Context.LeaveGroup" = "退出群組";
+"ChatList.Context.ReturnGroup" = "返回群組";
+"ChatList.Context.Pin" = "置頂";
+"ChatList.Context.Unpin" = "取消置頂";
+
+"ChatList.Context.Preview" = "預覽";
+
+"ChatList.SecretChat.Terminated" = "秘密聊天已取消";
+"ChatList.SecretChat.Joined" = "%@ 加入了您的秘密聊天。";
+"ChatList.SecretChat.Created" = "%@ 建立了一個秘密聊天。";
+"ChatList.SecretChat.ExKeys" = "正在等待上線";
+
+"ChatList.UnsupportedMessage" = "訊息不被支援";
+"Chat.Message.Unsupported" = "您使用的 Telegram 版本不支援此訊息。請更新到最新版，透過「設定」或安裝它從：https://macos.telegram.org ";
+"Text.Copy" = "複製所選文字";
+"Text.CopyText" = "複製文字";
+
+
+"Text.CopyLabel_About" = "複製關於";
+"Text.CopyLabel_Bio" = "複製個人簡介";
+"Text.CopyLabel_PhoneNumber" = "複製電話號碼";
+"Text.CopyLabel_Username" = "複製用戶名稱";
+"Text.CopyLabel_ShareLink" = "複製分享連結";
+
+"Peer.Activity.User.PlayingGame" = "玩遊戲";
+"Peer.Activity.User.TypingText" = "正在輸入";
+"Peer.Activity.User.SendingPhoto" = "正在傳送照片";
+"Peer.Activity.User.RecordingVideo" = "正在錄製影片";
+"Peer.Activity.User.SendingVideo" = "正在傳送影片";
+"Peer.Activity.User.RecordingAudio" = "正在錄製語音";
+"Peer.Activity.User.SendingFile" = "正在傳送檔案";
+"Peer.Activity.User.ChoosingSticker" = "正在選擇貼圖";
+"Peer.Activity.User.EnjoyingAnimations" = "正在觀看 %@";
+
+"Peer.Activity.Chat.PlayingGame" = "%@ 正在玩遊戲";
+"Peer.Activity.Chat.TypingText" = "%@ 正在輸入";
+"Peer.Activity.Chat.SendingPhoto" = "%@ 正在傳送照片";
+"Peer.Activity.Chat.RecordingVideo" = "%@ 正在錄製視訊訊息";
+"Peer.Activity.Chat.SendingVideo" = "%@ 正在傳送影片";
+"Peer.Activity.Chat.RecordingAudio" = "%@ 正在錄製語音訊息";
+"Peer.Activity.Chat.SendingFile" = "%@ 正在傳送檔案";
+"Peer.Activity.Chat.ChoosingSticker" = "%@ 正在選擇貼圖";
+
+
+
+"Peer.Activity.Chat.Multi.PlayingGame1" = "%@ 和另外 %d 人正在玩遊戲";
+"Peer.Activity.Chat.Multi.TypingText1" = "%@ 和另外 %d 人正在輸入";
+"Peer.Activity.Chat.Multi.SendingPhoto1" = "\n%@ 和另外 %d 人正在傳送照片";
+"Peer.Activity.Chat.Multi.RecordingVideo1" = "%@ 和另外 %d 人正在錄製影片";
+"Peer.Activity.Chat.Multi.SendingVideo1" = "\n%@ 和另外 %d 人正在傳送影片";
+"Peer.Activity.Chat.Multi.RecordingAudio1" = "%@ 和另外 %d 人正在錄製語音";
+"Peer.Activity.Chat.Multi.SendingAudio1" = "%@ 與另外 %d 人正在傳送音訊";
+"Peer.Activity.Chat.Multi.SendingFile1" = "%@ 和另外 %d 人正在傳送檔案";
+"Peer.Activity.Chat.Multi.ChoosingSticker1" = "%@ 和另外 %d 人正在選擇貼圖";
+
+
+
+"Peer.Media.SharedMediaEmptyList" = "在這個聊天室內分享照片與影片 - 或者讓迴紋針繼續不高興。";
+"Peer.Media.SharedFilesEmptyList1" = "您可以傳送或接收任何格式檔案，單檔最大 2 GB，並且可以在任何地方存取它們。";
+"Peer.Media.SharedLinksEmptyList" = "在這個聊天室中所分享的全部連結會出現在這裡。";
+"Peer.Media.SharedMusicEmptyList" = "在這個聊天室中所分享的全部音樂會出現在這裡。";
+"Peer.Media.SharedVoiceEmptyList" = "此聊天中共享的所有語音和視訊訊息都將顯示在此處。";
+"SecretTimer.Off" = "關閉";
+"Channel.SlowMode.Off" = "關閉";
+
+"Timer.Seconds_countable" = "%d";
+
+
+
+
+
+"Timer.Seconds_other" = "%d 秒鐘";
+
+
+"Timer.Days_countable" = "%d";
+
+
+
+
+
+"Timer.Days_other" = "%d 天";
+
+
+"Timer.Minutes_countable" = "%d";
+
+
+
+
+
+"Timer.Minutes_other" = "%d 分鐘";
+
+"Timer.Hours_countable" = "%d";
+
+
+
+
+
+"Timer.Hours_other" = "%d 小時";
+
+
+"LastSeen.HoursAgo_countable" = "%d";
+
+
+
+
+
+"LastSeen.HoursAgo_other" = "最後上線於 %d 小時之前";
+
+
+"Timer.Weeks_countable" = "%d";
+
+
+
+
+
+"Timer.Weeks_other" = "%d 週";
+
+"Timer.Months_countable" = "%d";
+
+
+
+
+
+"Timer.Months_other" = "%d 個月";
+
+"Timer.Months_countable" = "%d";
+
+
+
+
+
+"Timer.Months_other" = "%d 個月";
+
+"Timer.Years_countable" = "%d";
+
+
+
+
+
+"Timer.Years_other" = "%d 年";
+
+"Timer.Forever" = "永遠";
+"ChatList.Draft" = "草稿：";
+"ChatList.You" = "您";
+
+"Notification.LockedPreview" = "您有一則新訊息";
+"JoinLink.Join" = "加入";
+
+"Group.Unavailable" = "很抱歉，這個群組似乎並不存在。";
+
+"Link.Expired" = "抱歉，此連結已過期。";
+
+
+"Chat.Title.self" = "您的雲端儲存";
+"Separator.ShowMore" = "顯示更多";
+"Separator.ShowLess" = "顯示較少";
+"Separator.Clear" = "清除";
+"Stickers.Recent" = "最近使用過";
+"Stickers.Favorite" = "最愛";
+"Stickers.Trending" = "熱門貼圖";
+"Stickers.SearchAdd" = "新增";
+"Stickers.Context.Archive" = "封存";
+
+"Stickers.SearchAdded" = "已安裝";
+
+"Stickers.Confirm.ClearRecentHeader" = "清空最近使用過的貼圖";
+"Stickers.Confirm.ClearRecentText" = "您確定要清空最近使用過的貼圖嗎？";
+"Stickers.Confirm.ClearRecentOK" = "清空";
+
+
+"Stickers.Count_countable" = "%d";
+
+
+
+
+
+"Stickers.Count_other" = "%d 張貼圖";
+
+"Account.Confirm.AskQuestion" = "請注意，Telegram 的技術支援是由志工提供。我們會試著盡快回覆，但還是需要一點時間。\n\n請看看「常見問題」：其中有重要的疑難排解提示，並且回答了大多數問題。";
+"Account.Confirm.GoToFaq" = "開啟 FAQ";
+
+"Chat.SecretChat.EmptyHeader" = "秘密聊天：";
+"Chat.SecretChat.1Feature" = "- 使用端到端加密";
+"Chat.SecretChat.2Feature" = " - 不會在我們的伺服器留下痕跡";
+"Chat.SecretChat.3Feature" = "- 有「閱後即焚計時器」";
+"Chat.SecretChat.4Feature" = "- 不允許轉傳";
+
+
+"TextView.Transform.Bold" = "粗體";
+"TextView.Transform.Italic" = "斜體";
+"TextView.Transform.Code" = "等寬字體";
+"TextView.Transform.URL" = "建立超連結";
+
+"AccountsController.NewAccount" = "新帳號";
+
+"Account.Confirm.Logout" = "登出？";
+"Account.Confirm.LogoutText" = "記住，登出將取消所有秘密聊天。";
+
+"Telegram.ConvertGroupViewController" = "超級群組";
+
+"Supergroup.Convert.Description" = "**在超級群組中：**\n\n• 新成員可以看到完整的訊息紀錄\n• 刪除的訊息將從所有成員的裝置中消失\n• 管理員可以加一個簡介到群組\n• 創立者可以為群組設定一個公開的連結";
+"Supergroup.Convert.Undone" = "**請注意**：此操作無法復原。";
+"Supergroup.Convert.Button" = "轉換為超級群組";
+
+
+"PeerInfo.MembersHeader_countable" = "%d";
+
+
+
+
+
+"PeerInfo.MembersHeader_other" = "%d 位成員";
+
+"PeerInfo.InviteLink" = "邀請連結";
+"PeerInfo.BlackList" = "黑名單";
+"PeerInfo.GroupType" = "群組類型";
+"PeerInfo.ChannelType" = "頻道類型";
+"PeerInfo.GroupType.Public" = "公開";
+"PeerInfo.GroupType.Private" = "私人";
+"PeerInfo.SetAboutDescription" = "您可以為您的群組提供選擇性的描述。";
+"PeerInfo.About.Placeholder" = "簡介";
+"PeerInfo.ConvertToSupergroup" = "轉換為超級群組";
+"PeerInfo.RemovedUsers" = "被移除的用戶";
+
+"PeerInfo.ShowMoreText" = "[顯示更多]()";
+"PeerInfo.GroupTitle.Pleceholder" = "群組名稱";
+"PeerInfo.ChannelTitle.Pleceholder" = "頻道名稱";
+
+"Telegram.ChannelBlacklistViewController" = "被移除的用戶";
+"Telegram.ChannelAdminsViewController" = "管理員";
+
+"ChannelBlacklist.EmptyDescrpition" = "封鎖名單上的用戶會從群組中移除，必須透過管理員的邀請才能夠回來。邀請連結對他們沒作用。";
+
+"Admins.GroupAdmins" = "群組管理員";
+"Admins.ChannelAdmins" = "頻道管理員";
+
+"Admins.OnlyAdminsCanAddMembers" = "只有管理員可以新增成員";
+"Admins.EverbodyCanAddMembers" = "每個人都可以新增成員";
+"Admins.GroupDescription" = "您可以新增管理員來幫助您管理群組";
+"Admins.ChannelDescription" = "您可以新增管理員來幫助您管理頻道";
+"Admins.SelectNewAdminTitle" = "聯絡人";
+"Admins.AddAdmin" = "新增管理員";
+"Admins.Admin" = "管理員";
+"Admins.WhoCanInvite.Text" = "誰可以新增成員";
+"Admins.WhoCanInvite.Admins" = "僅限管理員";
+"Admins.WhoCanInvite.Everyone" = "所有成員";
+
+"Admins.Owner" = "擁有者";
+
+
+"Telegram.ChannelVisibilityController.Channel" = "頻道";
+
+"Telegram.ChannelVisibilityController.Group" = "群組";
+
+"PeerInfo.Confirm.AddMembers1_countable" = "%d";
+
+
+
+
+
+"PeerInfo.Confirm.AddMembers1_other" = "新增 %d 個用戶至群組？";
+
+
+"PeerInfo.Confirm.Add" = "新增";
+"peerInfo.Confirm.Leave" = "退出";
+"PeerInfo.Confirm.Clear" = "清除";
+
+"peerInfo.Confirm.ClearHistory.User" = "這將從您的 Telegram 雲端刪除這個聊天室的所有訊息和媒體。您的聊天對象仍將擁有它們。";
+"peerInfo.Confirm.ClearHistory.UserBothSides" = "您確定要刪除此聊天中的所有訊息嗎？";
+
+"peerInfo.Confirm.ClearHistory.SavedMesssages" = "這將從您的 Telegram 雲端刪除這個聊天室的所有訊息和媒體。";
+
+"peerInfo.Confirm.ClearHistory.Group" = "這將從您的 Telegram 雲端刪除這個聊天室的所有訊息和媒體。群組的其他成員仍將擁有它們。";
+
+"PeerInfo.Confirm.AddMember" = "將 \"%@\" 加入到群組？";
+"PeerInfo.Confirm.RemovePeer" = "將 %@ 從群組中移除？";
+
+"PeerInfo.FirstName.Placeholder" = "名字";
+"PeerInfo.LastName.Placeholder" = "姓氏";
+"PeerInfo.GroupName.Placeholder" = "群組名稱";
+"PeerInfo.ChannelName.Placeholder" = "頻道名稱";
+"PeerInfo.Phone" = "電話";
+
+"ConvertToSupergroup.Alert.Error" = "發生錯誤，請稍後再試。";
+"ConvertToSuperGroup.Confirm" = "您確定嗎？這個操作無法復原。";
+"Telegram.LinkInvationController" = "邀請連結";
+
+"GroupInvation.CopyLink" = "複製連結";
+"GroupInvation.Revoke" = "撤銷";
+"GroupInvation.Share" = "分享連結";
+
+"GroupInvation.GroupDescription" = "任何已安裝 Telegram 的人都可以透過此連結加入您的群組。";
+"GroupInvation.ChannelDescription" = "任何已安裝 Telegram 的人可以透過此連結加入到您的頻道";
+
+"Chat.Header.PinnedMessage" = "置頂訊息";
+"Chat.Header.PinnedPrevious" = "置頂訊息";
+
+"Chat.Header.PinnedMessage_Numer" = "置頂訊息 #%d";
+
+"Chat.Header.ReportSpam" = "檢舉垃圾訊息";
+"Chat.Confirm.Unpin" = "您想要取消置頂這則訊息嗎？";
+"Chat.Confirm.Unpin.Header" = "取消置頂訊息";
+"Chat.Confirm.Unpin.OK" = "取消置頂";
+
+
+"Chat.Confirm.PinOld" = "您是否要置頂較舊的訊息，儘管有一則或一則以上的較新訊息已置頂？";
+
+"Chat.Confirm.PinFor" = "為我和 %@ 置頂";
+
+"StickerPack.Add1_countable" = "%d";
+
+
+
+
+
+"StickerPack.Add1_other" = "新增 %d 張貼圖";
+
+"Compose.Select.SecretChat" = "秘密聊天";
+"Compose.Confirm.StartSecretChat" = "建立與 \"%@\" 的秘密聊天";
+
+
+"ReportReason.Spam" = "垃圾訊息";
+"ReportReason.Violence" = "暴力";
+"ReportReason.Porno" = "色情";
+"ReportReason.ChildAbuse" = "危害兒童";
+"ReportReason.Copyright" = "版權";
+"ReportReason.Other" = "其他";
+"ReportReason.Other.Placeholder" = "描述";
+"ReportReason.Report" = "檢舉";
+"ReportReason.Fake" = "假冒";
+
+"PeerInfo.ChannelReported" = "感謝您！您的檢舉將很快被我們的團隊進行審查。";
+
+"PeerInfo.SignMessages.Desc" = "將管理員的名稱加入到他們發布的訊息中。";
+"PeerInfo.SignMessages" = "訊息附上簽名";
+"PeerInfo.SetChannelPhoto" = "設定頻道大頭貼";
+"PeerInfo.Members" = "成員";
+"PeerInfo.Subscribers" = "訂閱者";
+"PeerInfo.DeleteChannel" = "刪除頻道";
+"PeerInfo.DeleteSecretChat" = "刪除秘密聊天";
+
+"ChannelMembers.AddMembers" = "新增成員";
+"ChannelMembers.AddSubscribers" = "新增訂閱者";
+
+"ChannelMembers.InviteLink" = "透過連結來邀請";
+"ChannelMembers.MembersListDesc" = "只有頻道管理員可以看到此列表。";
+"Telegram.ChannelMembersViewController" = "頻道成員";
+
+"LinkInvation.Group.Confirm.Revoke" = "您確定要撤銷此連結？一旦您這樣做，沒有人能夠使用它加入群組。";
+"LinkInvation.Channel.Confirm.Revoke" = "您確定要撤銷此連結？一旦您這樣做，沒有人能夠使用它加入頻道。";
+"LinkInvation.Confirm.Ok" = "撤銷";
+"ChannelMembers.Select.Title" = "新增成員";
+"PeerInfo.Confirm.SecretChat.Header" = "秘密聊天";
+"PeerInfo.Confirm.SecretChat.OK" = "開始";
+"PeerInfo.Confirm.StartSecretChat" = "您確定要與 \"%@\" 開始秘密聊天嗎？";
+"PeerInfo.Confirm.ShareInfo" = "您確定要分享您的電話號碼給 \"%@\" 嗎？";
+
+
+"PeerInfo.BotStatus.HasNoAccess" = "無法存取訊息";
+"PeerInfo.BotStatus.HasAccess" = "可以存取訊息";
+"PeerInfo.GroupsInCommon" = "共同的群組";
+"GroupsInCommon.Empty" = "無共同的群組";
+"Telegram.GroupsInCommonViewController" = "共同的群組";
+
+"ChannelVisibility.Checking" = "正在檢查";
+"ChannelVisibility.Loading" = "載入中…";
+"ChannelVisibility.Confirm.Revoke" = "您確定要將此頻道設為私人的，並移除其公開連結嗎？";
+
+"ChannelVisibility.Confirm.MakePrivate.Channel" = "如果您將此頻道設為私人頻道，則名稱 @%@ 將被移除。任何人都可以把它拿來用在自己的公開群組或頻道。";
+"ChannelVisibility.Confirm.MakePrivate.Group" = "如果您將此群組設為私人群組，則名稱 @%@ 將被移除。任何人都可以把它拿來用在自己的公開群組或頻道。";
+
+"Peer.DeletedUser" = "已刪除的帳號";
+
+"ChatList.Service.Call.incoming" = "撥入電話 (%@)";
+"ChatList.Service.Call.outgoing" = "撥出電話 (%@)";
+
+"ChatList.Service.VideoCall.incoming" = "撥入視訊通話 (%@)";
+"ChatList.Service.VideoCall.outgoing" = "撥出視訊通話 (%@)";
+
+"ChatList.Service.Call.Cancelled" = "已取消的通話";
+"ChatList.Service.Call.Missed" = "未接來電";
+
+"ChatList.Service.VideoCall.Cancelled" = "已取消的視訊通話";
+"ChatList.Service.VideoCall.Missed" = "未接視訊來電";
+
+
+"Chat.Service.Call.Cancelled" = "已取消的通話";
+"Chat.Service.Call.Missed" = "未接來電";
+
+"ChatList.Service.GameScored1_countable" = "%d %@";
+
+
+
+
+
+"ChatList.Service.GameScored1_other" = "得到了 %d 分（在 %@ 遊戲中）";
+
+"About.Description" = "macOS 版的免費即時通訊軟體，基於以速度和安全為目標的 MTProto 網路傳輸協定。";
+"ChatService.ChannelCreated" = "頻道已建立";
+"Telegram.BlockedPeersViewController" = "封鎖名單";
+"BlockedPeers.EmptyDescrpition" = "被封鎖的用戶無法向您傳送訊息或將您加入到群組。他們不會看到您的大頭貼、在線上和最後上線的狀態。";
+
+"Sessions.CurrentSessionHeader" = "這個裝置";
+"Sessions.TerminateOthers" = "登出其他的裝置";
+"Sessions.TerminateDescription" = "將其他裝置登出，只保留目前使用的。";
+"Sessions.ActiveSessionsHeader" = "其他的裝置";
+
+
+"Passcode.TurnOn" = "開啟密碼";
+"Passcode.TurnOnDescription" = "當您設定了一組額外的密碼，您可以使用 ⌘ + L 來鎖定。\n\n注意：如果您忘記密碼，則需要刪除並重新安裝應用程式。 所有秘密聊天將遺失。";
+"Passcode.TurnOff" = "關閉密碼";
+"Passcode.Change" = "變更密碼";
+"Passcode.Autolock" = "自動鎖定";
+"Passcode.AutoLock.Disabled" = "已停用";
+"Passcode.AutoLock.IfAway" = "如果離開 %@ 之久";
+
+"Passcode.EnterPasscodePlaceholder" = "輸入密碼";
+"Passcode.ReEnterPlaceholder" = "再次輸入密碼";
+"Passcode.EnterCurrentPlaceholder" = "輸入目前的密碼";
+"Passcode.EnterNewPlaceholder" = "輸入新的密碼";
+
+"Passcode.Next" = "下一步";
+
+
+"Peer.ServiceNotifications" = "服務通知";
+
+"Peer.RepliesNotifications" = "回覆通知";
+
+"Alert.SendError.Header" = "您的訊息無法被傳送";
+"Alert.SendError.Text" = "傳送上一則訊息時出錯。 您要重新傳送嗎？";
+"Alert.SendError.Resend" = "重新傳送";
+"Alert.SendError.Delete" = "刪除";
+"Alert.SendError.Ignore" = "忽略";
+
+
+"Alert.SendError.ResendItems_countable" = "%d";
+
+
+
+
+
+"Alert.SendError.ResendItems_other" = "重傳 %d 則訊息";
+
+"GeneralSettings.EnableSidebar" = "顯示側邊欄";
+"Telegram.RecentSessionsController" = "已登入的裝置";
+"RecentSessions.Confirm.TerminateOthers" = "您確定要將其他裝置登出？";
+"RecentSessions.Confirm.Revoke" = "您想要中斷這個連線嗎？";
+"RecentSessions.Revoke" = "撤銷";
+"RecentSessions.Error.FreshReset" = "出於安全考慮，您無法在剛登入不久的裝置上將登入較久的裝置登出。請改用較早登入的裝置，或等待幾小時。";
+
+"RecentSessions.IncompleteAttemptHeader" = "未完成的登入嘗試";
+"RecentSessions.IncompleteAttemptDesc" = "上述裝置無法存取您的訊息。驗證碼輸入正確，但沒有提供正確的密碼。";
+
+"Legacy.Intro.Description1" = "歡迎使用超快速而穩定的新版 macOS Telegram，完全重新用 Swift 3.0 程式語言所寫。";
+"Legacy.Intro.Description2" = "請注意，您現有的秘密聊天將以唯讀模式提供。 當然，您可以建立新的繼續聊天。";
+"Legacy.Intro.Next" = "開始傳訊息";
+
+"Messages.ReplyLoading.Header" = "回覆";
+"Messages.ReplyLoading.Loading" = "載入中…";
+"PeerInfo.DeleteContact" = "刪除聯絡人";
+"PeerInfo.Confirm.DeleteContact" = "您確定要刪除這位聯絡人嗎？";
+"Compose.SelectUsers" = "選取用戶";
+"PeerInfo.AddContact" = "加為聯絡人";
+"PeerInfo.AddUserToContact" = "將 %@ 加為聯絡人";
+"Telegram.GroupAdminsController" = "管理員";
+"GroupAdmins.AllMembersAdmins" = "所有成員都是管理員";
+"GroupAdmins.Desc.AdminInvites" = "只有管理員可以新增及移除成員，編輯此群組名稱和照片。";
+"GroupAdmins.Desc.AllInvites" = "群組成員可以加入新成員，編輯此群組名稱和照片。";
+"Login.PhoneNumberNotRegistred" = "此電話號碼未註冊過。如果您還沒有 Telegram 帳號，請在您的行動裝置上註冊。";
+"Login.YourPhoneLabel" = "您的電話";
+"Login.YourCodeLabel" = "您的驗證碼";
+"Login.YourPasswordLabel" = "您的密碼";
+
+"PeerInfo.EncryptionKey" = "加密金鑰";
+
+"Telegram.SecretChatKeyViewController" = "加密金鑰";
+"EncryptionKey.Description" = "這張圖片和文字是產生自與 **%@** 秘密聊天的加密金鑰。\n\n如果在 **%@** 裝置上看起來也是一樣的，則端到端加密通訊就會得到保證。";
+
+
+"GeneralSettings.InAppSounds" = "程式內聲音";
+"Chat.ShareInlineResultActionHeader" = "分享";
+"Context.CopyMedia" = "另存為⋯";
+"Context.ShowInFinder" = "在 Finder 中顯示";
+"Telegram.InstalledStickerPacksController" = "貼圖";
+
+"Stickers.Set.Count1_countable" = "%d";
+
+
+
+
+
+"Stickers.Set.Count1_other" = "%d 張貼圖";
+
+"Telegram.FeaturedStickerPacksController" = "熱門貼圖";
+"Telegram.ArchivedStickerPacksController" = "封存貼圖";
+"ArchivedStickers.Description" = "您最多可以有 200 套隨時可用的貼圖包。當您新增更多時，未使用的貼圖包會被封存。";
+"InstalledStickers.PacksTitle" = "貼圖包";
+"InstalledStickers.Descrpiption" = "使用 @stickers 機器人建立自己的貼圖包。\n\n點擊一張貼圖以瀏覽，並新增整套貼圖包。";
+"InstalledStickers.Archived" = "封存貼圖";
+"InstalledStickers.LoopAnimated" = "循環播放動態貼圖";
+"InstalledStickers.Tranding" = "熱門貼圖";
+"StickerSet.Remove" = "移除";
+"InstalledStickers.Remove.Description" = "此貼圖包將被封存。您可以隨時從「已封存的貼圖」區快速恢復它。";
+"InstalledStickers.Remove.Delete" = "刪除";
+"Alert.UserDoesntExists" = "抱歉，這個用戶似乎並不存在。";
+"Alert.PrivateChannel.AccessError" = "很不幸地，您無法存取這則訊息。您並非訊息所在聊天室的成員。";
+
+"InAppLinks.Confirm.OpenExternalNew" = "您想要開啟「%@」嗎？";
+
+"InAppLinks.Confirm.OpenExternal.Header" = "開啟連結";
+"InAppLinks.Confirm.OpenExternal.OK" = "開啟";
+
+"Login.Header.Code" = "輸入驗證碼";
+"Login.Header.Password" = "輸入密碼";
+"Login.Header.SignUp" = "註冊";
+
+"Contacts.AddContact" = "新增聯絡人";
+"Contacts.FirstName.Placeholder" = "名字";
+"Contacts.LastName.Placeholder" = "姓氏";
+"Contacts.PhoneNumber.Placeholder" = "電話號碼";
+"Contacts.NotRegistredTitle" = "不是 Telegram 用戶";
+"Contacts.NotRegistredDescription" = "此人尚未在 Telegram 上註冊。\n\n一旦註冊，您將能夠傳送 Telegram 訊息給對方。";
+
+"Contacts.PhoneNumber.Invalid" = "電話號碼欄位不能空白";
+"Contacts.PhoneNumber.NotRegistred" = "擁有此電話號碼的人尚未在 Telegram 上註冊。";
+
+
+"DataAndStorage.StorageUsage" = "儲存空間用量";
+"DataAndStorage.NetworkUsage" = "網路用量";
+
+
+"DataAndStorage.AutomaticDownload.GroupsChannels" = "群組和頻道";
+
+"DataAndStorage.AutomaticPhotoDownload.Header" = "自動下載照片";
+"DataAndStorage.AutomaticAudioDownload.Header" = "自動下載音訊";
+"DataAndStorage.AutomaticVideoDownload.Header" = "自動下載影片";
+
+
+
+"Telegram.StorageUsageController" = "儲存空間用量";
+"StorageUsage.KeepMedia" = "保留媒體";
+
+"StorageUsage.Limit.Header" = "最大快取大小";
+"StorageUsage.Limit.Desc" = "如果您的快取大小超出此限制，則最舊的媒體將被刪除。";
+
+"StorageUsage.Limit.NoLimit" = "無限制";
+
+
+"StorageUsage.KeepMedia.Description1" = "您在此期間**未存取的**雲端聊天其聊天室內的照片、影片和其他檔案將從此裝置中刪除，以節省磁碟空間。";
+"StorageUsage.KeepMedia.Description" = "雲端聊天中的照片、影片和其他檔案在這段時間若**未被存取**，就會從裝置中移除以節省儲存空間。\n\n所有媒體仍會保留在 Telegram 雲端中，而當您需要時，可重新下載。";
+"StorageUsage.ChatsHeader" = "聊天";
+"StorageUsage.Calculating" = "正在計算目前快取的大小...";
+
+"StorageUsage.CleaningProcess" = "透過清除本機快取來釋放空間…";
+
+"App.MaxFileSize1" = "最大檔案大小為 2 GB";
+"Message.Context.SaveGif" = "新增 GIF";
+"Message.Context.RemoveGif" = "移除GIF";
+"Context.RecentGifRemove" = "移除";
+"Sidebar.Avalability" = "當您開啟任何聊天時，您的貼圖、GIF和表情符號將顯示在此面板中。";
+"Sidebar.Peer.Restricted" = "側欄無法在此聊天中使用";
+"Sidebar.Hide" = "隱藏面板";
+
+"PrivacySettingsController.Header" = "最後上線 & 在線上";
+"PrivacySettingsController.Everbody" = "每個人";
+"PrivacySettingsController.MyContacts" = "我的聯絡人";
+"PrivacySettingsController.Nobody" = "沒有人";
+"PrivacySettingsController.NeverShare" = "永不與誰分享";
+"PrivacySettingsController.AlwaysShare" = "總是與誰分享";
+"PrivacySettingsController.NeverShareWith" = "永不與誰分享";
+"PrivacySettingsController.AlwaysShareWith" = "總是與誰分享";
+"PrivacySettingsController.NeverAllow" = "永不允許";
+"PrivacySettingsController.AlwaysAllow" = "總是允許";
+
+"PrivacySettingsController.P2p.Always" = "總是";
+"PrivacySettingsController.P2p.Contacts" = "我的聯絡人";
+"PrivacySettingsController.P2p.Never" = "永不";
+"PrivacySettingsController.P2p.Header" = "點對點傳輸";
+"PrivacySettingsController.P2p.Desc" = "停用點對點傳輸 ( peer-to-peer ) 將改為透過 Telegram 伺服器傳遞所有通話，可避免洩露您的 IP 位址，但可能會降低語音及視訊品質。";
+
+
+"PrivacySettingsController.ProfilePhoto.WhoCanSeeMyPhoto" = "誰可以看見我的大頭貼？";
+"PrivacySettingsController.ProfilePhoto.CustomHelp" = "您可以精確地限制哪些人可以看到您的大頭貼。";
+"PrivacySettingsController.ProfilePhoto.AlwaysShareWith.Title" = "總是與誰分享";
+"PrivacySettingsController.ProfilePhoto.NeverShareWith.Title" = "永不與誰分享";
+
+"PrivacySettingsController.Forwards.WhoCanForward" = "誰可以在轉傳我的訊息時附加我的帳號連結？";
+"PrivacySettingsController.Forwards.CustomHelp" = "您可以選擇所傳的訊息被其他用戶轉傳時，是否可以連結回您的帳號。";
+"PrivacySettingsController.Forwards.AlwaysAllow.Title" = "總是允許";
+"PrivacySettingsController.Forwards.NeverAllow.Title" = "永不允許";
+
+
+"PrivacySettingsController.PhoneNumber.WhoCanSeePhoneNumber" = "誰可以看見我的電話號碼？";
+"PrivacySettingsController.PhoneNumber.CustomHelp" = "將您的號碼加入到手機聯絡資訊的用戶也將在 Telegram 上看到它。";
+"PrivacySettingsController.PhoneNumber.AlwaysAllow.Title" = "總是與誰分享";
+"PrivacySettingsController.PhoneNumber.NeverAllow.Title" = "永不分享";
+
+"PrivacySettingsController.UserCount_countable" = "%d";
+
+
+
+
+
+"PrivacySettingsController.UserCount_other" = "%d 個用戶";
+
+"PrivacySettingsController.AddUsers" = "新增用戶";
+
+"PrivacySettingsController.LastSeenHeader" = "誰可以看見我的最後上線時間？";
+"PrivacySettingsController.LastSeenDescription" = "您不分享您最後上線時間及在線上狀態的對象，他們的您也無法看見。取而代之的是，大概的時間（不久前，一週內，一個月內）。";
+
+"PrivacySettingsController.GroupHeader" = "誰可以將我加入到群組和頻道？";
+"PrivacySettingsController.GroupDescription" = "您可以精確地限制誰可以將您加入到群組和頻道。";
+
+"PrivacySettingsController.PhoneCallHeader" = "誰可以打電話給我";
+"PrivacySettingsController.PhoneCallDescription" = "您可以精確地限制誰可以打電話給您。";
+"PrivacySettingsController.PeerInfo" = "您可以將個別用戶或整個群組新增為例外，以覆蓋上面的設定。";
+
+"Chat.Call.Outgoing" = "撥出電話";
+"Chat.Call.Incoming" = "撥入電話";
+
+"Chat.VideoCall.Outgoing" = "撥出視訊通話";
+"Chat.VideoCall.Incoming" = "撥入視訊通話";
+
+"CallHeader.EndCall" = "結束通話";
+"Call.ParticipantVersionOutdatedError" = "%@ 的應用程式不支援通話。 他需要更新應用程式，然後您才能與他通話。";
+"Call.UndefinedError" = "未定義的錯誤，請稍後再試。";
+"Call.PrivacyErrorMessage" = "抱歉，由於 %@ 的隱私設定，您無法打電話給他（她）。";
+
+"Call.StatusRequesting" = "聯絡中⋯";
+"Call.StatusRinging" = "撥號中⋯";
+"Call.StatusConnecting" = "連線中…";
+"Call.StatusEnded" = "通話結束";
+"Call.StatusFailed" = "通話失敗";
+"Call.StatusBusy" = "忙線";
+"Call.StatusCalling" = "正在撥打電話給您…";
+"Call.StatusCallingAccount" = "正在撥打電話給 → %@…";
+
+
+
+"Call.Recent.Outgoing" = "撥出";
+"Call.Recent.Incoming" = "撥入";
+"Call.Recent.Missed" = "未接來電";
+
+
+"Call.ShortSeconds_countable" = "%d";
+
+
+
+
+
+"Call.ShortSeconds_other" = "%d 秒";
+
+"Call.ShortMinutes_countable" = "%d";
+
+
+
+
+
+"Call.ShortMinutes_other" = "%d 分";
+
+
+"Telegram.LayoutRecentCallsViewController" = "最近的通話";
+"RecentCalls.Empty" = "您最近的通話會顯示在這裡";
+
+
+"RecentCalls.DeleteHeader" = "刪除";
+"RecentCalls.DeleteCalls" = "您確定要刪除這個通話的記錄嗎？";
+"RecentCalls.Delete" = "刪除";
+"RecentCalls.DeleteForMeAnd" = "為我和 %@ 刪除";
+
+
+"Call.Confirm.Discard.Voice.Header" = "視訊聊天進行中";
+"Call.Confirm.Discard.Voice.ToVoice.Text" = "退出 \"%1$@\" 中的視訊聊天，並在  \"%2$@\"  發起新的？";
+"Call.Confirm.Discard.Voice.ToCall.Text" = "退出在「%1$@」的視訊聊天，並且與「%2$@」進行通話？";
+
+"Call.Confirm.Discard.Call.Header" = "通話進行中";
+"Call.Confirm.Discard.Call.ToVoice.Text" = "結束與「%1$@」的通話，並在「%2$@」中發起視訊聊天？";
+"Call.Confirm.Discard.Call.ToCall.Text" = "結束與「%1$@」的通話，並在「%2$@」中發起視訊聊天？";
+
+
+"Call.RatingModal.Placeholder" = "留下評論…";
+"Call.RatingModal.NotNow" = "現在不要";
+
+"Call.RatingModal.Text" = "請對您的通話品質進行評分";
+
+"GeneralSettings.CallSettings.Header" = "通話設定";
+"GeneralSettings.CallSettings.Text" = "通話設定";
+
+"CallFeedback.Title" = "通話品質意見回饋";
+"CallFeedback.WhatWentWrong" = "出了什麼問題？";
+"CallFeedback.ReasonEcho" = "我聽到自己的聲音";
+"CallFeedback.ReasonNoise" = "我聽到背景雜音";
+"CallFeedback.ReasonInterruption" = "對方聲音斷斷續續的";
+"CallFeedback.ReasonDistortedSpeech" = "講話聲音被扭曲了";
+"CallFeedback.ReasonSilentLocal" = "我無法聽到對方的聲音";
+"CallFeedback.ReasonSilentRemote" = "對方無法聽到我的聲音";
+"CallFeedback.ReasonDropped" = "通話意外地結束";
+"CallFeedback.VideoReasonDistorted" = "視訊被扭曲了";
+"CallFeedback.VideoReasonLowQuality" = "視訊被像素化";
+"CallFeedback.AddComment" = "可在這裡留言";
+"CallFeedback.IncludeLogs" = "包括技術資訊";
+"CallFeedback.IncludeLogsInfo" = "這不會洩漏您的對話內容，但可以幫助我們更快地解決此問題。";
+"CallFeedback.Send" = "傳送";
+"CallFeedback.Success" = "感謝您的\n意見回饋";
+
+
+
+"QuickSwitcher.Recently" = "最近";
+"QuickSwitcher.Popular" = "常用";
+"QuickSwitcher.Description" = "按 **Tab** 或 **↑ ↓** 以移動，按 **⮐** 以選取，按 **Esc** 以退出";
+
+"Chat.Context.Edit1" = "編輯";
+"Chat.Context.EditHelp" = "點擊日期";
+"Chat.Context.EnableNotifications" = "關閉通知";
+"Chat.Context.DisableNotifications" = "開啟通知";
+"Chat.Context.ClearHistory" = "清除聊天紀錄";
+"Chat.Context.Info" = "資訊";
+"Chat.Context.FeedInfo" = "頻道資訊";
+"Chat.Context.SharedMedia" = "共享的媒體";
+
+"Chat.Context.AutoDelete" = "自動刪除訊息";
+
+"Chat.Context.CreateGroup" = "建立群組";
+
+"Chat.Context.Archive" = "封存";
+"Chat.Context.Unarchive" = "取消封存";
+
+"Chat.Context.BlockUser" = "封鎖用戶";
+"Chat.Context.BlockGroup" = "封鎖群組";
+
+"Chat.Context.BlockUser.Header" = "封鎖用戶";
+"Chat.Context.BlockUser.Info" = "您想封鎖來自 %@ 的訊息嗎？";
+"Chat.Context.BlockUser.Third" = "檢舉垃圾訊息";
+"Chat.Context.BlockUser.OK" = "封鎖";
+"Chat.Context.BlockUser.Cancel" = "取消";
+
+"Chat.Context.BlockGroup.Header" = "封鎖";
+"Chat.Context.BlockGroup.Info" = "您想封鎖來自 %@ 的訊息嗎？";
+"Chat.Context.BlockGroup.Third" = "檢舉垃圾訊息";
+"Chat.Context.BlockGroup.OK" = "封鎖";
+"Chat.Context.BlockGroup.Cancel" = "取消";
+
+"Payments.Unsupported" = "很抱歉，Telegram Mac 目前還不支援付款。請使用我們的一個行動應用程式來執行此操作。";
+
+"Chat.Service.PaymentSent1" = "您剛剛成功轉帳 **%1$@** 給 **%2$@** 為了 **%3$@**";
+"Chat.List.Service.PaymentSent" = "付款：%@";
+
+"Telegram.LanguageViewController" = "語言";
+
+
+"1Xt-HY-uBw.title" = "Telegram";
+"2oI-Rn-ZJC.title" = "轉換";
+
+"4J7-dP-txa.title" = "進入全螢幕";
+"4sb-4s-VLi.title" = "結束 Telegram";
+"5QF-Oa-p0T.title" = "編輯";
+
+"aMa-rb-kjV.title" = "全域搜尋";
+
+"5kV-Vb-QxS.title" = "關於 Telegram";
+"6dh-zS-Vam.title" = "重做";
+"78Y-hA-62v.title" = "自動修正拼寫";
+"9ic-FL-obx.title" = "替換";
+"9yt-4B-nSM.title" = "聰明複製/貼上";
+"BOF-NM-1cW.title" = "偏好設定⋯";
+"Cag-YX-WT6.title" = "隱藏 Telegram";
+"Dv1-io-Yv7.title" = "拼寫和語法";
+
+"H8h-7b-M4v.title" = "檢視";
+
+
+"HFQ-gK-NFA.title" = "文字替換";
+"HFo-cy-zxI.title" = "顯示拼寫和語法";
+"HyV-fh-RgO.title" = "檢視";
+"Kd2-mp-pUS.title" = "顯示全部";
+"LE2-aR-0XJ.title" = "將所有帶到前面";
+"OY7-WF-poV.title" = "最小化";
+"Olw-nP-bQN.title" = "隱藏";
+
+"R4o-n2-Eq4.title" = "縮放";
+"Ruw-6m-B2m.title" = "全選";
+
+"UEZ-Bs-lqG.title" = "大寫";
+"Vdr-fp-XzO.title" = "隱藏其他";
+"W48-6f-4Dl.title" = "編輯";
+"WeT-3V-zwk.title" = "貼上和匹配樣式";
+"aUF-d1-5bR.title" = "視窗";
+
+
+"c8a-y6-VQd.title" = "轉換";
+"cwL-P1-jid.title" = "聰明連結";
+"d9M-CD-aMd.title" = "變小寫";
+"dRJ-4n-Yzg.title" = "復原";
+"gVA-U4-sdL.title" = "貼上";
+"hQb-2v-fYv.title" = "聰明引號";
+"hz2-CU-CR7.title" = "立即檢查文件";
+"mK6-2p-4JG.title" = "檢查語法與拼寫";
+"pa3-QI-u2k.title" = "刪除";
+"rbD-Rh-wIN.title" = "在輸入時檢查拼寫";
+"rgM-f4-ycn.title" = "聰明破折號";
+"tRr-pd-1PS.title" = "數據檢測器";
+"uQy-DD-JDr.title" = "Telegram";
+"uRl-iY-unG.title" = "剪下";
+"vmV-6d-7jI.title" = "變大寫";
+"x3v-GG-iWU.title" = "複製";
+"1000.title" = "檢查更新";
+"z6F-FW-3nz.title" = "顯示替換";
+"sZh-ct-GQS.title" = "快速搜尋";
+
+"Login.ContinueOnLanguage" = "改為繁體中文介面";
+"Date.Today" = "今天";
+
+/* This key for which language this file, for example: Italian -> Italiano, Russian -> Русский */
+"AccountSettings.CurrentLanguage" = "繁體中文";
+"Suggest.Localization.Header" = "選擇您的語言";
+"Suggest.Localization.Other" = "其他";
+
+"PrivacySettings.PeerSelect.AddNew" = "新增";
+"PrivacySettings.PeerSelect.AddUserOrGroup" = "新增用戶或群組";
+
+"Channel.EditAdmin.Permission.ChangeInfo" = "變更頻道資訊";
+"Group.EditAdmin.Permission.ChangeInfo" = "變更群組資訊";
+"Channel.EditAdmin.Permission.DeleteMessages" = "刪除訊息";
+"Channel.EditAdmin.Permission.BanUsers" = "封鎖用戶";
+"Channel.EditAdmin.Permission.PinMessages" = "置頂訊息";
+"Channel.EditAdmin.Permission.AddNewAdmins" = "新增管理員";
+"Channel.EditAdmin.Permission.PostMessages" = "發布訊息";
+"Channel.EditAdmin.Permission.EditMessages" = "編輯訊息";
+"Channel.EditAdmin.PermissionInviteSubscribers" = "新增訂閱者";
+"Channel.EditAdmin.PermissionInviteMembers" = "新增成員";
+"Channel.EditAdmin.PermissionAnonymous" = "保持匿名";
+"Channel.EditAdmin.ManageCalls" = "管理視訊聊天";
+"Channel.EditAdmin.PermissionInviteViaLink" = "透過連結邀請用戶";
+
+
+"Channel.Persmission.Denied.SendMessages.Until" = "這個群組的管理員已禁止您在這裡傳送訊息，直到 %@。";
+"Channel.Persmission.Denied.SendMessages.Forever" = "這個群組的管理員已禁止您在這裡傳送訊息。";
+"Channel.Persmission.Denied.SendMessages.DefaultRestrictedText" = "此群組中不允許傳送訊息。";
+
+"Channel.Persmission.Denied.SendMedia.Until" = "這個群組的管理員已禁止您在這裡傳送媒體，直到 %@。";
+"Channel.Persmission.Denied.SendMedia.Forever" = "這個群組的管理員已禁止您在這裡傳送媒體。";
+"Channel.Persmission.Denied.SendMedia.DefaultRestrictedText" = "此群組中不允許傳送媒體。";
+
+"Channel.Persmission.Denied.SendStickers.Until" = "這個群組的管理員已禁止您在這裡傳送貼圖，直到 %@。";
+"Channel.Persmission.Denied.SendStickers.Forever" = "這個群組的管理員已禁止您在這裡傳送貼圖。";
+"Channel.Persmission.Denied.SendStickers.DefaultRestrictedText" = "此群組中不允許傳送貼圖。";
+
+"Channel.Persmission.Denied.SendGifs.Until" = "這個群組的管理員已禁止您在這裡傳送GIF，直到 %@。";
+"Channel.Persmission.Denied.SendGifs.Forever" = "這個群組的管理員已禁止您在這裡傳送GIF。";
+"Channel.Persmission.Denied.SendGifs.DefaultRestrictedText" = "此群組中不允許傳送GIF。";
+
+"Channel.Persmission.Denied.SendPoll.Until" = "這個群組的管理員已禁止您在這裡發起或轉傳投票活動，直到 %@。";
+"Channel.Persmission.Denied.SendPoll.Forever" = "這個群組的管理員已禁止您在這裡發起或轉傳投票活動。";
+"Channel.Persmission.Denied.SendPoll.DefaultRestrictedText" = "此群組中不允許轉傳或發起投票活動。";
+
+
+"Channel.Persmission.Denied.SendInline.Until" = "群組管理員已限制您傳送內聯機器人內容，直到 %@";
+"Channel.Persmission.Denied.SendInline.Forever" = "這個群組的管理員已禁止您在這裡傳送內聯機器人的內容。";
+"Channel.Persmission.Denied.SendInline.DefaultRestrictedText" = "此群組中不允許傳送內聯機器人內容。";
+
+
+"Channel.Admin.Dismiss" = "解除管理員身分";
+"Channel.Admin.AdminAccess" = "此管理員將能夠加入具有相同（或較低）權限的新管理員。";
+"Channel.Admin.AdminRestricted" = "此管理員將不能新增管理員。";
+
+"Channel.Admin.TransferOwnership.Group" = "轉讓群組擁有權";
+"Channel.Admin.TransferOwnership.Channel" = "轉讓頻道擁有權";
+
+"Channel.Admin.TransferOwnership.Password.Desc" = "請輸入您的兩步驟驗證密碼以完成轉讓。";
+"Channel.Admin.TransferOwnership.Password.Title" = "兩步驟驗證";
+
+"Channel.Admin.TransferOwnership.Confirm.Group.Title" = "轉讓群組擁有權";
+"Channel.Admin.TransferOwnership.Confirm.Group.Text" = "這將會把 %@ 的完整擁有權轉讓給 %@。\n\n您將不再被視為群組的創立者。新的擁有者可以自由地移除您任何管理權限，甚至將您封鎖。";
+"Channel.Admin.TransferOwnership.Confirm.Channel.Title" = "轉讓頻道擁有權";
+"Channel.Admin.TransferOwnership.Confirm.Channel.Text" = "這將會把 %@ 的完整擁有權轉讓給 %@。\n\n您將不再被視為頻道的創立者。新的擁有者可以自由地移除您任何管理的權限，甚至將您封鎖。";
+"Channel.Admin.TransferOwnership.Confirm.OK" = "變更擁有者";
+
+
+
+"Channel.Admin.CantEdit" = "您無權編輯此管理員的權限。";
+
+"Channel.Admin.WhatCanAdminDo" = "這個管理員可以做什麼？";
+
+"Channel.EventLog.What" = "這是什麼？";
+"Channel.EventLog.Alert.Header" = "什麼是事件日誌？";
+"Channel.EventLog.Alert.Info" = "這是成員和管理員在過去48小時內所有操作的紀錄。";
+
+
+"Group.EventLog.Service.TitleUpdated" = "%@ 編輯了群組標題：";
+"Group.EventLog.Service.LinkUpdated" = "%@ 編輯了群組連結：";
+"Group.EventLog.Service.AboutUpdated" = "%@ 編輯了群組簡介：";
+
+"Channel.EventLog.Service.TitleUpdated" = "%@ 編輯了頻道標題：";
+"Channel.EventLog.Service.LinkUpdated" = "%@ 編輯了頻道連結：";
+"Channel.EventLog.Service.AboutUpdated" = "%@ 編輯了頻道簡介：";
+
+"Group.EventLog.Service.LinkRemoved" = "%@ 移除了群組連結：";
+"Group.EventLog.Service.AboutRemoved" = "%@ 移除了群組簡介：";
+"Channel.EventLog.Service.LinkRemoved" = "%@ 移除了頻道連結：";
+"Channel.EventLog.Service.AboutRemoved" = "%@ 移除了頻道簡介：";
+
+
+"Channel.EventLog.MessageRankName" = "變更了 %@ 的自訂頭銜：%@";
+
+"Channel.EventLog.Service.DisabledSlowMode" = "%@ 停用了慢速模式";
+
+"Channel.EventLog.Service.SetSlowMode1" = "%1$@ 將慢速模式時間設為 %2$@";
+
+"Channel.EventLog.Service.PlusTitle" = "+ 頭銜：%@";
+"Channel.EventLog.Service.MinusTitle" = "- 頭銜";
+
+"Channel.EventLog.MessageTransferedName1" = "轉讓了擁有權給 %1$@ %2$@";
+"Channel.EventLog.MessageTransfered" = "轉讓了擁有權";
+
+"Channel.AdminLog.CanManageCalls" = "管理視訊聊天";
+
+"EventLog.Service.PreviousTitle" = "原本的標題";
+"EventLog.Service.PreviousLink" = "原本的連結";
+"EventLog.Service.PreviousDesc" = "原本的簡介";
+
+
+"EventLog.Service.Demote.SendMessages" = "傳送訊息";
+"EventLog.Service.Demote.SendMedia" = "傳送媒體";
+"EventLog.Service.Demote.SendStickers" = "傳送貼圖";
+"EventLog.Service.Demote.ChangeInfo" = "變更資訊";
+"EventLog.Service.Demote.SendGifs" = "傳送GIF";
+"EventLog.Service.Demote.PostPolls" = "發起或轉傳投票活動";
+"EventLog.Service.Demote.AddMembers" = "新增成員";
+"EventLog.Service.Demote.PinMessages" = "置頂訊息";
+"EventLog.Service.Demote.EmbedLinks" = "嵌入連結";
+"EventLog.Service.Demote.SendInline" = "傳送內聯訊息";
+
+"EventLog.Service.Promote.ChangeInfo" = "變更資訊";
+"EventLog.Service.Promote.DeleteMessages" = "刪除訊息";
+"EventLog.Service.Promote.PostMessages" = "發布訊息";
+"EventLog.Service.Promote.AddUsers" = "新增用戶";
+"EventLog.Service.Promote.InviteViaLink" = "透過連結邀請用戶";
+"EventLog.Service.Promote.PinMessages" = "置頂訊息";
+"EventLog.Service.Promote.AddNewAdmins" = "新增管理員";
+"EventLog.Service.Promote.BanUsers" = "封鎖用戶";
+"EventLog.Service.Promote.EditMessages" = "編輯訊息";
+
+"EventLog.Service.Promote.RemainAnonymous" = "保持匿名";
+
+
+"EventLog.Service.ChangedDefaultsRights" = "變更了預設權限";
+
+
+"EventLog.Service.Promoted.Changed1" = "變更了 %1$@ %2$@ 的權限：";
+"EventLog.Service.Promoted1" = "提昇了 %1$@ %2$@ 的權限：";
+
+"EventLog.Service.Demoted1" = "無限期地限制了 %1$@ %2$@";
+"EventLog.Service.Demoted.Until1" = "限制了 %1$@ %2$@ ，直到 %3$@";
+"EventLog.Service.Demoted.Changed1" = "無限期地變更了對 %1$@ %2$@ 的限制";
+"EventLog.Service.Demoted.Changed.Until1" = "變更了對 %1$@ %2$@ 的限制，直到 %3$@";
+"EventLog.Service.Banned1" = "已封鎖 %1$@ %2$@";
+
+"EventLog.Service.DeletedMessage" = "%@ 刪除了訊息：";
+"EventLog.Service.EditedMessage" = "%@ 編輯了訊息：";
+"EventLog.Service.UpdatePinned" = "%@ 置頂了訊息：";
+"EventLog.Service.RemovePinned" = "%@ 取消了置頂訊息：";
+"EventLog.Service.ChangedStickerSet" = "%@ 變更了群組貼圖包";
+"EventLog.Service.RemovedStickerSet" = "%@ 移除了群組貼圖包";
+
+"EventLog.Service.EditedCaption" = "%@ 編輯了說明文字：";
+"EventLog.Service.EditedMedia" = "%@ 編輯了媒體：";
+
+
+
+"Group.EventLog.Service.EnableInvites" = "%@ 啟用了群組邀請";
+"Group.EventLog.Service.DisableInvites" = "%@ 停用了群組邀請";
+"Channel.EventLog.Service.EnableSignatures" = "%@ 啟用了訊息簽名";
+"Channel.EventLog.Service.DisableSignatures" = "%@ 停用了訊息簽名";
+
+
+"Group.EventLog.Service.PhotoUpdated" = "%@ 更新了群組大頭貼";
+"Group.EventLog.Service.PhotoRemoved" = "%@ 移除了群組大頭貼";
+"Channel.EventLog.Service.PhotoUpdated" = "%@ 更新了此頻道大頭貼";
+"Channel.EventLog.Service.PhotoRemoved" = "%@ 移除了頻道大頭貼";
+
+"Group.EventLog.Service.UpdateLeft" = "%@ 退出了群組";
+"Channel.EventLog.Service.UpdateLeft" = "%@ 退出了頻道";
+
+"Group.EventLog.Service.UpdateJoin" = "%@ 加入了此群組";
+"Channel.EventLog.Service.UpdateJoin" = "%@ 加入了頻道";
+
+
+"Telegram.ChannelEventLogController" = "所有操作";
+
+"ChannelEventFilter.NewRestrictions" = "新增限制";
+"ChannelEventFilter.NewAdmins" = "管理員權限";
+"ChannelEventFilter.NewMembers" = "新增成員";
+"ChannelEventFilter.GroupInfo" = "編輯群組資訊";
+"ChannelEventFilter.ChannelInfo" = "頻道資訊";
+"ChannelEventFilter.DeletedMessages" = "刪除的訊息";
+"ChannelEventFilter.EditedMessages" = "編輯的訊息";
+"ChannelEventFilter.PinnedMessages" = "置頂的訊息";
+"ChannelEventFilter.LeavingMembers" = "成員退出";
+"ChannelEventFilter.VoiceChats" = "視訊聊天";
+"ChannelEventFilter.Invites" = "邀請連結";
+
+"Group.EventLog.EmptyText" = "**還沒有事件**\n\n48小時內群組的管理員及成員沒有任何操作。";
+"Channel.EventLog.EmptyText" = "**這裡尚無任何操作**\n\n48小時內管理員沒有任何操作。";
+"Channel.EventLog.EmptySearch" = "**找不到記錄**\n\n沒有找到符合您查詢的操作。";
+
+"ChannelBlacklist.Restricted" = "受限名單";
+"ChannelBlacklist.Blocked" = "封鎖名單";
+
+"Channel.Blacklist.RemoveUser" = "移除用戶";
+"Channel.Blacklist.Context.AddToGroup" = "新增到群組";
+"Channel.Blacklist.Context.Remove" = "移除";
+
+"Channel.Blacklist.DescChannel" = "被管理員從頻道中移除的用戶無法透過邀請連結重新加入。";
+"Channel.Blacklist.DescGroup" = "被管理員從群組中移除的用戶無法透過邀請連結重新加入。";
+
+
+"Channel.Blacklist.RestrictedBy" = "被 %@ 限制";
+"Channel.Blacklist.BlockedBy" = "被 %@ 封鎖";
+"Channel.Blacklist.DemoteAdminError" = "抱歉，您不能封鎖此用戶，因為他是此群組中的管理員，您不能將他降級。";
+
+
+"Channel.UserRestriction" = "用戶限制";
+"Channel.BlockUser.CanReadMessages" = "可以閱讀訊息";
+"Channel.BlockUser.CanSendMessages" = "傳送訊息";
+"Channel.BlockUser.CanSendMedia" = "傳送媒體";
+"Channel.BlockUser.CanSendStickers" = "傳送貼圖和GIF";
+"Channel.BlockUser.CanEmbedLinks" = "嵌入連結";
+"Channel.BlockUser.BlockFor" = "封鎖";
+"Channel.Blacklist.SelectNewUserTitle" = "成員";
+
+"Channel.Exception.DisabledOption.Group" = "在群組權限中，已設定所有群組成員都不能做這件事。";
+"Channel.Exception.DisabledOption.Channel" = "在頻道權限中，已設定所有群組成員都不能做這件事。";
+
+"Channel.Admins.PromotedBy" = "由 %@ 任命";
+"Channel.Admins.AddAdminError" = "抱歉，您無法將此用戶設為管理員。";
+
+"Channel.Admins.Promote.BannedAdminError" = "抱歉，您不能將此用戶設為管理員，因為該用戶在被移除的用戶名單中，而您無法將其解除封鎖。";
+"Channel.Admins.Promote.UnmemberAdminError" = "抱歉，您不能將此用戶設為管理員，因為他不是此群組的成員，且您不被允許邀請他。";
+"Channel.BanForever" = "永遠";
+
+"Channel.EventFilter.EventsHeader" = "事件";
+"Channel.EventFilter.AdminsHeader" = "管理員";
+
+"Channel.SelectPeers.Contacts" = "聯絡人";
+"Channel.SelectPeers.Global" = "全域";
+
+"Supergroup.DeleteRestriction.Title" = "管理訊息";
+"Supergroup.DeleteRestriction.DeleteMessage" = "刪除訊息";
+"Supergroup.DeleteRestriction.BanUser" = "封鎖用戶";
+"Supergroup.DeleteRestriction.ReportSpam" = "檢舉垃圾訊息";
+"Supergroup.DeleteRestriction.DeleteAllMessages" = "刪除所有訊息";
+"ChannelAdmins.RecentActions" = "最近的操作";
+
+
+"Telegram.ProxySettingsViewController" = "Proxy";
+"ProxySettings.ConnectionHeader" = "連線";
+"ProxySettings.CredentialsHeader" = "證明 (選填)";
+"ProxySettings.Disabled" = "已停用";
+"ProxySettings.Socks5" = "SOCKS5";
+"ProxySettings.MTP" = "MTPROTO";
+"ProxySettings.Type" = "Proxy 類型";
+"ProxySettings.Server" = "伺服器";
+"ProxySettings.Port" = "連接埠";
+"ProxySettings.Username" = "帳號";
+"ProxySettings.Password" = "密碼";
+"ProxySettings.Save" = "儲存";
+
+"ProxySettings.QR.Text" = "您或您的朋友可以透過手機或程式內的相機掃描此 QR code 來新增此 Proxy。";
+
+
+"Channel.EventLog.OriginalMessage" = "原始訊息";
+"Channel.EventLog.Empty" = "空的";
+"Channel.Admin.CantEditRights" = "您無法編輯此管理員的權限。";
+"Channel.Blacklist.Unban" = "解除封鎖";
+
+"ConnectingStatus.DisableProxy" = "點擊此處可停用 Proxy…";
+"Proxy.ForceDisable" = "您確定要停用 Proxy %@？";
+"Proxy.ForceEnable.Header1" = "您想要新增這個 Proxy 嗎？";
+"Proxy.ForceEnable.OK" = "新增 Proxy";
+"Proxy.ForceEnable.Enable" = "啟用 Proxy";
+"Proxy.ForceEnable.MTPDesc" = "此 Proxy 可能會在您的聊天列表中顯示贊助商的頻道。這不會洩露任何您的 Telegram 通訊內容。";
+"Proxy.ForceEnable.Connect" = "連線";
+
+"Proxy.ForceEnable.Text.IP" = "伺服器：%@";
+"Proxy.ForceEnable.Text.Port" = "連接埠：%d";
+"Proxy.ForceEnable.Text.Username" = "帳號：%@";
+"Proxy.ForceEnable.Text.Password" = "密碼：%@";
+"Proxy.ForceEnable.Text.Secret" = "金鑰：%@";
+"Proxy.ForceEnable.Text" = "您可以稍候到「設定」>「隱私和安全」中變更 Proxy 伺服器。";
+"ProxySettings.Share" = "與朋友分享此連結，以避開您所在國家的審查制度";
+"ProxySettings.ExportLink" = "從剪貼簿匯出連結";
+"ProxySettings.CopyLink" = "分享 Proxy 連結";
+
+"ProxySettings.IncorrectSecret" = "不正確的金鑰。請再試一次。";
+
+
+"ProxySettings.ProxyNotFound" = "Proxy 設定在剪貼簿中找不到。";
+"ProxySettings.ExportDescription" = "如果您的剪貼簿包含 socks5-連結 (**t.me/socks?server=127.0.0.1&port=80**) 它將立即被應用";
+"Confirm.AddBotToGroup" = "將機器人加入到「%@」？";
+
+"AccountSettings.Theme" = "外觀";
+"Telegram.AppearanceViewController" = "外觀";
+"Telegram.SelectPeersController" = "選取用戶";
+"GeneralSettings.DarkMode" = "夜間模式";
+"GeneralSettings.DarkMode.Description" = "夜間和黑色桌面的配色方案";
+"GeneralSettings.Font.Description" = "使用大字體的訊息";
+
+"GeneralSettings.OpenLatestChatOnLaunch" = "啟動程式時，開啟上次的聊天";
+"GeneralSettings.AcceptSecretChats" = "接受秘密聊天";
+
+
+"MessageContext.CopyMessageLink1" = "複製訊息連結";
+"Context.ViewStickerSet" = "檢視貼圖包";
+
+"Storage.Clear.Photos" = "照片";
+"Storage.Clear.Videos" = "影片";
+"Storage.Clear.Audio" = "音訊";
+"Storage.Clear.Documents" = "文件";
+"Storage.Clear" = "清除 %@";
+"AccountSettings.Bio" = "個人簡介";
+
+"Telegram.BioViewController" = "個人簡介";
+
+"Bio.Placeholder" = "關於您的幾句話";
+"Bio.Description" = "您可以加入幾行關於您自己的描述。\n任何打開您個人資訊頁的人會看到這段文字。";
+"Bio.Save" = "儲存";
+"Bio.Header" = "個人簡介";
+
+"ServiceMessage.ExpiredPhoto" = "照片已過期";
+"ServiceMessage.ExpiredFile" = "檔案已過期";
+"ServiceMessage.ExpiredVideo" = "影片已過期";
+
+"ServiceMessage.DesturctingPhoto" = "%@ 傳送了一張閱後即焚照片給您。請在您的手機上查看。";
+"ServiceMessage.DesturctingPhoto.You" = "%@ 傳送了一張自毀的照片。";
+
+"ServiceMessage.DesturctingVideo" = "%@ 傳送了一個閱後即焚影片給您。請在您的手機上查看。";
+"ServiceMessage.DesturctingVideo.You" = "%@ 傳送了一個自毀的影片。";
+"ChatList.Service.DestructingPhoto" = "閱後即焚照片";
+"ChatList.Service.DestructingVideo" = "自毀的影片";
+
+
+"ShareExtension.Share" = "分享";
+"ShareExtension.Cancel" = "取消";
+"ShareExtension.Search" = "搜尋";
+"ShareExtension.Passcode.Placeholder" = "密碼";
+"ShareExtension.Passcode.Next" = "下一步";
+"ShareExtension.Unauthorized.OK" = "好";
+"ShareExtension.Unauthorized.Description" = "要透過 Telegram 分享，請開啟 Telegram 應用程式並登入。";
+
+"Chat.SearchFrom" = "從：";
+"Chat.SearchCount" = "%d / %d";
+
+"Entertainment.Emoji" = "表情符號";
+"Entertainment.Stickers" = "貼圖";
+"Entertainment.GIF" = "GIF";
+"ShareModal.Search.Placeholder" = "分享到⋯";
+"ShareModal.Search.ForwardPlaceholder" = "轉傳至…";
+"InstantPage.AuthorAndDateTitle" = "由 %1$@ • %2$@";
+"IV.Channel.Join" = "加入";
+
+"Chat.Context.AddFavoriteSticker" = "加入到「最愛」";
+"Chat.Context.RemoveFavoriteSticker" = "從「最愛」中移除";
+"Chat.InstantView" = "即時瀏覽";
+"Context.RemoveFaveSticker" = "移除";
+"Stickers.GroupStickers" = "群組貼圖";
+
+"PeerInfo.SetGroupStickersSet" = "群組貼圖包";
+"Telegram.GroupStickerSetController" = "群組貼圖包";
+"GroupStickers.CreateDescription" = "您可以使用 @stickers 機器人建立您自己的自訂貼圖包。";
+"GroupStickers.ChooseHeader" = "從您的貼圖中選擇";
+"GroupStickers.EmptyHeader" = "沒有找到這樣的貼圖";
+"GroupStickers.EmptyDesc" = "再試一次或從下面的列表中選擇";
+
+"AccountSettings.SetBio" = "設定個人簡介";
+"AccountSettings.SetUsername" = "設定用戶名稱";
+
+"FastSettings.EnableDarkMode" = "啟用夜間模式";
+"FastSettings.DisableDarkMode" = "停用夜間模式";
+"FastSettings.LockTelegram" = "鎖定 Telegram";
+"FastSettings.Mute2Hours" = "關閉通知 2 小時";
+"FastSettings.Unmute" = "開啟通知";
+"FastSettings.SetPasscode" = "設定密碼";
+
+"GeneralSettings.AppearanceSettings" = "外觀設定";
+
+"Chat.Context.CopyBlock" = "複製預先設好格式的區塊";
+
+"Compose.SelectGroupUsers.Placeholder" = "您想邀請哪些人加入？（可搜尋）";
+
+"PeerInfo.PreHistory" = "新成員加入前的舊訊息";
+"PeerInfo.PreHistory.Visible" = "顯示";
+"PeerInfo.PreHistory.Hidden" = "隱藏";
+"Telegram.PreHistorySettingsController" = "聊天紀錄設定";
+
+"PreHistorySettings.Header" = "新成員加入前的舊訊息";
+"PreHistorySettings.Description.Visible" = "新成員可以看到加入前的舊訊息。";
+"PreHistorySettings.Description.Hidden" = "新成員無法看到加入前的舊訊息。";
+"PreHistorySettings.Description.Group.Hidden" = "新成員不會看到超過 100 則加入前的訊息。";
+
+"Chat.AdminBadge" = "管理員";
+"Chat.OwnerBadge" = "擁有者";
+
+"Chat.ChannelBadge" = "頻道";
+
+"ChangePhoneNumber.Intro.Description" = "您可以在此處變更您的 Telegram 所綁定的電話號碼。您的帳號和所有雲端資料 - 訊息、媒體、聯絡人資訊等將被移動到新的號碼。";
+"ChangePhoneNumber.Intro.Alert" = "如果用戶手機聯絡人中有您的新號碼，或者您的隱私設定允許他們看到，則用戶將看到您的新號碼。您可以在「設定」>「隱私和安全」>「電話號碼」中進行修改。";
+"Telegram.PhoneNumberConfirmController" = "變更號碼";
+
+"ChangeNumber.SendData.Error.LimitExceeded" = "您請求過多次驗證碼。請稍後再試。";
+"ChangeNumber.SendData.Error.InvalidPhoneNumber" = "您輸入的電話號碼無效。請輸入正確的國際電話區號及電話號碼。";
+"ChangeNumber.SendData.Error.PhoneNumberOccupied" = "號碼 %@ 已綁定某個 Telegram 帳號。遷移到新號碼之前，請刪除該帳號。";
+"ChangeNumber.SendData.Error.Generic" = "發生了錯誤，請稍後再試一次。";
+
+
+"ChangeNumber.ConfirmCode.Error.Generic" = "發生了錯誤。";
+"ChangeNumber.ConfirmCode.Error.invalidCode" = "驗證碼無效，請再試一次。";
+"ChangeNumber.ConfirmCode.Error.codeExpired" = "驗證碼已過期。";
+"ChangeNumber.ConfirmCode.Error.limitExceeded" = "您輸入無效驗證碼的次數過多，請稍後重試。";
+"ChangeNumber.ConfirmCode.Success" = "您的電話號碼已變更為 %@ 。";
+
+"Messages.Placeholder.Broadcast" = "廣播訊息…";
+"Messages.Placeholder.Reply" = " 回覆...";
+"Messages.Placeholder.Comment" = "留言...";
+"Messages.Placeholder.SentMessage" = "輸入訊息…";
+"Messages.Placeholder.SilentBroadcast" = "無聲廣播…";
+"Messages.Placeholder.Anonymous" = "匿名傳送";
+
+
+"Messages.Placeholder.Broadcast.Small" = "廣播…";
+"Messages.Placeholder.SentMessage.Small" = "訊息…";
+
+
+
+"GeneralSettings.ForceTouchHeader" = "用力長按 (Force Touch) 操作";
+"GeneralSettings.ForceTouch.Reply" = "回覆訊息";
+"GeneralSettings.ForceTouch.Edit" = "編輯訊息";
+"GeneralSettings.ForceTouch.Forward" = "轉傳訊息";
+"GeneralSettings.ForceTouch.PreviewMedia" = "預覽媒體";
+
+
+"ChatMessage.Tooltip.Views" = "人已查看";
+
+
+"Telegram.TwoStepVerificationUnlockController" = "兩步驟驗證";
+
+"TwoStepAuth.PasswordTitle" = "密碼";
+
+"TwoStepAuth.SetPassword" = "設定額外的密碼";
+"TwoStepAuth.SetPasswordHelp" = "您可以設定當您使用新裝置登入時，除了透過簡訊取得的驗證碼外，另外要輸入的密碼。";
+
+"TwoStepAuth.SetupPasswordTitle" = "您的密碼";
+"TwoStepAuth.SetupHintTitle" = "密碼提示";
+"TwoStepAuth.SetupEmailTitle" = "備援電子信箱";
+
+"TwoStepAuth.EnterEmailCode" = "輸入驗證碼";
+
+"TwoStepAuth.ResetPending" = "您可以在 %@後重置密碼。";
+"TwoStepAuth.CancelReset" = "取消重置";
+"TwoStepAuth.Reset" = "重置密碼";
+
+"TwoStepAuth.UnableToReset" = "無法重置密碼，請在 %@後重試";
+
+
+"TwoStepAuth.CancelReset.Confirm" = "取消重置";
+"TwoStepAuth.CancelReset.Text" = "取消密碼重置過程？如果您稍後要求一個新的重置，它將花費另外的 7 天。";
+
+"TwoStepAuth.SetupHintPlaceholder" = "提示";
+"TwoStepAuth.SetupHintDesc" = "您可以選擇為您的密碼建立提示。";
+
+"TwoStepAuth.ChangePassword" = "變更密碼";
+"TwoStepAuth.RemovePassword" = "停用密碼";
+"TwoStepAuth.SetupEmail" = "設定備援電子信箱";
+"TwoStepAuth.ChangeEmail" = "變更備援電子信箱";
+"TwoStepAuth.PendingEmailHelp" = "您的備援電子信箱 %@ 尚未啟用，等待確認。";
+"TwoStepAuth.GenericHelp" = "您已啟用兩步驟驗證。\n您需要此處設定的密碼以登入您的 Telegram 帳號。";
+
+"TwoStepAuth.ConfirmationTextNew" = "請檢查您的電子郵件並輸入驗證碼以完成兩步驟驗證設定。記得要檢查一下垃圾郵件夾。";
+"TwoStepAuth.ConfirmationAbort" = "取消兩步驟驗證設定";
+
+"TwoStepAuth.SetupPasswordEnterPassword" = "請輸入您的雲端密碼";
+"TwoStepAuth.SetupPasswordEnterPasswordNew" = "輸入您的新密碼";
+
+"TwoStepAuth.SetupPasswordConfirmPassword" = "請再次輸入您的密碼";
+"TwoStepAuth.SetupPasswordConfirmPasswordDesc" = "請確認您的密碼。";
+
+
+"TwoStepAuth.SetupPasswordConfirmFailed" = "密碼不一致。\n請再試一次。";
+
+"TwoStepAuth.SetupPasswordDesc" = "請建立一組用於保護您數據的密碼。";
+"TwoStepAuth.ChangePasswordDesc" = "請輸入用於保護數據的新密碼。";
+
+
+
+"TwoStepAuth.EnterPasswordPassword" = "密碼";
+"TwoStepAuth.EnterPasswordHint" = "提示：%@";
+"TwoStepAuth.EnterPasswordHelp" = "您已啟用兩步驟驗證，因此您的帳號受到額外密碼的保護。";
+"TwoStepAuth.EnterPasswordForgot" = "忘記密碼？";
+
+"TwoStep.AuthEmailSkip" = "跳過";
+
+"TwoStepAuth.EmailSkipAlert" = "不，請您認真看待這件事。\n\n如果您忘記了密碼，您將無法使用您的 Telegram 帳號，同時將不會有任何方法能恢復它。";
+"TwoStepAuth.Email" = "電子信箱";
+"TwoStepAuth.EmailHelp" = "請加入您的有效電子信箱。 這是恢復被忘記密碼唯一的方法。";
+"TwoStepAuth.EmailInvalid" = "無效的電子信箱。請再試一次。";
+"TwoStepAuth.EmailSent" = "我們已傳給您一封電子郵件以確認您的信箱地址。";
+
+"TwoStepAuth.EmailHelpChange" = "請輸入您的新備援電子信箱。這是忘記密碼時的唯一恢復方法。";
+
+
+"TwoStepAuth.RecoveryUnavailable" = "由於您在設定密碼時沒有提供備援電子信箱，您剩餘的選項是想起您的密碼，或是重置您的帳號。";
+"TwoStepAuth.RecoveryFailed" = "您剩餘的選項就是要記住您的密碼或重置您的帳號。";
+
+"TwoStepAuth.RecoveryTitle" = "電子信箱驗證碼";
+"TwoStepAuth.RecoverySent" = "我們已傳送一組救援用的驗證碼到您所提供的電子信箱：\n\n%@";
+"TwoStepAuth.RecoveryCode" = "驗證碼";
+"TwoStepAuth.RecoveryCodeHelp" = "請檢查您的電子郵件，並輸入我們傳送到那裡的六位數驗證碼以停用您的雲端密碼。";
+"TwoStepAuth.RecoveryCodeInvalid" = "驗證碼無效，請再試一次。";
+"TwoStepAuth.RecoveryCodeExpired" = "驗證碼失效";
+"TwoStepAuth.RecoveryEmailUnavailableNew" = "無法存取您的電子信箱\n[%@]()？";
+
+"TwoStepAuth.ResetDescription" = "由於帳號 **%@** 活躍且受密碼保護，為了安全起見，我們將在 1 週內刪除它。\n\n您可以隨時取消這一過程。\n\n您可以在以下時間後重置您的帳號：\n%@";
+
+
+"TwoStepAuth.ConfirmEmailCodeDesc" = "請輸入我們剛剛傳送至 %@ 的驗證碼。";
+
+
+"TwoStepAuth.FloodError" = "超過限制，請稍後再試。";
+"TwoStepAuth.GenericError" = "發生了錯誤，請稍後再試一次。";
+"TwoStepAuth.InvalidPasswordError" = "密碼無效， 請再試一次。";
+
+
+"TwoStepAuth.AnError" = "發生了錯誤，請稍後再試一次。";
+"TwoStepAuth.Error.HaventEmail" = "由於您在設定密碼時沒有提供備援電子信箱，您剩餘的選項是想起您的密碼，或是重置您的帳號。";
+"TwoStepAuth.Error.LimitExceeded" = "您輸入錯誤密碼的次數過多，請稍後重試。";
+"TwoStepAuth.Error.Generic" = "發生了錯誤，請稍後再試一次。";
+"TwoStepAuth.Confirm.DisablePassword" = "您確定要停用密碼？";
+"TwoStepAuth.Error.InvalidEmail" = "請輸入有效的電子郵件地址。";
+"TwoStepAuth.Error.PasswordsDontMatch" = "密碼不一致。\n請再試一次。";
+
+
+"TwoStepAuth.Error.HaventEmail.Reset" = "重置";
+"TwoStepAuth.Error.HaventEmail.ResetHeader" = "重置密碼";
+
+
+"TwoStepAuth.ResetSuccess.Header" = "重置密碼";
+"TwoStepAuth.ResetSuccess" = "您已成功重置密碼。您想建立一個新的嗎？";
+
+"PreviewSender.SendFile_countable" = "%d";
+
+
+
+
+
+"PreviewSender.SendFile_other" = "傳送 %d 個檔案";
+
+"PreviewSender.SendMedia_countable" = "%d";
+
+
+
+
+
+"PreviewSender.SendMedia_other" = "傳送 %d 個媒體";
+
+"PreviewSender.SendPhoto_countable" = "%d";
+
+
+
+
+
+"PreviewSender.SendPhoto_other" = "傳送 %d 張照片";
+
+"PreviewSender.SendVideo_countable" = "%d";
+
+
+
+
+
+"PreviewSender.SendVideo_other" = "傳送 %d 個影片";
+
+"PreviewSender.SendGif_countable" = "%d";
+
+
+
+
+
+"PreviewSender.SendGif_other" = "傳送 %d 張GIF";
+
+"PreviewSender.SendAudio_countable" = "%d";
+
+
+
+
+
+"PreviewSender.SendAudio_other" = "傳送 %d 個音訊檔";
+
+
+"Peer.SavedMessages" = "我的收藏";
+
+"Stickers.SuggestStickers" = "透過表情符號推薦貼圖";
+"Stickers.SuggestAll" = "所有貼圖";
+"Stickers.SuggestAdded" = "已安裝的";
+"Stickers.SuggestNone" = "無";
+
+
+"PrivacySettings.LastSeenEverybodyMinus" = "每個人 (-%@)";
+"PrivacySettings.LastSeenContactsPlus" = "我的聯絡人 (+%@)";
+"PrivacySettings.LastSeenContactsMinus" = "我的聯絡人 (-%@)";
+"PrivacySettings.LastSeenContactsMinusPlus" = "我的聯絡人 (-%@, +%@)";
+"PrivacySettings.LastSeenNobodyPlus" = "沒有人 (+%@)";
+
+"PrivacySettings.DeleteAccountHeader" = "帳號保留期限";
+"PrivacySettings.DeleteAccountDescription" = "您在這段時間內至少要上線一次，否則您的帳號將被刪除，您也將失去所有聊天紀錄和聯絡人。";
+"PrivacySettings.DeleteAccount" = "保留";
+
+"Peer.CreatePeer.Context.UpdatePhoto" = "上傳照片";
+"Peer.CreatePeer.Context.RemovePhoto" = "移除照片";
+
+"Chat.Webpage.MediaCount1" = "%1$d / %2$d";
+
+"Passcode.UseTouchId" = "用 Touch ID 解鎖";
+"Passcode.UnlockTouchIdReason" = "解鎖它自己";
+
+"Search.Global.Group1_countable" = "%@ %d";
+
+
+
+
+
+"Search.Global.Group1_other" = "%@, %d 位成員";
+
+"Search.Global.Channel1_countable" = "%@ %d";
+
+
+
+
+
+"Search.Global.Channel1_other" = "%@, %d 位訂閱者";
+
+//"ChatList.Context.PinError" = "Sorry, you can pin no more than 5 chats to the top.";
+"ChatList.Context.PinErrorNew2" = "抱歉，在主聊天列表中，您只能將 5 個聊天置頂。但是，在「聊天資料夾」和「封存的聊天」中，則可以將更多聊天置頂。";
+"ChatList.Context.PinErrorNew.SetupFolders" = "設定資料夾";
+
+
+"Storage.ClearAll" = "全部清除";
+"Storage.ClearAll.Confirm.Description" = "您確定要清除所有快取資料嗎？";
+
+
+"Chat.Bubbles.ForwardedFrom" = "轉傳自： [%@]()";
+
+
+"AppearanceSettings.TextSize.Header" = "文字大小";
+"AppearanceSettings.ChatPreview.Header" = "聊天預覽";
+"AppearanceSettings.ColorTheme.Header" = "顏色主題";
+"AppearanceSettings.ChatView.Header" = "聊天室外觀";
+
+"AppearanceSettings.ColorTheme.day" = "日";
+"AppearanceSettings.ColorTheme.dayClassic" = "日經典";
+"AppearanceSettings.ColorTheme.system" = "系統";
+"AppearanceSettings.ColorTheme.nightAccent" = "夜色";
+
+"AppearanceSettings.ChatView.Classic" = "簡約風格";
+"AppearanceSettings.ChatView.Bubbles" = "氣泡模式";
+"AppearanceSettings.FollowSystemAppearance" = "依循系統外觀";
+"AppearanceSettings.FollowSystemAppearance.DefaultDark" = "選擇將用於系統夜間模式的預設深色主題。";
+"AppearanceSettings.FollowSystemAppearance.DefaultDay" = "選擇將用於系統日間模式的預設淺色主題。";
+"AppearanceSettings.FollowSystemAppearance.DefaultHeader" = "預設調色盤";
+
+
+"AppearanceSettings.ChatPreview.UserName1" = "盧西奧";
+"AppearanceSettings.ChatPreview.UserName2" = "萊因哈特";
+"AppearanceSettings.ChatPreview.ZeroText" = "萊因哈特，我們需要您找一些新的歌曲 🎶。";
+"AppearanceSettings.ChatPreview.FirstText" = "啊，你們現在的小孩都只愛聽電音舞曲！你應該聽聽看一些經典歌曲，像是赫索霍夫所演唱的！";
+"AppearanceSettings.ChatPreview.SecondText" = "看來我們之間對音樂的愛好真的差異很多 😅";
+
+"AppearanceSettings.ChatPreview.1" = "早安！👋";
+"AppearanceSettings.ChatPreview.2" = "你知道現在幾點嗎？";
+"AppearanceSettings.ChatPreview.3" = "現在是東京的早晨 😎";
+
+
+
+"Chat.Empty.LinkPreview" = "連結預覽";
+
+"Confirm.Delete" = "刪除";
+"Chat.Message.DeleteForMeAndPerson" = "從我和 %@ 的裝置刪除";
+"Chat.Message.DeleteForMe" = "僅從我的裝置刪除";
+"Chat.Message.DeleteForEveryone" = "從所有人的裝置中刪除";
+
+
+"Chat.Message.UnsendMessages_countable" = "%d";
+
+
+
+
+
+
+
+"Chat.CopySelectedText" = "複製所選文字";
+
+"GeneralSettings.InstantView.ScrollBySpace" = "使用空白鍵滾動頁面";
+"GeneralSettings.InstantViewHeader" = "即時瀏覽";
+
+"GeneralSettings.AutoplayGifs" = "自動播放GIF";
+"GeneralSettings.AccentColor" = "強調色";
+"GeneralSettings.ChatBackground" = "聊天室背景";
+"Chat.LiveLocation" = "即時位置";
+"ArchivedStickers.Empty" = "您封存的貼圖包會顯示在這裡";
+"ChatList.TitleFeed" = "訊息來源";
+"Chat.TitleFeed" = "訊息來源";
+"ChatList.Feeds" = "頻道";
+"ChatInput.ShowNext" = "顯示下一步";
+"ChatList.GroupChannel" = "群組頻道";
+
+"Preview.Dragging.AddItems_countable" = "%d";
+
+
+
+
+
+"Preview.Dragging.AddItems_other" = "新增項目";
+
+"Telegram.DataAndStorageViewController" = "數據和儲存";
+"DataAndStorage.AutomaticDownload" = "自動下載媒體";
+"DataAndStorage.AutomaticDownload.Header" = "媒體自動下載";
+"DataAndStorage.AutomaticDownload.Reset" = "重置自動下載設定";
+"DataAndStorage.AutomaticDownload.Photo" = "照片";
+"DataAndStorage.AutomaticDownload.Video" = "影片";
+"DataAndStorage.AutomaticDownload.Files" = "檔案";
+"DataAndStorage.AutomaticDownload.Voice" = "語音訊息";
+"DataAndStorage.AutomaticDownload.InstantVideo" = "視訊訊息";
+"DataAndStorage.AutomaticDownload.GIFs" = "GIF";
+
+
+"DataAndStorage.CategorySettings.PrivateChats" = "私聊";
+"DataAndStorage.CategorySettings.GroupChats" = "群組";
+"DataAndStorage.CategorySettings.Channels" = "頻道";
+"DataAndStorage.CateroryFileSizeLimit.Header" = "按大小限制";
+"DataAndStorage.CateroryFileSize.Unlimited" = "無限制";
+"DataAndStorage.Confirm.ResetSettings" = "復原所有自訂的自動下載設定。";
+"Chat.Confirm.ReportSpamUser" = "您確定要檢舉此用戶的垃圾訊息嗎？";
+"Chat.Confirm.ReportSpam" = "要檢舉垃圾訊息嗎？";
+"Chat.Confirm.ReportSpam.Header" = "檢舉垃圾訊息";
+"Chat.Confirm.ReportSpam.Channel" = "檢舉垃圾訊息並退出頻道？";
+"Chat.Confirm.ReportSpam.Group" = "檢舉垃圾訊息並退出群組？";
+
+"Appearance.CustomBackground" = "自訂背景";
+"Appearance.CustomBackground.FileError" = "檔案大小不能超過 10 MB，圖片尺寸不能超過 500x500 像素。";
+
+"CrashOnLaunch.OK" = "登出";
+"CrashOnLaunch.Cancel" = "取消";
+"CrashOnLaunch.Message" = "有點不對勁";
+"CrashOnLaunch.Information" = "如果每次您開啟 Telegram 後，它都會立刻崩潰而當掉，請點擊「登出」應用程式。這樣應該會解決這個問題。";
+"ChatWallpaper.Empty" = "預設";
+
+"Chat.Service.BotPermissionAllowed" = "您允許這個機器人在您登入 %@ 時向您傳送訊息。";
+
+"Compose.CreateGroup.LimitError" = "建立群組後，您將可以加入更多成員。";
+
+
+"PeerInfo.Bot.AddToGroup" = "新增至群組";
+"PeerInfo.Bot.Share" = "分享";
+"PeerInfo.Bot.Settings" = "設定";
+"PeerInfo.Bot.Help" = "幫助";
+"PeerInfo.Bot.Privacy" = "隱私";
+
+"Passcode.Or" = "或是";
+"Passcode.UseTouchId" = "用 Touch ID 解鎖";
+
+
+"Text.Context.Copy.Link" = "複製連結";
+"Text.Context.Copy.Email" = "複製電子郵件地址";
+"Text.Context.Copy.Code" = "複製代碼";
+
+"Text.Context.Copy.Username" = "複製用戶名稱";
+"Text.Context.Copy.Hashtag" = "複製主題標籤";
+"Text.Context.Copy.Command" = "複製指令";
+"Text.Context.Copy.StickerPack" = "複製貼圖包連結";
+"Text.Context.Copy.InviteLink" = "複製邀請連結";
+
+"Message.Context.OpenWith" = "開啟用…";
+"Chat.InlineRequest.Loading" = "載入中…";
+
+"DataAndStorage.DownloadFolder" = "下載資料夾";
+"Context.OpenInQuickLook" = "用 Quick Look 開啟";
+
+
+"Telegram.WebSessionsController" = "使用 Telegram 帳號登入的網站";
+"PrivacyAndSecurity.WebAuthorizationHeader" = "已連結的網站";
+
+"WebAuthorizations.Logout" = "斷開";
+"WebAuthorizations.LogoutAll.Description" = "您可以登入支援使用 Telegram 帳號登入的網站。";
+"WebAuthorizations.LoggedIn.Descrpiption" = "已連結的網站";
+"WebAuthorizations.LogoutAll" = "斷開與所有網站的連結";
+"WebAuthorizations.Confirm.Revoke" = "您確定要斷開與此網站的連結嗎?";
+"WebAuthorizations.Confirm.RevokeAll" = "您確定要斷開與所有網站的連結嗎？";
+
+
+"Telegram.PassportController" = "護照";
+
+"SecureId.Request.Header1" = "**%@** 要求存取您的個人資料以便您註冊其服務。";
+
+"SecureId.Request.Permission.Email" = "電子信箱地址";
+"SecureId.Request.Permission.Phone" = "電話號碼";
+"SecureId.Request.Permission.PersonalDetails" = "個人資料";
+"SecureId.Request.Permission.Passport" = "護照";
+"SecureId.Request.Permission.ResidentialAddress" = "居住地址";
+"SecureId.Request.Permission.IdentityDocument" = "身分證件";
+
+"SecureId.Request.Permission.UtilityBill" = "水電費帳單";
+"SecureId.Request.Permission.DriversLicense" = "駕照";
+"SecureId.Request.Permission.TenancyAgreement" = "租約";
+"SecureId.Request.Permission.IDCard" = "身分證";
+"SecureId.Request.Permission.BankStatement" = "銀行對帳單";
+"SecureId.Request.Permission.InternalPassport" = "內部護照";
+"SecureId.Request.Permission.PassportRegistration" = "護照註冊";
+"SecureId.Request.Permission.TemporaryRegistration" = "臨時註冊";
+
+"SecureId.Request.Accept" = "授權";
+
+"SecureId.Request.TwoDocuments.Title" = "%@ 或 %@";
+
+
+"SecureId.UploadScan.Multi" = "上傳一張%@或%@的掃描";
+"SecureId.UploadScan.Single" = "上傳 %@ 的掃描";
+
+
+"SecureId.Request.CreatePassword" = "建立密碼";
+"SecureId.Request.Permission.Email.Empty" = "提供您的聯絡電子郵件地址";
+"SecureId.Request.Permission.Phone.Empty" = "提供您的聯絡電話";
+"SecureId.Request.Permission.Identity.Empty" = "上傳您的護照或其他身分證件的掃描";
+"SecureId.Request.Permission.Address.Empty" = "上傳您的地址證明";
+
+"SecureId.FileUpload.Progress" = "%@% 已上傳";
+"SecureId.ScanNumber" = "掃描 %d";
+
+"SecureId.Identity.Id" = "身分證";
+"SecureId.Identity.Passport" = "護照";
+"SecureId.Identity.DriverLicense" = "駕照";
+"SecureId.Identity.UtilityBill" = "水電費帳單";
+"SecureId.Identity.BankStatement" = "銀行對帳單";
+"SecureId.Identity.TenancyAgreement" = "租約";
+"SecureId.Identity.PassportRegistration" = "護照註冊";
+
+"SecureId.IdentityDocument" = "身分證件";
+"SecureId.ResidentialAddress" = "居住地址";
+"SecureId.PhoneNumber" = "電話號碼";
+"SecureId.Email" = "電子郵件地址";
+
+"SecureId.DeletePassport" = "刪除 Telegram Passport";
+
+"SecureId.Gender.Male" = "男";
+"SecureId.Gender.Female" = "女";
+
+
+"SecureId.Identity.Placeholder.Gender" = "性別";
+
+"SecureId.Identity.Placeholder.FirstName" = "名字";
+"SecureId.Identity.InputPlaceholder.FirstName" = "名字";
+
+"SecureId.Identity.Placeholder.MiddleName" = "中間名";
+"SecureId.Identity.InputPlaceholder.MiddleName" = "中間名";
+
+"SecureId.Identity.Placeholder.LastName" = "姓氏";
+"SecureId.Identity.InputPlaceholder.LastName" = "姓氏";
+
+"SecureId.Identity.Placeholder.Birthday" = "生日";
+
+"SecureId.Identity.Placeholder.Country" = "國家";
+
+"SecureId.Identity.Placeholder.Citizenship" = "國籍";
+"SecureId.Identity.Placeholder.Residence" = "居住";
+
+"SecureId.Identity.Placeholder.IssuedDate" = "核發日期";
+"SecureId.Identity.Placeholder.ExpiryDate" = "有效日期";
+"SecureId.Identity.DocumentDetailsHeader" = "文件詳細資訊";
+
+"SecureId.Identity.CardId.InputPlaceholder" = "身分證字號";
+"SecureId.Identity.CardId.Placeholder" = "身分證字號";
+
+"SecureId.Identity.Passport.InputPlaceholder" = "文件編號";
+"SecureId.Identity.Passport.Placeholder" = "文件編號";
+
+"SecureId.Identity.License.InputPlaceholder" = "許可證編號";
+"SecureId.Identity.License.Placeholder" = "許可證編號";
+
+
+
+"SecureId.Scans.Header" = "掃描";
+"SecureId.UploadScan" = "上傳掃描";
+"SecureId.UploadAdditionalScan" = "上傳其他掃描";
+
+"SecureId.Address.Scans_countable" = "%d";
+
+
+
+
+
+"SecureId.Address.Scans_other" = "%d 個掃描";
+
+
+"SecureId.IdentityScan.Description" = "文件必須包含您的姓名、居住地址，郵票 / 條碼 / QR code / 商標，以及核發日期不超過3個月。";
+
+
+"SecureId.RequestedInformation.Header" = "所需資訊";
+"SecureId.Accept.Policy" = "您接受[登入範例的隱私權政策](_applyPolicy_)並允許其所屬的 **%@** 向您傳送訊息。";
+"SecureId.Accept.Help" = "您正在將您的文件直接傳送給 **%@** ，並允許其所屬的 **%@** 向您傳送訊息。";
+"Chat.Service.SecureId.AccessGranted" = "%@ 收到了以下文件：%@";
+"SecureId.RemoveEmail" = "刪除電子郵件地址？";
+"SecureId.RemovePhoneNumber" = "刪除電話號碼？";
+
+"SecureId.InstallEmail.Title" = "電子信箱";
+"SecureId.InstallPhone.Title" = "電話號碼";
+"SecureId.CreatePassword.Title" = "密碼 & 電子信箱";
+
+
+"SecureId.CreatePassword.Header" = "密碼";
+"SecureId.CreatePassword.PasswordPlaceholder" = "密碼";
+"SecureId.CreatePassword.PasswordInputPlaceholder" = "輸入您的密碼";
+"SecureId.CreatePassword.RePasswordInputPlaceholder" = "再次輸入您的密碼";
+"SecureId.CreatePassword.Description" = "請建立密碼來保護您的付款資訊。當您登入時，會被要求輸入。"; //WRONG
+"SecureId.CreatePassword.Hint.Header" = "提示";
+"SecureId.CreatePassword.Hint.Placeholder" = "提示";
+"SecureId.CreatePassword.Hint.InputPlaceholder" = "您密碼的提示";
+"SecureId.CreatePassword.Email.Header" = "備援電子信箱";
+"SecureId.CreatePassword.Email.Placeholder" = "電子信箱";
+"SecureId.CreatePassword.Email.InputPlaceholder" = "您的電子信箱";
+"SecureId.CreatePassword.Email.Description" = "請加入您的有效電子信箱。 這是恢復被忘記密碼唯一的方法。";
+
+"SecureId.EmailActivate.Code.Placeholder" = "驗證碼";
+"SecureId.EmailActivate.Code.InputPlaceholder" = "輸入驗證碼";
+"SecureId.EmailActivate.Description" = "請輸入我們剛傳送到 %@ 的驗證碼";
+
+
+"SecureId.DeleteIdentity" = "刪除文件";
+"SecureId.DeleteAddress" = "刪除地址";
+
+"SecureId.InsertPassword.Password" = "輸入您的密碼";
+"SecureId.InsertPassword.Next" = "下一步";
+"SecureId.InsertPassword.Description" = "請輸入您的密碼以存取您的個人資料。";
+"SecureId.PhoneNumber.UseSame.Desc" = "使用與 Telegram 相同的電話號碼。";
+"SecureId.PhoneNumber.UseSame" = "使用 %@";
+"SecureId.PhoneNumber.Note" = "注意：您將在您提供的電話號碼上收到驗證碼。";
+"SecureId.PhoneNumber.Header" = "或輸入另一支電話號碼";
+
+"SecureId.InsertPassword.Settings.Description" = "輸入您的 Telegram 密碼以解密您的數據";
+
+
+"SecureId.Email.UseSame" = "使用 %@";
+"SecureId.Email.UseSame.Desc" = "注意：您將收到您提供的電子郵件地址的驗證碼。";
+"SecureId.Email.Email.Placeholder" = "電子信箱";
+"SecureId.Email.Email.InputPlaceholder" = "輸入您的電子郵件地址";
+
+"SecureId.PhoneNumber.ConfirmCode.Placeholder" = "驗證碼";
+"SecureId.PhoneNumber.ConfirmCode.InputPlaceholder" = "輸入驗證碼";
+"SecureId.PhoneNumber.ConfirmCode.Desc" = "請輸入我們透過SMS簡訊傳送到 %@ 的驗證碼";
+
+
+"SecureId.Address.Header" = "地址";
+"SecureId.Address.Street.Placeholder" = "街道";
+"SecureId.Address.Street.InputPlaceholder" = "街道和號碼，郵政信箱";
+"SecureId.Address.Street1.InputPlaceholder" = "公寓、套房、單位、建築物、樓層";
+"SecureId.Address.City.Placeholder" = "城市";
+"SecureId.Address.City.InputPlaceholder" = "城市";
+"SecureId.Address.Region.Placeholder" = "地區";
+"SecureId.Address.Region.InputPlaceholder" = "地區";
+"SecureId.Address.Country.Placeholder" = "國家";
+"SecureId.Address.Postcode.Placeholder" = "郵遞區號";
+"SecureId.Address.Postcode.InputPlaceholder" = "郵遞區號";
+
+
+"SecureId.Identity.SelfieTitle" = "自拍照驗證";
+"SecureId.Identity.Selfie" = "自拍照";
+"SecureId.Identity.SelfieUpload" = "新增自拍照";
+"SecureId.Identity.SelfieUploadNew" = "重拍自拍照";
+"SecureId.Identity.SelfieHelp" = "上傳您自己持有證件的照片。確保身分證和您的臉部清晰可見。";
+
+"SecureId.forgotPassword.NoEmail" = "由於您在設定密碼時沒有提供備援電子信箱，您剩餘的選項是想起您的密碼，或是重置您的帳號。";
+"SecureId.Confirm.Cancel" = "您確定要停止授權程序？";
+
+
+
+"SecureId.RecoverPassword" = "密碼復原";
+"SecureId.RecoverPassword.SentEmailCode" = "驗證碼已傳送到 %@";
+
+"SecureId.Warning.DataLost" = "警告！所有已儲存在您 Telegram Passport 中的資料將流失。";
+"SecureId.Upload.Main" = "上傳證件主頁面的照片";
+"SecureId.Upload.Front" = "上傳文件的正面照片";
+"SecureId.Upload.Reverse" = "上傳文件反面的照片";
+"SecureId.Upload.Selfie" = "上傳自己持有文件的自拍照";
+
+"SecureId.Upload.Title.MainPage" = "主頁面";
+"SecureId.Upload.Title.FrontSide" = "正面";
+"SecureId.Upload.Title.ReverseSide" = "反面";
+
+"SecureId.Info.Title" = "什麼是 Telegram Passport？";
+"SecureId.Info" = "有了 Telegram Passport，您可以輕鬆註冊需要身分驗證的網站和服務。\n\n您的資訊、個人資料和文件受到端到端加密的保護。沒有您的允許, 任何人（ 包括 Telegram ）都不能存取它們。";
+"SecureId.Info.More" = "更多資訊";
+"SecureId.Info.DeletePassport" = "您確定要刪除您的 Telegram Passport 嗎？所有資料將會消失。";
+
+"SecureId.Add.PersonalDetails" = "新增個人資料";
+"SecureId.Edit.PersonalDetails" = "編輯個人資料";
+"SecureId.Add.Passport" = "新增護照";
+"SecureId.Edit.Passport" = "編輯護照";
+"SecureId.Add.ID" = "新增身分證";
+"SecureId.Edit.ID" = "編輯身分證";
+"SecureId.Add.DriverLicense" = "新增駕照";
+"SecureId.Edit.DriverLicense" = "編輯駕照";
+"SecureId.Add.InternalPassport" = "新增內部護照";
+"SecureId.Edit.InternalPassport" = "編輯內部護照";
+
+"SecureId.Add.ResidentialAddress" = "新增居住地址";
+"SecureId.Edit.ResidentialAddress" = "編輯居住地址";
+"SecureId.Add.UtilityBill" = "新增水電費帳單";
+"SecureId.Edit.UtilityBill" = "編輯水電費帳單";
+"SecureId.Add.BankStatement" = "新增銀行對帳單";
+"SecureId.Edit.BankStatement" = "編輯銀行對帳單";
+"SecureId.Add.TenancyAgreement" = "新增租約";
+"SecureId.Edit.TenancyAgreement" = "編輯租約";
+"SecureId.Add.PassportRegistration" = "新增護照註冊";
+"SecureId.Edit.PassportRegistration" = "編輯護照註冊";
+"SecureId.Add.TemporaryRegistration" = "新增臨時註冊";
+"SecureId.Edit.TemporaryRegistration" = "編輯臨時註冊";
+
+"SecureId.Delete.PersonalDetails" = "刪除個人資料";
+"SecureId.Delete.Confirm.PersonalDetails" = "您確定要刪除您的個人資料？";
+"SecureId.Confirm.DeleteDocument" = "您確定要刪除此文件？";
+"SecureId.Confirm.DeleteAddress" = "刪除地址";
+"SecureId.AppVersionOutdated" = "抱歉，您的 Telegram 程式已經過時了，無法處理此請求。請更新 Telegram。";
+
+"SecureId.EmptyDescription.UtilityBill" = "上傳您的水電費帳單掃描";
+"SecureId.EmptyDescription.BankStatement" = "上傳您的銀行對帳單掃描";
+"SecureId.EmptyDescription.TenancyAgreement" = "上傳您的租約掃描";
+"SecureId.EmptyDescription.PassportRegistration" = "上傳您的護照註冊掃描";
+"SecureId.EmptyDescription.TemporaryRegistration" = "上傳您臨時註冊的掃描";
+
+"SecureId.EmptyDescription.PersonalDetails" = "填寫您的個人資料";
+"SecureId.EmptyDescription.Address" = "提供您的位址";
+
+"SecureId.EmptyDescription.Passport" = "上傳您的護照掃描";
+"SecureId.EmptyDescription.DriversLicense" = "上傳一份駕照的掃瞄";
+"SecureId.EmptyDescription.IdentityCard" = "上傳您的身分證掃描";
+"SecureId.EmptyDescription.InternalPassport" = "上傳您的內部護照掃描";
+
+"SecureId.CreatePassword.Intro.Header" = "**%@ 要求存取您的個人資料**以便您註冊其服務。";
+"SecureId.CreatePassword.Intro" = "請建立一組密碼用來加密您的個人資料。\n\n當您在新的裝置登入 Telegram 時，將會需要此密碼。";
+
+"SecureId.Translation.Header" = "翻譯";
+"SecureId.Translation.Desc" = "上傳文件英文譯本的掃描。";
+
+"ProxySettings.Item.Connected" = "已連線";
+"ProxySettings.Item.ConnectedPing" = "已連線（%@ 毫秒網路延遲）";
+"ProxySettings.Item.NeverConnected" = "無法使用";
+"ProxySettings.Item.Available" = "可用（%@ 毫秒網路延遲）";
+"ProxySettings.Item.Checking" = "檢查中…";
+
+"ProxySettings.Secret" = "金鑰";
+"ProxySettings.Enable" = "Proxy";
+
+"Login.ConnectionError.Header" = "無法連線至伺服器";
+"Login.ConnectionError.Info" = "請檢查您的網路連線，然後再試一次。";
+"Login.ConnectionError.TryAgain" = "再試一次";
+"Login.ConnectionError.UseProxy" = "使用 Proxy";
+
+"ProxySettings.Title" = "Proxy 設定";
+
+"ProxySettings.UseForCalls" = "用於通話";
+"ProxySettings.AddProxy" = "新增 Proxy";
+
+"Error.AnError" = "發生錯誤，請稍後再試。";
+
+"InputData.Date.Day.Placeholder1" = "日";
+"InputData.Date.Month.Placeholder1" = "月";
+"InputData.Date.Year.Placeholder1" = "年";
+
+
+
+"EditAccount.Logout" = "登出";
+"EditAccount.Username" = "用戶名稱";
+"EditAccount.ChangeNumber" = "變更號碼";
+"EditAccount.NameDesc" = "輸入您的名字及加入一張個人照片";
+"EditAccount.AddAccount" = "新增帳號";
+
+"EditAccount.Title" = "編輯個人資料";
+
+
+"Chanel.EventFilter.AllAdmins" = "所有管理員";
+"Chanel.EventFilter.AllEvents" = "所有事件";
+
+
+"GeneralSettings.ShowCallsTab" = "顯示「通話」頁籤";
+
+"NetworkUsage.BytesSent" = "已傳送的位元組";
+"NetworkUsage.BytesReceived" = "已接收的位元組";
+"NetworkUsage.Header.Generic" = "訊息";
+"NetworkUsage.Header.Images" = "照片";
+"NetworkUsage.Header.Videos" = "影片";
+"NetworkUsage.Header.Audio" = "音訊";
+"NetworkUsage.Header.Files" = "檔案";
+"NetworkUsage.Reset" = "重置統計資料";
+"NetworkUsage.NetworkUsage" = "網路用量";
+
+"NetworkUsage.NetworkUsageSince" = "自 %@ 以來的網路用量";
+
+"Chat.Recording.Cancel" = "您確定要停止錄製並放棄語音訊息嗎？";
+"ChatList.SponsoredChannel" = "Proxy 贊助商";
+
+
+"AudioRecord.Help.Fixed" = "點擊圓圈外部以取消";
+"AudioRecord.Help.Plain" = "在圓圈外釋放以取消";
+
+"Chat.ProxySponsored.CapDesc" = "此頻道是由您的 Proxy 顯示";
+"Chat.ProxySponsored.CapTitle" = "Proxy 贊助商";
+
+"Chat.ProxySponsored.AlertText" = "此頻道是由您使用的 Proxy 所附加的。要從聊天列表中移除它，您必須在「設定」中停用該 Proxy。";
+"Chat.ProxySponsored.AlertSettings" = "設定";
+"Chat.ProxySponsored.AlertHeader" = "Proxy 贊助商";
+
+"Chat.Channel.Unaccessible" = "抱歉，此頻道已無法存取。";
+"Chat.Group.Unaccessible" = "抱歉，此群組已無法存取。";
+
+"ProxySettings.Mtp.Sponsor" = "此 Proxy 可能會在您的聊天列表中顯示贊助商的頻道。這不會洩露您的 Telegram 通訊內容。";
+
+
+"Chat.LiveLocation.Updated_countable" = "%d";
+
+
+
+
+
+"Chat.LiveLocation.Updated_other" = "在 %d 分鐘以前更新";
+
+"Chat.LiveLocation.UpdatedNow" = "剛剛更新";
+
+"StickerSet.DontExist" = "抱歉，這個貼圖包似乎並不存在。";
+
+"PrivacyAndSecurity.BlockedUsers" = "%@ 個用戶";
+
+"PrivacyAndSecurity.ClearCloudDraftsHeader" = "聊天";
+"PrivacyAndSecurity.ClearCloudDrafts" = "刪除所有雲端草稿";
+
+"PrivacyAndSecurity.SensitiveHeader" = "敏感內容";
+"PrivacyAndSecurity.SensitiveText" = "停用過濾";
+"PrivacyAndSecurity.SensitiveDesc" = "在所有您的 Telegram 裝置上顯示公開頻道中的敏感媒體內容。";
+
+"PrivacyAndSecurity.AutoArchiveHeader" = "未知用戶的新聊天";
+"PrivacyAndSecurity.AutoArchiveText" = "封存和關閉通知";
+"PrivacyAndSecurity.AutoArchiveDesc" = "自動將來自非聯絡人的新私聊、群組和頻道進行封存和關閉通知。";
+
+"PrivacyAndSecurity.SecretChatWebPreview.Header" = "秘密聊天";
+"PrivacyAndSecurity.SecretChatWebPreview.Text" = "連結預覽";
+"PrivacyAndSecurity.SecretChatWebPreview.Desc" = "連結預覽將在 Telegram 伺服器上產生。我們不儲存有關您傳送的連結之資料。";
+
+
+"Chat.SecretChat.Preview.Header" = "秘密聊天";
+"Chat.SecretChat.Preview.Text" = "您想要在秘密聊天中啟用連結預覽功能嗎？請注意，連結預覽是在 Telegram 伺服器上產生的。";
+"Chat.SecretChat.Preview.OK" = "是";
+"Chat.SecretChat.Preview.NO" = "否";
+
+
+"PrivacyAndSecurity.Confirm.ClearCloudDrafts" = "您確定要刪除所有雲端草稿嗎？";
+
+
+"Location.Send.MyLocation" = "傳送我目前的位置";
+"Location.Send.ThisLocation" = "傳送選定的位置";
+"Location.Send.ThisLocation.Unknown" = "未知的位置";
+
+"Location.Send.AccurateTo" = "精確到 %@";
+"Location.Send.Locating" = "定位中…";
+
+"Location.Send.Title" = "位置";
+"Location.Send.ShowNearby" = "顯示附近地點";
+"Location.Send.HideNearby" = "隱藏附近地點";
+
+"Chat.ApplyProxy" = "新增 Proxy";
+"Chat.Message.MTProxy.Config" = "MTProxy 配置";
+"Chat.Message.Socks5.Config" = "SOCKS5 配置";
+
+"Chat.Copy.ProxyConfiguration" = "複製連結到 Proxy";
+
+"Chat.MessageAction.ShowMessage" = "顯示訊息";
+"ProxySettings.ShareProxyList" = "分享 Proxy 列表";
+"TermsOfService.Title" = "服務條款";
+"TermsOfService.Accept" = "同意並繼續";
+"TermsOfService.Accept.ConfirmAge" = "確認";
+
+"TermsOfService.Disagree" = "拒絕";
+"TermsOfService.Disagree.Text" = "我們很抱歉，但這意味著我們必須要在這裡分道揚鑣了。不像其他公司，我們不使用您的資料來投放個人化廣告或其他商業目的。Telegram 僅儲存為了提供功能豐富的雲端服務所需的資訊。您可以在「隱私和安全」設定中調整使用資料的方式（例如，刪除已同步的聯絡人）。\n\n但，若是您不同意 Telegram 合理的要求，我們就無法提供您這項服務。";
+"TermsOfService.Disagree.Text.Last" = "警告，這將不可逆轉地刪除您的 Telegram 帳號，以及您儲存在 Telegram 雲端中的所有資料。\n\n重要提示：您現在可以取消，並匯出資料，就在您刪除帳號之前，而不是失去一切。（為此，請開啟最新版本的 Telegram Desktop，並前往「設定」>「進階」>「匯出 Telegram 資料」。）";
+"TermsOfService.Disagree.Text.Last.OK" = "立即刪除";
+"TermsOfService.Disagree.OK" = "拒絕並刪除";
+"TermsOfService.ConfirmAge" = "我確定我已滿 %@ 歲。";
+"TermsOfService.ProceedBot" = "請同意並繼續 %@。";
+"ChatList.Context.MaskAsRead" = "標記為已讀";
+"ChatList.Context.MaskAsUnread" = "標記為未讀";
+"AccountSettings.Passport" = "Telegram Passport";
+"Chat.EditMessage.Media" = "點擊以編輯媒體";
+
+
+"Alert.ButtonOK.UpdateApp" = "更新 App";
+
+"Suggest.Frequent.Contacts" = "推薦常用聯絡人";
+"Suggest.Frequent.Contacts.Desc" = "在搜尋區塊的頂部顯示您經常傳訊息的對象，以便快速選取。";
+"Suggest.Frequent.Contacts.Alert" = "這將刪除您常傳訊息對象的所有資料，以及您可能有在使用的內聯機器人。";
+
+"Telegram.PeerMediaController" = "共享的媒體";
+"AccountSettings.ReadArticles" = "閱讀文章";
+"Chat.Context.Restrict" = "限制";
+"Article.Read" = "已讀";
+
+"Search.Popular.SavedMessages" = "我的收藏";
+"Search.Popular.Articles" = "文章";
+
+"Article.MarkAsRead" = "標記為已讀";
+"Article.MarkAsUnread" = "標記為未讀";
+"Article.ReadAll" = "全部已讀";
+"Article.RemoveAll" = "移除全部";
+"Article.Remove" = "移除";
+"GeneralSettings.ShowArticlesInSearch" = "在「搜尋」中顯示推薦的文章";
+
+"Search.Popular.Delete" = "刪除";
+
+"Telegram.ForwardChatListController" = "轉傳訊息";
+
+
+"UpdateApp.UpdateTelegram" = "更新 Telegram";
+"UpdateApp.TelegramUpdate" = "Telegram 更新";
+
+
+
+"SecureId.DiscardChanges.Header" = "放棄變更";
+"SecureId.DiscardChanges.Text" = "您確定要放棄所有變更嗎？";
+
+"SecureId.CorrectErrors" = "請更正錯誤";
+"SecureId.LoginText" = "請登入您的帳號以使用 Telegram Passport";
+
+
+"ContactInfo.PhoneLabelHome" = "住家";
+"ContactInfo.PhoneLabelWork" = "工作";
+"ContactInfo.PhoneLabelMobile" = "手機號碼";
+"ContactInfo.PhoneLabelMain" = "主要";
+"ContactInfo.PhoneLabelHomeFax" = "住家傳真";
+"ContactInfo.PhoneLabelWorkFax" = "工作傳真";
+"ContactInfo.PhoneLabelPager" = "呼叫器";
+"ContactInfo.PhoneLabelOther" = "其他";
+"ContactInfo.URLLabelHomepage" = "首頁";
+"ContactInfo.BirthdayLabel" = "生日";
+"ContactInfo.Job" = "公司";
+
+
+"ContactInfo.ContactInfo" = "聯絡資訊";
+"Chat.ViewContact" = "查看聯絡資訊";
+
+
+"StorageUsage.Clear" = "清除";
+
+
+
+
+"ChatList.Swiping.Read" = "已讀";
+"ChatList.Swiping.Unread" = "未讀";
+"ChatList.Swiping.Delete" = "刪除";
+"ChatList.Swiping.Pin" = "置頂";
+"ChatList.Swiping.Unpin" = "取消置頂";
+"ChatList.Swiping.Mute" = "關閉通知";
+"ChatList.Swiping.Unmute" = "開啟通知";
+
+"ChatList.Swiping.Archive" = "封存";
+"ChatList.Swiping.Unarchive" = "取消封存";
+
+
+"PeerSelect.InviteViaLink" = "透過連結邀請到群組";
+
+
+"Passport.Language.ar" = "阿拉伯文";
+"Passport.Language.az" = "亞塞拜然文";
+"Passport.Language.bg" = "保加利亞文";
+"Passport.Language.bn" = "孟加拉文";
+"Passport.Language.cs" = "捷克文";
+"Passport.Language.da" = "丹麥文";
+"Passport.Language.de" = "德文";
+"Passport.Language.dv" = "迪維希文";
+"Passport.Language.dz" = "宗喀文";
+"Passport.Language.el" = "希臘文";
+"Passport.Language.en" = "英文";
+"Passport.Language.es" = "西班牙文";
+"Passport.Language.et" = "愛沙尼亞文";
+"Passport.Language.fa" = "波斯文";
+"Passport.Language.fr" = "法文";
+"Passport.Language.he" = "希伯來文";
+"Passport.Language.hr" = "克羅地亞文";
+"Passport.Language.hu" = "匈牙利文";
+"Passport.Language.hy" = "亞美尼亞文";
+"Passport.Language.id" = "印尼文";
+"Passport.Language.is" = "冰島文";
+"Passport.Language.it" = "義大利文";
+"Passport.Language.ja" = "日文";
+"Passport.Language.ka" = "喬治亞文";
+"Passport.Language.km" = "高棉文";
+"Passport.Language.ko" = "韓文";
+"Passport.Language.lo" = "寮國文";
+"Passport.Language.lt" = "立陶宛文";
+"Passport.Language.lv" = "拉脫維亞文";
+"Passport.Language.mk" = "馬其頓文";
+"Passport.Language.mn" = "蒙古文";
+"Passport.Language.ms" = "馬來文";
+"Passport.Language.my" = "緬甸文";
+"Passport.Language.ne" = "尼泊爾文";
+"Passport.Language.nl" = "荷蘭文";
+"Passport.Language.pl" = "波蘭文";
+"Passport.Language.pt" = "葡萄牙文";
+"Passport.Language.ro" = "羅馬尼亞文";
+"Passport.Language.ru" = "俄文";
+"Passport.Language.sk" = "斯洛伐克文";
+"Passport.Language.sl" = "斯洛維尼亞文";
+"Passport.Language.th" = "泰文";
+"Passport.Language.tk" = "土庫曼文";
+"Passport.Language.tr" = "土耳其文";
+"Passport.Language.uk" = "烏克蘭文";
+"Passport.Language.uz" = "烏玆別克文";
+"Passport.Language.vi" = "越南文";
+
+"SecureId.NameNative.HeaderEmpty" = "在居住國的姓名";
+"SecureId.NameNative.Header" = "您的%@名字";
+"SecureId.NameNative.Desc.Language" = "以您所在國家的語言表達您的姓名 (%@)。";
+"SecureId.NameNative.Desc.Empty" = "以您所在國家的語言表達您的姓名";
+
+"SecureId.Identity.NameInLatine" = "使用拉丁字母輸入您的姓名";
+
+
+"SecureId.Password.Error.Invalid" = "密碼無效， 請再試一次。";
+"SecureId.Password.Error.Limit" = "超出限制，請稍後再試一次。";
+
+
+"SecureId.InputError.LatinOnly" = "請使用英文。";
+
+"Alert.Confirm.Discard" = "放棄";
+"Alert.Confirm.Stop" = "關閉";
+
+"Appearance.Settings.AutoNight" = "自動夜間模式";
+"Appearance.Settings.AutoNightHeader" = "自動夜間模式";
+"Appearance.Settings.BubblesMode" = "氣泡模式";
+
+"SecureId.Error.ScansLimit" = "您無法上傳超過 20 個檔案";
+"SecureId.Request.Upload.Translation" = "上傳一份證明文件的翻譯";
+"SecureId.Request.Upload.Selfie" = "上傳一張您持有此證件的自拍照";
+
+
+"AutoNight.Settings.Sunrise.Desc" = "計算日落和日出時間需要對您的大致位置進行一次檢查。請注意，該位置僅儲存在您的這個裝置中。\n\n日落：%@\n日出：%@";
+"AutoNight.Settings.Sunrise.Desc.NA" = "計算日落 & 日出時間需要對您的大致位置進行一次檢查。請注意，該位置僅儲存在您的這個裝置中。\n\n日落：N/A\n日出：N/A";
+"AutoNight.Settings.Title" = "自動夜間模式";
+"AutoNight.Settings.From" = "從";
+"AutoNight.Settings.To" = "到";
+"AutoNight.Settings.UpdateLocation" = "更新位置";
+"AutoNight.Settings.SunsetAndSunrise" = "使用本地的日落和日出時間";
+"AutoNight.Settings.Disabled" = "停用";
+"AutoNight.Settings.Scheduled" = "排定";
+"AutoNight.Settings.SystemBased" = "系統";
+"AutoNight.Settings.SystemBasedDesc" = "程式介面將與系統外觀設定相配。";
+"AutoNight.Settings.PreferredTheme" = "偏好的深色主題";
+
+"AutoNight.Settings.UpdateLocation.Error" = "無法確定您的位置。請檢查系統設定，然後重試。";
+
+"DarkMode.Confirm.NightMode.Header" = "夜間模式";
+"DarkMode.Confirm.NightMode.Text" = "您已經開啟了自動夜間模式。如果要變更深色主題設定，您必須先將它關閉。";
+"DarkMode.Confirm.NightMode.OK" = "停用";
+
+"Gallery.Context.Share.ThisPhoto" = "這張照片";
+"Gallery.Context.Share.AllPhotos_countable" = "%d";
+
+
+
+
+
+"Gallery.Context.Share.AllPhotos_other" = "所有 %d 張照片";
+
+"Gallery.Context.Share.ThisFile" = "這個檔案";
+
+"Gallery.Context.Share.ThisVideo" = "這個影片";
+"Gallery.Context.Share.AllVideos_countable" = "%d";
+
+
+
+
+
+"Gallery.Context.Share.AllVideos_other" = "全部 %d 個影片";
+
+"Gallery.Context.Share.AllItems_countable" = "%d";
+
+
+
+
+
+"Gallery.Context.Share.AllItems_other" = "全部 %d 個項目";
+
+
+"Gallery.Context.ShowGallery" = "共享的媒體";
+"Gallery.Context.MainPhoto" = "設為主要照片";
+
+"TouchBar.Favorite" = "最愛";
+"TouchBar.Recent" = "最近的";
+"TouchBar.EditMessage.ReplaceWithMedia" = "用媒體替換";
+"TouchBar.EditMessage.ReplaceWithFile" = "用檔案替換";
+"TouchBar.StartSecretChat" = "開始秘密聊天";
+"TouchBar.Call" = "通話";
+"TouchBar.SearchUsersOrMessages" = "搜尋訊息或用戶";
+"TouchBar.Attach" = "附件";
+"TouchBar.RecentlyUsed" = "最近使用過";
+
+
+"RequestAcces.Error.HaveNotAccess.Call" = "Telegram 需要存取麥克風，以便您可以撥打電話。";
+
+//"RequestAcces.Error.HaveNotAccess.VoiceMessage.Audio" = "Telegram needs access to your microphone to send voice messages";
+//"RequestAcces.Error.HaveNotAccess.VoiceMessage.Audio" = "Telegram needs access to your microphone to send voice messages";
+//"RequestAcces.Error.HaveNotAccess.VoiceMessage.Camera" = "Telegram needs access to your camera to send voice messages";
+
+"RequestAcces.Error.Conirm.Settings" = "設定";
+
+
+"RequestAcces.Error.HaveNotAccess.VideoMessages" = "Telegram 需要存取您的麥克風和攝影機才能錄製視訊訊息。";
+"RequestAcces.Error.HaveNotAccess.VoiceMessages" = "Telegram 需要存取您的麥克風才能錄製語音訊息。";
+
+
+/* new from translations.telegram.org */
+
+"ChatList.Context.PinError" = "抱歉，您無法置頂超過 5 個聊天。";
+"InputData.Date.Day.Placeholder" = "日：";
+"InputData.Date.Month.Placeholder" = "月：";
+"InputData.Date.Year.Placeholder" = "年：";
+"Notifications.Snooze" = "關閉通知";
+"ProxySettings.Item.LastConnection" = "最後連線 %@";
+"SecureId.Add.RentalAgreement" = "新增租約";
+"SecureId.Edit.RentalAgreement" = "編輯租約";
+"_NS103.title" = "編輯";
+"_NS167.title" = "視窗";
+"_NS70.title" = "檢視";
+"_NS81.title" = "檢視";
+"_NS88.title" = "編輯";
+
+
+"SelectAreaControl.Dimension.None" = "無";
+"SelectAreaControl.Dimension.Original" = "原始比例";
+"SelectAreaControl.Dimension.Square" = "正方形";
+
+"Td7-aD-5lo.title" = "視窗";
+
+
+"EditImageControl.Reset" = "重置";
+
+"Edit.Message.EditCurrentPhoto" = "編輯";
+
+"EditImageControl.Confirm.Discard" = "您確定要放棄所有變更嗎？";
+//
+
+
+
+"Message.Status.Archiving" = "%d% 已打包";
+"Message.Status.Archived" = "壓縮檔";
+"Message.Status.ArchivePreparing" = "正在準備打包";
+"Message.Status.Archive.Failed" = "建立壓縮檔失敗";
+"Message.Status.Archive.FailedSizeLimit" = "超出檔案大小限制";
+
+
+"Chat.SendMessageError.TooMuchScheduled" = "抱歉，您無法預約超過 100 則訊息。";
+
+"Chat.SendMessageErrorFlood" = "抱歉，目前您只能傳訊息給互為聯絡人的用戶。";
+"Chat.SendMessageErrorGroupRestricted" = "抱歉，目前您已被禁止在公開群組中傳送訊息。";
+"Chat.SendMessageSlowmodeError" = "慢速模式已啟用。";
+"Generic.ErrorMoreInfo" = "更多資訊";
+
+
+"Forward.ToSavedMessages" = "轉傳到這裡以便快速取用";
+
+
+"GalleryView.FastSave.Image1" = "圖片已儲存到\n[下載]()";
+"GalleryView.FastSave.Video1" = "影片已儲存到\n[下載]()";
+"GalleryView.FastSave.Gif1" = "GIF 已儲存到\n[下載]()";
+
+
+"Localization.Preview.Error.Generic" = "抱歉，這個語言似乎不存在。";
+"ApplyLanguage.UnsufficientDataTitle" = "數據不足";
+"ApplyLanguage.UnsufficientDataText" = "不幸的是，這個自訂語言包（%@）不包含 Telegram macOS 的數據。 您可以使用翻譯平台為此語言包做出貢獻。";
+"ApplyLanguage.UnsufficientDataOpenPlatform" = "翻譯平台";
+
+
+"ApplyLanguage.ChangeLanguageTitle" = "要變更語言嗎？";
+"ApplyLanguage.ChangeLanguageUnofficialText1" = "您即將套用自訂語言包 **%1$@**，其中翻譯已完成 %2$@%。\n\n這將改變整個程式介面的顯示語言。您可以透過[翻譯平台]()對翻譯提出修正建議。\n\n您也可以隨時在「設定」中恢復您原本的語言。";
+"ApplyLanguage.ChangeLanguageOfficialText" = "您即將套用語言包 **%@**。\n\n這將改變整個程式介面的顯示語言。您可以透過[翻譯平台]()對翻譯提出修正建議。\n\n您也可以隨時在「設定」中恢復您原本的語言。\n\n        ";
+"ApplyLanguage.ChangeLanguageAction" = "變更";
+"ApplyLanguage.ApplyLanguageAction" = "變更";
+"ApplyLanguage.ChangeLanguageAlreadyActive" = "您已經在使用這個 %@ 語言包了。";
+
+"Language.OfficialTransationsHeader" = "官方翻譯";
+
+
+
+"TwoStepAuth.EmailCodeInvalid" = "驗證碼無效。請再試一次。";
+"TwoStepAuth.EmailCodeExpired" = "此驗證碼已過期。請再試一次。";
+"UnknownError" = "發生錯誤。請稍後再試。";
+
+
+"Chat.Poll.TotalVotes1_countable" = "%d";
+
+
+
+
+
+"Chat.Poll.TotalVotes1_other" = "%d 人投票";
+
+"Chat.Quiz.TotalVotes_countable" = "%d";
+
+
+
+
+
+"Chat.Quiz.TotalVotes_other" = "%d 人回答";
+
+
+"Chat.Poll.Tooltip.NoVotes" = "沒人投票";
+"Chat.Poll.Tooltip.Votes_countable" = "%d";
+
+
+
+
+
+"Chat.Poll.Tooltip.Votes_other" = "%d 人投票";
+
+
+"Chat.Quiz.Tooltip.NoVotes" = "沒人回答";
+"Chat.Quiz.Tooltip.Votes_countable" = "%d";
+
+
+
+
+
+"Chat.Quiz.Tooltip.Votes_other" = "%d 人回答";
+
+
+"Chat.Poll.TotalVotesEmpty" = "沒人投票";
+"Chat.Poll.TotalVotesResultEmpty" = "沒人投票";
+
+"Chat.Quiz.TotalVotesEmpty" = "沒人回答";
+"Chat.Quiz.TotalVotesResultEmpty" = "沒人回答";
+
+"Chat.Quiz.TextType" = "測驗";
+
+"Chat.Poll.Result" = "%@%";
+"Chat.Poll.Type.Anonymous" = "匿名投票";
+"Chat.Poll.Type.Public" = "記名投票";
+"Chat.Poll.Type.AnonymousQuiz" = "匿名測驗";
+"Chat.Poll.Type.Quiz" = "記名測驗";
+"Chat.Poll.Type.Closed" = "最終結果";
+
+"Chat.Poll.Unvote" = "收回選票";
+"Chat.Poll.Stop" = "停止投票";
+"Chat.Poll.Stop.Confirm.Header" = "停止投票？";
+"Chat.Poll.Stop.Confirm.Text" = "如果您現在關閉了這項投票活動，任何人都不能再投票。這個操作無法復原。";
+
+"Chat.Poll.ViewResults" = "檢視結果";
+"Chat.Poll.SubmitVote" = "投票";
+
+"Chat.Quiz.Stop" = "停止測驗";
+"Chat.Quiz.Stop.Confirm.Header" = "停止測驗？";
+"Chat.Quiz.Stop.Confirm.Text" = "如果您現在停止測驗，就沒有人能再參與了。此操作無法復原。";
+
+
+
+"Language.RemovePack" = "您確定要移除此語言包嗎？";
+
+"NewPoll.Title" = "發起投票";
+"NewPoll.Title.Quiz" = "發起測驗";
+"NewPoll.QuestionHeader" = "問題";
+
+"NewPoll.QuestionHeaderLimit" = "問題 (%d)";
+
+"NewPoll.QuestionPlaceholder" = "請提出一個問題";
+"NewPoll.OptionsHeader" = "投票選項";
+"NewPoll.OptionsPlaceholder" = "選項";
+"NewPoll.OptionsAddOption" = "新增選項…";
+
+"NewPoll.QuizTooltip" = "點選正確答案";
+
+"NewPoll.QuizMultiple.Error" = "測驗模式下的投票只能有一個正確答案。";
+
+
+"NewPoll.OptionsDescription_countable" = "%d";
+
+
+
+
+
+"NewPoll.OptionsDescription_other" = "您可以再新增 %d 個選項。";
+
+
+"NewPoll.Explanation.Header" = "說明";
+"NewPoll.Explanation.Placeholder" = "寫個評論（選填）";
+"NewPoll.Explanation.Desc" = "用戶選擇了錯誤的答案後，會看到這段文字，因此非常適合教育用途。";
+
+"NewPoll.OptionsDescriptionMinimum_countable" = "%d";
+
+
+
+
+
+"NewPoll.OptionsDescriptionMinimum_other" = "不能少於 %d 個選項";
+
+
+
+"NewPoll.OptionsDescriptionLimitReached" = "您加入的選項已達數量上限。";
+
+"NewPoll.DisacardConfirm" = "您確定要放棄這項投票活動？";
+"NewPoll.DisacardConfirmHeader" = "投票";
+
+"NewPoll.DisacardConfirm.Yes" = "放棄";
+"NewPoll.DisacardConfirm.No" = "不";
+
+
+"NewPoll.Anonymous" = "匿名投票";
+"NewPoll.MultipleChoice" = "可多選";
+"NewPoll.Quiz" = "測驗模式";
+"NewPoll.QuizDesc" = "測驗模式下的投票只有一個正確的答案。而用戶無法取消他們的回答。";
+
+"PollResults.Title.Poll" = "投票結果";
+"PollResults.Collapse" = "[摺疊]()";
+"PollResults.Title.Quiz" = "測驗結果";
+
+"PollResults.LoadMore_countable" = "%d";
+
+
+
+
+
+"PollResults.LoadMore_other" = "顯示更多 (%d)";
+
+
+"Passport.ResetPassword.Confirm.Header" = "忘記密碼";
+"Passport.ResetPassword.Confirm.Text" = "上傳到您 Telegram Passport 的所有文件都將消失。而您將能夠上傳新文件。";
+"Passport.ResetPassword.Confirm.OK" = "重置";
+
+
+"CancelResetAccount.Title" = "取消帳號重置";
+"CancelResetAccount.TextSMS" = "有人使用您的電話號碼 **%@** 要求刪除您的 Telegram 帳號和重置您的兩步驟驗證密碼。\n\n如果這不是您，請輸入我們剛才透過簡訊傳給您的驗證碼。您也可以透過**變更電話號碼**來取消，而這個號碼是由您所控制。";
+"CancelResetAccount.Success" = "您帳號 %@ 的刪除過程被取消。";
+
+
+
+"InstantPage.RelatedArticleAuthorAndDateTitle" = "%@ • %@";
+
+
+
+
+
+
+"Chat.Unsupported.UpdatedApp" = "更新";
+"Chat.Message.UnsupportedNew" = "您的 Telegram 版本不支援此訊息。請更新到最新版本。";
+
+
+
+
+"Channel.BanUser.Title" = "封鎖用戶";
+"Channel.BanUser.PermissionsHeader" = "用戶限制";
+"Channel.BanUser.PermissionReadMessages" = "讀取訊息";
+"Channel.BanUser.PermissionSendMessages" = "傳送訊息";
+"Channel.BanUser.PermissionSendMedia" = "傳送媒體";
+"Channel.BanUser.PermissionSendStickersAndGifs" = "傳送貼圖和GIF";
+"Channel.BanUser.PermissionEmbedLinks" = "嵌入連結";
+"Channel.BanUser.PermissionSendPolls" = "傳送投票活動";
+"Channel.BanUser.PermissionChangeGroupInfo" = "變更群組資訊";
+"Channel.BanUser.PermissionAddMembers" = "新增成員";
+"Channel.BanUser.Unban" = "解除封鎖";
+
+
+
+"GroupPermission.NoSendMessages" = "無法傳送訊息";
+"GroupPermission.NoSendMedia" = "無法傳送媒體";
+"GroupPermission.NoSendGifs" = "無法傳送GIF";
+"GroupPermission.NoSendPolls" = "無法傳送投票活動";
+"GroupPermission.NoSendLinks" = "無法嵌入連結";
+"GroupPermission.NoChangeInfo" = "無法變更群組資訊";
+"GroupPermission.NoAddMembers" = "無法新增成員";
+"GroupPermission.NoPinMessages" = "無法置頂訊息";
+
+"GroupPermission.Title" = "例外";
+"GroupPermission.NewTitle" = "新增例外";
+"GroupPermission.SectionTitle" = "這個成員可以做什麼？";
+"GroupPermission.Duration" = "受限時間";
+"GroupPermission.AddedInfo" = " 例外由 %@ %@ 新增";
+"GroupPermission.Delete" = "刪除例外";
+"GroupPermission.ApplyAlertText" = "您已在「%@」中變更了此用戶的權限。\n套用變更？";
+"GroupPermission.ApplyAlertAction" = "套用";
+"GroupPermission.AddSuccess" = "已新增例外";
+"GroupPermission.NotAvailableInPublicGroups" = "公開群組不提供此權限。";
+
+
+
+"Telegram.ChannelPermissionsController" = "權限";
+"GroupInfo.Permissions.SectionTitle" = "這個群組的成員可以做什麼？";
+"GroupInfo.Permissions.Removed" = "被移除的用戶";
+"GroupInfo.Permissions.Exceptions" = "例外";
+"GroupInfo.Permissions.AddException" = "新增例外";
+"GroupInfo.Permissions.SearchPlaceholder" = "搜尋例外";
+
+"GroupInfo.Administrators" = "管理員";
+"GroupInfo.Administrators.Title" = "管理員";
+
+
+
+
+"Time.PreciseDate_m1" = "1月%@日,%@年 %@";
+"Time.PreciseDate_m2" = "2月%@日,%@年 %@";
+"Time.PreciseDate_m3" = "3月%@日,%@年 %@";
+"Time.PreciseDate_m4" = "4月%@日,%@年 %@";
+"Time.PreciseDate_m5" = "5月%@日,%@年 %@";
+"Time.PreciseDate_m6" = "6月%@日,%@年 %@";
+"Time.PreciseDate_m7" = "7月%@日,%@年 %@";
+"Time.PreciseDate_m8" = "8月%@日,%@年 %@";
+"Time.PreciseDate_m9" = "9月%@日,%@年 %@";
+"Time.PreciseDate_m10" = "10月%@日,%@年 %@";
+"Time.PreciseDate_m11" = "11月%@日,%@年 %@";
+"Time.PreciseDate_m12" = "12月%@日,%@年 %@";
+
+"Time.PreciseMediumDate_m1" = "1月%@日的%@";
+"Time.PreciseMediumDate_m2" = "2月%@日的%@";
+"Time.PreciseMediumDate_m3" = "3月%@日的%@";
+"Time.PreciseMediumDate_m4" = "4月%@日的%@";
+"Time.PreciseMediumDate_m5" = "5月%@日的%@";
+"Time.PreciseMediumDate_m6" = "6月%@日的%@";
+"Time.PreciseMediumDate_m7" = "7月%@日的%@";
+"Time.PreciseMediumDate_m8" = "8月%@日的%@";
+"Time.PreciseMediumDate_m9" = "9月%@日的%@";
+"Time.PreciseMediumDate_m10" = "10月%@日的%@";
+"Time.PreciseMediumDate_m11" = "11月%@日的%@";
+"Time.PreciseMediumDate_m12" = "12月%@日的%@";
+
+
+"Time.TodayAt" = "今天%@";
+"Time.YesterdayAt" = "昨天%@";
+
+
+"EmptyGroupInfo.Title" = "您已建立一個群組。";
+"EmptyGroupInfo.Subtitle" = "群組可以有：";
+"EmptyGroupInfo.Line1" = "• 最多 %@ 個成員";
+"EmptyGroupInfo.Line2" = "• 永久的聊天紀錄";
+"EmptyGroupInfo.Line3" = "• 公開連結，例如：t.me/title";
+"EmptyGroupInfo.Line4" = "• 具有不同權限的管理員";
+
+
+"Chat.UndoManager.Undo" = "復原";
+
+
+
+"Chat.UndoManager.ChatsDeleted_countable" = "%d";
+
+
+
+
+
+"Chat.UndoManager.ChatsDeleted_other" = "%d 個聊天已刪除";
+
+"Chat.UndoManager.ChatsHistoryCleared_countable" = "%d";
+
+
+
+
+
+"Chat.UndoManager.ChatsHistoryCleared_other" = "%d 個聊天紀錄已清除";
+
+
+"Chat.UndoManager.ChatsArchived_countable" = "%d";
+
+
+
+
+
+"Chat.UndoManager.ChatsArchived_other" = "%d 個聊天室已封存";
+
+
+"Chat.UndoManager.ChatLeft_countable" = "%d";
+
+
+
+
+
+"Chat.UndoManager.ChatLeft_other" = "%d 個聊天已退出";
+
+"Chat.UndoManager.ChannelLeft_countable" = "%d";
+
+
+
+
+
+"Chat.UndoManager.ChannelLeft_other" = "%d 個頻道已退出";
+
+"Chat.UndoManager.ChannelDeleted_countable" = "%d";
+
+
+
+
+
+"Chat.UndoManager.ChannelDeleted_other" = "%d 個頻道已刪除";
+
+
+
+"Gallery.SaveGif" = "儲存GIF";
+
+"WallpaperPreview.Blurred" = "模糊";
+"WallpaperPreview.Header" = "背景預覽";
+//
+
+
+"Channel.ErrorAddBlocked" = "抱歉，您無法將此用戶加入到頻道。";
+"Group.ErrorAddBlocked" = "抱歉，您無法將此用戶加入到群組中。";
+
+
+"Channel.ErrorAddBlocked" = "抱歉，您無法將此用戶加入到頻道。";
+"Channel.ErrorAddTooMuch" = "抱歉，頻道的前 200 位訂閱者您可以使用手動的方式將其加入，更多則不行。但是，透過頻道的邀請連結，則沒有限制可加入的人數。";
+
+"WallpaperPreview.DoesntExists" = "抱歉，這個背景似乎不存在。";
+"WallpaperPreview.Apply" = "套用";
+"Chat.WP.BackgroundTitle" = "聊天室背景";
+"Chat.WP.VoiceChatTitle" = "視訊聊天";
+
+"Chat.WP.SelectFromFile" = "從檔案中選取";
+"Chat.WP.FirstMessage" = "捏、滑動或雙擊以選擇背景的自訂區域。";
+"Chat.WP.SecondMessage" = "捏我，我在做夢！";
+
+"Chat.WP.Color.FirstMessage" = "按下「套用」以設定背景";
+"Chat.WP.Color.SecondMessage" = "欣賞美景";
+
+"Chat.WP.Pattern.None" = "無";
+"Chat.WP.Pattern" = "圖案";
+"Chat.WP.Color" = "顏色";
+"Chat.WP.Intensity" = "圖案強度";
+
+
+
+"AccountViewController.Update" = "更新";
+"AccountViewController.Desc.Updated" = "已更新";
+"AccountViewController.Desc.Failed" = "更新失敗";
+
+"Update.UpdateTelegram" = "更新 Telegram";
+"AppUpdate.CheckForUpdates" = "檢查更新";
+"AppUpdate.DownloadUpdate" = "下載更新";
+"AppUpdate.RetrievingInfo" = "正在取得資訊…";
+"AppUpdate.Downloading" = "正在下載…";
+"AppUpdate.Unarchiving" = "正在解壓縮…";
+"AppUpdate.Title" = "更新";
+"AppUpdate.Uptodate" = "您的 Telegram 已經是最新版本了。";
+"AppUpdate.NewestAvailable" = "請更新程式以獲取最新功能和改進。";
+"AppUpdate.Title.New" = "新版本 (您的版本：%@)";
+"AppUpdate.Title.Previous" = "之前的版本";
+
+
+"DataAndStorage.Autoplay.Header" = "自動播放媒體";
+"DataAndStorage.Autoplay.GIFs" = "GIF";
+"DataAndStorage.Autoplay.Videos" = "影片";
+"DataAndStorage.Autoplay.SoundOnHover" = "停留時播放聲音";
+"DataAndStorage.Autoplay.SoundOnHover.Desc" = "當您將滑鼠游標移動到影片上時，聲音將開始播放。";
+
+"DataAndStorage.Category.PreloadLargeVideos" = "預先載入較大的影片";
+"DataAndStorage.Category.PreloadLargeVideosDesc" = "預先載入大於 %@ 影片的一部分 (1-2 MB) 以便即時播放。";
+
+
+
+"Confirm.Header.PermissionInlineBotContact" = "分享您的電話號碼？";
+"Confirm.Desc.PermissionInlineBotContact" = "機器人將會知道您的電話號碼。這對於整合其他的服務可能有幫助。";
+
+
+"AutoDownloadSettings.OnForAll" = "所有聊天室都開啟";
+"AutoDownloadSettings.OnFor" = "開啟（%@）";
+"AutoDownloadSettings.TypePrivateChats" = "私聊";
+"AutoDownloadSettings.TypeGroupChats" = "群組";
+"AutoDownloadSettings.TypeChannels" = "頻道";
+"AutoDownloadSettings.UpToForAll" = "最大 %@（所有聊天）";
+"AutoDownloadSettings.UpToFor" = "最大 %@（%@）";
+"AutoDownloadSettings.OffForAll" = "所有聊天室都關閉";
+"AutoDownloadSettings.Delimeter" = ", ";
+"AutoDownloadSettings.LastDelimeter" = "和";
+
+
+
+"LogoutOptions.Title" = "登出";
+"LogoutOptions.AlternativeOptionsSection" = "替代選項";
+"LogoutOptions.AddAccountTitle" = "新增其他帳號";
+"LogoutOptions.AddAccountText" = "登入其他 Telegram 帳號，然後很容易地在帳號之間切換。";
+"LogoutOptions.SetPasscodeTitle" = "設定密碼";
+"LogoutOptions.SetPasscodeText" = "使用密碼鎖定應用程式，讓其他人無法開啟。";
+"LogoutOptions.ClearCacheTitle" = "清除快取";
+"LogoutOptions.ClearCacheText" = "釋放裝置上的磁碟空間；您的媒體將留在雲端。";
+"LogoutOptions.ChangePhoneNumberTitle" = "變更電話號碼";
+"LogoutOptions.ChangePhoneNumberText" = "將您的帳號、聊天室和媒體移動到新號碼。";
+"LogoutOptions.ContactSupportTitle" = "聯絡支援";
+"LogoutOptions.ContactSupportText" = "告訴我們任何問題；登出通常沒有幫助。";
+"LogoutOptions.LogOut" = "登出";
+"LogoutOptions.LogOutInfo" = "提醒您，登出會刪除您在本客戶端的所有秘密聊天。";
+
+
+"Chat.Video.Processing" = "處理中…";
+
+"CallSettings.Title" = "通話設定";
+"CallSettings.Input.Title" = "麥克風";
+"CallSettings.Input.Text" = "輸入裝置";
+"CallSettings.Camera.Title" = "視訊鏡頭";
+"CallSettings.Device.Default" = "預設";
+
+"Telegram.ChannelStatisticsController" = "頻道統計資料";
+
+
+"AccountSettings.AddAccount" = "新增帳號";
+"AccountSettings.DeleteAccount" = "移除帳號";
+
+
+"PasscodeController.Install.Title" = "密碼";
+"PasscodeController.Change.Title" = "更改密碼";
+"PasscodeController.Disable.Title" = "停用密碼";
+
+"PasscodeController.EnterPasscode.Placeholder" = "輸入密碼";
+"PasscodeController.ReEnterPasscode.Placeholder" = "再次輸入新密碼";
+
+"PasscodeController.Current.Placeholder" = "輸入您目前使用的密碼";
+
+
+"PasscodeController.Header.Current" = "目前使用的密碼";
+"PasscodeController.Header.New" = "新密碼";
+
+"PasscodeController.Text" = "要鎖定，請將滑鼠懸停在標籤欄中的「設定」圖示上，然後選擇「鎖定 Telegram」或使用 ⌘ + L 鍵。\n\n注意：如果您忘記了本機密碼，則需要登出 macOS 版 Telegram ，然後重新登入。";
+
+"PasscodeController.Error.Different" = "密碼不一致";
+"PasscodeController.Error.Current" = "無效密碼";
+
+
+"Passlock.EnterYourPasscode" = "輸入您的密碼";
+
+
+"Login.PhoneNumberAlreadyAuthorized" = "這帳號已在此程式登入。";
+"Login.PhoneNumberAlreadyAuthorized.Switch" = "切換";
+
+"InputFormatter.Text.Header" = "文字";
+"InputFormatter.URL.Header" = "網址";
+"InputFormatter.URL.Placeholder" = "網址";
+
+
+"_NS:99.title" = "編輯";
+"_NS:77.title" = "檢視";
+"_NS:163.title" = "視窗";
+
+
+
+"NotificationSettings.ShowNotificationsFrom" = "顯示哪些帳號的通知？";
+"NotificationSettings.AllAccounts" = "所有帳號";
+"NotificationSettings.ShowNotificationsFrom.On" = "如果您只想收到目前帳號的通知，請關閉此功能。";
+"NotificationSettings.ShowNotificationsFrom.Off" = "如果您想收到所有帳號的通知，請將它開啟。";
+
+
+"NotificationSettings.SnoofHeader" = "當應用程式處於聚焦狀態時";
+"NotificationSettings.Snoof" = "顯示通知";
+"NotificationSettings.Snoof.On" = "如果您只想在應用程式處於非使用中狀態時接收通知，請將它關閉。";
+"NotificationSettings.Snoof.Off" = "如果您想要一直收到通知，請啟用此選項。";
+
+
+"Login.Register.Desc" = "輸入您的名字並選擇是否加入大頭貼。";
+"Login.Register.FirstName.Placeholder" = "名字";
+"Login.Register.LastName.Placeholder" = "姓氏";
+"Login.Register.AddPhoto.Placeholder" = "新增\n照片";
+"Login.InvalidFirstNameError" = "無效的名字， 請再試一次。";
+"Login.InvalidLastNameError" = "無效的姓氏， 請再試一次。";
+
+
+"ChatList.EmptyText" = "**您還沒有聊天**\n點擊右上角的鉛筆按鈕開始傳送訊息或轉到「聯絡人」頁面。";
+
+
+"ChatList.Archive.Back" = "聊天";
+
+"ChatList.Popover.ReadAll" = "全部已讀";
+"ChatList.Popover.Confirm" = "您確定要將所有聊天標記為已讀？";
+
+
+"Chat.Tooltip.HiddenForwardName" = "該帳號被用戶隱藏";
+
+
+"GeneralSettings.EmojiPrediction.DisableText" = "要關閉表情符號推薦嗎？您可以隨時在「設定」中重新開啟。";
+"GeneralSettings.EmojiPrediction.Disable" = "停用";
+"GeneralSettings.EmojiPrediction" = "推薦表情符號";
+
+"GeneralSettings.StatusBarItem" = "在選單列顯示圖示";
+
+
+"NotificationSettings.ContactJoined" = "新增聯絡人通知";
+"NotificationSettings.ContactJoinedInfo" = "當您的某個手機聯絡人也開始使用 Telegram 時，您會收到通知。";
+
+
+
+"Chat.ViewBackground" = "檢視背景";
+
+
+"GeneralSettings.BigEmoji" = "大表情符號";
+
+
+"App.Tooltip.VoiceRecord" = "按住可錄音。點擊則切換到錄影。";
+"App.Tooltip.VideoRecord" = "按住可錄影。點擊則切換到錄音。";
+
+
+
+"StatusBar.Activate" = "顯示 Telegram";
+"StatusBar.Hide" = "隱藏";
+"StatusBar.Quit" = "結束";
+
+"Chat.Service.SearchAllMessages" = "搜尋來自 %@ 的訊息";
+
+"TextView.Transform.RemoveAll" = "純文字";
+"ChatList.ArchivedChats" = "封存的聊天";
+
+"Telegram.UpgradeDatabase.Title" = "正在最佳化資料庫";
+"Telegram.UpgradeDatabase.Text" = "此更新後，Telegram 需要最佳化其資料庫。這可能需要幾分鐘，很抱歉給您帶來不便。";
+
+
+"Notification.MarkAsRead" = "標記為已讀";
+
+
+"Archive.Tooltip.First.Title" = "聊天室已封存";
+"Archive.Tooltip.First.Text" = "開啟通知的聊天在收到新訊息時會從封存區移出。";
+
+"Archive.Tooltip.Second.Title" = "聊天室已封存";
+"Archive.Tooltip.Second.Text" = "已關通知的聊天室在收到新訊息時仍會待在封存區。";
+
+"Archive.Tooltip.Third.Title" = "聊天室已封存";
+"Archive.Tooltip.Third.Text" = "您可以將無限數量的已封存聊天置頂。";
+
+"Archive.Tooltip.JustArchive.Title" = "聊天室已封存";
+
+
+"ChatList.RevealAction.Collapse" = "摺疊";
+"ChatList.RevealAction.Expand" = "展開";
+
+
+"Privacy.GroupsAndChannels.InviteToChannelMultipleError" = "抱歉，由於用戶的隱私設定，您無法建立包含這些用戶的群組。";
+"PeerInfo.ScamWarning" = "⚠️ 警告：許多用戶檢舉此帳號涉及詐騙事件。請小心，特別是如果它向你要錢的話。";
+"ChannelInfo.ScamWarning" = "⚠️ 警告：許多用戶檢舉此帳號涉及詐騙事件。請小心，特別是如果它向你要錢的話。";
+"GroupInfo.ScamWarning" = "⚠️ 警告：許多用戶檢舉此帳號涉及詐騙事件。請小心，特別是如果它向你要錢的話。";
+
+"PeerInfo.FakeWarning" = "⚠️  警告：許多用戶檢舉此帳號冒充了名人或組織。";
+"ChannelInfo.FakeWarning" = "⚠️ 警告：許多用戶檢舉此頻道冒充了名人或組織。";
+"GroupInfo.FakeWarning" = "⚠️ 警告：許多用戶檢舉此群組冒充了名人或組織。";
+
+
+"Mark.Scam" = "詐騙";
+"Mark.Fake" = "假冒";
+
+"GeneralSettings.CopyRTF" = "複製文字格式";
+
+
+"ChatList.RevealAction.Hide" = "隱藏";
+"ChatList.RevealAction.Pin" = "固定";
+
+
+"Bot.InlineAuth.Header" = "開啟連結";
+"Bot.InlineAuth.Title" = "您想要開啟 %@ 嗎？";
+"Bot.InlineAuth.Open" = "開啟";
+
+"Bot.InlineAuth.Option.Login" = "登入 %@（以 %@ 的身分）";
+"Bot.InlineAuth.Option.AllowSendMessages" = "允許 %@ 向我傳送訊息";
+
+
+"PeerInfo.Discussion" = "討論";
+"PeerInfo.LinkedChannel" = "綁定的頻道";
+"PeerInfo.Discussion.Add" = "新增";
+"PeerInfo.Discussion.Desc" = "外加一個群組讓眾人可以發表評論。";
+
+
+"DiscussionController.Group.Title" = "已連結的頻道";
+"DiscussionController.Channel.Title" = "討論群";
+
+"DiscussionController.Channel.Empty.Header1" = "選擇一個群組，用來匯集您頻道中的留言。";
+"DiscussionController.Channel.Empty.CreateGroup" = "建立新群組";
+"DiscussionController.Channel.Empty.Description" = "您在頻道中發布的所有內容都將被轉傳到此群組。";
+
+
+"DiscussionController.PrivateGroup" = "私人群組";
+"DiscussionController.PrivateChannel" = "私人頻道";
+
+
+
+
+"Discussion.Set.Modal.OK" = "綁定群組";
+
+
+"Discussion.Set.Modal.Text.PublicChannelPublicGroup" = "您想讓「**%@**」成為頻道「**%@**」的討論區嗎？";
+"Discussion.Set.Modal.Text.PrivateChannelPublicGroup" = "您想讓「%@」成為頻道「%@」的討論區嗎？\n\n此群組的任何成員都能夠看到頻道中的所有訊息。";
+"Discussion.Set.Modal.Text.ChannelPrivateGroup" = "您想讓「**%@**」成為頻道「**%@**」的討論區嗎？\n\n此群組的任何成員將能夠看到頻道中的所有訊息。";
+
+"DiscussionController.Channel.Set.Header1" = "【%@】被選為匯集您頻道中留言的群組。";
+"DiscussionController.Channel.Set.Description" = "您在頻道中發布的所有內容都將被轉傳到此群組。";
+
+"DiscussionController.Channel.Set.UnlinkGroup" = "取消群組綁定";
+
+
+"DiscussionController.Group.Set.Header" = "「**%@**」綁定了本群組以作為它的討論區。";
+"DiscussionController.Group.Set.Description" = "頻道中發布的所有新訊息都將轉傳到此群組。";
+
+"DiscussionController.Group.Set.UnlinkChannel" = "取消頻道綁定";
+
+
+"DiscussionController.Confrim.UnlinkChannel" = "您確定要取消頻道與此群組的連結？";
+"DiscussionController.Confrim.UnlinkGroup" = "您確定要取消群組與此頻道的連結？";
+
+
+"PrivacyAndSecurity.Item.Off" = "關閉";
+"PrivacyAndSecurity.Item.On" = "開啟";
+
+"DiscussionController.Group.Unset.Description" = "頻道成功地取消了連結。";
+
+"DiscussionController.IconText" = "討論";
+
+
+"Channel.EventLog.MessageChangedLinkedGroup" = "%@ 連結了 «%@» 以作為它的討論群。";
+"Channel.EventLog.MessageChangedLinkedChannel" = "%@ 連結了本群組與 «%@» 頻道";
+"Channel.EventLog.MessageChangedUnlinkedGroup" = "%@ 移除了討論群";
+"Channel.EventLog.MessageChangedUnlinkedChannel" = "%@ 取消了本群組與「%@」的連結";
+
+
+"DiscussionController.Error.PreHistory" = "警告：如果您將此私人群組設定為頻道的討論群，則所有頻道訂閱者都可以看見該群組的聊天內容。“新成員加入前的舊訊息”將切換為“顯示”。";
+"DiscussionController.Error.OK" = "繼續";
+
+
+"PreHistory.Confirm.Unlink" = "警告，這將取消群組與「%@」的連結";
+
+
+
+"Channel.Error.DontHavePermissions" = "抱歉，您沒有此操作的必要權限。";
+
+
+
+"Channel.AddBotErrorHaveRights" = "機器人只能被加入到頻道當管理員。";
+"Channel.AddBotAsAdmin" = "設為管理員";
+"Channel.AddBotErrorNoRights" = "機器人只能以管理員身分被加入到頻道中。";
+
+
+"Search.Confirm.ClearHistory" = "您確定要清除您的搜尋紀錄嗎？";
+
+
+"InputPasswordController.Placeholder" = "密碼";
+"InputPasswordController.Error.WrongPassword" = "密碼無效， 請再試一次。";
+
+
+
+"NewContact.Title" = "新增聯絡人";
+
+"NewContact.Phone.Hidden" = "隱藏";
+"NewContact.Phone" = "電話號碼";
+"NewContact.Phone.Hidden.Text" = "當 %@ 將您加為聯絡人時，您的電話號碼將被看見。";
+"NewContact.Exception.ShareMyPhoneNumber" = "分享我的電話號碼";
+"NewContact.Exception.ShareMyPhoneNumber.Desc" = "您可以選擇是否讓 %@ 看見您的電話號碼。";
+
+
+"Channel.TransferOwner.Error.Title" = "安全檢查";
+"Channel.TransferOwner.Error.Text" = "要執行擁有權轉讓須符合以下條件：\n\n•您的帳號已啟用兩步驟驗證超過 7 天。\n\n•您已登入此裝置超過 24 小時。\n\n請您時間到了之後再回來。";
+"Channel.TransferOwner.Error.Enable2FA" = "啟用兩步驟驗證。";
+
+"BlockContact.Title" = "您想要封鎖 %@，不讓其在 Telegram 上傳訊息或打電話給您嗎？";
+"BlockContact.Options.Title" = "管理用戶";
+"BlockContact.Options.Action" = "封鎖 %@";
+"BlockContact.Options.Report" = "檢舉垃圾訊息";
+"BlockContact.Options.DeleteChat" = "刪除此聊天";
+
+
+"Group.TransferOwner.ErrorPrivacyRestricted" = "抱歉，此用戶不是本群組的成員，其隱私設定會阻止您手動將其加入。";
+"Channel.TransferOwner.ErrorPrivacyRestricted" = "抱歉，此用戶不是本頻道的成員，其隱私設定會阻止您手動將其加入。";
+
+"Channel.TransferOwner.ErrorPublicChannelsTooMuch" = "抱歉，目標用戶已經有太多的公開群組或頻道。請先要求他們將現有的群組或頻道之一改為私人的。";
+
+"Group.TransferOwner.ErrorAdminsTooMuch" = "抱歉，此群組管理員太多，無法加入新的擁有者。請先移除一位現有的管理員。";
+"Channel.TransferOwner.ErrorAdminsTooMuch" = "抱歉，此頻道管理員太多，無法加入新的擁有者。請先移除一位現有的管理員。";
+
+"Group.OwnershipTransfer.ErrorLocatedGroupsTooMuch" = "抱歉，目標用戶已經有太多基於位置的群組了。請先要求他們刪除現有的一個。";
+
+
+"Channel.BotDoesntSupportGroups" = "抱歉，這機器人告訴我們它不想被加到群組中。除非它的開發人員改變了主意，否則您無法這麼做。";
+"Channel.TooMuchBots" = "抱歉，這個群組中已經有太多機器人了。請先移除一些您沒有在使用的。";
+
+
+"Channel.Permissions.SlowMode.Text.Off" = "成員在傳下一則訊息前須等待的時間。";
+"Channel.Permissions.SlowMode.Text.Selected" = "成員每 %@只能傳送一則訊息";
+
+"Channel.Permissions.SlowMode.Header" = "慢速模式";
+
+"Channel.SlowMode.ToolTip" = "慢速模式已啟用。\n您可以在 %@:%@ 後傳送下一則訊息";
+
+"SlowMode.Multiple.Error" = "慢速模式已啟用。您一次最多只能傳送一則訊息。";
+"SlowMode.ForwardComment.Error" = "慢速模式已啟用。您無法轉傳附帶評論的訊息";
+"SlowMode.TooLong.Error" = "慢速模式已啟用。此文字內容太長，無法作為一則訊息傳送。";
+
+
+"SlowMode.PreviewSender.FileTooltip" = "慢速模式已啟用。\n您無法一次傳送多個檔案。";
+"SlowMode.PreviewSender.MediaTooltip" = "慢速模式已啟用。\n您無法一次傳送多個媒體。";
+"SlowMode.PreviewSender.Comment" = "慢速模式已啟用。\n您無法發表意見。";
+
+
+"Channel.Permissions.SlowMode.Timeout.Off" = "關閉";
+"Channel.Permissions.SlowMode.Timeout.10s" = "10秒";
+"Channel.Permissions.SlowMode.Timeout.30s" = "30秒";
+"Channel.Permissions.SlowMode.Timeout.1m" = "1分鐘";
+"Channel.Permissions.SlowMode.Timeout.5m" = "5分鐘";
+"Channel.Permissions.SlowMode.Timeout.15m" = "15分鐘";
+"Channel.Permissions.SlowMode.Timeout.1h" = "1小時";
+
+
+"Channel.Admin.Role.Header" = "自訂頭銜";
+"Channel.Admin.Role.Placeholder.Owner" = "擁有者";
+"Channel.Admin.Role.Placeholder.Admin" = "管理員";
+
+"Channel.Admin.Role.Admin.Desc" = "取代原本的「管理員」，而將顯示的頭銜。";
+"Channel.Admin.Role.Owner.Desc" = "取代原本的「擁有者」，而將顯示的頭銜。";
+
+
+"Chat.Send.WithoutSound" = "無聲傳送";
+
+
+"PeerInfo.InviteError.ContactNeeded" = "抱歉，您必須在此用戶的 Telegram 聯絡人中才能將他加入到此群組。\n\n如果您傳送邀請連結給他，他也可以自己加入。";
+
+
+
+"Schedule.SendToday" = "傳送於今天的 %@";
+"Schedule.SendDate" = "傳送於 %@ 的 %@";
+
+"Schedule.SendWhenOnline" = "上線時傳送";
+
+
+"Chat.Send.SetReminder" = "設定提醒";
+"Chat.Send.ScheduledMessage" = "預約傳訊";
+"ScheduleController.Title" = "預約傳訊";
+"ScheduleController.at" = "";
+
+"Chat.Title.Reminder" = "提醒";
+"Chat.Title.ScheduledMessages" = "預約的訊息";
+"Chat.Context.ClearScheduled" = "全部清除";
+"Chat.Context.ClearScheduled.Confirm.Header" = "預約的訊息";
+"Chat.Context.ClearScheduled.Confirm.Info" = "您確定要清除所有預約的訊息嗎？";
+"Chat.Context.ClearScheduled.Confirm.OK" = "全部清除";
+
+"Chat.Date.ScheduledFor" = "%@的預約";
+"Chat.Date.ScheduledUntilOnline" = "預約對方上線時";
+"Chat.Date.ScheduledForToday" = "今天的預約";
+
+
+"Chat.Context.Scheduled.SendNow" = "立即傳送";
+"Chat.Context.Scheduled.Reschedule" = "重新預約";
+
+
+"Chat.Right.Context.ScheduledMessages" = "預約的訊息";
+"Chat.Right.Context.Reminder" = "提醒";
+
+"Notification.Reminder" = "🗓 提醒";
+
+
+"Join.ChannelsTooMuch" = "抱歉，您已經加入太多群組和頻道了。請在加入之前，先退出一些。";
+"Create.ChannelsTooMuch" = "抱歉，您已經加入太多群組和頻道了。請先退出一些，然後才可以建立新的。";
+"Upgrade.ChannelsTooMuch" = "抱歉，您已經加入了太多群組和頻道。由於技術原因，您需要先退出一些，才可以在您的群組中變更此設定。";
+"Invite.ChannelsTooMuch" = "抱歉，目標用戶已加入太多群組和頻道。請他先退出一些。";
+
+"Join.InactiveChannels" = "不活躍的聊天";
+"Chat.Scheduled.InlineButton.Error" = "傳送訊息後，按鈕將立即生效。";
+
+
+"ThemePreview.Title" = "主題預覽";
+"AccentColors.Tinted" = "深色";
+
+
+"TouchBarLabel.ChatActions" = "聊天操作";
+"TouchBarLabel.EmojiAndStickers" = "表情符號＆貼圖";
+"TouchBarLabel.NewChat" = "新增聊天室";
+
+
+"PrivacyPhoneNumberSettings.CustomDisabledHelp" = "將您的號碼加入到手機聯絡資訊的用戶只有在他們是您的聯絡人時，才會在 Telegram 上看到它。";
+
+"PrivacyPhoneNumberSettings.DiscoveryHeader" = "誰可以透過我的電話號碼找到我？";
+
+
+"Theme.GetTheme.Error" = "抱歉，macOS 似乎不存在這個主題。";
+
+"NewTheme.Create" = "建立";
+"NewTheme.Title" = "新增主題";
+"NewTheme.Placeholder" = "主題名稱";
+"NewTheme.Desc" = "此主題將基於您目前的主題。";
+"NewTheme.EmptyTextError" = "名稱不能是空白的。";
+
+
+"Appearance.Theme.Remove" = "移除";
+"Appearance.Theme.Edit" = "編輯";
+"Appearance.NewTheme" = "新增主題";
+"Appearance.Reset" = "回復為預設值";
+"Appearance.ExportTheme" = "匯出主題";
+"Appearance.Theme.Share" = "分享";
+"Appearance.CloudThemes" = "雲端主題";
+
+
+"Appearance.CloudTheme.Unsupported" = "沒有 macOS 版本，點擊以編輯";
+
+"EditTheme.Title" = "編輯主題";
+
+"EditTheme.SelectFile" = "從檔案建立…";
+"EditTheme.SelectUpdatedFile" = "從檔案更新…";
+"EditTheme.SelectUpdatedFileDesc" = "您可以透過上傳來自檔案的手動變更來為所有用戶更新您的主題。";
+"EditTheme.SelectFileDesc" = "此主題將基於您目前所選的主題和背景圖片。或者，您可以使用手動編輯的自訂主題檔。";
+
+"EditTheme.NamePlaceholder" = "主題名稱";
+"EditTheme.SlugPlaceholder" = "短連結";
+"EditTheme.SlugDesc" = "每次您修改主題時，所有使用它的用戶都會獲得更新。任何人都可以使用此連結安裝它。\n\n主題連結必須長於 5 個字元，只允許使用 0-9、a-z 和底線。";
+"EditTheme.SlugError.AlreadyExists" = "此連結已被使用。請換一個不同的。";
+"EditTheme.SlugError.Format" = "抱歉，格式無效";
+"EditTheme.Edit" = "儲存";
+"EditThame.Name.AlreadyTaken" = "抱歉，這個名稱已被佔用。";
+
+
+"Appearance.Confirm.RemoveTitle" = "主題";
+"Appearance.Confirm.RemoveText" = "您確定要移除此主題嗎？";
+"Appearance.Confirm.RemoveOK" = "移除";
+
+
+"Chat.Action.ViewTheme" = "檢視主題";
+
+
+"ThemePreview.UsesCount_countable" = "%d";
+
+
+
+
+
+"ThemePreview.UsesCount_other" = "%d 人正在使用這個主題";
+
+
+
+
+
+
+
+"SelectPeers.Title.SelectChat" = "選擇聊天室";
+"SelectPeers.Title.SearchMembers" = "搜尋成員";
+
+
+"ChatList.Mute.1Hour" = "1 小時";
+"ChatList.Mute.4Hours" = "4 小時";
+"ChatList.Mute.8Hours" = "8 小時";
+"ChatList.Mute.1Day" = "1 天";
+"ChatList.Mute.3Days" = "3 天";
+"ChatList.Mute.Forever" = "永遠";
+
+
+
+
+
+"SettingsSearch.Synonyms.EditProfile.Title" = " ";
+"SettingsSearch.Synonyms.EditProfile.Bio" = " ";
+"SettingsSearch.Synonyms.EditProfile.PhoneNumber" = " ";
+"SettingsSearch.Synonyms.EditProfile.Username" = "暱稱 ";
+"SettingsSearch.Synonyms.EditProfile.AddAccount" = " ";
+"SettingsSearch.Synonyms.EditProfile.Logout" = " ";
+
+"SettingsSearch.Synonyms.Calls.Title" = " ";
+"SettingsSearch.Synonyms.Calls.CallTab" = " ";
+
+"SettingsSearch.Synonyms.Stickers.Title" = " ";
+"SettingsSearch.Synonyms.Stickers.SuggestStickers" = " ";
+"SettingsSearch.Synonyms.Stickers.FeaturedPacks" = " ";
+"SettingsSearch.Synonyms.Stickers.ArchivedPacks" = " ";
+
+"SettingsSearch.Synonyms.Notifications.Title" = " ";
+"SettingsSearch.Synonyms.Notifications.MessageNotificationsAlert" = " ";
+"SettingsSearch.Synonyms.Notifications.MessageNotificationsPreview" = " ";
+"SettingsSearch.Synonyms.Notifications.MessageNotificationsSound" = " ";
+"SettingsSearch.Synonyms.Notifications.MessageNotificationsExceptions" = " ";
+"SettingsSearch.Synonyms.Notifications.GroupNotificationsAlert" = " ";
+"SettingsSearch.Synonyms.Notifications.GroupNotificationsPreview" = " ";
+"SettingsSearch.Synonyms.Notifications.GroupNotificationsSound" = " ";
+"SettingsSearch.Synonyms.Notifications.GroupNotificationsExceptions" = " ";
+"SettingsSearch.Synonyms.Notifications.ChannelNotificationsAlert" = " ";
+"SettingsSearch.Synonyms.Notifications.ChannelNotificationsPreview" = " ";
+"SettingsSearch.Synonyms.Notifications.ChannelNotificationsSound" = " ";
+"SettingsSearch.Synonyms.Notifications.ChannelNotificationsExceptions" = " ";
+"SettingsSearch.Synonyms.Notifications.InAppNotificationsSound" = " ";
+"SettingsSearch.Synonyms.Notifications.InAppNotificationsVibrate" = " ";
+"SettingsSearch.Synonyms.Notifications.InAppNotificationsPreview" = " ";
+"SettingsSearch.Synonyms.Notifications.DisplayNamesOnLockScreen" = " ";
+"SettingsSearch.Synonyms.Notifications.BadgeIncludeMutedChats" = " ";
+"SettingsSearch.Synonyms.Notifications.BadgeIncludeMutedPublicGroups" = " ";
+"SettingsSearch.Synonyms.Notifications.BadgeIncludeMutedChannels" = " ";
+"SettingsSearch.Synonyms.Notifications.BadgeCountUnreadMessages" = " ";
+"SettingsSearch.Synonyms.Notifications.ContactJoined" = " ";
+"SettingsSearch.Synonyms.Notifications.ResetAllNotifications" = " ";
+
+"SettingsSearch.Synonyms.Privacy.Title" = " ";
+"SettingsSearch.Synonyms.Privacy.BlockedUsers" = " ";
+"SettingsSearch.Synonyms.Privacy.LastSeen" = " ";
+"SettingsSearch.Synonyms.Privacy.ProfilePhoto" = " ";
+"SettingsSearch.Synonyms.Privacy.Forwards" = " ";
+"SettingsSearch.Synonyms.Privacy.Calls" = " ";
+"SettingsSearch.Synonyms.Privacy.GroupsAndChannels" = " ";
+"SettingsSearch.Synonyms.Privacy.Passcode" = " ";
+"SettingsSearch.Synonyms.Privacy.PasscodeAndTouchId" = " ";
+"SettingsSearch.Synonyms.Privacy.PasscodeAndFaceId" = " ";
+"SettingsSearch.Synonyms.Privacy.TwoStepAuth" = "密碼";
+"SettingsSearch.Synonyms.Privacy.AuthSessions" = " ";
+"SettingsSearch.Synonyms.Privacy.DeleteAccountIfAwayFor" = " ";
+
+"SettingsSearch.Synonyms.Privacy.Data.Title" = " ";
+"SettingsSearch.Synonyms.Privacy.Data.ContactsReset" = " ";
+"SettingsSearch.Synonyms.Privacy.Data.ContactsSync" = " ";
+"SettingsSearch.Synonyms.Privacy.Data.TopPeers" = " ";
+"SettingsSearch.Synonyms.Privacy.Data.DeleteDrafts" = " ";
+"SettingsSearch.Synonyms.Privacy.Data.ClearPaymentsInfo" = " ";
+"SettingsSearch.Synonyms.Privacy.Data.SecretChatLinkPreview" = " ";
+
+"SettingsSearch.Synonyms.Data.Title" = " ";
+"SettingsSearch.Synonyms.Data.Storage.Title" = "快取";
+"SettingsSearch.Synonyms.Data.Storage.KeepMedia" = " ";
+"SettingsSearch.Synonyms.Data.Storage.ClearCache" = " ";
+"SettingsSearch.Synonyms.Data.NetworkUsage" = " ";
+"SettingsSearch.Synonyms.Data.AutoDownloadUsingCellular" = " ";
+"SettingsSearch.Synonyms.Data.AutoDownloadUsingWifi" = " ";
+"SettingsSearch.Synonyms.Data.AutoDownloadReset" = " ";
+"SettingsSearch.Synonyms.Data.AutoplayGifs" = " ";
+"SettingsSearch.Synonyms.Data.AutoplayVideos" = " ";
+"SettingsSearch.Synonyms.Data.CallsUseLessData" = " ";
+"SettingsSearch.Synonyms.Data.SaveIncomingPhotos" = " ";
+"SettingsSearch.Synonyms.Data.SaveEditedPhotos" = " ";
+"SettingsSearch.Synonyms.Data.DownloadInBackground" = " ";
+
+"SettingsSearch.Synonyms.Proxy.Title" = "SOCKS5\nMTProto";
+"SettingsSearch.Synonyms.Proxy.AddProxy" = " ";
+"SettingsSearch.Synonyms.Proxy.UseForCalls" = " ";
+
+"SettingsSearch.Synonyms.Appearance.Title" = " ";
+"SettingsSearch.Synonyms.Appearance.TextSize" = " 字體";
+"SettingsSearch.Synonyms.Appearance.ChatBackground" = "聊天室背景";
+"SettingsSearch.Synonyms.Appearance.ChatBackground.SetColor" = " ";
+"SettingsSearch.Synonyms.Appearance.ChatBackground.Custom" = " ";
+"SettingsSearch.Synonyms.Appearance.AutoNightTheme" = " ";
+"SettingsSearch.Synonyms.Appearance.ColorTheme" = " ";
+"SettingsSearch.Synonyms.Appearance.ChatMode" = "氣泡";
+
+
+"SettingsSearch.Synonyms.SavedMessages" = " ";
+"SettingsSearch.Synonyms.AppLanguage" = " ";
+"SettingsSearch.Synonyms.Passport" = " ";
+"SettingsSearch.Synonyms.Watch" = "Apple Watch";
+"SettingsSearch.Synonyms.Support" = "支援";
+"SettingsSearch.Synonyms.FAQ" = " ";
+
+
+"SettingsSearch.EmptyItem" = "這裡會顯示搜尋設定和 Telegram 常見問題的結果。";
+
+
+"SettingsSearch.Recent" = "最近的";
+"SettingsSearch.Recent.Clear" = "清除";
+
+
+"InactiveChannels.InactiveWeek_countable" = "%d";
+
+
+
+
+
+"InactiveChannels.InactiveWeek_other" = "不活躍達 %d 週";
+
+"InactiveChannels.InactiveMonth_countable" = "%d";
+
+
+
+
+
+"InactiveChannels.InactiveMonth_other" = "不活躍達 %d 個月";
+
+"InactiveChannels.InactiveYear_countable" = "%d";
+
+
+
+
+
+"InactiveChannels.InactiveYear_other" = "不活躍達 %d 年";
+
+"Chat.Edit.Cancel.Text" = "您確定要放棄所有變更嗎？";
+
+
+"InactiveChannels.Title" = "已達上限";
+"InactiveChannels.OK" = "退出";
+"InactiveChannels.Header" = "最不活躍";
+"InactiveChannels.BlockHeader" = "太多群組與頻道";
+
+
+
+
+"Poll.Forward.Error" = "抱歉，記名投票無法被轉傳到頻道中。";
+
+
+"ChatList.Filter.Back" = "聊天";
+
+"ChatList.Filter.AllChats" = "全部";
+
+//
+
+"ChatList.HideMuted" = "隱藏已關通知";
+"ChatList.UnhideMuted" = "顯示已關通知";
+
+"ChatList.Filter.List.AddNew" = "建立新資料夾";
+"ChatList.Filter.List.Title" = "聊天室分類";
+
+"ChatList.Filter.Title" = "編輯資料夾";
+"ChatList.Filter.NewTitle" = "新資料夾";
+"ChatList.Filter.Done" = "建立";
+
+"ChatList.Filter.Edit" = "編輯";
+"ChatList.Filter.Delete" = "刪除";
+"ChatList.Filter.AddChats" = "新增聊天室";
+"ChatList.Filter.EditFilters" = "編輯資料夾";
+
+"ChatList.Filter.Include.LimitReached" = "抱歉，您最多只能新增 100 個單獨的聊天。請嘗試使用聊天類型。";
+"ChatList.Filter.Exclude.LimitReached" = "抱歉，您最多只能新增 100 個單獨的聊天。請嘗試使用聊天類型。";
+
+
+"ChatList.Filter.ShowMore_countable" = "%d";
+
+
+
+
+
+"ChatList.Filter.ShowMore_other" = "顯示另外 %d 個聊天";
+
+
+"ChatList.Filter.Hide_countable" = "%d";
+
+
+
+
+
+"ChatList.Filter.Hide_other" = "隱藏 %d 個聊天";
+
+
+"ChatList.Filter.SetupEmpty" = "新增資料夾";
+"ChatList.Filter.Setup" = "編輯資料夾";
+"ChatList.Filter.All" = "全部";
+"ChatList.Filter.Contacts" = "聯絡人";
+"ChatList.Filter.NonContacts" = "非聯絡人";
+"ChatList.Filter.Groups" = "群組";
+"ChatList.Filter.SmallGroups" = "小群組";
+"ChatList.Filter.SecretChat" = "秘密聊天";
+"ChatList.Filter.Channels" = "頻道";
+"ChatList.Filter.Bots" = "機器人";
+"ChatList.Filter.MutedChats" = "已關通知";
+"ChatList.Filter.ReadChats" = "已讀";
+"ChatList.Filter.Archive" = "已封存";
+
+"ChatList.Filter.List.Header" = "聊天室分類";
+"ChatList.Filter.List.Desc" = "拖放資料夾以變更順序。右鍵點擊以移除。";
+"ChatList.Filter.List.Remove" = "移除";
+"ChatList.Filter.Recommended.Add" = "新增";
+"ChatList.Filter.Recommended.Header" = "推薦的資料夾";
+"ChatList.Filter.Header" = "為不同的聊天室建立資料夾並進行分類，然後在它們之間快速切換。";
+
+
+"ChatList.Filter.TabBar.Header" = "資料夾標籤的位置";
+"ChatList.Filter.TabBar.OnTheTop" = "標籤在頂部";
+"ChatList.Filter.TabBar.OnTheLeft" = "標籤在左側";
+"ChatList.Filter.TabBar.Desc" = "如果您有很多資料夾，請嘗試將標籤向左移動。";
+
+"ChatList.Add.Placeholder" = "選擇聊天室…";
+"ChatList.Add.Save" = "新增";
+
+"ChatList.Add.TopSeparator" = "聊天室類型";
+"ChatList.Add.BottomSeparator" = "聊天";
+
+"ChatList.CloseFilter" = "顯示全部";
+"ChatList.CloseFilterShort" = "全部";
+
+"ChatList.Filter.Empty" = "**目前沒有聊天與此資料夾相符合。**\n\n[編輯資料夾](filter)";
+"ChatList.Filter.Tooltip" = "您可以透過右鍵點擊來組織聊天。";
+
+"ChatList.Filter.Loading" = "**正在新增聊天室**\n在我們為您填充此資料夾時，請稍等片刻…";
+
+
+"ChatList.Filter.Add.Done" = "完成";
+"ChatList.Filter.Error.LikeChats" = "無法建立包含所有聊天的資料夾。";
+"ChatList.Filter.Error.Empty" = "請將一些聊天或聊天類型加入到資料夾中。";
+
+"ChatList.Filter.Include.Desc" = "選擇將出現在此資料夾中的聊天室和聊天室類型。";
+"ChatList.Filter.Include.AddChat" = "新增聊天室";
+"ChatList.Filter.Include.Header" = "包含的聊天室";
+"ChatList.Filter.Include.RemoveChat" = "移除";
+
+"ChatList.Filter.Exclude.Desc" = "選擇不會出現在此資料夾中的聊天室和聊天室類型。";
+"ChatList.Filter.Exclude.AddChat" = "新增聊天室";
+"ChatList.Filter.Exclude.Header" = "排除的聊天室";
+"ChatList.Filter.Exclude.RemoveChat" = "移除";
+
+
+"ChatList.Filter.ExcludeMuted" = "排除已關通知";
+"ChatList.Filter.ExcludeRead" = "排除已讀";
+
+"ChatList.Filter.Categories.Header" = "包含聊天類型";
+"ChatList.Filter.Name.Header" = "資料夾名稱";
+"ChatList.Filter.Name.Placeholder" = "資料夾名稱";
+
+"ChatList.Filter.Confirm.Remove.Header" = "移除資料夾";
+"ChatList.Filter.Confirm.Remove.Text" = "您確定要移除此資料夾？您的聊天室不會被刪除。";
+"ChatList.Filter.Confirm.Remove.OK" = "刪除";
+
+"ChatList.Filter.Discard.Header" = "放棄變更";
+"ChatList.Filter.Discard.Text" = "您確定要放棄所有變更嗎？";
+"ChatList.Filter.Discard.OK" = "放棄";
+"ChatList.Filter.Discard.Cancel" = "取消";
+
+
+
+"ChatList.Filter.Tilte.Default.Unmuted" = "未關通知的";
+"ChatList.Filter.Tilte.Default.Unread" = "未讀";
+"ChatList.Filter.Tilte.Default.Channels" = "頻道";
+"ChatList.Filter.Tilte.Default.Groups" = "群組";
+"ChatList.Filter.Tilte.Default.Bots" = "機器人";
+"ChatList.Filter.Tilte.Default.Contacts" = "聯絡人";
+"ChatList.Filter.Tilte.Default.NonContacts" = "非聯絡人";
+
+
+"ChannelStats.Title" = "頻道統計資料";
+
+"ChannelStats.ViewsCount_countable" = "%d";
+
+
+
+
+
+"ChannelStats.ViewsCount_other" = "%d 次瀏覽";
+
+
+"ChannelStats.SharesCount_countable" = "%d";
+
+
+
+
+
+"ChannelStats.SharesCount_other" = "%d 次分享";
+
+
+"ChannelStats.Overview" = "總覽";
+"ChannelStats.Overview.Followers" = "訂閱者";
+"ChannelStats.Overview.EnabledNotifications" = "開啟通知";
+"ChannelStats.Overview.ViewsPerPost" = "每則貼文的瀏覽次數";
+"ChannelStats.Overview.SharesPerPost" = "每則貼文的分享次數";
+
+"ChannelStats.Graph.Growth" = "總人數";
+"ChannelStats.Graph.Followers" = "訂閱者";
+"ChannelStats.Graph.ViewsBySource" = "瀏覽來源";
+"ChannelStats.Graph.ViewsByHours" = "每小時瀏覽次數 (UTC)";
+"ChannelStats.Graph.NewFollowersBySource" = "新訂閱者的來源";
+"ChannelStats.Graph.Language" = "語言";
+"ChannelStats.Graph.Notifications" = "通知";
+"ChannelStats.Graph.Interactions" = "互動";
+
+"Graph.ZoomOut" = "縮小";
+"Graph.Total" = "總計";
+
+
+"Stats.MessageTitle" = "訊息統計資料";
+"Stats.MessageOverview" = "總覽";
+"Stats.MessageInteractionsTitle" = "互動";
+"Stats.MessagePublicForwardsTitle" = "公開分享";
+"Stats.MessagePrivateForwardsTitle" = "私下分享";
+"Stats.MessagePublicForwardsTitle.Header" = "公開分享";
+
+
+"ChannelStats.Recent.Header" = "最近的貼文";
+
+"Chat.Emoji.Dice.ResultNew" = "傳送骰子表情符號以擲骰子。";
+"Chat.Emoji.Dart.ResultNew" = "傳送一個飛鏢表情符號以試試您的運氣。";
+"Chat.Emoji.Def.ResultNew" = "傳送一個 %@ 表情符號以試試您的運氣。";
+"Chat.Emoji.Send" = "傳送";
+
+"Channel.Stats.Loading" = "**正在準備統計資料**\n在我們為您產生統計圖表時，請稍等片刻。";
+
+
+"GroupInfo.AddUserLeftError" = "抱歉，如果某人退出了群組，您必須是他的 Telegram 聯絡人才能將其加回。";
+"ChannelInfo.AddUserLeftError" = "抱歉，如果某人退出了頻道，您必須是他的 Telegram 聯絡人才能將其加回。";
+
+
+"GeneralSettings.ShortcutsHeader" = "快捷鍵";
+"GeneralSettings.Shortcuts" = "鍵盤快捷鍵";
+
+"ShortcutsController.Title" = "快捷鍵";
+
+"ShortcutsController.Chat" = "聊天";
+"ShortcutsController.Chat.OpenInfo" = "開啟資訊頁面";
+"ShortcutsController.Chat.SelectMessageToReply" = "選擇要回覆的訊息";
+"ShortcutsController.Chat.EditLastMessage" = "編輯最後一則訊息";
+"ShortcutsController.Chat.RecordVoiceMessage" = "錄製語音或視訊訊息";
+"ShortcutsController.Chat.SearchMessages" = "搜尋訊息";
+
+
+"ShortcutsController.Search" = "搜尋";
+"ShortcutsController.Search.QuickSearch" = "快速搜尋";
+"ShortcutsController.Search.GlobalSearch" = "全域搜尋";
+
+
+"ShortcutsController.VideoChat" = "視訊聊天";
+"ShortcutsController.VideoChat.ToggleCamera" = "切換視訊鏡頭";
+"ShortcutsController.VideoChat.ToggleScreencast" = "切換螢幕共享";
+
+
+"ShortcutsController.Markdown" = "MARKDOWN";
+"ShortcutsController.Markdown.Bold" = "粗體";
+"ShortcutsController.Markdown.Italic" = "斜體";
+"ShortcutsController.Markdown.Monospace" = "等寬";
+"ShortcutsController.Markdown.Hyperlink" = "連結";
+"ShortcutsController.Markdown.Strikethrough" = "刪除線";
+
+"ShortcutsController.Mouse" = "滑鼠";
+"ShortcutsController.Mouse.FastReply" = "快速回覆";
+"ShortcutsController.Mouse.FastReply.Value" = "雙擊";
+"ShortcutsController.Mouse.ScheduleMessage" = "預約傳訊";
+"ShortcutsController.Mouse.ScheduleMessage.Value" = "選項點擊「傳送訊息」";
+
+
+"ShortcutsController.Gestures" = "手勢";
+"ShortcutsController.Gestures.ChatAction" = "聊天列表操作";
+"ShortcutsController.Gestures.ChatAction.Value" = "向左或向右滑動";
+"ShortcutsController.Gestures.Reply" = "回覆";
+"ShortcutsController.Gestures.Reply.Value" = "從右向左滑動";
+"ShortcutsController.Gestures.Stickers" = "貼圖/表情符號/GIF面板";
+"ShortcutsController.Gestures.Stickers.Value" = "向左或向右滑動";
+"ShortcutsController.Gestures.Navigation" = "返回";
+"ShortcutsController.Gestures.Navigations.Value" = "從左向右滑動";
+
+
+"ShortcutsController.Others" = "其他";
+"ShortcutsController.Others.LockByPasscode" = "使用密碼鎖定";
+
+"psa.chatlist" = "公共服務公告";
+"psa.text" = "此訊息在您的聊天列表中為您提供公共服務公告";
+"psa.title" = "公共服務公告通知";
+"psa.chat.title" = "公共服務公告";
+"psa.chat.text.covid" = "此訊息為您提供正在發生的新冠肺炎疫情相關公共服務公告。了解有關此計劃的更多資訊：https://telegram.org/blog/coronavirus";
+"psa.title.bubbles" = "公共服務公告通知\n來自：[%@]()";
+
+"PeerInfo.Group.Menu.Promote" = "晉升";
+"PeerInfo.Group.Menu.Restrict" = "限制";
+"PeerInfo.Group.Menu.Delete" = "刪除";
+
+"ChatList.Filter.AddToFolder" = "加入到資料夾…";
+"ChatList.Filter.RemoveFromFolder" = "從資料夾中移除";
+"MessageTimer.ShortSeconds" = "%@秒";
+"MessageTimer.ShortMinutes" = "%@分";
+"MessageTimer.ShortHours" = "%@小時";
+"MessageTimer.ShortDays" = "%@天";
+"MessageTimer.ShortWeeks" = "%@週";
+"MessageTimer.ShortMonths" = "%@月";
+
+"GifsPane.Trending" = "熱門GIF";
+"GifsPane.Reactions" = "反應";
+
+
+"Text.View.Transformations" = "文字格式";
+
+
+"PrivateChannel.Peek.Header" = "加入頻道";
+"PrivateChannel.Peek.Text" = "這是私人頻道。加入它才可以瀏覽內容。";
+"PrivateChannel.Peek.OK" = "加入頻道";
+"PrivateChannel.Peek.Cancel" = "取消";
+
+
+"MediaSender.DiscardChanges.Header" = "放棄變更";
+"MediaSender.DiscardChanges.Text" = "您確定要放棄所有變更嗎？";
+"MediaSender.DiscardChanges.OK" = "放棄";
+
+
+"GroupStats.Title" = "群組統計資料";
+
+
+"Stats.GroupOverview" = "總覽";
+"Stats.GroupMembers" = "成員";
+"Stats.GroupMessages" = "訊息";
+"Stats.GroupViewers" = "瀏覽訊息的成員";
+"Stats.GroupPosters" = "傳送訊息的成員";
+
+"Stats.GroupGrowthTitle" = "總人數";
+"Stats.GroupMembersTitle" = "群組成員";
+"Stats.GroupNewMembersBySourceTitle" = "新成員來源";
+"Stats.GroupLanguagesTitle" = "成員的主要語言";
+"Stats.GroupMessagesTitle" = "訊息";
+"Stats.GroupActionsTitle" = "操作";
+"Stats.GroupTopHoursTitle" = "活躍時段";
+"Stats.GroupTopWeekdaysTitle" = "每週活躍的日子";
+"Stats.GroupTopPostersTitle" = "活躍成員";
+"Stats.GroupTopAdminsTitle" = "活躍管理員";
+"Stats.GroupTopInvitersTitle" = "活躍邀請者";
+
+
+
+"Stats.GroupTopPosterMessages_countable" = "%d";
+
+
+
+
+
+"Stats.GroupTopPosterMessages_other" = "%d 則訊息";
+
+"Stats.GroupTopPosterChars_countable" = "%d";
+
+
+
+
+
+"Stats.GroupTopPosterChars_other" = "每則訊息平均 %d 個字元";
+
+"Stats.GroupTopPoster.History" = "聊天紀錄";
+"Stats.GroupTopPoster.Promote" = "晉升";
+
+
+"Stats.GroupTopAdminDeletions_countable" = "%d";
+
+
+
+
+
+"Stats.GroupTopAdminDeletions_other" = "%d 次刪除";
+
+
+"Stats.GroupTopAdminKicks_countable" = "%d";
+
+
+
+
+
+"Stats.GroupTopAdminKicks_other" = "%d 次封鎖";
+
+"Stats.GroupTopAdminBans_countable" = "%d";
+
+
+
+
+
+"Stats.GroupTopAdminBans_other" = "%d 次限制";
+
+"Stats.GroupTopAdmin.Actions" = "操作";
+"Stats.GroupTopAdmin.Promote" = "晉升";
+
+"Stats.GroupTopInviterInvites_countable" = "%d";
+
+
+
+
+
+"Stats.GroupTopInviterInvites_other" = "%d 次邀請";
+
+"Stats.GroupTopInviter.History" = "聊天紀錄";
+"Stats.GroupTopInviter.Promote" = "晉升";
+
+"Stats.ShowMore_countable" = "%d";
+
+
+
+
+
+"Stats.ShowMore_other" = "顯示另外 %d 人";
+
+
+"NotificationSettings.SendMessageEffect" = "已傳送的訊息";
+"NotificationSettings.SoundEffects" = "音效";
+
+"Alert.HideNewChats.Header" = "隱藏新聊天？";
+"Alert.HideNewChats.Text" = "您持續收到了許多非聯絡人的新聊天。您是否想要**自動關閉通知**並**封存**這類型的聊天？";
+"Alert.HideNewChats.Cancel" = "取消";
+"Alert.HideNewChats.OK" = "前往設定";
+
+
+"System.MemoryWarning.Header" = "警告！";
+"System.MemoryWarning.Text" = "您的 Mac 磁碟空間不足。請透過刪除不必要的檔案或變更快取設定來釋放一些空間。\n\n可用空間：~%@";
+"System.MemoryWarning.FreeSpace" = "%d GB";
+"System.MemoryWarning.LessThen1GB" = "小於1GB";
+
+"System.MemoryWarning.OK" = "好";
+"System.MemoryWarning.DataAndStorage" = "App 數據儲存";
+
+
+"VideoAvatar.ChooseDesc.Profile" = "選擇動態大頭貼的涵蓋範圍";
+"VideoAvatar.ChooseDesc.Group" = "選擇群組動態大頭貼的涵蓋範圍";
+"VideoAvatar.ChooseDesc.Channel" = "選擇頻道動態大頭貼的涵蓋範圍";
+"VideoAvatar.Button.Set" = "設定";
+"VideoAvatar.Button.Cancel" = "取消";
+
+
+"Call.Accept" = "接聽";
+"Call.Decline" = "掛斷";
+"Call.End" = "結束";
+"Call.Camera" = "視訊鏡頭";
+"Call.Mute" = "靜音";
+"Call.Recall" = "重撥";
+"Call.Close" = "關閉";
+
+"Call.Screen" = "螢幕";
+
+//"RequestAcces.Error.HaveNotAccess.Call" = "Telegram needs access to your microphone to make calls";
+
+"Call.Screen.Error" = "Telegram 需要存取以螢幕共享。";
+"Call.Camera.Error" = "Telegram 需要存取攝影機以進行視訊通話。";
+
+"Call.VideoPaused" = "%@ 的視訊已暫停";
+
+
+"Call.CameraUnavailable" = "視訊鏡頭無法使用\n[設定]()";
+"Call.Toast.CameraOff" = "%@的鏡頭未開啟";
+"Call.Toast.MicroOff" = "%@的麥克風未開啟";
+"Call.Toast.LowBattery" = "%@ 的電池電量過低";
+
+
+"Message.Text.CopyMusicTitle" = "複製歌曲名稱";
+
+"ShareCallLogs" = "分享通話記錄";
+"Call.Context.Rate" = "評分通話品質";
+
+"Call.SameDevice.Error" = "抱歉，您無法在同一裝置上的兩個帳號之間撥打電話。";
+
+
+"Bot.TransferOwner.Error.Title" = "安全檢查";
+"Bot.TransferOwner.Error.Text" = "要執行擁有權轉讓須符合以下條件：\n\n•您的帳號已啟用兩步驟驗證超過 7 天。\n\n•您已登入此裝置超過 24 小時。\n\n請您時間到了之後再回來。";
+"Bot.TransferOwner.Error.Enable2FA" = "啟用兩步驟驗證。";
+
+
+"Bot.TransferOwnership.Password.Desc" = "請輸入您的兩步驟驗證密碼以完成轉讓。";
+"Bot.TransferOwnership.Password.Title" = "兩步驟驗證";
+
+
+"Message.Context.ViewReplies_countable" = "%d";
+
+
+
+
+
+"Message.Context.ViewReplies_other" = "查看 %d 則回覆";
+
+
+"Message.Context.ViewComments_countable" = "%d";
+
+
+
+
+
+"Message.Context.ViewComments_other" = "查看 %d 則留言";
+
+"Message.Context.ViewThread" = "查看討論串";
+
+
+"Search.Filter.ClearFilter" = "清除篩選";
+"Search.Filter.Photos" = "照片";
+"Search.Filter.Videos" = "影片";
+"Search.Filter.Links" = "連結";
+"Search.Filter.Music" = "音樂";
+"Search.Filter.Voice" = "語音";
+"Search.Filter.GIFs" = "GIF";
+"Search.Filter.Files" = "檔案";
+
+
+
+"Channel.Comments.LeaveComment" = "發表意見";
+
+
+"Channel.Comments.Count_countable" = "%d";
+
+
+
+
+
+"Channel.Comments.Count_other" = "%d 則留言";
+
+
+"Channel.Comments.Short.LeaveComment" = "留言";
+"Channel.Comments.Short.Count_countable" = "%d";
+
+
+
+
+
+"Channel.Comments.Short.Count_other" = "%d";
+
+
+"Chat.Empty.Comments" = "這裡還沒有留言";
+"Chat.Empty.Replies" = "這裡還沒有回覆";
+
+
+"Chat.Comments.Kicked" = "您已經被禁止留言。";
+
+
+
+"Chat.Title.Replies_countable" = "%d";
+
+
+
+
+
+"Chat.Title.Replies_other" = "%d 則回覆";
+
+
+"Chat.Title.Comments_countable" = "%d";
+
+
+
+
+
+"Chat.Title.Comments_other" = "%d 則留言";
+
+"PeerMedia.Title.Search.Media_countable" = "%d";
+
+
+
+
+
+"PeerMedia.Title.Search.Media_other" = "%d 個媒體";
+
+
+"PeerMedia.Title.Search.Photos_countable" = "%d";
+
+
+
+
+
+"PeerMedia.Title.Search.Photos_other" = "%d 張照片";
+
+"PeerMedia.Title.Search.Videos_countable" = "%d";
+
+
+
+
+
+"PeerMedia.Title.Search.Videos_other" = "%d 個影片";
+
+"PeerMedia.Title.Search.Links_countable" = "%d";
+
+
+
+
+
+"PeerMedia.Title.Search.Links_other" = "%d 個連結";
+
+"PeerMedia.Title.Search.Music_countable" = "%d";
+
+
+
+
+
+"PeerMedia.Title.Search.Music_other" = "%d 個音訊";
+
+"PeerMedia.Title.Search.GIFs_countable" = "%d";
+
+
+
+
+
+"PeerMedia.Title.Search.GIFs_other" = "%d 張GIF";
+
+"PeerMedia.Title.Search.Files_countable" = "%d";
+
+
+
+
+
+"PeerMedia.Title.Search.Files_other" = "%d 個檔案";
+
+
+"Chat.CommentsHeader.Empty" = "這裡還沒有留言...";
+"Chat.CommentsHeader.Full" = "討論已開始";
+
+
+"Chat.Replies.Desc" = "此聊天可幫助您追踪對頻道中留言的回覆。";
+
+
+"Chat.Discussion.MessageDeleted" = "抱歉，此貼文已從討論群中移除。";
+
+
+"Chat.Title.Discussion" = "討論";
+
+"Chat.Title.PinnedMessages_countable" = "%d";
+
+
+
+
+
+"Chat.Title.PinnedMessages_other" = "%d 則置頂訊息";
+
+"Chat.Pinned.UnpinAll_countable" = "%d";
+
+
+
+
+
+"Chat.Pinned.UnpinAll_other" = "取消所有置頂訊息，共計有 %d 則";
+
+"Chat.Pinned.DontShow" = "不顯示置頂訊息";
+
+
+"Chat.File.QuickLook.Svg" = "打開此檔案可能會將您的 IP 位址暴露給其建立者。要繼續嗎？";
+
+"Chat.UnpinAllMessagesConfirmation_countable" = "%d";
+
+
+
+
+
+"Chat.UnpinAllMessagesConfirmation_other" = "您想要取消此聊天中的所有置頂訊息，共計有 %d 則嗎？";
+
+"Chat.Context.CancelEditing" = "取消編輯";
+
+
+
+
+"CallSettings.InputLevel" = "輸入音量";
+"Chat.GroupCall.Join" = "加入";
+"Chat.GroupCall.Title" = "視訊聊天";
+"Chat.GroupCall.Live.Title" = "直播";
+
+"Chat.GroupCall.Scheduled.Title" = "預約的視訊聊天";
+
+"Chat.GroupCall.Scheduled.Status" = "%@開始";
+
+
+"Chat.GroupCall.Members_countable" = "%d";
+
+
+
+
+
+"Chat.GroupCall.Members_other" = "%d 位參與者";
+
+
+"Chat.GroupCall.Speakers_countable" = "%d";
+
+
+
+
+
+"Chat.GroupCall.Speakers_other" = "%d 位參與者發言";
+
+
+"VoiceChat.Status.Connecting" = "連線中…";
+
+"VoiceChat.Status.Members_countable" = "%d";
+
+
+
+
+
+"VoiceChat.Status.Members_other" = "%d 位參與者";
+"VoiceChat.LeaveCall" = "退出";
+
+"VoiceChat.Status.Loading" = "連線中…";
+
+"VoiceChat.Leave" = "退出";
+"VoiceChat.Settings" = "設定";
+"VoiceChat.ClickToUnmute" = "取消靜音";
+"VoiceChat.ClickToUnmute.Secondary.Press" = "按一下空白鍵或 %@ 鍵";
+"VoiceChat.ClickToUnmute.Secondary.Hold" = "按住空白鍵或 %@ 鍵";
+"VoiceChat.ClickToUnmute.Secondary.HoldDefault" = "或按住空白鍵";
+"VoiceChat.ClickToUnmute.Secondary.PressDefault" = "或按一下空白鍵";
+
+"VoiceChat.YouLive" = "您在線上";
+"VoiceChat.Connecting" = "連線中…";
+"VoiceChat.ListenMode" = "您處於只能聆聽的模式";
+
+"VoiceChat.StartNow" = "立即開始";
+
+
+"VoiceChat.SetReminder" = "設定提醒";
+"VoiceChat.RemoveReminder" = "取消提醒";
+
+
+"VoiceChat.RemovePeerRemove" = "移除";
+
+"VoiceChat.UserInvited" = "您邀請了 **%@** 加入視訊聊天";
+
+"Chat.Service.VoiceChatInvitation" = "%1$@ 邀請了 %2$@ 加入[視訊聊天](open)";
+"Chat.Service.VoiceChatInvitationByYou" = "您邀請了 %1$@ 加入[視訊聊天](open)";
+"Chat.Service.VoiceChatInvitationForYou" = "%1$@ 邀請了您加入[視訊聊天](open)";
+
+"ChatList.Service.VoiceChatInvitation" = "%1$@ 邀請了 %2$@ 加入視訊聊天";
+"ChatList.Service.VoiceChatInvitationByYou" = "您邀請了 %1$@ 加入視訊聊天";
+"ChatList.Service.VoiceChatInvitationForYou" = "%1$@ 邀請了您加入視訊聊天";
+
+
+"Chat.Service.VoiceChatStarted" = "%1$@ 發起了[視訊聊天](open)";
+"Chat.Service.VoiceChatStartedYou" = "您發起了[視訊聊天](open)";
+
+"Chat.Service.VoiceChatScheduled" = "%1$@ 預約了%2$@要進行[視訊聊天](open)";
+"Chat.Service.VoiceChatScheduledYou" = "您預約了%1$@要進行[視訊聊天](open)";
+
+
+"ChatList.Service.VoiceChatStarted" = "%1$@ 發起了視訊聊天";
+"ChatList.Service.VoiceChatStartedYou" = "您發起了視訊聊天";
+
+"ChatList.Service.VoiceChatScheduled" = "%1$@ 預約%2$@視訊聊天";
+"ChatList.Service.VoiceChatScheduledYou" = "您預約%2$@視訊聊天";
+
+"Chat.Service.VoiceChatFinished.Channel" = "直播結束 (%1$@)";
+"Chat.Service.VoiceChatStarted.Channel" = "[直播](open)開始";
+"ChatList.Service.VoiceChatStarted.Channel" = "視訊聊天開始";
+"ChatList.Service.VoiceChatFinished.Channel" = "視訊聊天結束 (%1$@)";
+
+"Chat.Service.VoiceChatScheduled.Channel" = "預定%@進行[直播](open)";
+"ChatList.Service.VoiceChatScheduled.Channel" = "預定%@進行直播";
+
+
+"Chat.Service.VoiceChatFinished" = "%1$@ 結束了視訊聊天 (%2$@)";
+"Chat.Service.VoiceChatFinishedYou" = "您結束了視訊聊天 (%@)";
+
+
+"VoiceChat.Settings.Title" = "視訊聊天設定";
+"VoiceChat.Settings.End" = "結束視訊聊天";
+"VoiceChat.Settings.End.Confirm" = "您確定要結束此視訊聊天？";
+"VoiceChat.Settings.End.Confirm.Title" = "結束視訊聊天";
+"VoiceChat.Settings.End.Confirm.OK" = "結束";
+
+"VoiceChat.GroupMembers" = "群組成員";
+
+
+"VoiceChat.Settings.AllMembers" = "新參與者可發言";
+"VoiceChat.Settings.OnlyAdmins" = "新參與者被靜音";
+
+"VoiceChat.Settings.PushToTalk.Title" = "麥克風控制";
+"VoiceChat.Settings.PushToTalk.Enabled" = "隨按即說";
+
+"VoiceChat.Settings.InputMode" = "隨按即說模式";
+"VoiceChat.Settings.InputMode.Always" = "按下然後鬆開";
+"VoiceChat.Settings.InputMode.PushToTalk" = "按住不放";
+"VoiceChat.Settings.InputMode.SoundEffects" = "音效";
+
+"VoiceChat.Settings.Output" = "輸出";
+"VoiceChat.Settings.Output.Device" = "輸出裝置";
+
+"VoiceChat.Settings.PushToTalk" = "快捷鍵";
+"VoiceChat.Settings.PushToTalk.EditKeybind" = "編輯快捷鍵";
+"VoiceChat.Settings.PushToTalk.StopRecording" = "取消";
+"VoiceChat.Settings.PushToTalk.Undefined" = "未定義";
+
+"VoiceChat.MutePeer" = "靜音";
+"VoiceChat.UnmutePeer" = "允許發言";
+"VoiceChat.RemovePeer" = "移除";
+"VoiceChat.OpenProfile" = "開啟資料頁";
+"VoiceChat.ShowInfo" = "顯示資訊";
+
+"VoiceChat.RemovePeer.Confirm.Channel" = "您要從頻道中移除 %1$@ 嗎？";
+"VoiceChat.RemovePeer.Confirm" = "您確定要從群組中移除 %1$@ 嗎？";
+"VoiceChat.RemovePeer.Confirm.OK" = "移除";
+"VoiceChat.RemovePeer.Confirm.Cancel" = "取消";
+
+
+"VoiceChat.Settings.PushToTalk.Access" = "如果您希望即使在使用其他 App 時，此 Telegram 的快捷鍵也能被正常操作，\n請在系統的隱私權設定中，授予 Telegram [輸入監控](input)的權限。";
+"VoiceChat.Settings.PushToTalk.Access.Old" = "請在系統[隱私設定](access)中允許 Telegram 對裝置的存取權。\n\n可能需要重新啟動應用程式。";
+"VoiceChat.Settings.PushToTalk.Desc" = "當視訊聊天的視窗處於焦點狀態時，無論此設定為何，您都可以使用空白鍵。";
+
+
+"VoiceChat.Settings.Performance.Header" = "性能";
+"VoiceChat.Settings.Performance.Desc" = "停用噪聲抑制可以提高性能。";
+
+"VoiceChat.Settings.NoiseSuppression" = "噪音抑制";
+"VoiceChat.Settings.ReduceMotion" = "減少動態效果";
+
+
+
+"VoiceChat.RequestAccess" = "Telegram 需要存取您的麥克風，以便您可以發言。";
+
+
+"VoiceChat.Join.Error.TooMany" = "抱歉，此視訊聊天目前有太多參與者。請稍後再試。";
+
+
+"VoiceChat.AnonymousDisabledAlertText" = "抱歉，您不能以匿名管理員身分加入視訊聊天。";
+"VoiceChat.ChatFullAlertText" = "抱歉，此視訊聊天目前有太多參與者。";
+
+
+"VoiceChat.End.Title" = "退出視訊聊天";
+"VoiceChat.End.Text" = "您確定要退出此視訊聊天？";
+"VoiceChat.End.Third" = "結束視訊聊天";
+"VoiceChat.End.OK" = "退出";
+
+"VoiceChat.Title.End" = "退出";
+
+"VoiceChat.Status.Invited" = "已邀請";
+"VoiceChat.Title.Invited" = "已邀請";
+
+"VoiceChat.Title.InviteMembers" = "邀請成員";
+
+"Channel.AdminLog.StartedVoiceChat" = "%1$@ 發起了視訊聊天";
+"Channel.AdminLog.EndedVoiceChat" = "%1$@ 結束了視訊聊天";
+"Channel.AdminLog.MutedParticipant" = "%1$@ 在視訊聊天中靜音了 %2$@";
+"Channel.AdminLog.UnmutedMutedParticipant" = "%1$@ 在視訊聊天中取消了 %2$@ 的靜音";
+"Channel.AdminLog.AllowedNewMembersToSpeak" = "%1$@ 允許了新的視訊聊天參與者發言";
+"Channel.AdminLog.MutedNewMembers" = "%1$@ 靜音了新的視訊聊天參與者";
+
+
+"VoiceChat.InviteMemberToGroupFirstText" = "%1$@ 還不是 \"%2$@\" 的成員。要將其新增至群組嗎？";
+"VoiceChat.InviteMemberToGroupFirstAdd" = "新增";
+
+
+"VoiceChat.Invite.Chats" = "聊天";
+"VoiceChat.Invite.Contacts" = "聯絡人";
+"VoiceChat.Invite.GroupMembers" = "群組成員";
+"VoiceChat.Invite.GlobalSearch" = "全域搜尋";
+"VoiceChat.Invite.Title" = "新增成員";
+"VoiceChat.Invite.Channels.Title" = "邀請成員";
+
+"VoiceChat.Invite.CopyInviteLink" = "複製邀請連結";
+
+"VoiceChat.Invite.CopyListenersLink" = "複製聽眾連結";
+"VoiceChat.Invite.CopySpeakersLink" = "複製講者連結";
+
+"VoiceChat.Invite.Invite" = "傳送";
+
+
+"VoiceChat.Invite.Confirm.Header" = "視訊聊天";
+"VoiceChat.Invite.Confirm.Text" = "傳送邀請連結到選定的聊天？";
+"VoiceChat.Invite.Confirm.OK" = "傳送";
+"VoiceChat.Invite.Confirm.Third" = "傳送講者連結";
+
+"VoiceChat.Invite.InviteMembers" = "邀請成員";
+
+
+"VoiceChat.MutedByAdmin" = "您目前只是聽眾";
+"VoiceChat.ClickToRaiseHand" = "點擊，如果您想發言";
+
+"VoiceChat.RaisedHand.Title" = "您已舉手請求發言";
+"VoiceChat.RaisedHand.Text" = "我們會讓主持人知道";
+
+
+"VoiceChat.Chat.StartNew" = "視訊聊天已結束。發起一個新的？";
+"VoiceChat.Chat.StartNew.OK" = "發起";
+"VoiceChat.Chat.Ended" = "視訊聊天結束。";
+
+
+"VoiceChat.Video.VideoSource" = "視訊來源";
+
+
+"DeleteChat.DeleteGroupForAll" = "為所有成員刪除";
+
+
+"Toast.Muted" = " 已靜音";
+"Toast.Unmuted" = "已取消靜音";
+
+
+"ExportedInvitation.Title" = "邀請連結";
+"ExportedInvitation.Status.Revoked" = " 已撤銷";
+"ExportedInvitation.Status.Expired" = "已失效";
+"ExportedInvitation.Status.ExpiresIn" = "%@後過期";
+
+
+"ExportedInvitation.LinkCreatedBy" = "連結建立者";
+"ExportedInvitation.LinkCreatedBy" = "連結建立者";
+
+
+"ExportedInvitation.PeopleJoined_countable" = "%d";
+
+
+
+
+
+"ExportedInvitation.PeopleJoined_other" = "%d 人已參加";
+
+"ExportedInvitation.Context.Copy" = "複製";
+"ExportedInvitation.Context.OpenProfile" = "開啟資料頁";
+"ExportedInvitation.Done" = "完成";
+
+
+"EditInvitation.LimitedByPeriod" = "時間限制";
+"EditInvitation.Never" = "永不";
+"EditInvitation.Save" = "儲存";
+"EditInvitation.ExpiryDate" = "有效期限";
+"EditInvitation.ExpiryDesc" = "您可以讓連結在一段時間後失效。";
+
+
+"EditInvitation.LimitedByCount" = "用戶數限制";
+"EditInvitation.Unlimited" = "無限制";
+"EditInvitation.NumberOfUsers" = "用戶人數";
+"EditInvitation.EnterNumber" = "輸入號碼";
+"EditInvitation.LimitDesc" = "您可以讓連結在使用一定次數後失效。";
+
+
+"EditInvitation.EditTitle" = "編輯連結";
+"EditInvitation.NewTitle" = "新連結";
+
+"EditInvitation.OK.Create" = "建立";
+"EditInvitation.OK.Save" = "儲存";
+
+
+
+"ChannelVisibiltiy.PermanentLink" = "永久連結";
+"ChannelVisibiltiy.Context.Copy" = "複製";
+"ChannelVisibiltiy.Context.Revoke" = "撤銷";
+
+"ChannelVisibiltiy.ManageLinks" = "管理連結";
+
+
+"InviteLink.ShareLink" = "分享連結";
+
+"InviteLink.Joined_countable" = "%d";
+
+
+
+
+
+"InviteLink.Joined_other" = "%d 人已加入";
+
+"InviteLink.JoinedRevoked" = "還沒有人加入";
+
+
+"InviteLink.Remaining_countable" = "%d";
+
+
+
+
+
+"InviteLink.Remaining_other" = "• 剩 %d 個名額";
+
+"InviteLink.CanJoin_countable" = "%d";
+
+
+
+
+
+"InviteLink.CanJoin_other" = "%d 人可加入";
+
+"InviteLink.Sticker.TimeLeft" = "%@後過期";
+
+
+"PeerInfo.InviteLinks" = "邀請連結";
+
+"InviteLink.Sticker.Revoked" = "・已撤銷";
+"InviteLink.Sticker.Expired" = "・已失效";
+"InviteLink.Sticker.Limit" = "・已達上限";
+
+"InviteLink.EmptyJoinDesc_countable" = "%d";
+
+
+
+
+
+"InviteLink.EmptyJoinDesc_other" = "%d 人可透過此連結加入。";
+
+
+"ManageLinks.EmptyDesc" = "您可以建立有限制時間或使用次數的其他邀請連結。";
+
+"ManageLinks.OtherAdmins" = "其他管理員建立的連結";
+
+
+"ManageLinks.Context.Copy" = "複製連結";
+"ManageLinks.Context.Share" = "分享連結";
+"ManageLinks.Context.Edit" = "編輯連結";
+"ManageLinks.Context.Revoke" = "撤銷連結";
+"ManageLinks.Header.Group.Desc" = "任何安裝了 Telegram 的人都可以透過點擊此連結加入您的群組。";
+"ManageLinks.Header.Channel.Desc" = "任何安裝了 Telegram 的人都可以透過點擊此連結加入您的頻道。";
+
+"ManageLinks.Permanent" = "永久連結";
+"ManageLinks.InviteLink" = "邀請連結";
+
+
+"ManageLinks.AdditionLinks" = "其他連結";
+"ManageLinks.CreateNew" = "建立一個新連結";
+"ManageLinks.RevokedLinks" = "已撤銷的連結";
+"ManageLinks.DeleteAll" = "刪除所有已撤銷的連結";
+"ManageLinks.Delete" = "刪除";
+"ManageLinks.DeleteAll.Confirm" = "您確定要刪除所有已撤銷的連結嗎？";
+"ManageLinks.TitleNew" = "邀請連結";
+
+
+"ManageLinks.TitleCount_countable" = "%d";
+
+
+
+
+
+"ManageLinks.TitleCount_other" = "%d 個邀請連結";
+
+
+"ManageLinks.Admin.Permanent.Desc" = "**%1$@** 可以看到此連結，並用它來邀請新成員加入 **%2$@**。";
+
+"VoiceChat.Status.MutedForYou" = "為我靜音";
+"VoiceChat.Status.Speaking" = "發言";
+"VoiceChat.Status.Listening" = "聆聽";
+"VoiceChat.Status.WantsSpeak" = "想要發言";
+"VoiceChat.Status.Muted" = "已靜音";
+
+
+
+"VoiceChat.MuteForMe" = "為我靜音";
+"VoiceChat.UnmuteForMe" = "為我取消靜音";
+
+
+
+"VoiceChat.Block.RecentActive" = "最近活躍";
+"VoiceChat.Block.Listening" = "聆聽";
+
+
+
+
+"VoiceChat.Video.VideoSource" = "視訊來源";
+"VoiceChat.Video.VideoSource.Cancel" = "取消";
+"VoiceChat.Video.VideoSource.Share" = "分享";
+
+
+"VoiceChat.Video.Stream.Video" = "視訊";
+"VoiceChat.Video.Stream.Screencast" = "螢幕畫面";
+"VoiceChat.Video.Stream.More" = "更多";
+
+
+"VoiceChat.PinVideo" = "置頂視訊";
+"VoiceChat.UnpinVideo" = "取消置頂視訊";
+
+"VoiceChat.PinScreencast" = "置頂螢幕直播";
+"VoiceChat.UnpinScreencast" = "取消置頂螢幕直播";
+
+"VoiceChat.Tooltip.VideoFailed" = "發生錯誤。視訊串流已停止。";
+"VoiceChat.Tooltip.ScreencastFailed" = "發生錯誤。螢幕共享已停止。";
+
+
+"VoiceChat.Status.Screensharing" = "正在分享螢幕畫面";
+
+"VoiceChat.Status.You" = "這是您";
+
+"VoiceChat.Video.ShortPin" = "置頂";
+"VoiceChat.Video.ShortUnpin" = "取消置頂";
+
+"VoiceChat.Tooltip.Error.VideoUnavailable" = "視訊和螢幕共享目前僅適用於前 %d 位參與者。";
+"VoiceChat.Tooltip.Error.ScreenUnavailable" = "螢幕共享和視訊目前可供前 %d 位參與者使用。";
+
+
+"VoiceChat.Tooltip.VideoPinned" = "%@ 的視訊已置頂";
+"VoiceChat.Tooltip.ScreenPinned" = "%@ 的螢幕直播已置頂";
+
+"VoiceChat.Tooltip.VideoUnpinned" = "%@ 的視訊已取消置頂";
+"VoiceChat.Tooltip.ScreenUnpinned" = "%@ 的螢幕直播已取消置頂";
+
+
+"VoiceChat.Tooltip.YourVideoPinned" = "您的視訊已置頂";
+"VoiceChat.Tooltip.YourScreenPinned" = "\n您的螢幕直播已置頂";
+
+"VoiceChat.Tooltip.YourVideoUnpinned" = "您的視訊未置頂";
+"VoiceChat.Tooltip.YourScreenUnpinned" = "您的螢幕直播已取消置頂";
+
+
+
+"VoiceChat.Screencast.Confirm.Header" = "視訊聊天";
+"VoiceChat.Screencast.Confirm.Text" = "%@ 正在分享螢幕畫面。所有參與者的螢幕會將它顯示為主要的視訊畫面。";
+"VoiceChat.Screencast.Confirm.OK" = "繼續";
+
+"PeerInfo.Group.AutoDeleteMessages" = "自動刪除訊息";
+"PeerInfo.Group.Timer.Never" = "永不";
+
+
+"AutoremoveMessages.Desc" = "此聊天的新訊息將在指定時間後自動刪除。";
+"AutoremoveMessages.Never" = "永不";
+"AutoremoveMessages.Day1" = "1 天";
+"AutoremoveMessages.Week1" = "1 週";
+"AutoremoveMessages.Month1" = "1 個月";
+"AutoremoveMessages.Title" = "清除聊天紀錄";
+"AutoremoveMessages.Title.DeleteOnly" = "自動刪除";
+
+"AutoremoveMessages.Header" = "自動刪除訊息";
+
+
+
+"Chat.Input.AutoDelete.7Days" = "在此聊天中所傳送的訊息會在一週後自動刪除。";
+"Chat.Input.AutoDelete.1Day" = "在此聊天中所傳送的訊息會在一天後自動刪除。";
+
+
+"Chat.Toast.ReportSuccess" = "Telegram 管理員將會檢視您的報告。感謝您！";
+
+
+"PeerInfo.Report.SelectMessages" = "選擇訊息";
+
+
+"Tip.AutoDelete.TimerSetForWeek" = "自動刪除計時器設為1週。";
+"Tip.AutoDelete.TimerSetForDay" = "自動刪除計時器設為1天。";
+"Tip.AutoDelete.TimerSetOff" = "自動刪除計時器現在已停用。";
+
+
+
+
+"Channel.AdminLog.CanInviteUsersViaLink" = "透過連結邀請用戶";
+"Channel.AdminLog.MessageChangedAutoremoveTimeoutSet" = "%1$@ 將自動刪除計時器設為%2$@";
+"Channel.AdminLog.MessageChangedAutoremoveTimeoutRemove" = "%1$@ 停用了自動刪除計時器";
+
+
+"Channel.AdminLog.UpdatedParticipantVolume" = "%1$@ 變更了 %2$@ 的音量為%3$@";
+
+"Channel.AdminLog.DeletedInviteLink" = "%1$@ 刪除了邀請連結 %2$@";
+"Channel.AdminLog.RevokedInviteLink" = "%1$@ 撤銷了邀請連結 %2$@";
+"Channel.AdminLog.EditedInviteLink" = "%1$@ 編輯了邀請連結 %2$@";
+"Channel.AdminLog.CreatedInviteLink" = "%1$@ 建立了邀請連結 %2$@";
+
+"Channel.AdminLog.JoinedViaInviteLink" = "%1$@ 已加入，透過邀請連結 %2$@";
+
+
+
+"BroadcastGroups.IntroTitle" = "廣播群組";
+"BroadcastGroups.IntroText" = "• 成員數量沒有限制。\n\n• 只有管理員可以傳訊息。\n\n• 不能變回普通群組。";
+"BroadcastGroups.Convert" = "轉換為廣播群組";
+"BroadcastGroups.Cancel" = "保持為普通群組";
+
+"BroadcastGroups.ConfirmationAlert.Title" = "您確定嗎？";
+"BroadcastGroups.ConfirmationAlert.Text" = "群組的普通成員（非管理員）將**無法撤回地**失去在群組中傳訊息的權利。\n\n此操作**無法**復原。";
+"BroadcastGroups.ConfirmationAlert.Convert" = "轉換";
+
+"BroadcastGroups.Success" = "成功！現在，您的群組可以有無限的成員。";
+
+"BroadcastGroups.LimitAlert.Title" = "已達上限";
+"BroadcastGroups.LimitAlert.Text" = "您的群組已達到 %@ 個成員的上限。\n\n您可以透過將群組轉換為只有管理員可以傳訊息的廣播群組來提高人數上限。感興趣嗎？";
+"BroadcastGroups.LimitAlert.LearnMore" = "了解更多";
+"BroadcastGroups.LimitAlert.SettingsTip" = "如果您改變主意，請前往群組的權限設定。";
+
+
+"GroupInfo.Permissions.BroadcastTitle" = "廣播群組";
+"GroupInfo.Permissions.BroadcastConvert" = "轉換為廣播群組";
+"GroupInfo.Permissions.BroadcastConvertInfo" = "廣播群組可以有超過 %@ 個成員，但是只有管理員可以在其中傳訊息。";
+
+"Chat.Gigagroup.Help" = "只有管理員可以在此群組中傳送訊息。";
+
+
+
+
+"Report.AdditionText" = "請輸入與您的檢舉相關的其他詳細資訊。";
+"Report.AdditionText.Placeholder" = "其他詳細資訊…";
+"Report.AdditionText.Button" = "檢舉";
+
+
+"Chat.ContextMenu.AutoDelete" = "%@之後自動刪除";
+
+
+"Group.UsersTooMuchError" = "抱歉，此群組已滿。您不能在此新增任何其他成員。";
+
+
+"ChatTitle.ReportMessages" = "檢舉訊息";
+
+
+"PeerInfo.Block.Header" = "封鎖用戶";
+"PeerInfo.Block.Text" = "您想要封鎖 %@，不讓其在 Telegram 上傳訊息或打電話給您嗎？";
+"PeerInfo.Block.OK" = "封鎖";
+
+
+
+
+
+
+
+"Checkout.PriceHeader" = "價目";
+
+"Checkout.Title" = "結帳";
+"Checkout.TotalAmount" = "總計";
+"Checkout.TotalPaidAmount" = "付款總額";
+"Checkout.PaymentMethod" = "付款方式";
+"Checkout.ShippingMethod" = "配送方式";
+"Checkout.ShippingAddress" = "配送資訊";
+"Checkout.Name" = "名稱";
+"Checkout.Email" = "電子信箱";
+"Checkout.Phone" = "電話";
+"Checkout.PayPrice" = "支付 %@";
+"Checkout.PayNone" = "付款";
+
+"Checkout.PaymentMethod.Title" = "付款方式";
+"Checkout.PaymentMethod.New" = "新卡…";
+
+"Checkout.NewCard.Title" = "新卡";
+"Checkout.NewCard.PaymentCard" = "信用卡";
+"Checkout.NewCard.SaveInfo" = "儲存付款資訊";
+"Checkout.NewCard.SaveInfoEnableHelp" = "您可以儲存付款資訊以備將來使用。\n請[開啟兩步驟驗證]來使用此功能。";
+"Checkout.NewCard.SaveInfoHelp" = "您可以儲存付款資訊以備將來使用。它將直接儲存在支付服務供應商那裡。Telegram 無法存取您的信用卡資料。";
+"Checkout.NewCard.CardholderNameTitle" = "持卡人";
+"Checkout.NewCard.CardholderNamePlaceholder" = "持卡人姓名";
+"Checkout.NewCard.PostcodeTitle" = "帳單地址";
+"Checkout.NewCard.PostcodePlaceholder" = "郵遞區號";
+
+"Checkout.ShippingOption.Title" = "送貨方式";
+
+"Checkout.ErrorProviderAccountInvalid" = "此機器人目前無法接受付款。請稍後再試。";
+"Checkout.ErrorProviderAccountTimeout" = "此機器人目前無法處理付款。請稍後再試。";
+"Checkout.ErrorInvoiceAlreadyPaid" = "您已經為此物品付款。";
+
+"Checkout.Success" = "您的付款已成功進行！";
+
+
+"Checkout.ErrorGeneric" = "處理您的付款時出錯。您的卡尚未結帳。";
+"Checkout.ErrorPaymentFailed" = "付款失敗。您的卡尚未結帳。";
+"Checkout.ErrorPrecheckoutFailed" = "機器人無法處理您的付款。您的卡尚未結帳。";
+
+"CheckoutInfo.Title" = "配送資訊";
+"CheckoutInfo.ShippingInfoTitle" = "收件地址";
+"CheckoutInfo.ShippingInfoAddress1" = "地址 1";
+"CheckoutInfo.ShippingInfoAddress1Placeholder" = "地址";
+"CheckoutInfo.ShippingInfoAddress2" = "地址 2";
+"CheckoutInfo.ShippingInfoAddress2Placeholder" = "地址";
+"CheckoutInfo.ShippingInfoState" = "州 / 省";
+"CheckoutInfo.ShippingInfoStatePlaceholder" = "州 / 省";
+"CheckoutInfo.ShippingInfoCity" = "城市";
+"CheckoutInfo.ShippingInfoCityPlaceholder" = "城市";
+"CheckoutInfo.ShippingInfoCountry" = "國家";
+"CheckoutInfo.ShippingInfoCountryPlaceholder" = "國家";
+"CheckoutInfo.ShippingInfoPostcode" = "郵遞區號";
+"CheckoutInfo.ShippingInfoPostcodePlaceholder" = "郵遞區號";
+"CheckoutInfo.ReceiverInfoTitle" = "收件人";
+"CheckoutInfo.ReceiverInfoName" = "名稱";
+"CheckoutInfo.ReceiverInfoNamePlaceholder" = "姓名";
+"CheckoutInfo.ReceiverInfoEmail" = "電子郵件";
+"CheckoutInfo.ReceiverInfoEmailPlaceholder" = "電子郵件";
+"CheckoutInfo.ReceiverInfoPhone" = "電話";
+"CheckoutInfo.SaveInfo" = "儲存資訊";
+"CheckoutInfo.SaveInfoHelp" = "您可以儲存您的配送資訊以備將來使用。";
+"CheckoutInfo.Pay" = "支付";
+
+"Checkout.Receipt.Title" = "收據";
+
+"Message.ReplyActionButtonShowReceipt" = "顯示收據";
+"Message.InvoiceLabel" = "請款單";
+
+"CheckoutInfo.ErrorShippingNotAvailable" = "無法運送到選定的國家。";
+"CheckoutInfo.ErrorPostcodeInvalid" = "請輸入有效的郵遞區號。";
+"CheckoutInfo.ErrorStateInvalid" = "請輸入有效的州 / 省。";
+"CheckoutInfo.ErrorCityInvalid" = "請輸入有效的城市。";
+"CheckoutInfo.ErrorNameInvalid" = "請輸入有效的名稱。";
+"CheckoutInfo.ErrorEmailInvalid" = "請輸入有效的電子郵件地址。";
+"CheckoutInfo.ErrorPhoneInvalid" = "請輸入有效的電話號碼。";
+
+"Checkout.WebConfirmation.Title" = "完成付款";
+"Checkout.PasswordEntry.Title" = "付款確認";
+"Checkout.PasswordEntry.Pay" = "支付";
+"Checkout.PasswordEntry.Text" = "您的卡片 %@ 已受保護，若要使用此卡片付款，請輸入您的兩步驟驗證密碼。";
+
+"Checkout.SavePasswordTimeout" = "您要保留密碼 %@嗎？";
+//"Checkout.SavePasswordTimeoutAndTouchId" = "Would you like to save your password for %@ and use Touch ID instead?";
+//"Checkout.PayWithTouchId" = "Pay with Touch ID";
+"Checkout.EnterPassword" = "輸入密碼";
+
+"Your_card_has_expired" = "您的卡已過期。";
+
+/* Error when the card was declined by the credit card networks */
+"Your_card_was_declined" = "您的卡遭到拒絕。";
+
+/* Error when the card's expiration month is not valid */
+"Your_cards_expiration_month_is_invalid" = "您輸入了無效的到期月份。";
+
+/* Error when the card's expiration year is not valid */
+"Your_cards_expiration_year_is_invalid" = "您輸入了無效的到期年份。";
+
+/* Error when the card number is not valid */
+"Your_cards_number_is_invalid" = "您輸入了無效的卡號。";
+
+/* Error when the card's CVC is not valid */
+"Your_cards_security_code_is_invalid" = "您輸入了無效的安全碼。";
+
+/* Error when the card's CVC is not valid */
+"Your_cards_zip_code_is_invalid" = "您輸入了無效的郵遞區號。";
+
+
+"Checkout.2FA.Text" = "只有透過兩步驟驗證才能儲存付款明細。 ";
+
+
+"MESSAGE_INVOICE" = "%1$@ 傳了一張 %2$@ 的請款單給您";
+"CHAT_MESSAGE_INVOICE" = "%1$@ 傳了一張 %3$@ 的請款單到「%2$@」群組";
+"PINNED_INVOICE" = "%1$@ 置頂了一張請款單";
+
+"Message.PinnedInvoice" = "置頂了一張請款單";
+
+"Message.PaymentSent" = "付款：%@";
+
+
+
+"Message.ReplyActionButtonShowReceipt" = "顯示收據";
+
+
+
+"VoiceChat.StartRecording" = "開始錄製";
+"VoiceChat.StopRecording" = "停止錄製";
+
+"VoiceChat.Toast.Stop" = "音訊串流的錄音已儲存到「我的收藏」。";
+
+"VoiecChat.Settings.Record.Title" = "錄製視訊聊天";
+
+"VoiecChat.Settings.Record.Video.Title" = "錄製視訊聊天";
+"VoiecChat.Settings.Record.Live.Title" = "錄製直播";
+
+
+"VoiecChat.Settings.Record.Placeholder1" = "標題（選填）";
+
+
+"VoiceChat.Settings.Permissions.Title" = "權限";
+
+
+"VoiceChat.Recording.Start.Title" = "開始錄製";
+"VoiceChat.Recording.Start.Text1" = "您要對此聊天進行錄製並將結果儲存到影片檔嗎？\n\n其他參與者將看到聊天室錄製中。";
+"VoiceChat.Recording.Start.OK" = "開始";
+
+
+"VoiceChat.Recording.Stop.Title" = "停止錄製";
+"VoiceChat.Recording.Stop.Text" = "要停止錄製音訊串流嗎？";
+"VoiceChat.Recording.Stop.OK" = "停止";
+
+
+"VoiceChat.JoinAs.Group_countable" = "%d";
+
+
+
+
+
+"VoiceChat.JoinAs.Group_other" = "%d 位參與者";
+
+"VoiceChat.JoinAs.Channel_countable" = "%d";
+
+
+
+
+
+"VoiceChat.JoinAs.Channel_other" = "%d 位訂閱者";
+
+
+
+
+"VoiceChat.Toast.YouCanSpeak" = "您現在可以講話了。";
+
+
+"VoiceChat.Info.SendMessage" = "傳送訊息";
+"VoiceChat.Info.OpenProfile" = "開啟資料頁";
+"VoiceChat.Info.OpenChannel" = "開啟頻道";
+"VoiceChat.Info.JoinChannel" = "加入頻道";
+"VoiceChat.Info.LeaveChannel" = "退出頻道";
+
+
+"Chat.Message.JoinVoiceChat.AsSpeaker" = "以講者身分加入";
+"Chat.Message.JoinVoiceChat.AsListener" = "以聽眾身分加入";
+
+"Chat.Message.ViewChannel" = "查看頻道";
+
+
+
+"Chat.VoiceChat.JoinLink.Title" = "視訊聊天";
+
+
+"Chat.VoiceChat.JoinLink.OK" = "加入";
+
+"Chat.VoiceChat.JoinLink.Participants_countable" = "%d";
+
+
+
+
+
+"Chat.VoiceChat.JoinLink.Participants_other" = "%d 位參與者";
+
+
+"VoiceChat.DownHand" = "取消發言請求";
+
+"VoiceChat.Alert.Recording" = "音訊串流錄製中。";
+
+"VoiceChat.Settings.Title" = "視訊聊天設定";
+"VoiceChat.Settings.Title.Placeholder" = "標題...";
+
+"VoiceChat.Settings.DisplayAs.Title" = "將我顯示為";
+"VoiceChat.Settings.DisplayAs.PersonalAccount" = "個人帳號";
+
+
+
+"DisplayMeAs.PersonalAccount" = "個人帳號";
+"DisplayMeAs.Title" = "將我顯示為";
+"DisplayMeAs.ContinueAs" = "以 %@ 的身分繼續";
+
+"DisplayMeAs.Text" = "選擇是要顯示為您的個人帳號還是您的頻道。";
+"DisplayMeAs.Text.Group" = "選擇是要顯示為您的個人帳號還是您的群組。";
+
+"DisplayMeAs.Title" = "將我顯示為";
+
+
+
+"DisplayMeAs.New.Title" = "新視訊聊天";
+
+//"DisplayMeAs.New.Done" = "Continue";
+"DisplayMeAs.Scheduled" = "預約的視訊聊天";
+"DisplayMeAs.Scheduled.Desc" = "頻道訂閱者將收到通知，直播將在 %@後開始。";
+
+
+"DisplayMeAs.New.StartAs" = "以 %@ 的身分發起視訊聊天";
+"DisplayMeAs.New.ScheduleAs" = "以 %@ 的身分預約視訊聊天";
+"DisplayMeAs.Alone" = "您將以您的個人帳號顯示。";
+"DisplayMeAs.Alone.Desc" = "您也可以建立一個公開頻道，並以頻道的身分參與視訊聊天。";
+
+
+"Chat.VoiceChat.JoinLink.Unavailable" = "視訊聊天不再可用";
+
+"VoiceChat.Settings.ResetLink" = "撤銷講者連結";
+"VoiceChat.Settings.ResetLink.Success" = "講者連結已被撤銷。";
+
+
+"FileSize.B" = "%@ B";
+"FileSize.KB" = "%@ KB";
+"FileSize.MB" = "%@ MB";
+"FileSize.GB" = "%@ GB";
+
+
+"Login.Sms.AppErr" = "如果您已註冊 Telegram，請輸入傳送到您 Telegram App 的驗證碼。\n\n如果您尚未註冊，請先透過手機或平板註冊。";
+
+"Login.Sms.AppErr.GotoSite" = "開啟網站";
+
+
+"Payments.TipLabel" = "小費（選擇性的）";
+
+"Payments.WarninTitle" = "警告";
+
+
+"Payments.Receipt.Tip" = "小費";
+"Payments.Paid" = "您為 %2$@ 支付了 %1$@。";
+
+
+"VoiceChat.Scheduled.Header" = "開始於";
+"VoiceChat.Scheduled.HeaderLate" = "延遲了";
+
+"VoiceChat.Title.Scheduled" = "視訊聊天";
+"VoiceChat.Title.Scheduled.Soon" = "預約的";
+
+
+"Chat.Header.VoiceChat.StartsIn" = "%@後開始";
+
+"VoiceChat.Tooltip.Subscribe" = "我們將在開始時通知您。";
+
+
+"VoiceChat.Tooltip.ShareVideo" = "您正在分享您的視訊。";
+"VoiceChat.Tooltip.ShareScreen" = "您正在分享您的螢幕畫面。";
+
+"VoiceChat.Tooltip.StopVideo" = "您已停止直播視訊。";
+"VoiceChat.Tooltip.StopScreen" = "您已停止直播您的螢幕畫面。";
+
+"VoiceChat.Tooltip.NoCameraFound" = "未找到活躍且已連接的攝影機。";
+
+
+"VoiceChat.Tooltip.IsSpeaking" = "**%@** 正在發言";
+
+"VoiceChat.Tooltip.EnableCamera" = "您的攝影機是關閉的。點擊此處以啟用它。";
+"VoiceChat.Tooltip.EnableMicro" = "您處於靜音狀態。點擊這裡以發言。";
+
+
+"VoiceChat.ShareVideo.MutedError" = "您現在無法分享您的視訊。請先舉手請求發言。";
+"VoiceChat.ShareScreen.MutedError" = "您現在無法分享您的螢幕畫面。請先舉手請求發言。";
+
+
+"VoiceChat.Tooltip.PinWindow" = "視窗已置頂為最上層顯示。";
+"VoiceChat.Tooltip.UnpinWindow" = "視窗未置頂為最上層顯示。";
+
+
+"VoiceChat.Video.Paused" = "視訊已暫停";
+"VoiceChat.Screencast.Paused" = "螢幕共享已暫停";
+
+
+"ChatInput.BotMenu" = "選單";
+
+
+"VoiceChat.ScreenShare.Unavailable" = "無法分享您的螢幕畫面，請在[系統偏好設定](screen)中授予存取權限。";
+"VoiceChat.VideoShare.Unavailable" = "無法分享您的攝影機，請在[系統偏好設定](camera)中授予存取權限。";
+
+
+"VoiceChat.Sharing.Placeholder" = "您正在分享您的螢幕畫面";
+"VoiceChat.Sharing.Stop" = "停止分享";
+
+
+"EmptyChat.Appearance" = "外觀";
+"EmptyChat.Appearance.System" = "系統";
+"EmptyChat.Appearance.Dark" = "深色";
+"EmptyChat.Appearance.Light" = "淺色";
+"EmptyChat.Appearance.Min" = "簡約風格";
+"EmptyChat.Appearance.Colorful" = "富有色彩的";
+"EmptyChat.Appearance.Desc" = "您可以在「設定」⟶ [外觀](appearance)中變更這些參數和其他設定。";
+
+
+"EmptyChat.StorageUsage.Data" = "最大快取大小";
+"EmptyChat.StorageUsage.Low" = "8 GB";
+"EmptyChat.StorageUsage.Medium" = "32 GB";
+"EmptyChat.StorageUsage.NoLimit" = "無限制";
+
+
+"EmptyChat.StorageUsage" = "儲存空間用量";
+
+"EmptyChat.StorageUsage.Tooltip.System" = "系統\n%@";
+"EmptyChat.StorageUsage.Tooltip.App" = "Telegram\n%@";
+
+"EmptyChat.StorageUsage.CacheDesc" = "Telegram 使用您儲存空間的 **%@**。";
+"EmptyChat.StorageUsage.CacheDescEmpty" = "Telegram 快取是空的。";
+
+"EmptyChat.StorageUsage.Clear" = "清除快取";
+
+"EmptyChat.StorageUsage.Loading" = "計算中…";
+"EmptyChat.StorageUsage.Clearing" = "清除中…";
+
+
+"EmptyChat.StorageUsage.Desc" = "More data and storage settings are available in
+Settings ⟶ [Data And Storage](storage).";
+
+
+"EmptyChat.Navigation.Prev" = "上一個提示";
+"EmptyChat.Navigation.Next" = "下一個提示";
+
+"EmptyChat.Appearance.ChatMode" = "聊天模式";
+
+
+
+"EmptyChat.Stickers" = "透過表情符號推薦貼圖";
+"EmptyChat.Stickers.None" = "無";
+"EmptyChat.Stickers.MySets" = "已安裝的";
+"EmptyChat.Stickers.AllSets" = "所有貼圖";
+"EmptyChat.Stickers.Trending" = "熱門貼圖";
+"EmptyChat.Stickers.Desc" = "More trending stickers are available in
+Settings ⟶ Stickers ⟶ [Trending Stickers](trending).";
+
+
+"Appearance.Theme.Accent.Messages" = "訊息";
+"Appearance.Theme.Accent" = "強調色";
+
+
+"Chat.Alert.Forward.Header_countable" = "%d";
+
+
+
+
+
+"Chat.Alert.Forward.Header_other" = "%d 則訊息";
+
+
+"Chat.Alert.Forward.Text.Inner_countable" = "%d";
+
+
+
+
+
+"Chat.Alert.Forward.Text.Inner_other" = "%d 則訊息";
+
+"Chat.Alert.Forward.Text" = "您想對「%2$@」中的 %1$@做什麼？";
+"Chat.Alert.Forward.Action.Another" = "變更接收者";
+"Chat.Alert.Forward.Action.Hide" = "隱藏訊息來源";
+"Chat.Alert.Forward.Action.Show" = "顯示訊息來源";
+"Chat.Alert.Forward.Action.Cancel" = "取消轉傳";
+
+"Chat.Input.Forward.Hidden" = "您（訊息來源已隱藏）";
+
+
+"NotificationSettings.TurnOn" = "在系統偏好設定中允許";
+"NotificationSettings.TurnOn.Text.Title" = "允許通知";
+"NotificationSettings.TurnOn.Text.Text" = "不要錯過親友和同事的重要訊息。";
+
+
+
+
+
+
+
+
+
+"Chat.Edit.Attach.Error" = "抱歉，您在編輯訊息時無法附加新的媒體。";
+
+
+"EditAvatar.StickerOrGif" = "貼圖或GIF";
+"EditAvatar.PhotoOrVideo" = "照片或影片";
+
+
+"Chat.Service.UpdateTheme.You" = "您將聊天室主題變更為 %@";
+"Chat.Service.UpdateTheme" = "%1$@ 將聊天室主題變更為 %2$@";
+
+
+"Chat.Service.DisabledTheme.You" = "您停用了聊天室主題";
+"Chat.Service.DisabledTheme" = "%1$@ 停用了聊天室主題";
+
+
+"_NS:104.title" = "編輯";
+
+
+
+
+
+
+"Chat.Accessory.Forward_countable" = "%d";
+
+
+
+
+
+"Chat.Accessory.Forward_other" = "轉傳 %d 則訊息";
+
+"Chat.Accessory.Hidden_countable" = "%d";
+
+
+
+
+
+"Chat.Accessory.Hidden_other" = "轉傳 %d 則訊息（訊息來源已隱藏）";
+
+
+
+"Chat.Accessory.Forward.From" = "來自";
+
+"Chat.Message.Sponsored.What" = "什麼是贊助訊息？";
+
+
+
+
+"Notification.Reply" = "回覆";
+"Notification.Title.Reply" = "回覆";
+
+
+
+
+
+
+
+
+
+"Chat.Alert.Forward.Action.Hide1_other" = "隱藏訊息來源";
+
+
+
+
+
+
+
+"Chat.Alert.Forward.Action.Show1_other" = "顯示訊息來源";
+
+
+"VoiceChat.Settings.Record.IncludeVideo" = "也錄製影片";
+"VoiceChat.Settings.Record.Orientation.Portrait" = "直式影片";
+"VoiceChat.Settings.Record.Orientation.Landscape" = "橫式影片";
+
+
+"Widget.Recent.Title" = "聊天";
+"Widget.Recent.Desc" = "使用 ⌘+K 或 ESC 以進入[搜尋](search)模式。";
+"Widget.Recent.Popular" = "常用";
+"Widget.Recent.Recent" = "最近";
+"Widget.Recent.Mixed" = "兩者";
+
+
+"Chat.Message.ReadStats.Seen_countable" = "%d";
+
+
+
+
+
+"Chat.Message.ReadStats.Seen_other" = "%d 人已讀";
+
+
+"Chat.Message.ReadStats.Listened_countable" = "%d";
+
+
+
+
+
+
+
+"Chat.Message.ReadStats.Watched_countable" = "%d";
+
+
+
+
+
+
+
+
+
+
+"Chat.Message.ReadStats.EmptyViews" = "沒有人已讀";
+
+
+"Chat.Context.Forward.More" = "更多...";
+
+
+"Chat.ChatTheme.ApplyTheme" = "套用主題";
+"Chat.ChatTheme.Cancel" = "取消";
+"Chat.ChatTheme.NoTheme" = "無主題";
+
+
+"PeerInfo.ChatColors" = "變更顏色";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* new from translations.telegram.org */
+
+"Admins.Creator" = "擁有者";
+"App.MaxFileSize" = "最大檔案大小為 2 GB";
+"AppearanceSettings.ColorTheme.dark" = "黑色";
+"AppearanceSettings.ColorTheme.day_classic" = "日經典";
+"AppearanceSettings.ColorTheme.mojave" = "Mojave 深色模式";
+"AppearanceSettings.ColorTheme.night_blue" = "夜藍色";
+"ApplyLanguage.ChangeLanguageUnofficialText" = "您即將套用自訂語言包 **%@**，其中翻譯已完成 %@%。\n\n這將改變整個程式介面的顯示語言。您可以透過[翻譯平台]()對翻譯提出修正建議。\n\n您也可以隨時在「設定」中恢復您原本的語言。";
+"AutoremoveMessages.Day" = "1天後";
+"AutoremoveMessages.Week" = "1週後";
+"Call.Confirm.DiscardCurrent.Description" = "要結束與 %@ 的通話，並和 %@ 進行通話嗎？";
+"Call.Confirm.DiscardCurrent.Header" = "通話進行中";
+"CallSettings.MuteSound" = "通話期間將其他聲音關閉";
+"CallSettings.OpenSystemPreferences" = "開啟系統偏好設定";
+"CallSettings.OtherSettings.Title" = "其他設定";
+"CallSettings.Output.Text" = "輸出裝置";
+"CallSettings.Output.Title" = "聲音";
+"Channel.EditAdmin.Permission.InviteUsers" = "邀請用戶";
+"Channel.EventLog.MessageTransferedName" = "轉讓了擁有權給 %@ (%@)";
+"Channel.EventLog.Service.SetSlowMode" = "%@ 將慢速模式設定為 %@";
+"ChannelBlacklist.AddMember" = "新增成員";
+"ChannelEventFilter.Calls" = "通話";
+"Chat.Confirm.DeleteMessages" = "刪除所選的訊息？";
+"Chat.Confirm.DeleteMessages_countable" = "%d";
+"Chat.Dice.Result" = "傳送一個 🎲 表情符號到任何聊天就可以從 Telegram 獲得一個隨機數字。";
+"Chat.Dice.ResultNew" = "傳送一個 %@ 表情符號到任何聊天就可以從 Telegram 獲得一個隨機數字。";
+"Chat.Input.SecretChat.WaitingToOnline" = "正在等待用戶上線...";
+"Chat.List.Photo_countable" = "%d";
+"Chat.List.Video_countable" = "%d";
+"Chat.Message.UnsendMessages" = "取消傳送我的訊息";
+"Chat.Poll.TotalVotes_other" = "%d 人投票";
+"Chat.Poll.TotalVotes_countable" = "%d";
+"Chat.Service.Group.AddedMembers" = "%@ 邀請了 %@";
+"Chat.Service.Group.Created" = "%@ 建立了「%@」群組";
+"Chat.Service.Group.RemovedMembers" = "%@ 刪除了 %@";
+"Chat.Service.Group.UpdatedPinnedMessage" = "%@ 置頂了「%@」";
+"Chat.Service.Group.UpdatedTitle" = "%@ 將群組名稱變更為「%@」";
+"Chat.Service.PaymentSent" = "您成功地將 **%@** 轉給 **%@** 為了 **%@**";
+"Chat.Service.SecretChat.DisabledTimer" = "%@ 停用了閱後即焚計時器";
+"Chat.Service.SecretChat.DisabledTimer.Self" = "您停用了閱後即焚計時器";
+"Chat.Service.SecretChat.SetTimer" = "%@ 將閱後即焚計時器設定為 %@";
+"Chat.Service.SecretChat.SetTimer.Self" = "您將閱後即焚計時器設定為 %@";
+"Chat.Webpage.MediaCount" = "%d / %d";
+"ChatList.Context.PinErrorNew" = "抱歉，您只能置頂 5 個聊天。";
+"Discussion.Set.Modal.Text.Private" = "您想讓「%@」成為頻道「%@」的討論區嗎？\n\n此群組的任何成員都能夠看到頻道中的所有訊息。";
+"Discussion.Set.Modal.Text.Public" = "您想讓「**%@**」成為頻道「**%@**」的討論區嗎？";
+"DiscussionController.Channel.Empty.Header" = "選擇要在您頻道中顯示的討論群。";
+"DiscussionController.Channel.Set.Header" = "所有人可以經由頻道資訊頁進入「**%@**」討論群。";
+"EventLog.Service.Banned" = "封鎖了 %@ %@";
+"EventLog.Service.Demoted" = "無限期地限制了 %@ %@";
+"EventLog.Service.Demoted.Changed" = "變更了對 %@ %@ 無限期的限制";
+"EventLog.Service.Demoted.Changed.Until" = "變更了對 %@ %@ 的限制，直到 %@";
+"EventLog.Service.Demoted.Until" = "限制了 %@ %@ 直到 %@";
+"EventLog.Service.Promoted" = "提升了 %@ %@ 的權限：";
+"EventLog.Service.Promoted.Changed" = "變更了 %@ %@ 的權限：";
+"GalleryView.FastSave.Gif" = "GIF已儲存到[下載]()資料夾中";
+"GalleryView.FastSave.Image" = "圖片已儲存到[下載]()資料夾中";
+"GalleryView.FastSave.Video" = "影片已儲存到[下載]()資料夾中";
+"GeneralSettings.LargeFonts" = "大字體";
+"InAppLinks.Confirm.OpenExternal" = "開啟 %@？";
+"InviteLink.PeopleJoined_other" = "%d 人已加入";
+"InviteLink.PeopleJoined_countable" = "%d";
+"ManageLinks.Header.Desc" = "任何安裝了 Telegram 的人都可以透過點擊此連結加入您的群組。";
+"ManageLinks.Title" = "標題";
+"Notification.ProximityReached" = "%@ 現在約在 %@之內（距離 %@）";
+"Notification.ProximityReachedYou" = "%@ 現在距離您約 %@之內";
+"Notification.ScheduledTitle" = "📆 您";
+"NotificationSettings.IncludePublicGroups" = "包括公開的群組";
+"Peer.Media.SharedFilesEmptyList" = "您可以傳送或接收任何格式檔案，單檔最大 2 GB，並且可以在任何地方存取它們。";
+"PeerInfo.Admins" = "管理員";
+"PeerInfo.SetAdmins" = "設定管理員";
+"PeerInfo.Statistics" = "統計";
+"SettingsSearch.Synonyms.Stickers.Masks" = " ";
+"Telegram.ChannelVisibilityController" = "類型設定";
+"Text.CopyLabel" = "複製 %@";
+"TwoStepAuth.ConfirmationText" = "請檢查您的電子郵件，並點擊驗證連結，以完成兩步驟驗證設定。請務必檢查垃圾郵件夾。";
+"TwoStepAuth.RecoveryEmailUnavailable" = "無法存取您的電子信箱 %@？";
+"TwoStepAuth.SetupHint" = "為您的密碼建立提示";
+"VoiceChat.Listening" = "聆聽";
+"VoiceChat.Recording.Start.Text" = "您要對此聊天進行錄音並將結果儲存到音訊檔嗎？\n\n參與者將看到聊天室錄音中。";
+"VoiceChat.Settings.NoiseText" = "噪音抑制";
+"VoiceChat.Settings.NoiseTitle" = "背景噪音";
+"VoiceChat.Settings.Perfomance.Header" = "性能";
+"VoiceChat.Speaking" = "發言";
+"VoiceChat.Video.Stream" = "串流";
+"VoiecChat.ReduceMotion.Desc" = "您可以減少動態效果以獲得更好的性能。";
+"VoiecChat.ReduceMotion.Header" = "減少動態效果";
+"VoiecChat.ReduceMotion.Text" = "減少動態效果";
+"VoiecChat.Settings.Record.Placeholder" = "音訊標題（選填）";
+"VoiecChat.Settings.ReduceMotion.Desc" = "減少動態效果和停用噪音抑制可以提高性能。";
+"WallpaperPreview.Plain" = "素色";
+"_NS:103.title" = "編輯";
+"_NS:167.title" = "視窗";
+"_NS:81.title" = "檢視";
+"psa.chat.alert.learnmore" = "了解更多";
+"psa.chat.alert.learnmore.covid" = "了解更多";
+"psa.chatlist.covid" = "新冠肺炎";
+"psa.text.covid" = "此訊息為您提供正在發生的新冠肺炎疫情相關公共服務公告。了解有關此計劃的更多資訊：https://telegram.org/blog/coronavirus";
+"psa.title.bubbles.covid" = "新冠肺炎通知\n來自:  [%@]()";
+"psa.title.covid" = "新冠肺炎通知";

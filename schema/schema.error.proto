@@ -1,0 +1,416 @@
+syntax = "proto3";
+
+package mtproto;
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+
+option go_package = "mtproto";
+
+option (gogoproto.marshaler_all) = true;
+option (gogoproto.sizer_all) = true;
+option (gogoproto.unmarshaler_all) = true;
+option (gogoproto.gostring_all) = true;
+
+enum RpcErrorCode {
+      option (gogoproto.goproto_enum_prefix) = false;
+
+    RpcErrorCode_OK                                       = 0;
+    RpcErrorCode_BASE_NUMBER                              = 10000; // do not modify
+    RpcErrorCode_UNKNOWN                                  = 10001;
+    RpcErrorCode_ErrorFormatUNKNOWN                       = 10002;
+    RpcErrorCode_TIMEOUT                                  = 10003;
+//    303 SEE_OTHER
+//    The request must be repeated, but directed to a different data center.
+//    FILE_MIGRATE_X: the file to be accessed is currently stored in a different data center.
+//    PHONE_MIGRATE_X: the phone number a user is trying to use for authorization is associated with a different data center.
+//    NETWORK_MIGRATE_X: the source IP address is associated with a different data center (for registration)
+//    USER_MIGRATE_X: the user whose identity is being used to execute queries is associated with a different data center (for registration)
+    RpcErrorCode_SEE_OTHER                                = 3030000;
+    RpcErrorCode_SEE_OTHER_FILE_MIGRATE                   = 3031000;
+    RpcErrorCode_SEE_OTHER_PHONE_MIGRATE                  = 3032000;
+    RpcErrorCode_SEE_OTHER_NETWORK_MIGRATE                = 3033000;
+    RpcErrorCode_SEE_OTHER_USER_MIGRATE                   = 3034000;
+    RpcErrorCode_SEE_OTHER_X_MAX                          = 3034001;
+//    400 BAD_REQUEST
+//    The query contains errors. In the event that a request was created using a form and contains user generated data, the user should be notified that the data must be corrected before the query is repeated.
+//
+//    Examples of Errors:
+//    FIRSTNAME_INVALID: The first name is invalid
+//    LASTNAME_INVALID: The last name is invalid
+//    PHONE_NUMBER_INVALID: The phone number is invalid
+//    PHONE_CODE_HASH_EMPTY: phone_code_hash is missing
+//    PHONE_CODE_EMPTY: phone_code is missing
+//    PHONE_CODE_EXPIRED: The confirmation code has expired
+//    API_ID_INVALID: The api_id/api_hash combination is invalid
+//    PHONE_NUMBER_OCCUPIED: The phone number is already in use
+//    PHONE_NUMBER_UNOCCUPIED: The phone number is not yet being used
+//    USERS_TOO_FEW: Not enough users (to create a chat, for example)
+//    USERS_TOO_MUCH: The maximum number of users has been exceeded (to create a chat, for example)
+//    TYPE_CONSTRUCTOR_INVALID: The type constructor is invalid
+//    FILE_PART_INVALID: The file part number is invalid
+//    FILE_PARTS_INVALID: The number of file parts is invalid
+//    FILE_PART_Х_MISSING: Part X (where X is a number) of the file is missing from storage
+//    MD5_CHECKSUM_INVALID: The MD5 checksums do not match
+//    PHOTO_INVALID_DIMENSIONS: The photo dimensions are invalid
+//    FIELD_NAME_INVALID: The field with the name FIELD_NAME is invalid
+//    FIELD_NAME_EMPTY: The field with the name FIELD_NAME is missing
+//    MSG_WAIT_FAILED: A waiting call returned an error
+    RpcErrorCode_BAD_REQUEST                                = 4000000;
+    RpcErrorCode_BAD_REQUEST_FIRSTNAME_INVALID              = 4000100;
+    RpcErrorCode_BAD_REQUEST_LASTNAME_INVALID               = 4000200;
+    RpcErrorCode_BAD_REQUEST_PHONE_NUMBER_INVALID           = 4000300;
+    RpcErrorCode_BAD_REQUEST_PHONE_CODE_HASH_EMPTY          = 4000400;
+    RpcErrorCode_BAD_REQUEST_PHONE_CODE_EMPTY               = 4000500;
+    RpcErrorCode_BAD_REQUEST_PHONE_CODE_INVALID             = 4000501;
+    RpcErrorCode_BAD_REQUEST_PHONE_CODE_EXPIRED             = 4000600;
+    RpcErrorCode_BAD_REQUEST_API_ID_INVALID                 = 4000700;
+    RpcErrorCode_BAD_REQUEST_PHONE_NUMBER_OCCUPIED          = 4000800;
+    RpcErrorCode_BAD_REQUEST_PHONE_NUMBER_UNOCCUPIED        = 4000900;
+    RpcErrorCode_BAD_REQUEST_USERS_TOO_FEW                  = 4001000;
+    RpcErrorCode_BAD_REQUEST_USERS_TOO_MUCH                 = 4001100;
+    RpcErrorCode_BAD_REQUEST_TYPE_CONSTRUCTOR_INVALID       = 4001200;
+    RpcErrorCode_BAD_REQUEST_FILE_PART_INVALID              = 4001300;
+    RpcErrorCode_BAD_REQUEST_FILE_PARTS_INVALID             = 4001400;
+    RpcErrorCode_BAD_REQUEST_FILE_PART_X_MISSING            = 4001500;
+    RpcErrorCode_BAD_REQUEST_MD5_CHECKSUM_INVALID           = 4001600;
+    RpcErrorCode_BAD_REQUEST_PHOTO_INVALID_DIMENSIONS       = 4001700;
+    RpcErrorCode_BAD_REQUEST_FIELD_NAME_INVALID             = 4001800;
+    RpcErrorCode_BAD_REQUEST_FIELD_NAME_EMPTY               = 4001900;
+    RpcErrorCode_BAD_REQUEST_MSG_WAIT_FAILED                = 4002000;
+    RpcErrorCode_BAD_REQUEST_PHONE_NUMBER_BANNED            = 4002001;
+    RpcErrorCode_BAD_REQUEST_PHONE_NUMBER_FLOOD             = 4002002;
+    RpcErrorCode_BAD_REQUEST_PHONE_PASSWORD_FLOOD           = 4002003;
+    RpcErrorCode_BAD_REQUEST_PHONE_PASSWORD_PROTECTED       = 4002004;
+    RpcErrorCode_BAD_REQUEST_AUTH_KEY_PERM_EMPTY            = 4002005;
+    RpcErrorCode_BAD_REQUEST_API_ID_PUBLISHED_FLOOD         = 4002006;
+    RpcErrorCode_BAD_REQUEST_PHONE_NUMBER_APP_SIGNUP_FORBIDDEN=4002007;
+    RpcErrorCode_BAD_REQUEST_INPUT_CONSTRUCTOR_INVALID      = 4002008;
+    RpcErrorCode_BAD_REQUEST_PEER_ID_INVALID                = 4002009;
+    RpcErrorCode_BAD_REQUEST_TOKEN_INVALID                  = 4002010;
+    RpcErrorCode_BAD_REQUEST_NO_PROMISSION                  = 4002011;
+    RpcErrorCode_BAD_REQUEST_STICKERSET_INVALID             = 4002012;
+
+//    400	CONTACT_ID_INVALID	The provided contact ID is invalid
+//    400	CONTACT_NAME_EMPTY	Contact name empty
+//    400	MSG_ID_INVALID	Invalid message ID provided
+    RpcErrorCode_BAD_REQUEST_CONTACT_ID_INVALID             = 4002013;
+    RpcErrorCode_BAD_REQUEST_CONTACT_NAME_EMPTY             = 4002014;
+    RpcErrorCode_BAD_REQUEST_MSG_ID_INVALID                 = 4002015;
+
+//    401	AUTH_KEY_PERM_EMPTY	The temporary auth key must be binded to the permanent auth key to use these methods.
+//    400	CDN_METHOD_INVALID	You can't call this method in a CDN DC
+//    400	DATE_EMPTY	Date empty
+//    400	PERSISTENT_TIMESTAMP_EMPTY	Persistent timestamp empty
+//    400	PERSISTENT_TIMESTAMP_INVALID	Persistent timestamp invalid
+    RpcErrorCode_BAD_REQUEST_CDN_METHOD_INVALID             = 4002016;
+    RpcErrorCode_BAD_REQUEST_DATE_EMPTY                     = 4002017;
+    RpcErrorCode_BAD_REQUEST_PERSISTENT_TIMESTAMP_EMPTY     = 4002018;
+    RpcErrorCode_BAD_REQUEST_PERSISTENT_TIMESTAMP_INVALID   = 4002019;
+
+//    400	QUERY_TOO_SHORT	The query string is too short
+//    400	SEARCH_QUERY_EMPTY	The search query is empty
+    RpcErrorCode_BAD_REQUEST_QUERY_TOO_SHORT                = 4002020;
+    RpcErrorCode_BAD_REQUEST_SEARCH_QUERY_EMPTY             = 4002021;
+
+//    400	USERNAME_INVALID	Unacceptable username
+//    400 USERNAME_OCCUPIED UsernameInUse
+    RpcErrorCode_BAD_REQUEST_USERNAME_INVALID                = 4002022;
+    RpcErrorCode_BAD_REQUEST_USERNAME_OCCUPIED               = 4002023;
+    RpcErrorCode_BAD_REQUEST_USERNAME_NOT_MODIFIED           = 4002024;
+
+//    400	CHANNEL_INVALID	The provided channel is invalid
+//    400	CHANNEL_PRIVATE	You haven't joined this channel/supergroup
+//    400	CHAT_ADMIN_REQUIRED	You must be an admin in this chat to do this
+//    400	INPUT_CONSTRUCTOR_INVALID	The provided constructor is invalid
+//    400	INPUT_USER_DEACTIVATED	The specified user was deleted
+//    400	MSG_ID_INVALID	Invalid message ID provided
+//    400	PEER_ID_INVALID	The provided peer id is invalid
+//    400	PEER_ID_NOT_SUPPORTED	The provided peer ID is not supported
+//    400	SEARCH_QUERY_EMPTY	The search query is empty
+//    400	USER_ID_INVALID	The provided user ID is invalid
+//    400	CALL_ALREADY_ACCEPTED	The call was already accepted
+//    400	CALL_ALREADY_DECLINED	The call was already declined
+//    400	CALL_PEER_INVALID	The provided call peer object is invalid
+//    400	CALL_PROTOCOL_FLAGS_INVALID	Call protocol flags invalid
+//    400	DATA_JSON_INVALID	The provided JSON data is invalid
+    RpcErrorCode_BAD_REQUEST_CHANNEL_INVALID                = 4002025;
+    RpcErrorCode_BAD_REQUEST_CHANNEL_PRIVATE                = 4002026;
+    RpcErrorCode_BAD_REQUEST_CHAT_ADMIN_REQUIRED            = 4002027;
+
+
+    RpcErrorCode_BAD_REQUEST_PEER_ID_NOT_SUPPORTED          = 4002028;
+    RpcErrorCode_BAD_REQUEST_CALL_ALREADY_ACCEPTED          = 4002029;
+    RpcErrorCode_BAD_REQUEST_CALL_ALREADY_DECLINED          = 4002030;
+    RpcErrorCode_BAD_REQUEST_CALL_PEER_INVALID              = 4002031;
+    RpcErrorCode_BAD_REQUEST_CALL_PROTOCOL_FLAGS_INVALID    = 4002032;
+    RpcErrorCode_BAD_REQUEST_USER_ADMIN_INVALID             = 4002034;
+    RpcErrorCode_BAD_REQUEST_CHAT_ADMIN_INVITE_REQUIRED     = 4002035;
+    RpcErrorCode_BAD_REQUEST_FRESH_CHANGE_ADMINS_FORBIDDEN  = 4002036;
+    RpcErrorCode_BAD_REQUEST_RIGHT_FORBIDDEN                = 4002037;
+
+    RpcErrorCode_BAD_REQUEST_DATA_JSON_INVALID              = 4002041;
+
+    RpcErrorCode_BAD_REQUEST_INPUT_USER_DEACTIVATED         = 4002042;
+    RpcErrorCode_BAD_REQUEST_MEDIA_INVALID                  = 4002043;
+    RpcErrorCode_BAD_REQUEST_FILE_REFERENCE_EXPIRED         = 4002044;
+
+//    400	CHAT_INVALID	Invalid chat
+//    400	CHAT_TITLE_EMPTY	No chat title provided
+//    400	INPUT_USER_DEACTIVATED	The specified user was deleted
+//    400	USERS_TOO_FEW	Not enough users (to create a chat, for example)
+//    403	USER_RESTRICTED	You're spamreported, you can't create channels or chats.
+    RpcErrorCode_BAD_REQUEST_CHAT_INVALID                   = 4002050;
+    RpcErrorCode_BAD_REQUEST_CHAT_TITLE_EMPTY               = 4002051;
+
+//    400	CHAT_ADMIN_REQUIRED	You must be an admin in this chat to do this.
+//    403	MESSAGE_AUTHOR_REQUIRED	Message author required.
+//    400	MESSAGE_ID_INVALID	The provided message id is invalid.
+//    400	PEER_ID_INVALID	The provided peer id is invalid.
+    RpcErrorCode_BAD_REQUEST_MESSAGE_AUTHOR_REQUIRED          = 4002052;
+    RpcErrorCode_BAD_REQUEST_MESSAGE_ID_INVALID               = 4002053;
+
+//    400	BUTTON_DATA_INVALID	The data of one or more of the buttons you provided is invalid.
+//    400	BUTTON_TYPE_INVALID	The type of one or more of the buttons you provided is invalid.
+//    400	BUTTON_URL_INVALID	Button URL invalid.
+//    400	CHANNEL_INVALID	The provided channel is invalid.
+//    400	CHANNEL_PRIVATE	You haven't joined this channel/supergroup.
+//    403	CHAT_ADMIN_REQUIRED	You must be an admin in this chat to do this.
+//    403	CHAT_WRITE_FORBIDDEN	You can't write in this chat.
+//    400	ENTITIES_TOO_LONG	You provided too many styled message entities.
+//    403	INLINE_BOT_REQUIRED	Only the inline bot can edit message.
+//    400	INPUT_USER_DEACTIVATED	The specified user was deleted.
+//    400	MEDIA_CAPTION_TOO_LONG	The caption is too long.
+//    400	MEDIA_GROUPED_INVALID	You tried to send media of different types in an album.
+//    400	MEDIA_NEW_INVALID	The new media is invalid.
+//    400	MEDIA_PREV_INVALID	Previous media invalid.
+//    403	MESSAGE_AUTHOR_REQUIRED	Message author required.
+//    400	MESSAGE_EDIT_TIME_EXPIRED	You can't edit this message anymore, too much time has passed since its creation.
+//    400	MESSAGE_EMPTY	The provided message is empty.
+//    400	MESSAGE_ID_INVALID	The provided message id is invalid.
+//    400	MESSAGE_NOT_MODIFIED	The provided message data is identical to the previous message data, the message wasn't modified.
+//    400	MESSAGE_TOO_LONG	The provided message is too long.
+//    400	MSG_ID_INVALID	Invalid message ID provided.
+//    400	PEER_ID_INVALID	The provided peer id is invalid.
+//    400	REPLY_MARKUP_INVALID	The provided reply markup is invalid.
+//    400	SCHEDULE_DATE_INVALID	Invalid schedule date provided.
+//    400	USER_BANNED_IN_CHANNEL	You're banned from sending messages in supergroups/channels.
+    RpcErrorCode_BAD_REQUEST_BUTTON_DATA_INVALID             = 4002054;
+    RpcErrorCode_BAD_REQUEST_BUTTON_TYPE_INVALID             = 4002055;
+    RpcErrorCode_BAD_REQUEST_BUTTON_URL_INVALID              = 4002056;
+    RpcErrorCode_BAD_REQUEST_ENTITIES_TOO_LONG               = 4002057;
+    RpcErrorCode_BAD_REQUEST_INLINE_BOT_REQUIRED             = 4002058;
+    RpcErrorCode_BAD_REQUEST_MESSAGE_NOT_MODIFIED            = 4002059;
+    RpcErrorCode_BAD_REQUEST_REPLY_MARKUP_INVALID            = 4002060;
+    RpcErrorCode_BAD_REQUEST_SCHEDULE_DATE_INVALID           = 4002061;
+    RpcErrorCode_BAD_REQUEST_MESSAGE_EDIT_TIME_EXPIRED       = 4002062;
+
+    // 400 User not found
+    RpcErrorCode_BAD_REQUEST_USER_NOT_FOUND                  = 4002063;
+
+    RpcErrorCode_BAD_REQUEST_CHANNELS_TOO_MUCH              = 4002500;
+
+    RpcErrorCode_BAD_REQUEST_VIP_LIMIT                      = 4002505;
+    RpcErrorCode_BAD_REQUEST_PHOTO_ALBUM_NOT_FOUND          = 4002506;
+    RpcErrorCode_BAD_REQUEST_PHOTO_ALBUM_LIMIT              = 4002507;
+    RpcErrorCode_BAD_REQUEST_PHOTO_ALBUM_PINNED_LIMIT       = 4002508;
+
+    RpcErrorCode_BAD_REQUEST_PAYMENT_ORDER_ID_PAYMENTED     = 4002700;
+    RpcErrorCode_BAD_REQUEST_PAYMENT_TRADE_NO_PAYMENTED     = 4002701;
+    RpcErrorCode_BAD_REQUEST_PAYMENT_ORDER_ID_NOT_FOUND     = 4002702;
+
+    //    401	AUTH_KEY_PERM_EMPTY	The temporary auth key must be binded to the permanent auth key to use these methods.
+//    400	BOT_DOMAIN_INVALID	Bot domain invalid
+//    400	BOT_INVALID	This is not a valid bot
+//    400	BUTTON_DATA_INVALID	The data of one or more of the buttons you provided is invalid
+//    400	BUTTON_TYPE_INVALID	The type of one or more of the buttons you provided is invalid
+//    400	BUTTON_URL_INVALID	Button URL invalid
+//    400	CHANNEL_INVALID	The provided channel is invalid
+//    400	CHANNEL_PRIVATE	You haven't joined this channel/supergroup
+//    400	CHAT_ADMIN_REQUIRED	You must be an admin in this chat to do this
+//    400	CHAT_ID_INVALID	The provided chat id is invalid
+//    400	CHAT_RESTRICTED	You can't send messages in this chat, you were restricted
+//    403	CHAT_WRITE_FORBIDDEN	You can't write in this chat
+//    400	ENCRYPTION_DECLINED	The secret chat was declined
+//    400	ENTITY_MENTION_USER_INVALID	You mentioned an invalid user
+//    400	FROM_MESSAGE_BOT_DISABLED	Bots can't use fromMessage min constructors
+//    400	INPUT_USER_DEACTIVATED	The specified user was deleted
+//    400	MESSAGE_EMPTY	The provided message is empty
+//    400	MESSAGE_TOO_LONG	The provided message is too long
+//    400	MSG_ID_INVALID	Provided reply_to_msg_id is invalid
+//    400	PEER_ID_INVALID	The provided peer id is invalid
+//    400	PINNED_DIALOGS_TOO_MUCH	Too many pinned dialogs
+//    400	REPLY_MARKUP_INVALID	The provided reply markup is invalid
+//    400	SCHEDULE_BOT_NOT_ALLOWED	Bots cannot schedule messages
+//    400	SCHEDULE_DATE_TOO_LATE	You can't schedule a message this far in the future
+//    400	SCHEDULE_TOO_MUCH	There are too many scheduled messages
+//    420	SLOWMODE_WAIT_X	Slowmode is enabled in this chat: you must wait for the specified number of seconds before sending another message to the chat.
+//    400	USER_BANNED_IN_CHANNEL	You're banned from sending messages in supergroups/channels
+    //    400	USER_IS_BLOCKED	You were blocked by this user
+    //    400	USER_IS_BOT	Bots can't send messages to other bots
+    //    400	YOU_BLOCKED_USER	You blocked this user
+    // 400	USER_ALREADY_PARTICIPANT	The user is already in the group
+    // sendMessage
+    RpcErrorCode_BAD_REQUEST_MESSAGE_EMPTY                  = 4003001;
+    RpcErrorCode_BAD_REQUEST_MESSAGE_TOO_LONG               = 4003002;
+    RpcErrorCode_BAD_REQUEST_PINNED_DIALOGS_TOO_MUCH        = 4003003;
+    RpcErrorCode_BAD_REQUEST_USER_BANNED_IN_CHANNEL         = 4003004;
+    RpcErrorCode_BAD_REQUEST_USER_IS_BLOCKED                = 4003005;
+    RpcErrorCode_BAD_REQUEST_ENCRYPTION_DECLINED            = 4003006;
+    RpcErrorCode_BAD_REQUEST_CHAT_ID_INVALID                = 4003007;
+    RpcErrorCode_BAD_REQUEST_CHAT_WRITE_FORBIDDEN           = 4003008;
+    RpcErrorCode_BAD_REQUEST_INVITE_HASH_EMPTY              = 4003009;
+    RpcErrorCode_BAD_REQUEST_INVITE_HASH_INVALID            = 4003010;
+    RpcErrorCode_BAD_REQUEST_INVITE_HASH_EXPIRED            = 4003011;
+    RpcErrorCode_BAD_REQUEST_CHAT_RESTRICTED                = 4003012;
+
+    RpcErrorCode_BAD_REQUEST_USER_ALREADY_PARTICIPANT       = 4003013;
+    RpcErrorCode_BAD_REQUEST_CHANNEL_REMOVED_PARTICIPANT    = 4003014;
+    RpcErrorCode_BAD_REQUEST_CHAT_NOT_MODIFIED              = 4003015;
+
+    RpcErrorCode_BAD_REQUEST_PIN_RESTRICTED                 = 4003016;
+
+//    Accepting a login token
+//    In order to log in, the QR code must be scanned and accepted by an already logged-in Telegram app using auth.acceptLoginToken.
+//    The token must be extracted from the tg://login URI and base64url-decoded before using it in the method.
+//
+//    Possible errors returned by the method are:
+//
+//    400 - AUTH_TOKEN_INVALID, an invalid authorization token was provided
+//        400 - AUTH_TOKEN_EXPIRED, the provided authorization token has expired and the updated QR-code must be re-scanned
+//        400 - AUTH_TOKEN_ALREADY_ACCEPTED, the authorization token was already used
+//    400	AUTH_TOKEN_ALREADY_ACCEPTED	The specified auth token was already accepted.
+//    400	AUTH_TOKEN_EXCEPTION	An error occurred while importing the auth token.
+//    400	AUTH_TOKEN_EXPIRED	The authorization token has expired.
+//    400	AUTH_TOKEN_INVALIDX	The specified auth token is invalid.
+    RpcErrorCode_BAD_REQUEST_AUTH_TOKEN_INVALID    = 4007000;
+    RpcErrorCode_BAD_REQUEST_AUTH_TOKEN_EXPIRED    = 4007001;
+    RpcErrorCode_BAD_REQUEST_AUTH_TOKEN_ALREADY_ACCEPTED    = 4007002;
+    RpcErrorCode_BAD_REQUEST_AUTH_TOKEN_EXCEPTION    = 4007003;
+    RpcErrorCode_BAD_REQUEST_AUTH_TOKEN_INVALIDX    = 4007004;
+
+//    Code	Type	Description
+//    400	FILE_PART_EMPTY	The provided file part is empty
+//    400	FILE_PART_INVALID	The file part number is invalid
+//    400	FILE_PARTS_INVALID	The number of file parts is invalid
+//    400	FILE_PART_SIZE_CHANGED	Provided file part size has changed
+//    400	FILE_PART_SIZE_INVALID	The provided file part size is invalid
+//    400	FILE_PART_TOO_BIG	The uploaded file part is too big
+    RpcErrorCode_BAD_UPLOAD                                 = 4004000;
+    RpcErrorCode_BAD_UPLOAD_FILE_PART_EMPTY                 = 4004001;
+    RpcErrorCode_BAD_UPLOAD_FILE_PART_INVALID               = 4004002;
+    RpcErrorCode_BAD_UPLOAD_FILE_PARTS_INVALID              = 4004003;
+    RpcErrorCode_BAD_UPLOAD_FILE_PART_SIZE_CHANGED          = 4004004;
+    RpcErrorCode_BAD_UPLOAD_FILE_PART_SIZE_INVALID          = 4004005;
+    RpcErrorCode_BAD_UPLOAD_FILE_PART_TOO_BIG               = 4004006;
+    RpcErrorCode_BAD_UPLOAD_FILE_LOCATION_INVALID           = 4004007;
+//    400	FILE_REFERENCE_INVALID	The specified file reference is invalid.
+//    400	PHOTO_CROP_SIZE_SMALL	Photo is too small.
+//    400	PHOTO_EXT_INVALID	The extension of the photo is invalid.
+//    400	PHOTO_INVALID	Photo invalid.
+    RpcErrorCode_BAD_UPLOAD_FILE_REFERENCE_INVALID           = 4004008;
+    RpcErrorCode_BAD_UPLOAD_PHOTO_CROP_SIZE_SMALL            = 4004009;
+    RpcErrorCode_BAD_UPLOAD_FPHOTO_EXT_INVALID               = 4004010;
+    RpcErrorCode_BAD_UPLOAD_PHOTO_INVALID                    = 4004011;
+
+
+    // bindTempAuthKey
+    RpcErrorCode_BAD_REQUEST_ENCRYPTED_MESSAGE_INVALID      = 4002100;
+    RpcErrorCode_BAD_REQUEST_INPUT_REQUEST_TOO_LONG         = 4002200;
+    RpcErrorCode_BAD_REQUEST_TEMP_AUTH_KEY_ALREADY_BOUND    = 4002300;
+    RpcErrorCode_BAD_REQUEST_TEMP_AUTH_KEY_EMPTY            = 4002400;
+
+
+    // langPackLanguage
+    RpcErrorCode_BAD_REQUEST_LANG_PACK_INVALID              = 4003100;
+    RpcErrorCode_BAD_REQUEST_LANG_PACK_INVALID_LANGCODE     = 4003101;
+
+//    400	CALL_PROTOCOL_FLAGS_INVALID	Call protocol flags invalid
+//    400	PARTICIPANT_VERSION_OUTDATED	The other participant does not use an up to date telegram client with support for calls
+//    400	USER_ID_INVALID	The provided user ID is invalid
+//    403	USER_IS_BLOCKED	You were blocked by this user
+//    403	USER_PRIVACY_RESTRICTED	The user's privacy settings do not allow you to do this
+    RpcErrorCode_BAD_REQUEST_PARTICIPANT_VERSION_OUTDATED   = 4003120;
+    RpcErrorCode_BAD_REQUEST_USER_ID_INVALID                = 4003121;
+
+    RpcErrorCode_BAD_REQUEST_ABOUT_TOO_LONG                 = 4005001;
+
+    RpcErrorCode_BAD_REQUEST_USER_NOT_MUTUAL_CONTACT        = 4005002;
+
+    // sticker sets
+    RpcErrorCode_BAD_REQUEST_STICKER_ID_INVALID             = 4006000;
+    RpcErrorCode_BAD_REQUEST_STICKERSETS_FAVED_LIMIT        = 4006001;
+    RpcErrorCode_BAD_REQUEST_STICKERSETS_RECENT_LIMIT       = 4006002;
+
+//    401 UNAUTHORIZED
+//    There was an unauthorized attempt to use functionality available only to authorized users.
+//
+//    Examples of Errors:
+//    AUTH_KEY_UNREGISTERED: The key is not registered in the system
+//    AUTH_KEY_INVALID: The key is invalid
+//    USER_DEACTIVATED: The user has been deleted/deactivated
+//    SESSION_REVOKED: The authorization has been invalidated, because of the user terminating all sessions
+//    SESSION_EXPIRED: The authorization has expired
+//    AUTH_KEY_PERM_EMPTY: The method is unavailble for temporary authorization key, not bound to permanent
+    RpcErrorCode_UNAUTHORIZED                             = 4010000;
+    RpcErrorCode_UNAUTHORIZED_AUTH_KEY_INVALID            = 4011000;
+    RpcErrorCode_UNAUTHORIZED_USER_DEACTIVATED            = 4012000;
+    RpcErrorCode_UNAUTHORIZED_SESSION_REVOKED             = 4013000;
+    RpcErrorCode_UNAUTHORIZED_SESSION_EXPIRED             = 4014000;
+    RpcErrorCode_UNAUTHORIZED_AUTH_KEY_PERM_EMPTY         = 4015000;
+    RpcErrorCode_UNAUTHORIZED_AUTH_KEY_UNREGISTERED       = 4015001;
+    RpcErrorCode_UNAUTHORIZED_SESSION_PASSWORD_NEEDED     = 4015011;
+
+
+//      403 FORBIDDEN
+//    Privacy violation. For example, an attempt to write a message to someone who has blacklisted the current user.
+//    403	USER_IS_BLOCKED	You were blocked by this user
+//    403	USER_PRIVACY_RESTRICTED	The user's privacy settings do not allow you to do this
+    RpcErrorCode_FORBIDDEN                                = 4030000;
+    RpcErrorCode_FORBIDDEN_USER_IS_BLOCKED                = 4030002;
+    RpcErrorCode_FORBIDDEN_USER_PRIVACY_RESTRICTED        = 4030003;
+    RpcErrorCode_FORBIDDEN_USER_RESTRICTED              = 4030004;
+    RpcErrorCode_FORBIDDEN_USER_NOT_MUTUAL_CONTACT      = 4030005;
+
+
+
+//  sendMessage
+    RpcErrorCode_FORBIDDEN_DIRTY_WORD                     = 4030001;
+    RpcErrorCode_FORBIDDEN_BLOCK_IMAGE                    = 4030006;
+
+//  403	MESSAGE_DELETE_FORBIDDEN	You can't delete one of the messages you tried to delete, most likely because it is a service message.
+    RpcErrorCode_FORBIDDEN_MESSAGE_DELETE_FORBIDDEN     = 4030030;
+
+//
+//  404 NOT_FOUND
+//    An attempt to invoke a non-existent object, such as a method.
+    RpcErrorCode_NOT_FOUND                                = 4040000;
+//
+//  406 NOT_ACCEPTABLE
+//    Similar to 400 BAD_REQUEST, but the app should not display any error messages to user in UI as a result of this response. The error message will be delivered via updateServiceNotification instead.
+//  406	FRESH_RESET_AUTHORISATION_FORBIDDEN	You can't logout other sessions if less than 24 hours have passed since you logged on the current session.
+    RpcErrorCode_NOT_ACCEPTABLE                                     = 4060000;
+    RpcErrorCode_NOT_ACCEPTABLE_FRESH_RESET_AUTHORISATION_FORBIDDEN = 4060001;
+//
+//  420 FLOOD
+//    The maximum allowed number of attempts to invoke the given method with the given input parameters has been exceeded. For example, in an attempt to request a large number of text messages (SMS) for the same phone number.
+//
+//    Error Example:
+//    FLOOD_WAIT_X: A wait of X seconds is required (where X is a number)
+    RpcErrorCode_FLOOD                                    = 4200000;
+    RpcErrorCode_FLOOD_WAIT                               = 4201000;
+    RpcErrorCode_FLOOD_SLOWMODE_WAIT_X                    = 4201001;
+
+//   HandShake error < 0
+//      other error code  reconnect
+    RPCErrorCode_HANDSHAKE_PROXY                          = -444;
+    RPCErrorCode_HANDSHAKE_RESET_AUTH_KEY                 = -404;
+
+
+
+//    500 INTERNAL
+//    An internal server error occurred while a request was being processed; for example, there was a disruption while accessing a database or file storage.
+//
+//    If a client receives a 500 error, or you believe this error should not have occurred, please collect as much information as possible about the query and error and send it to the developers.
+    RpcErrorCode_INTERNAL                                 = 5000000;
+    RpcErrorCode_INTERNAL_RPC_RETURN_PARAMS               = 5001000; // customize
+}

@@ -1,0 +1,164 @@
+syntax = "proto3";
+
+package rpc_client;
+
+import "github.com/gogo/protobuf/gogoproto/gogo.proto";
+//import "google/protobuf/any.proto";
+//import "pkg/rpc/rpc/rpc.proto";
+
+option go_package = "rpc_client";
+
+option (gogoproto.marshaler_all) = true;
+option (gogoproto.sizer_all) = true;
+option (gogoproto.unmarshaler_all) = true;
+option (gogoproto.gostring_all) = true;
+
+message Device {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int32           token_type      = 1;
+  bool            app_sand_box    = 2;
+  string          secret          = 3;
+  bool            no_muted        = 4;
+  string          device_model    = 5;
+  string          lang_pack       = 6;
+  repeated int64  other_uid_list  = 7;
+}
+
+message UpdateAuthKey {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int64 auth_key_id       = 1;
+  int32 expires_in        = 2;
+  int32 valid_since       = 3;
+  int32 valid_until       = 4;
+  int64 salt              = 5;
+  int32 temp_auth_key     = 6;
+  bytes auth_key          = 7;
+}
+
+message AuthKey {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int64 auth_key_id = 1;
+}
+
+message AuthKeyInfo {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int64 auth_key_id       = 1;
+  int32 expires_in        = 2;
+  int32 valid_since       = 3;
+  int32 valid_until       = 4;
+  int64 salt              = 5;
+  int32 temp_auth_key     = 6;
+  bytes auth_key          = 7;
+  int32 layer             = 8;
+  int64 perm_auth_key_id  = 9;
+}
+
+message AuthKeyWithLayer {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int64 auth_key_id       = 1;
+  int32 layer             = 2;
+}
+
+message BindTempAuthKeyAuthKeyId {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int64 auth_key_id       = 1;
+  int64 perm_auth_key_id  = 2;
+  int64 session_id        = 3;
+}
+
+message BindedUser {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int64 auth_key_id       = 1;
+  int64 session_id        = 2;
+  int64 user_id           = 3;
+  int64 perm_auth_key_id  = 4;
+}
+
+message BindUser {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int64 auth_key_id       = 1;
+  int64 user_id           = 2;
+  int64 perm_auth_key_id  = 3;
+}
+
+message UserSession {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  repeated int64 user_id_list = 1;
+}
+
+message UserSessionInfo {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  message SessionInfo {
+    option (gogoproto.goproto_sizecache) = false;
+    option (gogoproto.goproto_unkeyed) = false;
+    option (gogoproto.goproto_unrecognized) = false;
+
+    int64           user_id     = 1;
+    int64           auth_key_id = 2;
+    repeated int64  session_id  = 3;
+    Device          device      = 4;
+  }
+
+  repeated SessionInfo session_info_list = 1;
+}
+
+message UserDevice {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int64   user_id          = 1;
+  int64   auth_key_id      = 2;
+  Device  device           = 3;
+  int64   perm_auth_key_id = 4;
+  int64   session_id       = 5;
+}
+
+message Close {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int64   auth_key_id = 1;
+  uint64  conn_id     = 2;
+}
+
+message UnbindAuthKeyUser {
+  option (gogoproto.goproto_sizecache) = false;
+  option (gogoproto.goproto_unkeyed) = false;
+  option (gogoproto.goproto_unrecognized) = false;
+
+  int64   auth_key_id = 1;
+  int64   user_id     = 2;
+  int64   perm_auth_key_id = 3;
+}
