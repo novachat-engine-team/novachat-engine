@@ -38,3 +38,25 @@ func (c *Core) GetMessages(userId int64, messageIdList []int32, replyTo bool) ([
 	log.Infof("GetMessages userId:%d messageIdList:%v len()=%d", userId, messageIdList, len(messageList))
 	return messageList, nil
 }
+
+func (c *Core) GetChannelMessageList(channelMsgId *message.ChannelMessageId) ([]*mtproto.Message, error) {
+	log.Debugf("GetChannelMessageList channelMsgId:%v", channelMsgId)
+
+	messageDataList, err := c.messageCore.GetChannelMessageList(channelMsgId)
+	if err != nil {
+		log.Errorf("GetChannelMessageList channelMsgId:%+v error:%s", channelMsgId, err.Error())
+		return nil, err
+	}
+
+	messageList := make([]*mtproto.Message, 0, len(messageDataList))
+	for _, v := range messageDataList {
+		if v.Deleted {
+			continue
+		}
+
+		messageList = append(messageList, message.ToMessage(v))
+	}
+
+	log.Infof("GetChannelMessageList channelMsgId:%+v len()=%d", channelMsgId, len(messageList))
+	return messageList, nil
+}

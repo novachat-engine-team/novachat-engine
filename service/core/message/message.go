@@ -52,6 +52,10 @@ func GetTableLimit() int {
 }
 
 func TableName(userId int64, tableName string) string {
+	if userId < 0 {
+		userId = -userId
+	}
+
 	idx := userId % int64(math.Min(float64(GetTableLimit()), MaxTableLimit))
 	if idx == 0 {
 		return tableName

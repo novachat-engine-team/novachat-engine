@@ -16,6 +16,7 @@ import (
 	"novachat_engine/pkg/cache"
 	"novachat_engine/pkg/cmd/biz_server/conf"
 	accountContact "novachat_engine/service/account/contact"
+	accountMessage "novachat_engine/service/account/message"
 	accountSetting "novachat_engine/service/account/setting"
 	accountUsers "novachat_engine/service/account/users"
 	"novachat_engine/service/core/account/account"
@@ -34,6 +35,7 @@ type ChannelsServiceImpl struct {
 	accountUsersCore   *accountUsers.Core
 	accountSettingCore *accountSetting.Core
 	messageCore        *message.Core
+	accountMessageCore *accountMessage.Core
 }
 
 func NewChannelsServiceImpl(conf *conf.Config) *ChannelsServiceImpl {
@@ -47,6 +49,13 @@ func NewChannelsServiceImpl(conf *conf.Config) *ChannelsServiceImpl {
 	impl.accountContactCore = accountContact.NewContactCore(impl.contactCore)
 	impl.accountUsersCore = accountUsers.NewUsersCore(impl.accountCore, impl.accountContactCore, impl.usersCore)
 	impl.accountSettingCore = accountSetting.NewSettingCore(setting.NewSettingCore(&conf.MongoDB))
-
+	impl.accountMessageCore = accountMessage.NewMessageCore(nil,
+		impl.usersCore,
+		impl.accountContactCore,
+		nil,
+		impl.accountCore,
+		nil,
+		impl.messageCore,
+		nil)
 	return impl
 }

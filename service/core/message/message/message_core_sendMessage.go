@@ -88,7 +88,7 @@ func (c *Core) SendChannelMessages(context context.Context, userId int64, peerId
 	op.SetReadConcern(readconcern.Majority())
 	//op.SetRegistry(mgo.Registry())
 	imr, err := mgo.GetDatabase(message.DBMessage).
-		Collection(message.TableName(userId, message.TableChannelMessage), op).
+		Collection(message.TableName(peerId, message.TableChannelMessage), op).
 		InsertMany(context, document)
 	if err != nil {
 		log.Errorf("SendChannelMessages userId:%df peerId:%d peerType:%v len():%d", userId, peerId, peerType, len(list))

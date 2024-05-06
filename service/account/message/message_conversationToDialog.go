@@ -19,6 +19,7 @@ import (
 	"novachat_engine/service/account/setting"
 	"novachat_engine/service/chat"
 	"novachat_engine/service/constants"
+	"novachat_engine/service/core/message/message"
 	data_message "novachat_engine/service/data/messages/message"
 	"novachat_engine/service/input"
 	"novachat_engine/service/notify_setting"
@@ -28,6 +29,7 @@ func (c *Core) conversationToDialog(userId int64, conversationList []*data_messa
 	var peerType constants.PeerType
 	chatIdList := make([]int64, 0, len(conversationList))
 	userIdList := make([]int64, 0, len(conversationList))
+	channelMsgIdList := make([]*message.ChannelMessageId, 0, len(conversationList))
 	messageIdList := make([]int32, 0, len(conversationList))
 	dialogs := make([]*mtproto.Dialog, 0, len(conversationList))
 	notifySettingList := make([]*setting.NotifyPeerSettingType, 0, len(conversationList))
@@ -67,7 +69,7 @@ func (c *Core) conversationToDialog(userId int64, conversationList []*data_messa
 			messageIdList = append(messageIdList, conversation.Top)
 		case constants.PeerTypeChat, constants.PeerTypeChannel:
 			chatIdList = append(chatIdList, conversation.PeerId)
-			messageIdList = append(messageIdList, conversation.Top)
+			channelMsgIdList = append(channelMsgIdList, &message.ChannelMessageId{ChannelId: conversation.PeerId, IdList: []int32{conversation.Top}})
 			d.Pts = conversation.Pts
 			if conversation.Deleted {
 				d.ReadInboxMaxId = 0
@@ -128,6 +130,16 @@ func (c *Core) conversationToDialog(userId int64, conversationList []*data_messa
 				} else {
 					v.NotifySettings = mtproto.NewPeerNotifySettingEmptyLayer(layer)
 				}
+			}
+		}
+	}
+	if len(channelMsgIdList) > 0 {
+		for _, v := range channelMsgIdList {
+			channelMessageList, err1 := c.GetChannelMessageList(v)
+			if err1 != nil {
+				log.Warnf("conversationToDialog - GetChannelMessageList error:%s", err.Error())
+			} else {
+				messageList = append(messageList, channelMessageList...)
 			}
 		}
 	}
