@@ -59,10 +59,14 @@ func (impl *Impl) ReqEditTitle(ctx context.Context, request *chatService.EditTit
 		}
 	}
 
-	_, err = chat.EditTitle(request.Title)
+	var ok bool
+	_, ok, err = chat.EditTitle(request.Title)
 	if err != nil {
 		log.Errorf("ReqEditTitle request:%+v", request, err.Error())
 		return nil, err
+	}
+	if !ok {
+		return types.MarshalAny(mtproto.NewTLUpdates(nil).To_Updates())
 	}
 	chatPeer := mtproto.NewTLPeerChannel(&mtproto.Peer{ChannelId: constants.PeerTypeFromChatIDType(chatData.ChatId).ToInt32()}).To_Peer()
 	message := mtproto.NewTLMessageService(&mtproto.Message{
@@ -198,10 +202,14 @@ func (impl *Impl) ReqEditAbout(ctx context.Context, request *chatService.EditAbo
 		}
 	}
 
-	_, err = chat.EditAbout(request.About)
+	var ok bool
+	_, ok, err = chat.EditAbout(request.About)
 	if err != nil {
 		log.Errorf("ReqEditAbout request:%+v", request, err.Error())
 		return nil, err
+	}
+	if !ok {
+		return types.MarshalAny(mtproto.NewTLUpdates(nil).To_Updates())
 	}
 
 	updates := mtproto.NewTLUpdates(&mtproto.Updates{
@@ -366,6 +374,72 @@ func (impl *Impl) ReqEditGeoPoint(ctx context.Context, request *chatService.Edit
 		Updates: []*mtproto.Update{
 			mtproto.NewTLUpdateChannel(&mtproto.Update{
 				ChannelId: constants.PeerTypeFromChatIDType(request.PeerId).ToInt32(),
+			}).To_Update(),
+		},
+	}).To_Updates()
+	updateDataList := make([]*syncService.UpdateData, 0, chat.GetChatInfo().Count)
+	chat.GetChatInfo().Iteration(func(participant *data_chat.ChatParticipant) {
+		if request.UserId == participant.UserId {
+			updateDataList = append(updateDataList, &syncService.UpdateData{
+				UserId:          participant.UserId,
+				IgnoreAuthKeyId: request.AuthKeyId,
+				Updates:         updates,
+			})
+		} else {
+			updateDataList = append(updateDataList, &syncService.UpdateData{
+				UserId:  participant.UserId,
+				Updates: updates,
+			})
+		}
+	})
+
+	_, err = syncService.GetSyncClientById(request.UserId).ReqSyncUpdates(ctx, &syncService.SyncUpdates{
+		UpdateDataList: updateDataList,
+		Push:           false,
+		PeerType:       constants.PeerTypeUser.ToInt32(),
+	})
+	if err != nil {
+		log.Warnf("ReqEditAbout ReqSyncUpdates:%+v", request, err.Error())
+	}
+
+	return types.MarshalAny(mtproto.ToMTBool(true))
+}
+
+func (impl *Impl) ReqUpdateUsername(ctx context.Context, request *chatService.UpdateUsername) (*types.Any, error) {
+	chat, err := impl.chatManager.GetChat(request.ChatId)
+	if err != nil {
+		log.Errorf("ReqUpdateUsername request:%+v", request, err.Error())
+		return nil, err
+	}
+
+	if chat.Invalid() || chat.Deleted() {
+		return nil, errorsService.NewRpcErrorWithRpcErrorCode(mtproto.RpcErrorCode_BAD_REQUEST_CHAT_INVALID)
+	}
+
+	chatInfo := chat.GetChatInfo()
+	if chatInfo.ChatData.Creator != request.UserId {
+		participant := chat.GetChatInfo().GetParticipants(request.UserId)
+		if participant == nil {
+			return nil, errorsService.NewRpcErrorWithRpcErrorCode(mtproto.RpcErrorCode_BAD_REQUEST_CHAT_INVALID)
+		}
+		if !participant.Admin {
+			return nil, errorsService.NewRpcErrorWithRpcErrorCode(mtproto.RpcErrorCode_BAD_REQUEST_CHAT_ADMIN_REQUIRED)
+		}
+	}
+
+	_, ok, err := chat.EditUsername(request.Username)
+	if err != nil {
+		log.Errorf("ReqUpdateUsername request:%+v", request, err.Error())
+		return nil, err
+	}
+	if !ok {
+		return types.MarshalAny(mtproto.ToMTBool(true))
+	}
+
+	updates := mtproto.NewTLUpdates(&mtproto.Updates{
+		Updates: []*mtproto.Update{
+			mtproto.NewTLUpdateChannel(&mtproto.Update{
+				ChannelId: constants.PeerTypeFromChatIDType(request.ChatId).ToInt32(),
 			}).To_Update(),
 		},
 	}).To_Updates()

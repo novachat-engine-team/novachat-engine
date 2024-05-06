@@ -175,20 +175,20 @@ func (m *Chat) EditPhoto(photo *data_fs.PhotoProfile) (*ChatInfo, error) {
 	return m.chatInfo, nil
 }
 
-func (m *Chat) EditTitle(title string) (*ChatInfo, error) {
-	if m.chatInfo.ChatData.Title != title {
-		return m.chatInfo, nil
+func (m *Chat) EditTitle(title string) (*ChatInfo, bool, error) {
+	if m.chatInfo.ChatData.Title == title {
+		return m.chatInfo, false, nil
 	}
 
 	ok, err := m.chatCore.EditProperty(m.chatId, data_chat.Chat{ChatId: m.chatId, Title: title}, "Title")
 	if err != nil {
 		log.Errorf("EditTitle chatId:%d error:%s", m.chatId, err.Error())
-		return nil, err
+		return nil, false, err
 	}
 
 	_ = ok
 	m.chatInfo.ChatData.Title = title
-	return m.chatInfo, nil
+	return m.chatInfo, true, nil
 }
 
 func (m *Chat) EditGeoPoint(point *data_fs.GeoPoint, address string) (*ChatInfo, error) {
@@ -204,20 +204,20 @@ func (m *Chat) EditGeoPoint(point *data_fs.GeoPoint, address string) (*ChatInfo,
 	return m.chatInfo, nil
 }
 
-func (m *Chat) EditAbout(about string) (*ChatInfo, error) {
-	if m.chatInfo.ChatData.About != about {
-		return m.chatInfo, nil
+func (m *Chat) EditAbout(about string) (*ChatInfo, bool, error) {
+	if m.chatInfo.ChatData.About == about {
+		return m.chatInfo, false, nil
 	}
 
 	ok, err := m.chatCore.EditProperty(m.chatId, data_chat.Chat{ChatId: m.chatId, About: about}, "About")
 	if err != nil {
 		log.Errorf("EditAbout chatId:%d error:%s", m.chatId, err.Error())
-		return nil, err
+		return nil, false, err
 	}
 
 	_ = ok
 	m.chatInfo.ChatData.About = about
-	return m.chatInfo, nil
+	return m.chatInfo, true, nil
 }
 
 func (m *Chat) AddUsers(userId int64, userIdList []int64) ([]*data_chat.ChatParticipant, []*data_chat.ChatParticipant, error) {
@@ -422,4 +422,20 @@ func (m *Chat) EditBannedRights(rights int32) (*ChatInfo, error) {
 	_ = ok
 	m.chatInfo.ChatData.BannedRights = rights
 	return m.chatInfo, nil
+}
+
+func (m *Chat) EditUsername(username string) (*ChatInfo, bool, error) {
+	if m.chatInfo.ChatData.Username != username {
+		return m.chatInfo, false, nil
+	}
+
+	ok, err := m.chatCore.EditProperty(m.chatId, data_chat.Chat{ChatId: m.chatId, Username: username}, "Username")
+	if err != nil {
+		log.Errorf("EditUsername chatId:%d error:%s", m.chatId, err.Error())
+		return nil, false, err
+	}
+
+	_ = ok
+	m.chatInfo.ChatData.Username = username
+	return m.chatInfo, true, nil
 }

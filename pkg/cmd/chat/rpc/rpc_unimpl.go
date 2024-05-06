@@ -23,10 +23,6 @@ func (impl *Impl) ReqHistoryHidden(ctx context.Context, request *chatService.His
 	panic("ReqHistoryHidden")
 }
 
-func (impl *Impl) ReqUpdateUsername(ctx context.Context, request *chatService.UpdateUsername) (*types.Any, error) {
-	panic("ReqUpdateUsername")
-}
-
 func (impl *Impl) ReqDeleteHistory(ctx context.Context, request *chatService.DeleteHistory) (*types.Any, error) {
 	panic("ReqDeleteHistory")
 }
@@ -37,8 +33,4 @@ func (impl *Impl) ReqDeleteMessages(ctx context.Context, request *chatService.De
 
 func (impl *Impl) ReqDeleteUserHistory(ctx context.Context, request *chatService.DeleteUserHistory) (*types.Any, error) {
 	panic("ReqDeleteUserHistory")
-}
-
-func (impl *Impl) ReqGetParticipants(ctx context.Context, request *chatService.GetParticipants) (*types.Any, error) {
-	panic("ReqGetParticipants")
 }
