@@ -31,4 +31,6 @@ message ChatParticipant {
   int32             admin_rights          = 7 [(gogoproto.moretags) = "bson:\"admin_rights\""];
   ParticipantState  state                 = 8 [(gogoproto.moretags) = "bson:\"state\""];
   int32             rights                = 9 [(gogoproto.moretags) = "bson:\"rights\""];
+  string            rank                  = 10[(gogoproto.moretags) = "bson:\"rank\""];
+  int64             promoted_by           = 11[(gogoproto.moretags) = "bson:\"promoted_by\""];
 }

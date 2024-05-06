@@ -79,7 +79,6 @@ func (s *ChannelsServiceImpl) ChannelsGetFullChannel(ctx context.Context, reques
 
 	var chat *mtproto.Chat
 	if chatData.Deleted {
-		mtproto.NewTLChannelForbidden(nil).GetTitle()
 		chat = mtproto.NewTLChannelForbidden(&mtproto.Chat{
 			Title:      chatData.Title,
 			Id:         request.Channel.ChannelId,

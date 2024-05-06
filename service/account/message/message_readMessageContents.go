@@ -85,6 +85,7 @@ func (c *Core) ReadMessageContents(userId int64, idList []int32) (*mtproto.Messa
 			continue
 		}
 
+		//mtproto.NewTLUpdateChannelReadMessagesContents().GetMessages()
 		_, err = syncClient.GetSyncClientById(key).ReqSyncUpdate(context.Background(), &syncClient.SyncUpdate{
 			UserId: key,
 			Updates: mtproto.NewTLUpdates(&mtproto.Updates{
@@ -111,4 +112,28 @@ func (c *Core) ReadMessageContents(userId int64, idList []int32) (*mtproto.Messa
 		Pts:      -1,
 		PtsCount: 0,
 	}).To_Messages_AffectedMessages(), nil
+}
+
+func (c *Core) ReadChannelMessageContents(authKeyId, userId int64, chatId int64, idList []int32) (*mtproto.Messages_AffectedMessages, error) {
+	_, err := syncClient.GetSyncClientById(userId).ReqSyncUpdate(context.Background(), &syncClient.SyncUpdate{
+		UserId:          userId,
+		IgnoreAuthKeyId: authKeyId,
+		Updates: mtproto.NewTLUpdates(&mtproto.Updates{
+			Updates: []*mtproto.Update{
+				mtproto.NewTLUpdateChannelReadMessagesContents(&mtproto.Update{
+					ChannelId: constants.PeerTypeFromUserIDType(chatId).ToInt32(),
+					Messages:  idList,
+				}).To_Update()},
+			Users: []*mtproto.User{},
+			Chats: []*mtproto.Chat{},
+			Date:  int32(time.Now().Unix()),
+			Seq:   0,
+		}).To_Updates(),
+		Push:     false,
+		PeerType: constants.PeerTypeUser.ToInt32(),
+	})
+	if err != nil {
+		log.Warnf("ReadChannelMessageContents userId:%d, values:%v error:%s", userId, idList, err.Error())
+	}
+	return nil, nil
 }

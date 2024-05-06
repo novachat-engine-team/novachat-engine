@@ -389,7 +389,7 @@ const (
 	PhoneCallStatusCalling PhoneCallStatus = 3
 )
 
-type ChannelParticipantsType int32
+type ChannelParticipantsFilterType int32
 
 //  + TL_channelParticipantsRecent
 //  + TL_channelParticipantsAdmins
@@ -400,14 +400,15 @@ type ChannelParticipantsType int32
 //  + TL_channelParticipantsContacts
 //  + TL_channelParticipantsMentions
 const (
-	ChannelParticipantsTypeContacts ChannelParticipantsType = 0
-	ChannelParticipantsTypeRecent   ChannelParticipantsType = 1
-	ChannelParticipantsTypeAdmin    ChannelParticipantsType = 2
-	ChannelParticipantsTypeKicked   ChannelParticipantsType = 3
-	ChannelParticipantsTypeBots     ChannelParticipantsType = 4
-	ChannelParticipantsTypeBanned   ChannelParticipantsType = 5
-	ChannelParticipantsTypeSearch   ChannelParticipantsType = 6
-	ChannelParticipantsTypeMentions ChannelParticipantsType = 7
+	ChannelParticipantsFilterNone     ChannelParticipantsFilterType = 0
+	ChannelParticipantsFilterContacts ChannelParticipantsFilterType = 1
+	ChannelParticipantsFilterRecent   ChannelParticipantsFilterType = 2
+	ChannelParticipantsFilterAdmin    ChannelParticipantsFilterType = 3
+	ChannelParticipantsFilterKicked   ChannelParticipantsFilterType = 4
+	ChannelParticipantsFilterBots     ChannelParticipantsFilterType = 5
+	ChannelParticipantsFilterBanned   ChannelParticipantsFilterType = 6
+	ChannelParticipantsFilterSearch   ChannelParticipantsFilterType = 7
+	ChannelParticipantsFilterMentions ChannelParticipantsFilterType = 8
 )
 
 ///////////////////////////////////////////////////////////////////////////////

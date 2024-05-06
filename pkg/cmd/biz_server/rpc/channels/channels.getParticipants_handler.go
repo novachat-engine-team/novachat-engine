@@ -14,9 +14,14 @@ package rpc
 
 import (
 	"context"
+	"github.com/gogo/protobuf/types"
 	"novachat_engine/mtproto"
+	chatService "novachat_engine/pkg/cmd/chat/rpc_client"
 	"novachat_engine/pkg/log"
 	"novachat_engine/pkg/rpc/metadata"
+	"novachat_engine/pkg/util"
+	"novachat_engine/service/chat"
+	"novachat_engine/service/constants"
 )
 
 //  channels.getParticipants#123e05e9 channel:InputChannel filter:ChannelParticipantsFilter offset:int limit:int hash:int = channels.ChannelParticipants;
@@ -25,26 +30,41 @@ import (
 func (s *ChannelsServiceImpl) ChannelsGetParticipants(ctx context.Context, request *mtproto.TLChannelsGetParticipants) (*mtproto.Channels_ChannelParticipants, error) {
 	md := metadata.RpcMetaDataFromContext(ctx)
 	log.Infof("ChannelsGetParticipants %v, request: %v", metadata.RpcMetaDataDebug(md), request)
+	chatId := constants.PeerTypeFromChannelIDType32(request.Channel.ChannelId).ToInt()
+	resp, err := chatService.GetChatClientByKeyId(chatId).ReqGetParticipants(ctx, &chatService.GetParticipants{
+		ChatId: chatId,
+		Filter: constants.MTToChannelParticipantFilterType(request.Filter).ToInt32(),
+		Offset: request.Offset,
+		Limit:  request.Limit,
+	})
+	if err != nil {
+		log.Errorf("ChannelsGetParticipants %v, request: %v error:%s", metadata.RpcMetaDataDebug(md), request, err.Error())
+		return nil, err
+	}
 
-	panic("ChannelsGetParticipants")
+	var chatInfo chatService.Chat
+	err = types.UnmarshalAny(resp, &chatInfo)
+	if err != nil {
+		log.Errorf("ChannelsGetParticipants %v, request: %v error:%s", metadata.RpcMetaDataDebug(md), request, err.Error())
+		return nil, err
+	}
 
-	//chatLogic, err := group.NewChatCoreById(request.Channel.ChannelId, md.UserId)
-	//if err != nil {
-	//    log.Errorf("ChannelsGetParticipants %v, request: %v error:%s", metadata.RpcMetaDataDebug(md), request, err.Error())
-	//    return nil, err
-	//}
-	//
-	//if chatLogic.IsForbidden() == true {
-	//    err = errors.NewRpcErrorWithRpcErrorCode(mtproto.RpcErrorCode_BAD_REQUEST_CHANNEL_PRIVATE)
-	//    log.Errorf("ChannelsGetParticipants %v, request: %v error:%s", metadata.RpcMetaDataDebug(md), request, err.Error())
-	//    return nil, err
-	//}
-	//
-	//participants, err := chatLogic.GetParticipants(md.UserId, request.Filter, request.Offset, request.Limit, request.Hash)
-	//if err != nil {
-	//    log.Errorf("ChannelsGetParticipants %v, request: %v GetParticipants error:%s", metadata.RpcMetaDataDebug(md), request, err.Error())
-	//    return nil, err
-	//}
-	//
-	//return participants, nil
+	userIdList := make([]int64, 0, len(chatInfo.ParticipantList))
+	p := mtproto.NewTLChannelsChannelParticipants(&mtproto.Channels_ChannelParticipants{
+		Count:        int32(len(chatInfo.ParticipantList)),
+		Participants: make([]*mtproto.ChannelParticipant, 0, len(chatInfo.ParticipantList)),
+		Users:        nil,
+	}).To_Channels_ChannelParticipants()
+	util.Foreach(chatInfo.ParticipantList, func(first interface{}, second interface{}) {
+		participant := chatInfo.ParticipantList[first.(int)]
+		p.Participants = append(p.Participants, chat.ToChatParticipant(participant, chatInfo.ChatData.Creator, md.UserId))
+
+		if participant != nil && md.UserId != participant.UserId {
+			userIdList = append(userIdList, participant.UserId)
+		}
+	})
+
+	users, _ := s.accountUsersCore.GetUserList(md.UserId, userIdList)
+	p.Users = users
+	return p, nil
 }

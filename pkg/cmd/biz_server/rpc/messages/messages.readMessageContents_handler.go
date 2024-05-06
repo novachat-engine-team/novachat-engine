@@ -32,7 +32,9 @@ func (s *MessagesServiceImpl) MessagesReadMessageContents(ctx context.Context, r
 		}).To_Messages_AffectedMessages(), nil
 	}
 
-	resp, err := s.accountMessageCore.ReadMessageContents(md.AuthKeyId, request.GetId())
+	resp, err := s.accountMessageCore.ReadMessageContents(
+		md.UserId,
+		request.GetId())
 	if err != nil {
 		log.Errorf("MessagesReadMessageContents request: %v error:%s", request, err.Error())
 		return nil, err

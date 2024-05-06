@@ -46,4 +46,5 @@ service ChatService {
   rpc ReqDeleteHistory(DeleteHistory) returns (google.protobuf.Any) {}
   rpc ReqDeleteMessages(DeleteMessages) returns (google.protobuf.Any) {}
   rpc ReqDeleteUserHistory(DeleteUserHistory) returns (google.protobuf.Any) {}
+  rpc ReqGetParticipants(GetParticipants) returns (google.protobuf.Any) {}
 }

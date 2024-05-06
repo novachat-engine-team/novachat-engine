@@ -38,3 +38,7 @@ func (impl *Impl) ReqDeleteMessages(ctx context.Context, request *chatService.De
 func (impl *Impl) ReqDeleteUserHistory(ctx context.Context, request *chatService.DeleteUserHistory) (*types.Any, error) {
 	panic("ReqDeleteUserHistory")
 }
+
+func (impl *Impl) ReqGetParticipants(ctx context.Context, request *chatService.GetParticipants) (*types.Any, error) {
+	panic("ReqGetParticipants")
+}

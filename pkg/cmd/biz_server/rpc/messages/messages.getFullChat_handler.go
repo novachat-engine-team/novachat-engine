@@ -80,7 +80,6 @@ func (s *MessagesServiceImpl) MessagesGetFullChat(ctx context.Context, request *
 
 	var chat *mtproto.Chat
 	if chatData.Deleted {
-		mtproto.NewTLChannelForbidden(nil).GetTitle()
 		chat = mtproto.NewTLChannelForbidden(&mtproto.Chat{
 			Title:      chatData.Title,
 			Id:         request.ChatId,

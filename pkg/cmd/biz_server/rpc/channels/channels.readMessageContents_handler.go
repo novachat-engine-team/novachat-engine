@@ -17,6 +17,7 @@ import (
 	"novachat_engine/mtproto"
 	"novachat_engine/pkg/log"
 	"novachat_engine/pkg/rpc/metadata"
+	"novachat_engine/service/constants"
 )
 
 //  channels.ChannelsReadMessageContents#eab5dc38 channel:InputChannel id:Vector<int> = Bool;
@@ -29,34 +30,14 @@ func (s *ChannelsServiceImpl) ChannelsReadMessageContents(ctx context.Context, r
 		return mtproto.ToMTBool(true), nil
 	}
 
-	//chatId := request.Channel.ChannelId
-	//
-	////  updateChannelReadMessagesContents#89893b45 channel_id:int messages:Vector<int> = Update;
-	//updates := mtproto.NewTLUpdates(&mtproto.Updates{
-	//    Updates : []*mtproto.Update{mtproto.NewTLUpdateChannelReadMessagesContents(&mtproto.Update{
-	//        ChannelId:          chatId,
-	//        Messages:           request.Id,
-	//    }).To_Update(),
-	//    },
-	//    Users:   []*mtproto.User{},
-	//    Chats:   []*mtproto.Chat{},
-	//    Date:    int32(time.Now().Unix()),
-	//    Seq:     0,
-	//})
-	//
-	//_, err := syncClient.GetSyncClient().PushChannelUpdatesList(context.Background(), &sync_pb.PushChannelUpdatesList{
-	//    PushUpdatesList: []*sync_pb.PushUpdates{
-	//        {
-	//            UserId:               md.UserId,
-	//            ExcludeAuthKeyIdList: []int64{md.AuthKeyId},
-	//            Updates:              updates.To_Updates(),
-	//        },
-	//    },
-	//    ChannelMultiUpdateDbOne: false,
-	//})
-	//if err != nil {
-	//    log.Errorf("ChannelsReadMessageContents userId:%s PushUpdates error:%s", md.UserId, err.Error())
-	//}
-	//
+	_, err := s.accountMessageCore.ReadChannelMessageContents(
+		md.AuthKeyId,
+		md.UserId,
+		constants.PeerTypeFromChannelIDType32(request.Channel.ChannelId).ToInt(),
+		request.GetId())
+	if err != nil {
+		log.Errorf("ChannelsReadMessageContents request: %v error:%s", request, err.Error())
+		return nil, err
+	}
 	return mtproto.ToMTBool(true), nil
 }

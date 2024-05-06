@@ -323,11 +323,11 @@ func ToMessageType(message *mtproto.Message) MessageType {
 	return MessageTypeEmpty
 }
 
-func ChannelParticipantsTypeFromInt32(m int32) ChannelParticipantsType {
-	return ChannelParticipantsType(m)
+func ChannelParticipantsFilterTypeFromInt32(m int32) ChannelParticipantsFilterType {
+	return ChannelParticipantsFilterType(m)
 }
 
-func (m ChannelParticipantsType) ToInt32() int32 {
+func (m ChannelParticipantsFilterType) ToInt32() int32 {
 	return int32(m)
 }
 
