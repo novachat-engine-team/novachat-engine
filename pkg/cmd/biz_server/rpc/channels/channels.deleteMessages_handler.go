@@ -28,7 +28,7 @@ import (
 func (s *ChannelsServiceImpl) ChannelsDeleteMessages(ctx context.Context, request *mtproto.TLChannelsDeleteMessages) (*mtproto.Messages_AffectedMessages, error) {
 	md := metadata.RpcMetaDataFromContext(ctx)
 	log.Infof("ChannelsDeleteMessages %v, request: %v", metadata.RpcMetaDataDebug(md), request)
-
+	
 	chatId := constants.PeerTypeFromChannelIDType32(request.Channel.ChannelId).ToInt()
 	resp, err := chatService.GetChatClientByKeyId(chatId).ReqDeleteMessages(ctx, &chatService.DeleteMessages{
 		ChatId:    chatId,

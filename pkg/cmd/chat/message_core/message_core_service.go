@@ -10,9 +10,13 @@
 package message_core
 
 import (
+	"context"
+	"errors"
 	"fmt"
 	"github.com/gogo/protobuf/proto"
 	jsoniter "github.com/json-iterator/go"
+	"novachat_engine/mtproto"
+	chatService "novachat_engine/pkg/cmd/chat/rpc_client"
 	msgService "novachat_engine/pkg/cmd/msg/rpc_client"
 	"novachat_engine/pkg/log"
 	"novachat_engine/service/constants"
@@ -57,9 +61,29 @@ func (m *MessageCoreService) OnMessageData(key string, value []byte) error {
 			return err
 		}
 		return m.PinnedMessageData(r)
+	case constants.DeleteChannelMessages:
+		r := &chatService.DeleteMessagesUpdates{}
+		if err = proto.Unmarshal(value, r); err != nil {
+			log.Errorf(err.Error())
+			return err
+		}
+		return m.DeleteChannelMessagesData(r)
+
 	default:
 		err = fmt.Errorf("OnMessageData invalid key: %s", key)
 		log.Error(err.Error())
 		return nil
 	}
+}
+
+func (m *MessageCoreService) DeleteChannelMessagesData(r *chatService.DeleteMessagesUpdates) error {
+	_, err := chatService.GetChatClientByKeyId(r.PeerId).ReqDeleteMessagesUpdates(context.Background(), r)
+	if errors.Is(err, mtproto.DefaultRpcError) {
+		log.Warnf("DeleteChannelMessagesData userId:%d chatId:%d error:%s", r.UserId, r.PeerId)
+		err = nil
+	}
+	if err != nil {
+		log.Errorf("DeleteChannelMessagesData userId:%d chatId:%d error:%s", r.UserId, r.PeerId)
+	}
+	return err
 }

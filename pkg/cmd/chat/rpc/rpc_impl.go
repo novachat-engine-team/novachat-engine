@@ -15,15 +15,19 @@ import (
 	"novachat_engine/pkg/cmd/chat/message_core"
 	"novachat_engine/pkg/cmd/chat/service"
 	"novachat_engine/pkg/mq"
+	accountMessage "novachat_engine/service/account/message"
 	"novachat_engine/service/constants"
+	"novachat_engine/service/core/message/message"
 )
 
 type Impl struct {
-	conf           *conf.Config
-	chatManager    *service.ChatManager
-	chatConsumer   mq.Consumer
-	coreService    *message_core.MessageCoreService
-	chatInProducer mq.Producer
+	conf               *conf.Config
+	chatManager        *service.ChatManager
+	chatConsumer       mq.Consumer
+	coreService        *message_core.MessageCoreService
+	chatInProducer     mq.Producer
+	messageCore        *message.Core
+	accountMessageCore *accountMessage.Core
 }
 
 func NewImpl(conf *conf.Config) *Impl {
@@ -32,7 +36,17 @@ func NewImpl(conf *conf.Config) *Impl {
 	m := &Impl{
 		conf:        conf,
 		chatManager: service.NewChatManager(conf.Mongo),
+		messageCore: message.NewMessageCore(conf.Mongo, nil),
 	}
+
+	m.accountMessageCore = accountMessage.NewMessageCore(nil,
+		nil,
+		nil,
+		nil,
+		nil,
+		nil,
+		m.messageCore,
+		nil)
 
 	m.coreService = message_core.NewMessageCoreService()
 

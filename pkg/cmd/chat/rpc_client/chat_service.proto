@@ -43,6 +43,7 @@ service ChatService {
   rpc ReqDeleteChat(DeleteChat) returns (google.protobuf.Any) {}
   rpc ReqHistoryHidden(HistoryHidden) returns (google.protobuf.Any) {}
   rpc ReqUpdateUsername(UpdateUsername) returns (google.protobuf.Any) {}
+  rpc ReqDeleteMessagesUpdates(DeleteMessagesUpdates) returns (google.protobuf.Any) {}
   rpc ReqDeleteHistory(DeleteHistory) returns (google.protobuf.Any) {}
   rpc ReqDeleteMessages(DeleteMessages) returns (google.protobuf.Any) {}
   rpc ReqDeleteUserHistory(DeleteUserHistory) returns (google.protobuf.Any) {}

@@ -58,3 +58,65 @@ func (c *Core) GetChannelMessageList(channelMsgId *ChannelMessageId) ([]*data_me
 	log.Infof("GetChannelMessageList channelId:%d messageIdList:%d len()=%d", channelMsgId.ChannelId, channelMsgId.IdList, len(messageDatas))
 	return messageDatas, nil
 }
+
+func (c *Core) GetChannelMessageListByMaxId(peerId int64, maxId int32) ([]*data_message.Message, error) {
+
+	peerId = message.MakePeerId(peerId, constants.PeerTypeChannel)
+
+	op := options.Collection()
+	op.SetWriteConcern(writeconcern.New(writeconcern.WMajority()))
+	op.SetReadConcern(readconcern.Majority())
+	//op.SetRegistry(mgo.Registry())
+	cursor, err := mgo.GetDatabase(message.DBMessage).
+		Collection(message.TableName(peerId, message.TableChannelMessage), op).
+		Find(context.Background(), bson.M{"peer_id": peerId, "id": bson.M{mgo.LTE: maxId}, "deleted": false})
+	if err != nil && err != mongo.ErrNoDocuments {
+		log.Errorf("GetChannelMessageListByMaxId channelId:%d error:%s", peerId, err.Error())
+		return nil, err
+	}
+	defer cursor.Close(context.Background())
+	if err == mongo.ErrNoDocuments {
+		log.Warnf("GetChannelMessageListByMaxId channelId:%d maxId:%v empty", peerId, maxId)
+		return []*data_message.Message{}, nil
+	}
+
+	var messageDatas []*data_message.Message
+	err = cursor.All(context.Background(), &messageDatas)
+	if err != nil {
+		log.Warnf("GetChannelMessageListByMaxId channelId:%d Decoder error:%s", peerId, err.Error())
+	}
+
+	log.Infof("GetChannelMessageListByMaxId channelId:%d maxId:%d len()=%d", peerId, maxId, len(messageDatas))
+	return messageDatas, nil
+}
+
+func (c *Core) GetChannelMessageListByUserId(peerId int64, userId int64) ([]*data_message.Message, error) {
+
+	peerId = message.MakePeerId(peerId, constants.PeerTypeChannel)
+
+	op := options.Collection()
+	op.SetWriteConcern(writeconcern.New(writeconcern.WMajority()))
+	op.SetReadConcern(readconcern.Majority())
+	//op.SetRegistry(mgo.Registry())
+	cursor, err := mgo.GetDatabase(message.DBMessage).
+		Collection(message.TableName(peerId, message.TableChannelMessage), op).
+		Find(context.Background(), bson.M{"peer_id": peerId, "user_id": userId, "deleted": false})
+	if err != nil && err != mongo.ErrNoDocuments {
+		log.Errorf("GetChannelMessageListByUserId channelId:%d error:%s", peerId, err.Error())
+		return nil, err
+	}
+	defer cursor.Close(context.Background())
+	if err == mongo.ErrNoDocuments {
+		log.Warnf("GetChannelMessageListByUserId channelId:%d userId:%v empty", peerId, userId)
+		return []*data_message.Message{}, nil
+	}
+
+	var messageDatas []*data_message.Message
+	err = cursor.All(context.Background(), &messageDatas)
+	if err != nil {
+		log.Warnf("GetChannelMessageListByUserId channelId:%d Decoder error:%s", peerId, err.Error())
+	}
+
+	log.Infof("GetChannelMessageListByUserId channelId:%d userId:%d len()=%d", peerId, userId, len(messageDatas))
+	return messageDatas, nil
+}

@@ -34,6 +34,7 @@ func (s *ChannelsServiceImpl) ChannelsGetParticipants(ctx context.Context, reque
 	resp, err := chatService.GetChatClientByKeyId(chatId).ReqGetParticipants(ctx, &chatService.GetParticipants{
 		ChatId: chatId,
 		Filter: constants.MTToChannelParticipantFilterType(request.Filter).ToInt32(),
+		Q:      request.Filter.Q,
 		Offset: request.Offset,
 		Limit:  request.Limit,
 	})

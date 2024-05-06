@@ -22,15 +22,3 @@ func (impl *Impl) ReqDeleteChat(ctx context.Context, request *chatService.Delete
 func (impl *Impl) ReqHistoryHidden(ctx context.Context, request *chatService.HistoryHidden) (*types.Any, error) {
 	panic("ReqHistoryHidden")
 }
-
-func (impl *Impl) ReqDeleteHistory(ctx context.Context, request *chatService.DeleteHistory) (*types.Any, error) {
-	panic("ReqDeleteHistory")
-}
-
-func (impl *Impl) ReqDeleteMessages(ctx context.Context, request *chatService.DeleteMessages) (*types.Any, error) {
-	panic("ReqDeleteMessages")
-}
-
-func (impl *Impl) ReqDeleteUserHistory(ctx context.Context, request *chatService.DeleteUserHistory) (*types.Any, error) {
-	panic("ReqDeleteUserHistory")
-}

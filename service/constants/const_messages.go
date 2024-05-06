@@ -12,6 +12,7 @@ const (
 	OutboxMessagePinnedMessages     = "MsgOutboxMessagePinnedMessages"
 	OutboxChatMessagePinnedMessages = "MsgOutboxChatMessagePinnedMessages"
 	InboxChatMessagePinnedMessages  = "MsgInboxChatMessagePinnedMessages"
+	DeleteChannelMessages           = "MsgDeleteChannelMessages"
 )
 
 const InboxPiece = int32(32)

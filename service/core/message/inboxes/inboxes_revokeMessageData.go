@@ -47,7 +47,7 @@ func (c *Core) RevokeMessageData(userId int64, peerId int64, peerType constants.
 			}
 		}
 		log.Debugf("RevokeMessageData userId:%d peerId:%d peerType:%v globalMessageIdList:%v messageMaxId:%d", userId, peerId, peerType, globalMessageIdList, messageMaxId)
-		return c.messageCore.DeleteMessagesByMaxId(userId, peerId, peerType, messageMaxId, int32(time.Now().Unix()))
+		return c.messageCore.DeleteMessagesByMaxId(userId, peerId, peerType, messageMaxId, int32(time.Now().Unix()), 0)
 	} else {
 		if len(globalMessageIdList) == 0 {
 			log.Warnf("RevokeMessageData userId:%d peerId:%d peerType:%v globalMessageId is empty", userId, peerId, peerType)

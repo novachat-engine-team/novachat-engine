@@ -30,6 +30,7 @@ func (s *ChannelsServiceImpl) ChannelsDeleteUserHistory(ctx context.Context, req
 	log.Infof("ChannelsDeleteUserHistory %v, request: %v", metadata.RpcMetaDataDebug(md), request)
 
 	chatId := constants.PeerTypeFromChannelIDType32(request.Channel.ChannelId).ToInt()
+	//msgService.GetMsgClient().
 	resp, err := chatService.GetChatClientByKeyId(chatId).ReqDeleteUserHistory(ctx, &chatService.DeleteUserHistory{
 		ChatId:    chatId,
 		UserId:    md.UserId,

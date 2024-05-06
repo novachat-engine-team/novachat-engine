@@ -20,6 +20,7 @@ import (
 	msgService "novachat_engine/pkg/cmd/msg/rpc_client"
 	"novachat_engine/pkg/log"
 	"novachat_engine/service/common/hash"
+	"novachat_engine/service/constants"
 	"novachat_engine/service/core/id/message_id_pts"
 	"novachat_engine/service/core/message"
 	"novachat_engine/service/data/messages/id/message_id_pts"
@@ -43,7 +44,7 @@ func (c *Core) FillChannelMessageBox(ctx context.Context, userId int64, peerId i
 		return nil, false, err1
 	}
 
-	ptsPeerId := -peerId
+	ptsPeerId := message.MakePeerId(peerId, constants.PeerTypeChannel)
 	if list[0].Message.GroupedId != 0 {
 		if len(box) > 0 {
 			ptsList = box[0].Pts

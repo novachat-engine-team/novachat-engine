@@ -160,7 +160,7 @@ func (c *Core) DeleteHistory(
 	affectedHistory := &mtproto.Messages_AffectedHistory{}
 	var pts int32
 	if len(tempIdList) > 0 {
-		pts, messageIdList, err = c.messageCore.DeleteMessagesByMaxId(userId, peerId, peerType, maxId, now)
+		pts, messageIdList, err = c.messageCore.DeleteMessagesByMaxId(userId, peerId, peerType, maxId, now, 0)
 		if err != nil {
 			err = errors.NewRpcErrorWithRpcErrorCode(mtproto.RpcErrorCode_INTERNAL)
 			log.Errorf("DeleteHistory DeleteMessagesByMaxId error:%s need retry", err.Error())
