@@ -38,7 +38,7 @@ func (impl *Impl) ReqBannedUser(ctx context.Context, request *chatService.Banned
 	if chatInfo.ChatData.Creator != request.UserId && !request.IsLeft {
 		participant := chat.GetChatInfo().GetParticipants(request.UserId)
 		if participant == nil {
-			return nil, errorsService.NewRpcErrorWithRpcErrorCode(mtproto.RpcErrorCode_BAD_REQUEST_CHAT_INVALID)
+			return nil, errorsService.NewRpcErrorWithRpcErrorCode(mtproto.RpcErrorCode_BAD_REQUEST_CHANNEL_PRIVATE)
 		}
 		if !participant.Admin {
 			return nil, errorsService.NewRpcErrorWithRpcErrorCode(mtproto.RpcErrorCode_BAD_REQUEST_CHAT_ADMIN_REQUIRED)

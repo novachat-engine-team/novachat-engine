@@ -45,7 +45,7 @@ func (impl *Impl) ReqDeleteMessages(ctx context.Context, request *chatService.De
 		constants.PeerTypeFromUserIDType32(messageList[0].FromId90DDDC1171).ToInt() != request.UserId {
 		participant := chat.GetChatInfo().GetParticipants(request.UserId)
 		if participant == nil {
-			return nil, errorsService.NewRpcErrorWithRpcErrorCode(mtproto.RpcErrorCode_BAD_REQUEST_CHAT_INVALID)
+			return nil, errorsService.NewRpcErrorWithRpcErrorCode(mtproto.RpcErrorCode_BAD_REQUEST_CHANNEL_PRIVATE)
 		}
 		if !participant.Admin {
 			return nil, errorsService.NewRpcErrorWithRpcErrorCode(mtproto.RpcErrorCode_BAD_REQUEST_CHAT_ADMIN_REQUIRED)

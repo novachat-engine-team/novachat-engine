@@ -47,7 +47,7 @@ func (impl *Impl) ReqEditTitle(ctx context.Context, request *chatService.EditTit
 	if chatData.Creator != request.UserId {
 		participant := chat.GetChatInfo().GetParticipants(request.UserId)
 		if participant == nil {
-			return nil, errorsService.NewRpcErrorWithRpcErrorCode(mtproto.RpcErrorCode_BAD_REQUEST_CHAT_INVALID)
+			return nil, errorsService.NewRpcErrorWithRpcErrorCode(mtproto.RpcErrorCode_BAD_REQUEST_CHANNEL_PRIVATE)
 		}
 		if !participant.Admin && banned_right.RightsToChatBannedRight(participant.Rights, 0).ChangeInfo {
 			return nil, errorsService.NewRpcErrorWithRpcErrorCode(mtproto.RpcErrorCode_BAD_REQUEST_CHAT_WRITE_FORBIDDEN)
@@ -118,7 +118,7 @@ func (impl *Impl) ReqEditPhoto(ctx context.Context, request *chatService.EditPho
 	if chatData.Creator != request.UserId {
 		participant := chat.GetChatInfo().GetParticipants(request.UserId)
 		if participant == nil {
-			return nil, errorsService.NewRpcErrorWithRpcErrorCode(mtproto.RpcErrorCode_BAD_REQUEST_CHAT_INVALID)
+			return nil, errorsService.NewRpcErrorWithRpcErrorCode(mtproto.RpcErrorCode_BAD_REQUEST_CHANNEL_PRIVATE)
 		}
 		if !participant.Admin && banned_right.RightsToChatBannedRight(participant.Rights, 0).ChangeInfo {
 			return nil, errorsService.NewRpcErrorWithRpcErrorCode(mtproto.RpcErrorCode_BAD_REQUEST_CHAT_WRITE_FORBIDDEN)
@@ -190,7 +190,7 @@ func (impl *Impl) ReqEditAbout(ctx context.Context, request *chatService.EditAbo
 	if chatData.Creator != request.UserId {
 		participant := chat.GetChatInfo().GetParticipants(request.UserId)
 		if participant == nil {
-			return nil, errorsService.NewRpcErrorWithRpcErrorCode(mtproto.RpcErrorCode_BAD_REQUEST_CHAT_INVALID)
+			return nil, errorsService.NewRpcErrorWithRpcErrorCode(mtproto.RpcErrorCode_BAD_REQUEST_CHANNEL_PRIVATE)
 		}
 		if !participant.Admin && banned_right.RightsToChatBannedRight(participant.Rights, 0).ChangeInfo {
 			return nil, errorsService.NewRpcErrorWithRpcErrorCode(mtproto.RpcErrorCode_BAD_REQUEST_CHAT_WRITE_FORBIDDEN)
@@ -265,7 +265,7 @@ func (impl *Impl) ReqEditAdmin(ctx context.Context, request *chatService.EditAdm
 	if chatData.Creator != request.UserId {
 		participant := chat.GetChatInfo().GetParticipants(request.UserId)
 		if participant == nil {
-			return nil, errorsService.NewRpcErrorWithRpcErrorCode(mtproto.RpcErrorCode_BAD_REQUEST_CHAT_INVALID)
+			return nil, errorsService.NewRpcErrorWithRpcErrorCode(mtproto.RpcErrorCode_BAD_REQUEST_CHANNEL_PRIVATE)
 		}
 		if !participant.Admin {
 			return nil, errorsService.NewRpcErrorWithRpcErrorCode(mtproto.RpcErrorCode_BAD_REQUEST_CHAT_ADMIN_REQUIRED)
@@ -340,7 +340,7 @@ func (impl *Impl) ReqEditGeoPoint(ctx context.Context, request *chatService.Edit
 	if chatData.Creator != request.UserId {
 		participant := chat.GetChatInfo().GetParticipants(request.UserId)
 		if participant == nil {
-			return nil, errorsService.NewRpcErrorWithRpcErrorCode(mtproto.RpcErrorCode_BAD_REQUEST_CHAT_INVALID)
+			return nil, errorsService.NewRpcErrorWithRpcErrorCode(mtproto.RpcErrorCode_BAD_REQUEST_CHANNEL_PRIVATE)
 		}
 		if !participant.Admin && banned_right.RightsToChatBannedRight(participant.Rights, 0).ChangeInfo {
 			return nil, errorsService.NewRpcErrorWithRpcErrorCode(mtproto.RpcErrorCode_BAD_REQUEST_CHAT_WRITE_FORBIDDEN)
@@ -420,7 +420,7 @@ func (impl *Impl) ReqUpdateUsername(ctx context.Context, request *chatService.Up
 	if chatInfo.ChatData.Creator != request.UserId {
 		participant := chat.GetChatInfo().GetParticipants(request.UserId)
 		if participant == nil {
-			return nil, errorsService.NewRpcErrorWithRpcErrorCode(mtproto.RpcErrorCode_BAD_REQUEST_CHAT_INVALID)
+			return nil, errorsService.NewRpcErrorWithRpcErrorCode(mtproto.RpcErrorCode_BAD_REQUEST_CHANNEL_PRIVATE)
 		}
 		if !participant.Admin {
 			return nil, errorsService.NewRpcErrorWithRpcErrorCode(mtproto.RpcErrorCode_BAD_REQUEST_CHAT_ADMIN_REQUIRED)

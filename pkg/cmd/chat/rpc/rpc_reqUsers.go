@@ -114,7 +114,7 @@ func (impl *Impl) ReqDeleteUser(ctx context.Context, request *chatService.Delete
 	if chatData.Creator != request.UserId {
 		participant := chat.GetChatInfo().GetParticipants(request.UserId)
 		if participant == nil {
-			return nil, errorsService.NewRpcErrorWithRpcErrorCode(mtproto.RpcErrorCode_BAD_REQUEST_CHAT_INVALID)
+			return nil, errorsService.NewRpcErrorWithRpcErrorCode(mtproto.RpcErrorCode_BAD_REQUEST_CHANNEL_PRIVATE)
 		}
 		if !participant.Admin {
 			return nil, errorsService.NewRpcErrorWithRpcErrorCode(mtproto.RpcErrorCode_BAD_REQUEST_CHAT_ADMIN_REQUIRED)

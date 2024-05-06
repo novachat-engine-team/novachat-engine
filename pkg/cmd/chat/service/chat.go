@@ -439,3 +439,27 @@ func (m *Chat) EditUsername(username string) (*ChatInfo, bool, error) {
 	m.chatInfo.ChatData.Username = username
 	return m.chatInfo, true, nil
 }
+
+func (m *Chat) EditHiddenHistory(hiddenHistory bool) (*ChatInfo, bool, error) {
+	ok, err := m.chatCore.EditProperty(m.chatId, data_chat.Chat{ChatId: m.chatId, HiddenHistory: hiddenHistory}, "HiddenHistory")
+	if err != nil {
+		log.Errorf("EditHiddenHistory chatId:%d error:%s", m.chatId, err.Error())
+		return nil, false, err
+	}
+
+	_ = ok
+	m.chatInfo.ChatData.HiddenHistory = hiddenHistory
+	return m.chatInfo, true, nil
+}
+
+func (m *Chat) EditDeleted() (*ChatInfo, bool, error) {
+	ok, err := m.chatCore.EditProperty(m.chatId, data_chat.Chat{ChatId: m.chatId, Deleted: true}, "Deleted")
+	if err != nil {
+		log.Errorf("EditHiddenHistory chatId:%d error:%s", m.chatId, err.Error())
+		return nil, false, err
+	}
+
+	_ = ok
+	m.chatInfo.ChatData.Deleted = true
+	return m.chatInfo, true, nil
+}
