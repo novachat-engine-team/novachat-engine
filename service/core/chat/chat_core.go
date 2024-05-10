@@ -176,11 +176,31 @@ func NewChatCore(conf *config.MongodbConfig) *Core {
 
 	m := &Core{}
 	m.Migrator()
+	m.CreateIndex()
 	return m
 }
 
 func (c *Core) Init() {
 
+}
+
+func (c *Core) CreateIndex() {
+	indexView := mgo.GetMongoDB().Database(DBChats).Collection(TableChats).Indexes()
+	nameList, err := indexView.CreateMany(context.TODO(), []mongo.IndexModel{{
+		Keys: bson.D{
+			{"username", 1},
+		},
+		Options: options.Index().SetUnique(true),
+	}, {
+		Keys: bson.D{
+			{"chat_id", 1},
+		},
+	}})
+	if err != nil {
+		log.Warnf("Create Index error:%s", err.Error())
+	} else {
+		log.Debugf("Create Index nameList:%s", nameList)
+	}
 }
 
 func (c *Core) Migrator() {
