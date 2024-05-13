@@ -1,13 +1,17 @@
 
 ### Novachat_engine
 Novachat-engine is a open source mtproto server for Telegram compatible Android, IOS,tdesktop(Mac/Windows/Linux/Web).
-
-## Introduce
-[Telegram](https://telegram.org/)
+## Introduce [Telegram](https://telegram.org/)
 
 #### Novachat_engine server
     Novachat_engine server base layer 122.
 
+##### Features
+- contacts
+- sms
+- channel/megagroup(unsupport broadcast)
+- voice call
+- sticketsets
 
 #### ENV
     
@@ -39,9 +43,17 @@ Novachat-engine is a open source mtproto server for Telegram compatible Android,
         ip etcd-hosts 
         ip mongodb-hosts
 
+#### Notes
+Will coming soon
+
+- web
+- videocall
+- audiocall group call
+- video group call(need LAYER 131)
+- bots
+
 
 #### Author 
-PM [Author](https://t.me/bigM123)
 PM [Author](https://t.me/bigM1223)
 
 Groups [Telegram](https://t.me/novachat_telegram)
