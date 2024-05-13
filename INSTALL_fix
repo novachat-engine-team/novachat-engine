@@ -1,0 +1,19 @@
+
+#### Found error in building 
+
+#### 1
+`
+# github.com/bsm/sarama-cluster
+../../../go/pkg/mod/github.com/bsm/sarama-cluster@v2.1.15+incompatible/consumer.go:238:16: not enough arguments in call to req.AddBlock
+ have (string, int32, int64, number, string)
+ want (string, int32, int64, int32, int64, string)
+`
+
+patch:
+`
+chmod 644 $GOMODCACHE/go/pkg/mod/github.com/bsm/sarama-cluster@v2.1.15+incompatible/consumer.go
+sed -i 's/req.AddBlock(tp.Topic, tp.Partition, state.Info.Offset, 0, state.Info.Metadata)/req.AddBlock(tp.Topic, tp.Partition, state.Info.Offset, 0, time.Now().Unix(), state.Info.Metadata)/g' $GOMODCACHE/go/pkg/mod/github.com/bsm/sarama-cluster@v2.1.15+incompatible/consumer.go
+`
+tips:
+$GOMODCACHE 
+found in go env

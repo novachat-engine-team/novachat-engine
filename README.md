@@ -30,7 +30,7 @@ Novachat-engine is a open source mtproto server for Telegram compatible Android,
     redis (must redisbloom found in ROOT_DIR/lib)
     etcd
     
-#### BUILD
+#### BUILDING
     1. goto ROOT_DIR/gen
     2. mkdir out
     3. ./config.sh
@@ -42,6 +42,8 @@ Novachat-engine is a open source mtproto server for Telegram compatible Android,
         ip redis-hosts 
         ip etcd-hosts 
         ip mongodb-hosts
+
+tips: building error fix in INSTALL_fix
 
 #### Notes
 Will coming soon
