@@ -102,6 +102,19 @@ sessionclient:
   password:
   balancer: random
 
+chatclient:
+  schema: novachat-engine
+  servername: chat
+  etcdaddr: 127.0.0.1:2379
+  dialtimeout:
+  dialkeepalivetime:
+  dialkeepalivetimeout:
+  maxcallsendmsgsize:
+  maxcallrecvmsgsize:
+  username:
+  password:
+  balancer: random
+
 mongodb:
   direct: true
   addr:

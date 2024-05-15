@@ -55,6 +55,7 @@ message CreateChat {
   int32           chat_size_max = 5;
   int32           date        = 6;
   GeoPoint        geo_point   = 7;
+  int32           layer       = 8;
 }
 
 message FullChat {

@@ -23,6 +23,7 @@ import (
 	updates "novachat_engine/pkg/cmd/biz_server/rpc/updates"
 	upload "novachat_engine/pkg/cmd/biz_server/rpc/upload"
 	users "novachat_engine/pkg/cmd/biz_server/rpc/users"
+	chatClient "novachat_engine/pkg/cmd/chat/rpc_client"
 	msgClient "novachat_engine/pkg/cmd/msg/rpc_client"
 	sessionClient "novachat_engine/pkg/cmd/session/rpc_client"
 	sfsClient "novachat_engine/pkg/cmd/sfs/rpc_client"
@@ -47,11 +48,13 @@ func NewImpl(s *grpc.Server, conf *conf.Config) *Impl {
 	}
 
 	helpApp.ParseConfig(conf.ConfigPath)
+
 	sfsClient.InstallSfsClient(conf.SfsClient)
 	msgClient.InstallMsgClient(conf.MsgClient)
 	syncClient.InstallSyncClient(conf.SyncClient)
 	authClient.InstallAuthClient(conf.AuthClient)
 	sessionClient.InstallSessionManualClient(conf.SessionClient)
+	chatClient.InstallChatClient(conf.ChatClient)
 
 	helpServiceImpl := help.NewHelpServiceImpl(conf)
 	rpc.RegisterRpcImpl(mtproto.RPCHelpService_serviceDesc, helpServiceImpl)

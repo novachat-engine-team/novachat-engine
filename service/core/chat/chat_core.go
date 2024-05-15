@@ -104,6 +104,7 @@ func (c *Core) CreateChat(chatInfo *data_chat.Chat, chatParticipantList []*data_
 	//op.SetRegistry(mgo.Registry())
 	opfu := options.FindOneAndUpdate()
 	opfu.SetReturnDocument(options.After)
+	opfu.SetUpsert(true)
 
 	chatConfig := data_chat.ChatsConfig{
 		ChatIdKey: TableChatsConfigID,
@@ -251,7 +252,7 @@ func (c *Core) Migrator() {
 		if strings.Index(err.Error(), "Collection already exists") >= 0 {
 			return
 		} else {
-			panic(err.Error())
+			//panic(err.Error())
 		}
 	}
 
@@ -261,7 +262,7 @@ func (c *Core) Migrator() {
 		if strings.Index(err.Error(), "Collection already exists") >= 0 {
 			return
 		} else {
-			panic(err.Error())
+			//panic(err.Error())
 		}
 	}
 }

@@ -25,6 +25,7 @@ type Config struct {
 	MessageConsumer config.MQKafkaConsumerConfig `yaml:"messageConsumer"`
 	ChatInConsumer  config.MQKafkaConsumerConfig `yaml:"chatInConsumer"`
 	SyncRpcClient   config.EtcdClientConfig      `yaml:"syncRpcClient"`
+	//ChatRpcClient   config.EtcdClientConfig      `yaml:"chatRpcClient"`
 
 	Redis   config.RedisConfig   `yaml:"redis"`
 	MongoDB config.MongodbConfig `yaml:"mongodb"`

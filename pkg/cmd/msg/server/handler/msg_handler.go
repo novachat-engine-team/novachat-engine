@@ -61,6 +61,7 @@ func NewMsgHandler(conf *conf.Config) *MsgHandler {
 	go m.chatInConsumer.Run()
 
 	syncClient.InstallSyncClient(m.conf.SyncRpcClient)
+	//chatClient.InstallChatClient(m.conf.ChatRpcClient)
 	return m
 }
 

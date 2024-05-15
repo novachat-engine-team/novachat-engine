@@ -36,7 +36,7 @@ func (c *Core) conversationToDialog(userId int64, conversationList []*data_messa
 	for _, conversation := range conversationList {
 
 		d := mtproto.NewTLDialog(nil).To_Dialog()
-		inputPeerValue := input.MakeInputPeerValue(conversation.PeerId, peerType)
+		inputPeerValue := input.MakeInputPeerValue(conversation.PeerId, constants.PeerTypeFromInt32(conversation.PeerType))
 		d.UnreadMentionsCount = 0
 		d.ReadOutboxMaxId = conversation.OutboxMaxId
 		d.ReadInboxMaxId = conversation.InboxMaxId

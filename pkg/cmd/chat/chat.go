@@ -16,6 +16,7 @@ import (
 	"novachat_engine/pkg/cmd/chat/conf"
 	"novachat_engine/pkg/cmd/chat/rpc"
 	chatService "novachat_engine/pkg/cmd/chat/rpc_client"
+	msgService "novachat_engine/pkg/cmd/msg/rpc_client"
 	syncService "novachat_engine/pkg/cmd/sync/rpc_client"
 	"novachat_engine/pkg/command"
 	"novachat_engine/pkg/config"
@@ -79,6 +80,7 @@ func (m *Application) RunLoop() error {
 	chatService.RegisterChatServiceServer(m.rpcServer, impl)
 	chatService.InstallChatClient(m.conf.ChatClient)
 	syncService.InstallSyncClient(m.conf.SyncClient)
+	msgService.InstallMsgClient(m.conf.MsgClient)
 
 	if err = m.rpcServer.Serve(listener); err != nil {
 		log.Fatalf("failed to rpcServer: %s", err)

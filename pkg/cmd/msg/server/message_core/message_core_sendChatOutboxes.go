@@ -56,7 +56,7 @@ func (m *MessageCoreService) SendOutboxChatMessages(authKeyId int64, userId int6
 			RandomId:     list[idx].RandomId,
 		}).To_Update())
 		//  updateNewMessage#1f2b0afd message:Message pts:int pts_count:int = Update;
-		updates.Updates = append(updates.Updates, mtproto.NewTLUpdateNewMessage(&mtproto.Update{
+		updates.Updates = append(updates.Updates, mtproto.NewTLUpdateNewChannelMessage(&mtproto.Update{
 			Message1F2B0AFD71: list[idx].Message,
 			Pts:               ptsList[idx],
 			PtsCount:          1,

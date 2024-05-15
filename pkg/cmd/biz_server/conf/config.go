@@ -31,6 +31,7 @@ type Config struct {
 	SyncClient     config.EtcdClientConfig
 	AuthClient     config.EtcdClientConfig
 	SessionClient  config.EtcdClientConfig
+	ChatClient     config.EtcdClientConfig
 	RelayConfig    Relay
 	EnvMode        string
 	ConfigPath     string

@@ -68,6 +68,7 @@ func (s *ChannelsServiceImpl) ChannelsCreateChannel(ctx context.Context, request
 			ChatSizeMax: help.GetConfig().ChatSizeMax,
 			Date:        int32(time.Now().Unix()),
 			GeoPoint:    geoPoint,
+			Layer:       md.Layer,
 		})
 	if err != nil {
 		log.Errorf("MessagesCreateChat %v, request: %v CreateChat error:%s", metadata.RpcMetaDataDebug(md), request, err.Error())

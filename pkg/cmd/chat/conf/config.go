@@ -19,6 +19,7 @@ type Config struct {
 	Mongo          *config.MongodbConfig
 	ChatClient     config.EtcdClientConfig
 	SyncClient     config.EtcdClientConfig
+	MsgClient      config.EtcdClientConfig
 	Redis          config.RedisConfig
 	ChatConsumer   config.MQKafkaConsumerConfig
 	ChatInProducer config.MQKafkaProducerConfig

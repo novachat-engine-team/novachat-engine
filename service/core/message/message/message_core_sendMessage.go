@@ -70,10 +70,10 @@ func (c *Core) SendMessages(context context.Context, userId int64, peerId int64,
 
 func (c *Core) SendChannelMessages(context context.Context, userId int64, peerId int64, peerType constants.PeerType, list []*msgService.SendMessageData) error {
 	if len(list) == 0 {
-		log.Warnf("SendChannelMessages userId:%df peerId:%d peerType:%v len() == 0", userId, peerId, peerType)
+		log.Warnf("SendChannelMessages userId:%d peerId:%d peerType:%v len() == 0", userId, peerId, peerType)
 		return nil
 	}
-	log.Debugf("SendChannelMessages userId:%df peerId:%d peerType:%v len():%d", userId, peerId, peerType, len(list))
+	log.Debugf("SendChannelMessages userId:%d peerId:%d peerType:%v len():%d", userId, peerId, peerType, len(list))
 
 	document := make([]interface{}, 0, len(list))
 	for _, v := range list {
@@ -91,10 +91,10 @@ func (c *Core) SendChannelMessages(context context.Context, userId int64, peerId
 		Collection(message.TableName(peerId, message.TableChannelMessage), op).
 		InsertMany(context, document)
 	if err != nil {
-		log.Errorf("SendChannelMessages userId:%df peerId:%d peerType:%v len():%d", userId, peerId, peerType, len(list))
+		log.Errorf("SendChannelMessages userId:%d peerId:%d peerType:%v len():%d", userId, peerId, peerType, len(list))
 		return err
 	}
 
-	log.Infof("SendChannelMessages userId:%df peerId:%d peerType:%v len():%d InsertID:%+v", userId, peerId, peerType, len(list), imr.InsertedIDs)
+	log.Infof("SendChannelMessages userId:%d peerId:%d peerType:%v len():%d InsertID:%+v", userId, peerId, peerType, len(list), imr.InsertedIDs)
 	return nil
 }

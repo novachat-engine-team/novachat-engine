@@ -606,6 +606,7 @@ func (s *MessagesServiceImpl) MessagesCreateChat(ctx context.Context, request *m
 			Title:       title,
 			ChatSizeMax: help.GetConfig().ChatSizeMax,
 			Date:        int32(time.Now().Unix()),
+			Layer:       md.Layer,
 		})
 	if err != nil {
 		log.Errorf("MessagesCreateChat %v, request: %v CreateChat error:%s", metadata.RpcMetaDataDebug(md), request, err.Error())

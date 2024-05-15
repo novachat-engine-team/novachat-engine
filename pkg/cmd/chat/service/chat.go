@@ -106,7 +106,8 @@ func (m *Chat) getChat() error {
 		err = jsoniter.Unmarshal([]byte(info), &chatData)
 	}
 	if err != nil || len(info) == 0 {
-		chatData, err = m.chatCore.GetChat(m.chatId)
+		chatData, err = m.chatCore.
+			GetChat(m.chatId)
 		if err != nil {
 			log.Errorf("getChat chatId:%d error:%s", m.chatId, err.Error())
 			return err

@@ -21,7 +21,7 @@ rpcserver:
 
 rpcdiscovery:
   schema: novachat-engine
-  servername: auth
+  servername: chat
   etcdaddr: etcd-hosts:2379
   ttl: 10
 

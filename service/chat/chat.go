@@ -11,7 +11,7 @@ import (
 )
 
 func ToChat(userId int64, dataChat *chatService.Chat, layer int32) *mtproto.Chat {
-	chat := mtproto.NewTLChat(&mtproto.Chat{
+	chat := mtproto.NewTLChannel(&mtproto.Chat{
 		Creator:               dataChat.ChatData.Creator == userId,
 		Kicked:                false,
 		Left:                  false,
