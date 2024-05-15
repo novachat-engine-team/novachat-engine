@@ -14,6 +14,7 @@ package etcd
 import (
 	"context"
 	"fmt"
+	grpc_middleware "github.com/grpc-ecosystem/go-grpc-middleware"
 	"go.etcd.io/etcd/api/v3/mvccpb"
 	"go.etcd.io/etcd/client/v3"
 	"google.golang.org/grpc"
@@ -21,14 +22,15 @@ import (
 	"google.golang.org/grpc/resolver"
 	"novachat_engine/pkg/config"
 	"novachat_engine/pkg/log"
+	"novachat_engine/pkg/rpc/rpc_util"
 	"strings"
 	"time"
 )
 
 type etcdResolver struct {
-	cc 			resolver.ClientConn
-	cli			*clientv3.Client
-	etcdConfig 	config.EtcdClientConfig
+	cc         resolver.ClientConn
+	cli        *clientv3.Client
+	etcdConfig config.EtcdClientConfig
 }
 
 func MakeWatchKey(schema string, name string) string {
@@ -61,7 +63,7 @@ func (r *etcdResolver) Build(target resolver.Target, cc resolver.ClientConn, opt
 			r.etcdConfig.DialTimeout = 3
 		}
 
-		ctx, cancelFunc := context.WithTimeout(context.Background(), time.Duration(r.etcdConfig.DialTimeout) * time.Second)
+		ctx, cancelFunc := context.WithTimeout(context.Background(), time.Duration(r.etcdConfig.DialTimeout)*time.Second)
 		defer cancelFunc()
 		r.cli, err = clientv3.New(clientv3.Config{
 			Endpoints:            strings.Split(r.etcdConfig.EtcdAddr, ";"),
@@ -75,7 +77,7 @@ func (r *etcdResolver) Build(target resolver.Target, cc resolver.ClientConn, opt
 			Username:             r.etcdConfig.UserName,
 			Password:             r.etcdConfig.Password,
 			RejectOldCluster:     false,
-			DialOptions:          []grpc.DialOption{
+			DialOptions: []grpc.DialOption{
 				grpc.WithInsecure(),
 				grpc.WithInitialWindowSize(grpcInitialWindowSize),
 				grpc.WithInitialConnWindowSize(grpcInitialConnWindowSize),
@@ -87,10 +89,19 @@ func (r *etcdResolver) Build(target resolver.Target, cc resolver.ClientConn, opt
 					Timeout:             grpcKeepAliveTimeout,
 					PermitWithoutStream: true,
 				}),
+				grpc.WithUnaryInterceptor(grpc_middleware.ChainUnaryClient(
+					rpc_util.WithUnaryClientInterceptor(
+						rpc_util.WithUnaryClientRecoveryHandler(rpc_util.UnaryClientRecoverHandler),
+						rpc_util.WithUnaryClientHandler(rpc_util.UnaryClientHandler)),
+				),
+				),
+				grpc.WithChainStreamInterceptor(rpc_util.WithUnaryStreamClientInterceptor(
+					rpc_util.WithUnaryClientStreamHandler(rpc_util.UnaryClientRecoverHandler)),
+				),
 			},
-			LogConfig:            nil,
-			Context:              ctx,
-			PermitWithoutStream:  true,
+			LogConfig:           nil,
+			Context:             ctx,
+			PermitWithoutStream: true,
 		})
 		if err != nil {
 			return nil, err
@@ -102,7 +113,7 @@ func (r *etcdResolver) Build(target resolver.Target, cc resolver.ClientConn, opt
 	watchChan := make(chan error)
 	go r.watch(MakeWatchKey(target.Scheme, target.Endpoint), watchChan)
 
-	err = <- watchChan
+	err = <-watchChan
 	defer close(watchChan)
 	if err != nil {
 		return nil, err

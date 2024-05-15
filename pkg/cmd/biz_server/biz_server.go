@@ -15,6 +15,8 @@ import (
 	"gopkg.in/yaml.v3"
 	"io/ioutil"
 	"net"
+	"net/http"
+	"net/http/pprof"
 	"novachat_engine/pkg/cmd/biz_server/conf"
 	"novachat_engine/pkg/cmd/biz_server/rpc"
 	"novachat_engine/pkg/command"
@@ -76,6 +78,21 @@ func (m *Application) RunLoop() error {
 	impl := rpc.NewImpl(m.rpcServer, &m.conf)
 
 	rpcPkg.RegisterRpcStreamServiceServer(m.rpcServer, impl)
+
+	if m.conf.Pprof.IsOpen {
+		go func() {
+			r := http.NewServeMux()
+			r.HandleFunc("/debug/pprof/", pprof.Index)
+			r.HandleFunc("/debug/pprof/cmdline", pprof.Cmdline)
+			r.HandleFunc("/debug/pprof/profile", pprof.Profile)
+			r.HandleFunc("/debug/pprof/symbol", pprof.Symbol)
+			r.HandleFunc("/debug/pprof/trace", pprof.Trace)
+			err = http.ListenAndServe(fmt.Sprintf("0.0.0.0:%d", m.conf.Pprof.Port), r)
+			if err != nil {
+				panic(err)
+			}
+		}()
+	}
 
 	if err = m.rpcServer.Serve(listener); err != nil {
 		log.Fatalf("failed to rpcServer: %s", err)

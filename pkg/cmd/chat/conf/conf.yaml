@@ -75,6 +75,16 @@ mongo:
   maxpoolsize: 128
   minpoolsize: 16
 
+redis:
+  addrs:
+    - 127.0.0.1:6379
+  mode : alone
+  test : 	true
+  idle :	10
+  active : 5
+  passwd :
+  dbnum : 0
+
 chatconsumer:
   topic:
     - novachat_engine-chat-topic

@@ -46,7 +46,7 @@ func (c *Core) GetUserList(userId int64, userIdList []int64) ([]*mtproto.User, e
 
 	contactsCacheMap := make(map[int64]*data_contact.Contact, len(contacts))
 	for _, v := range contacts {
-		contactsCacheMap[v.UserId] = v
+		contactsCacheMap[v.PeerId] = v
 	}
 
 	userInfoList := make([]*data_users.Users, 0, len(userIdList))

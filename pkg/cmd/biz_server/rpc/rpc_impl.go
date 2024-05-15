@@ -50,11 +50,11 @@ func NewImpl(s *grpc.Server, conf *conf.Config) *Impl {
 	helpApp.ParseConfig(conf.ConfigPath)
 
 	sfsClient.InstallSfsClient(conf.SfsClient)
-	msgClient.InstallMsgClient(conf.MsgClient)
 	syncClient.InstallSyncClient(conf.SyncClient)
 	authClient.InstallAuthClient(conf.AuthClient)
 	sessionClient.InstallSessionManualClient(conf.SessionClient)
 	chatClient.InstallChatClient(conf.ChatClient)
+	msgClient.InstallMsgClient(conf.MsgClient)
 
 	helpServiceImpl := help.NewHelpServiceImpl(conf)
 	rpc.RegisterRpcImpl(mtproto.RPCHelpService_serviceDesc, helpServiceImpl)

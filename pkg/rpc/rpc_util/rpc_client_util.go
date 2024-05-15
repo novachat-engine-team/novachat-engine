@@ -19,21 +19,38 @@ import (
 
 func WithUnaryClientInterceptor(op ...ClientOption) grpc.UnaryClientInterceptor {
 	o := evaluateClientOptions(op)
-	return func (ctx context.Context, method string, req, reply interface{}, cc *grpc.ClientConn, invoker grpc.UnaryInvoker, opts ...grpc.CallOption) (err error) {
+	return func(ctx context.Context, method string, req, reply interface{}, cc *grpc.ClientConn, invoker grpc.UnaryInvoker, opts ...grpc.CallOption) (err error) {
 		defer func() {
 			if r := recover(); r != nil {
 				err = unaryClientHandler(ctx, r, metadata.MD{}, o.UnaryClientRecover)
 			}
 		}()
 
+		var co CallOption
+		for _, opt := range opts {
+			if o1, ok := opt.(CallOption); ok {
+				o1.apply(&co)
+			}
+		}
+		if co.retry == 0 {
+			co.retry = 1
+		}
 		var header, trailer metadata.MD
 		opts = combine(opts, []grpc.CallOption{
 			grpc.Header(&header), grpc.Trailer(&trailer),
 		})
 
-		err = invoker(ctx, method, req, reply, cc, opts...)
-		if err != nil {
-			err = unaryClientHandler(ctx, err, trailer, o.UnaryClient)
+		idx := int32(0)
+		for {
+			if co.retry > 0 && idx >= co.retry {
+				break
+			}
+
+			idx++
+			err = invoker(ctx, method, req, reply, cc, opts...)
+			if err != nil {
+				err = unaryClientHandler(ctx, err, trailer, o.UnaryClient)
+			}
 		}
 		return err
 	}

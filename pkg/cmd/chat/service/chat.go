@@ -34,6 +34,10 @@ func NewChatInfo(chatData *data_chat.Chat) *ChatInfo {
 	return &ChatInfo{ChatData: chatData}
 }
 
+func (m *ChatInfo) AddParticipants(userId int64, p *data_chat.ChatParticipant) {
+	m.chatParticipants.Store(userId, p)
+}
+
 func (m *ChatInfo) GetParticipants(userId int64) *data_chat.ChatParticipant {
 	v, ok := m.chatParticipants.Load(userId)
 	if !ok {
@@ -45,7 +49,12 @@ func (m *ChatInfo) GetParticipants(userId int64) *data_chat.ChatParticipant {
 func (m *ChatInfo) Iteration(f func(participant *data_chat.ChatParticipant)) {
 	m.chatParticipants.Range(func(key, value interface{}) bool {
 		if value != nil {
-			f(value.(*data_chat.ChatParticipant))
+			p, ok := value.(*data_chat.ChatParticipant)
+			if !ok {
+				_ = p
+			} else {
+				f(p)
+			}
 		}
 		return true
 	})
@@ -133,7 +142,7 @@ func (m *Chat) getChat() error {
 			if v.Admin {
 				chatInfo.AdminCount++
 			}
-			chatInfo.chatParticipants.Store(v.UserId, v)
+			chatInfo.AddParticipants(v.UserId, v)
 		}
 	}
 
@@ -150,11 +159,11 @@ func (m *Chat) GetChatMax() int32 {
 }
 
 func (m *Chat) Invalid() bool {
-	return m.chatInfo != nil && m.chatInfo.ChatData != nil && m.chatInfo.ChatData.ChatId != 0
+	return m.chatInfo == nil || m.chatInfo.ChatData == nil || m.chatInfo.ChatData.ChatId == 0
 }
 
 func (m *Chat) Deleted() bool {
-	if !m.Invalid() {
+	if m.Invalid() {
 		return true
 	}
 
@@ -275,11 +284,11 @@ func (m *Chat) AddUsers(userId int64, userIdList []int64) ([]*data_chat.ChatPart
 	}
 
 	for _, v := range newUserIdList {
-		m.chatInfo.chatParticipants.Store(v.UserId, v)
+		m.chatInfo.AddParticipants(v.UserId, v)
 	}
 
 	for _, v := range modifyUserList {
-		m.chatInfo.chatParticipants.Store(v.UserId, v)
+		m.chatInfo.AddParticipants(v.UserId, v)
 	}
 
 	m.chatInfo.Count += int32(len(newUserIdList) + len(modifyUserList))
@@ -352,7 +361,7 @@ func (m *Chat) ModifyParticipant(userId int64, userIdList []int64, reason data_c
 		return nil, err
 	}
 	for _, v := range modifyUserList {
-		m.chatInfo.chatParticipants.Store(v.UserId, v)
+		m.chatInfo.AddParticipants(v.UserId, v)
 	}
 	m.chatInfo.Count -= removeCount
 	if m.chatInfo.Count < 0 {
@@ -405,7 +414,7 @@ func (m *Chat) EditAdmin(userId int64, peerId int64, isAdmin bool) (*data_chat.C
 			m.chatInfo.AdminCount--
 		}
 	}
-	m.chatInfo.chatParticipants.Store(peerId, participant)
+	m.chatInfo.AddParticipants(peerId, participant)
 	return participant, nil
 }
 

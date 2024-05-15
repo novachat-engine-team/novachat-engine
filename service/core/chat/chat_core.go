@@ -28,6 +28,7 @@ const (
 	DBChats               = "db_chats"
 	TableChats            = "tb_chats"
 	TableChatsConfig      = "tb_chats_config"
+	TableChatsUsername    = "tb_chats_username"
 	TableChatsParticipant = "tb_chats_participant"
 	TableChatsConfigID    = "tb_chats_config_id"
 )
@@ -73,15 +74,15 @@ func (c *Core) GetChatParticipants(chatId int64, userIdList []int64) ([]*data_ch
 	op.SetReadConcern(readconcern.Majority())
 	//op.SetRegistry(mgo.Registry())
 
-	chat := &data_chat.Chat{
+	chatParticipant := &data_chat.ChatParticipant{
 		ChatId: chatId,
 	}
-	filter := mgo.DBE.MarshalCustomSpecMap(chat, "ChatId")
+	filter := mgo.DBE.MarshalCustomSpecMap(chatParticipant, "ChatId")
 	if len(userIdList) > 0 {
 		filter["user_id"] = bson.M{mgo.IN: userIdList}
 	}
 	cursor, err := mgo.GetDatabase(DBChats).
-		Collection(TableChats, op).
+		Collection(TableChatsParticipant, op).
 		Find(context.TODO(), filter)
 	if err != nil {
 		log.Fatalf("GetChatParticipants chatId:%d error:%s", chatId, err.Error())
@@ -189,10 +190,17 @@ func (c *Core) CreateIndex() {
 	indexView := mgo.GetMongoDB().Database(DBChats).Collection(TableChats).Indexes()
 	nameList, err := indexView.CreateMany(context.TODO(), []mongo.IndexModel{{
 		Keys: bson.D{
-			{"username", 1},
+			{"chat_id", 1},
 		},
-		Options: options.Index().SetUnique(true),
-	}, {
+	}})
+	if err != nil {
+		log.Warnf("Create Index error:%s", err.Error())
+	} else {
+		log.Debugf("Create Index nameList:%s", nameList)
+	}
+
+	indexView = mgo.GetMongoDB().Database(DBChats).Collection(TableChatsUsername).Indexes()
+	nameList, err = indexView.CreateMany(context.TODO(), []mongo.IndexModel{{
 		Keys: bson.D{
 			{"chat_id", 1},
 		},
@@ -248,23 +256,11 @@ func (c *Core) Migrator() {
 
 	err = mgo.GetMongoDB().Database(DBChats).
 		CreateCollection(context.Background(), TableChatsConfig)
-	if err != nil {
-		if strings.Index(err.Error(), "Collection already exists") >= 0 {
-			return
-		} else {
-			//panic(err.Error())
-		}
-	}
-
 	err = mgo.GetMongoDB().Database(DBChats).
 		CreateCollection(context.Background(), TableChatsParticipant)
-	if err != nil {
-		if strings.Index(err.Error(), "Collection already exists") >= 0 {
-			return
-		} else {
-			//panic(err.Error())
-		}
-	}
+	err = mgo.GetMongoDB().Database(DBChats).
+		CreateCollection(context.Background(), TableChatsUsername)
+	_ = err
 }
 
 func (c *Core) EditProperty(chatId int64, chatInfo data_chat.Chat, property ...string) (bool, error) {

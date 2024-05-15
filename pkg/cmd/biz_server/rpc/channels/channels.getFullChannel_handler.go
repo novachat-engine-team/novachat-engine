@@ -105,10 +105,11 @@ func (s *ChannelsServiceImpl) ChannelsGetFullChannel(ctx context.Context, reques
 		}
 
 		chat = mtproto.NewTLChannel(&mtproto.Chat{
-			Creator:      false,
+			Creator:      dataChat.ChatData.Creator == md.UserId,
 			Kicked:       false,
 			Megagroup:    true,
 			Left:         false,
+			Title:        dataChat.ChatData.Title,
 			Deactivated:  false,
 			CallActive:   false, //TODO:(Coderxw)
 			CallNotEmpty: false, //TODO:(Coderxw)

@@ -157,7 +157,7 @@ func (c *Core) conversationToDialog(userId int64, conversationList []*data_messa
 			UserId: userId,
 		})
 		if err1 != nil {
-			log.Warnf("conversationToDialog - ReqAllChat error:%s", err.Error())
+			log.Warnf("conversationToDialog - ReqAllChat error:%s", err1.Error())
 		} else {
 			var idx int
 			for _, chatInfo := range chatList.Values {

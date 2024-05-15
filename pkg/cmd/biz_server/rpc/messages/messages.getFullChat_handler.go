@@ -106,9 +106,10 @@ func (s *MessagesServiceImpl) MessagesGetFullChat(ctx context.Context, request *
 		}
 
 		chat = mtproto.NewTLChannel(&mtproto.Chat{
-			Creator:      false,
+			Creator:      dataChat.ChatData.Creator == md.UserId,
 			Kicked:       false,
 			Megagroup:    true,
+			Title:        dataChat.ChatData.Title,
 			Left:         false,
 			Deactivated:  false,
 			CallActive:   false, //TODO:(Coderxw)

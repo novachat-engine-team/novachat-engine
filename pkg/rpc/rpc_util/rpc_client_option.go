@@ -9,10 +9,13 @@
 
 package rpc_util
 
+import "google.golang.org/grpc"
+
 type clientOption struct {
-	UnaryClientRecover 			UnaryClientCallback
-	UnaryClient 	   			UnaryClientCallback
-	UnaryClientStreamRecover 	UnaryClientCallback
+	UnaryClientRecover       UnaryClientCallback
+	UnaryClient              UnaryClientCallback
+	UnaryClientStreamRecover UnaryClientCallback
+	retry                    int32
 }
 
 func evaluateClientOptions(opts []ClientOption) *clientOption {
@@ -28,7 +31,21 @@ func evaluateClientOptions(opts []ClientOption) *clientOption {
 	return optCopy
 }
 
+type CallOption struct {
+	grpc.EmptyCallOption
+	retry int32
+	apply func(c *CallOption)
+}
+
 type ClientOption func(option *clientOption)
+
+func WithRetry(retry int32) *CallOption {
+	return &CallOption{
+		apply: func(c *CallOption) {
+			c.retry = retry
+		},
+	}
+}
 
 func WithUnaryClientRecoveryHandler(f UnaryClientCallback) ClientOption {
 	return func(o *clientOption) {

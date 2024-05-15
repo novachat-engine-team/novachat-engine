@@ -14,6 +14,8 @@ func ToChat(userId int64, dataChat *chatService.Chat, layer int32) *mtproto.Chat
 	chat := mtproto.NewTLChannel(&mtproto.Chat{
 		Creator:               dataChat.ChatData.Creator == userId,
 		Kicked:                false,
+		Megagroup:             true,
+		Title:                 dataChat.ChatData.Title,
 		Left:                  false,
 		Deactivated:           false,
 		CallActive:            false, //TODO:(Coderxw)

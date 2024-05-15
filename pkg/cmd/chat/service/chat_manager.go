@@ -157,7 +157,7 @@ func (m *ChatManager) GetChats(idList, exceptIds []int64) ([]*Chat, error) {
 			if vv.Admin {
 				chat.chatInfo.AdminCount++
 			}
-			chat.chatInfo.chatParticipants.Store(vv.UserId, v)
+			chat.chatInfo.AddParticipants(vv.UserId, vv)
 		}
 		chatList = append(chatList, chat)
 	}

@@ -16,6 +16,7 @@ import (
 	chatService "novachat_engine/pkg/cmd/chat/rpc_client"
 	msgService "novachat_engine/pkg/cmd/msg/rpc_client"
 	"novachat_engine/pkg/log"
+	"novachat_engine/pkg/rpc/rpc_util"
 	chat2 "novachat_engine/service/chat"
 	"novachat_engine/service/common/hash"
 	"novachat_engine/service/constants"
@@ -82,7 +83,7 @@ func (impl *Impl) ReqCreateChat(ctx context.Context, request *chatService.Create
 				RandomId: hash.HashId64ListNew(participantsInt64List),
 				Message:  message.To_Message(),
 			}},
-		})
+		}, rpc_util.WithRetry(-1))
 	if err != nil {
 		log.Errorf("ReqCreateChat send create message request:%+v", request, err.Error())
 		return nil, err
