@@ -575,7 +575,7 @@ func (s *MessagesServiceImpl) MessagesCreateChat(ctx context.Context, request *m
 	md := metadata.RpcMetaDataFromContext(ctx)
 	log.Debugf("MessagesCreateChat %v, request: %v", metadata.RpcMetaDataDebug(md), request)
 
-	tlUser, err := s.accountUsersCore.GetUser(md.UserId, md.UserId)
+	tlUser, err := s.accountUsersCore.GetUser(md.UserId, md.UserId, md.Layer)
 	if err != nil {
 		err = errors.NewRpcErrorWithRpcErrorCodeString(mtproto.RpcErrorCode_INTERNAL, err.Error())
 		log.Errorf("MessagesCreateChat %v, request: %v GetByUserId error:%s", md, request, err.Error())

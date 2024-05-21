@@ -144,7 +144,7 @@ func (c *Core) conversationToDialog(userId int64, conversationList []*data_messa
 		}
 	}
 
-	userList, err := c.accountUsersCore.GetUserList(userId, userIdList)
+	userList, err := c.accountUsersCore.GetUserList(userId, userIdList, layer)
 	if err != nil {
 		log.Warnf("conversationToDialog - GetUserList error:%s", err.Error())
 	}

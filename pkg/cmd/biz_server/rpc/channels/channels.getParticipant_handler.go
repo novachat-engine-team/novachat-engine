@@ -58,7 +58,7 @@ func (s *ChannelsServiceImpl) ChannelsGetParticipant(ctx context.Context, reques
 
 	users := make([]*mtproto.User, 0, 1)
 	if participant != nil && md.UserId != participant.UserId {
-		user, _ := s.accountUsersCore.GetUser(md.UserId, participant.UserId)
+		user, _ := s.accountUsersCore.GetUser(md.UserId, participant.UserId, md.Layer)
 		if user != nil {
 			users = append(users, user)
 		}

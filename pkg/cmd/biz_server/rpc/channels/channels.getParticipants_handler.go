@@ -65,7 +65,7 @@ func (s *ChannelsServiceImpl) ChannelsGetParticipants(ctx context.Context, reque
 		}
 	})
 
-	users, _ := s.accountUsersCore.GetUserList(md.UserId, userIdList)
+	users, _ := s.accountUsersCore.GetUserList(md.UserId, userIdList, md.Layer)
 	p.Users = users
 	return p, nil
 }

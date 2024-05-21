@@ -20,7 +20,7 @@ import (
 	"time"
 )
 
-func (c *Core) makeForwardMessages(userId int64, messageList []*mtproto.Message, toPeer *input.InputPeer, silent bool) ([]*mtproto.Message, error) {
+func (c *Core) makeForwardMessages(userId int64, messageList []*mtproto.Message, toPeer *input.InputPeer, silent bool, layer int32) ([]*mtproto.Message, error) {
 
 	userIdList := make([]int64, 0, len(messageList))
 	for _, v := range messageList {
@@ -35,7 +35,7 @@ func (c *Core) makeForwardMessages(userId int64, messageList []*mtproto.Message,
 		}
 	}
 
-	userList, err := c.accountUsersCore.GetUserList(userId, userIdList)
+	userList, err := c.accountUsersCore.GetUserList(userId, userIdList, layer)
 	if err != nil {
 		log.Warnf("makeForwardMessages GetUserList user:%d userIdList:%+v error:%s", userIdList, userIdList, err.Error())
 	}
@@ -112,7 +112,8 @@ func (c *Core) ForwardMessages(userId int64,
 	fromPeer *input.InputPeer,
 	toPeer *input.InputPeer,
 	idList []int32, randomIdList []int64,
-	silent bool) (*mtproto.Updates, error) {
+	silent bool,
+	layer int32) (*mtproto.Updates, error) {
 
 	var messageList []*mtproto.Message
 	var err error
@@ -122,7 +123,7 @@ func (c *Core) ForwardMessages(userId int64,
 		return nil, err
 	}
 
-	forwardMessageList, err := c.makeForwardMessages(userId, messageList, toPeer, silent)
+	forwardMessageList, err := c.makeForwardMessages(userId, messageList, toPeer, silent, layer)
 	if err != nil {
 		log.Errorf("ForwardMessages makeForwardMessages userId:%d fromPeer:%v idList:%+v error:%s", userId, fromPeer, idList, err.Error())
 		return nil, err

@@ -60,7 +60,7 @@ func (c *Core) GetHistory(
 	}
 
 	pickPeerIdListType := message.PickMessagePeerIdList(messageList)
-	userList, err := c.accountUsersCore.GetUserList(userId, pickPeerIdListType.PeerIdList)
+	userList, err := c.accountUsersCore.GetUserList(userId, pickPeerIdListType.PeerIdList, layer)
 	if err != nil {
 		log.Warnf("GetHistory UserByUserIdList error:%s", err.Error())
 	}

@@ -53,7 +53,7 @@ func (s *AccountServiceImpl) AccountUpdateStatus(ctx context.Context, request *m
 	}
 	var userList []*mtproto.User
 	if len(userIdList) > 0 {
-		userList, err = s.accountUsersCore.GetUserList(md.UserId, userIdList)
+		userList, err = s.accountUsersCore.GetUserList(md.UserId, userIdList, md.Layer)
 		if err != nil {
 			log.Warnf("AccountUpdateStatus - request: %v GetUserList error:%s", request, err.Error())
 			return mtproto.ToMTBool(false), nil

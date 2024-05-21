@@ -16,7 +16,7 @@ import (
 	"time"
 )
 
-func (c *Core) GetUpdateDifference(authKeyId int64, userId int64, pts int32, qts int32, date int32, getDifferenceFirstSync bool, limit int32) (*mtproto.Updates_Difference, error) {
+func (c *Core) GetUpdateDifference(authKeyId int64, userId int64, pts int32, qts int32, date int32, getDifferenceFirstSync bool, limit int32, layer int32) (*mtproto.Updates_Difference, error) {
 	updateList, err := c.updateCore.GetUpdateDifference(userId, pts, qts, date, limit, getDifferenceFirstSync)
 	if err != nil {
 		log.Errorf("GetDifference authKeyId:%d userId:%d error:%s", authKeyId, userId, err.Error())
@@ -108,7 +108,7 @@ func (c *Core) GetUpdateDifference(authKeyId int64, userId int64, pts int32, qts
 		}
 	}
 
-	userList, err := c.accountUsersCore.GetUserList(userId, userIdList)
+	userList, err := c.accountUsersCore.GetUserList(userId, userIdList, layer)
 	if err != nil {
 		log.Warnf("GetDifference GetUserList error:%s", err.Error())
 	}

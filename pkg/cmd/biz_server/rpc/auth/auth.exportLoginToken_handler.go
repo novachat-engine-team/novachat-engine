@@ -44,7 +44,7 @@ func (s *AuthServiceImpl) AuthExportLoginToken(ctx context.Context, request *mtp
 		return authLoginToken.To_Auth_LoginToken(), nil
 	} else {
 		log.Debugf("AuthExportLoginToken ExportLoginToken GetUser userId:%d ", userId)
-		user, err1 := s.accountUsersCore.GetUser(userId, userId)
+		user, err1 := s.accountUsersCore.GetUser(userId, userId, md.Layer)
 		if err1 != nil {
 			log.Errorf("AuthExportLoginToken ExportLoginToken GetUser userId:%d error:%s", userId, err.Error())
 			return nil, err

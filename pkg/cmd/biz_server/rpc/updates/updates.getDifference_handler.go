@@ -77,7 +77,7 @@ func (s *UpdatesServiceImpl) UpdatesGetDifference(ctx context.Context, request *
 		getDifferenceFirstSync = true
 	}
 
-	updateDifferent, err := s.accountUpdateCore.GetUpdateDifference(md.AuthKeyId, md.UserId, request.Pts, request.Qts, request.Date, getDifferenceFirstSync, limit)
+	updateDifferent, err := s.accountUpdateCore.GetUpdateDifference(md.AuthKeyId, md.UserId, request.Pts, request.Qts, request.Date, getDifferenceFirstSync, limit, md.Layer)
 	if err != nil {
 		log.Errorf("UpdatesGetDifference %v, request: %v GetDifference error:%s", metadata.RpcMetaDataDebug(md), request, err.Error())
 		return nil, errors.NewRpcErrorWithRpcErrorCodeString(mtproto.RpcErrorCode_INTERNAL, err.Error())

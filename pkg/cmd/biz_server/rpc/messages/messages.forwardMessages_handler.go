@@ -70,7 +70,7 @@ func (s *MessagesServiceImpl) MessagesForwardMessages(ctx context.Context, reque
 		}).To_InputPeer())
 	}
 
-	updates, err := s.accountMessageCore.ForwardMessages(md.UserId, md.AuthKeyId, fromPeer, toPeer, request.Id, request.RandomId, request.Silent)
+	updates, err := s.accountMessageCore.ForwardMessages(md.UserId, md.AuthKeyId, fromPeer, toPeer, request.Id, request.RandomId, request.Silent, md.Layer)
 	if err != nil {
 		log.Errorf("MessagesForwardMessages %v, request: %v error:%s", metadata.RpcMetaDataDebug(md), request, err.Error())
 		return nil, err

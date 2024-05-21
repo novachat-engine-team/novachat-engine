@@ -93,7 +93,7 @@ func (s *ContactsServiceImpl) ContactsImportContacts(ctx context.Context, reques
 			ClientId: contact.ClientId,
 		}).To_ImportedContact())
 
-		users, _ := s.accountUserCore.GetUserList(md.UserId, userIdList)
+		users, _ := s.accountUserCore.GetUserList(md.UserId, userIdList, md.Layer)
 		retryContacts := make([]int64, 0, len(phoneList))
 		ret := mtproto.NewTLContactsImportedContacts(&mtproto.Contacts_ImportedContacts{
 			Imported:       imported,

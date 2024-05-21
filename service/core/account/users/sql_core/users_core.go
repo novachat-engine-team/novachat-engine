@@ -175,7 +175,7 @@ func (c *Core) UpdateProfile(userId int64, firstname string, lastname string, ab
 	return db.RowsAffected > 0, nil
 }
 
-func (c *Core) UserPhotos(userId int64) ([]int64, error) {
+func (c *Core) UserPhotos(userId int64) ([]*data_users.ProfilePhotoData, error) {
 	u := &data_users.Users{}
 	db := c.db.Table(users.TableName).Where("id = ?", userId).Find(u)
 	if db.Error != nil {
@@ -187,9 +187,9 @@ func (c *Core) UserPhotos(userId int64) ([]int64, error) {
 	return v.IdList, nil
 }
 
-func (c *Core) DeletePhoto(userId int64, photoList []int64) (int64, error) {
+func (c *Core) DeletePhoto(userId int64, photoList []int64) (*data_users.ProfilePhotoData, error) {
 
-	var id = int64(0)
+	var id *data_users.ProfilePhotoData
 	err := c.db.Transaction(func(tx *gorm.DB) error {
 		u := &data_users.Users{}
 		if err := tx.Table(users.TableName).Where("id = ?", userId).Find(&u).Error; err != nil {
@@ -199,11 +199,11 @@ func (c *Core) DeletePhoto(userId int64, photoList []int64) (int64, error) {
 		profileUserPhotoId := users.MakeProfilePhotoData(u.Photos)
 
 		found := false
-		l := make([]int64, 0, len(profileUserPhotoId.IdList))
+		l := make([]*data_users.ProfilePhotoData, 0, len(profileUserPhotoId.IdList))
 		for _, vv := range profileUserPhotoId.IdList {
 			found = false
 			for _, v := range photoList {
-				if vv == v {
+				if vv.PhotoId == v {
 					found = true
 					break
 				}
@@ -215,21 +215,21 @@ func (c *Core) DeletePhoto(userId int64, photoList []int64) (int64, error) {
 		if len(l) > 0 {
 			found = false
 			for _, v := range l {
-				if v == profileUserPhotoId.Default {
+				if v.PhotoId == profileUserPhotoId.Default {
 					found = true
 					break
 				}
 			}
 			profileUserPhotoId.IdList = l
 			if !found {
-				profileUserPhotoId.Default = l[0]
+				profileUserPhotoId.Default = l[0].PhotoId
+				id = l[0]
 			}
 		} else {
 			profileUserPhotoId.Default = 0
 		}
 
-		id = profileUserPhotoId.Default
-		c.db.Table(users.TableName).Where("id = ?", userId).Update("photo = ?", users.ToProfilePhotoIDsJson(profileUserPhotoId))
+		c.db.Table(users.TableName).Where("id = ?", userId).Update("photos", users.ToProfilePhotoIDsJson(profileUserPhotoId))
 		return nil
 	})
 
@@ -240,7 +240,7 @@ func (c *Core) DeletePhoto(userId int64, photoList []int64) (int64, error) {
 	return id, nil
 }
 
-func (c *Core) SetPhotoId(userId int64, photoId int64) (bool, error) {
+func (c *Core) SetPhotoId(userId int64, photoId int64, videoId int64) (bool, error) {
 	err := c.db.Transaction(func(tx *gorm.DB) error {
 		u := &data_users.Users{}
 		if err := tx.Table(users.TableName).Where("id = ?", userId).Find(&u).Error; err != nil {
@@ -251,7 +251,7 @@ func (c *Core) SetPhotoId(userId int64, photoId int64) (bool, error) {
 
 		found := false
 		for _, vv := range profileUserPhotoId.IdList {
-			if vv == photoId {
+			if vv.PhotoId == photoId {
 				found = true
 				break
 			}
@@ -259,10 +259,13 @@ func (c *Core) SetPhotoId(userId int64, photoId int64) (bool, error) {
 		if found {
 			return nil
 		} else {
-			profileUserPhotoId.IdList = append(profileUserPhotoId.IdList, photoId)
+			profileUserPhotoId.IdList = append(profileUserPhotoId.IdList, &data_users.ProfilePhotoData{
+				PhotoId: photoId,
+				VideoId: videoId,
+			})
 		}
 
-		c.db.Table(users.TableName).Where("id = ?", userId).Update("photo = ?", users.ToProfilePhotoIDsJson(profileUserPhotoId))
+		c.db.Table(users.TableName).Where("id = ?", userId).Update("photos", users.ToProfilePhotoIDsJson(profileUserPhotoId))
 		return nil
 	})
 

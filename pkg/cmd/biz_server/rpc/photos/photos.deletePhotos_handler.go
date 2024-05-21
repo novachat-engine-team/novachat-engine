@@ -17,11 +17,14 @@ import (
 	"fmt"
 	"novachat_engine/mtproto"
 	sfsService "novachat_engine/pkg/cmd/sfs/rpc_client"
+	"novachat_engine/pkg/cmd/sfs/utils"
 	syncService "novachat_engine/pkg/cmd/sync/rpc_client"
 	"novachat_engine/pkg/log"
 	"novachat_engine/pkg/rpc/metadata"
 	"novachat_engine/service/common/errors"
 	"novachat_engine/service/constants"
+	data_sfs "novachat_engine/service/data/fs"
+	"novachat_engine/service/upload/photo"
 	"time"
 )
 
@@ -43,36 +46,42 @@ func (s *PhotosServiceImpl) PhotosDeletePhotos(ctx context.Context, request *mtp
 		photoIdList = append(photoIdList, id.Id)
 	}
 
-	var photoId int64
-	photoId, err = s.userCore.DeletePhoto(md.UserId, photoIdList)
+	profilePhotoData, err := s.userCore.DeletePhoto(md.UserId, photoIdList)
 	if err != nil {
 		log.Errorf("PhotosDeletePhotos - request: %v UserDeletePhoto error:%s", request, err.Error())
 		return nil, err
 	}
 
 	var userProfilePhoto *mtproto.UserProfilePhoto
-	if photoId != 0 {
-		photoInfo, err1 := sfsService.GetSfsClient(fmt.Sprintf("%d", photoId)).
-			ReqGetPhoto(context.Background(), &sfsService.GetPhoto{
-				PhotoId: photoId,
-			})
-		if err1 != nil {
-			log.Errorf("PhotosDeletePhotos - request: %v GetPhotoFile error:%s", request, err1.Error())
-			return nil, err1
+	if profilePhotoData.PhotoId != 0 {
+		if profilePhotoData.VideoId != 0 {
+			documentInfo, err1 := sfsService.GetSfsClient(fmt.Sprintf("%d", profilePhotoData.PhotoId)).
+				ReqGetDocument(context.Background(), &sfsService.GetDocument{
+					FileId: profilePhotoData.VideoId,
+				})
+			if err1 != nil {
+				log.Errorf("PhotosDeletePhotos - request: %v GetSfsClient error:%s", request, err1.Error())
+				return nil, err1
+			}
+
+			userProfilePhoto = photo.PhotoProfileUserProfilePhoto(&data_sfs.PhotoProfile{
+				Photo: utils.ToDataPhoto(documentInfo.Thumbs[0]).Detail[0],
+				Video: utils.DocumentToVideo(documentInfo).Detail[0],
+			}, md.Layer)
+		} else {
+			photoInfo, err1 := sfsService.GetSfsClient(fmt.Sprintf("%d", profilePhotoData.PhotoId)).
+				ReqGetPhoto(context.Background(), &sfsService.GetPhoto{
+					PhotoId: profilePhotoData.PhotoId,
+				})
+			if err1 != nil {
+				log.Errorf("PhotosDeletePhotos - request: %v GetPhotoFile error:%s", request, err1.Error())
+				return nil, err1
+			}
+			userProfilePhoto = photo.PhotoProfileUserProfilePhoto(&data_sfs.PhotoProfile{Photo: utils.ToDataPhoto(photoInfo).Detail[0]}, md.Layer)
 		}
-		_ = photoInfo
-		//userProfilePhoto = mtproto.NewTLUserProfilePhoto(&mtproto.UserProfilePhoto{
-		//	HasVideo:   false,
-		//	PhotoId:    photo.Id,
-		//	PhotoSmall: photo.Sizes[0].Location,
-		//	PhotoBig:   photo.Sizes[len(photo.Sizes)-1].Location,
-		//	DcId:       photo.DcId,
-		//}).To_UserProfilePhoto()
 	} else {
 		userProfilePhoto = mtproto.NewTLUserProfilePhotoEmpty(nil).To_UserProfilePhoto()
 	}
-
-	_ = userProfilePhoto
 
 	go func() {
 		_, err = syncService.GetSyncClientById(md.UserId).ReqSyncUpdate(context.Background(), &syncService.SyncUpdate{

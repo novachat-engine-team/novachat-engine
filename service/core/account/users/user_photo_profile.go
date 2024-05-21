@@ -26,12 +26,18 @@ func MakeProfilePhotoData(jsonData string) *data_users.ProfilePhotoIds {
 	return data2
 }
 
-func AddPhotoId(m *data_users.ProfilePhotoIds, id int64) {
-	idList := make([]int64, 0, len(m.IdList))
-	idList = append(idList, id)
+func AddPhotoId(m *data_users.ProfilePhotoIds, id int64, video int64) {
+	idList := make([]*data_users.ProfilePhotoData, 0, len(m.IdList))
+	idList = append(idList, &data_users.ProfilePhotoData{
+		PhotoId: id,
+		VideoId: video,
+	})
 	for _, v := range m.IdList {
-		if id != v {
-			idList = append(idList, v)
+		if id != v.PhotoId {
+			idList = append(idList, &data_users.ProfilePhotoData{
+				PhotoId: v.PhotoId,
+				VideoId: v.VideoId,
+			})
 		}
 	}
 	m.IdList = idList
@@ -40,22 +46,21 @@ func AddPhotoId(m *data_users.ProfilePhotoIds, id int64) {
 
 func RemovePhotoId(m *data_users.ProfilePhotoIds, id int64) int64 {
 	if len(m.IdList) <= 1 {
-		m.IdList = []int64{}
+		m.IdList = make([]*data_users.ProfilePhotoData, 0, len(m.IdList))
 		m.Default = 0
 	} else {
 		if id == m.Default {
-			id = m.IdList[1]
+			id = m.IdList[1].PhotoId
 			m.IdList = m.IdList[1:]
 			if len(m.IdList) > 0 {
-				m.Default = m.IdList[0]
+				m.Default = m.IdList[0].PhotoId
 			} else {
 				m.Default = 0
 			}
 		} else {
-
-			idList := make([]int64, 0, len(m.IdList))
+			idList := make([]*data_users.ProfilePhotoData, 0, len(m.IdList))
 			for _, j := range m.IdList {
-				if j != id {
+				if j.PhotoId != id {
 					idList = append(idList, j)
 				}
 			}

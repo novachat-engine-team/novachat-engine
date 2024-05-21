@@ -97,7 +97,7 @@ func (s *ContactsServiceImpl) ContactsSearch(ctx context.Context, request *mtpro
 		for k := range userIdMap {
 			userIdList = append(userIdList, k)
 		}
-		userList, _ := s.accountUserCore.GetUserList(md.UserId, userIdList)
+		userList, _ := s.accountUserCore.GetUserList(md.UserId, userIdList, md.Layer)
 		found.SetUsers(userList)
 	}
 

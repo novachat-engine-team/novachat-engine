@@ -39,7 +39,7 @@ func (s *UsersServiceImpl) UsersGetUsers(ctx context.Context, request *mtproto.T
 		return &mtproto.Vector_User{}, nil
 	}
 
-	userCacheList, err := s.accountUserCore.GetUserList(md.UserId, userIdList)
+	userCacheList, err := s.accountUserCore.GetUserList(md.UserId, userIdList, md.Layer)
 	if err != nil {
 		log.Warnf("UsersGetFullUser - request: %v GetByUserId error:%s", request, err.Error())
 		return nil, err

@@ -141,3 +141,33 @@ func PhotoData2PhotoStrippedSize(photo *data_sfs.PhotoDetail) *mtproto.PhotoSize
 		Bytes: photo.Bytes,
 	}).To_PhotoSize()
 }
+
+func PhotoProfileUserProfilePhoto(dataPhoto *data_sfs.PhotoProfile, layer int32) *mtproto.UserProfilePhoto {
+	if dataPhoto != nil {
+		userProfilePhoto := mtproto.NewTLUserProfilePhoto(&mtproto.UserProfilePhoto{
+			PhotoId: dataPhoto.Photo.VolumeId,
+			DcId:    dc.DefaultDc,
+		}).To_UserProfilePhoto()
+		userProfilePhoto.PhotoSmall = compat.NewFileLocationByLayer(
+			dataPhoto.Photo.VolumeId,
+			dataPhoto.Photo.LocalId,
+			layer,
+			dc.DefaultDc)
+		userProfilePhoto.HasVideo = dataPhoto.Video != nil
+		if dataPhoto.Video != nil {
+			userProfilePhoto.PhotoBig = compat.NewFileLocationByLayer(
+				dataPhoto.Video.VolumeId,
+				dataPhoto.Video.LocalId,
+				layer,
+				dc.DefaultDc)
+		} else {
+			userProfilePhoto.PhotoBig = compat.NewFileLocationByLayer(
+				dataPhoto.Photo.VolumeId,
+				dataPhoto.Photo.LocalId,
+				layer,
+				dc.DefaultDc)
+		}
+		return userProfilePhoto
+	}
+	return nil
+}

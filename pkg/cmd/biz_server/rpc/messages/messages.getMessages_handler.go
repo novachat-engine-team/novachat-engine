@@ -88,7 +88,7 @@ func (s *MessagesServiceImpl) MessagesGetMessages(ctx context.Context, request *
 	for k := range userIdMap {
 		userIdList = append(userIdList, k)
 	}
-	userList, err := s.accountUsersCore.GetUserList(md.UserId, userIdList)
+	userList, err := s.accountUsersCore.GetUserList(md.UserId, userIdList, md.Layer)
 	if err != nil {
 		log.Warnf("MessagesGetMessages - GetUserList error:%s", err.Error())
 	}

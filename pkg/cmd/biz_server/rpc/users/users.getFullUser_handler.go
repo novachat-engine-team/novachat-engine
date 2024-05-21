@@ -60,7 +60,7 @@ func (s *UsersServiceImpl) UsersGetFullUser(ctx context.Context, request *mtprot
 		}
 	}
 
-	user, err := s.accountUserCore.GetUser(md.UserId, inputUser.GetId())
+	user, err := s.accountUserCore.GetUser(md.UserId, inputUser.GetId(), md.Layer)
 	if err != nil {
 		log.Errorf("UsersGetFullUser - request: %v GetByUserId error:%s", request, err.Error())
 		return nil, errors.NewRpcErrorWithRpcErrorCodeString(mtproto.RpcErrorCode_INTERNAL, err.Error())

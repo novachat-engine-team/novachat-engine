@@ -21,8 +21,6 @@ import (
 	syncService "novachat_engine/pkg/cmd/sync/rpc_client"
 	"novachat_engine/pkg/log"
 	"novachat_engine/pkg/rpc/metadata"
-	"novachat_engine/service/app/dc"
-	"novachat_engine/service/compat"
 	"novachat_engine/service/constants"
 	data_fs "novachat_engine/service/data/fs"
 	"novachat_engine/service/upload/photo"
@@ -44,6 +42,7 @@ func (s *PhotosServiceImpl) PhotosUploadProfilePhoto(ctx context.Context, reques
 		}).To_Photos_Photo(), nil
 	}
 
+	var videoId int64
 	var photoValue *mtproto.Photo
 	dataPhoto := &data_fs.PhotoProfile{}
 	if request.GetVideo() != nil {
@@ -68,6 +67,7 @@ func (s *PhotosServiceImpl) PhotosUploadProfilePhoto(ctx context.Context, reques
 		}
 		dataPhoto.Photo = utils.ToDataPhoto(documentInfo.Thumbs[0]).Detail[0]
 		dataPhoto.Video = utils.DocumentToVideo(documentInfo).Detail[0]
+		videoId = dataPhoto.Video.VolumeId
 	} else {
 		photoInfo, err1 := sfsService.GetSfsClient(
 			fmt.Sprintf("%d", request.GetFile().GetId())).ReqUploadPhoto(ctx,
@@ -85,29 +85,12 @@ func (s *PhotosServiceImpl) PhotosUploadProfilePhoto(ctx context.Context, reques
 		photoValue = photo.PhotoInfo2Photo(photoInfo, md.Layer)
 	}
 
-	_, err := s.userCore.SetPhotoId(md.UserId, dataPhoto.Photo.VolumeId)
+	_, err := s.userCore.SetPhotoId(md.UserId, dataPhoto.Photo.VolumeId, videoId)
 	if err != nil {
 		log.Errorf("PhotosUploadProfilePhoto request:%+v UserSetPhotoId error: %v", request, err)
 		return nil, err
 	}
 
-	userProfilePhoto := mtproto.NewTLUserProfilePhoto(&mtproto.UserProfilePhoto{
-		PhotoId: dataPhoto.Photo.VolumeId,
-		DcId:    dc.DefaultDc,
-	}).To_UserProfilePhoto()
-	userProfilePhoto.PhotoSmall = compat.NewFileLocationByLayer(
-		dataPhoto.Photo.VolumeId,
-		dataPhoto.Photo.LocalId,
-		md.Layer,
-		dc.DefaultDc)
-	userProfilePhoto.HasVideo = dataPhoto.Video != nil
-	if dataPhoto.Video != nil {
-		userProfilePhoto.PhotoBig = compat.NewFileLocationByLayer(
-			dataPhoto.Video.VolumeId,
-			dataPhoto.Video.LocalId,
-			md.Layer,
-			dc.DefaultDc)
-	}
 	photosPhoto := mtproto.NewTLPhotosPhoto(&mtproto.Photos_Photo{
 		Photo: photoValue,
 		Users: []*mtproto.User{},
@@ -126,7 +109,7 @@ func (s *PhotosServiceImpl) PhotosUploadProfilePhoto(ctx context.Context, reques
 					mtproto.NewTLUpdateUserPhoto(&mtproto.Update{
 						UserId:   constants.PeerTypeFromUserIDType(md.UserId).ToInt32(),
 						Date:     int32(time.Now().Unix()),
-						Photo:    userProfilePhoto,
+						Photo:    photo.PhotoProfileUserProfilePhoto(dataPhoto, md.Layer),
 						Previous: mtproto.ToMTBool(false),
 					}).To_Update(),
 				},
@@ -140,6 +123,5 @@ func (s *PhotosServiceImpl) PhotosUploadProfilePhoto(ctx context.Context, reques
 			log.Errorf("PhotosUploadProfilePhoto request:%+v error: %v", request, err)
 		}
 	}()
-
 	return photosPhoto.To_Photos_Photo(), nil
 }

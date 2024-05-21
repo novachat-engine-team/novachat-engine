@@ -60,7 +60,7 @@ func (s *MessagesServiceImpl) MessagesCheckChatInvite(ctx context.Context, reque
 	//}
 	retChat := chat.ToChat(md.UserId, chatData, md.Layer)
 
-	userList, err := s.accountUsersCore.GetUserList(md.UserId, participantUserIdList)
+	userList, err := s.accountUsersCore.GetUserList(md.UserId, participantUserIdList, md.Layer)
 	if err != nil {
 		log.Warnf("MessagesCheckChatInvite GetUserList error:%s", err.Error())
 	}
