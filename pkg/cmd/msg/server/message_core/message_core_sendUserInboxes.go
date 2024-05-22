@@ -35,6 +35,8 @@ func (m *MessageCoreService) sendInboxUserMessages(userId int64, peerId int64, l
 	}
 	for idx := range list {
 		if !list[idx].Message.Out {
+			list[idx].Message.FromId286FA604119 = mtproto.NewTLPeerUser(&mtproto.Peer{UserId: constants.PeerTypeFromUserIDType(userId).ToInt32()}).To_Peer()
+			list[idx].Message.FromId90DDDC1171 = constants.PeerTypeFromUserIDType(userId).ToInt32()
 			list[idx].Message.PeerId = mtproto.NewTLPeerUser(&mtproto.Peer{UserId: constants.PeerTypeFromUserIDType(userId).ToInt32()}).To_Peer()
 			list[idx].Message.ToId = list[idx].Message.PeerId
 		}

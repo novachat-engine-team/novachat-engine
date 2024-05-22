@@ -186,10 +186,12 @@ func (c *Core) GetUserList(userId int64, userIdList []int64, layer int32) ([]*mt
 	for _, v := range userInfoList {
 		vv, _ := contactsCacheMap[v.Id]
 		photoV, _ := userPhotoMap[v.Id]
-		if photoV.PhotoId != 0 {
-			dataPhoto, _ = photoMap[photoV.PhotoId]
-		} else if photoV.VideoId != 0 {
-			dataPhoto, _ = videoMap[photoV.VideoId]
+		if photoV != nil {
+			if photoV.PhotoId != 0 {
+				dataPhoto, _ = photoMap[photoV.PhotoId]
+			} else if photoV.VideoId != 0 {
+				dataPhoto, _ = videoMap[photoV.VideoId]
+			}
 		}
 		user = UserCore2Users(v)
 		if v.Id == userId {
