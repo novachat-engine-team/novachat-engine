@@ -19,6 +19,7 @@ import (
 	"novachat_engine/pkg/crypto"
 	"novachat_engine/pkg/log"
 	"novachat_engine/pkg/orm"
+	"novachat_engine/pkg/util"
 	"novachat_engine/service/core/account/users"
 	"novachat_engine/service/data/users"
 	"strings"
@@ -240,7 +241,11 @@ func (c *Core) DeletePhoto(userId int64, photoList []int64) (*data_users.Profile
 	return id, nil
 }
 
-func (c *Core) SetPhotoId(userId int64, photoId int64, videoId int64) (bool, error) {
+func (c *Core) SetPhotoId(userId int64, photoId int64, videoId int64) (*data_users.ProfilePhotoData, error) {
+	dataProfile := data_users.ProfilePhotoData{
+		PhotoId: photoId,
+		VideoId: videoId,
+	}
 	err := c.db.Transaction(func(tx *gorm.DB) error {
 		u := &data_users.Users{}
 		if err := tx.Table(users.TableName).Where("id = ?", userId).Find(&u).Error; err != nil {
@@ -248,32 +253,30 @@ func (c *Core) SetPhotoId(userId int64, photoId int64, videoId int64) (bool, err
 			return nil
 		}
 		profileUserPhotoId := users.MakeProfilePhotoData(u.Photos)
-
-		found := false
-		for _, vv := range profileUserPhotoId.IdList {
-			if vv.PhotoId == photoId {
-				found = true
-				break
+		if photoId != 0 {
+			if idx := util.Index(profileUserPhotoId.IdList, func(idx int) bool {
+				return profileUserPhotoId.IdList[idx].PhotoId == photoId
+			}); idx < 0 {
+				profileUserPhotoId.IdList = append(profileUserPhotoId.IdList, &dataProfile)
+			} else {
+				dataProfile = *profileUserPhotoId.IdList[idx]
 			}
-		}
-		if found {
-			return nil
 		} else {
-			profileUserPhotoId.IdList = append(profileUserPhotoId.IdList, &data_users.ProfilePhotoData{
-				PhotoId: photoId,
-				VideoId: videoId,
-			})
+			return nil
 		}
-
+		if profileUserPhotoId.Default == photoId {
+			return nil
+		}
+		profileUserPhotoId.Default = photoId
 		c.db.Table(users.TableName).Where("id = ?", userId).Update("photos", users.ToProfilePhotoIDsJson(profileUserPhotoId))
 		return nil
 	})
 
 	if err != nil {
 		log.Errorf("DeletePhoto userId:%d error:%s", userId, err.Error())
-		return false, err
+		return nil, err
 	}
-	return true, nil
+	return &dataProfile, nil
 }
 
 func (c *Core) Search(query string, offset int32, limit int32) ([]*data_users.Users, error) {
