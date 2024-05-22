@@ -14,24 +14,24 @@ Novachat-engine is a open source mtproto server for Telegram compatible Android,
 - sticketsets
 
 #### ENV
-    
+
     golang version: GO 1.17.11
-    
+
     GO111MODULE=auto
     GOPROXY=https://goproxy.io,direct
-    
-    go mod tidy -go=1.16 && go mod tidy -go=1.17
-    
 
-### DB
+    go mod tidy -go=1.16 && go mod tidy -go=1.17
+
+
+### Support Components
     mongodb 4.4.19
     mysql 5.7
-    kafka (you can find in ROOT_DIR/lib)
-    redis (must redisbloom found in ROOT_DIR/lib)
+    kafka (you can find in $ROOT_DIR/lib)
+    redis (must redisbloom found in $ROOT_DIR/lib)
     etcd
-    
+
 #### BUILDING
-    1. goto ROOT_DIR/gen
+    1. goto $ROOT_DIR/gen
     2. mkdir out
     3. ./config.sh
     4. ./build.sh all
@@ -43,7 +43,7 @@ Novachat-engine is a open source mtproto server for Telegram compatible Android,
         ip etcd-hosts 
         ip mongodb-hosts
 
-tips: building error fix in INSTALL_fix
+tips: building error fix in [INSTALL_fix](https://github.com/novachat-engine-team/novachat-engine/blob/main/INSTALL_fix)
 
 #### Notes
 Will coming soon
