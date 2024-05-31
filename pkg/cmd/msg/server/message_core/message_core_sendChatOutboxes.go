@@ -13,13 +13,28 @@ import (
 	"context"
 	"fmt"
 	"novachat_engine/mtproto"
+	chatService "novachat_engine/pkg/cmd/chat/rpc_client"
 	msgService "novachat_engine/pkg/cmd/msg/rpc_client"
 	syncClient "novachat_engine/pkg/cmd/sync/rpc_client"
 	"novachat_engine/pkg/log"
+	"novachat_engine/service/chat"
 	"novachat_engine/service/constants"
 )
 
 func (m *MessageCoreService) SendOutboxChatMessages(authKeyId int64, userId int64, peerId int64, list []*msgService.SendMessageData, draft bool) (*mtproto.Updates, error) {
+
+	chatList, err := chatService.GetChatClientByKeyId(peerId).ReqAllChat(context.Background(), &chatService.AllChat{
+		Ids:    []int64{peerId},
+		UserId: userId,
+	})
+	if err != nil {
+		log.Errorf("SendOutboxChatMessages ReqGetParticipants userId:%d peerId:%d error:%s", userId, peerId, err.Error())
+		return nil, err
+	}
+	if len(chatList.Values) == 0 {
+		return mtproto.NewTLUpdates(nil).To_Updates(), nil
+	}
+
 	ptsList, err := m.outboxesCore.SendChannelMessages(userId, peerId, constants.PeerTypeChannel, list, draft)
 	if err != nil {
 		log.Errorf("SendOutboxChatMessages userId:%d peerId:%d error:%s", userId, peerId, err.Error())
@@ -47,6 +62,8 @@ func (m *MessageCoreService) SendOutboxChatMessages(authKeyId int64, userId int6
 	messageIdList := make([]int32, 0, len(list))
 	updates := &mtproto.Updates{
 		Updates: make([]*mtproto.Update, 0, len(ptsList)*2),
+		//TODO:(Coderxw channel)
+		Chats: []*mtproto.Chat{chat.ToChat(userId, chatList.Values[0], mtproto.CurrentLayer)},
 	}
 	for idx := range list {
 		messageIdList = append(messageIdList, list[idx].Message.Id)

@@ -40,5 +40,6 @@ func (impl *Impl) ReqFullChat(ctx context.Context, request *chatService.FullChat
 	return &chatService.Chat{
 		ChatData:        chat.GetChatInfo().ChatData,
 		ParticipantList: participantList,
+		Count:           chat.GetChatInfo().Count,
 	}, nil
 }

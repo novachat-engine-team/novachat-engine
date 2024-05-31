@@ -23,6 +23,12 @@ rpcDiscovery:
   etcdaddr : etcd-hosts:2379
   ttl	: 10
 
+chatRpcClient:
+  schema: novachat-engine
+  servername: chat
+  etcdaddr: 127.0.0.1:2379
+  balancer: random
+
 syncRpcClient:
   schema: novachat-engine
   servername: sync

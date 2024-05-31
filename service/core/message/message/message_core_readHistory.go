@@ -53,7 +53,7 @@ func (c *Core) readHistory(
 		conversation := data_message.Conversation{
 			Id:     message.MakeDialogId(userId, peerId, peerType),
 			UserId: userId,
-			PeerId: message.MakePeerId(peerId, peerType),
+			PeerId: peerId,
 			Date:   date,
 		}
 		sr := mgo.GetMongoDB().Database(message.DBMessage).

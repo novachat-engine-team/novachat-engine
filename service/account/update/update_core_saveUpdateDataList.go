@@ -11,10 +11,14 @@ package update
 
 import data_update "novachat_engine/service/data/update"
 
-func (c *Core) SaveUpdateDataList(userId int64, updateDataList []*data_update.UserUpdate) error {
-	if len(updateDataList) == 0 {
-		return nil
+func (c *Core) SaveUpdateDataList(userId int64, updateDataList []*data_update.UserUpdate, updateChannelDataList []*data_update.UserUpdate) error {
+	if len(updateChannelDataList) > 0 {
+		return c.updateCore.SaveUpdateChannelDataList(updateChannelDataList)
 	}
 
-	return c.updateCore.SaveUpdateDataList(userId, updateDataList)
+	if len(updateDataList) > 0 {
+		return c.updateCore.SaveUpdateDataList(userId, updateDataList)
+	}
+
+	return nil
 }

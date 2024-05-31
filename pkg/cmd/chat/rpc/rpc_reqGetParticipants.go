@@ -32,6 +32,7 @@ func (impl *Impl) ReqGetParticipants(ctx context.Context, request *chatService.G
 	chatData := chatService.Chat{
 		ChatData:        chat.GetChatInfo().ChatData,
 		ParticipantList: []*data_chat.ChatParticipant{},
+		Count:           chat.GetChatInfo().Count,
 	}
 	if request.UserId != 0 {
 		participant := chat.GetChatInfo().GetParticipants(request.UserId)

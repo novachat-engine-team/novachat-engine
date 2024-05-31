@@ -17,12 +17,15 @@ import (
 	"novachat_engine/pkg/cmd/biz_server/conf"
 	accountContact "novachat_engine/service/account/contact"
 	accountMessage "novachat_engine/service/account/message"
+	accountSetting "novachat_engine/service/account/setting"
 	accountUpdate "novachat_engine/service/account/update"
 	accountUsers "novachat_engine/service/account/users"
 	"novachat_engine/service/app/phone_call"
 	"novachat_engine/service/core/account/account"
 	"novachat_engine/service/core/account/contact"
 	"novachat_engine/service/core/account/users/sql_core"
+	"novachat_engine/service/core/message/message"
+	"novachat_engine/service/core/setting"
 	"novachat_engine/service/core/update"
 )
 
@@ -36,6 +39,8 @@ type UpdatesServiceImpl struct {
 	phoneCallCore      *phone_call.PhoneCallCore
 	contactCore        *contact.Core
 	accountMessageCore *accountMessage.Core
+	messageCore        *message.Core
+	accountSettingCore *accountSetting.Core
 
 	//*phone_call.PhoneCallConfig
 }
@@ -47,9 +52,11 @@ func NewUpdatesServiceImpl(conf *conf.Config) *UpdatesServiceImpl {
 		usersCore:     sql_core.NewUsersCore(&conf.MySQL),
 		contactCore:   contact.NewContactCore(&conf.MongoDB),
 		phoneCallCore: phone_call.NewPhoneCallCore(conf.RelayConfig.PhoneCallWebRTC, conf.RelayConfig.P2P, conf.RelayConfig.LibVersion, conf.Server.ServerId, cache.GetRedisClient()),
+		messageCore:   message.NewMessageCore(&conf.MongoDB, nil),
 		//PhoneCallConfig: phone_call.NewPhoneCallConfig(conf.RelayConfig.PhoneCallWebRTC),
 	}
 
+	impl.accountSettingCore = accountSetting.NewSettingCore(setting.NewSettingCore(&conf.MongoDB))
 	impl.accountContactCore = accountContact.NewContactCore(impl.contactCore)
 	impl.accountUsersCore = accountUsers.NewUsersCore(impl.accountCore, impl.accountContactCore, impl.usersCore)
 	impl.accountUpdateCore = accountUpdate.NewCore(update.NewCore(&conf.MongoDB), impl.accountUsersCore)
@@ -59,7 +66,7 @@ func NewUpdatesServiceImpl(conf *conf.Config) *UpdatesServiceImpl {
 		nil,
 		nil,
 		nil,
-		nil,
+		impl.messageCore,
 		nil)
 	return impl
 }

@@ -30,10 +30,12 @@ import (
 func (s *ChannelsServiceImpl) ChannelsGetParticipants(ctx context.Context, request *mtproto.TLChannelsGetParticipants) (*mtproto.Channels_ChannelParticipants, error) {
 	md := metadata.RpcMetaDataFromContext(ctx)
 	log.Infof("ChannelsGetParticipants %v, request: %v", metadata.RpcMetaDataDebug(md), request)
+
+	filter := constants.MTToChannelParticipantFilterType(request.Filter).ToInt32()
 	chatId := constants.PeerTypeFromChannelIDType32(request.Channel.ChannelId).ToInt()
 	resp, err := chatService.GetChatClientByKeyId(chatId).ReqGetParticipants(ctx, &chatService.GetParticipants{
 		ChatId: chatId,
-		Filter: constants.MTToChannelParticipantFilterType(request.Filter).ToInt32(),
+		Filter: filter,
 		Q:      request.Filter.Q,
 		Offset: request.Offset,
 		Limit:  request.Limit,
@@ -60,12 +62,15 @@ func (s *ChannelsServiceImpl) ChannelsGetParticipants(ctx context.Context, reque
 		participant := chatInfo.ParticipantList[first.(int)]
 		p.Participants = append(p.Participants, chat.ToChatParticipant(participant, chatInfo.ChatData.Creator, md.UserId))
 
-		if participant != nil && md.UserId != participant.UserId {
+		if participant != nil {
 			userIdList = append(userIdList, participant.UserId)
 		}
 	})
 
 	users, _ := s.accountUsersCore.GetUserList(md.UserId, userIdList, md.Layer)
 	p.Users = users
+	if filter == constants.ChannelParticipantsFilterRecent.ToInt32() {
+		p.Encode(mtproto.CurrentLayer)
+	}
 	return p, nil
 }

@@ -62,6 +62,7 @@ func (c *Core) NextId(userId int64, opts ...Option) (*data_id.Id, error) {
 	op := options.Collection()
 	ofu := options.FindOneAndUpdate()
 	ofu.SetUpsert(true)
+	ofu.SetReturnDocument(options.After)
 	//op.SetRegistry(mgo.Registry())
 
 	sigResult := mgo.GetDatabase(id.DBID).Collection(id.TableID, op).

@@ -39,7 +39,7 @@ func (c *Core) GetMessages(userId int64, messageIdList []int32, replyTo bool) ([
 	return messageList, nil
 }
 
-func (c *Core) GetChannelMessageList(channelMsgId *message.ChannelMessageId) ([]*mtproto.Message, error) {
+func (c *Core) GetChannelMessageList(userId int64, channelMsgId *message.ChannelMessageId) ([]*mtproto.Message, error) {
 	log.Debugf("GetChannelMessageList channelMsgId:%v", channelMsgId)
 
 	messageDataList, err := c.messageCore.GetChannelMessageList(channelMsgId)
@@ -54,6 +54,7 @@ func (c *Core) GetChannelMessageList(channelMsgId *message.ChannelMessageId) ([]
 			continue
 		}
 
+		v.Out = v.FromUserId == userId
 		messageList = append(messageList, message.ToMessage(v))
 	}
 

@@ -31,6 +31,9 @@ func (s *ChannelsServiceImpl) ChannelsGetParticipant(ctx context.Context, reques
 	md := metadata.RpcMetaDataFromContext(ctx)
 	log.Infof("ChannelsGetParticipant %v, request: %v", metadata.RpcMetaDataDebug(md), request)
 
+	if request.UserId.ClassName == mtproto.ClassInputUserSelf {
+		request.UserId.UserId = constants.PeerTypeFromUserIDType(md.UserId).ToInt32()
+	}
 	userId := constants.PeerTypeFromUserIDType32(request.UserId.UserId).ToInt()
 	chatId := constants.PeerTypeFromChannelIDType32(request.Channel.ChannelId).ToInt()
 	resp, err := chatService.GetChatClientByKeyId(chatId).ReqGetParticipants(ctx, &chatService.GetParticipants{
@@ -63,6 +66,7 @@ func (s *ChannelsServiceImpl) ChannelsGetParticipant(ctx context.Context, reques
 			users = append(users, user)
 		}
 	}
+
 	return mtproto.NewTLChannelsChannelParticipant(&mtproto.Channels_ChannelParticipant{
 		Participant: chat.ToChatParticipant(participant, chatInfo.ChatData.Creator, md.UserId),
 		Users:       users,

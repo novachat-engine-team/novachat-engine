@@ -100,6 +100,8 @@ func (c *Core) FillChannelMessageBox(ctx context.Context, userId int64, peerId i
 				log.Errorf("FillChannelMessageBox NextId false error:%s", err.Error())
 				return nil, false, err
 			}
+
+			log.Debugf("FillChannelMessageBox ptsPeerId:%d id:%+v", ptsPeerId, id)
 			_idx := int32(1)
 			tempMessageIdList := make([]int32, len(randomIdList))
 			tempPtsList := make([]int32, len(randomIdList))

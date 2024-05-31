@@ -46,7 +46,7 @@ func (s *Server) Serve() error {
 		codec := GetCodecMaker(MTProtoCodec)
 		codec.Init(newConn)
 
-		go s.establishTcpConnection(NewTcpConnection(codec, conn, 1024, s))
+		go s.establishTcpConnection(NewTcpConnection(codec, conn, 1, s))
 	}
 	return nil
 }

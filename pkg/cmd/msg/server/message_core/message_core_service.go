@@ -63,7 +63,7 @@ func (m *MessageCoreService) OnMessageData(key string, value []byte) error {
 
 	case constants.InboxChatMessage:
 		var r []*msgService.SendMessages
-		if err = jsoniter.Unmarshal(value, r); err != nil {
+		if err = jsoniter.Unmarshal(value, &r); err != nil {
 			log.Errorf(err.Error())
 			return err
 		}
@@ -79,7 +79,7 @@ func (m *MessageCoreService) OnMessageData(key string, value []byte) error {
 
 	case constants.InboxChatMessageReadHistory:
 		var r []*msgService.ReadHistory
-		if err = jsoniter.Unmarshal(value, r); err != nil {
+		if err = jsoniter.Unmarshal(value, &r); err != nil {
 			log.Errorf(err.Error())
 			return err
 		}
@@ -94,7 +94,7 @@ func (m *MessageCoreService) OnMessageData(key string, value []byte) error {
 		return m.RevokeMessageData(r)
 	case constants.InboxChatMessageRevokeMessages:
 		var r []*msgService.RevokeMessages
-		if err = jsoniter.Unmarshal(value, r); err != nil {
+		if err = jsoniter.Unmarshal(value, &r); err != nil {
 			log.Errorf(err.Error())
 			return err
 		}
@@ -108,7 +108,7 @@ func (m *MessageCoreService) OnMessageData(key string, value []byte) error {
 		return m.PinnedMessageData(r)
 	case constants.InboxChatMessagePinnedMessages:
 		var r []*msgService.PinnedMessage
-		if err = jsoniter.Unmarshal(value, r); err != nil {
+		if err = jsoniter.Unmarshal(value, &r); err != nil {
 			log.Errorf(err.Error())
 			return err
 		}

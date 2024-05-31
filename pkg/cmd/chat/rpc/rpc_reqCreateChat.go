@@ -17,6 +17,7 @@ import (
 	msgService "novachat_engine/pkg/cmd/msg/rpc_client"
 	"novachat_engine/pkg/log"
 	"novachat_engine/pkg/rpc/rpc_util"
+	"novachat_engine/pkg/util"
 	chat2 "novachat_engine/service/chat"
 	"novachat_engine/service/common/hash"
 	"novachat_engine/service/constants"
@@ -37,6 +38,9 @@ func (impl *Impl) ReqCreateChat(ctx context.Context, request *chatService.Create
 			AccessHash:     0,
 			AccuracyRadius: 0,
 		}
+	}
+	if idx := util.IndexInt64s(&request.PeerId, request.UserId); idx < 0 {
+		request.PeerId = append(request.PeerId, request.UserId)
 	}
 	chat, err := impl.chatManager.CreateChat(
 		request.UserId,
@@ -97,6 +101,7 @@ func (impl *Impl) ReqCreateChat(ctx context.Context, request *chatService.Create
 	updates.Chats = append(updates.Chats, chat2.ToChat(request.UserId, &chatService.Chat{
 		ChatData:        chat.GetChatInfo().ChatData,
 		ParticipantList: participantList,
+		Count:           chat.GetChatInfo().Count,
 	}, request.Layer))
 
 	log.Infof("ReqCreateChat request:%+v chatId:%d", request, chatInfo.ChatData.ChatId)

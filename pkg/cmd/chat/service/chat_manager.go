@@ -104,7 +104,7 @@ func (m *ChatManager) CreateChat(creatorUserId int64, userIdList []int64, title 
 	chatData.Creator = creatorUserId
 	chatData.Title = title
 	chatInfo := NewChatInfo(chatData)
-	chatInfo.Count = 1
+	chatInfo.Count = 0
 	chatInfo.ChatData.Address = address
 	chatInfo.ChatData.GeoPoint = point
 

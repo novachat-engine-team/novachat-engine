@@ -23,6 +23,8 @@ import (
 )
 
 func (impl *Impl) ReqSendOutboxesMessages(ctx context.Context, request *chatService.SendOutboxesMessages) (*mtproto.Updates, error) {
+	log.Debugf("ReqSendOutboxesMessages request:%+v", request)
+
 	peerType := constants.PeerTypeFromInt32(request.Message.PeerType)
 	switch peerType {
 	case constants.PeerTypeChat, constants.PeerTypeChannel:
@@ -40,7 +42,7 @@ func (impl *Impl) ReqSendOutboxesMessages(ctx context.Context, request *chatServ
 			return nil, err
 		}
 	}
-	if !chat.Invalid() || chat.Deleted() {
+	if chat.Invalid() || chat.Deleted() {
 		return nil, errorsService.NewRpcErrorWithRpcErrorCode(mtproto.RpcErrorCode_BAD_REQUEST_CHAT_ID_INVALID)
 	}
 

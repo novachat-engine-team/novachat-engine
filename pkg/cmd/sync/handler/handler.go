@@ -29,11 +29,12 @@ import (
 )
 
 type Handler struct {
-	conf              *conf.Conf
-	consumerList      []mq.Consumer
-	npnsHandler       *npns.Npns
-	accountUpdateCore *accountUpdate.Core
-	updateKeyNode     *snowflake.Node
+	conf                 *conf.Conf
+	consumerList         []mq.Consumer
+	npnsHandler          *npns.Npns
+	accountUpdateCore    *accountUpdate.Core
+	updateKeyNode        *snowflake.Node
+	updateChannelKeyNode *snowflake.Node
 }
 
 func NewHandler(conf *conf.Conf) *Handler {
@@ -41,13 +42,18 @@ func NewHandler(conf *conf.Conf) *Handler {
 	if err != nil {
 		panic(err.Error())
 	}
+	channelNode, err := snowflake.NewNode(int64(conf.Server.ServerId))
+	if err != nil {
+		panic(err.Error())
+	}
 
 	s := &Handler{
-		conf:              conf,
-		consumerList:      make([]mq.Consumer, 0, 3),
-		npnsHandler:       npns.NewNpns(conf),
-		accountUpdateCore: accountUpdate.NewCore(update.NewCore(conf.MongoDB), nil),
-		updateKeyNode:     node,
+		conf:                 conf,
+		consumerList:         make([]mq.Consumer, 0, 3),
+		npnsHandler:          npns.NewNpns(conf),
+		accountUpdateCore:    accountUpdate.NewCore(update.NewCore(conf.MongoDB), nil),
+		updateKeyNode:        node,
+		updateChannelKeyNode: channelNode,
 	}
 
 	if index := util.Index(conf.Consumer, func(idx int) bool {
@@ -93,6 +99,7 @@ func (m *Handler) update(updateData *syncService.UpdateData, push bool) {
 		return
 	}
 
+	log.Debugf("update userId:%d list:%+v", updateData.UserId, userSessionInfo.SessionInfoList)
 	var ok mtproto.Bool
 	var resp *types.Any
 	for _, sessionInfo := range userSessionInfo.SessionInfoList {

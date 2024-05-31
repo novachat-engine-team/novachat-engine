@@ -59,9 +59,6 @@ func (c *Core) GetUpdateDifference(authKeyId int64, userId int64, pts int32, qts
 
 		switch constants.UpdateTypeFromInt32(u.UpdateType) {
 		case constants.UpdateTypeUpdateNewMessage:
-			if update.GetPts() > updateState.Pts {
-				updateState.Pts = update.GetPts()
-			}
 			fallthrough
 		case constants.UpdateTypeUpdateNewChannelMessage:
 			updateDifference.NewMessages = append(updateDifference.NewMessages, update.GetMessage1F2B0AFD71())
@@ -72,6 +69,10 @@ func (c *Core) GetUpdateDifference(authKeyId int64, userId int64, pts int32, qts
 			FilterAppendPeer(&userIdList, update.GetMessage1F2B0AFD71().ToId)
 			FilterAppendPeer(&userIdList, update.GetMessage1F2B0AFD71().FromId286FA604119)
 			FilterAppendUserId(&userIdList, constants.PeerTypeFromUserIDType32(update.GetMessage1F2B0AFD71().FromId90DDDC1171).ToInt())
+
+			if update.GetPts() > updateState.Pts {
+				updateState.Pts = update.GetPts()
+			}
 			break
 		case constants.UpdateTypeUpdateNewEncryptedMessage:
 			updateDifference.NewEncryptedMessages = append(updateDifference.NewEncryptedMessages, update.GetMessage12BCBD9A71())

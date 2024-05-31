@@ -43,7 +43,7 @@ func (s *ChannelsServiceImpl) ChannelsGetMessages(ctx context.Context, request *
 	} else {
 		idList = request.Id93D7B34771
 	}
-	messageList, err := s.accountMessageCore.GetChannelMessageList(&message.ChannelMessageId{
+	messageList, err := s.accountMessageCore.GetChannelMessageList(md.UserId, &message.ChannelMessageId{
 		ChannelId: constants.PeerTypeFromChannelIDType32(request.Channel.ChannelId).ToInt(),
 		IdList:    idList,
 	})

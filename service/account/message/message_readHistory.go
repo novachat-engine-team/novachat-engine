@@ -19,6 +19,7 @@ import (
 	"novachat_engine/pkg/log"
 	"novachat_engine/service/constants"
 	"novachat_engine/service/core/message"
+	data_message "novachat_engine/service/data/messages/message"
 	"novachat_engine/service/input"
 	"time"
 )
@@ -41,7 +42,15 @@ func (c *Core) ReadHistory(
 		return nil, err
 	}
 
-	messageDataList, err := c.messageCore.GetMessageList(userId, []int32{maxId})
+	var messageDataList []*data_message.Message
+
+	switch inputPeer.GetPeerType() {
+	case constants.PeerTypeUser:
+		messageDataList, err = c.messageCore.GetMessageList(userId, []int32{maxId})
+	case constants.PeerTypeChat, constants.PeerTypeChannel:
+		messageDataList, err = c.messageCore.GetChannelMessageListByMaxId(inputPeer.GetPeerId(), maxId)
+	}
+	//messageDataList, err := c.messageCore.GetMessageList(userId, []int32{maxId})
 	if err != nil {
 		log.Errorf("ReadHistory GetMessageList userId:%d peerId:%d peerType:%v maxId:%d error:%s", userId, inputPeer.GetPeerId(), inputPeer.GetPeerType(), maxId, err.Error())
 		return nil, err

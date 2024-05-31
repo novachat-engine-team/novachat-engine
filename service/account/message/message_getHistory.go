@@ -139,8 +139,12 @@ func (c *Core) loadForwardHistoryMessages(
 			offset = int32(idx)
 		}
 		_, peerType := message2.MakePeerType(v.PeerId)
-		if !v.Out && peerType == constants.PeerTypeUser {
-			v.PeerId = v.FromUserId
+		if peerType == constants.PeerTypeUser {
+			if !v.Out {
+				v.PeerId = v.FromUserId
+			}
+		} else {
+			v.Out = userId == v.FromUserId
 		}
 		messageList = append(messageList, messageCore.ToMessage(v))
 	}
@@ -168,8 +172,12 @@ func (c *Core) loadBackwardHistoryMessages(
 			offset = int32(idx)
 		}
 		_, peerType := message2.MakePeerType(v.PeerId)
-		if !v.Out && peerType == constants.PeerTypeUser {
-			v.PeerId = v.FromUserId
+		if peerType == constants.PeerTypeUser {
+			if !v.Out {
+				v.PeerId = v.FromUserId
+			}
+		} else {
+			v.Out = userId == v.FromUserId
 		}
 		messageList = append(messageList, messageCore.ToMessage(v))
 	}
@@ -197,8 +205,12 @@ func (c *Core) loadAroundDataHistoryMessages(
 			offset = int32(idx)
 		}
 		_, peerType := message2.MakePeerType(v.PeerId)
-		if !v.Out && peerType == constants.PeerTypeUser {
-			v.PeerId = v.FromUserId
+		if peerType == constants.PeerTypeUser {
+			if !v.Out {
+				v.PeerId = v.FromUserId
+			}
+		} else {
+			v.Out = userId == v.FromUserId
 		}
 		messageList = append(messageList, messageCore.ToMessage(v))
 	}

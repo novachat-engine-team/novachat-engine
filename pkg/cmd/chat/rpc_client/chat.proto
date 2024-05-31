@@ -23,6 +23,7 @@ message Chat {
 
   data_chat.Chat                     chat_data        = 1;
   repeated data_chat.ChatParticipant participant_list = 2;
+  int32                              count            = 3;
 }
 
 message ChatList {

@@ -56,10 +56,11 @@ func (impl *Impl) ReqSendInBoxesMessages(ctx context.Context, request *chatServi
 				value = make([]*msgService.SendMessages, 0, 4)
 			}
 			value = append(value, &msgService.SendMessages{
-				FromUserId: participant.UserId,
-				PeerId:     request.Message.PeerId,
-				PeerType:   request.Message.PeerType,
-				DataList:   request.Message.DataList,
+				FromUserId:          participant.UserId,
+				PeerId:              request.Message.PeerId,
+				PeerType:            request.Message.PeerType,
+				DataList:            request.Message.DataList,
+				GlobalMessageIdList: request.Message.GlobalMessageIdList,
 			})
 			pieceKeyMap[key] = value
 		}

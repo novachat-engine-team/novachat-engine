@@ -135,7 +135,7 @@ func (c *Core) conversationToDialog(userId int64, conversationList []*data_messa
 	}
 	if len(channelMsgIdList) > 0 {
 		for _, v := range channelMsgIdList {
-			channelMessageList, err1 := c.GetChannelMessageList(v)
+			channelMessageList, err1 := c.GetChannelMessageList(userId, v)
 			if err1 != nil {
 				log.Warnf("conversationToDialog - GetChannelMessageList error:%s", err.Error())
 			} else {

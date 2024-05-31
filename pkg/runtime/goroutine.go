@@ -1,7 +1,17 @@
+/*
+ * Copyright (c) 2021-present,  NovaChat-Engine.
+ *  All rights reserved.
+ *
+ * @Author: Coder (coderxw@gmail.com)
+ * @Time :
+ * @File :
+ */
+
 package runtime
 
 import (
 	"fmt"
+	"novachat_engine/pkg/log"
 	"os"
 	"runtime/debug"
 	"time"
@@ -16,15 +26,14 @@ func GoSafeWithRecover(handler func([]interface{}), params []interface{}, recove
 			if r := recover(); r != nil {
 				// TODO: log
 				if !debugIgnoreStdout {
-					fmt.Fprintf(os.Stderr, "%s goroutine panic: %v\n%s\n",
-						time.Now(), r, string(debug.Stack()))
+					log.Errorf("goroutine panic: %v\n%s\n", r, string(debug.Stack()))
 				}
 				if recoverHandler != nil {
 					go func() {
 						defer func() {
 							if p := recover(); p != nil {
 								if !debugIgnoreStdout {
-									fmt.Fprintf(os.Stderr, "recover goroutine panic:%v\n%s\n", p, string(debug.Stack()))
+									log.Errorf("recover goroutine panic:%v\n%s\n", p, string(debug.Stack()))
 								}
 							}
 						}()

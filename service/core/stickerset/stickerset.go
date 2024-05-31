@@ -87,12 +87,12 @@ func (s *Core) GetAllStickers() ([]*data_stickerset.StickerSet, error) {
 
 	col := mgo.GetMongoDB().Database(sfs.DBSfs).Collection(sfs.TableStickerSet, op)
 	cursor, err := col.Find(context.Background(), bson.M{})
-	if err != nil && err != mongo.ErrNilDocument {
+	if err != nil && err != mongo.ErrNoDocuments {
 		log.Errorf("GetAllStickers error:%s", err.Error())
 		return nil, err
 	}
 	defer cursor.Close(context.Background())
-	if err == mongo.ErrNilDocument {
+	if err == mongo.ErrNoDocuments {
 		return nil, nil
 	}
 
@@ -116,12 +116,12 @@ func (s *Core) GetStickers(idList []int64) ([]*data_stickerset.StickerSet, error
 
 	col := mgo.GetMongoDB().Database(sfs.DBSfs).Collection(sfs.TableStickerSet, op)
 	cursor, err := col.Find(context.Background(), bson.M{"_id": bson.M{mgo.IN: idList}})
-	if err != nil && err != mongo.ErrNilDocument {
+	if err != nil && err != mongo.ErrNoDocuments {
 		log.Errorf("GetStickers error:%s", err.Error())
 		return nil, err
 	}
 	defer cursor.Close(context.Background())
-	if err == mongo.ErrNilDocument {
+	if err == mongo.ErrNoDocuments {
 		return nil, nil
 	}
 
@@ -141,12 +141,12 @@ func (s *Core) Installed(userId int64) ([]*data_stickerset.StickerInstall, error
 
 	col := mgo.GetMongoDB().Database(sfs.DBSfs).Collection(sfs.TableStickerInstall, op)
 	cursor, err := col.Find(context.Background(), s.encoder.MarshalCustomSpecMap(data_stickerset.StickerInstall{UserId: userId}, "UserId"))
-	if err != nil && err != mongo.ErrNilDocument {
+	if err != nil && err != mongo.ErrNoDocuments {
 		log.Errorf("Installed error:%s", err.Error())
 		return nil, err
 	}
 	defer cursor.Close(context.Background())
-	if err == mongo.ErrNilDocument {
+	if err == mongo.ErrNoDocuments {
 		return nil, nil
 	}
 
@@ -171,7 +171,7 @@ func (s *Core) Install(userId int64, stickerSetId int64, bInstall bool, date int
 		s.encoder.MarshalCustomSpecMap(data_stickerset.StickerInstall{Id: fmt.Sprintf("%d%d", userId, stickerSetId), UserId: userId}, "Id", "UserId"),
 		bson.M{mgo.SET: s.encoder.MarshalCustomSpecMap(data_stickerset.StickerInstall{StickerSetId: stickerSetId, Installed: bInstall, Date: date}, "StickerSetId", "Installed", "Date")},
 		updateOne)
-	if err != nil && err != mongo.ErrNilDocument {
+	if err != nil && err != mongo.ErrNoDocuments {
 		log.Errorf("Install error:%s", err.Error())
 		return err
 	}
@@ -188,11 +188,11 @@ func (s *Core) Faved(userId int64) ([]int64, error) {
 
 	col := mgo.GetMongoDB().Database(sfs.DBSfs).Collection(sfs.TableStickerRecent, op)
 	sr := col.FindOne(context.Background(), s.encoder.MarshalCustomSpecMap(data_stickerset.StickerSetRecent{UserId: userId}, "UserId"))
-	if sr.Err() != nil && sr.Err() != mongo.ErrNilDocument {
+	if sr.Err() != nil && sr.Err() != mongo.ErrNoDocuments {
 		log.Errorf("Faved error:%s", sr.Err().Error())
 		return nil, sr.Err()
 	}
-	if sr.Err() == mongo.ErrNilDocument {
+	if sr.Err() == mongo.ErrNoDocuments {
 		return nil, nil
 	}
 
@@ -217,7 +217,7 @@ func (s *Core) UpdateFaved(userId int64, favedList []int64) error {
 	ur, err := col.UpdateOne(context.Background(),
 		s.encoder.MarshalCustomSpecMap(data_stickerset.StickerSetRecent{UserId: userId}, "UserId"),
 		s.encoder.MarshalCustomSpecMap(data_stickerset.StickerSetRecent{Faved: favedList}, "Faved"), uoo)
-	if err != nil && err != mongo.ErrNilDocument {
+	if err != nil && err != mongo.ErrNoDocuments {
 		log.Errorf("UpdateFaved error:%s", err.Error())
 		return err
 	}
@@ -234,11 +234,11 @@ func (s *Core) Recent(userId int64) ([]int64, error) {
 
 	col := mgo.GetMongoDB().Database(sfs.DBSfs).Collection(sfs.TableStickerRecent, op)
 	sr := col.FindOne(context.Background(), s.encoder.MarshalCustomSpecMap(data_stickerset.StickerSetRecent{UserId: userId}, "UserId"))
-	if sr.Err() != nil && sr.Err() != mongo.ErrNilDocument {
+	if sr.Err() != nil && sr.Err() != mongo.ErrNoDocuments {
 		log.Errorf("Recent error:%s", sr.Err().Error())
 		return nil, sr.Err()
 	}
-	if sr.Err() == mongo.ErrNilDocument {
+	if sr.Err() == mongo.ErrNoDocuments {
 		return nil, nil
 	}
 
@@ -263,7 +263,7 @@ func (s *Core) UpdateRecent(userId int64, recentList []int64) error {
 	ur, err := col.UpdateOne(context.Background(),
 		s.encoder.MarshalCustomSpecMap(data_stickerset.StickerSetRecent{UserId: userId}, "UserId"),
 		s.encoder.MarshalCustomSpecMap(data_stickerset.StickerSetRecent{Recent: recentList}, "Recent"), uoo)
-	if err != nil && err != mongo.ErrNilDocument {
+	if err != nil && err != mongo.ErrNoDocuments {
 		log.Errorf("UpdateRecent error:%s", err.Error())
 		return err
 	}

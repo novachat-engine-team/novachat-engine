@@ -44,7 +44,7 @@ func (impl *Impl) ReqPinnedMessage(ctx context.Context, request *chatService.Cha
 			return nil, err
 		}
 	}
-	if !chat.Invalid() || chat.Deleted() {
+	if chat.Invalid() || chat.Deleted() {
 		log.Warnf("ReqPinnedMessage chat invalid chatId:%d", request.PinnedMessage.PeerId)
 		return nil, errorsService.NewRpcErrorWithRpcErrorCode(mtproto.RpcErrorCode_BAD_REQUEST_CHAT_ID_INVALID)
 	}
@@ -97,7 +97,7 @@ func (impl *Impl) ReqInPinnedMessage(ctx context.Context, request *chatService.C
 			return nil, err
 		}
 	}
-	if !chat.Invalid() || chat.Deleted() {
+	if chat.Invalid() || chat.Deleted() {
 		return nil, errorsService.NewRpcErrorWithRpcErrorCode(mtproto.RpcErrorCode_BAD_REQUEST_CHAT_ID_INVALID)
 	}
 

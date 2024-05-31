@@ -56,6 +56,7 @@ func (impl *Impl) ReqAllChat(ctx context.Context, request *chatService.AllChat) 
 		serviceChatList = append(serviceChatList, &chatService.Chat{
 			ChatData:        v.GetChatInfo().ChatData,
 			ParticipantList: participantList,
+			Count:           v.GetChatInfo().Count,
 		})
 	}
 	return &chatService.ChatList{Values: serviceChatList}, nil

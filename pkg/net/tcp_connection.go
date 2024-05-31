@@ -10,7 +10,6 @@
 package net
 
 import (
-	"errors"
 	"fmt"
 	"net"
 	"runtime"
@@ -33,8 +32,6 @@ type TcpConnection struct {
 	closeFlag int32
 	cb        Callback
 	id        uint64
-	closeChan chan none
-	sendChan  chan interface{}
 	recvMutex sync.Mutex
 	sendMutex sync.RWMutex
 	Context   interface{}
@@ -48,11 +45,7 @@ func NewTcpConnection(codec Codec, conn net.Conn, sendChanSize int32, cb Callbac
 		closeFlag: 0,
 		cb:        cb,
 		id:        atomic.AddUint64(&globalID, 1),
-		closeChan: make(chan none),
-		sendChan:  make(chan interface{}, sendChanSize),
 	}
-
-	go ins.runEventLoop()
 	return ins
 }
 
@@ -76,21 +69,6 @@ func (t *TcpConnection) RemoteAddr() net.Addr {
 	return t.conn.RemoteAddr()
 }
 
-func (t *TcpConnection) runEventLoop() {
-	defer t.Close()
-
-	for {
-		select {
-		case msg, ok := <-t.sendChan:
-			if !ok || t.codec.Send(msg) != nil {
-				return
-			}
-		case <-t.closeChan:
-			return
-		}
-	}
-}
-
 func (t *TcpConnection) GetConnID() uint64 {
 	return t.id
 }
@@ -104,12 +82,10 @@ func (t *TcpConnection) Close() error {
 		if t.cb != nil {
 			t.cb.OnConnectionClosed(t)
 		}
-		close(t.closeChan)
 
 		t.sendMutex.Lock()
 		defer t.sendMutex.Unlock()
 
-		close(t.sendChan)
 		atomic.AddInt32(&closeCounter, 1)
 		err := t.codec.Close()
 		return err
@@ -139,36 +115,5 @@ func (t *TcpConnection) Receive() (interface{}, error) {
 }
 
 func (t *TcpConnection) Send(msg interface{}) error {
-	if t.sendChan == nil {
-		if t.IsClosed() {
-			return errors.New("closed")
-		}
-
-		//t.sendMutex.Lock()
-
-		err := t.codec.Send(msg)
-		if err != nil {
-			//t.sendMutex.Unlock()
-			t.Close()
-		} else {
-			//t.sendMutex.Unlock()
-		}
-		return err
-	}
-
-	t.sendMutex.RLock()
-	if t.IsClosed() {
-		t.sendMutex.RUnlock()
-		return errors.New("closed")
-	}
-
-	select {
-	case t.sendChan <- msg:
-		t.sendMutex.RUnlock()
-		return nil
-	default:
-		t.sendMutex.RUnlock()
-		t.Close()
-		return errors.New("error")
-	}
+	return t.codec.Send(msg)
 }

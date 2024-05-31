@@ -28,7 +28,7 @@ func (impl *Impl) ReqDeleteMessages(ctx context.Context, request *chatService.De
 		return nil, errorsService.NewRpcErrorWithRpcErrorCode(mtproto.RpcErrorCode_BAD_REQUEST_CHAT_INVALID)
 	}
 
-	messageList, err := impl.accountMessageCore.GetChannelMessageList(&messageCore.ChannelMessageId{
+	messageList, err := impl.accountMessageCore.GetChannelMessageList(request.UserId, &messageCore.ChannelMessageId{
 		ChannelId: request.ChatId,
 		IdList:    request.Ids,
 	})

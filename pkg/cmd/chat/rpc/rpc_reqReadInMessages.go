@@ -43,7 +43,7 @@ func (impl *Impl) ReqReadInMessages(ctx context.Context, request *chatService.Re
 			return nil, err
 		}
 	}
-	if !chat.Invalid() || chat.Deleted() {
+	if chat.Invalid() || chat.Deleted() {
 		return nil, errorsService.NewRpcErrorWithRpcErrorCode(mtproto.RpcErrorCode_BAD_REQUEST_CHAT_ID_INVALID)
 	}
 

@@ -1,3 +1,12 @@
+/*
+ * Copyright (c) 2021-present,  NovaChat-Engine.
+ *  All rights reserved.
+ *
+ * @Author: Coder (coderxw@gmail.com)
+ * @Time :
+ * @File :
+ */
+
 package handler
 
 import (
@@ -117,6 +126,7 @@ func (m *Handler) processUpdates(userId int64, updates *mtproto.Updates) error {
 		seq      int32
 	)
 	var dataUpdateList []*data_update.UserUpdate
+	var dataChannelUpdateList []*data_update.UserUpdate
 	updateType := update.UpdatesToUpdateType(updates)
 	switch updateType {
 	case constants.UpdateTypeUpdatesTooLong:
@@ -134,7 +144,7 @@ func (m *Handler) processUpdates(userId int64, updates *mtproto.Updates) error {
 	case constants.UpdateTypeUpdateShort:
 		//  updateShort#78d4dec1 update:Update date:int = Updates;
 		updateShort := updates.To_UpdateShort()
-		dataUpdateList = m.processUpdateList(userId, []*mtproto.Update{updateShort.GetUpdate()})
+		dataUpdateList, dataChannelUpdateList = m.processUpdateList(userId, []*mtproto.Update{updateShort.GetUpdate()})
 		date = updateShort.GetDate()
 	case constants.UpdateTypeUpdatesCombined:
 		//  updatesCombined#725b04c3 updates:Vector<Update> users:Vector<User> chats:Vector<Chat> date:int seq_start:int seq:int = Updates;
@@ -145,7 +155,7 @@ func (m *Handler) processUpdates(userId int64, updates *mtproto.Updates) error {
 		updateShortSentMessage := updates.To_UpdateShortSentMessage()
 		date, pts, ptsCount = updateShortSentMessage.GetDate(), updateShortSentMessage.GetPts(), updateShortSentMessage.GetPtsCount()
 	case constants.UpdateTypeUpdates:
-		dataUpdateList = m.processUpdateList(userId, updates.To_Updates().GetUpdates())
+		dataUpdateList, dataChannelUpdateList = m.processUpdateList(userId, updates.To_Updates().GetUpdates())
 		seq = updates.GetSeq()
 		date = updates.GetDate()
 	default:
@@ -155,7 +165,7 @@ func (m *Handler) processUpdates(userId int64, updates *mtproto.Updates) error {
 	}
 
 	if len(dataUpdateList) > 0 {
-		err = m.accountUpdateCore.SaveUpdateDataList(userId, dataUpdateList)
+		err = m.accountUpdateCore.SaveUpdateDataList(userId, dataUpdateList, dataChannelUpdateList)
 	}
 	_ = dataUpdateList
 	_, _, _, _, _ = date, pts, ptsCount, seqStart, seq
@@ -165,10 +175,12 @@ func (m *Handler) processUpdates(userId int64, updates *mtproto.Updates) error {
 	return err
 }
 
-func (m *Handler) processUpdateList(userId int64, updateList []*mtproto.Update) []*data_update.UserUpdate {
+func (m *Handler) processUpdateList(userId int64, updateList []*mtproto.Update) ([]*data_update.UserUpdate, []*data_update.UserUpdate) {
 
+	var channel bool
 	var peer *mtproto.Peer
 	dataUpdateList := make([]*data_update.UserUpdate, 0, len(updateList))
+	dataChannelUpdateList := make([]*data_update.UserUpdate, 0, len(updateList))
 	for _, up := range updateList {
 		if up.PtsCount == 0 && up.Pts == 0 {
 			if up.ChatId != 0 || up.ChannelId != 0 {
@@ -196,7 +208,6 @@ func (m *Handler) processUpdateList(userId int64, updateList []*mtproto.Update) 
 		}
 
 		syncUpdate := accountUpdate.UpdateToUserUpdate(userId, up)
-
 		switch peer.ClassName {
 		case mtproto.ClassPeerUser:
 			syncUpdate.PeerId = constants.PeerTypeFromUserIDType32(peer.UserId).ToInt()
@@ -204,16 +215,31 @@ func (m *Handler) processUpdateList(userId int64, updateList []*mtproto.Update) 
 		case mtproto.ClassPeerChat:
 			syncUpdate.PeerId = constants.PeerTypeFromChatIDType32(peer.ChatId).ToInt()
 			syncUpdate.PeerType = constants.PeerTypeChat.ToInt32()
+			channel = true
 		case mtproto.ClassPeerChannel:
 			syncUpdate.PeerId = constants.PeerTypeFromChannelIDType32(peer.ChannelId).ToInt()
 			syncUpdate.PeerType = constants.PeerTypeChannel.ToInt32()
+			channel = true
 		default:
 			panic(fmt.Sprintf("processUpdateList peerId:%v", peer))
 		}
 
-		syncUpdate.UpdateKey = m.updateKeyNode.Generate().String()
-		dataUpdateList = append(dataUpdateList, syncUpdate)
+		if channel {
+			var syncChannelUpdate data_update.UserUpdate
+			syncChannelUpdate = *syncUpdate
+			syncChannelUpdate.UpdateKey = m.updateChannelKeyNode.Generate().String()
+			dataChannelUpdateList = append(dataChannelUpdateList, &syncChannelUpdate)
+
+			if syncUpdate.UpdateType == constants.UpdateTypeUpdateNewChannelMessage.ToInt32() ||
+				syncUpdate.UpdateType == constants.UpdateTypeUpdateEditChannelMessage.ToInt32() {
+				syncUpdate.UpdateKey = m.updateKeyNode.Generate().String()
+				dataUpdateList = append(dataUpdateList, syncUpdate)
+			}
+		} else {
+			syncUpdate.UpdateKey = m.updateKeyNode.Generate().String()
+			dataUpdateList = append(dataUpdateList, syncUpdate)
+		}
 	}
 
-	return dataUpdateList
+	return dataUpdateList, dataChannelUpdateList
 }

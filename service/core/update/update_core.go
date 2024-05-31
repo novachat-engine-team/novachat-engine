@@ -15,8 +15,9 @@ import (
 )
 
 const (
-	DBUpdate    = "db_updates"
-	TableUpdate = "tb_updates"
+	DBUpdate           = "db_updates"
+	TableUpdate        = "tb_updates"
+	TableChannelUpdate = "tb_channel_updates"
 )
 
 func init() {

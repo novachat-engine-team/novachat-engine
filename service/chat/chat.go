@@ -22,7 +22,7 @@ func ToChat(userId int64, dataChat *chatService.Chat, layer int32) *mtproto.Chat
 		CallNotEmpty:          false, //TODO:(Coderxw)
 		Id:                    constants.PeerTypeFromChatIDType(dataChat.ChatData.ChatId).ToInt32(),
 		Photo:                 nil,
-		ParticipantsCount:     int32(len(dataChat.ParticipantList)),
+		ParticipantsCount:     dataChat.Count,
 		Date:                  dataChat.ChatData.Date,
 		Version:               0, //TODO:(Coderxw)
 		MigratedTo:            nil,
@@ -78,6 +78,11 @@ func ToChat(userId int64, dataChat *chatService.Chat, layer int32) *mtproto.Chat
 
 func ToChatParticipant(participant *data_chat.ChatParticipant, ownerId, userId int64) *mtproto.ChannelParticipant {
 	if participant == nil || participant.State == data_chat.ParticipantState_ParticipantStateLeft {
+		if participant == nil {
+			mtproto.NewTLChannelParticipantLeft(&mtproto.ChannelParticipant{
+				UserId: constants.PeerTypeFromUserIDType(userId).ToInt32(),
+			}).To_ChannelParticipant()
+		}
 		return mtproto.NewTLChannelParticipantLeft(&mtproto.ChannelParticipant{
 			UserId: constants.PeerTypeFromUserIDType(participant.UserId).ToInt32(),
 		}).To_ChannelParticipant()
@@ -97,7 +102,8 @@ func ToChatParticipant(participant *data_chat.ChatParticipant, ownerId, userId i
 	} else {
 		if participant.UserId == ownerId {
 			return mtproto.NewTLChannelParticipantCreator(&mtproto.ChannelParticipant{
-				UserId: constants.PeerTypeFromUserIDType(participant.UserId).ToInt32(),
+				UserId:                constants.PeerTypeFromUserIDType(participant.UserId).ToInt32(),
+				AdminRights5DAA6E2393: banned_right.RightsToChatAdminBannedRight(participant.AdminRights),
 			}).To_ChannelParticipant()
 		} else if participant.Admin {
 			return mtproto.NewTLChannelParticipantAdmin(&mtproto.ChannelParticipant{

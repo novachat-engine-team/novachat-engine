@@ -1,3 +1,12 @@
+/*
+ * Copyright (c) 2021-present,  NovaChat-Engine.
+ *  All rights reserved.
+ *
+ * @Author: Coder (coderxw@gmail.com)
+ * @Time :
+ * @File :
+ */
+
 package handler
 
 import (
@@ -7,8 +16,10 @@ import (
 func (m *Handler) pushUpdate(updateData *syncService.UpdateData) error {
 	err := m.processUpdates(updateData.UserId, updateData.Updates)
 
-	go func() {
-		m.update(updateData, true)
-	}()
+	if err == nil {
+		go func() {
+			m.update(updateData, true)
+		}()
+	}
 	return err
 }

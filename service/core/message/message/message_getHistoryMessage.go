@@ -49,7 +49,7 @@ func (c *Core) getHistoryMessages(userId int64, peerId int64, peerType constants
 	}
 
 	filter["peer_id"] = message.MakePeerId(peerId, peerType)
-	filter["user_id"] = userId
+
 	if !deleted {
 		filter["deleted"] = false
 	}
@@ -57,12 +57,23 @@ func (c *Core) getHistoryMessages(userId int64, peerId int64, peerType constants
 	opf := options.Find()
 	opf.SetLimit(int64(limit))
 	opf.SetSort(sortOperator)
-	cursor, err := mgo.GetMongoDB().Database(message.DBMessage).
-		Collection(message.TableName(userId, message.TableMessage)).
-		Find(context.Background(), filter, opf)
+	var cursor *mongo.Cursor
+	var err error
+	switch peerType {
+	case constants.PeerTypeChannel, constants.PeerTypeChat:
+		cursor, err = mgo.GetMongoDB().Database(message.DBMessage).
+			Collection(message.TableName(userId, message.TableChannelMessage)).
+			Find(context.Background(), filter, opf)
+	default:
+		filter["user_id"] = userId
+		cursor, err = mgo.GetMongoDB().Database(message.DBMessage).
+			Collection(message.TableName(userId, message.TableMessage)).
+			Find(context.Background(), filter, opf)
+	}
 	if err != nil && err != mongo.ErrNoDocuments {
 		return nil, err
 	}
+
 	defer cursor.Close(context.Background())
 	var ret []*data_message.Message
 	if err == mongo.ErrNoDocuments {

@@ -13,6 +13,7 @@ import (
 	"fmt"
 	"github.com/gogo/protobuf/types"
 	"novachat_engine/mtproto"
+	chatClient "novachat_engine/pkg/cmd/chat/rpc_client"
 	"novachat_engine/pkg/cmd/msg/conf"
 	msgService "novachat_engine/pkg/cmd/msg/rpc_client"
 	"novachat_engine/pkg/cmd/msg/server/message_core"
@@ -61,7 +62,7 @@ func NewMsgHandler(conf *conf.Config) *MsgHandler {
 	go m.chatInConsumer.Run()
 
 	syncClient.InstallSyncClient(m.conf.SyncRpcClient)
-	//chatClient.InstallChatClient(m.conf.ChatRpcClient)
+	chatClient.InstallChatClient(m.conf.ChatRpcClient)
 	return m
 }
 
@@ -74,7 +75,7 @@ func (m *MsgHandler) SendMessageOutBoxes(messages *msgService.SendMessages) (*mt
 	switch constants.PeerTypeFromInt32(messages.PeerType) {
 	case constants.PeerTypeSelf, constants.PeerTypeUser:
 		return m.coreService.SendOutboxUserMessages(messages.AuthKeyId, messages.FromUserId, messages.PeerId, messages.DataList, messages.ClearDraft)
-	case constants.PeerTypeChat:
+	case constants.PeerTypeChat, constants.PeerTypeChannel:
 		return m.coreService.SendOutboxChatMessages(messages.AuthKeyId, messages.FromUserId, messages.PeerId, messages.DataList, messages.ClearDraft)
 	//case constants.PeerTypeChannel:
 	//	return m.coreService.SendOutboxChannelMessages(messages.AuthKeyId, messages.FromUserId, messages.PeerId, messages.DataList, messages.ClearDraft)
@@ -96,14 +97,12 @@ func (m *MsgHandler) ReadHistory(readHistory *msgService.ReadHistory) (*types.An
 			log.Errorf("ReadHistory peerType:%+v error:%s", readHistory.PeerType, err.Error())
 			return nil, err
 		}
-	case constants.PeerTypeChat:
+	case constants.PeerTypeChat, constants.PeerTypeChannel:
 		err := m.coreService.ReadHistoryMessage(readHistory)
 		if err != nil {
 			log.Errorf("ReadHistory peerType:%+v error:%s", readHistory.PeerType, err.Error())
 			return nil, err
 		}
-	case constants.PeerTypeChannel:
-		fallthrough
 	default:
 		log.Warnf("ReadHistory peerType:%+v", readHistory.PeerType)
 		return types.MarshalAny(mtproto.ToMTBool(false))

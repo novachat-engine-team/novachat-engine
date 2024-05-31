@@ -72,7 +72,7 @@ func (s *ChannelsServiceImpl) ChannelsGetFullChannel(ctx context.Context, reques
 		BotInfo:             nil,
 		PinnedMsgId:         0,
 		FolderId:            0,
-		ParticipantsCount:   int32(len(dataChat.ParticipantList)),
+		ParticipantsCount:   dataChat.Count,
 		AdminsCount:         0,
 		Call:                nil,
 	}).To_ChatFull()
@@ -128,7 +128,7 @@ func (s *ChannelsServiceImpl) ChannelsGetFullChannel(ctx context.Context, reques
 
 			var idx int32
 			util.Foreach(participantList, func(i interface{}, value interface{}) {
-				iValue := i.(int32)
+				iValue := i.(int)
 				switch participantList[iValue].State {
 				case data_chat.ParticipantState_ParticipantStateBan:
 					fullChat.BannedCount++
@@ -143,7 +143,7 @@ func (s *ChannelsServiceImpl) ChannelsGetFullChannel(ctx context.Context, reques
 				}
 
 				if participantList[iValue].UserId == md.UserId {
-					idx = iValue
+					idx = int32(iValue)
 				}
 			})
 			if idx >= 0 {

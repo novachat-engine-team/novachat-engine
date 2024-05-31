@@ -11,6 +11,7 @@ package message
 
 import (
 	"context"
+	"fmt"
 	"github.com/go-redsync/redsync"
 	"novachat_engine/mtproto"
 	"novachat_engine/pkg/cache"
@@ -66,7 +67,7 @@ func (c *Core) SendMessage(userId int64, authKeyId int64, request *mtproto.TLMes
 			AccessHash: request.Peer.AccessHash,
 		}).To_InputPeer())
 	} else if inputPeer.GetPeerType() == constants.PeerTypeChannel {
-		log.Debugf("SendMessage userId:%d ChannelId", userId, request.Peer.ChannelId)
+		log.Debugf("SendMessage userId:%d ChannelId:%d", userId, request.Peer.ChannelId)
 	}
 
 	mutex := cache.GetRedSyncClient().NewMutex(
@@ -128,7 +129,7 @@ func (c *Core) SendMessage(userId int64, authKeyId int64, request *mtproto.TLMes
 			}},
 			ClearDraft: request.ClearDraft,
 		})
-	case constants.PeerTypeChat:
+	case constants.PeerTypeChat, constants.PeerTypeChannel:
 		updates, err = chatClient.GetChatClientByKeyId(constants.PeerTypeFromChatIDType32(request.Peer.ChatId).ToInt()).
 			ReqSendOutboxesMessages(ctx, &chatClient.SendOutboxesMessages{
 				Message: &msgClient.SendMessages{
@@ -143,8 +144,8 @@ func (c *Core) SendMessage(userId int64, authKeyId int64, request *mtproto.TLMes
 					}},
 					ClearDraft: request.ClearDraft,
 				}})
-	case constants.PeerTypeChannel:
-		panic("SendMessage Channel")
+	default:
+		panic(fmt.Errorf("SendMessage Channel type:%v", inputPeer.GetPeerType()))
 	}
 	cancel()
 	if err != nil {
