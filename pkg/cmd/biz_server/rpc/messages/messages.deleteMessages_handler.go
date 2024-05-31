@@ -25,6 +25,9 @@ func (s *MessagesServiceImpl) MessagesDeleteMessages(ctx context.Context, reques
 	md := metadata.RpcMetaDataFromContext(ctx)
 	log.Debugf("MessagesDeleteMessages %v, request: %v", metadata.RpcMetaDataDebug(md), request)
 
+	if len(request.Id) == 0 {
+		return mtproto.NewTLMessagesAffectedMessages(nil).To_Messages_AffectedMessages(), nil
+	}
 	affectedMessages, err := s.accountMessageCore.DeleteMessages(md.UserId, md.AuthKeyId, request.Revoke, request.Id)
 	if err != nil {
 		log.Errorf("MessagesDeleteMessages %v, request: %v error:%s", metadata.RpcMetaDataDebug(md), request, err.Error())

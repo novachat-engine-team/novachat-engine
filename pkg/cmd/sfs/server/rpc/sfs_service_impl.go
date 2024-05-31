@@ -43,6 +43,7 @@ func NewSfsServiceImpl(conf *conf.Config) *SfsServiceImpl {
 	}
 
 	impl.core = sfs.NewSfsCore(&conf.MongoDB)
+	impl.core.Migrator()
 	return impl
 }
 

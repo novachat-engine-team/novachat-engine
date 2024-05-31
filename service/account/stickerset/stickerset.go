@@ -414,7 +414,7 @@ func (s *Core) GetStickersByShortName(name string) (*data_stickerset.StickerSet,
 		}
 	}
 
-	log.Debugf("GetStickersByShortName name:%s found:%v", name, found)
+	log.Debugf("GetStickersByShortName name:%s found:%v", name, found.Id)
 	return found, nil
 }
 

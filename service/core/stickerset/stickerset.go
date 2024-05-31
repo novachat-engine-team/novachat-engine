@@ -19,9 +19,11 @@ import (
 	"go.mongodb.org/mongo-driver/mongo/writeconcern"
 	"novachat_engine/pkg/config"
 	"novachat_engine/pkg/log"
+	"novachat_engine/pkg/util"
 	"novachat_engine/service/core/sfs"
 	data_stickerset "novachat_engine/service/data/stickerset"
 	"novachat_engine/service/mgo"
+	"strings"
 )
 
 type Core struct {
@@ -30,9 +32,49 @@ type Core struct {
 
 func NewStickerSetCore(conf *config.MongodbConfig) *Core {
 	mgo.InstallMongodb(conf)
-
-	return &Core{
+	s := &Core{
 		encoder: mgo.NewEncoder(mgo.WithEncodeTag(mgo.BsonTag), mgo.WithEnable64ToString(false), mgo.WithEmitDefaults(false)),
+	}
+	s.Migrator()
+	return s
+}
+
+func (s *Core) Migrator() {
+	allOpts := options.ListDatabases().
+		SetNameOnly(true).
+		SetAuthorizedDatabases(true)
+	nameList, err := mgo.GetMongoDB().ListDatabaseNames(context.Background(), bson.M{}, allOpts)
+	if err != nil {
+		log.Warnf("NewSfsCore error:%s", err.Error())
+		panic(err)
+	}
+
+	found := false
+	for _, name := range nameList {
+		if strings.Compare(name, sfs.DBSfs) == 0 {
+			found = true
+			break
+		}
+	}
+	if found { // collection
+		found = false
+		op := options.ListCollections()
+		op.SetNameOnly(true)
+		nameList, err = mgo.GetMongoDB().Database(sfs.DBSfs).ListCollectionNames(context.Background(), bson.M{}, op)
+		if err != nil {
+			log.Warnf("NewStickerSetCore table error:%s", err.Error())
+			panic(err)
+		}
+	}
+
+	for _, tableName := range []string{sfs.TableStickerSet, sfs.TableStickerInstall, sfs.TableStickerRecent} {
+		if util.IndexStrings(&nameList, tableName) < 0 {
+			err = mgo.GetMongoDB().Database(sfs.DBSfs).CreateCollection(context.Background(), tableName)
+			if err != nil {
+				log.Fatalf("%s Create tableName:%s error:%s", sfs.DBSfs, tableName, err.Error())
+				panic(err)
+			}
+		}
 	}
 }
 

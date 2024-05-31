@@ -12,6 +12,7 @@ package partfs
 import (
 	"crypto/sha256"
 	"encoding/hex"
+	"errors"
 	"fmt"
 	"io/ioutil"
 	"novachat_engine/pkg/cmd/sfs/server/syncfs"
@@ -116,8 +117,8 @@ func (m *PartFS) WriteFilePartData(authKeyId int64, fileId int64, filePart int32
 	}
 
 	if exist == false {
-		err = os.Mkdir(filePathDir, 0755)
-		if err != nil && strings.Contains(err.Error(), "file exists") == false {
+		err = os.MkdirAll(filePathDir, 0755)
+		if !errors.Is(err, os.ErrExist) {
 			log.Errorf("WriteFilePartData Mkdir %s error:%s", filePathDir, err.Error())
 			return err
 		}

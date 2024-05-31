@@ -28,10 +28,15 @@ func MtDocumentAttribute2Attributes(attribute *mtproto.DocumentAttribute) *sfsSe
 	switch attribute.ClassName {
 	case mtproto.ClassDocumentAttributeSticker:
 		attr.AttributesType = DocumentAttributeSticker.ToInt32()
-		//TODO: StickerSet
-		attr.StickerSetType = 0
-		attr.StickerData = nil
-		attribute.GetStickerset()
+		std := stickerset.MtInputStickerSet2DataStickerSet(attribute.Stickerset)
+		attr.StickerData = &sfsService.StickerSet{
+			StickerSetType: std.StickerSetType,
+			StickerSetId:   std.StickerSetId,
+			AccessHash:     std.AccessHash,
+			ShortName:      std.ShortName,
+			Emoticon:       std.Emoticon,
+		}
+
 		attr.Mask = attribute.GetMask()
 		attr.Alt = attribute.GetAlt()
 		attr.MaskCoords = &sfsService.MaskCoords{
@@ -98,17 +103,25 @@ func Attributes2MtDocumentAttribute(attribute *sfsService.Attributes) *mtproto.D
 		break
 	case DocumentAttributeSticker.ToInt32():
 		attr = mtproto.NewTLDocumentAttributeSticker(&mtproto.DocumentAttribute{
-			Mask: attr.Mask,
-			Alt:  attr.Alt,
+			Mask: attribute.Mask,
+			Alt:  attribute.Alt,
 			//TODO: StickerSet
-			Stickerset: nil,
-			MaskCoords: mtproto.NewTLMaskCoords(&mtproto.MaskCoords{
+			Stickerset: stickerset.DataStickerSet2MtInputStickerSet(&data_fs.StickerSet{
+				StickerSetType: attribute.StickerData.StickerSetType,
+				StickerSetId:   attribute.StickerData.StickerSetId,
+				AccessHash:     attribute.StickerData.AccessHash,
+				ShortName:      attribute.StickerData.ShortName,
+				Emoticon:       attribute.StickerData.Emoticon,
+			}),
+		}).To_DocumentAttribute()
+		if attribute.MaskCoords != nil {
+			attr.MaskCoords = mtproto.NewTLMaskCoords(&mtproto.MaskCoords{
 				N:    attribute.MaskCoords.N,
 				X:    attribute.MaskCoords.X,
 				Y:    attribute.MaskCoords.Y,
 				Zoom: attribute.MaskCoords.Zoom,
-			}).To_MaskCoords(),
-		}).To_DocumentAttribute()
+			}).To_MaskCoords()
+		}
 		break
 	case DocumentAttributeVideo.ToInt32():
 		attr = mtproto.NewTLDocumentAttributeVideo(&mtproto.DocumentAttribute{
@@ -210,9 +223,8 @@ func DataAttributes2MtDocumentAttribute(attribute *data_fs.Attributes) *mtproto.
 		break
 	case DocumentAttributeSticker.ToInt32():
 		attr = mtproto.NewTLDocumentAttributeSticker(&mtproto.DocumentAttribute{
-			Mask: attribute.Mask,
-			Alt:  attribute.Alt,
-			//TODO: StickerSet
+			Mask:       attribute.Mask,
+			Alt:        attribute.Alt,
 			Stickerset: nil,
 			MaskCoords: nil,
 		}).To_DocumentAttribute()
