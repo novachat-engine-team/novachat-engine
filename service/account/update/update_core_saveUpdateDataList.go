@@ -9,15 +9,27 @@
 
 package update
 
-import data_update "novachat_engine/service/data/update"
+import (
+	"novachat_engine/pkg/log"
+	data_update "novachat_engine/service/data/update"
+)
 
 func (c *Core) SaveUpdateDataList(userId int64, updateDataList []*data_update.UserUpdate, updateChannelDataList []*data_update.UserUpdate) error {
+	var err error
 	if len(updateChannelDataList) > 0 {
-		return c.updateCore.SaveUpdateChannelDataList(updateChannelDataList)
+		err = c.updateCore.SaveUpdateChannelDataList(updateChannelDataList)
+		if err != nil {
+			log.Errorf("SaveUpdateDataList updateChannelDataList error:%s", err.Error())
+			return err
+		}
 	}
 
 	if len(updateDataList) > 0 {
-		return c.updateCore.SaveUpdateDataList(userId, updateDataList)
+		err = c.updateCore.SaveUpdateDataList(userId, updateDataList)
+		if err != nil {
+			log.Errorf("SaveUpdateDataList updateDataList error:%s", err.Error())
+			return err
+		}
 	}
 
 	return nil

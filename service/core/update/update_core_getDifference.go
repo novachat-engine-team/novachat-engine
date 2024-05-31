@@ -54,6 +54,6 @@ func (c *Core) GetUpdateDifference(userId int64, pts int32, qts int32, date int3
 		log.Warnf("GetUpdateDifference decode error:%s", err.Error())
 	}
 
-	log.Debugf("GetUpdateDifference userId:%d, pts:%d, qts:%d, date:%d, limit:%d", userId, pts, qts, date, limit, len(updateList))
+	log.Debugf("GetUpdateDifference userId:%d, pts:%d, qts:%d, date:%d, limit:%d len:%d", userId, pts, qts, date, limit, len(updateList))
 	return updateList, nil
 }

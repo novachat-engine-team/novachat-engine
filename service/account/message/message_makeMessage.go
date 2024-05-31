@@ -27,7 +27,7 @@ func (c *Core) makeMessage(userId int64, inputPeer *input.InputPeer, request *mt
 	message := mtproto.NewTLMessage(&mtproto.Message{
 		Out:               true,
 		Silent:            request.Silent,
-		FromId286FA604119: input.MakeInputPeer(request.Peer).ToPeer(),
+		FromId286FA604119: input.MakeInputPeerValue(userId, constants.PeerTypeUser).ToPeer(),
 		PeerId:            inputPeer.ToPeer(),
 		Date:              int32(time.Now().Unix()),
 		Message:           request.Message,

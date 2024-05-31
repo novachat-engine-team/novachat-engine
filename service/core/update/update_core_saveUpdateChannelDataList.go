@@ -43,7 +43,8 @@ func (c *Core) SaveUpdateChannelDataList(list []*data_update.UserUpdate) error {
 		}
 		imr, err = col.InsertMany(context.TODO(), documents)
 	}
-	if err != nil {
+
+	if err != nil && !mongo.IsDuplicateKeyError(err) {
 		return err
 	}
 

@@ -42,7 +42,7 @@ func (c *Core) SaveUpdateDataList(userId int64, list []*data_update.UserUpdate) 
 		}
 		imr, err = col.InsertMany(context.TODO(), documents)
 	}
-	if err != nil {
+	if err != nil && !mongo.IsDuplicateKeyError(err) {
 		return err
 	}
 
