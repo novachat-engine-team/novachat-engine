@@ -68,7 +68,7 @@ func (c *Core) UserCreate(phoneNumber string, firstname string, lastname string)
 		return nil, db.Error
 	}
 
-	u.Id = db.RowsAffected
+	//u.Id = db.RowsAffected
 	log.Infof("UserCreate ok value:%v", u)
 	return u, nil
 }
