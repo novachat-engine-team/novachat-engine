@@ -182,7 +182,7 @@ func (c *Core) ConversationClearAllDraft(userId int64) error {
 	//op.SetRegistry(mgo.Registry())
 
 	filter := bson.M{"user_id": userId}
-	update := bson.M{"draft": ""}
+	update := bson.M{mgo.SET: bson.M{"draft": ""}}
 	ur, err := mgo.GetMongoDB().Database(message.DBMessage).
 		Collection(message.TableName(userId, message.TableConversation), op).
 		UpdateMany(context.Background(), filter, update)

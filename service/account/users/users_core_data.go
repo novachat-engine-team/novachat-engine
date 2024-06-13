@@ -19,7 +19,7 @@ import (
 func (c *Core) UserDataUsername(username string) (*data_users.Users, error) {
 	var userInfo *data_users.Users
 	userCache, err := c.accountCore.UsernameUser(username)
-	if err != nil {
+	if err != nil || len(userCache) == 0 {
 		userInfo, err = c.usersCore.Username(username)
 		if err != nil {
 			log.Errorf("UserDataUsername error:%s", err.Error())

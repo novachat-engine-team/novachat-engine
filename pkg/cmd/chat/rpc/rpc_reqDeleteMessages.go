@@ -1,3 +1,12 @@
+/*
+ * Copyright (c) 2021-present,  NovaChat-Engine.
+ *  All rights reserved.
+ *
+ * @Author: Coder (coderxw@gmail.com)
+ * @Time :
+ * @File :
+ */
+
 package rpc
 
 import (
@@ -40,9 +49,10 @@ func (impl *Impl) ReqDeleteMessages(ctx context.Context, request *chatService.De
 		return types.MarshalAny(&mtproto.TLInt32{Value: 0})
 	}
 
+	log.Debugf("ReqDeleteMessages fromUserId:%d request.UserId:%d", messageList[0].FromId90DDDC1171, request.UserId)
 	chatData := chat.GetChatInfo().ChatData
-	if chatData.Creator != request.UserId ||
-		constants.PeerTypeFromUserIDType32(messageList[0].FromId90DDDC1171).ToInt() != request.UserId {
+	if !(chatData.Creator == request.UserId ||
+		constants.PeerTypeFromUserIDType32(messageList[0].FromId90DDDC1171).ToInt() == request.UserId) {
 		participant := chat.GetChatInfo().GetParticipants(request.UserId)
 		if participant == nil {
 			return nil, errorsService.NewRpcErrorWithRpcErrorCode(mtproto.RpcErrorCode_BAD_REQUEST_CHANNEL_PRIVATE)
@@ -82,6 +92,7 @@ func (impl *Impl) ReqDeleteMessages(ctx context.Context, request *chatService.De
 }
 
 func (impl *Impl) ReqDeleteMessagesUpdates(ctx context.Context, request *chatService.DeleteMessagesUpdates) (*types.Any, error) {
+	log.Debugf("ReqDeleteMessagesUpdates request:%+v", request)
 	chat, err := impl.chatManager.GetChat(request.PeerId)
 	if err != nil {
 		log.Errorf("ReqDeleteMessages request:%+v", request, err.Error())
@@ -92,6 +103,7 @@ func (impl *Impl) ReqDeleteMessagesUpdates(ctx context.Context, request *chatSer
 		return types.MarshalAny(mtproto.ToMTBool(true))
 	}
 
+	log.Debugf("ReqDeleteMessagesUpdates request:%+v count:%d", request, chat.GetChatInfo().Count)
 	updateDataList := make([]*syncService.UpdateData, 0, chat.GetChatInfo().Count)
 	chat.GetChatInfo().IterationCondition(func(participant *data_chat.ChatParticipant) bool {
 		if participant.State == data_chat.ParticipantState_ParticipantStateNormal {

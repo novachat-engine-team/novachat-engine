@@ -25,7 +25,7 @@ type DuplicateMessage struct {
 
 func (c *Core) makeDuplicateMessage(userId int64, randomId int64) (*mtproto.Updates, error) {
 	s, err := redis.String(cache.GetRedisClient().Do("GET", makeMessageKey(userId, randomId)))
-	if err != nil {
+	if err != nil && err != redis.ErrNil {
 		log.Warnf("makeDuplicateMessage MessageId Key:%s error:%s", makeMessageKey(userId, randomId), err.Error())
 		return nil, nil
 	}

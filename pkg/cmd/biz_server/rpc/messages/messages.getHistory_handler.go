@@ -22,6 +22,7 @@ import (
 	"novachat_engine/service/constants"
 	"novachat_engine/service/input"
 	"sort"
+	"time"
 )
 
 //  messages.getHistory#dcbb8260 peer:InputPeer offset_id:int offset_date:int add_offset:int limit:int max_id:int min_id:int hash:int = messages.Messages;
@@ -80,6 +81,15 @@ func (s *MessagesServiceImpl) MessagesGetHistory(ctx context.Context, request *m
 	idList := make([]int32, 0, len(messageMessages.Messages))
 	for _, v := range messageMessages.Messages {
 		idList = append(idList, v.Id)
+	}
+
+	if md.LangPack == constants.DevicePlatformTypePC.ToString() {
+		if len(messageMessages.Messages) > 0 && !(inputPeer.GetPeerType() == constants.PeerTypeUser && inputPeer.GetPeerId() == md.UserId) {
+			_, err = s.accountMessageCore.ReadHistory(md.UserId, md.AuthKeyId, messageMessages.Messages[0].Id, inputPeer, int32(time.Now().Unix()))
+			if err != nil {
+				log.Warnf("MessagesGetHistory ReadHistory error:%s", err.Error())
+			}
+		}
 	}
 
 	log.Debugf("MessagesGetHistory %v, request: %v idList:%+v ok!!!!!!!!!!!!", md, request, idList)

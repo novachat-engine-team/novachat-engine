@@ -165,11 +165,15 @@ func (c *Core) loadBackwardHistoryMessages(
 		return nil, 0, err
 	}
 
+	maxMessageId := int32(0)
 	offset := int32(0)
 	messageList := make([]*mtproto.Message, 0, len(messageDataList))
 	for idx, v := range messageDataList {
 		if messageId == v.Id {
 			offset = int32(idx)
+		}
+		if v.Id >= maxMessageId {
+			maxMessageId = v.Id
 		}
 		_, peerType := message2.MakePeerType(v.PeerId)
 		if peerType == constants.PeerTypeUser {
@@ -181,6 +185,7 @@ func (c *Core) loadBackwardHistoryMessages(
 		}
 		messageList = append(messageList, messageCore.ToMessage(v))
 	}
+
 	return messageList, offset, nil
 }
 

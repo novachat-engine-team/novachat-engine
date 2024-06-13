@@ -85,7 +85,7 @@ func (c *Core) makeMessage(userId int64, inputPeer *input.InputPeer, request *mt
 		var userInfoList []*data_users.Users
 		var u *data_users.Users
 		userCacheList, err = c.accountCore.UsernameUserList(nameList)
-		if err != nil {
+		if err != nil || len(userCacheList) == 0 {
 			log.Warnf("UsernameUserList nameList:%v error:%s", nameList, err.Error())
 			userInfoList, err = c.userCore.UsernameList(nameList)
 			if err != nil {

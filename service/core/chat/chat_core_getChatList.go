@@ -21,10 +21,12 @@ import (
 )
 
 func (c *Core) GetChatList(opts ...GetChatListOptions) ([]*data_chat.Chat, error) {
+
 	opt := getChatListOptions{}
 	for _, v := range opts {
 		v(&opt)
 	}
+	log.Debugf("GetChatList opt:%+v", opt)
 
 	filter := bson.M{}
 	if len(opt.Ids) == 0 && len(opt.ExceptIds) == 0 {
@@ -34,7 +36,6 @@ func (c *Core) GetChatList(opts ...GetChatListOptions) ([]*data_chat.Chat, error
 			filter["_id"] = bson.M{mgo.IN: opt.Ids}
 		} else {
 			filter["_id"] = bson.M{mgo.NOTIN: opt.ExceptIds}
-
 		}
 	}
 
@@ -57,5 +58,7 @@ func (c *Core) GetChatList(opts ...GetChatListOptions) ([]*data_chat.Chat, error
 		log.Fatalf("GetChatList decode error:%s", err.Error())
 		return nil, err
 	}
+
+	log.Infof("GetChatList opt:%+v chatsList:%+v", opt, chatsList)
 	return chatsList, nil
 }

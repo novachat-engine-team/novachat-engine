@@ -77,6 +77,7 @@ func (m *MessageCoreService) OnMessageData(key string, value []byte) error {
 }
 
 func (m *MessageCoreService) DeleteChannelMessagesData(r *chatService.DeleteMessagesUpdates) error {
+	log.Debugf("DeleteChannelMessagesData r:%+v", r)
 	_, err := chatService.GetChatClientByKeyId(r.PeerId).ReqDeleteMessagesUpdates(context.Background(), r)
 	if errors.Is(err, mtproto.DefaultRpcError) {
 		log.Warnf("DeleteChannelMessagesData userId:%d chatId:%d error:%s", r.UserId, r.PeerId)

@@ -204,7 +204,7 @@ func (c *Core) makeInputMedia(authKeyId int64, layer int32, medias []*mtproto.In
 			if err == nil {
 				var userInfo *data_users.Users
 				userCache, err := c.accountCore.PhoneUser(phoneNumber.NormalizeDigitsOnly())
-				if err != nil {
+				if err != nil || len(userCache) == 0 {
 					userInfo, err = c.userCore.UserByPhoneNumber(phoneNumber.NormalizeDigitsOnly())
 					if err != nil {
 						log.Errorf("ClassInputMediaContact contact:%v error:%s", contact, err.Error())

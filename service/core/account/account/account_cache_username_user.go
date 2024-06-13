@@ -39,7 +39,7 @@ func (m *Core) PushUsernameList(usernameList []string, infoList []string) error 
 
 func (m *Core) UsernameUser(username string) (string, error) {
 	v, err := redis.String(m.redisClient.Do(GET, MakeAccountCacheUsersUsernamePrefix(username)))
-	if err != nil {
+	if err != nil && err != redis.ErrNil {
 		log.Errorf("UsernameUser username:%v error:%s", username, err.Error())
 		return "", err
 	}
@@ -51,13 +51,13 @@ func (m *Core) UsernameUserList(usernameList []string) ([]string, error) {
 	if len(usernameList) == 0 {
 		return nil, nil
 	}
-	
+
 	v := make([]interface{}, 0, len(usernameList)*2)
 	for idx := range usernameList {
 		v = append(v, MakeAccountCacheUsersUsernamePrefix(usernameList[idx]))
 	}
 	vv, err := redis.Strings(m.redisClient.Do(MGET, v...))
-	if err != nil {
+	if err != nil && err != redis.ErrNil {
 		log.Errorf("UsernameUserList usernameList:%v error:%s", usernameList, err.Error())
 		return nil, err
 	}

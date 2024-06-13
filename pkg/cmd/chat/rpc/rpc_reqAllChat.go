@@ -19,7 +19,7 @@ import (
 )
 
 func (impl *Impl) ReqAllChat(ctx context.Context, request *chatService.AllChat) (*chatService.ChatList, error) {
-
+	log.Debugf("ReqAllChat request:%+v ", request)
 	var chatList []*service.Chat
 	var err error
 	if len(request.Ids) == 0 && len(request.ExceptIds) == 0 {
@@ -59,5 +59,6 @@ func (impl *Impl) ReqAllChat(ctx context.Context, request *chatService.AllChat) 
 			Count:           v.GetChatInfo().Count,
 		})
 	}
+	log.Infof("ReqAllChat request:%+v serviceChatList:%+v", request, serviceChatList)
 	return &chatService.ChatList{Values: serviceChatList}, nil
 }

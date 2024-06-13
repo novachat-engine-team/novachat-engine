@@ -39,7 +39,7 @@ func (m *Core) PushUserList(userIdList []int64, infoList []string) error {
 
 func (m *Core) User(userId int64) (string, error) {
 	v, err := redis.String(m.redisClient.Do(GET, MakeAccountCacheUsersPrefix(userId)))
-	if err != nil {
+	if err != nil && err != redis.ErrNil {
 		log.Errorf("User userId:%v error:%s", userId, err.Error())
 		return "", err
 	}
@@ -53,7 +53,7 @@ func (m *Core) UserList(userIdList []int64) ([]string, error) {
 		v = append(v, MakeAccountCacheUsersPrefix(userIdList[idx]))
 	}
 	vv, err := redis.Strings(m.redisClient.Do(MGET, v...))
-	if err != nil {
+	if err != nil && err != redis.ErrNil {
 		log.Errorf("UserList userIdList:%v error:%s", userIdList, err.Error())
 		return nil, err
 	}

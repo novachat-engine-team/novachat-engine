@@ -53,7 +53,7 @@ func (c *Core) PinnedMessage(
 		op.SetReadConcern(readconcern.Majority())
 		_, err = mgo.GetDatabase(message.DBMessage).
 			Collection(message.TableName(userId, message.TableMessage), op).
-			UpdateOne(sessionContext, bson.M{"user_id": userId, "id": msgId}, bson.M{"pinned": !unpin})
+			UpdateOne(sessionContext, bson.M{"user_id": userId, "id": msgId}, bson.M{mgo.SET: bson.M{"pinned": !unpin}})
 		if err != nil {
 			sessionContext.AbortTransaction(sessionContext)
 			log.Errorf("PinnedMessage UpdateOne error:%s", err.Error())

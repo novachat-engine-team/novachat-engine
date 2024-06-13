@@ -1,3 +1,12 @@
+/*
+ * Copyright (c) 2021-present,  NovaChat-Engine.
+ *  All rights reserved.
+ *
+ * @Author: Coder (coderxw@gmail.com)
+ * @Time :
+ * @File :
+ */
+
 package message
 
 import (
@@ -27,7 +36,7 @@ func (c *Core) DeleteChannelMessages(chatId int64, userId int64, messageIdList [
 
 	ur, err := mgo.GetDatabase(message.DBMessage).
 		Collection(message.TableName(chatId, message.TableChannelMessage), op).
-		UpdateMany(context.Background(), bson.M{"peer_id": ptsPeerId, "id": bson.M{mgo.IN: messageIdList}}, bson.M{"deleted": true})
+		UpdateMany(context.Background(), bson.M{"peer_id": ptsPeerId, "id": bson.M{mgo.IN: messageIdList}}, bson.M{mgo.SET: bson.M{"deleted": true}})
 	if err != nil {
 		log.Errorf("DeleteChannelMessages error:%s", err.Error())
 		return 0, err

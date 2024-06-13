@@ -39,7 +39,7 @@ func (c *Core) DeleteMessages(userId int64, idList []int32) (int32, error) {
 
 	ur, err := mgo.GetDatabase(message.DBMessage).
 		Collection(message.TableName(userId, message.TableMessage), op).
-		UpdateMany(context.Background(), bson.M{"user_id": userId, "id": bson.M{mgo.IN: idList}}, bson.M{"deleted": true})
+		UpdateMany(context.Background(), bson.M{"user_id": userId, "id": bson.M{mgo.IN: idList}}, bson.M{mgo.SET: bson.M{"deleted": true}})
 	if err != nil {
 		log.Errorf("DeleteMessages error:%s", err.Error())
 		return 0, err
@@ -127,7 +127,7 @@ func (c *Core) DeleteMessagesByMaxId(userId, peerId int64, peerType constants.Pe
 			var ur *mongo.UpdateResult
 			ur, err = mgo.GetDatabase(message.DBMessage).
 				Collection(message.TableName(userId, message.TableMessage), op).
-				UpdateMany(sessionContext, filter, bson.M{"deleted": true})
+				UpdateMany(sessionContext, filter, bson.M{mgo.SET: bson.M{"deleted": true}})
 			if err != nil {
 				sessionContext.AbortTransaction(sessionContext)
 				log.Errorf("DeleteMessagesByMaxId UpdateMany error:%s", err.Error())
@@ -217,7 +217,7 @@ func (c *Core) DeleteMessagesIds(userId, peerId int64, peerType constants.PeerTy
 			var ur *mongo.UpdateResult
 			ur, err = mgo.GetDatabase(message.DBMessage).
 				Collection(message.TableName(userId, message.TableMessage), op).
-				UpdateMany(sessionContext, filter, bson.M{"deleted": true})
+				UpdateMany(sessionContext, filter, bson.M{mgo.SET: bson.M{"deleted": true}})
 			if err != nil {
 				sessionContext.AbortTransaction(sessionContext)
 				log.Errorf("DeleteMessagesIds UpdateMany error:%s", err.Error())
