@@ -73,6 +73,7 @@ func (c *Core) readHistory(
 			return err
 		}
 
+		log.Debugf("readHistory userId:%d peerId:%d maxId:%d boxType:%+v conversation:%+v", userId, peerId, maxId, boxType, conversation)
 		var update bson.M
 		folderId = conversation.FolderId
 		if boxType == message.InboxType {
@@ -89,7 +90,7 @@ func (c *Core) readHistory(
 			conversation.InboxMaxId = maxId
 			filter := bson.M{"user_id": userId, "peer_id": peerId, "deleted": false, "id": bson.M{mgo.GT: maxId}}
 			count, err1 := mgo.GetMongoDB().Database(message.DBMessage).
-				Collection(message.TableName(userId, message.TableConversation), op).
+				Collection(message.TableName(userId, message.TableMessage), op).
 				CountDocuments(sessionContext, filter)
 			if err1 != nil && err1 != mongo.ErrNoDocuments {
 				sessionContext.AbortTransaction(sessionContext)

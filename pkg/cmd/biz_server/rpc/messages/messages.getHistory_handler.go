@@ -84,8 +84,8 @@ func (s *MessagesServiceImpl) MessagesGetHistory(ctx context.Context, request *m
 	}
 
 	if md.LangPack == constants.DevicePlatformTypePC.ToString() {
-		if len(messageMessages.Messages) > 0 && !(inputPeer.GetPeerType() == constants.PeerTypeUser && inputPeer.GetPeerId() == md.UserId) {
-			_, err = s.accountMessageCore.ReadHistory(md.UserId, md.AuthKeyId, messageMessages.Messages[0].Id, inputPeer, int32(time.Now().Unix()))
+		if len(messageMessages.Messages) > 0 {
+			_, err = s.accountMessageCore.ReadHistory(md.UserId, md.AuthKeyId, request.MaxId, inputPeer, int32(time.Now().Unix()))
 			if err != nil {
 				log.Warnf("MessagesGetHistory ReadHistory error:%s", err.Error())
 			}
