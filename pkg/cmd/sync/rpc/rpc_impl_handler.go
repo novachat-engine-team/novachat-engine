@@ -1,3 +1,12 @@
+/*
+ * Copyright (c) 2021-present,  NovaChat-Engine.
+ *  All rights reserved.
+ *
+ * @Author: Coder (coderxw@gmail.com)
+ * @Time : 2021/6/10 13:38
+ * @File :
+ */
+
 package rpc
 
 import (
@@ -5,6 +14,7 @@ import (
 	"fmt"
 	"github.com/gogo/protobuf/proto"
 	"github.com/gogo/protobuf/types"
+	jsoniter "github.com/json-iterator/go"
 	"novachat_engine/mtproto"
 	"novachat_engine/pkg/cmd/sync/messageProducer"
 	syncService "novachat_engine/pkg/cmd/sync/rpc_client"
@@ -71,9 +81,9 @@ func (m *Impl) ReqSyncUpdates(ctx context.Context, request *syncService.SyncUpda
 		return types.MarshalAny(mtproto.ToMTBool(false))
 	}
 
-	key := messageProducer.SyncUpdatesKey
+	key := messageProducer.SyncUpdatesListKey
 	if request.Push {
-		key = messageProducer.PushUpdatesKey
+		key = messageProducer.PushUpdatesListKey
 	}
 
 	var producerType messageProducer.ProducerType
@@ -88,13 +98,16 @@ func (m *Impl) ReqSyncUpdates(ctx context.Context, request *syncService.SyncUpda
 		return nil, fmt.Errorf("ReqSyncUpdates PeerType:%v error", request.PeerType)
 	}
 
-	dataList := make([][]byte, 0, len(request.UpdateDataList))
+	dataList := make([]*syncService.UpdateData, 0, len(request.UpdateDataList))
 	for _, v := range request.UpdateDataList {
-		data, _ := proto.Marshal(v)
-		dataList = append(dataList, data)
+		//data, _ := proto.Marshal(v)
+		//dataList = append(dataList, data)
+		dataList = append(dataList, v)
 	}
+	data, _ := jsoniter.Marshal(dataList)
 
-	err := m.producer.SendMessages(producerType, key, dataList)
+	_, _, err := m.producer.SendMessage(producerType, key, data)
+	//err := m.producer.SendMessages(producerType, key, dataList)
 	if err != nil {
 		return nil, fmt.Errorf("ReqSyncUpdates producer SendMessages error:%s", err.Error())
 	}

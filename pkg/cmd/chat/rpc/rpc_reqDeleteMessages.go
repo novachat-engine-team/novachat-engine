@@ -73,6 +73,7 @@ func (impl *Impl) ReqDeleteMessages(ctx context.Context, request *chatService.De
 		return nil, err
 	}
 
+	log.Debugf("ReqDeleteMessages fromUserId:%d request.UserId:%d pts:%d", messageList[0].FromId90DDDC1171, request.UserId, pts)
 	if pts > 0 {
 		data, _ := proto.Marshal(&chatService.DeleteMessagesUpdates{
 			PeerId: request.ChatId,

@@ -271,7 +271,7 @@ func (c *Core) EditProperty(chatId int64, chatInfo data_chat.Chat, property ...s
 	ur, err := mgo.GetDatabase(DBChats).
 		Collection(TableChats, op).
 		UpdateOne(context.TODO(), mgo.DBE.MarshalCustomSpecMap(chatInfo, "ChatId"),
-			mgo.DBE.MarshalCustomSpecMap(chatInfo, property...))
+			bson.M{mgo.SET: mgo.DBE.MarshalCustomSpecMap(chatInfo, property...)})
 	if err != nil {
 		log.Fatalf("EditProperty chatId:%d error:%s", chatId, err.Error())
 		return false, err

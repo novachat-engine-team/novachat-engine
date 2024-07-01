@@ -11,8 +11,10 @@ package message_core
 
 import (
 	"context"
+	"errors"
 	"github.com/gogo/protobuf/proto"
 	"novachat_engine/mtproto"
+	chatService "novachat_engine/pkg/cmd/chat/rpc_client"
 	msgService "novachat_engine/pkg/cmd/msg/rpc_client"
 	syncClient "novachat_engine/pkg/cmd/sync/rpc_client"
 	"novachat_engine/pkg/log"
@@ -105,6 +107,19 @@ func (m *MessageCoreService) RevokeMessageDataList(r []*msgService.RevokeMessage
 			log.Errorf("RevokeMessageDataList RevokeMessages:%+v error:%s", v, err.Error())
 			break
 		}
+	}
+	return err
+}
+
+func (m *MessageCoreService) DeleteChannelMessagesData(r *chatService.DeleteMessagesUpdates) error {
+	log.Debugf("DeleteChannelMessagesData r:%+v", r)
+	_, err := chatService.GetChatClientByKeyId(r.PeerId).ReqDeleteMessagesUpdates(context.Background(), r)
+	if errors.Is(err, mtproto.DefaultRpcError) {
+		log.Warnf("DeleteChannelMessagesData userId:%d chatId:%d error:%s", r.UserId, r.PeerId)
+		err = nil
+	}
+	if err != nil {
+		log.Errorf("DeleteChannelMessagesData userId:%d chatId:%d error:%s", r.UserId, r.PeerId)
 	}
 	return err
 }

@@ -216,7 +216,7 @@ func (s *Core) UpdateFaved(userId int64, favedList []int64) error {
 	col := mgo.GetMongoDB().Database(sfs.DBSfs).Collection(sfs.TableStickerRecent, op)
 	ur, err := col.UpdateOne(context.Background(),
 		s.encoder.MarshalCustomSpecMap(data_stickerset.StickerSetRecent{UserId: userId}, "UserId"),
-		s.encoder.MarshalCustomSpecMap(data_stickerset.StickerSetRecent{Faved: favedList}, "Faved"), uoo)
+		bson.M{mgo.SET: s.encoder.MarshalCustomSpecMap(data_stickerset.StickerSetRecent{Faved: favedList}, "Faved")}, uoo)
 	if err != nil && err != mongo.ErrNoDocuments {
 		log.Errorf("UpdateFaved error:%s", err.Error())
 		return err
@@ -262,7 +262,7 @@ func (s *Core) UpdateRecent(userId int64, recentList []int64) error {
 	col := mgo.GetMongoDB().Database(sfs.DBSfs).Collection(sfs.TableStickerRecent, op)
 	ur, err := col.UpdateOne(context.Background(),
 		s.encoder.MarshalCustomSpecMap(data_stickerset.StickerSetRecent{UserId: userId}, "UserId"),
-		s.encoder.MarshalCustomSpecMap(data_stickerset.StickerSetRecent{Recent: recentList}, "Recent"), uoo)
+		bson.M{mgo.SET: s.encoder.MarshalCustomSpecMap(data_stickerset.StickerSetRecent{Recent: recentList}, "Recent")}, uoo)
 	if err != nil && err != mongo.ErrNoDocuments {
 		log.Errorf("UpdateRecent error:%s", err.Error())
 		return err

@@ -76,9 +76,15 @@ func (c *Core) readHistory(
 		var update bson.M
 		folderId = conversation.FolderId
 		if boxType == message.InboxType {
-			if conversation.InboxMaxId <= maxId {
+			if conversation.Top < maxId {
 				sessionContext.AbortTransaction(sessionContext)
 				return nil
+			}
+			if conversation.Top == maxId {
+				if conversation.InboxMaxId <= maxId {
+					sessionContext.AbortTransaction(sessionContext)
+					return nil
+				}
 			}
 			conversation.InboxMaxId = maxId
 			filter := bson.M{"user_id": userId, "peer_id": peerId, "deleted": false, "id": bson.M{mgo.GT: maxId}}
@@ -91,9 +97,15 @@ func (c *Core) readHistory(
 			}
 			conversation.UnreadCount = int32(count)
 		} else {
-			if conversation.OutboxMaxId <= maxId {
+			if conversation.Top < maxId {
 				sessionContext.AbortTransaction(sessionContext)
 				return nil
+			}
+			if conversation.Top == maxId {
+				if conversation.OutboxMaxId <= maxId {
+					sessionContext.AbortTransaction(sessionContext)
+					return nil
+				}
 			}
 			conversation.OutboxMaxId = maxId
 		}

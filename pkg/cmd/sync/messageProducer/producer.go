@@ -1,3 +1,12 @@
+/*
+ * Copyright (c) 2021-present,  NovaChat-Engine.
+ *  All rights reserved.
+ *
+ * @Author: Coder (coderxw@gmail.com)
+ * @Time : 2021/6/10 13:38
+ * @File :
+ */
+
 package messageProducer
 
 import (
@@ -20,8 +29,10 @@ const (
 type UpdatesKey = string
 
 const (
-	SyncUpdatesKey UpdatesKey = "syncUpdatesKey"
-	PushUpdatesKey UpdatesKey = "pushUpdatesKey"
+	SyncUpdatesKey     UpdatesKey = "syncUpdatesKey"
+	SyncUpdatesListKey UpdatesKey = "syncUpdatesListKey"
+	PushUpdatesKey     UpdatesKey = "pushUpdatesKey"
+	PushUpdatesListKey UpdatesKey = "pushUpdatesListKey"
 )
 
 type Producer struct {

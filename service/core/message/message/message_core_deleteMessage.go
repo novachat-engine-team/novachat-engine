@@ -147,7 +147,8 @@ func (c *Core) DeleteMessagesByMaxId(userId, peerId int64, peerType constants.Pe
 
 		_, err = mgo.GetMongoDB().Database(message.DBMessage).
 			Collection(message.TableName(userId, message.TableConversation), op).
-			UpdateOne(sessionContext, mgo.DBE.MarshalCustomSpecMap(conversation, "UserId", "PeerId"), mgo.DBE.MarshalCustomSpecMap(conversation, "UnreadCount", "InboxMaxId", "Date", "Draft", "Pts"))
+			UpdateOne(sessionContext, mgo.DBE.MarshalCustomSpecMap(conversation, "UserId", "PeerId"),
+				bson.M{mgo.SET: mgo.DBE.MarshalCustomSpecMap(conversation, "UnreadCount", "InboxMaxId", "Date", "Draft", "Pts")})
 		if err != nil {
 			sessionContext.AbortTransaction(sessionContext)
 			log.Errorf("DeleteMessagesByMaxId TableConversation error:%s", err.Error())
@@ -241,7 +242,8 @@ func (c *Core) DeleteMessagesIds(userId, peerId int64, peerType constants.PeerTy
 
 		_, err = mgo.GetMongoDB().Database(message.DBMessage).
 			Collection(message.TableName(userId, message.TableConversation), op).
-			UpdateOne(sessionContext, mgo.DBE.MarshalCustomSpecMap(conversation, "UserId", "PeerId"), mgo.DBE.MarshalCustomSpecMap(conversation, "UnreadCount", "InboxMaxId", "Date", "Draft", "Pts"))
+			UpdateOne(sessionContext, mgo.DBE.MarshalCustomSpecMap(conversation, "UserId", "PeerId"),
+				bson.M{mgo.SET: mgo.DBE.MarshalCustomSpecMap(conversation, "UnreadCount", "InboxMaxId", "Date", "Draft", "Pts")})
 		if err != nil {
 			sessionContext.AbortTransaction(sessionContext)
 			log.Errorf("DeleteMessagesIds TableConversation error:%s", err.Error())

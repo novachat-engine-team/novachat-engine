@@ -314,7 +314,7 @@ func (s *Core) ClearRecent(userId int64) error {
 		return err
 	}
 
-	err = s.recent2Cache(userId, []int64{})
+	err = s.recent2Cache(userId, []int64{0})
 	if err != nil {
 		log.Warnf("ClearRecent recent2Cache error:%s", err.Error())
 	}
@@ -431,8 +431,10 @@ func (s *Core) GetRecent(userId int64, attached bool) ([]*data_stickerset.Sticke
 			return nil, err
 		}
 
-		if err = s.recent2Cache(userId, recentList); err != nil {
-			log.Warnf("GetRecent recent2Cache :%s", err.Error())
+		if len(recentList) > 0 {
+			if err = s.recent2Cache(userId, recentList); err != nil {
+				log.Warnf("GetRecent recent2Cache :%s", err.Error())
+			}
 		}
 	}
 	if len(recentList) == 0 {
@@ -473,8 +475,10 @@ func (s *Core) GetFaved(userId int64) ([]*data_stickerset.StickerSet, error) {
 			return nil, err
 		}
 
-		if err = s.faved2Cache(userId, favedList); err != nil {
-			log.Warnf("GetFaved faved2Cache :%s", err.Error())
+		if len(favedList) > 0 {
+			if err = s.faved2Cache(userId, favedList); err != nil {
+				log.Warnf("GetFaved faved2Cache :%s", err.Error())
+			}
 		}
 	}
 	if len(favedList) == 0 {

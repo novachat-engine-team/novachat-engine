@@ -13,6 +13,7 @@ import (
 	"fmt"
 	"github.com/gogo/protobuf/proto"
 	"github.com/json-iterator/go"
+	chatService "novachat_engine/pkg/cmd/chat/rpc_client"
 	msgService "novachat_engine/pkg/cmd/msg/rpc_client"
 	"novachat_engine/pkg/log"
 	"novachat_engine/pkg/mq"
@@ -113,6 +114,13 @@ func (m *MessageCoreService) OnMessageData(key string, value []byte) error {
 			return err
 		}
 		return m.PinnedMessageDataList(r)
+	case constants.DeleteChannelMessages:
+		r := &chatService.DeleteMessagesUpdates{}
+		if err = proto.Unmarshal(value, r); err != nil {
+			log.Errorf(err.Error())
+			return err
+		}
+		return m.DeleteChannelMessagesData(r)
 	default:
 		err = fmt.Errorf("OnMessageData invalid key: %s", key)
 		log.Error(err.Error())
