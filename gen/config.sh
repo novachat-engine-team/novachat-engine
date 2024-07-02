@@ -12,6 +12,11 @@ if [ ! -d "$OUT" ]; then
     mkdir $OUT
 fi
 
+if [ ! -d "$OUT/log" ]; then
+    mkdir $OUT/log
+fi
+
+
 MOD_LIST=$(ls $CUR_DIR/cmd)
 
 echo "Begin package yaml ............."

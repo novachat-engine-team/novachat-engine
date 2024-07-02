@@ -3,16 +3,15 @@
 
 
 MOD_LIST=(
-gate
-sync
 auth
-dbproxy
 biz_server
+gate
+chat
 session
 msg
+sync
 sfs
-npns
-chatgptbot
+relay
 )
 
 for e in ${MOD_LIST[@]}
