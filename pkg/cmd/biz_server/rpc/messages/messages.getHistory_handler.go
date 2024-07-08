@@ -93,5 +93,6 @@ func (s *MessagesServiceImpl) MessagesGetHistory(ctx context.Context, request *m
 	}
 
 	log.Debugf("MessagesGetHistory %v, request: %v idList:%+v ok!!!!!!!!!!!!", md, request, idList)
+	log.Debugf("MessagesGetHistory %v, request: %v idList:%+v messageMessages:%+v ok!!!!!!!!!!!!", md, request, idList, messageMessages)
 	return messageMessages, nil
 }

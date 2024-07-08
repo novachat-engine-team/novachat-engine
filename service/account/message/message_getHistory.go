@@ -45,18 +45,18 @@ func (c *Core) GetHistory(
 		if addOffset == 0 && offsetId == 0 || addOffset == -1 && offsetId == 0 {
 			offsetId = math.MaxInt32
 		}
-		messageList, offsetIdOffset, err = c.loadBackwardHistoryMessages(userId, inputPeer, offsetId, addOffset+limit, minId)
+		messageList, offsetIdOffset, err = c.loadBackwardHistoryMessages(userId, inputPeer, offsetId, addOffset+limit, minId, layer)
 	case constants.LoadHistoryTypeForward:
-		messageList, offsetIdOffset, err = c.loadForwardHistoryMessages(userId, inputPeer, offsetId, -addOffset, minId)
+		messageList, offsetIdOffset, err = c.loadForwardHistoryMessages(userId, inputPeer, offsetId, -addOffset, minId, layer)
 	case constants.LoadHistoryTypeFirstUnRead:
-		messageList, offsetIdOffset, err = c.loadBackwardHistoryMessages(userId, inputPeer, offsetId, addOffset+limit, minId)
+		messageList, offsetIdOffset, err = c.loadBackwardHistoryMessages(userId, inputPeer, offsetId, addOffset+limit, minId, layer)
 	case constants.LoadHistoryTypeFirstAroundMessage:
-		messageList, offsetIdOffset, err = c.loadForwardHistoryMessages(userId, inputPeer, offsetId, limit, minId)
+		messageList, offsetIdOffset, err = c.loadForwardHistoryMessages(userId, inputPeer, offsetId, limit, minId, layer)
 	case constants.LoadHistoryTypeFirstAroundDate:
-		messageList, offsetIdOffset, err = c.loadAroundDataHistoryMessages(userId, inputPeer, offsetId, limit, offsetDate, minId)
+		messageList, offsetIdOffset, err = c.loadAroundDataHistoryMessages(userId, inputPeer, offsetId, limit, offsetDate, minId, layer)
 	case constants.LoadHistoryTypeMax:
 		offsetId = math.MaxInt32
-		messageList, offsetIdOffset, err = c.loadBackwardHistoryMessages(userId, inputPeer, offsetId, limit, minId)
+		messageList, offsetIdOffset, err = c.loadBackwardHistoryMessages(userId, inputPeer, offsetId, limit, minId, layer)
 	}
 
 	pickPeerIdListType := message.PickMessagePeerIdList(messageList)
@@ -122,7 +122,8 @@ func (c *Core) loadForwardHistoryMessages(
 	inputPeer *input.InputPeer,
 	messageId int32,
 	limit int32,
-	minId int32) ([]*mtproto.Message, int32, error) {
+	minId int32,
+	layer int32) ([]*mtproto.Message, int32, error) {
 
 	log.Debugf("loadForwardHistoryMessages userId:%d peerId:%v, messageId:%d, limit:%d", userId, inputPeer, messageId, limit)
 
@@ -146,7 +147,7 @@ func (c *Core) loadForwardHistoryMessages(
 		} else {
 			v.Out = userId == v.FromUserId
 		}
-		messageList = append(messageList, messageCore.ToMessage(v))
+		messageList = append(messageList, messageCore.ToMessage(v, layer))
 	}
 	return messageList, offset, nil
 }
@@ -156,7 +157,8 @@ func (c *Core) loadBackwardHistoryMessages(
 	inputPeer *input.InputPeer,
 	messageId int32,
 	limit int32,
-	minId int32) ([]*mtproto.Message, int32, error) {
+	minId int32,
+	layer int32) ([]*mtproto.Message, int32, error) {
 	log.Debugf("loadBackwardHistoryMessages userId:%d peerId:%v, messageId:%d, limit:%d", userId, inputPeer, messageId, limit)
 
 	messageDataList, err := c.messageCore.GetHistoryMessages(userId, inputPeer.GetPeerId(), inputPeer.GetPeerType(), messageId, -limit, minId, 0, false)
@@ -183,7 +185,7 @@ func (c *Core) loadBackwardHistoryMessages(
 		} else {
 			v.Out = userId == v.FromUserId
 		}
-		messageList = append(messageList, messageCore.ToMessage(v))
+		messageList = append(messageList, messageCore.ToMessage(v, layer))
 	}
 
 	return messageList, offset, nil
@@ -195,7 +197,8 @@ func (c *Core) loadAroundDataHistoryMessages(
 	messageId int32,
 	limit int32,
 	date int32,
-	minId int32) ([]*mtproto.Message, int32, error) {
+	minId int32,
+	layer int32) ([]*mtproto.Message, int32, error) {
 
 	messageDataList, err := c.messageCore.GetHistoryMessages(userId, inputPeer.GetPeerId(), inputPeer.GetPeerType(), messageId, limit, minId, date, false)
 	if err != nil {
@@ -217,7 +220,7 @@ func (c *Core) loadAroundDataHistoryMessages(
 		} else {
 			v.Out = userId == v.FromUserId
 		}
-		messageList = append(messageList, messageCore.ToMessage(v))
+		messageList = append(messageList, messageCore.ToMessage(v, layer))
 	}
 	return messageList, offset, nil
 }

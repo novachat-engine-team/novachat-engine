@@ -31,7 +31,7 @@ func toMessageType(message *mtproto.Message) constants.MessageType {
 	}
 }
 
-func dataToMessage(message *data_message.Message) *mtproto.Message {
+func dataToMessage(message *data_message.Message, layer int32) *mtproto.Message {
 	peerId, peerType := messageUtl.MakePeerType(message.PeerId)
 	m := &mtproto.Message{
 		Id:                message.Id,
@@ -47,7 +47,7 @@ func dataToMessage(message *data_message.Message) *mtproto.Message {
 		ReplyToMsgId:      message.ReplyTo,
 		Date:              message.Date,
 		Message:           message.Message,
-		Media:             toMessageMedia(message.Media),
+		Media:             toMessageMedia(message.Media, layer),
 		ReplyMarkup:       nil,
 		Entities:          EntitiesToMessageEntities(message.Entities),
 		Views:             0,
@@ -97,14 +97,14 @@ func ToMessageData(userId int64, fromUserId int64, peerId int64, peerType consta
 	}
 }
 
-func ToMessage(message *data_message.Message) *mtproto.Message {
+func ToMessage(message *data_message.Message, layer int32) *mtproto.Message {
 	switch message.Type {
 	case constants.MessageTypeEmpty.ToInt32():
 		return mtproto.NewTLMessageEmpty(nil).To_Message()
 	case constants.MessageTypeMessage.ToInt32():
-		return mtproto.NewTLMessage(dataToMessage(message)).To_Message()
+		return mtproto.NewTLMessage(dataToMessage(message, layer)).To_Message()
 	case constants.MessageTypeMessageService.ToInt32():
-		return mtproto.NewTLMessageService(dataToMessage(message)).To_Message()
+		return mtproto.NewTLMessageService(dataToMessage(message, layer)).To_Message()
 	default:
 		panic(fmt.Sprintf("toMessageType error type:%v", message.Type))
 	}

@@ -67,7 +67,7 @@ func toMessageMediaType(media *mtproto.MessageMedia) constants.MessageMedia {
 	}
 }
 
-func toMessageMedia(media *data_message.Media) *mtproto.MessageMedia {
+func toMessageMedia(media *data_message.Media, layer int32) *mtproto.MessageMedia {
 	if media == nil {
 		return mtproto.NewTLMessageMediaEmpty(nil).To_MessageMedia()
 	}
@@ -78,31 +78,36 @@ func toMessageMedia(media *data_message.Media) *mtproto.MessageMedia {
 	case constants.MessageMediaEmpty:
 		return mtproto.NewTLMessageMediaEmpty(m).To_MessageMedia()
 	case constants.MessageMediaPhoto:
-		m.Title = media.Caption
-		m.TtlSeconds = media.TtlSeconds
-		m.PhotoB5223B0F71 = photo.PhotoData2Photo(media.Photo)
-		return mtproto.NewTLMessageMediaPhoto(m).To_MessageMedia()
+		return mtproto.NewTLMessageMediaPhoto(&mtproto.MessageMedia{
+			Title:           media.Caption,
+			TtlSeconds:      media.TtlSeconds,
+			PhotoB5223B0F71: photo.PhotoData2Photo(media.Photo),
+		}).To_MessageMedia()
 	case constants.MessageMediaGeo:
-		m.Geo = mtproto.NewTLGeoPoint(&mtproto.GeoPoint{
-			Long:           media.GeoPoint.Long,
-			Lat:            media.GeoPoint.Lat,
-			AccessHash:     media.GeoPoint.AccessHash,
-			AccuracyRadius: media.GeoPoint.AccuracyRadius,
-		}).To_GeoPoint()
-		return mtproto.NewTLMessageMediaGeo(m).To_MessageMedia()
+		return mtproto.NewTLMessageMediaGeo(&mtproto.MessageMedia{
+			Geo: mtproto.NewTLGeoPoint(&mtproto.GeoPoint{
+				Long:           media.GeoPoint.Long,
+				Lat:            media.GeoPoint.Lat,
+				AccessHash:     media.GeoPoint.AccessHash,
+				AccuracyRadius: media.GeoPoint.AccuracyRadius,
+			}).To_GeoPoint(),
+		}).To_MessageMedia()
 	case constants.MessageMediaContact:
-		m = &mtproto.MessageMedia{
+		return mtproto.NewTLMessageMediaContact(&mtproto.MessageMedia{
 			UserId:      constants.PeerTypeFromUserIDType(media.UserId).ToInt32(),
 			LastName:    media.LastName,
 			FirstName:   media.FirstName,
 			PhoneNumber: media.PhoneNumber,
 			Vcard:       media.Vcard,
-		}
-		return mtproto.NewTLMessageMediaContact(m).To_MessageMedia()
+		}).To_MessageMedia()
 	case constants.MessageMediaUnsupported:
 		return mtproto.NewTLMessageMediaUnsupported(m).To_MessageMedia()
 	case constants.MessageMediaDocument:
-		return mtproto.NewTLMessageMediaDocument(m).To_MessageMedia()
+		return mtproto.NewTLMessageMediaDocument(&mtproto.MessageMedia{
+			Caption:    media.Caption,
+			TtlSeconds: media.TtlSeconds,
+			Document:   ToMessageDocument(media.Document, layer),
+		}).To_MessageMedia()
 	case constants.MessageMediaWebPage:
 		return mtproto.NewTLMessageMediaWebPage(m).To_MessageMedia()
 	case constants.MessageMediaVenue:
@@ -112,17 +117,18 @@ func toMessageMedia(media *data_message.Media) *mtproto.MessageMedia {
 	case constants.MessageMediaInvoice:
 		return mtproto.NewTLMessageMediaInvoice(m).To_MessageMedia()
 	case constants.MessageMediaGeoLive:
-		m.Geo = mtproto.NewTLGeoPoint(&mtproto.GeoPoint{
-			Long:           media.GeoPoint.Long,
-			Lat:            media.GeoPoint.Lat,
-			AccessHash:     media.GeoPoint.AccessHash,
-			AccuracyRadius: media.GeoPoint.AccuracyRadius,
-		}).To_GeoPoint()
-
-		m.Period = media.Period
-		m.Heading = media.Heading
 		m.ProximityNotificationRadius = media.NotificationRadius
-		return mtproto.NewTLMessageMediaGeoLive(m).To_MessageMedia()
+		return mtproto.NewTLMessageMediaGeoLive(&mtproto.MessageMedia{
+			Geo: mtproto.NewTLGeoPoint(&mtproto.GeoPoint{
+				Long:           media.GeoPoint.Long,
+				Lat:            media.GeoPoint.Lat,
+				AccessHash:     media.GeoPoint.AccessHash,
+				AccuracyRadius: media.GeoPoint.AccuracyRadius,
+			}).To_GeoPoint(),
+			Period:                      media.Period,
+			Heading:                     media.Heading,
+			ProximityNotificationRadius: media.NotificationRadius,
+		}).To_MessageMedia()
 	case constants.MessageMediaPoll:
 		return mtproto.NewTLMessageMediaPoll(m).To_MessageMedia()
 	case constants.MessageMediaDice:
@@ -132,8 +138,8 @@ func toMessageMedia(media *data_message.Media) *mtproto.MessageMedia {
 	}
 }
 
-func ToMessageMedia(media *data_message.Media) *mtproto.MessageMedia {
-	return toMessageMedia(media)
+func ToMessageMedia(media *data_message.Media, layer int32) *mtproto.MessageMedia {
+	return toMessageMedia(media, layer)
 }
 
 func ToDataMessageMedia(media *mtproto.MessageMedia) *data_message.Media {

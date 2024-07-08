@@ -105,7 +105,7 @@ func (c *Core) conversationToDialog(userId int64, conversationList []*data_messa
 	var messageList []*mtproto.Message
 	var err error
 	if len(messageIdList) > 0 {
-		messageList, err = c.GetMessages(userId, messageIdList, false)
+		messageList, err = c.GetMessages(userId, messageIdList, false, layer)
 		if err != nil {
 			log.Warnf("conversationToDialog userId:%d peerType:%v GetMessageList error:%s", userId, peerType, err.Error())
 		}
@@ -135,7 +135,7 @@ func (c *Core) conversationToDialog(userId int64, conversationList []*data_messa
 	}
 	if len(channelMsgIdList) > 0 {
 		for _, v := range channelMsgIdList {
-			channelMessageList, err1 := c.GetChannelMessageList(userId, v)
+			channelMessageList, err1 := c.GetChannelMessageList(userId, v, layer)
 			if err1 != nil {
 				log.Warnf("conversationToDialog - GetChannelMessageList error:%s", err.Error())
 			} else {

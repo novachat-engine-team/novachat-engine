@@ -39,6 +39,7 @@ func (s *ChannelsServiceImpl) ChannelsDeleteMessages(ctx context.Context, reques
 			AuthKeyId: md.AuthKeyId,
 			Ids:       request.Id,
 			Date:      int32(time.Now().Unix()),
+			Layer:     md.Layer,
 		})
 		if err != nil {
 			log.Warnf("ChannelsDeleteMessages %v, request: %v error:%s", metadata.RpcMetaDataDebug(md), request, err.Error())

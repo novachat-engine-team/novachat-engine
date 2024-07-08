@@ -22,7 +22,7 @@ import (
 	"time"
 )
 
-func UserUpdateToUpdate(userUpdate *data_update.UserUpdate) *mtproto.Update {
+func UserUpdateToUpdate(userUpdate *data_update.UserUpdate, layer int32) *mtproto.Update {
 	up := &mtproto.Update{}
 	t := constants.UpdateTypeFromInt32(userUpdate.UpdateType)
 	switch t {
@@ -38,7 +38,7 @@ func UserUpdateToUpdate(userUpdate *data_update.UserUpdate) *mtproto.Update {
 		up.Date = userUpdate.Date
 		up.RandomId = userUpdate.RandomId
 
-		up.Message1F2B0AFD71 = message.ToMessage(userUpdate.MessageData)
+		up.Message1F2B0AFD71 = message.ToMessage(userUpdate.MessageData, layer)
 		up.MessageEBE4681971 = up.Message1F2B0AFD71.Message
 		up.RandomId = userUpdate.RandomId
 

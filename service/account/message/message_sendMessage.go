@@ -28,7 +28,7 @@ import (
 	"time"
 )
 
-func (c *Core) SendMessage(userId int64, authKeyId int64, request *mtproto.TLMessagesSendMessage) (*mtproto.Updates, error) {
+func (c *Core) SendMessage(userId int64, authKeyId int64, request *mtproto.TLMessagesSendMessage, layer int32) (*mtproto.Updates, error) {
 
 	inputPeer := input.MakeInputPeer(request.Peer)
 	if inputPeer.GetPeerType() == constants.PeerTypeEmpty {
@@ -83,7 +83,7 @@ func (c *Core) SendMessage(userId int64, authKeyId int64, request *mtproto.TLMes
 	defer mutex.Unlock()
 
 	var updates *mtproto.Updates
-	updates, err = c.makeDuplicateMessage(userId, request.RandomId)
+	updates, err = c.makeDuplicateMessage(userId, request.RandomId, layer)
 	if err != nil {
 		return nil, err
 	}
@@ -222,7 +222,7 @@ func (c *Core) SendMultiMessage(userId int64, authKeyId int64, request *mtproto.
 	defer mutex.Unlock()
 
 	var updates *mtproto.Updates
-	updates, err = c.makeDuplicateMessage(userId, mediaListRandomId)
+	updates, err = c.makeDuplicateMessage(userId, mediaListRandomId, layer)
 	if err != nil {
 		return nil, err
 	}
@@ -337,7 +337,7 @@ func (c *Core) SendMessageMedia(userId int64, authKeyId int64, request *mtproto.
 	defer mutex.Unlock()
 
 	var updates *mtproto.Updates
-	updates, err = c.makeDuplicateMessage(userId, request.RandomId)
+	updates, err = c.makeDuplicateMessage(userId, request.RandomId, layer)
 	if err != nil {
 		return nil, err
 	}

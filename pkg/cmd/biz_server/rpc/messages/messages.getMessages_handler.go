@@ -57,7 +57,7 @@ func (s *MessagesServiceImpl) MessagesGetMessages(ctx context.Context, request *
 		return mtproto.NewTLMessagesMessages(nil).To_Messages_Messages(), nil
 	}
 
-	messages, err := s.accountMessageCore.GetMessages(md.UserId, messageIdList, inputMessageType == constants.InputMessageReplyTo)
+	messages, err := s.accountMessageCore.GetMessages(md.UserId, messageIdList, inputMessageType == constants.InputMessageReplyTo, md.Layer)
 	if err != nil {
 		log.Errorf("MessagesGetMessages - request: %v GetMessages error:%s", request, err.Error())
 		return nil, err

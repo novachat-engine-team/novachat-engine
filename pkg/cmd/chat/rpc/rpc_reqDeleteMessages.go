@@ -40,7 +40,7 @@ func (impl *Impl) ReqDeleteMessages(ctx context.Context, request *chatService.De
 	messageList, err := impl.accountMessageCore.GetChannelMessageList(request.UserId, &messageCore.ChannelMessageId{
 		ChannelId: request.ChatId,
 		IdList:    request.Ids,
-	})
+	}, request.Layer)
 	if err != nil {
 		log.Errorf("ReqDeleteMessages GetChannelMessageList error:%s", err.Error())
 		return nil, err

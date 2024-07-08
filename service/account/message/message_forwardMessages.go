@@ -117,7 +117,7 @@ func (c *Core) ForwardMessages(userId int64,
 
 	var messageList []*mtproto.Message
 	var err error
-	messageList, err = c.GetMessages(userId, idList, false)
+	messageList, err = c.GetMessages(userId, idList, false, layer)
 	if err != nil {
 		log.Errorf("ForwardMessages GetMessages userId:%d fromPeer:%v idList:%+v error:%s", userId, fromPeer, idList, err.Error())
 		return nil, err

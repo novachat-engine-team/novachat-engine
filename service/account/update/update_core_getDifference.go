@@ -49,7 +49,7 @@ func (c *Core) GetUpdateDifference(authKeyId int64, userId int64, pts int32, qts
 
 	userIdList := make([]int64, 0, 24)
 	for _, u := range updateList {
-		update := UserUpdateToUpdate(u)
+		update := UserUpdateToUpdate(u, layer)
 		FilterAppendUserId(&userIdList, constants.PeerTypeFromUserIDType32(update.UserId).ToInt())
 		FilterAppendPeer(&userIdList, update.PeerId)
 		FilterAppendPeer(&userIdList, update.Peer9961FD5C71)

@@ -22,7 +22,7 @@ func messageFwdUtil(fwd *mtproto.MessageFwdHeader) *data_message.Fwd {
 
 	peerType := constants.PeerTypeUser.ToInt32()
 	fwdFromUserId := fwd.FromIdFADFF4AC71
-	savePeerType := constants.PeerTypeUser.ToInt32()
+	savePeerType := constants.PeerTypeEmpty.ToInt32()
 	savePeerId := int32(0)
 	if fwd.FromIdFADFF4AC71 != 0 {
 		fwdFromUserId = fwd.FromIdFADFF4AC71
@@ -86,7 +86,7 @@ func toMessageFwd(fwd *data_message.Fwd) *mtproto.MessageFwdHeader {
 	f.ChannelPost = fwd.ChannelPost
 	f.PostAuthor = fwd.PostAuthor
 
-	if fwd.SavePeerType != 0 {
+	if fwd.SavePeerType != 0 && fwd.SavePeerId != 0 {
 		switch fwd.SavePeerType {
 		case constants.PeerTypeUser.ToInt32():
 			f.SavedFromPeer = mtproto.NewTLPeerUser(&mtproto.Peer{UserId: constants.PeerTypeFromUserIDType(fwd.SavePeerId).ToInt32()}).To_Peer()

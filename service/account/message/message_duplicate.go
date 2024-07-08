@@ -23,7 +23,7 @@ type DuplicateMessage struct {
 	PtsCount  int32 `json:"pc"`
 }
 
-func (c *Core) makeDuplicateMessage(userId int64, randomId int64) (*mtproto.Updates, error) {
+func (c *Core) makeDuplicateMessage(userId int64, randomId int64, layer int32) (*mtproto.Updates, error) {
 	s, err := redis.String(cache.GetRedisClient().Do("GET", makeMessageKey(userId, randomId)))
 	if err != nil && err != redis.ErrNil {
 		log.Warnf("makeDuplicateMessage MessageId Key:%s error:%s", makeMessageKey(userId, randomId), err.Error())
@@ -46,7 +46,7 @@ func (c *Core) makeDuplicateMessage(userId int64, randomId int64) (*mtproto.Upda
 		return nil, nil
 	}
 
-	messages, _ := c.GetMessages(userId, []int32{cm.MessageId}, false)
+	messages, _ := c.GetMessages(userId, []int32{cm.MessageId}, false, layer)
 	if len(messages) == 0 {
 		log.Warnf("makeDuplicateMessage Message Not Found Key userId:%d MessageId:%d s:`%s`", makeMessageKey(userId, randomId), userId, cm.MessageId, s)
 		return nil, nil

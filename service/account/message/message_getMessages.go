@@ -17,7 +17,7 @@ import (
 	"novachat_engine/service/core/message/message"
 )
 
-func (c *Core) GetMessages(userId int64, messageIdList []int32, replyTo bool) ([]*mtproto.Message, error) {
+func (c *Core) GetMessages(userId int64, messageIdList []int32, replyTo bool, layer int32) ([]*mtproto.Message, error) {
 	log.Debugf("GetMessages userId:%d messageIdList:%v", userId, messageIdList)
 
 	messageDataList, err := c.messageCore.GetMessageList(userId, messageIdList)
@@ -32,14 +32,14 @@ func (c *Core) GetMessages(userId int64, messageIdList []int32, replyTo bool) ([
 		if !v.Out && peerType == constants.PeerTypeUser {
 			v.PeerId = v.FromUserId
 		}
-		messageList = append(messageList, message.ToMessage(v))
+		messageList = append(messageList, message.ToMessage(v, layer))
 	}
 
 	log.Infof("GetMessages userId:%d messageIdList:%v len()=%d", userId, messageIdList, len(messageList))
 	return messageList, nil
 }
 
-func (c *Core) GetChannelMessageList(userId int64, channelMsgId *message.ChannelMessageId) ([]*mtproto.Message, error) {
+func (c *Core) GetChannelMessageList(userId int64, channelMsgId *message.ChannelMessageId, layer int32) ([]*mtproto.Message, error) {
 	log.Debugf("GetChannelMessageList channelMsgId:%v", channelMsgId)
 
 	messageDataList, err := c.messageCore.GetChannelMessageList(channelMsgId)
@@ -55,7 +55,7 @@ func (c *Core) GetChannelMessageList(userId int64, channelMsgId *message.Channel
 		}
 
 		v.Out = v.FromUserId == userId
-		messageList = append(messageList, message.ToMessage(v))
+		messageList = append(messageList, message.ToMessage(v, layer))
 	}
 
 	log.Infof("GetChannelMessageList channelMsgId:%+v len()=%d", channelMsgId, len(messageList))

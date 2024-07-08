@@ -39,7 +39,7 @@ func (s *MessagesServiceImpl) MessagesEditMessage(ctx context.Context, request *
 		inputPeer.GetPeerType() == constants.PeerTypeSelf ||
 		inputPeer.GetPeerType() == constants.PeerTypeChat ||
 		inputPeer.GetPeerType() == constants.PeerTypeChannel {
-		l, err := s.accountMessageCore.GetMessages(md.UserId, []int32{request.Id}, false)
+		l, err := s.accountMessageCore.GetMessages(md.UserId, []int32{request.Id}, false, md.Layer)
 		if err != nil {
 			log.Infof("MessagesEditMessage - request: %v error:%s", request, err.Error())
 			return nil, err

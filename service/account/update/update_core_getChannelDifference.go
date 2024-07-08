@@ -34,7 +34,7 @@ func (c *Core) GetUpdateChannelDifference(userId, chat int64, force bool, pts in
 	pts = 0
 	userIdList := make([]int64, 0, 24)
 	for _, u := range updateList {
-		update := UserUpdateToUpdate(u)
+		update := UserUpdateToUpdate(u, layer)
 		FilterAppendUserId(&userIdList, constants.PeerTypeFromUserIDType32(update.UserId).ToInt())
 
 		switch constants.UpdateTypeFromInt32(u.UpdateType) {

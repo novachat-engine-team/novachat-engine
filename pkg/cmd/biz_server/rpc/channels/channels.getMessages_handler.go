@@ -46,7 +46,7 @@ func (s *ChannelsServiceImpl) ChannelsGetMessages(ctx context.Context, request *
 	messageList, err := s.accountMessageCore.GetChannelMessageList(md.UserId, &message.ChannelMessageId{
 		ChannelId: constants.PeerTypeFromChannelIDType32(request.Channel.ChannelId).ToInt(),
 		IdList:    idList,
-	})
+	}, md.Layer)
 	if err != nil {
 		log.Errorf("ChannelsGetMessages %v, request: %v error:%s", metadata.RpcMetaDataDebug(md), request, err.Error())
 		return nil, err

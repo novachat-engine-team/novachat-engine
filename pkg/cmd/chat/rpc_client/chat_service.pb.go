@@ -1210,151 +1210,121 @@ var ChatService_serviceDesc = map[string][]interface{}{
 	"CreateChat": {
 		"/rpc_client.ChatService/ReqCreateChat",
 		func() interface{} { return new(types.Any) },
-		"ReqCreateChat",
 	},
 	"FullChat": {
 		"/rpc_client.ChatService/ReqFullChat",
 		func() interface{} { return new(Chat) },
-		"ReqFullChat",
 	},
 	"EditTitle": {
 		"/rpc_client.ChatService/ReqEditTitle",
 		func() interface{} { return new(types.Any) },
-		"ReqEditTitle",
 	},
 	"EditPhoto": {
 		"/rpc_client.ChatService/ReqEditPhoto",
 		func() interface{} { return new(types.Any) },
-		"ReqEditPhoto",
 	},
 	"EditAbout": {
 		"/rpc_client.ChatService/ReqEditAbout",
 		func() interface{} { return new(types.Any) },
-		"ReqEditAbout",
 	},
 	"ChatCommon": {
 		"/rpc_client.ChatService/ReqChatCommon",
 		func() interface{} { return new(ChatList) },
-		"ReqChatCommon",
 	},
 	"BannedRights": {
 		"/rpc_client.ChatService/ReqBannedRights",
 		func() interface{} { return new(types.Any) },
-		"ReqBannedRights",
 	},
 	"EditAdmin": {
 		"/rpc_client.ChatService/ReqEditAdmin",
 		func() interface{} { return new(types.Any) },
-		"ReqEditAdmin",
 	},
 	"ChatByName": {
 		"/rpc_client.ChatService/ReqChatByName",
 		func() interface{} { return new(Chat) },
-		"ReqChatByName",
 	},
 	"AddUser": {
 		"/rpc_client.ChatService/ReqAddUser",
 		func() interface{} { return new(types.Any) },
-		"ReqAddUser",
 	},
 	"DeleteUser": {
 		"/rpc_client.ChatService/ReqDeleteUser",
 		func() interface{} { return new(types.Any) },
-		"ReqDeleteUser",
 	},
 	"SendOutboxesMessages": {
 		"/rpc_client.ChatService/ReqSendOutboxesMessages",
 		func() interface{} { return new(mtproto.Updates) },
-		"ReqSendOutboxesMessages",
 	},
 	"SendInBoxesMessages": {
 		"/rpc_client.ChatService/ReqSendInBoxesMessages",
 		func() interface{} { return new(types.Any) },
-		"ReqSendInBoxesMessages",
 	},
 	"ChatReadHistory": {
 		"/rpc_client.ChatService/ReqReadHistory",
 		func() interface{} { return new(types.Any) },
-		"ReqReadHistory",
 	},
 	"ReadInMessages": {
 		"/rpc_client.ChatService/ReqReadInMessages",
 		func() interface{} { return new(types.Any) },
-		"ReqReadInMessages",
 	},
 	"AllChat": {
 		"/rpc_client.ChatService/ReqAllChat",
 		func() interface{} { return new(ChatList) },
-		"ReqAllChat",
 	},
 	"ChatPinnedMessage": {
 		"/rpc_client.ChatService/ReqPinnedMessage",
 		func() interface{} { return new(types.Any) },
-		"ReqPinnedMessage",
 	},
 	"ChatInPinnedMessage": {
 		"/rpc_client.ChatService/ReqInPinnedMessage",
 		func() interface{} { return new(types.Any) },
-		"ReqInPinnedMessage",
 	},
 	"CheckUsername": {
 		"/rpc_client.ChatService/ReqCheckUsername",
 		func() interface{} { return new(types.Any) },
-		"ReqCheckUsername",
 	},
 	"BannedUser": {
 		"/rpc_client.ChatService/ReqBannedUser",
 		func() interface{} { return new(types.Any) },
-		"ReqBannedUser",
 	},
 	"EditGeoPoint": {
 		"/rpc_client.ChatService/ReqEditGeoPoint",
 		func() interface{} { return new(types.Any) },
-		"ReqEditGeoPoint",
 	},
 	"InviteToChannel": {
 		"/rpc_client.ChatService/ReqInviteToChannel",
 		func() interface{} { return new(types.Any) },
-		"ReqInviteToChannel",
 	},
 	"DeleteChat": {
 		"/rpc_client.ChatService/ReqDeleteChat",
 		func() interface{} { return new(types.Any) },
-		"ReqDeleteChat",
 	},
 	"HistoryHidden": {
 		"/rpc_client.ChatService/ReqHistoryHidden",
 		func() interface{} { return new(types.Any) },
-		"ReqHistoryHidden",
 	},
 	"UpdateUsername": {
 		"/rpc_client.ChatService/ReqUpdateUsername",
 		func() interface{} { return new(types.Any) },
-		"ReqUpdateUsername",
 	},
 	"DeleteMessagesUpdates": {
 		"/rpc_client.ChatService/ReqDeleteMessagesUpdates",
 		func() interface{} { return new(types.Any) },
-		"ReqDeleteMessagesUpdates",
 	},
 	"DeleteHistory": {
 		"/rpc_client.ChatService/ReqDeleteHistory",
 		func() interface{} { return new(types.Any) },
-		"ReqDeleteHistory",
 	},
 	"DeleteMessages": {
 		"/rpc_client.ChatService/ReqDeleteMessages",
 		func() interface{} { return new(types.Any) },
-		"ReqDeleteMessages",
 	},
 	"DeleteUserHistory": {
 		"/rpc_client.ChatService/ReqDeleteUserHistory",
 		func() interface{} { return new(types.Any) },
-		"ReqDeleteUserHistory",
 	},
 	"GetParticipants": {
 		"/rpc_client.ChatService/ReqGetParticipants",
 		func() interface{} { return new(types.Any) },
-		"ReqGetParticipants",
 	},
 }

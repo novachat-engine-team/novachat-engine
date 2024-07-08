@@ -64,7 +64,7 @@ func (s *MessagesServiceImpl) MessagesSendMessage(ctx context.Context, request *
 	//	log.Errorf("MessagesSendMessage - request: %v FilterDirtyWord error:%s", request, err.Error())
 	//	return nil, err
 	//}
-	updates, err := s.accountMessageCore.SendMessage(md.UserId, md.AuthKeyId, request)
+	updates, err := s.accountMessageCore.SendMessage(md.UserId, md.AuthKeyId, request, md.Layer)
 	if err != nil {
 		log.Errorf("MessagesSendMessage - request: %v error:%s", request, err.Error())
 		return nil, err
