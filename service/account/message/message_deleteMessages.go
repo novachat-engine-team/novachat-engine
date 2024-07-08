@@ -96,7 +96,7 @@ func (c *Core) DeleteMessages(
 		}
 	}
 
-	if len(idList) > 0 {
+	if len(idList) > 0 && pts > 0 {
 		//TODO:(Coderxw)
 		_, err = syncClient.GetSyncClientById(userId).ReqSyncUpdate(context.TODO(), &syncClient.SyncUpdate{
 			UserId:          userId,

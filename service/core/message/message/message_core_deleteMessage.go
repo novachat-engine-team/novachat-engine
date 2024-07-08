@@ -46,7 +46,7 @@ func (c *Core) DeleteMessages(userId int64, idList []int32) (int32, error) {
 	}
 
 	log.Debugf("DeleteMessages ur:%+v", ur)
-	return id.MessageId, nil
+	return id.Pts, nil
 }
 
 func (c *Core) DeleteMessagesByMaxId(userId, peerId int64, peerType constants.PeerType, maxId int32, now int32, pts int32) (int32, []int32, error) {

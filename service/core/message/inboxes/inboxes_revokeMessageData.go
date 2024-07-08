@@ -53,6 +53,7 @@ func (c *Core) RevokeMessageData(userId int64, peerId int64, peerType constants.
 			log.Warnf("RevokeMessageData userId:%d peerId:%d peerType:%v globalMessageId is empty", userId, peerId, peerType)
 			return 0, nil, nil
 		}
+		log.Debugf("RevokeMessageData  DeleteMessages peerId :%d peerType:%v globalMessageIdList:%v", peerId, peerType, globalMessageIdList)
 		messageDataList, err1 := c.messageCore.GetMessageByGlobalMessageIdList(userId, globalMessageIdList, false)
 		if err != nil {
 			log.Errorf("RevokeMessageData GetMessageByGlobalMessageIdList error:%s", err.Error())

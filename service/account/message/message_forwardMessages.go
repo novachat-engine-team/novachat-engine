@@ -147,7 +147,7 @@ func (c *Core) ForwardMessages(userId int64,
 		context.Background(),
 		rpc_context.WithTimeout(constants.RpcDefaultTimeout),
 	)
-	cancel()
+	defer cancel()
 	updates, err := msgClient.GetMsgClient().ReqSendMessages(ctx, reqSendMessages)
 	if err != nil {
 		log.Errorf("ForwardMessages ReqSendMessages userId:%d fromPeer:%v idList:%+v error:%s", userId, fromPeer, idList, err.Error())

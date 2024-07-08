@@ -70,7 +70,7 @@ func (m *MessageCoreService) RevokeMessageData(revokeMessage *msgService.RevokeM
 			log.Errorf("RevokeMessageData inboxes RevokeMessageData error:%s", err.Error())
 			return err
 		}
-		if len(messageIdList) == 0 {
+		if len(messageIdList) == 0 || pts == 0 {
 			return nil
 		}
 		update = mtproto.NewTLUpdateDeleteMessages(&mtproto.Update{
