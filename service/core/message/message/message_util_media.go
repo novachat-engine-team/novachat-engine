@@ -117,7 +117,6 @@ func toMessageMedia(media *data_message.Media, layer int32) *mtproto.MessageMedi
 	case constants.MessageMediaInvoice:
 		return mtproto.NewTLMessageMediaInvoice(m).To_MessageMedia()
 	case constants.MessageMediaGeoLive:
-		m.ProximityNotificationRadius = media.NotificationRadius
 		return mtproto.NewTLMessageMediaGeoLive(&mtproto.MessageMedia{
 			Geo: mtproto.NewTLGeoPoint(&mtproto.GeoPoint{
 				Long:           media.GeoPoint.Long,
@@ -158,7 +157,7 @@ func messageMediaUtil(media *mtproto.MessageMedia) *data_message.Media {
 }
 
 func toMessageMediaData(m *data_message.Media, mMedia *mtproto.MessageMedia) *data_message.Media {
-	media := &data_message.Media{}
+	media := m
 	switch constants.MessageMediaFromInt32(m.Type) {
 	case constants.MessageMediaEmpty:
 
