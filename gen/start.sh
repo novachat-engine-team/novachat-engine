@@ -28,10 +28,10 @@ for e in ${MOD_LIST[@]}
 do
 	if [ $cmd == $e ]; then
 		echo "start $e"
-		nohup ./$e 1>>/dev/null 2>>$LOG_PATH/$e.err &
+		nohup ./$e $e.yaml 1>>/dev/null 2>>$LOG_PATH/$e.err &
 	elif [ $cmd == 'all' ]; then
 		echo "start $e"
-		nohup ./$e 1>>/dev/null 2>>$LOG_PATH/$e.err &
+		nohup ./$e $e.yaml 1>>/dev/null 2>>$LOG_PATH/$e.err &
 	fi
 done
 

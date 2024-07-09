@@ -1,9 +1,26 @@
 
+### ubuntu version >= 2004 
+
 #### 1. Install MySQL
-    apt update
-    apt install mysql-server
-    systemctl enable mysql
-    systemctl start mysql
+    wget https://dev.mysql.com/get/mysql-apt-config_0.8.12-1_all.deb
+    sudo dpkg -i mysql-apt-config_0.8.12-1_all.deb
+    or
+    sudo dpkg-reconfigure mysql-apt-config
+
+    select MySQL Server & Cluster (Currently select: mysql-5.7)
+    select mysql-5.7
+    select ok
+
+    sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 467B942D3A79BD29
+    sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys B7B3B788A8D3785C
+    sudo apt update
+
+    sudo apt install -f mysql-client=5.7* mysql-community-server=5.7* mysql-server=5.7*
+
+    input root password: 123456
+
+    sudo systemctl enable mysql
+    sudo systemctl start mysql
 
 #### 2. Install Etcd
 
@@ -17,6 +34,8 @@
     rm -rf ${ETCD_DIR} && mkdir -p ${ETCD_DIR}
 
     curl -L ${DOWNLOAD_URL}/${ETCD_VER}/${ETCD_FILENAME} -o ${ETCD_DIR}/${ETCD_FILENAME}
+
+    cd ${ETCD_DIR}
     tar xzvf ${ETCD_DIR}/${ETCD_FILENAME} -C ${ETCD_DIR} --strip-components=1
     rm -f ${ETCD_DIR}/${ETCD_FILENAME}
 
@@ -28,26 +47,27 @@
 
 #### 3. Install KAFKA
     
-    apt install openjdk-11-jdk
+    sudo apt install openjdk-11-jdk
 
     KAFKA_DIR=/tmp/kafka
     KAFKA_FILENAME=kafka_2.12-2.5.0.tgz
     KAFKA=kafka_2.12-2.5.0
 
     rm -rf ${KAFKA_DIR} && mkdir -p ${KAFKA_DIR}
-    
-    # local kafka
-        cp $ROOT_DIR/lib/kafka_2.12-2.5.0.tar.gz ${KAFKA_DIR}/${KAFKA_FILENAME}
-    
+
     # online kafka
         curl -L https://archive.apache.org/dist/kafka/2.5.0/${KAFKA_FILENAME} -o ${KAFKA_DIR}/${KAFKA_FILENAME}
+    # local kafka
+        cp $ROOT_DIR/lib/kafka_2.12-2.5.0.tar.gz ${KAFKA_DIR}/${KAFKA_FILENAME}
 
     cd ${KAFKA_DIR}    
     tar -vxzf ${KAFKA_FILENAME}
 
     cd ${KAFKA}
-    bin/zookeeper-server-start.sh -daemon config/zookeeper.properties
+    cd kafka_2.12-2.5.0/
 
+    bin/zookeeper-server-start.sh -daemon config/zookeeper.properties
+    
     export KAFKA_HEAP_OPTS="-Xmx1G -Xms1G"
     bin/kafka-server-start.sh -daemon config/server.properties
 
@@ -89,3 +109,10 @@
     replication:
         replSetName: rs0
     EOF
+
+    
+    sudo bin/mongod -f mongodb.conf
+    export PATH=$PATH:/tmp/mongodb/mongodb-linux-x86_64-4.4.19/bin
+
+#### 5. Install redis
+    sudo apt install redis

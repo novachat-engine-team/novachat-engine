@@ -17,7 +17,7 @@ server:
   serverid: 1
 
 rpcserver:
-  addr: 127.0.0.1:10061
+  addr: 127.0.0.1:10062
 
 rpcdiscovery:
   schema: novachat-engine

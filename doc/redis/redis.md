@@ -1,41 +1,63 @@
 
 
-
-
 ### RedisBloom
-centos7:
-    yum -y install cmake
 
-cd /usr/src
+found redisbloom.so.zip goto `copy redisbloom.so.zip`
 
-https://github.com/RedisBloom/RedisBloom.git
+otherwise goto `building RedisBloom`
 
-cd RedisBloom
-git checkout v2.2.8
-make
+#### Copy redisbloom.so.zip
+    sudo apt install unzip -y
+    cp $ROOT_DIR/lib/redisbloom.so.zip
+    unzip redisbloom.so.zip
 
-mkdir -p /usr/lib64/redis/modules/
+    sudo mkdir -p /usr/lib64/redis/modules/
+    sudo cp redisbloom.so /usr/lib64/redis/modules/
 
-cp redisbloom.so /usr/lib64/redis/modules/
-
-ll /usr/lib64/redis/modules/redisbloom.so
-
--rwxr-xr-x. 1 root root 331992 Aug 19 15:21 /usr/lib64/redis/modules/redisbloom.so
-
-chmod 755 /usr/lib64/redis/modules/redisbloom.so
-
-redis version > 4.0.0
-
-centos7:
-    yum install -y http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
-    yum --enablerepo=remi install redis
-
-    add: /etc/redis.conf
+    // add: /etc/redis.conf
     loadmodule /usr/lib64/redis/modules/redisbloom.so
 
-ubuntu:
-    apt install redis
+    sudo systemctl restart redis
 
-    add: /etc/redis/redis.conf
-    loadmodule /usr/lib64/redis/modules/redisbloom.so
+#### Building RedisBloom
+
+    centos7:
+        yum -y install cmake
+    ubuntu: 
+        apt install cmake -y
     
+    cd /usr/src
+    
+    https://github.com/RedisBloom/RedisBloom.git
+    
+    cd RedisBloom
+    git checkout v2.2.8
+    make
+    
+    mkdir -p /usr/lib64/redis/modules/
+    
+    cp redisbloom.so /usr/lib64/redis/modules/
+    
+    ll /usr/lib64/redis/modules/redisbloom.so
+    
+    -rwxr-xr-x. 1 root root 331992 Aug 19 15:21 /usr/lib64/redis/modules/redisbloom.so
+    
+    chmod 755 /usr/lib64/redis/modules/redisbloom.so
+    
+    redis version > 4.0.0
+    
+    centos7:
+        yum install -y http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
+        yum --enablerepo=remi install redis
+    
+        add: /etc/redis.conf
+        loadmodule /usr/lib64/redis/modules/redisbloom.so
+    
+    ubuntu:
+        apt install redis
+    
+        add: /etc/redis/redis.conf
+        loadmodule /usr/lib64/redis/modules/redisbloom.so
+    
+        sudo systemctl restart redis
+        
