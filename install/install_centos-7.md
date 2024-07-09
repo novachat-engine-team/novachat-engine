@@ -1,13 +1,37 @@
 
+### CentOS 7
+    2024-6-30 EOL, End Of Life
+
+    sudo curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
+    sudo yum clean all
+    sudo yum makecache
+
+    or
+    sudo yum install -y centos-release-vault
+    sudo yum-config-manager --enable centosplus-vault
+    sudo yum-config-manager --enable powertools-vault
+
 #### 1. Install dnf
-    yum install epel-release -y
-    yum install dnf -y
-    dnf --version
+    sudo yum install epel-release -y
+    sudo yum install dnf -y
 
 #### 2. Install MySQL
-    dnf install redis -y
-    systemctl enable redis
-    systemctl start redis
+    sudo dnf install wget -y
+	wget https://dev.mysql.com/get/mysql57-community-release-el7-9.noarch.rpm
+	sudo rpm -ivh mysql57-community-release-el7-9.noarch.rpm
+    sudo rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2022
+
+	sudo dnf install mysql-server
+    sudo systemctl start mysqld
+	sudo cat /var/log/mysqld.log | grep 'password'
+
+    mysql -uroot -p 
+
+    ALTER USER 'root'@'localhost' IDENTIFIED BY '23ZNsdfrhY7DzB#XPdfdsf';
+    SHOW VARIABLES LIKE 'validate_password%';
+    set global validate_password_policy=0;
+    set global validate_password_length=6;
+    ALTER USER 'root'@'localhost' IDENTIFIED BY '123456';
 
 #### 3. Install Etcd
 
@@ -25,7 +49,6 @@
     rm -f ${ETCD_DIR}/${ETCD_FILENAME}
 
     ${ETCD_DIR}/etcd --version
-    ${ETCD_DIR}/etcdctl version
 
     # start a local etcd server
     ${ETCD_DIR}/etcd &
@@ -40,11 +63,10 @@
 
     rm -rf ${KAFKA_DIR} && mkdir -p ${KAFKA_DIR}
     
+    # online kafka
+        curl -L https://archive.apache.org/dist/kafka/2.5.0/${KAFKA_FILENAME} -o ${KAFKA_DIR}/${KAFKA_FILENAME}    
     # local kafka
         cp $ROOT_DIR/lib/kafka_2.12-2.5.0.tar.gz ${KAFKA_DIR}/${KAFKA_FILENAME}
-    
-    # online kafka
-        curl -L https://archive.apache.org/dist/kafka/2.5.0/${KAFKA_FILENAME} -o ${KAFKA_DIR}/${KAFKA_FILENAME}
 
     cd ${KAFKA_DIR}    
     tar -vxzf ${KAFKA_FILENAME}
@@ -60,7 +82,7 @@
     MONGODB_DIR=/tmp/mongodb
     MONGODB_FILENAME=mongodb-linux-x86_64-4.4.19.tgz
 
-    rm -rf ${MONGODB_DIR} && mkdir -p ${MONGODB_DIR}
+    rm -rf ${MONGODB_DIR} && mkdir -p ${MONGODB_DIR} && mkdir -p ${MONGODB_DIR}/data
 
     curl -L https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-rhel70-4.4.19.tgz -o ${MONGODB_DIR}/${MONGODB_FILENAME}
 
@@ -93,3 +115,12 @@
     replication:
         replSetName: rs0
     EOF
+
+    sudo bin/mongod -f mongodb.conf
+    export PATH=$PATH:/tmp/mongodb/mongodb-linux-x86_64-4.4.19/bin
+
+#### 6. Install redis
+    sudo dnf install -y http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
+    sudo dnf --enablerepo=remi list redis --showduplicates | sort -r
+    sudo dnf  --enablerepo=remi install redis
+    sudo systemctl restart redis

@@ -20,8 +20,8 @@ Novachat-engine is a open source mtproto server for Telegram compatible Android,
     go mod tidy -go=1.16 && go mod tidy -go=1.17
 
     // install go
-    wget https://go.dev/dl/go.1.17.11.linux-amd64.tar.gz
-    tar xvf go.1.17.11.linux-amd64.tar.gz
+    wget https://go.dev/dl/go1.17.11.linux-amd64.tar.gz
+    tar xvf go1.17.11.linux-amd64.tar.gz
     sudo mv go /opt/
     export PATH=$PATH:/opt/go/bin
 
@@ -46,8 +46,10 @@ Novachat-engine is a open source mtproto server for Telegram compatible Android,
   mysql -uroot -p < enterprise.sql
 
 - MongoDB
+
   // start mongo client
   mongo
+
   // init mongo rs
   rs.initiate()
 
@@ -57,6 +59,7 @@ Novachat-engine is a open source mtproto server for Telegram compatible Android,
 
 #### BUILDING
     git clone https://github.com/novachat-engine-team/novachat-engine
+
     1. cd novachat-engine
     2. cd gen
     3. mkdir out
