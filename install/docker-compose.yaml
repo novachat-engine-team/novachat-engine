@@ -1,0 +1,113 @@
+version: "3"
+
+services:
+  zookeeper:
+    image: wurstmeister/zookeeper
+    container_name: zookeeper
+    volumes:
+      - /data/zookeeper/data:/data
+      - /etc/localtime:/etc/localtime
+    restart: always
+    ports:
+      - 2181:2181
+    networks:
+      - novachat_engine_net
+
+  kafka:
+    image: wurstmeister/kafka
+    container_name: kafka
+    ports:
+      - 9092:9092
+    environment:
+      KAFKA_BROKER_ID: 0
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
+      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092
+    restart: always
+    volumes:
+      - /data/kafka/data:/data
+    networks:
+      - novachat_engine_net
+    depends_on:
+      - zookeeper
+
+  etcd:
+    image: quay.io/coreos/etcd:v3.5.14
+    ports:
+      - 2379:2379
+      - 2380:2380
+    container_name: etcd
+    volumes:
+      - /data/etcd/data:/data
+      - /etc/timezone:/etc/timezone
+      - /etc/localtime:/etc/localtime:ro
+    environment:
+      ETCDCTL_API: 3
+      ETCD_DATA_DIR: /data
+      ETCD_NAME: node1
+      INITIAL_CLUSTER_TOKEN: etcd-test-cluster
+      ETCD_INITIAL_ADVERTISE_PEER_URLS: http://etcd:2380
+      ETCD_LISTEN_PEER_URLS: http://0.0.0.0:2380
+      ETCD_ADVERTISE_CLIENT_URLS: http://etcd:2379
+      ETCD_LISTEN_CLIENT_URLS: http://0.0.0.0:2379
+      ETCD_INITIAL_CLUSTER: node1=http://etcd:2380
+      ETCD_INITIAL_CLUSTER_STATE: new
+      ETCD_AUTO_COMPACTION_RETENTION: 1
+    restart: always
+    command: /usr/local/bin/etcd
+    networks:
+      - novachat_engine_net
+
+  redis:
+    image: ninglei1996/redisbloom
+    container_name: redis
+    ports:
+      - 6379:6379
+    volumes:
+      - /data/redis/data:/data:rw
+    restart: always
+    privileged: true
+    networks:
+      - novachat_engine_net
+
+  mysql:
+    image: mysql:5.7
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: enterprise
+    ports: 
+      - 3306:3306
+    volumes:
+      - /data/mysql/data:/var/lib/mysql
+    command:
+      --default-authentication-plugin=mysql_native_password
+      --character-set-server=utf8mb4
+      --collation-server=utf8mb4_general_ci
+      --explicit_defaults_for_timestamp=true
+      --lower_case_table_names=1
+    privileged: true
+    restart: always
+    networks:
+      - novachat_engine_net
+
+  mongodb:
+    image: mongo:4.4.19
+    container_name: mongodb
+    ports:
+      - 27017:27017
+    volumes:
+      - /data/mongodb:/data/db:rw
+    restart: always
+    privileged: true
+    command:
+      --replSet=rs0
+    networks:
+      - novachat_engine_net
+
+networks:
+  novachat_engine_net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16

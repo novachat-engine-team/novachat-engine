@@ -1,6 +1,7 @@
 
 ### Novachat_engine
-Novachat-engine is a open source mtproto server for Telegram compatible Android, IOS,tdesktop(Mac/Windows/Linux/Web).
+Novachat-engine is a open source mtproto server for Telegram compatible Android, IOS, tdesktop(Mac/Windows/Linux/Web).
+
 ## Introduce [Telegram](https://telegram.org/)
 
 #### Novachat_engine server
@@ -14,16 +15,9 @@ Novachat-engine is a open source mtproto server for Telegram compatible Android,
 - sticketsets
 
 #### ENV
-    golang version: GO 1.17.11
-    GO111MODULE=auto
-    GOPROXY=https://goproxy.io,direct
-    go mod tidy -go=1.16 && go mod tidy -go=1.17
+    Golang version: GO 1.17.11
 
-    // install go
-    wget https://go.dev/dl/go1.17.11.linux-amd64.tar.gz
-    tar xvf go1.17.11.linux-amd64.tar.gz
-    sudo mv go /opt/
-    export PATH=$PATH:/opt/go/bin
+    go mod tidy -go=1.16 && go mod tidy -go=1.17
 
 ### Support Components
     mongodb 4.4.19
@@ -33,51 +27,80 @@ Novachat-engine is a open source mtproto server for Telegram compatible Android,
     etcd
 
 #### Installing
+- [Docker](https://github.com/novachat-engine-team/novachat-engine/blob/main/install/install_docker.md)
 - [Ubuntu](https://github.com/novachat-engine-team/novachat-engine/blob/main/install/install_ubuntu.md)
 - [CentOS7](https://github.com/novachat-engine-team/novachat-engine/blob/main/install/install_centos-7.md)
-  
+
+
     MySQL default: root/123456
+
+- Golang 1.17.11
+
+      // install go
+      wget https://go.dev/dl/go1.17.11.linux-amd64.tar.gz
+      tar xvf go1.17.11.linux-amd64.tar.gz
+      sudo mv go /opt/
+      export PATH=$PATH:/opt/go/bin
 
 #### Init DB
 
-- MySQL
-  [enterprise.sql](https://github.com/novachat-engine-team/novachat-engine/blob/main/scripts/enterprise.sql)
+###### Docker Deploy
+
+  - MySQL [enterprise.sql](https://github.com/novachat-engine-team/novachat-engine/blob/main/scripts/enterprise.sql)
+
+        docker cp enterprise.sql mysql:/
   
-  mysql -uroot -p < enterprise.sql
+        docker exec -it mysql bash
+  
+        mysql -uroot -h127.0.0.1 -p < enterprise.sql
+  
+  - MongoDB
+  
+        docker exec -it mongodb bash
+        // start mongo client
+        mongo
 
-- MongoDB
+        // init mongo rs
+        rs.initiate()
 
-  // start mongo client
-  mongo
+###### System Deploy
 
-  // init mongo rs
-  rs.initiate()
+  - MySQL [enterprise.sql](https://github.com/novachat-engine-team/novachat-engine/blob/main/scripts/enterprise.sql)
+  
+        mysql -uroot -h127.0.0.1 -p < enterprise.sql
+     
+  - MongoDB
+     
+        // start mongo client
+        mongo
 
-- Redis
-  [redis.md](https://github.com/novachat-engine-team/novachat-engine/blob/main/doc/redis/redis.md)
+        // init mongo rs
+        rs.initiate()
 
+  - Redis [redis.md](https://github.com/novachat-engine-team/novachat-engine/blob/main/doc/redis/redis.md)
 
-#### BUILDING
+#### Building and Running
     git clone https://github.com/novachat-engine-team/novachat-engine
 
-    1. cd novachat-engine
-    2. cd gen
-    3. mkdir out
-    4. ./config.sh
-    5. ./build.sh all
-    6. cp start.sh restart.sh status.sh stop.sh out
-    7. cat >> /etc/hosts << EOF 
+    1. cd novachat-engine/gen
+    2. mkdir out
+    3. ./config.sh
+    4. ./build.sh all
+        Found error in building `INSTALL_fix`(https://github.com/novachat-engine-team/novachat-engine/blob/main/INSTALL_fix)
 
+    5. cp start.sh restart.sh status.sh stop.sh out
+    6. sudo bash -c "cat >> /etc/hosts" << EOF
     127.0.0.1 mysql-hosts 
     127.0.0.1 kafka-hosts 
     127.0.0.1 redis-hosts 
     127.0.0.1 etcd-hosts 
     127.0.0.1 mongodb-hosts
     EOF
-    8. cd out
-    9. ./start.sh all
+
+    7. cd out
+    8. ./start.sh all
        start serve
-    10. ./status.sh
+    9. ./status.sh
        check serve is running, `ls log` all serve logs
        eg:
           check auth
@@ -99,13 +122,13 @@ Novachat-engine is a open source mtproto server for Telegram compatible Android,
           check relay
           test       20691       1  0 10:43 pts/0    00:00:00 ./relay relay.yaml
 
-    11. connecting xxxx:12347
+    10. connecting xxxx:12347
       xxxx is your IP
 
 tips: building error fix in [INSTALL_fix](https://github.com/novachat-engine-team/novachat-engine/blob/main/INSTALL_fix)
 
 #### Notes
-Will coming soon
+Coming soon
 
 - web
 - videocall
