@@ -152,7 +152,18 @@ func (c *Core) DeleteHistory(
 	peerId, peerType := inputPeer.GetPeerId(), inputPeer.GetPeerType()
 	tempIdList := make([]int32, 0, len(messageList))
 	if len(messageList) > 0 {
-		globalMessageIdList = append(globalMessageIdList, messageList[0].GlobalMessageId)
+		for _, v := range messageList {
+			if !v.Deleted {
+				tempIdList = append(tempIdList, v.Id)
+			}
+			if peerType == constants.PeerTypeChannel ||
+				peerType == constants.PeerTypeChat {
+				globalMessageIdList = append(globalMessageIdList, int64(v.Id))
+			} else {
+				globalMessageIdList = append(globalMessageIdList, v.GlobalMessageId)
+			}
+		}
+
 	} else {
 		log.Warnf("DeleteHistory GetMessageList not found userId:%d messageIdList:%v", userId, maxId)
 	}
@@ -177,7 +188,7 @@ func (c *Core) DeleteHistory(
 			PeerId:              peerId,
 			PeerType:            peerType.ToInt32(),
 			GlobalMessageIdList: globalMessageIdList,
-			Range:               true,
+			Range:               false,
 		})
 		if err != nil {
 			log.Errorf("DeleteMessages GetMessageList ReqRevokeMessages userId:%d messageIdList:%v error:%s", userId, messageIdList, err.Error())
