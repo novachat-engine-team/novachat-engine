@@ -71,3 +71,7 @@ func (c *Core) AddContact(userId int64, phone string, peerId int64, name string,
 func (c *Core) ContactsRemove(userId int64, list []int64) (bool, error) {
 	return c.contactCore.ContactsRemove(userId, list)
 }
+
+func (c *Core) ModifyContact(userId int64, phone string, peerId int64, firstname string, lastname string, now int32) error {
+	return c.contactCore.ModifyContact(userId, phone, peerId, firstname, lastname, now)
+}

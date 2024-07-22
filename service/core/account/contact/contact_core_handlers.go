@@ -135,7 +135,6 @@ func (c *Core) AddContact(userId int64, phone string, peerId int64, name string,
 
 		if peerValue.GetContact() >= data_contact.MutualTypeMutual && myValue.GetContact() >= data_contact.MutualTypeMutual ||
 			peerValue.GetContact() == data_contact.MutualTypeDefault && myValue.GetContact() == data_contact.MutualTypeMyContact {
-
 			sessionContext.AbortTransaction(sessionContext)
 			return nil
 		}
@@ -186,6 +185,25 @@ func (c *Core) AddContact(userId int64, phone string, peerId int64, name string,
 		return 0, err
 	}
 	return contact, nil
+}
+
+func (c *Core) ModifyContact(userId int64, phone string, peerId int64, firstname string, lastname string, now int32) error {
+	myValue := &data_contact.Contact{
+		UserId:    userId,
+		PeerId:    peerId,
+		Phone:     phone,
+		FirstName: firstname,
+		LastName:  lastname,
+		Date:      now,
+	}
+	col := c.getCollection()
+	_, err := col.UpdateOne(context.Background(), mgo.DBE.MarshalCustomSpecMap(myValue, "UserId", "PeerId"),
+		bson.M{mgo.SET: mgo.DBE.MarshalCustomSpecMap(myValue, "Phone", "FirstName", "LastName", "Date")})
+	if err != nil {
+		log.Errorf("ModifyContact userId:%v error:%s", userId, err.Error())
+		return err
+	}
+	return nil
 }
 
 func (c *Core) ContactsBlock(userId int64, peerId int64, now int32) error {

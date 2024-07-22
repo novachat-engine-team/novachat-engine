@@ -65,20 +65,35 @@ func (s *ContactsServiceImpl) ContactsAddContact(ctx context.Context, request *m
 		if mtproto.ClassInputUserSelf == request.Id.ClassName {
 			user = usersUtil.UserCoreSelfUsers(user)
 		} else {
-
 			contact, err := s.accountContactCore.GetContactById(md.UserId, constants.PeerTypeFromUserIDType32(request.Id.UserId).ToInt())
 			if err != nil {
 				log.Errorf("ContactsAddContact %v, request: %v GetContactsList error:%s", md, request, err.Error())
 				return nil, errors.NewRpcErrorWithCodeString(mtproto.RpcErrorCode_INTERNAL.ToInt32(), err.Error())
 			}
+			modify := false
+			state := contact.GetContact()
 			if contact == nil || contact.GetContact() <= data_contact.MutualTypeDefault {
-
-				state, err := s.accountContactCore.AddContact(md.UserId, request.Phone, constants.PeerTypeFromUserIDType32(request.Id.UserId).ToInt(), request.LastName, request.LastName, int32(time.Now().Unix()))
+				state, err = s.accountContactCore.AddContact(md.UserId, request.Phone, constants.PeerTypeFromUserIDType32(request.Id.UserId).ToInt(), request.LastName, request.LastName, int32(time.Now().Unix()))
 				if err != nil {
 					log.Errorf("ContactsAddContact %v, request: %v AddContact error:%s", md, request, err.Error())
 					return nil, errors.NewRpcErrorWithCodeString(mtproto.RpcErrorCode_INTERNAL.ToInt32(), err.Error())
 				}
-
+				modify = true
+			} else if contact.GetContact() > data_contact.MutualTypeMyContact && !(
+				contact.LastName == request.LastName &&
+					contact.FirstName == request.FirstName &&
+					contact.Phone == request.Phone) {
+				err = s.accountContactCore.ModifyContact(md.UserId, request.Phone, constants.PeerTypeFromUserIDType32(request.Id.UserId).ToInt(), request.LastName, request.LastName, int32(time.Now().Unix()))
+				if err != nil {
+					log.Errorf("ContactsAddContact %v, request: %v AddContact error:%s", md, request, err.Error())
+					return nil, errors.NewRpcErrorWithCodeString(mtproto.RpcErrorCode_INTERNAL.ToInt32(), err.Error())
+				}
+				modify = true
+				state = contact.GetContact()
+			}
+			if modify {
+				//TODO:Coder
+				// sync to devices
 				user = usersUtil.UserCoreContactUser(user, true, state >= data_contact.MutualTypeMyContact)
 				updates.SetUpdates([]*mtproto.Update{
 					mtproto.NewTLUpdateUserName(&mtproto.Update{
@@ -92,12 +107,8 @@ func (s *ContactsServiceImpl) ContactsAddContact(ctx context.Context, request *m
 						Phone:  request.Phone,
 					}).To_Update()})
 				updates.SetUsers([]*mtproto.User{user})
-
-				//TODO:Coder
-				// sync to devices
 			}
 		}
-	//case mtproto.ClassInputUserFromMessage:
 	default:
 		err := errors.NewRpcErrorWithRpcErrorCode(mtproto.RpcErrorCode_BAD_REQUEST_CONTACT_ID_INVALID)
 		log.Errorf("ContactsAddContact %v, request: %v error:%s", md, request, err.Error())
