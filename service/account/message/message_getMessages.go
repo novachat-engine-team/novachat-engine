@@ -32,6 +32,9 @@ func (c *Core) GetMessages(userId int64, messageIdList []int32, replyTo bool, la
 		if !v.Out && peerType == constants.PeerTypeUser {
 			v.PeerId = v.FromUserId
 		}
+		if v.Deleted {
+			continue
+		}
 		messageList = append(messageList, message.ToMessage(v, layer))
 	}
 
@@ -50,6 +53,9 @@ func (c *Core) GetChannelMessageList(userId int64, channelMsgId *message.Channel
 
 	messageList := make([]*mtproto.Message, 0, len(messageDataList))
 	for _, v := range messageDataList {
+		if v.Deleted {
+			continue
+		}
 		if v.Deleted {
 			continue
 		}
