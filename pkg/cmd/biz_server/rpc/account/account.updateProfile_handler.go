@@ -74,6 +74,10 @@ func (s *AccountServiceImpl) AccountUpdateProfile(ctx context.Context, request *
 		log.Errorf("AccountUpdateProfile %v, request: %v UpdateProfile error:%s", md, request, err.Error())
 		return nil, errors.NewRpcErrorWithRpcErrorCode(mtproto.RpcErrorCode_INTERNAL)
 	}
-	user := usersUtil.UserCoreSelfUsers(usersUtil.UserCore2Users(userInfo))
+
+	user, err := s.accountUsersCore.GetUser(md.UserId, md.UserId, md.Layer)
+	if err != nil {
+		user = usersUtil.UserCoreSelfUsers(usersUtil.UserCore2Users(userInfo))
+	}
 	return user, nil
 }

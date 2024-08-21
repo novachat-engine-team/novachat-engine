@@ -1,3 +1,12 @@
+/*
+ * Copyright (c) 2021-present,  NovaChat-Engine.
+ *  All rights reserved.
+ *
+ * @Author: Coder (coderxw@gmail.com)
+ * @Time :
+ * @File :
+ */
+
 package upload
 
 import (
@@ -30,7 +39,7 @@ func (c *Core) GetFile(file *sfsClient.GetFile) (*mtproto.Upload_File, error) {
 		log.Errorf("UploadCore GetFile file:%v error:%s", file, err.Error())
 		return nil, err
 	}
-	if len(fileInfo.Bytes) == 0 {
+	if file.Offset == 0 && len(fileInfo.Bytes) == 0 {
 		log.Warnf("UploadCore GetFile file:%v file is empty", file)
 		return nil, errors.NewRpcErrorWithRpcErrorCode(mtproto.RpcErrorCode_BAD_UPLOAD)
 	}

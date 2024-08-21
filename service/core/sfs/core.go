@@ -22,7 +22,7 @@ import (
 
 const (
 	DBSfs               = "db_file"
-	TablePhoto          = "tb_photo"
+	TablePhoto          = "tb_document"
 	TableDocument       = "tb_document"
 	TableMD5            = "tb_md5sum"
 	TableStickerSet     = "tb_stickerset"

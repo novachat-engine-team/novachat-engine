@@ -155,9 +155,12 @@ func (c *Core) GetUserList(userId int64, userIdList []int64, layer int32) ([]*mt
 					log.Infof("GetUserList ReqGetPhotoList error:%s", err.Error())
 				} else {
 					for _, v := range photoInfoList.Values {
-						photoMap[v.VolumeId] = &data_fs.PhotoProfile{
-							Photo: utils.ToDataPhoto(v).Detail[0],
-							Video: nil,
+						detail := utils.ToDataPhoto(v).Detail
+						if len(detail) > 0 {
+							photoMap[v.VolumeId] = &data_fs.PhotoProfile{
+								Photo: detail[0],
+								Video: nil,
+							}
 						}
 					}
 				}
@@ -243,9 +246,12 @@ func (c *Core) GetUser(userId int64, peerId int64, layer int32) (*mtproto.User, 
 				if err != nil {
 					log.Infof("GetUserList ReqGetPhoto error:%s", err.Error())
 				} else {
-					dataPhoto = &data_fs.PhotoProfile{
-						Photo: utils.ToDataPhoto(photoInfo).Detail[0],
-						Video: nil,
+					detail := utils.ToDataPhoto(photoInfo).Detail
+					if len(detail) > 0 {
+						dataPhoto = &data_fs.PhotoProfile{
+							Photo: detail[0],
+							Video: nil,
+						}
 					}
 				}
 			}

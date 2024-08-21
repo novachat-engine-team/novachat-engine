@@ -76,15 +76,41 @@ func (m *SfsServiceImpl) ReqUploadedDocument(ctx context.Context, req *sfsServic
 			FilePath:   dstPathName,
 			AccessHash: crypto.GenerateAccessHash(),
 		}
-		if req.Video {
-			fileInfo.VideoStartTs = req.VideoStartTs
+
+		if photo == nil && fileType == partfs.SubPathsTypePng {
+			photo = &data_fs.Photo{
+				VolumeId:   id,
+				LocalId:    0,
+				FilePath:   dstPathName,
+				Filename:   req.GetFileName(),
+				Md5Sum:     md5sum,
+				Date:       fileInfo.Date,
+				Detail:     nil,
+				Size_:      fileInfo.Size_,
+				FileType:   fileType.ToInt32(),
+				AccessHash: fileInfo.AccessHash,
+			}
+			var photoList []*data_fs.Photo
+			photoList, err = datPhotoHandler(datPath, dstPathName, req.Parts, photo, m)
+			if err != nil {
+				log.Debugf("UploadedDocument req:%v datPhotoHandler error:%s", req, err.Error())
+				return nil, err
+			}
+
+			fileInfo.Thumbs = photoList
+			m.core.SavePhoto(photoList)
+			m.core.SaveMd5sum(&data_fs.Md5Sum{Md5Sum: md5sum, PhotoInfo: photo})
+		} else {
+			if req.Video {
+				fileInfo.VideoStartTs = req.VideoStartTs
+			}
+			go datHandler(datPath, dstPathName, req.Parts, fileInfo, m)
+			m.core.SaveDocument([]*data_fs.Document{fileInfo})
+			m.core.SaveMd5sum(&data_fs.Md5Sum{
+				Md5Sum:       md5sum,
+				DocumentInfo: fileInfo,
+			})
 		}
-		go datHandler(datPath, dstPathName, req.Parts, fileInfo, m)
-		m.core.SaveDocument([]*data_fs.Document{fileInfo})
-		m.core.SaveMd5sum(&data_fs.Md5Sum{
-			Md5Sum:       md5sum,
-			DocumentInfo: fileInfo,
-		})
 	}
 
 	log.Debugf("UploadedDocument req:%v reply ok!!!!!!!!!", req)

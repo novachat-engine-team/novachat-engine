@@ -209,7 +209,7 @@ func FileSize(filePathName string) (int64, error) {
 }
 
 func LocationPartDatDir(authKeyId int64, fileId int64) string {
-	return fmt.Sprintf("%s/%02X/%d/%d.parts", GetSubPath(SubPathsTypePart), uint64(fileId)%uint64(DirNumber), authKeyId, fileId)
+	return fmt.Sprintf("%s/%02X/%d.parts", GetSubPath(SubPathsTypePart), uint64(fileId)%uint64(DirNumber), fileId)
 }
 
 func LocationPartDir(fileId int64, subPathType SubPathsType) string {

@@ -1,3 +1,12 @@
+/*
+ * Copyright (c) 2021-present,  NovaChat-Engine.
+ *  All rights reserved.
+ *
+ * @Author: Coder (coderxw@gmail.com)
+ * @Time :
+ * @File :
+ */
+
 package photo
 
 import (
@@ -14,9 +23,28 @@ func PhotoInfo2Photo(photoInfo *sfsService.PhotoInfo, layer int32) *mtproto.Phot
 	if len(photoInfo.PhotoSize) > 0 {
 		sizes = make([]*mtproto.PhotoSize, 0, len(photoInfo.PhotoSize))
 		for _, v := range photoInfo.PhotoSize {
-			sizes = append(sizes, PhotoInfo2PhotoSize(v, layer))
-			if strippedSize := PhotoInfo2PhotoStrippedSize(v); strippedSize != nil {
-				sizes = append(sizes, strippedSize)
+			for _, vv := range v.PhotoSize {
+				if len(vv.PhotoSize) == 0 {
+					tmpPhotoSize := PhotoInfo2PhotoSize(vv, layer)
+					if tmpPhotoSize.Location != nil {
+						tmpPhotoSize.Location.VolumeId = v.VolumeId
+					}
+					sizes = append(sizes, tmpPhotoSize)
+					if strippedSize := PhotoInfo2PhotoStrippedSize(vv); strippedSize != nil {
+						sizes = append(sizes, strippedSize)
+					}
+				} else {
+					for _, vvv := range vv.PhotoSize {
+						tmpPhotoSize := PhotoInfo2PhotoSize(vvv, layer)
+						if tmpPhotoSize.Location != nil {
+							tmpPhotoSize.Location.VolumeId = v.VolumeId
+						}
+						sizes = append(sizes, tmpPhotoSize)
+						if strippedSize := PhotoInfo2PhotoStrippedSize(vvv); strippedSize != nil {
+							sizes = append(sizes, strippedSize)
+						}
+					}
+				}
 			}
 		}
 	} else {

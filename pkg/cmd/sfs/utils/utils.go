@@ -100,7 +100,7 @@ func ToDataPhoto(info *sfsService.PhotoInfo) *data_fs.Photo {
 }
 
 func ToPhoto(photo *data_fs.Photo) *sfsService.PhotoInfo {
-	if photo == nil {
+	if photo == nil || len(photo.Detail) == 0 {
 		return &sfsService.PhotoInfo{}
 	}
 
