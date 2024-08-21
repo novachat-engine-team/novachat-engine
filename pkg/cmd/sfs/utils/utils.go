@@ -119,6 +119,10 @@ func ToPhoto(photo *data_fs.Photo) *sfsService.PhotoInfo {
 	}
 
 	for _, v := range photo.Detail {
+		if photoInfo.VolumeId == v.VolumeId {
+			photoInfo.Height = v.PhotoSize.Height
+			photoInfo.Weight = v.PhotoSize.Width
+		}
 		photoInfo.PhotoSize = append(photoInfo.PhotoSize, &sfsService.PhotoInfo{
 			VolumeId: v.VolumeId,
 			LocalId:  v.LocalId,

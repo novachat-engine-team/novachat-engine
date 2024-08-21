@@ -70,7 +70,11 @@ func PhotoData2Photo(photoInfo *data_fs.Photo) *mtproto.Photo {
 	if len(photoInfo.Detail) > 0 {
 		sizes = make([]*mtproto.PhotoSize, 0, len(photoInfo.Detail))
 		for _, v := range photoInfo.Detail {
-			sizes = append(sizes, PhotoSize2PhotoSize(v))
+			tmpPhotoSize := PhotoSize2PhotoSize(v)
+			if tmpPhotoSize.Location != nil {
+				tmpPhotoSize.Location.VolumeId = photoInfo.VolumeId
+			}
+			sizes = append(sizes, tmpPhotoSize)
 			if strippedSize := PhotoData2PhotoStrippedSize(v); strippedSize != nil {
 				sizes = append(sizes, strippedSize)
 			}
@@ -111,10 +115,10 @@ func Photo2PhotoData(photoSize *mtproto.Photo) *data_fs.Photo {
 		if v.Location != nil {
 			detail.VolumeId = v.Location.VolumeId
 			detail.LocalId = v.Location.LocalId
-			photo.VolumeId = v.Location.VolumeId
-			photo.LocalId = v.Location.LocalId
 		}
 		if idx == 0 {
+			photo.VolumeId = v.Location.VolumeId
+			photo.LocalId = v.Location.LocalId
 			photo.Size_ = v.Size_
 		}
 
