@@ -695,6 +695,35 @@ func (m *MessageHandler) onDestroySession(id int64, seqno int32, session *mtprot
 }
 
 func (m *MessageHandler) PushUpdates(sessionIdList []int64, updates *mtproto.Updates) (bool, error) {
+	if len(sessionIdList) > 0 {
+		return m.pushUpdatesSessionIdList(sessionIdList, updates)
+	} else {
+		var connId uint64
+		var ok bool
+		var err error
+		var okResult bool
+		connIdMap := make(map[uint64]int64)
+		m.sessionIdMap.Range(func(key, value interface{}) bool {
+			connId, _ = value.(uint64)
+			if connId > 0 {
+				connIdMap[connId] = key.(int64)
+			}
+			return true
+		})
+		for k, v := range connIdMap {
+			ok, err = m.sessionHandler.Send2Client(m.sessionContext, message_id.MakeNextMessageId(false), false,
+				compat.UpdatesCompat(updates, m.sessionContext.AuthKeyInfo.Layer), 0,
+				&MessageContext{SessionId: v, ConnId: k})
+			if err != nil {
+				log.Warnf("PushUpdates Send2Client sessionId:%d error:%s", v, err.Error())
+			}
+			okResult = ok || okResult
+		}
+		return okResult, nil
+	}
+}
+
+func (m *MessageHandler) pushUpdatesSessionIdList(sessionIdList []int64, updates *mtproto.Updates) (bool, error) {
 	var err error
 	var okResult bool
 	for _, sessionId := range sessionIdList {
