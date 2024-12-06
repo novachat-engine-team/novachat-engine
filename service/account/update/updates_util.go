@@ -51,6 +51,15 @@ func UserUpdateToUpdate(userUpdate *data_update.UserUpdate, layer int32) *mtprot
 		}
 		return mtproto.NewTLUpdateEditChannelMessage(up).To_Update()
 
+	case constants.UpdateTypeUpdatePinnedMessages:
+		//  updatePinnedMessages#ed85eab5 flags:# pinned:flags.0?true peer:Peer messages:Vector<int> pts:int pts_count:int = Update;
+		up.Pinned = userUpdate.FoldId == 1
+		up.Pts = userUpdate.Pts
+		up.PtsCount = userUpdate.PtsCount
+		up.Messages = userUpdate.MessageBoxIds
+		up.Peer9961FD5C71 = input.MakeInputPeerValue(userUpdate.PeerId, constants.PeerTypeFromInt32(userUpdate.PeerType)).ToPeer()
+		return mtproto.NewTLUpdatePinnedMessages(up).To_Update()
+
 	case constants.UpdateTypeUpdateMessageID:
 		up.Id4E90BFD671 = userUpdate.Id
 		up.RandomId = userUpdate.RandomId
@@ -261,6 +270,18 @@ func UpdateToUserUpdate(userId int64, up *mtproto.Update) *data_update.UserUpdat
 			constants.PeerTypeFromUserIDType32(up.Message1F2B0AFD71.FromId90DDDC1171).ToInt(),
 			inputPeer.GetPeerId(), inputPeer.GetPeerType(), up.Message1F2B0AFD71)
 		userUpdate.RandomId = up.RandomId
+		return userUpdate
+	case constants.UpdateTypeUpdatePinnedMessages:
+		//  updatePinnedMessages#ed85eab5 flags:# pinned:flags.0?true peer:Peer messages:Vector<int> pts:int pts_count:int = Update;
+		inputPeer := input.MakePeer(up.Peer9961FD5C71)
+		userUpdate.PeerType = inputPeer.GetPeerType().ToInt32()
+		userUpdate.PeerId = inputPeer.GetPeerId()
+		if up.Pinned {
+			userUpdate.FoldId = 1
+		}
+		userUpdate.Pts = up.Pts
+		userUpdate.PtsCount = up.PtsCount
+		userUpdate.MessageBoxIds = up.Messages
 		return userUpdate
 
 	case constants.UpdateTypeUpdateMessageID:

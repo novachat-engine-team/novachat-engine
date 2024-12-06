@@ -207,7 +207,7 @@ func (c *Core) PinnedMessage(userId int64, peerId int64, peerType constants.Peer
 		return -1, 0, err
 	}
 
-	log.Debugf("PinnedMessage userId:%d msgId:%d pts:%d:%s", userId, msgId, pts)
+	log.Debugf("PinnedMessage userId:%d msgId:%d pts:%d", userId, msgId, pts)
 	return pts, globalMessageId, nil
 }
 

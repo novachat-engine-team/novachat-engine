@@ -118,7 +118,7 @@ func (m *PartFS) WriteFilePartData(authKeyId int64, fileId int64, filePart int32
 
 	if exist == false {
 		err = os.MkdirAll(filePathDir, 0755)
-		if !errors.Is(err, os.ErrExist) {
+		if err != nil && !errors.Is(err, os.ErrExist) {
 			log.Errorf("WriteFilePartData Mkdir %s error:%s", filePathDir, err.Error())
 			return err
 		}

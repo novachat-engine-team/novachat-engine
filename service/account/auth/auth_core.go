@@ -121,7 +121,7 @@ func (m *Core) AuthKey(authKeyId int64, sessionId int64, userId int64) (*dataAut
 	if userId == 0 {
 		key := makeAuthKeyIdKey(authKeyId)
 		entities, err := m.usersCache.Get(key)
-		if err != nil || len(entities) > 0 {
+		if err != nil || len(entities) == 0 {
 			log.Infof("AuthKey not found key:%d", authKeyId)
 		} else {
 			var info SessionInfo

@@ -27,9 +27,13 @@ func (m *AuthImpl) ReqBindedUser(ctx context.Context, request *authService.Binde
 		return nil, err
 	}
 
-	log.Debugf("ReqBindedUser request:%+v PermAuthKeyId:%d AuthKeyId:%d UserId:%d", request, auth.PermAuthKeyId, auth.AuthKeyId, auth.UserId)
+	if auth != nil {
+		log.Debugf("ReqBindedUser request:%+v PermAuthKeyId:%d AuthKeyId:%d UserId:%d", request, auth.PermAuthKeyId, auth.AuthKeyId, auth.UserId)
+	} else {
+		log.Debugf("ReqBindedUser request:%+v nil ", request)
+	}
 
-	if request.UserId == 0 && auth.UserId != 0 {
+	if request.UserId == 0 && auth != nil && auth.UserId != 0 {
 		request.UserId = auth.UserId
 		request.PermAuthKeyId = request.AuthKeyId
 		resp, err1 := authService.GetAuthClientByAuthKey(auth.UserId).ReqBindedUser(ctx, request)
@@ -41,6 +45,11 @@ func (m *AuthImpl) ReqBindedUser(ctx context.Context, request *authService.Binde
 		//return resp, nil
 	}
 
+	if auth == nil {
+		return types.MarshalAny(&mtproto.TLInt64{
+			Value: 0,
+		})
+	}
 	return types.MarshalAny(&mtproto.TLInt64{
 		Value: auth.UserId,
 	})

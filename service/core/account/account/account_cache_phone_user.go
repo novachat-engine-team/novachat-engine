@@ -39,7 +39,7 @@ func (m *Core) PushPhoneList(phoneList []string, infoList []string) error {
 
 func (m *Core) PhoneUser(phone string) (string, error) {
 	v, err := redis.String(m.redisClient.Do(GET, MakeAccountCacheUsersPhoneNumberPrefix(phone)))
-	if err != nil {
+	if err != nil && err != redis.ErrNil {
 		log.Errorf("PhoneUser phone:%v error:%s", phone, err.Error())
 		return "", err
 	}

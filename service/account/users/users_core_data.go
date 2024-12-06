@@ -65,6 +65,9 @@ func (c *Core) UserDataList(userIdList []int64) ([]*data_users.Users, error) {
 	}
 
 	for _, v := range userCacheList {
+		if len(v) == 0 {
+			continue
+		}
 		userInfo, err1 := account.CacheInfo2User(v)
 		if err1 == nil {
 			userInfoList = append(userInfoList, userInfo)
