@@ -189,6 +189,7 @@ func (c *Core) DeleteHistory(
 			PeerType:            peerType.ToInt32(),
 			GlobalMessageIdList: globalMessageIdList,
 			Range:               false,
+			All:                 maxId == 0,
 		})
 		if err != nil {
 			log.Errorf("DeleteMessages GetMessageList ReqRevokeMessages userId:%d messageIdList:%v error:%s", userId, messageIdList, err.Error())

@@ -19,7 +19,7 @@ import (
 	"time"
 )
 
-func (c *Core) RevokeMessageData(userId int64, peerId int64, peerType constants.PeerType, globalMessageIdList []int64, rRange bool) (int32, []int32, error) {
+func (c *Core) RevokeMessageData(userId int64, peerId int64, peerType constants.PeerType, globalMessageIdList []int64, rRange bool, all bool) (int32, []int32, error) {
 	conversation, err := c.messageCore.GetConversation(userId, &data_message.Conversation{
 		UserId:   userId,
 		PeerId:   peerId,
@@ -35,10 +35,11 @@ func (c *Core) RevokeMessageData(userId int64, peerId int64, peerType constants.
 		if len(globalMessageIdList) == 0 {
 			messageMaxId = conversation.Top
 		} else {
-			messageDataList, err1 := c.messageCore.GetMessageByGlobalMessageIdList(userId, globalMessageIdList, false)
+			var messageDataList []*data_message.Message
+			messageDataList, err = c.messageCore.GetMessageByGlobalMessageIdList(userId, globalMessageIdList, false)
 			if err != nil {
 				log.Errorf("RevokeMessageData GetMessageByGlobalMessageIdList error:%s", err.Error())
-				return 0, nil, err1
+				return 0, nil, err
 			}
 			if len(messageDataList) == 0 {
 				messageMaxId = messageDataList[0].Id
@@ -49,33 +50,43 @@ func (c *Core) RevokeMessageData(userId int64, peerId int64, peerType constants.
 		log.Debugf("RevokeMessageData userId:%d peerId:%d peerType:%v globalMessageIdList:%v messageMaxId:%d", userId, peerId, peerType, globalMessageIdList, messageMaxId)
 		return c.messageCore.DeleteMessagesByMaxId(userId, peerId, peerType, messageMaxId, int32(time.Now().Unix()), 0)
 	} else {
-		if len(globalMessageIdList) == 0 {
-			log.Warnf("RevokeMessageData userId:%d peerId:%d peerType:%v globalMessageId is empty", userId, peerId, peerType)
-			return 0, nil, nil
-		}
-		log.Debugf("RevokeMessageData  DeleteMessages peerId :%d peerType:%v globalMessageIdList:%v", peerId, peerType, globalMessageIdList)
-		messageDataList, err1 := c.messageCore.GetMessageByGlobalMessageIdList(userId, globalMessageIdList, false)
-		if err != nil {
-			log.Errorf("RevokeMessageData GetMessageByGlobalMessageIdList error:%s", err.Error())
-			return 0, nil, err1
-		}
-		if len(messageDataList) == 0 {
-			log.Warnf("RevokeMessageData GetMessageByGlobalMessageIdList userId:%d globalMessageIdList:%v message is empty", userId, globalMessageIdList)
-			return 0, nil, nil
+		var pts int32
+		var messageIdList []int32
+		if !all {
+			var messageDataList []*data_message.Message
+			if len(globalMessageIdList) == 0 {
+				log.Warnf("RevokeMessageData userId:%d peerId:%d peerType:%v globalMessageId is empty", userId, peerId, peerType)
+				return 0, nil, nil
+			}
+			log.Debugf("RevokeMessageData  DeleteMessages peerId :%d peerType:%v globalMessageIdList:%v", peerId, peerType, globalMessageIdList)
+			messageDataList, err = c.messageCore.GetMessageByGlobalMessageIdList(userId, globalMessageIdList, false)
+			if err != nil {
+				log.Errorf("RevokeMessageData GetMessageByGlobalMessageIdList error:%s", err.Error())
+				return 0, nil, err
+			}
+			if len(messageDataList) == 0 {
+				log.Warnf("RevokeMessageData GetMessageByGlobalMessageIdList userId:%d globalMessageIdList:%v message is empty", userId, globalMessageIdList)
+				return 0, nil, nil
+			}
+			messageIdList = make([]int32, 0, len(messageDataList))
+			for _, v := range messageDataList {
+				messageIdList = append(messageIdList, v.Id)
+			}
+			pts, err = c.messageCore.DeleteMessages(userId, messageIdList)
+			if err != nil {
+				err = errors.NewRpcErrorWithRpcErrorCode(mtproto.RpcErrorCode_INTERNAL)
+				log.Errorf("RevokeMessageData DeleteMessages error:%s need retry", err.Error())
+				return 0, nil, err
+			}
+		} else {
+			pts, messageIdList, err = c.messageCore.DeleteMessagesByMaxId(userId, peerId, peerType, conversation.Top, 0, 0)
+			if err != nil {
+				log.Errorf("RevokeMessageData DeleteMessagesByMaxId error:%s", err.Error())
+				return 0, nil, err
+			}
 		}
 
-		messageIdList := make([]int32, 0, len(messageDataList))
-		for _, v := range messageDataList {
-			messageIdList = append(messageIdList, v.Id)
-		}
-		pts, err1 := c.messageCore.DeleteMessages(userId, messageIdList)
-		if err1 != nil {
-			err1 = errors.NewRpcErrorWithRpcErrorCode(mtproto.RpcErrorCode_INTERNAL)
-			log.Errorf("RevokeMessageData DeleteMessages error:%s need retry", err.Error())
-			return 0, nil, err
-		}
-
-		log.Debugf("RevokeMessageData DeleteMessages userId:%d peerId:%d peerType:%v globalMessageIdList:%v messageIdList:%v", userId, peerId, peerType, globalMessageIdList, messageIdList)
+		log.Debugf("RevokeMessageData DeleteMessages userId:%d peerId:%d peerType:%v globalMessageIdList:%v messageIdList:%v all:%+v", userId, peerId, peerType, globalMessageIdList, messageIdList, all)
 		return pts, messageIdList, nil
 	}
 }

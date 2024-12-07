@@ -28,12 +28,22 @@ func (c *Core) getHistoryMessages(userId int64, peerId int64, peerType constants
 	sortOperator := bson.M{}
 	if limit < 0 { // backward
 		limit = -limit
+		limit += 1
 
-		if uint32(messageId) <= uint32(minId) {
-			return []*data_message.Message{}, nil
+		if messageId != minId {
+			if uint32(messageId) <= uint32(minId) {
+				return []*data_message.Message{}, nil
+			}
+			// <
+			filter["id"] = bson.M{mgo.LT: messageId, mgo.GT: minId}
+		} else {
+			if messageId == minId && minId == 0 {
+				filter["id"] = bson.M{mgo.GT: minId}
+				limit = -1
+			} else {
+				filter["id"] = messageId
+			}
 		}
-		// <
-		filter["id"] = bson.M{mgo.LT: messageId, mgo.GT: minId}
 		sortOperator["id"] = -1
 
 	} else { // forward
@@ -43,6 +53,7 @@ func (c *Core) getHistoryMessages(userId int64, peerId int64, peerType constants
 		// >=
 		filter["id"] = bson.M{mgo.GTE: messageId}
 		sortOperator["id"] = 1
+		limit += 1
 	}
 	if date > 0 {
 		filter["date"] = bson.M{mgo.GTE: date}
@@ -53,9 +64,11 @@ func (c *Core) getHistoryMessages(userId int64, peerId int64, peerType constants
 	if !deleted {
 		filter["deleted"] = false
 	}
-	limit += 1
+
 	opf := options.Find()
-	opf.SetLimit(int64(limit))
+	if limit > 0 {
+		opf.SetLimit(int64(limit))
+	}
 	opf.SetSort(sortOperator)
 	var cursor *mongo.Cursor
 	var err error

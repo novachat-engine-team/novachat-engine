@@ -79,7 +79,11 @@ func (c *Core) DeleteMessagesByMaxId(userId, peerId int64, peerType constants.Pe
 	filter := bson.M{}
 	filter["peer_id"] = peerId
 	filter["user_id"] = userId
-	filter["id"] = bson.M{mgo.LTE: maxId}
+	if maxId == 0 {
+		filter["id"] = bson.M{mgo.GT: maxId}
+	} else {
+		filter["id"] = bson.M{mgo.LTE: maxId}
+	}
 	filter["deleted"] = false
 
 	op := options.Collection()

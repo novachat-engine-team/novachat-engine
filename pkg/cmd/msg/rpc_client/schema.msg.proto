@@ -66,6 +66,7 @@ message RevokeMessages {
   repeated int64          global_message_id_list  = 4;
   bool                    range                   = 5;
   int32                   channel_pts             = 6;
+  bool                    all                     = 7;
 }
 
 message ReadHistory {

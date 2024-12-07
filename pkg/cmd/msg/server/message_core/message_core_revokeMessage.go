@@ -65,7 +65,7 @@ func (m *MessageCoreService) RevokeMessageData(revokeMessage *msgService.RevokeM
 
 	case constants.PeerTypeUser:
 		userId, peerId = revokeMessage.PeerId, revokeMessage.UserId
-		pts, messageIdList, err := m.inboxesCore.RevokeMessageData(userId, peerId, peerType, revokeMessage.GlobalMessageIdList, revokeMessage.Range)
+		pts, messageIdList, err := m.inboxesCore.RevokeMessageData(userId, peerId, peerType, revokeMessage.GlobalMessageIdList, revokeMessage.Range, revokeMessage.All)
 		if err != nil {
 			log.Errorf("RevokeMessageData inboxes RevokeMessageData error:%s", err.Error())
 			return err

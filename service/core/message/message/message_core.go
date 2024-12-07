@@ -25,10 +25,6 @@ type Core struct {
 	messageIdNode *snowflake.Node
 }
 
-func (c *Core) DeleteMessage(id int64, list []int32) {
-
-}
-
 func NewMessageCore(config *config.MongodbConfig, messageIdNode *snowflake.Node) *Core {
 	mgo.InstallMongodb(config)
 
