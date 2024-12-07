@@ -53,9 +53,9 @@ func (s *ContactsServiceImpl) ContactsResolveUsername(ctx context.Context, reque
 			}
 
 			if contact != nil {
-				user = usersUtil.UserCoreContactUser(usersUtil.UserCore2Users(userInfo), true, contact.GetContact() > data_contact.MutualTypeMyContact)
+				user = usersUtil.UserCoreContactUser(usersUtil.UserCore2Users(userInfo), !contact.Deleted, !contact.Deleted && contact.GetContact() > data_contact.MutualTypeMyContact, contact)
 			} else {
-				user = usersUtil.UserCoreContactUser(usersUtil.UserCore2Users(userInfo), false, false)
+				user = usersUtil.UserCoreContactUser(usersUtil.UserCore2Users(userInfo), false, false, nil)
 			}
 		}
 	}

@@ -200,7 +200,7 @@ func (c *Core) GetUserList(userId int64, userIdList []int64, layer int32) ([]*mt
 		if v.Id == userId {
 			UserCoreSelfUsers(user)
 		} else {
-			user = UserCoreContactUser(user, vv != nil, vv != nil && vv.GetContact() > data_contact.MutualTypeMyContact)
+			user = UserCoreContactUser(user, vv != nil && !vv.Deleted, vv != nil && !vv.Deleted && vv.GetContact() > data_contact.MutualTypeMyContact, contactsCacheMap[v.Id])
 		}
 		userList = append(userList, user)
 		user.Photo = photo.PhotoProfileUserProfilePhoto(dataPhoto, layer)
@@ -282,7 +282,7 @@ func (c *Core) GetUser(userId int64, peerId int64, layer int32) (*mtproto.User, 
 			log.Warnf("GetUser - GetContactById error:%s", err1.Error())
 		}
 
-		user = UserCoreContactUser(user, contact != nil, contact != nil && contact.GetContact() > data_contact.MutualTypeMyContact)
+		user = UserCoreContactUser(user, contact != nil && !contact.Deleted, contact != nil && !contact.Deleted && contact.GetContact() > data_contact.MutualTypeMyContact, contact)
 	}
 	user.Photo = photo.PhotoProfileUserProfilePhoto(dataPhoto, layer)
 	return user, nil

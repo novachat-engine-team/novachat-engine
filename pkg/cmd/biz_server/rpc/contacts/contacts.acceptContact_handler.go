@@ -52,7 +52,7 @@ func (s *ContactsServiceImpl) ContactsAcceptContact(ctx context.Context, request
 			return nil, err
 		}
 		user := users.UserCore2Users(userInfo)
-		user = users.UserCoreContactUser(user, true, contactState >= data_contact.MutualTypeMutual)
+		user = users.UserCoreContactUser(user, true, contactState >= data_contact.MutualTypeMutual, nil)
 		updates.SetUsers([]*mtproto.User{user})
 
 		go func() {

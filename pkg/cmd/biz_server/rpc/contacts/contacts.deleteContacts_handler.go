@@ -82,7 +82,7 @@ func (s *ContactsServiceImpl) ContactsDeleteContacts(ctx context.Context, reques
 			if v.Id == md.UserId {
 				users.UserCoreSelfUsers(user)
 			} else {
-				user = users.UserCoreContactUser(user, false, false)
+				user = users.UserCoreContactUser(user, false, false, nil)
 			}
 			userList = append(userList, user)
 		}

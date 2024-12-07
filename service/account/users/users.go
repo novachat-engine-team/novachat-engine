@@ -13,10 +13,11 @@ package users
 import (
 	"novachat_engine/mtproto"
 	"novachat_engine/service/constants"
+	data_contact "novachat_engine/service/data/contact"
 	"novachat_engine/service/data/users"
 )
 
-func UserCoreContactUser(u *mtproto.User, contact bool, mutual bool) *mtproto.User {
+func UserCoreContactUser(u *mtproto.User, contact bool, mutual bool, contactInfo *data_contact.Contact) *mtproto.User {
 	u.Self = false
 
 	if mutual == true {
@@ -25,6 +26,11 @@ func UserCoreContactUser(u *mtproto.User, contact bool, mutual bool) *mtproto.Us
 	} else {
 		u.Contact = contact
 		u.MutualContact = false
+	}
+
+	if contact && contactInfo != nil && len(contactInfo.FirstName) > 0 && !contactInfo.Deleted {
+		u.FirstName = contactInfo.FirstName
+		u.LastName = contactInfo.LastName
 	}
 	return u
 }

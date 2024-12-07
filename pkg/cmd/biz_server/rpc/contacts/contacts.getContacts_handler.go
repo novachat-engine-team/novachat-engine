@@ -113,14 +113,14 @@ func (s *ContactsServiceImpl) ContactsGetContacts(ctx context.Context, request *
 		}
 
 		vv, _ = contactsCacheMap[userInfo.Id]
-		if vv == nil {
+		if vv == nil || vv.Deleted {
 			log.Warnf("ContactsGetContacts - request: %v contactsCacheMap error:%s", request, err.Error())
 			continue
 		}
 		if userInfo.Id == md.UserId {
 			user = usersUtil.UserCoreSelfUsers(usersUtil.UserCore2Users(userInfo))
 		} else {
-			user = usersUtil.UserCoreContactUser(usersUtil.UserCore2Users(userInfo), true, vv.GetContact() > data_contact.MutualTypeMyContact)
+			user = usersUtil.UserCoreContactUser(usersUtil.UserCore2Users(userInfo), !vv.Deleted, !vv.Deleted && vv.GetContact() > data_contact.MutualTypeMyContact, vv)
 		}
 
 		userList = append(userList, user)

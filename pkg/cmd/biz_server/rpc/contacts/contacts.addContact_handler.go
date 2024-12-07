@@ -73,17 +73,17 @@ func (s *ContactsServiceImpl) ContactsAddContact(ctx context.Context, request *m
 			modify := false
 			state := contact.GetContact()
 			if contact == nil || contact.GetContact() <= data_contact.MutualTypeDefault {
-				state, err = s.accountContactCore.AddContact(md.UserId, request.Phone, constants.PeerTypeFromUserIDType32(request.Id.UserId).ToInt(), request.LastName, request.LastName, int32(time.Now().Unix()))
+				state, err = s.accountContactCore.AddContact(md.UserId, request.Phone, constants.PeerTypeFromUserIDType32(request.Id.UserId).ToInt(), request.FirstName, request.LastName, int32(time.Now().Unix()))
 				if err != nil {
 					log.Errorf("ContactsAddContact %v, request: %v AddContact error:%s", md, request, err.Error())
 					return nil, errors.NewRpcErrorWithCodeString(mtproto.RpcErrorCode_INTERNAL.ToInt32(), err.Error())
 				}
 				modify = true
-			} else if contact.GetContact() > data_contact.MutualTypeMyContact && !(
+			} else if contact.GetContact() >= data_contact.MutualTypeMyContact && !(
 				contact.LastName == request.LastName &&
 					contact.FirstName == request.FirstName &&
 					contact.Phone == request.Phone) {
-				err = s.accountContactCore.ModifyContact(md.UserId, request.Phone, constants.PeerTypeFromUserIDType32(request.Id.UserId).ToInt(), request.LastName, request.LastName, int32(time.Now().Unix()))
+				err = s.accountContactCore.ModifyContact(md.UserId, request.Phone, constants.PeerTypeFromUserIDType32(request.Id.UserId).ToInt(), request.FirstName, request.LastName, int32(time.Now().Unix()))
 				if err != nil {
 					log.Errorf("ContactsAddContact %v, request: %v AddContact error:%s", md, request, err.Error())
 					return nil, errors.NewRpcErrorWithCodeString(mtproto.RpcErrorCode_INTERNAL.ToInt32(), err.Error())
@@ -92,9 +92,11 @@ func (s *ContactsServiceImpl) ContactsAddContact(ctx context.Context, request *m
 				state = contact.GetContact()
 			}
 			if modify {
+				contact.FirstName = request.FirstName
+				contact.LastName = request.LastName
 				//TODO:Coder
 				// sync to devices
-				user = usersUtil.UserCoreContactUser(user, true, state >= data_contact.MutualTypeMyContact)
+				user = usersUtil.UserCoreContactUser(user, true, state >= data_contact.MutualTypeMyContact, contact)
 				updates.SetUpdates([]*mtproto.Update{
 					mtproto.NewTLUpdateUserName(&mtproto.Update{
 						UserId:    request.Id.UserId,
