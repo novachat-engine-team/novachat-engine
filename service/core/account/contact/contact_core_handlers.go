@@ -212,14 +212,18 @@ func (c *Core) ContactsBlock(userId int64, peerId int64, now int32) error {
 
 	col := c.getCollection()
 	value := &data_contact.Contact{
-		UserId: userId,
-		PeerId: peerId,
-		Block:  true,
-		Date:   now,
-		Id:     makeContactId(userId, peerId),
+		UserId:  userId,
+		PeerId:  peerId,
+		Block:   true,
+		Date:    now,
+		Id:      makeContactId(userId, peerId),
+		Deleted: true,
 	}
 	_, err := col.UpdateOne(context.Background(), mgo.DBE.MarshalCustomSpecMap(value, "UserId", "PeerId"),
-		bson.M{mgo.SET: mgo.DBE.MarshalCustomSpecMap(value, "Id", "FoldId", "Block", "Date")}, updateOptions)
+		bson.M{
+			mgo.SET:         mgo.DBE.MarshalCustomSpecMap(value, "Id", "FoldId", "Block", "Date"),
+			mgo.SETONINSERT: mgo.DBE.MarshalCustomSpecMap(value, "Deleted"),
+		}, updateOptions)
 	if err != nil {
 		log.Errorf("ContactsBlock userId:%v error:%s", userId, err.Error())
 		return err
@@ -269,7 +273,7 @@ func (c *Core) GetBlocked(userId int64) ([]*data_contact.Contact, error) {
 	of := options.Find()
 	of.SetProjection(bson.M{"user_id": 1, "date": 1, "peer_id": 1})
 	cursor, err := col.Find(context.Background(),
-		mgo.DBE.MarshalCustomSpecMap(&data_contact.Contact{UserId: userId, Block: true, Deleted: false}, "UserId", "Block"))
+		mgo.DBE.MarshalCustomSpecMap(&data_contact.Contact{UserId: userId, Block: true}, "UserId", "Block"))
 	if err != nil && err != mongo.ErrNilDocument {
 		log.Errorf("GetBlocked userId:%verror:%s", userId, err.Error())
 		return nil, err
@@ -277,4 +281,28 @@ func (c *Core) GetBlocked(userId int64) ([]*data_contact.Contact, error) {
 	cursor.All(context.Background(), &ret)
 	cursor.Close(context.Background())
 	return ret, nil
+}
+
+func (c *Core) ContactsBlockMutual(userId int64, peerId int64) ([]*data_contact.Contact, error) {
+	col := c.getCollection()
+	filter := bson.M{mgo.OR: []bson.M{
+		mgo.DBE.MarshalCustomSpecMap(&data_contact.Contact{
+			UserId: userId,
+			PeerId: peerId,
+		}, "UserId", "PeerId"),
+		mgo.DBE.MarshalCustomSpecMap(&data_contact.Contact{
+			UserId: peerId,
+			PeerId: userId,
+		}, "UserId", "PeerId"),
+	}}
+	cursor, err := col.Find(context.Background(), filter)
+	if err != nil && err != mongo.ErrNilDocument {
+		log.Errorf("ContactsBlockMutual userId:%v peerId:%d error:%s", userId, peerId, err.Error())
+		return nil, err
+	}
+	defer cursor.Close(context.Background())
+
+	var contactList []*data_contact.Contact
+	_ = cursor.All(context.Background(), &contactList)
+	return contactList, nil
 }

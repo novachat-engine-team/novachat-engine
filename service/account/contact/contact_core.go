@@ -17,9 +17,10 @@ import (
 type Blocked int32
 
 var (
-	BlockedNone  Blocked = 0
-	BlockedSelf  Blocked = 1
-	BlockedOther Blocked = 2
+	BlockedNone   Blocked = 0
+	BlockedSelf   Blocked = 1
+	BlockedOther  Blocked = 2
+	BlockedMutual Blocked = 3
 )
 
 type Core struct {
@@ -33,8 +34,29 @@ func NewContactCore(c *contact.Core) *Core {
 }
 
 func (c *Core) CheckBlock(userId int64, peerId int64, now int32) (Blocked, error) {
-	if userId == peerId || peerId == 0 {
+	if userId == peerId || peerId == 0 || userId == 0 {
 		return BlockedNone, nil
+	}
+
+	contactList, _ := c.contactCore.ContactsBlockMutual(userId, peerId)
+	if len(contactList) > 0 {
+		var flags int32
+		var my *data_contact.Contact
+		var peer *data_contact.Contact
+		for idx := range contactList {
+			if contactList[idx].UserId == userId {
+				my = contactList[idx]
+			} else {
+				peer = contactList[idx]
+			}
+		}
+		if my != nil && my.Block {
+			flags |= 1
+		}
+		if peer != nil && peer.Block {
+			flags |= 1 << 1
+		}
+		return Blocked(flags), nil
 	}
 
 	return BlockedNone, nil
