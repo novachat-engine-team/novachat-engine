@@ -237,17 +237,15 @@ func (m *MessageHandler) doRpcRequest(messageContext *MessageContext) {
 	}
 
 	var err error
-	var reqBinnedUser bool
+	//var reqBinnedUser bool
+	var userId int64
 	requestData := make([]*rpc.RpcStreamData, 0, len(messageContext.RequestMessageList))
 	for idx := range messageContext.RequestMessageList {
 		typeName := reflect.TypeOf(messageContext.RequestMessageList[idx].Message.Object).String()
 		uploadSession := conf.IsUploadSession(typeName)
 		withoutLogin := conf.WithoutLoginConfig(typeName)
 
-		if !uploadSession &&
-			!withoutLogin && (m.sessionContext.UserId == 0 ||
-			messageContext.SessionCreated &&
-				!reqBinnedUser) {
+		if !uploadSession && !withoutLogin {
 			if m.sessionContext.PermAuthKeyId == 0 {
 				resp, err1 := authClient.GetAuthClientByAuthKey(m.sessionContext.AuthKeyId).ReqAuthKey(context.Background(), &authClient.AuthKey{AuthKeyId: m.sessionContext.AuthKeyId})
 				if err1 != nil {
@@ -267,24 +265,32 @@ func (m *MessageHandler) doRpcRequest(messageContext *MessageContext) {
 					AuthKeyId:     m.sessionContext.AuthKeyId,
 					SessionId:     messageContext.SessionId})
 			if err1 != nil {
-				log.Errorf("doRpcRequest ReqBindedUser authKeyId:%d sessionId:%d error:%s", m.sessionContext.AuthKeyId, messageContext.SessionId, err.Error())
+				log.Errorf("doRpcRequest ReqBindedUser PermAuthKeyId:%d authKeyId:%d sessionId:%d error:%s", m.sessionContext.PermAuthKeyId, m.sessionContext.AuthKeyId, messageContext.SessionId, err1.Error())
 				return
 			}
 			var v mtproto.TLInt64
 			err1 = types.UnmarshalAny(resp, &v)
 			if err1 != nil {
-				log.Errorf("doRpcRequest ReqBindedUser authKeyId:%d sessionId:%d UnmarshalAny error:%s", m.sessionContext.AuthKeyId, messageContext.SessionId, err.Error())
+				log.Errorf("doRpcRequest ReqBindedUser authKeyId:%d sessionId:%d UnmarshalAny error:%s", m.sessionContext.AuthKeyId, messageContext.SessionId, err1.Error())
 				return
 			}
-			m.sessionContext.UserId = v.Value
-			if m.sessionContext.UserId == 0 {
+
+			userId = v.Value
+			if userId == 0 {
 				m.rpcResponse(messageContext.RequestMessageList[idx].Message.MsgId, true, true, errors.NewRpcErrorWithRpcErrorCode(mtproto.RpcErrorCode_UNAUTHORIZED_AUTH_KEY_INVALID).To_RpcError(), messageContext, nil)
 				log.Debugf("doRpcRequest ReqBindedUser authKeyId:%d permAuthKeyId:%d sessionId:%d RpcErrorCode_UNAUTHORIZED_AUTH_KEY_INVALID", m.sessionContext.AuthKeyId, m.sessionContext.PermAuthKeyId, messageContext.SessionId)
 				log.Warnf("RpcRequest authKeyId:%d typeName:%v reqMsgId:%d", m.sessionContext.AuthKeyId, typeName, messageContext.RequestMessageList[idx].Message.MsgId)
 				break
 			}
+			//m.sessionContext.UserId = v.Value
+			//if m.sessionContext.UserId == 0 {
+			//	m.rpcResponse(messageContext.RequestMessageList[idx].Message.MsgId, true, true, errors.NewRpcErrorWithRpcErrorCode(mtproto.RpcErrorCode_UNAUTHORIZED_AUTH_KEY_INVALID).To_RpcError(), messageContext, nil)
+			//	log.Debugf("doRpcRequest ReqBindedUser authKeyId:%d permAuthKeyId:%d sessionId:%d RpcErrorCode_UNAUTHORIZED_AUTH_KEY_INVALID", m.sessionContext.AuthKeyId, m.sessionContext.PermAuthKeyId, messageContext.SessionId)
+			//	log.Warnf("RpcRequest authKeyId:%d typeName:%v reqMsgId:%d", m.sessionContext.AuthKeyId, typeName, messageContext.RequestMessageList[idx].Message.MsgId)
+			//	break
+			//}
 
-			reqBinnedUser = true
+			//reqBinnedUser = true
 		}
 		//log.Debugf("RpcRequest authKeyId:%d typeName:%v reqMsgId:%d", m.sessionContext.AuthKeyId, typeName, messageContext.RequestMessageList[idx].Message.MsgId)
 
@@ -292,7 +298,7 @@ func (m *MessageHandler) doRpcRequest(messageContext *MessageContext) {
 		md := metadata.RpcMetaData{
 			AuthKeyId:         m.sessionContext.AuthKeyId,
 			SessionId:         messageContext.SessionId,
-			UserId:            m.sessionContext.UserId,
+			UserId:            userId,
 			ServerPeer:        m.sessionContext.SrcServer,
 			Layer:             m.sessionContext.AuthKeyInfo.Layer,
 			Ip:                m.sessionContext.Ip,

@@ -29,9 +29,7 @@ import (
 	"novachat_engine/pkg/rpc/metadata"
 	"novachat_engine/pkg/rpc/rpc"
 	"novachat_engine/pkg/runtime"
-	"novachat_engine/pkg/util"
 	message2 "novachat_engine/service/common/message"
-	"novachat_engine/service/constants"
 	"reflect"
 	"strings"
 	"sync"
@@ -193,18 +191,17 @@ func (s *SessionHandler) GetBizRpcChan(authKeyId int64) (chan<- []*rpc.RpcStream
 					}
 
 					session := s.messageChannel.GetChannel(recvData.Md.AuthKeyId)
-					ok, _ = util.Contains(messageName, []string{"mtproto.auth_Authorization"})
-					if ok {
-						auth_Authorization := object.(*mtproto.Auth_Authorization)
-						if auth_Authorization != nil && auth_Authorization.ClassName == mtproto.ClassAuthAuthorization {
-							log.Debugf("ReceiveDataStream userId:%d auth_Authorization:%+v", auth_Authorization.User.Id, auth_Authorization)
-							if !session.SessionContextUserId(recvData.Md.AuthKeyId, constants.PeerTypeFromUserIDType32(auth_Authorization.User.Id).ToInt()) {
-								log.Warnf("SessionContextUserId authKeyId:%d userId:%d", recvData.Md.AuthKeyId, auth_Authorization.User.Id)
-								return
-							}
-						}
-					}
-
+					//ok, _ = util.Contains(messageName, []string{"mtproto.auth_Authorization"})
+					//if ok {
+					//	auth_Authorization := object.(*mtproto.Auth_Authorization)
+					//	if auth_Authorization != nil && auth_Authorization.ClassName == mtproto.ClassAuthAuthorization {
+					//		log.Debugf("ReceiveDataStream userId:%d auth_Authorization:%+v", auth_Authorization.User.Id, auth_Authorization)
+					//		if !session.SessionContextUserId(recvData.Md.AuthKeyId, constants.PeerTypeFromUserIDType32(auth_Authorization.User.Id).ToInt()) {
+					//			log.Warnf("SessionContextUserId authKeyId:%d userId:%d", recvData.Md.AuthKeyId, auth_Authorization.User.Id)
+					//			return
+					//		}
+					//	}
+					//}
 					ok, err = session.Resp2Client(recvData.Md.AuthKeyId, recvData.Md.SessionId, object, recvData.Md.ReqMsgId, true)
 					if err != nil {
 						log.Warnf("ReceiveDataStream Send2Client error:%s", err.Error())
